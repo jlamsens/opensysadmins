@@ -1,2 +1,6 @@
 site_name: My Docs
-site_url: https://example.com
+site_url: https://www.opensysadmins.com
+site_description: tutorials that just work
+site_author: Jurgen Lamsens
+copyright: Jurgen Lamsen
+repo_url: https://github.com/jlamsens/opensysadmins
