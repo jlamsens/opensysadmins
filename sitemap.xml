@@ -5,4 +5,39 @@
          <lastmod>2021-12-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://www.opensysadmins.com/menu-dir1/</loc>
+         <lastmod>2021-12-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/menu-dir1/submenu-dir1/</loc>
+         <lastmod>2021-12-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/menu-dir1/submenu-dir1/section1/</loc>
+         <lastmod>2021-12-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/menu-dir1/submenu-dir1/section2/</loc>
+         <lastmod>2021-12-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/menu-dir1/submenu-dir1/section3/</loc>
+         <lastmod>2021-12-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/menu-dir1/submenu-dir1/section4/</loc>
+         <lastmod>2021-12-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/menu-dir1/submenu-dir1/section5/</loc>
+         <lastmod>2021-12-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
