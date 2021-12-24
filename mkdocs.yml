@@ -1,6 +1,90 @@
-site_name: My Docs
+site_name: OpenSysAdmins
 site_url: https://www.opensysadmins.com
 site_description: tutorials that just work
 site_author: Jurgen Lamsens
-copyright: Jurgen Lamsen
+#site_favicon: favicon.ico
+
+copyright: Copyright &copy; 2015 - 2021 Jurgen Lamsens
+
 repo_url: https://github.com/jlamsens/opensysadmins
+edit_uri: ""
+
+theme:
+  name: material
+  features:
+    - navigation.instant # instant loading
+    - navigation.tracking
+    - navigation.tabs
+    #- navigation.tabs.sticky
+    #- navigation.sections
+    #- navigation.expand
+    - navigation.index
+    - navigation.top
+
+    #-search.suggest
+    - search.highlight
+    #-search.share
+
+  font:
+    text: ubuntu
+    code: ubuntu mono
+  
+  palette: 
+    - scheme: default
+      primary: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal 
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+markdown_extensions:
+    - toc:
+        #permalink: False
+        #separator: "_"
+        toc_depth: 3
+    - abbr
+    - admonition
+    - pymdownx.details # for collapsible admonition blocks
+    - attr_list # add HTML attributes and CSS classes to almost every Markdown inline- and block-level element
+    - md_in_html
+    - footnotes
+    - meta
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/facebook-square
+      link: https://facebook.com/jessgandthemelons
+      name: Campfire classics with Jess G and the Melons
+  generator: false
+
+nav:
+  - Home: index.md
+  
+  # Tutorials template
+  #- menu1: #listed in header, must be unique
+  #  - menu-dir1/index.md #menu overview/landing page
+  #  - submenu1:
+  #    - menu-dir1/submenu-dir1/index.md #submenu overview/landing page
+  #    - section1: menu-dir1/submenu-dir1/section1.md
+  #    - section2: menu-dir1/submenu-dir1/section2.md
+  #    - section3: menu-dir1/submenu-dir1/section3.md
+  #    - section4: menu-dir1/submenu-dir1/section4.md
+  #    - section5: menu-dir1/submenu-dir1/section5.md
+
+  - Tutorials: #listed in header
+    - tutorials/index.md #menu overview/landing page
+    - virtualbox:
+      - tutorials/virtualbox/index.md #submenu overview/landing page
+      - Installation VB: menu-dir1/submenu-dir1/section1.md
+      - Configuration VB: menu-dir1/submenu-dir1/section2.md
+      - Installation OS: menu-dir1/submenu-dir1/section3.md
+      - Pre-configuration OS: menu-dir1/submenu-dir1/section4.md
+      - Configuration OS: menu-dir1/submenu-dir1/section5.md
+      - Snapshot: menu-dir1/submenu-dir1/section5.md
