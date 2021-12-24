@@ -12,34 +12,101 @@ edit_uri: ""
 theme:
   name: material
   features:
-    - navigation.instant # instant loading
-    - navigation.tracking
-    - navigation.tabs
-    #- navigation.tabs.sticky
-    #- navigation.sections
-    #- navigation.expand
-    - navigation.index
-    - navigation.top
+    ## clicks on all internal links will be intercepted and dispatched via XHR without fully reloading the page
+    ## the resulting page is parsed and injected and all event handlers and components are rebound automatically, 
+    ## i.e., Material for MkDocs now behaves like a Single Page Application
+    ## now, the search index survives navigation, which is especially useful for large documentation sites
+    - navigation.instant
 
+    ## the URL in the address bar is automatically updated with the active anchor as highlighted in the table of contents
+    - navigation.tracking
+
+    ## top-level sections are rendered in a menu layer below the header for viewports above 1220px, but remain as-is on mobile
+    - navigation.tabs
+
+    ## navigation tabs will lock below the header and always remain visible when scrolling down
+    #- navigation.tabs.sticky
+
+    ## top-level sections are rendered as groups in the sidebar for viewports above 1220px, but remain as-is on mobile
+    ## both <navigation.tabs> and <navigation.sections> can be combined with each other
+    ## if both are enabled, sections are rendered for level 2 navigation items
+    #- navigation.sections
+
+    ## when expansion is enabled, the left sidebar will expand all collapsible subsections by default,
+    ## so the user doesn't have to open subsections manually
+    #- navigation.expand
+    
+    ## documents can be directly attached to sections, which is particularly useful for providing overview pages
+    - navigation.indexes
+
+    ## a back-to-top button can be shown when the user, after scrolling down, starts to scroll up again
+    ## rendered centered and just below the header
+    #- navigation.top
+
+    ## table of contents is rendered as part of the navigation sidebar on the left
+    ## not compatible with navigation.indexes
+    - toc.integrate
+
+    ## search will display the likeliest completion for the last word which can be accepted with the <right> key
     #-search.suggest
+    
+    ## highlight all occurrences after following the link
     - search.highlight
+
+    ## share button is rendered next to the reset button, which allows to deep link to the current search query and result
+    ## when a user clicks the share button, the URL is automatically copied to the clipboard
     #-search.share
 
+  ## change the typeface, directly integrates with Google Fonts
+  ## will be loaded in 300, 400, 400i and 700
+  ## 
   font:
+    ## the "regular font", used for all body copy, headlines
+    ## and essentially everything that does not need to be monospaced
     text: ubuntu
+
+    ## the "monospaced font" is used for code blocks and can be configured separately
+    ## will be loaded in 400
     code: ubuntu mono
   
   palette: 
     - scheme: default
+      ## primary color is used for the header, the sidebar, text links and several other components
+      ## valid colors: red, pink, purple, deep purple, indigo, blue, light blue, cyan, teal, green light green,
+      ## lime, yellow, amber, orange, deep orange, brown, grey, blue grey, black and white
       primary: teal
+
+      ## accent color is used to denote elements that can be interacted with, e.g. hovered links, buttons and scrollbars
+      ## valid colors: red, pink, purple, deep purple, indigo, blue, light blue, cyan, teal, green, light green, lime,
+      ## yellow, amber, orange and deep orange
+      # accent: red
+      
+      ## user can toggle between color palettes
       toggle:
+        ## must point to a valid icon path referencing any icon bundled with the theme
+        ## examples
         icon: material/weather-sunny
+        
+        ## should be set to a discernable name to improve accessibility, will appear on mouse hover
         name: Switch to dark mode
+  
     - scheme: slate
       primary: teal 
       toggle:
         icon: material/weather-night
         name: Switch to light mode
+  
+  ## logo can be changed to a user-provided image (any type, incl. *.png and *.svg) located in the <docs> folder
+  ## or to any icon bundled with the theme
+  # logo: <docs/path-to-logo>
+
+  ## normally, the logo in the header and sidebar links to the homepage of the documentation, which is the same as site_url
+  ## this behavior can be changed
+  # extra:
+    #homepage: https://example.com
+
+  ## favicon can be changed to a path pointing to a user-provided image located in the <docs> folder
+  # favicon: <path-to-logo>
 
 markdown_extensions:
     - toc:
@@ -51,6 +118,14 @@ markdown_extensions:
     - attr_list # add HTML attributes and CSS classes to almost every Markdown inline- and block-level element
     - md_in_html
     - footnotes
+
+    ## when <Metadata> is enabled, the navigation and/or table of contents sidebars can be hidden for a
+    ## document with custom front matter using the following at the top of a Markdown file
+    ## ---
+    ## hide:
+    ##   - navigation
+    ##   - toc
+    ## ---
     - meta
     
     - pymdownx.details # for collapsible admonition blocks
@@ -65,7 +140,19 @@ markdown_extensions:
 
 
 plugins:
+  ## built-in search plugin integrates seamlessly with Material for MkDocs, adding multilingual
+  ## client-side search with <lunr> and <lunr-languages>
+  ## enabled by default, but must be re-added when other plugins are used
   - search
+    ## default: automatically set
+    # lang: 
+    #   - en
+    #   - du
+    #   - ...
+    ## separator for indexing and query tokenization can be customized, making it possible to index parts
+    ## of words separated by other characters than whitespace and -
+    ## default: automatically set
+    # seperator: '[\s\-\.]'
 
 extra:
   social:
