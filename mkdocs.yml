@@ -48,11 +48,21 @@ markdown_extensions:
         toc_depth: 3
     - abbr
     - admonition
-    - pymdownx.details # for collapsible admonition blocks
     - attr_list # add HTML attributes and CSS classes to almost every Markdown inline- and block-level element
     - md_in_html
     - footnotes
     - meta
+    
+    - pymdownx.details # for collapsible admonition blocks
+    - pymdownx.superfences
+    - pymdownx.tabbed:
+        alternate_style: true
+    - pymdownx.highlight:
+        linenums: true
+        anchor_linenums: true
+        auto_title: true
+    - pymdownx.inlinehilite
+
 
 plugins:
   - search
@@ -78,12 +88,13 @@ nav:
   #    - section4: menu-dir1/submenu-dir1/section4.md
   #    - section5: menu-dir1/submenu-dir1/section5.md
 
-  - menu1: #listed in header, must be unique
-    - menu-dir1/index.md #menu overview/landing page
-    - submenu1:
-      - menu-dir1/submenu-dir1/index.md #submenu overview/landing page
-      - section1: menu-dir1/submenu-dir1/section1.md
-      - section2: menu-dir1/submenu-dir1/section2.md
-      - section3: menu-dir1/submenu-dir1/section3.md
-      - section4: menu-dir1/submenu-dir1/section4.md
-      - section5: menu-dir1/submenu-dir1/section5.md
+  - Tutorials: #listed in header, must be unique
+    - tutorials/index.md #menu overview/landing page
+    - VirtualBox:
+      - tutorials/virtualbox/index.md #submenu overview/landing page
+      - Installation VB: tutorials/virtualbox/section1.md
+      - Configuration VB: tutorials/virtualbox/section2.md
+      - Installation OS: tutorials/virtualbox/section3.md
+      - Pre-configuration OS: tutorials/virtualbox/section4.md
+      - Configuration OS: tutorials/virtualbox/section5.md
+      - Snapshot: tutorials/virtualbox/section6.md
