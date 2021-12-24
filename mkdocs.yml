@@ -78,13 +78,12 @@ nav:
   #    - section4: menu-dir1/submenu-dir1/section4.md
   #    - section5: menu-dir1/submenu-dir1/section5.md
 
-  - Tutorials: #listed in header
-    - tutorials/index.md #menu overview/landing page
-    - virtualbox:
-      - tutorials/virtualbox/index.md #submenu overview/landing page
-      - Installation VB: menu-dir1/submenu-dir1/section1.md
-      - Configuration VB: menu-dir1/submenu-dir1/section2.md
-      - Installation OS: menu-dir1/submenu-dir1/section3.md
-      - Pre-configuration OS: menu-dir1/submenu-dir1/section4.md
-      - Configuration OS: menu-dir1/submenu-dir1/section5.md
-      - Snapshot: menu-dir1/submenu-dir1/section5.md
+  - menu1: #listed in header, must be unique
+    - menu-dir1/index.md #menu overview/landing page
+    - submenu1:
+      - menu-dir1/submenu-dir1/index.md #submenu overview/landing page
+      - section1: menu-dir1/submenu-dir1/section1.md
+      - section2: menu-dir1/submenu-dir1/section2.md
+      - section3: menu-dir1/submenu-dir1/section3.md
+      - section4: menu-dir1/submenu-dir1/section4.md
+      - section5: menu-dir1/submenu-dir1/section5.md
