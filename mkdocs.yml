@@ -4,10 +4,18 @@ site_description: tutorials that just work
 site_author: Jurgen Lamsens
 #site_favicon: favicon.ico
 
-copyright: Copyright &copy; 2015 - 2021 Jurgen Lamsens
-
+## display a link to the repository of your project as part of your documentation
+## will be rendered next to the search bar on big screens and as part of the main navigation drawer on smaller screen sizes
+## for public repositories hosted on GitHub or GitLab, the number of stars and forks is automatically requested and rendered
 repo_url: https://github.com/jlamsens/opensysadmins
+
+## if the repository URL points to a GitHub, GitLab or Bitbucket repository, an edit button is displayed at the top of each document
+## you can hide it
 edit_uri: ""
+
+## MkDocs will infer the source provider by examining the URL and try to set the repository name automatically
+## you can customize the name
+# repo_name: jlamsens/opensysadmins
 
 theme:
   name: material
@@ -45,7 +53,7 @@ theme:
 
     ## table of contents is rendered as part of the navigation sidebar on the left
     ## not compatible with navigation.indexes
-    - toc.integrate
+    #- toc.integrate
 
     ## search will display the likeliest completion for the last word which can be accepted with the <right> key
     #-search.suggest
@@ -56,6 +64,13 @@ theme:
     ## share button is rendered next to the reset button, which allows to deep link to the current search query and result
     ## when a user clicks the share button, the URL is automatically copied to the clipboard
     #-search.share
+
+    ## the header is automatically hidden when the user scrolls past a certain threshold, leaving more space for content
+    - header.autohide
+
+  ## while the default repository icon is a generic git icon, it can be set to any icon bundled with the theme by referencing a valid icon path
+  icon:
+    repo: fontawesome/brands/github
 
   ## change the typeface, directly integrates with Google Fonts
   ## will be loaded in 300, 400, 400i and 700
@@ -109,16 +124,57 @@ theme:
   # favicon: <path-to-logo>
 
 markdown_extensions:
+    ## automatically generates a table of contents from a document, which Material for MkDocs will render as part of the resulting page
     - toc:
-        #permalink: False
+        ## default: automatically set to <Table of contents>
+        ## sets the title of the table of contents in the right navigation sidebar,
+        ## which is normally automatically sourced from the translations for the site language
+        #title: My TOC name
+
+        ## default: false
+        ## adds an anchor link containing the paragraph symbol ¶ or another custom symbol at the end of each headline,
+        ## exactly like on the page you're currently viewing, which Material for MkDocs will make appear on hover
+        #permalink: true
+
+        ## default: permanent link
+        ## sets the title of the anchor link which is shown on hover and read by screen readers
+        ## For accessibility reasons, it might be beneficial to change it to a more discernable name,
+        ## stating that the anchor links to the section itself
+        # permalink_title: Anchor link to this section for reference
+
+        ## default: headerid.slugify
+        ## allows for customization of the slug function
+        ## for some languages, the default may not produce good and readable identifiers,
+        ## consider using another slug function like for example those from Python Markdown Extensions
+        # slugify: !!python/name:pymdownx.slugs.uslugify
+
         #separator: "_"
+
+        ## default: 6
+        ## define the range of levels to be included in the table of contents
+        ## may be useful for project documentation with deeply structured headings,
+        ## to decrease the length of the table of contents, or to remove the table of contents altogether
         toc_depth: 3
+
+    ## adds the ability to add a small tooltip to an element
     - abbr
+
+    ## adds support for admonitions, more commonly known as call-outs
     - admonition
-    - attr_list # add HTML attributes and CSS classes to almost every Markdown inline- and block-level element
-    - md_in_html
+
+    ## adds the ability to add definition lists (more commonly known as description lists <dl> in HTML)
+    #- def_list
+
+    ## allows to add HTML attributes and CSS classes to almost every Markdown inline- and block-level element with a special syntax
+    - attr_list
+
+    ## allows for writing Markdown inside of HTML, which is useful for wrapping Markdown content with custom elements
+    #- md_in_html
+
+    ## allows to define inline footnotes, which are then rendered below all Markdown content of a document
     - footnotes
 
+    ## adds the ability to attach arbitrary key-value pairs to a document via front matter written in YAML syntax before the Markdown
     ## when <Metadata> is enabled, the navigation and/or table of contents sidebars can be hidden for a
     ## document with custom front matter using the following at the top of a Markdown file
     ## ---
@@ -128,16 +184,78 @@ markdown_extensions:
     ## ---
     - meta
     
-    - pymdownx.details # for collapsible admonition blocks
-    - pymdownx.superfences
+    ## adds the ability to create tables in Markdown by using a simple syntax
+    - tables
+
+    ## the <Python Markdown Extensions> package is an excellent collection of additional extensions,
+    ## perfectly suited for advanced technical writing
+    ## Material for MkDocs lists this package as an explicit dependency, so it's automatically installed
+    ## with a supported version
+
+    ## allows for rendering of block and inline block equations and integrates seamlessly with MathJax
+    ## a MathJax configuration and the JavaScript runtime need to be included <see online documentation>
+    #- pymdownx.arithmatex
+
+    ## improves the detection of Markup to emphasize text in Markdown using special characters, i.e. for **bold** and _italic_ formatting
+    # - pymdownx.betterem
+
+    ## the Caret, Mark and Tilde extensions add the ability to highlight text and define sub- and superscript using a simple syntax
+    # - pymdownx.caret
+    # - pymdownx.mark
+    # - pymdownx.tilde
+
+    ## allows for the usage of Critic Markup to highlight added, deleted or updated sections in a document, i.e. for tracking changes in Markdown syntax
+    # - pymdownx.critic
+
+    ## supercharges the Admonition extension, making the resulting call-outs collapsible
+    # - pymdownx.details
+
+    ## automatically inlines bundled and custom icons and emojis in *.svg file format into the resulting HTML page
+    # - pymdownx.emoji:
+    #   ## Python Markdown Extensions uses the pymdownx namespace, but in order to support the inlining of icons,
+    #   ## the materialx namespace must be used, as it extends the functionality of pymdown
+    #   emoji_index: !!python/name:materialx.emoji.twemoji
+    #   emoji_generator: !!python/name:materialx.emoji.to_svg
+
     - pymdownx.tabbed:
         alternate_style: true
-    - pymdownx.highlight:
-        linenums: true
-        anchor_linenums: true
-        auto_title: true
-    - pymdownx.inlinehilite
 
+    ## adds support for syntax highlighting of code blocks (with the help of <SuperFences>)
+    ## and inline code blocks (with the help of <InlineHilite>)
+    ## <Highlight> is used by the <SuperFences> extension to perform syntax highlighting on code blocks,
+    ## not the other way round, which is why this extension also needs to be enabled
+    - pymdownx.highlight:
+        ## default: true
+        ## allows to control whether highlighting should be carried out during build time using <Pygments>
+        ## or in the browser with a JavaScript syntax highlighte
+        # use_pygments: true
+        ## all following configuration options are only compatible with build-time syntax highlighting using <Pygments>
+
+        ## default: false
+        ## automatically add a title to all code blocks that shows the name of the language being used, e.g. Python is printed for a py block
+        auto_title: true
+
+        ## default: false
+        ## add line numbers to all code blocks
+        ## if you wish to add line numbers to some, but not all code blocks, consult the section on adding line numbers in the code block reference
+        ## hich also contains some tips on working with line numbers
+        linenums: true
+
+        ## default: table
+        ## provides three ways to add line numbers, two of which are supported by Material for MkDocs
+        ## while table wraps a code block in a <table> element, pymdownx-inline renders line numbers as part of the line itself
+        ## Note that <inline> will put line numbers next to the actual code, which means that they will be included when selecting text
+        ## with the cursor or copying a code block to the clipboard
+        ## thus, the usage of either <table> or <pymdownx-inline> is recommended
+        #linenums_style: pymdownx-inline
+
+        anchor_linenums: true
+
+        auto_title: true
+
+    - pymdownx.superfences
+
+    - pymdownx.inlinehilite
 
 plugins:
   ## built-in search plugin integrates seamlessly with Material for MkDocs, adding multilingual
@@ -155,11 +273,20 @@ plugins:
     # seperator: '[\s\-\.]'
 
 extra:
+  ## social links are rendered next to the copyright notice as part of the footer
   social:
     - icon: fontawesome/brands/facebook-square
       link: https://facebook.com/jessgandthemelons
       name: Campfire classics with Jess G and the Melons
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/jurgen-lamsens-58692821/
+      name: Jurgen Lamsens @work
+  ## the footer displays a <Made with Material for MkDocs> notice to denote how the site was generated
   generator: false
+
+
+## a custom copyright banner can be rendered as part of the footer, which is displayed next to the social links
+copyright: Copyright &copy; 2015 - 2021 Jurgen Lamsens
 
 nav:
   - Home: index.md
