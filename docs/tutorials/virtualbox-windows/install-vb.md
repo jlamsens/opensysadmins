@@ -1,28 +1,28 @@
-# Section title
+# Installation VirtualBox
 
 ## Download
-<kbd> [![Install VirtualBox](../../assets/images/virtualbox-windows/download.png "Download")](../../assets/images/virtualbox-windows/download.png) </kbd>
+<kbd> [![Installation VirtualBox](../../assets/images/virtualbox-windows/install-vb/download.png "Download")](../../assets/images/virtualbox-windows/install-vb/download.png) </kbd>
 
 ## Welcome
-<kbd> [![Install VirtualBox](../../assets/images/virtualbox-windows/welcome.png "Welcome")](../../assets/images/virtualbox-windows/welcome.png) </kbd>
+<kbd> [![Installation VirtualBox](../../assets/images/virtualbox-windows/install-vb/welcome.png "Welcome")](../../assets/images/virtualbox-windows/install-vb/welcome.png) </kbd>
 
 ## Options
-<kbd> [![Install VirtualBox](../../assets/images/virtualbox-windows/options.png "Options")](../../assets/images/virtualbox-windows/options.png) </kbd>
+<kbd> [![Installation VirtualBox](../../assets/images/virtualbox-windows/install-vb/options.png "Options")](../../assets/images/virtualbox-windows/install-vb/options.png) </kbd>
 
 ## Features
-<kbd> [![Install VirtualBox](../../assets/images/virtualbox-windows/features.png "Features")](../../assets/images/virtualbox-windows/features.png) </kbd>
+<kbd> [![Installation VirtualBox](../../assets/images/virtualbox-windows/install-vb/features.png "Features")](../../assets/images/virtualbox-windows/install-vb/features.png) </kbd>
 
 ## Network warning
-<kbd> [![Install VirtualBox](../../assets/images/virtualbox-windows/network-warning.png "Network warning")](../../assets/images/virtualbox-windows/network-warning.png) </kbd>
+<kbd> [![Installation VirtualBox](../../assets/images/virtualbox-windows/install-vb/network-warning.png "Network warning")](../../assets/images/virtualbox-windows/install-vb/network-warning.png) </kbd>
 
 ## Ready to install
-<kbd> [![Install VirtualBox](../../assets/images/virtualbox-windows/ready-to-install.png "Ready to install")](../../assets/images/virtualbox-windows/ready-to-install.png) </kbd>
+<kbd> [![Installation VirtualBox](../../assets/images/virtualbox-windows/install-vb/ready-to-install.png "Ready to install")](../../assets/images/virtualbox-windows/install-vb/ready-to-install.png) </kbd>
 
 ## Microsoft Windows UAC
-<kbd> [![Install VirtualBox](../../assets/images/virtualbox-windows/microsoft-windows-uac.png "Microsoft Windows UAC")](../../assets/images/virtualbox-windows/microsoft-windows-uac.png) </kbd>
+<kbd> [![Installation VirtualBox](../../assets/images/virtualbox-windows/install-vb/microsoft-windows-uac.png "Microsoft Windows UAC")](../../assets/images/virtualbox-windows/install-vb/microsoft-windows-uac.png) </kbd>
 
 ## Installing
-<kbd> [![Install VirtualBox](../../assets/images/virtualbox-windows/installing.png "Installing")](../../assets/images/virtualbox-windows/installing.png) </kbd>
+<kbd> [![Installation VirtualBox](../../assets/images/virtualbox-windows/install-vb/installing.png "Installing")](../../assets/images/virtualbox-windows/install-vb/installing.png) </kbd>
 
 ## Complete
-<kbd> [![Install VirtualBox](../../assets/images/virtualbox-windows/completed.png "Completed")](../../assets/images/virtualbox-windows/completed.png) </kbd>
+<kbd> [![Installation VirtualBox](../../assets/images/virtualbox-windows/install-vb/completed.png "Completed")](../../assets/images/virtualbox-windows/install-vb/completed.png) </kbd>

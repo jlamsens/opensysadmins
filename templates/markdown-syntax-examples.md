@@ -48,10 +48,39 @@ Option9: with borders left, right and under (but not above)
 <kbd> [![My description](../../assets/images/virtualbox/installing-virtualbox-withborder.png "My tooltip")](../../assets/images/virtualbox/installing-virtualbox-withborder.png) </kbd>
 
 
+<!---PAGE----------------------------------------------------------------->
+# <Titel>
 
-<!---or (Click to expand)--->
+## <Subtitel1>
+<kbd> [![<Titel>](../../assets/images/<tutorial>/<section>/<file-name1>.png "<Subtitel1>")](../../assets/images/<tutorial>/<section>/<file-name1>.png) </kbd>
 
-<!---OTHER----------------------------------------------------------------->
+## <Subtitel2>
+<kbd> [![<Titel>](../../assets/images/<tutorial>/<section>/<file-name2>.png "<Subtitel2>")](../../assets/images/<tutorial>/<section>/<file-name2>.png) </kbd>
+
+## <Subtitel3>
+<kbd> [![<Titel>](../../assets/images/<tutorial>/<section>/<file-name3>.png "<Subtitel3>")](../../assets/images/<tutorial>/<section>/<file-name3>.png) </kbd>
+
+## <Subtitel4>
+<kbd> [![<Titel>](../../assets/images/<tutorial>/<section>/<file-name4>.png "<Subtitel4>")](../../assets/images/<tutorial>/<section>/<file-name4>.png) </kbd>
+
+## <Subtitel5>
+<kbd> [![<Titel>](../../assets/images/<tutorial>/<section>/<file-name5>.png "<Subtitel5>")](../../assets/images/<tutorial>/<section>/<file-name5>.png) </kbd>
+
+## <Subtitel6>
+<kbd> [![<Titel>](../../assets/images/<tutorial>/<section>/<file-name6>.png "<Subtitel6>")](../../assets/images/<tutorial>/<section>/<file-name6>.png) </kbd>
+
+## <Subtitel7>
+<kbd> [![<Titel>](../../assets/images/<tutorial>/<section>/<file-name7>.png "<Subtitel7>")](../../assets/images/<tutorial>/<section>/<file-name7>.png) </kbd>
+
+## <Subtitel8>
+<kbd> [![<Titel>](../../assets/images/<tutorial>/<section>/<file-name8>.png "<Subtitel8>")](../../assets/images/<tutorial>/<section>/<file-name8>.png) </kbd>
+
+## <Subtitel9>
+<kbd> [![<Titel>](../../assets/images/<tutorial>/<section>/<file-name9>.png "<Subtitel9>")](../../assets/images/<tutorial>/<section>/<file-name9>.png) </kbd>
+
+## <Subtitel10>
+<kbd> [![<Titel>](../../assets/images/<tutorial>/<section>/<file-name10>.png "<Subtitel10>")](../../assets/images/<tutorial>/<section>/<file-name10>.png) </kbd>
+
 
 <!---OTHER----------------------------------------------------------------->
 

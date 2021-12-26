@@ -1,13 +1,25 @@
-# Section title
+# Creation virtual machine
 
-## Ch1.1 toc
+## New
+<kbd> [![Creation virtual machine](../../assets/images/virtualbox-windows/create-vm/new.png "<New>")](../../assets/images/virtualbox-windows/create-vm/new.png) </kbd>
 
-## Ch1.2 toc
+## Name and OS
+<kbd> [![Creation virtual machine](../../assets/images/virtualbox-windows/create-vm/name-and-os.png "Name and OS")](../../assets/images/virtualbox-windows/create-vm/name-and-os.png) </kbd>
 
-## Ch1.3 toc
+## Memory size
+<kbd> [![Creation virtual machine](../../assets/images/virtualbox-windows/create-vm/memory-size.png "Memory size")](../../assets/images/virtualbox-windows/create-vm/memory-size.png) </kbd>
 
-### Ch1.3.1 toc
+## Create harddisk
+<kbd> [![Creation virtual machine](../../assets/images/virtualbox-windows/create-vm/create-harddisk.png "Create harddisk")](../../assets/images/virtualbox-windows/create-vm/create-harddisk.png) </kbd>
 
-### Ch1.3.2 toc
+## Harddisk type
+<kbd> [![Creation virtual machine](../../assets/images/virtualbox-windows/create-vm/harddisk-type.png "Harddisk type")](../../assets/images/virtualbox-windows/create-vm/harddisk-type.png) </kbd>
 
-### Ch1.3.3 toc
+## Storage type
+<kbd> [![Creation virtual machine](../../assets/images/virtualbox-windows/create-vm/storage-type.png "Storage type")](../../assets/images/virtualbox-windows/create-vm/storage-type.png) </kbd>
+
+## Harddisk location and type
+<kbd> [![Creation virtual machine](../../assets/images/virtualbox-windows/create-vm/harddisk-location-and-size.png "Harddisk location and type")](../../assets/images/virtualbox-windows/create-vm/harddisk-location-and-size.png) </kbd>
+
+## Virtual machine details
+<kbd> [![Creation virtual machine](../../assets/images/virtualbox-windows/create-vm/virtual-machine-details.png "Virtual machine details")](../../assets/images/virtualbox-windows/create-vm/virtual-machine-details.png) </kbd>

@@ -1,13 +1,16 @@
-# Section title
+# Configuration VirtualBox
 
-## Ch1.1 toc
+## Preferences
+<kbd> [![Configuration VirtualBox](../../assets/images/virtualbox-windows/configure-vb/preferences.png "Preferences")](../../assets/images/virtualbox-windows/configure-vb/preferences.png) </kbd>
 
-## Ch1.2 toc
+## No updates
+<kbd> [![Configuration VirtualBox](../../assets/images/virtualbox-windows/configure-vb/no-updates.png "No updates")](../../assets/images/virtualbox-windows/configure-vb/no-updates.png) </kbd>
 
-## Ch1.3 toc
+## Add NAT network
+<kbd> [![Configuration VirtualBox](../../assets/images/virtualbox-windows/configure-vb/add-nat-network.png "Add NAT network")](../../assets/images/virtualbox-windows/configure-vb/add-nat-network.png) </kbd>
 
-### Ch1.3.1 toc
+## Edit NAT network
+<kbd> [![Configuration VirtualBox](../../assets/images/virtualbox-windows/configure-vb/edit-nat-network.png "Edit NAT network")](../../assets/images/virtualbox-windows/configure-vb/edit-nat-network.png) </kbd>
 
-### Ch1.3.2 toc
-
-### Ch1.3.3 toc
+## NAT network details
+<kbd> [![Configuration VirtualBox](../../assets/images/virtualbox-windows/configure-vb/nat-network-details.png "NAT network details")](../../assets/images/virtualbox-windows/configure-vb/nat-network-details.png) </kbd>
