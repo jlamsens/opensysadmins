@@ -289,13 +289,6 @@ markdown_extensions:
         ## as the state is not persisted, the use of this option is rather discouraged from a user experience perspective
         # clickable_checkbox: true
 
-
-
-
-
-
-
-
 plugins:
   ## built-in search plugin integrates seamlessly with Material for MkDocs, adding multilingual
   ## client-side search with <lunr> and <lunr-languages>
@@ -323,7 +316,6 @@ extra:
   ## the footer displays a <Made with Material for MkDocs> notice to denote how the site was generated
   generator: false
 
-
 ## a custom copyright banner can be rendered as part of the footer, which is displayed next to the social links
 copyright: Copyright &copy; 2015 - 2021 Jurgen Lamsens
 
@@ -343,11 +335,13 @@ nav:
 
   - Tutorials: #listed in header, must be unique
     - tutorials/index.md #menu overview/landing page
-    - VirtualBox:
-      - tutorials/virtualbox/index.md #submenu overview/landing page
-      - Installation VB: tutorials/virtualbox/section1.md
-      - Configuration VB: tutorials/virtualbox/section2.md
-      - Installation OS: tutorials/virtualbox/section3.md
-      - Pre-configuration OS: tutorials/virtualbox/section4.md
-      - Configuration OS: tutorials/virtualbox/section5.md
-      - Snapshot: tutorials/virtualbox/section6.md
+    - VirtualBox Windows:
+      - tutorials/virtualbox-windows/index.md #submenu overview/landing page
+      - Install VB: tutorials/virtualbox-windows/install-vb.md
+      - Configure VB: tutorials/virtualbox-windows/configure-vb.md
+      - Create VM: tutorials/virtualbox-windows/create-vm.md
+      - Configure VM: tutorials/virtualbox-windows/configure-vm.md
+      - Install OS: tutorials/virtualbox-windows/install-os.md
+      - Pre-configure OS: tutorials/virtualbox-windows/pre-configure-os.md
+      - Configure OS: tutorials/virtualbox-windows/configure-os.md
+      - Snapshot: tutorials/virtualbox-windows/snapshot.md

@@ -1,4 +1,4 @@
-# Section6 title
+# Section title
 
 ## Ch1.1 toc
 
