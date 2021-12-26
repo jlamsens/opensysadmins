@@ -1,7 +1,7 @@
 # Configuration virtual machine
 
 ## Download Ubuntu ISO
-<kbd> [![Configuration virtual machine](../../assets/images/virtualbox-windows/configure-vm/nat-network.png "Download Ubuntu ISO")](../../assets/images/virtualbox-windows/configure-vm/nat-network.png) </kbd>
+<kbd> [![Configuration virtual machine](../../assets/images/virtualbox-windows/configure-vm/download-ubuntu-iso.png "Download Ubuntu ISO")](../../assets/images/virtualbox-windows/configure-vm/download-ubuntu-iso.png) </kbd>
 
 ## Settings
 <kbd> [![Configuration virtual machine](../../assets/images/virtualbox-windows/configure-vm/settings.png "Settings")](../../assets/images/virtualbox-windows/configure-vm/settings.png) </kbd>
