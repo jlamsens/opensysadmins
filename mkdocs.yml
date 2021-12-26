@@ -169,7 +169,7 @@ markdown_extensions:
     - attr_list
 
     ## allows for writing Markdown inside of HTML, which is useful for wrapping Markdown content with custom elements
-    #- md_in_html
+    - md_in_html
 
     ## allows to define inline footnotes, which are then rendered below all Markdown content of a document
     - footnotes
@@ -217,13 +217,21 @@ markdown_extensions:
     #   emoji_index: !!python/name:materialx.emoji.twemoji
     #   emoji_generator: !!python/name:materialx.emoji.to_svg
 
+
+    ## allows the usage of content tabs, a simple way to group related content and code blocks under accessible tabs
     - pymdownx.tabbed:
+
+        ## default: false
+        ## enables the content tabs alternate style, which has better behavior on mobile viewports, and is the only supported style
         alternate_style: true
+
+    ## allows for arbitrary nesting of code and content blocks inside each other, including admonitions, tabs, lists and all other elements
+    - pymdownx.superfences
 
     ## adds support for syntax highlighting of code blocks (with the help of <SuperFences>)
     ## and inline code blocks (with the help of <InlineHilite>)
     ## <Highlight> is used by the <SuperFences> extension to perform syntax highlighting on code blocks,
-    ## not the other way round, which is why this extension also needs to be enabled
+    ## not the other way round, which is why <Superfences> also needs to be enabled
     - pymdownx.highlight:
         ## default: true
         ## allows to control whether highlighting should be carried out during build time using <Pygments>
@@ -249,13 +257,44 @@ markdown_extensions:
         ## thus, the usage of either <table> or <pymdownx-inline> is recommended
         #linenums_style: pymdownx-inline
 
+        ## default: false
+        ## If a code blocks contains line numbers, enabling this setting will wrap them with anchor links, so they can be hyperlinked and shared more easily
         anchor_linenums: true
 
         auto_title: true
 
-    - pymdownx.superfences
-
+    ## add support for syntax highlighting of inline code blocks
+    ## built on top of the <Highlight> extension, from which it sources its configuration
     - pymdownx.inlinehilite
+
+    ## adds a simple syntax to allow for the rendering of keyboard keys and combinations, e.g. ctrl+alt+del
+    - pymdownx.keys
+
+    ## converts some sequences of characters into their corresponding symbols, e.h. copyright symbols or fractions
+    - pymdownx.smartsymbols
+
+    ## adds the ability to embed content from arbitrary files into a document, including other documents or source files, 
+    ## a glossary, by using a simple syntax
+    #- pymdownx.snippets
+
+    ## allows for the usage of GitHub Flavored Markdown inspired task lists, following the same syntactical conventions
+    - pymdownx.tasklist:
+
+        ## default: false
+        ## toggles the rendering style of checkboxes, replacing native checkbox styles with beautiful icons, and is therefore recommended
+        custom_checkbox: true
+
+        ## default: false
+        ## toggles whether checkboxes are clickable
+        ## as the state is not persisted, the use of this option is rather discouraged from a user experience perspective
+        # clickable_checkbox: true
+
+
+
+
+
+
+
 
 plugins:
   ## built-in search plugin integrates seamlessly with Material for MkDocs, adding multilingual

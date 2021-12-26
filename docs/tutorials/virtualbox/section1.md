@@ -27,9 +27,14 @@
       return 0;
     }
     ```
-hasellus posuere nisi vel sodales tempor. Nulla varius tincidunt euismod. Nulla mi tortor, porta a vehicula in, elementum at nulla. Proin ut fermentum ipsum, nec molestie ante. Quisque scelerisque convallis tristique. Proin commodo pulvinar nisi eu ultricies. Curabitur ut luctus lacus. Quisque iaculis ornare consectetur. Nullam imperdiet dolor dolor, id interdum turpis commodo a. Maecenas congue pharetra tincidunt. Vivamus ac leo ut lorem fringilla auctor. Integer et rhoncus magna, eget aliquet turpis. Proin nec tortor vitae ex dictum sagittis.
+hasellus ++ctrl+alt+del++ posuere ++enter++ nisi ++control++ vel sodales tempor. Nulla varius tincidunt euismod. Nulla mi tortor, porta a vehicula in, elementum at nulla. Proin ut fermentum ipsum, nec molestie ante. Quisque scelerisque convallis tristique. Proin commodo pulvinar nisi eu ultricies. Curabitur ut luctus lacus. Quisque iaculis ornare consectetur. Nullam imperdiet dolor dolor, id interdum turpis commodo a. Maecenas congue pharetra tincidunt. Vivamus ac leo ut lorem fringilla auctor. Integer et rhoncus magna, eget aliquet turpis. Proin nec tortor vitae ex dictum sagittis.
 
-hasellus posuere nisi vel sodales tempor. Nulla varius tincidunt euismod. Nulla mi tortor, porta a vehicula in, elementum at nulla. Proin ut fermentum ipsum, nec molestie ante. Quisque scelerisque convallis tristique. Proin commodo pulvinar nisi eu ultricies. Curabitur ut luctus lacus. Quisque iaculis ornare consectetur. Nullam imperdiet dolor dolor, id interdum turpis commodo a. Maecenas congue pharetra tincidunt. Vivamus ac leo ut lorem fringilla auctor. Integer et rhoncus magna, eget aliquet turpis. Proin nec tortor vitae ex dictum sagittis.
+hasellus +/- posuere 1/4 1st 2nd nisi <--> vel sodales tempor. Nulla varius tincidunt euismod. Nulla mi tortor, porta a vehicula in, elementum at nulla. Proin ut fermentum ipsum, nec molestie ante. Quisque scelerisque convallis tristique. Proin commodo pulvinar nisi eu ultricies. Curabitur ut luctus lacus. Quisque iaculis ornare consectetur. Nullam imperdiet dolor dolor, id interdum turpis commodo a. Maecenas congue pharetra tincidunt. Vivamus ac leo ut lorem fringilla auctor. Integer et rhoncus magna, eget aliquet turpis. Proin nec tortor vitae ex dictum sagittis.
+
+Option9: with borders left, right and under (but not above)
+<kbd> [![My description](../../assets/images/virtualbox/installing-virtualbox-withborder.png "My tooltip")](../../assets/images/virtualbox/installing-virtualbox-withborder.png) </kbd>
+
+
 
 hasellus posuere nisi vel sodales tempor. Nulla varius tincidunt euismod. Nulla mi tortor, porta a vehicula in, elementum at nulla. Proin ut fermentum ipsum, nec molestie ante. Quisque scelerisque convallis tristique. Proin commodo pulvinar nisi eu ultricies. Curabitur ut luctus lacus. Quisque iaculis ornare consectetur. Nullam imperdiet dolor dolor, id interdum turpis commodo a. Maecenas congue pharetra tincidunt. Vivamus ac leo ut lorem fringilla auctor. Integer et rhoncus magna, eget aliquet turpis. Proin nec tortor vitae ex dictum sagittis.
 
