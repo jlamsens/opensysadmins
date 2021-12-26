@@ -12,14 +12,14 @@
         <meta name="author" content="Jurgen Lamsens">
       
       
-        <link rel="canonical" href="https://www.opensysadmins.com/tutorials/virtualbox/section1/">
+        <link rel="canonical" href="https://www.opensysadmins.com/tutorials/virtualbox-windows/configure-vb/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
-        <title>Installation VB - OpenSysAdmins</title>
+        <title>Configure VB - OpenSysAdmins</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation-vb" class="md-skip">
+        <a href="#section-title" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installation VB
+              Configure VB
             
           </span>
         </div>
@@ -359,12 +359,16 @@
         
           
         
+          
+        
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">VirtualBox</a>
+          <a href="../">VirtualBox Windows</a>
           
             <label for="__nav_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -372,13 +376,27 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="VirtualBox" data-md-level="2">
+      <nav class="md-nav" aria-label="VirtualBox Windows" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          VirtualBox
+          VirtualBox Windows
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install-vb/" class="md-nav__link">
+        Install VB
+      </a>
+    </li>
+  
+
             
           
             
@@ -396,9 +414,81 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Configure VB
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Installation VB
+        Configure VB
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ch11-toc" class="md-nav__link">
+    Ch1.1 toc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch12-toc" class="md-nav__link">
+    Ch1.2 toc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch13-toc" class="md-nav__link">
+    Ch1.3 toc
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch1.3 toc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ch131-toc" class="md-nav__link">
+    Ch1.3.1 toc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ch132-toc" class="md-nav__link">
+    Ch1.3.2 toc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ch133-toc" class="md-nav__link">
+    Ch1.3.3 toc
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -411,8 +501,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../section2/" class="md-nav__link">
-        Configuration VB
+      <a href="../create-vm/" class="md-nav__link">
+        Create VM
       </a>
     </li>
   
@@ -425,8 +515,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../section3/" class="md-nav__link">
-        Installation OS
+      <a href="../configure-vm/" class="md-nav__link">
+        Configure VM
       </a>
     </li>
   
@@ -439,8 +529,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../section4/" class="md-nav__link">
-        Pre-configuration OS
+      <a href="../install-os/" class="md-nav__link">
+        Install OS
       </a>
     </li>
   
@@ -453,8 +543,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../section5/" class="md-nav__link">
-        Configuration OS
+      <a href="../pre-configure-os/" class="md-nav__link">
+        Pre-configure OS
       </a>
     </li>
   
@@ -467,7 +557,21 @@
   
   
     <li class="md-nav__item">
-      <a href="../section6/" class="md-nav__link">
+      <a href="../configure-os/" class="md-nav__link">
+        Configure OS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snapshot/" class="md-nav__link">
         Snapshot
       </a>
     </li>
@@ -508,6 +612,62 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ch11-toc" class="md-nav__link">
+    Ch1.1 toc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch12-toc" class="md-nav__link">
+    Ch1.2 toc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch13-toc" class="md-nav__link">
+    Ch1.3 toc
+  </a>
+  
+    <nav class="md-nav" aria-label="Ch1.3 toc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ch131-toc" class="md-nav__link">
+    Ch1.3.1 toc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ch132-toc" class="md-nav__link">
+    Ch1.3.2 toc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ch133-toc" class="md-nav__link">
+    Ch1.3.3 toc
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -519,52 +679,13 @@
               
                 
 
-<h1 id="installation-vb">Installation VB</h1>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C</label><label for="__tabbed_1_2">C++</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada congue arcu, sit amet imperdiet enim vulputate in. Proin accumsan lorem luctus tristique rutrum. Fusce sit amet orci eget nibh varius bibendum. In laoreet lectus dolor, mattis consectetur mauris vulputate nec. Curabitur eu lorem justo. Nulla et auctor felis. Duis vitae felis pellentesque, scelerisque velit non, elementum urna. Curabitur leo nunc, ullamcorper id orci vitae, fermentum accumsan erat. Cras euismod facilisis libero tincidunt dapibus.</p>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">/home/guru/hello_world_C.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">}</span><span class="w"></span>
-</code></pre></div>
-</td></tr></table>
-</div>
-<div class="tabbed-block">
-<p>Phasellus posuere nisi vel sodales tempor. Nulla varius tincidunt euismod. Nulla mi tortor, porta a vehicula in, elementum at nulla. Proin ut fermentum ipsum, nec molestie ante. Quisque scelerisque convallis tristique. Proin commodo pulvinar nisi eu ultricies. Curabitur ut luctus lacus. Quisque iaculis ornare consectetur. Nullam imperdiet dolor dolor, id interdum turpis commodo a. Maecenas congue pharetra tincidunt. Vivamus ac leo ut lorem fringilla auctor. Integer et rhoncus magna, eget aliquet turpis. Proin nec tortor vitae ex dictum sagittis.</p>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">/home/guru/hello_world_C++.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span>
-<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello world!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="p">}</span><span class="w"></span>
-</code></pre></div>
-</td></tr></table>
-</div>
-</div>
-</div>
-<p>hasellus <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-delete">Del</kbd></span> posuere <span class="keys"><kbd class="key-enter">Enter</kbd></span> nisi <span class="keys"><kbd class="key-control">Ctrl</kbd></span> vel sodales tempor. Nulla varius tincidunt euismod. Nulla mi tortor, porta a vehicula in, elementum at nulla. Proin ut fermentum ipsum, nec molestie ante. Quisque scelerisque convallis tristique. Proin commodo pulvinar nisi eu ultricies. Curabitur ut luctus lacus. Quisque iaculis ornare consectetur. Nullam imperdiet dolor dolor, id interdum turpis commodo a. Maecenas congue pharetra tincidunt. Vivamus ac leo ut lorem fringilla auctor. Integer et rhoncus magna, eget aliquet turpis. Proin nec tortor vitae ex dictum sagittis.</p>
-<p>hasellus &plusmn; posuere &frac14; 1<sup>st</sup> 2<sup>nd</sup> nisi &harr; vel sodales tempor. Nulla varius tincidunt euismod. Nulla mi tortor, porta a vehicula in, elementum at nulla. Proin ut fermentum ipsum, nec molestie ante. Quisque scelerisque convallis tristique. Proin commodo pulvinar nisi eu ultricies. Curabitur ut luctus lacus. Quisque iaculis ornare consectetur. Nullam imperdiet dolor dolor, id interdum turpis commodo a. Maecenas congue pharetra tincidunt. Vivamus ac leo ut lorem fringilla auctor. Integer et rhoncus magna, eget aliquet turpis. Proin nec tortor vitae ex dictum sagittis.</p>
-<p>Option9: with borders left, right and under (but not above)
-<kbd> <a href="../../../assets/images/virtualbox/installing-virtualbox-withborder.png"><img alt="My description" src="../../../assets/images/virtualbox/installing-virtualbox-withborder.png" title="My tooltip" /></a> </kbd></p>
-<p>hasellus posuere nisi vel sodales tempor. Nulla varius tincidunt euismod. Nulla mi tortor, porta a vehicula in, elementum at nulla. Proin ut fermentum ipsum, nec molestie ante. Quisque scelerisque convallis tristique. Proin commodo pulvinar nisi eu ultricies. Curabitur ut luctus lacus. Quisque iaculis ornare consectetur. Nullam imperdiet dolor dolor, id interdum turpis commodo a. Maecenas congue pharetra tincidunt. Vivamus ac leo ut lorem fringilla auctor. Integer et rhoncus magna, eget aliquet turpis. Proin nec tortor vitae ex dictum sagittis.</p>
-<p>hasellus posuere nisi vel sodales tempor. Nulla varius tincidunt euismod. Nulla mi tortor, porta a vehicula in, elementum at nulla. Proin ut fermentum ipsum, nec molestie ante. Quisque scelerisque convallis tristique. Proin commodo pulvinar nisi eu ultricies. Curabitur ut luctus lacus. Quisque iaculis ornare consectetur. Nullam imperdiet dolor dolor, id interdum turpis commodo a. Maecenas congue pharetra tincidunt. Vivamus ac leo ut lorem fringilla auctor. Integer et rhoncus magna, eget aliquet turpis. Proin nec tortor vitae ex dictum sagittis.</p>
-<p>hasellus posuere nisi vel sodales tempor. Nulla varius tincidunt euismod. Nulla mi tortor, porta a vehicula in, elementum at nulla. Proin ut fermentum ipsum, nec molestie ante. Quisque scelerisque convallis tristique. Proin commodo pulvinar nisi eu ultricies. Curabitur ut luctus lacus. Quisque iaculis ornare consectetur. Nullam imperdiet dolor dolor, id interdum turpis commodo a. Maecenas congue pharetra tincidunt. Vivamus ac leo ut lorem fringilla auctor. Integer et rhoncus magna, eget aliquet turpis. Proin nec tortor vitae ex dictum sagittis.</p>
-<p>hasellus posuere nisi vel sodales tempor. Nulla varius tincidunt euismod. Nulla mi tortor, porta a vehicula in, elementum at nulla. Proin ut fermentum ipsum, nec molestie ante. Quisque scelerisque convallis tristique. Proin commodo pulvinar nisi eu ultricies. Curabitur ut luctus lacus. Quisque iaculis ornare consectetur. Nullam imperdiet dolor dolor, id interdum turpis commodo a. Maecenas congue pharetra tincidunt. Vivamus ac leo ut lorem fringilla auctor. Integer et rhoncus magna, eget aliquet turpis. Proin nec tortor vitae ex dictum sagittis.</p>
-<p>hasellus posuere nisi vel sodales tempor. Nulla varius tincidunt euismod. Nulla mi tortor, porta a vehicula in, elementum at nulla. Proin ut fermentum ipsum, nec molestie ante. Quisque scelerisque convallis tristique. Proin commodo pulvinar nisi eu ultricies. Curabitur ut luctus lacus. Quisque iaculis ornare consectetur. Nullam imperdiet dolor dolor, id interdum turpis commodo a. Maecenas congue pharetra tincidunt. Vivamus ac leo ut lorem fringilla auctor. Integer et rhoncus magna, eget aliquet turpis. Proin nec tortor vitae ex dictum sagittis.</p>
+<h1 id="section-title">Section title</h1>
+<h2 id="ch11-toc">Ch1.1 toc</h2>
+<h2 id="ch12-toc">Ch1.2 toc</h2>
+<h2 id="ch13-toc">Ch1.3 toc</h2>
+<h3 id="ch131-toc">Ch1.3.1 toc</h3>
+<h3 id="ch132-toc">Ch1.3.2 toc</h3>
+<h3 id="ch133-toc">Ch1.3.3 toc</h3>
 
               
             </article>
@@ -578,7 +699,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview" rel="prev">
+        <a href="../install-vb/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Install VB" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -587,20 +708,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Overview
+              Install VB
             </div>
           </div>
         </a>
       
       
         
-        <a href="../section2/" class="md-footer__link md-footer__link--next" aria-label="Next: Configuration VB" rel="next">
+        <a href="../create-vm/" class="md-footer__link md-footer__link--next" aria-label="Next: Create VM" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Configuration VB
+              Create VM
             </div>
           </div>
           <div class="md-footer__button md-icon">

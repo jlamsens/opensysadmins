@@ -12,14 +12,14 @@
         <meta name="author" content="Jurgen Lamsens">
       
       
-        <link rel="canonical" href="https://www.opensysadmins.com/tutorials/virtualbox/section4/">
+        <link rel="canonical" href="https://www.opensysadmins.com/tutorials/virtualbox-windows/install-vb/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
-        <title>Pre-configuration OS - OpenSysAdmins</title>
+        <title>Install VB - OpenSysAdmins</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#section4-title" class="md-skip">
+        <a href="#section-title" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pre-configuration OS
+              Install VB
             
           </span>
         </div>
@@ -359,12 +359,16 @@
         
           
         
+          
+        
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">VirtualBox</a>
+          <a href="../">VirtualBox Windows</a>
           
             <label for="__nav_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -372,55 +376,13 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="VirtualBox" data-md-level="2">
+      <nav class="md-nav" aria-label="VirtualBox Windows" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          VirtualBox
+          VirtualBox Windows
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../section1/" class="md-nav__link">
-        Installation VB
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../section2/" class="md-nav__link">
-        Configuration VB
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../section3/" class="md-nav__link">
-        Installation OS
-      </a>
-    </li>
-  
-
             
           
             
@@ -439,12 +401,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Pre-configuration OS
+          Install VB
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Pre-configuration OS
+        Install VB
       </a>
       
         
@@ -463,50 +425,65 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ch11-toc" class="md-nav__link">
-    Ch1.1 toc
+  <a href="#download" class="md-nav__link">
+    Download
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ch12-toc" class="md-nav__link">
-    Ch1.2 toc
+  <a href="#welcome" class="md-nav__link">
+    Welcome
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ch13-toc" class="md-nav__link">
-    Ch1.3 toc
-  </a>
-  
-    <nav class="md-nav" aria-label="Ch1.3 toc">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ch131-toc" class="md-nav__link">
-    Ch1.3.1 toc
+  <a href="#options" class="md-nav__link">
+    Options
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#ch132-toc" class="md-nav__link">
-    Ch1.3.2 toc
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#ch133-toc" class="md-nav__link">
-    Ch1.3.3 toc
+      
+        <li class="md-nav__item">
+  <a href="#network-warning" class="md-nav__link">
+    Network warning
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#ready-to-install" class="md-nav__link">
+    Ready to install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft-windows-uac" class="md-nav__link">
+    Microsoft Windows UAC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    Installing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete" class="md-nav__link">
+    Complete
+  </a>
   
 </li>
       
@@ -525,8 +502,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../section5/" class="md-nav__link">
-        Configuration OS
+      <a href="../configure-vb/" class="md-nav__link">
+        Configure VB
       </a>
     </li>
   
@@ -539,7 +516,77 @@
   
   
     <li class="md-nav__item">
-      <a href="../section6/" class="md-nav__link">
+      <a href="../create-vm/" class="md-nav__link">
+        Create VM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configure-vm/" class="md-nav__link">
+        Configure VM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install-os/" class="md-nav__link">
+        Install OS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pre-configure-os/" class="md-nav__link">
+        Pre-configure OS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configure-os/" class="md-nav__link">
+        Configure OS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snapshot/" class="md-nav__link">
         Snapshot
       </a>
     </li>
@@ -587,50 +634,65 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ch11-toc" class="md-nav__link">
-    Ch1.1 toc
+  <a href="#download" class="md-nav__link">
+    Download
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ch12-toc" class="md-nav__link">
-    Ch1.2 toc
+  <a href="#welcome" class="md-nav__link">
+    Welcome
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ch13-toc" class="md-nav__link">
-    Ch1.3 toc
-  </a>
-  
-    <nav class="md-nav" aria-label="Ch1.3 toc">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ch131-toc" class="md-nav__link">
-    Ch1.3.1 toc
+  <a href="#options" class="md-nav__link">
+    Options
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#ch132-toc" class="md-nav__link">
-    Ch1.3.2 toc
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#ch133-toc" class="md-nav__link">
-    Ch1.3.3 toc
+      
+        <li class="md-nav__item">
+  <a href="#network-warning" class="md-nav__link">
+    Network warning
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#ready-to-install" class="md-nav__link">
+    Ready to install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft-windows-uac" class="md-nav__link">
+    Microsoft Windows UAC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    Installing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete" class="md-nav__link">
+    Complete
+  </a>
   
 </li>
       
@@ -647,13 +709,25 @@
               
                 
 
-<h1 id="section4-title">Section4 title</h1>
-<h2 id="ch11-toc">Ch1.1 toc</h2>
-<h2 id="ch12-toc">Ch1.2 toc</h2>
-<h2 id="ch13-toc">Ch1.3 toc</h2>
-<h3 id="ch131-toc">Ch1.3.1 toc</h3>
-<h3 id="ch132-toc">Ch1.3.2 toc</h3>
-<h3 id="ch133-toc">Ch1.3.3 toc</h3>
+<h1 id="section-title">Section title</h1>
+<h2 id="download">Download</h2>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/download.png"><img alt="Install VirtualBox" src="../../../assets/images/virtualbox-windows/download.png" title="Download" /></a> </kbd></p>
+<h2 id="welcome">Welcome</h2>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/welcome.png"><img alt="Install VirtualBox" src="../../../assets/images/virtualbox-windows/welcome.png" title="Welcome" /></a> </kbd></p>
+<h2 id="options">Options</h2>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/options.png"><img alt="Install VirtualBox" src="../../../assets/images/virtualbox-windows/options.png" title="Options" /></a> </kbd></p>
+<h2 id="features">Features</h2>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/features.png"><img alt="Install VirtualBox" src="../../../assets/images/virtualbox-windows/features.png" title="Features" /></a> </kbd></p>
+<h2 id="network-warning">Network warning</h2>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/network-warning.png"><img alt="Install VirtualBox" src="../../../assets/images/virtualbox-windows/network-warning.png" title="Network warning" /></a> </kbd></p>
+<h2 id="ready-to-install">Ready to install</h2>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/ready-to-install.png"><img alt="Install VirtualBox" src="../../../assets/images/virtualbox-windows/ready-to-install.png" title="Ready to install" /></a> </kbd></p>
+<h2 id="microsoft-windows-uac">Microsoft Windows UAC</h2>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/microsoft-windows-uac.png"><img alt="Install VirtualBox" src="../../../assets/images/virtualbox-windows/microsoft-windows-uac.png" title="Microsoft Windows UAC" /></a> </kbd></p>
+<h2 id="installing">Installing</h2>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/installing.png"><img alt="Install VirtualBox" src="../../../assets/images/virtualbox-windows/installing.png" title="Installing" /></a> </kbd></p>
+<h2 id="complete">Complete</h2>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/completed.png"><img alt="Install VirtualBox" src="../../../assets/images/virtualbox-windows/completed.png" title="Completed" /></a> </kbd></p>
 
               
             </article>
@@ -667,7 +741,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../section3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installation OS" rel="prev">
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -676,20 +750,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Installation OS
+              Overview
             </div>
           </div>
         </a>
       
       
         
-        <a href="../section5/" class="md-footer__link md-footer__link--next" aria-label="Next: Configuration OS" rel="next">
+        <a href="../configure-vb/" class="md-footer__link md-footer__link--next" aria-label="Next: Configure VB" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Configuration OS
+              Configure VB
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -11,37 +11,47 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/</loc>
          <lastmod>2021-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox/section1/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/configure-os/</loc>
          <lastmod>2021-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox/section2/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/configure-vb/</loc>
          <lastmod>2021-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox/section3/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/configure-vm/</loc>
          <lastmod>2021-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox/section4/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/create-vm/</loc>
          <lastmod>2021-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox/section5/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/install-os/</loc>
          <lastmod>2021-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox/section6/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/install-vb/</loc>
+         <lastmod>2021-12-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/pre-configure-os/</loc>
+         <lastmod>2021-12-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/snapshot/</loc>
          <lastmod>2021-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
