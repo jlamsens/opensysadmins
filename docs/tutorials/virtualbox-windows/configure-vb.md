@@ -14,3 +14,6 @@
 
 ## NAT network details
 <kbd> [![Configuration VirtualBox](../../assets/images/virtualbox-windows/configure-vb/nat-network-details.png "NAT network details")](../../assets/images/virtualbox-windows/configure-vb/nat-network-details.png) </kbd>
+
+## NAT network renamed
+<kbd> [![Configuration VirtualBox](../../assets/images/virtualbox-windows/configure-vb/nat-network-renamed.png "NAT network renamed")](../../assets/images/virtualbox-windows/configure-vb/nat-network-renamed.png) </kbd>
