@@ -2,7 +2,7 @@
 
 ## Linux Mint 20.2
 
-### Steps 1 --> 5
+### Guest additions and shared folder: steps 1 --> 5
 
 === "Step1"
 
@@ -26,7 +26,7 @@
 
     <kbd> [![Pre-configuration operating system](../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-installed.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-installed.png) </kbd>
 
-### Steps 6 --> 11
+### Guest additions and shared folder: steps 6 --> 11
 
 === "Step6"
 
@@ -57,16 +57,8 @@
 
 ## Debian 11.2
 
-### Ch toc
-
-### Ch toc
-
-### Ch toc
+No pre-configuration here.
 
 ## Rocky Linux 6.5
 
-### Ch toc
-
-### Ch toc
-
-### Ch toc
+No pre-configuration here.

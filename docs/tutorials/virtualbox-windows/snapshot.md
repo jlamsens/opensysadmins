@@ -16,14 +16,21 @@
 
     <kbd> [![Snapshot](../../assets/images/virtualbox-windows/snapshot/mint/snapshot-clean-install.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/snapshot/mint/snapshot-clean-install.png) </kbd>
 
-
 ## Debian 11.2
 
-### Ch toc
+### Steps 1 --> 3
 
-### Ch toc
+=== "Step1"
 
-### Ch toc
+    <kbd> [![Snapshot](../../assets/images/virtualbox-windows/snapshot/debian/snapshot-menu.png "Debian 11.2")](../../assets/images/virtualbox-windows/snapshot/debian/snapshot-menu.png) </kbd>
+
+=== "Step2"
+
+    <kbd> [![Snapshot](../../assets/images/virtualbox-windows/snapshot/debian/snapshot-take-description.png "Debian 11.2")](../../assets/images/virtualbox-windows/snapshot/debian/snapshot-take-description.png) </kbd>
+
+=== "Step3"
+
+    <kbd> [![Snapshot](../../assets/images/virtualbox-windows/snapshot/debian/snapshot-clean-install.png "Debian 11.2")](../../assets/images/virtualbox-windows/snapshot/debian/snapshot-clean-install.png) </kbd>
 
 ## Rocky Linux 6.5
 

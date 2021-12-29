@@ -1,90 +1,167 @@
-# Configuration operaring system
+# Configuration operating system
 
 ## Linux Mint 20.2
 
-### Steps 1 --> 5
+### IPv4/default gateway/DNS
 
 === "Step1"
 
-    <kbd> [![Configuration operaring system](../../assets/images/virtualbox-windows/configure-os/mint/network-settings.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/network-settings.png) </kbd>
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/network-settings.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/network-settings.png) </kbd>
 
 === "Step2"
 
-    <kbd> [![Configuration operaring system](../../assets/images/virtualbox-windows/configure-os/mint/ipv4-and-dns.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/ipv4-and-dns.png) </kbd>
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/ipv4-and-dns.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/ipv4-and-dns.png) </kbd>
 
 === "Step3"
 
-    <kbd> [![Configuration operaring system](../../assets/images/virtualbox-windows/configure-os/mint/connection-established.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/connection-established.png) </kbd>
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/connection-established.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/connection-established.png) </kbd>
+
+### Full update 1 / 2
 
 === "Step4"
 
-    <kbd> [![Configuration operaring system](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-icon.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-icon.png) </kbd>
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-icon.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-icon.png) </kbd>
 
 === "Step5"
 
-    <kbd> [![Configuration operaring system](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-ok.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-ok.png) </kbd>
-
-### Steps 6 --> 10
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-ok.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-ok.png) </kbd>
 
 === "Step6"
 
-    <kbd> [![Configuration operaring system](../../assets/images/virtualbox-windows/configure-os/mint/local-mirror.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/local-mirror.png) </kbd>
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/local-mirror.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/local-mirror.png) </kbd>
 
 === "Step7"
 
-    <kbd> [![Configuration operaring system](../../assets/images/virtualbox-windows/configure-os/mint/refresh.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/refresh.png) </kbd>
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/refresh.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/refresh.png) </kbd>
 
 === "Step8"
 
-    <kbd> [![Configuration operaring system](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-new-version.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-new-version.png) </kbd>
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-new-version.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-new-version.png) </kbd>
 
 === "Step9"
 
-    <kbd> [![Configuration operaring system](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-authenticate.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-authenticate.png) </kbd>
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-authenticate.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-authenticate.png) </kbd>
+
+### Full update 2 / 2
 
 === "Step10"
 
-    <kbd> [![Configuration operaring system](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-install-updates.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-install-updates.png) </kbd>
-
-### Step 11 --> 16
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-install-updates.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-install-updates.png) </kbd>
 
 === "Step11"
 
-    <kbd> [![Configuration operaring system](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-trigger-additional-changes.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-trigger-additional-changes.png) </kbd>
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-trigger-additional-changes.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-trigger-additional-changes.png) </kbd>
 
 === "Step12"
 
-    <kbd> [![Configuration operaring system](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-trigger-additional-changes-authenticate.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-trigger-additional-changes-authenticate.png) </kbd>
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-trigger-additional-changes-authenticate.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-trigger-additional-changes-authenticate.png) </kbd>
 
 === "Step13"
 
-    <kbd> [![Configuration operaring system](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-downloading-packages.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-downloading-packages.png) </kbd>
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-downloading-packages.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-downloading-packages.png) </kbd>
 
 === "Step14"
 
-    <kbd> [![Configuration operaring system](../../assets/images/virtualbox-windows/configure-os/mint/system-reports-icon.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/system-reports-icon.png) </kbd>
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/system-reports-icon.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/system-reports-icon.png) </kbd>
 
 === "Step15"
 
-    <kbd> [![Configuration operaring system](../../assets/images/virtualbox-windows/configure-os/mint/system-reports-ignore-all.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/system-reports-ignore-all.png) </kbd>
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-system-updated.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/update-manager-system-updated.png) </kbd>
+
+
+### Ignore system reports
 
 === "Step16"
 
-    <kbd> [![Configuration operaring system](../../assets/images/virtualbox-windows/configure-os/mint/system-reports-no-problems-detected.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/system-reports-no-problems-detected.png) </kbd>
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/system-reports-ignore-all.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/system-reports-ignore-all.png) </kbd>
+
+=== "Step17"
+
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/system-reports-no-problems-detected.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/system-reports-no-problems-detected.png) </kbd>
+
+### Resolving host names
+
+=== "Step1"
+
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/nano-hosts-adjust.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/nano-hosts-adjust.png) </kbd>
+
+=== "Step2"
+
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/hostname-verify.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/hostname-verify.png) </kbd>
+
+### Shutdown
+
+<kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/history-clear-shutdown.png "Linux Mint 20.2")](../../assets/images/virtualbox-windows/configure-os/mint/history-clear-shutdown.png) </kbd>
 
 
 ## Debian 11.2
 
-### Ch toc
+### IPv4/default gateway/DNS
 
-### Ch toc
+=== "Step1"
 
-### Ch toc
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/debian/login-guru2.png "Debian 11.2")](../../assets/images/virtualbox-windows/configure-os/debian/login-guru2.png) </kbd>
+
+=== "Step2"
+
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/debian/check-nic-name-nano-etc-network-interfaces.png "Debian 11.2")](../../assets/images/virtualbox-windows/configure-os/debian/check-nic-name-nano-etc-network-interfaces.png) </kbd>
+
+=== "Step3"
+
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/debian/nano-etc-network-interfaces.png "Debian 11.2")](../../assets/images/virtualbox-windows/configure-os/debian/nano-etc-network-interfaces.png) </kbd>
+
+=== "Step4"
+
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/debian/nano-etc-resolv-conf.png "Debian 11.2")](../../assets/images/virtualbox-windows/configure-os/debian/nano-etc-resolv-conf.png) </kbd>
+
+=== "Step5"
+
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/debian/etc-resolv-conf.png "Debian 11.2")](../../assets/images/virtualbox-windows/configure-os/debian/etc-resolv-conf.png) </kbd>
+
+=== "Step6"
+
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/debian/restart-network-ping.png "Debian 11.2")](../../assets/images/virtualbox-windows/configure-os/debian/restart-network-ping.png) </kbd>
+
+### Full update
+
+=== "Step6"
+
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/debian/nano-etc-apt-sources-list.png "Debian 11.2")](../../assets/images/virtualbox-windows/configure-os/debian/nano-etc-apt-sources-list.png) </kbd>
+
+=== "Step7"
+
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/debian/etc-apt-sources-list.png "Debian 11.2")](../../assets/images/virtualbox-windows/configure-os/debian/etc-apt-sources-list.png) </kbd>
+
+=== "Step7"
+
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/debian/apt-update.png "Debian 11.2")](../../assets/images/virtualbox-windows/configure-os/debian/apt-update.png) </kbd>
+
+=== "Step8"
+
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/debian/apt-dist-upgrade.png "Debian 11.2")](../../assets/images/virtualbox-windows/configure-os/debian/apt-dist-upgrade.png) </kbd>
+
+### Resolving host names
+
+=== "Step9"
+
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/debian/nano-etc-hosts.png "Debian 11.2")](../../assets/images/virtualbox-windows/configure-os/debian/nano-etc-hosts.png) </kbd>
+
+=== "Step10"
+
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/debian/etc-hosts.png "Debian 11.2")](../../assets/images/virtualbox-windows/configure-os/debian/etc-hosts.png) </kbd>
+
+=== "Step11"
+
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/debian/hostname-verify.png "Debian 11.2")](../../assets/images/virtualbox-windows/configure-os/debian/hostname-verify.png) </kbd>
+
+### Shutdown
+
+<kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/debian/clear-history-shutdown.png "Debian 11.2")](../../assets/images/virtualbox-windows/configure-os/debian/clear-history-shutdown.png) </kbd>
 
 ## Rocky Linux 6.5
 
-### Ch toc
+### todo
 
-### Ch toc
+### todo
 
-### Ch toc
+### todo
