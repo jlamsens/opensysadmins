@@ -158,7 +158,7 @@
 
 <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/debian/clear-history-shutdown.png "Debian 11.2")](../../assets/images/virtualbox-windows/configure-os/debian/clear-history-shutdown.png) </kbd>
 
-## Rocky Linux 6.5
+## Rocky Linux 8.5
 
 ### todo
 
