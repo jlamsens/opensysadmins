@@ -311,8 +311,6 @@ TODO: screenshot fresh install
 
 === "Step18"
 
-TODO: make guru3 administrative user + replace screenshot
-
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/user-creation-guru3.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/user-creation-guru3.png) </kbd>
 
 ### Steps 19 --> 23
