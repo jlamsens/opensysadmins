@@ -146,7 +146,7 @@ TODO: screenshot fresh install
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/debian/new-user.png "Debian 11.2")](../../assets/images/virtualbox-windows/install-os/debian/new-user.png) </kbd>
 
-### Steps 16 --> 23
+### Steps 17 --> 23
 
 === "Step17"
 
@@ -234,104 +234,107 @@ TODO: screenshot fresh install
 
 ## Rocky Linux 8.5
 
-### Steps 1 --> 6
+### Steps 1 --> 8
 
 === "Step1"
 
-    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installer-greeting.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/installer-greeting.png) </kbd>
+    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/normal-start.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/normal-start.png) </kbd>
+
 
 === "Step2"
 
-    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installer-starting.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/installer-starting.png) </kbd>
+    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installer-greeting.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/installer-greeting.png) </kbd>
 
 === "Step3"
 
-    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installer-one-moment.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/installer-one-moment.png) </kbd>
+    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installer-starting.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/installer-starting.png) </kbd>
 
 === "Step4"
 
-    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installer-welcome.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/installer-welcome.png) </kbd>
+    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installer-one-moment.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/installer-one-moment.png) </kbd>
 
 === "Step5"
 
-    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installer-welcome-overview.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/installer-welcome-overview.png) </kbd>
+    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installer-welcome.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/installer-welcome.png) </kbd>
 
 === "Step6"
 
-    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/keyboard-layout-be.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/keyboard-layout-be.png) </kbd>
-
-### Steps 7 --> 12
+    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installer-welcome-overview.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/installer-welcome-overview.png) </kbd>
 
 === "Step7"
 
-    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/keyboard-layout-us-be.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/keyboard-layout-us-be.png) </kbd>
+    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/keyboard-layout-be.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/keyboard-layout-be.png) </kbd>
 
 === "Step8"
 
-    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/keyboard-layout-only-be.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/keyboard-layout-only-be.png) </kbd>
+    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/keyboard-layout-us-be.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/keyboard-layout-us-be.png) </kbd>
+
+### Steps 9 --> 16
 
 === "Step9"
 
-    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/time-date.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/time-date.png) </kbd>
+    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/keyboard-layout-only-be.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/keyboard-layout-only-be.png) </kbd>
 
 === "Step10"
 
-    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installation-source.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/installation-source.png) </kbd>
+    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/time-date.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/time-date.png) </kbd>
 
 === "Step11"
 
-    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/software-selection.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/software-selection.png) </kbd>
+    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installation-source.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/installation-source.png) </kbd>
 
 === "Step12"
 
-    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installation-destination.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/installation-destination.png) </kbd>
-
-### Steps 13 --> 18
+    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/software-selection.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/software-selection.png) </kbd>
 
 === "Step13"
 
-    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/kdump.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/kdump.png) </kbd>
+    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installation-destination.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/installation-destination.png) </kbd>
 
 === "Step14"
 
-    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/network-host-name.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/network-host-name.png) </kbd>
+    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/kdump.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/kdump.png) </kbd>
 
 === "Step15"
 
-    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/security-policy.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/security-policy.png) </kbd>
+    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/network-host-name.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/network-host-name.png) </kbd>
 
 === "Step16"
+
+    <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/security-policy.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/security-policy.png) </kbd>
+
+### Steps 17 --> 24
+
+=== "Step17"
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/root-password.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/root-password.png) </kbd>
 
 
-=== "Step17"
+=== "Step18"
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/user-creation-field.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/user-creation-field.png) </kbd>
 
-=== "Step18"
+=== "Step19"
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/user-creation-guru3.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/user-creation-guru3.png) </kbd>
 
-### Steps 19 --> 23
-
-=== "Step19"
+=== "Step20"
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installation-progress.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/installation-progress.png) </kbd>
 
-=== "Step20"
+=== "Step21"
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installation-complete.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/installation-complete.png) </kbd>
 
-=== "Step21"
+=== "Step22"
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installation-reboot.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/installation-reboot.png) </kbd>
 
-=== "Step22"
+=== "Step23"
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/rocky-grub.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/rocky-grub.png) </kbd>
 
-=== "Step23"
+=== "Step24"
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/rocky-login.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/install-os/rocky/rocky-login.png) </kbd>
 
