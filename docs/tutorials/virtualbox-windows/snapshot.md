@@ -34,8 +34,16 @@
 
 ## Rocky Linux 6.5
 
-### Ch toc
+### Steps 1 --> 3
 
-### Ch toc
+=== "Step1"
 
-### Ch toc
+    <kbd> [![Snapshot](../../assets/images/virtualbox-windows/snapshot/rocky/snapshot-menu.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/snapshot/rocky/snapshot-menu.png) </kbd>
+
+=== "Step2"
+
+    <kbd> [![Snapshot](../../assets/images/virtualbox-windows/snapshot/rocky/snapshot-take-description.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/snapshot/rocky/snapshot-take-description.png) </kbd>
+
+=== "Step3"
+
+    <kbd> [![Snapshot](../../assets/images/virtualbox-windows/snapshot/rocky/snapshot-clean-install.png "Rocky Linux 8.5")](../../assets/images/virtualbox-windows/snapshot/rocky/snapshot-clean-install.png) </kbd>
