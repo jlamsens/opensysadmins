@@ -345,4 +345,4 @@ nav:
       - Pre-configure OS: tutorials/virtualbox-windows/pre-configure-os.md
       - Configure OS: tutorials/virtualbox-windows/configure-os.md
       - Snapshot: tutorials/virtualbox-windows/snapshot.md
-      - Outcome: tutorials/virtualbox-windows/outcome.md
+      - Final result: tutorials/virtualbox-windows/final-result.md

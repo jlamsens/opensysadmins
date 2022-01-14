@@ -1,4 +1,4 @@
-# Installation VirtualBox
+# Installation VirtualBox 6.1.x
 
 ## Download
 <kbd> [![Installation VirtualBox](../../assets/images/virtualbox-windows/install-vb/download.png "Download")](../../assets/images/virtualbox-windows/install-vb/download.png) </kbd>
