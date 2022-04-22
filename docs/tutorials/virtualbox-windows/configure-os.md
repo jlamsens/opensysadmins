@@ -99,7 +99,7 @@
 
 === "Step1"
 
-    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/debian/login-guru2-become-root.png "Debian 11.X")](../../assets/images/virtualbox-windows/configure-os/debian/login-guru2-become-root.png) </kbd>
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/debian/login-guru2.png "Debian 11.X")](../../assets/images/virtualbox-windows/configure-os/debian/login-guru2.png) </kbd>
 
 === "Step2"
 

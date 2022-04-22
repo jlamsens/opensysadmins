@@ -73,6 +73,7 @@
 ## Video memory
 
 === "Linux Mint 20.X"
+    Make sure you enable "3D Acceleration".
 
     <kbd> [![Configuration virtual machine](../../assets/images/virtualbox-windows/configure-vm/mint/video-memory.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/configure-vm/mint/video-memory.png) </kbd>
 

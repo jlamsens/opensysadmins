@@ -39,10 +39,11 @@
     <kbd> [![Pre-configuration operating system](../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-shared-folder-no-permissions.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-shared-folder-no-permissions.png) </kbd>
 
 === "Step9"
-
+    
     <kbd> [![Pre-configuration operating system](../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-sudo-adduser-vboxsf.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-sudo-adduser-vboxsf.png) </kbd>
 
 === "Step10"
+    The shared folder will only be accessible after a loggoff and logon.
 
     <kbd> [![Pre-configuration operating system](../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-sf-downloads.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-sf-downloads.png) </kbd>
 

@@ -136,7 +136,8 @@
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/debian/hostname.png "Debian 11.X")](../../assets/images/virtualbox-windows/install-os/debian/hostname.png) </kbd>
 
 === "Step14"
-
+    Leave the root password empty.
+    
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/debian/root-password.png "Debian 11.X")](../../assets/images/virtualbox-windows/install-os/debian/root-password.png) </kbd>
 
 === "Step15"
@@ -307,11 +308,13 @@
 ### Steps 17 --> 24
 
 === "Step17"
+    Leave the root password blank.
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/root-password.png "Rocky Linux 8.X")](../../assets/images/virtualbox-windows/install-os/rocky/root-password.png) </kbd>
 
 
 === "Step18"
+    Scroll down and select User Creation.
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/user-creation-field.png "Rocky Linux 8.X")](../../assets/images/virtualbox-windows/install-os/rocky/user-creation-field.png) </kbd>
 
