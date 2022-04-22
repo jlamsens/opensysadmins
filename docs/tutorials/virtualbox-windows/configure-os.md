@@ -84,7 +84,7 @@
 
 === "Step1"
 
-    TODO: sudo nano /etc/hosts screenshot (zelfde fontgrootte als step2)
+    <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/sudo-nano-etc-hosts.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/configure-os/mint/sudo-nano-etc-hosts.png) </kbd>
 
 === "Step2"
 
