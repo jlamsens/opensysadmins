@@ -72,10 +72,11 @@
 ### Ignore system reports
 
 === "Step1"
+    Menu -> Administration -> System Reports. Ignore all reports.
 
     <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/system-reports-ignore-all.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/configure-os/mint/system-reports-ignore-all.png) </kbd>
 
-=== "Step12"
+=== "Step2"
 
     <kbd> [![Configuration operating system](../../assets/images/virtualbox-windows/configure-os/mint/system-reports-no-problems-detected.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/configure-os/mint/system-reports-no-problems-detected.png) </kbd>
 
