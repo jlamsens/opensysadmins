@@ -9,6 +9,7 @@
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/mint/normal-start.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/install-os/mint/normal-start.png) </kbd>
 
 === "Step2"
+    Bij een "fresh" installatie krijg je nog de "Auto capture keyboard" melding. Klik op het witte tekstballonnetje om deze melding definitief te verbergen.
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/mint/auto-capture-keyboard-message.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/install-os/mint/auto-capture-keyboard-message.png) </kbd>
 
@@ -21,12 +22,14 @@
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/mint/start-linux-mint.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/install-os/mint/start-linux-mint.png) </kbd>
 
 === "Step5"
+    Bij een "fresh" installatie krijg je nog de "mouse pointer integration" melding. Klik op het witte tekstballonnetje om deze melding definitief te verbergen.
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/mint/guest-os-mouse-pointer-integration.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/install-os/mint/guest-os-mouse-pointer-integration.png) </kbd>
 
 ### Steps 6 --> 10
 
 === "Step6"
+    Nog geen netwerk. Dat is normaal.
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/mint/connection-failed.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/install-os/mint/connection-failed.png) </kbd>
 
@@ -53,10 +56,12 @@
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/mint/write-changes-to-disk.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/install-os/mint/write-changes-to-disk.png) </kbd>
 
 === "Step12"
+    Tik manueel "Brussels" in.
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/mint/where-are-you.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/install-os/mint/where-are-you.png) </kbd>
 
 === "Step13"
+    Paswoord is ook "guru1".
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/mint/who-are-you.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/install-os/mint/who-are-you.png) </kbd>
 
@@ -65,15 +70,16 @@
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/mint/installation-in-progress.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/install-os/mint/installation-in-progress.png) </kbd>
 
 === "Step15"
+    Herstart.
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/mint/installation-complete.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/install-os/mint/installation-complete.png) </kbd>
 
 === "Step16"
-    Move the "Welcome" window a bit. Toggle option "Show this dialog at startup" and close that window.
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/mint/remove-installation-medium.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/install-os/mint/remove-installation-medium.png) </kbd>
 
 === "Step17"
+    Mogelijks moet je het "Welcome" window een beetje verschuiven, om de optie "Show this dialog at startup" uit te vinken. Sluit vervolgens dat scherm.
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/mint/startup-dialog.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/install-os/mint/startup-dialog.png) </kbd>
 
@@ -124,6 +130,7 @@
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/debian/trying-dhcp.png "Debian 11.X")](../../assets/images/virtualbox-windows/install-os/debian/trying-dhcp.png) </kbd>
 
 === "Step11"
+    Nog geen netwerk. Dat is normaal.    
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/debian/network-autoconfiguration-failed.png "Debian 11.X")](../../assets/images/virtualbox-windows/install-os/debian/network-autoconfiguration-failed.png) </kbd>
 
@@ -136,7 +143,7 @@
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/debian/hostname.png "Debian 11.X")](../../assets/images/virtualbox-windows/install-os/debian/hostname.png) </kbd>
 
 === "Step14"
-    Leave the root password empty.
+    Laat het "Root password" veld blanco.
     
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/debian/root-password.png "Debian 11.X")](../../assets/images/virtualbox-windows/install-os/debian/root-password.png) </kbd>
 
@@ -244,6 +251,7 @@
 
 
 === "Step2"
+    Kies "Install Rocky Linux 8".
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installer-greeting.png "Rocky Linux 8.X")](../../assets/images/virtualbox-windows/install-os/rocky/installer-greeting.png) </kbd>
 
@@ -260,20 +268,24 @@
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installer-welcome.png "Rocky Linux 8.X")](../../assets/images/virtualbox-windows/install-os/rocky/installer-welcome.png) </kbd>
 
 === "Step6"
+    Je krijgt een overzicht. Klik op "Keyboard".
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installer-welcome-overview.png "Rocky Linux 8.X")](../../assets/images/virtualbox-windows/install-os/rocky/installer-welcome-overview.png) </kbd>
 
 === "Step7"
+    Klik op het "plus"-teken.
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/keyboard-layout-be.png "Rocky Linux 8.X")](../../assets/images/virtualbox-windows/install-os/rocky/keyboard-layout-be.png) </kbd>
 
 === "Step8"
+    Selecteer "English (US)" en klik op het "min"-teken om die te verwijderen.
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/keyboard-layout-us-be.png "Rocky Linux 8.X")](../../assets/images/virtualbox-windows/install-os/rocky/keyboard-layout-us-be.png) </kbd>
 
 ### Steps 9 --> 16
 
 === "Step9"
+    Probeer de keyboard layout gerust eens uit.
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/keyboard-layout-only-be.png "Rocky Linux 8.X")](../../assets/images/virtualbox-windows/install-os/rocky/keyboard-layout-only-be.png) </kbd>
 
@@ -282,6 +294,7 @@
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/time-date.png "Rocky Linux 8.X")](../../assets/images/virtualbox-windows/install-os/rocky/time-date.png) </kbd>
 
 === "Step11"
+    Laat default.
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installation-source.png "Rocky Linux 8.X")](../../assets/images/virtualbox-windows/install-os/rocky/installation-source.png) </kbd>
 
@@ -290,35 +303,40 @@
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/software-selection.png "Rocky Linux 8.X")](../../assets/images/virtualbox-windows/install-os/rocky/software-selection.png) </kbd>
 
 === "Step13"
+    Laat default.
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/installation-destination.png "Rocky Linux 8.X")](../../assets/images/virtualbox-windows/install-os/rocky/installation-destination.png) </kbd>
 
 === "Step14"
+    Laat default.
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/kdump.png "Rocky Linux 8.X")](../../assets/images/virtualbox-windows/install-os/rocky/kdump.png) </kbd>
 
 === "Step15"
+    Laat default.
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/network-host-name.png "Rocky Linux 8.X")](../../assets/images/virtualbox-windows/install-os/rocky/network-host-name.png) </kbd>
 
 === "Step16"
+    Laat default.
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/security-policy.png "Rocky Linux 8.X")](../../assets/images/virtualbox-windows/install-os/rocky/security-policy.png) </kbd>
 
 ### Steps 17 --> 24
 
 === "Step17"
-    Leave the root password blank.
+    Laat het "Root Password" veld blanco.
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/root-password.png "Rocky Linux 8.X")](../../assets/images/virtualbox-windows/install-os/rocky/root-password.png) </kbd>
 
 
 === "Step18"
-    Scroll down and select User Creation.
+    Mogelijks moet je wat naar onder "scrollen" om "User Creation" te kunnen selecteren.
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/user-creation-field.png "Rocky Linux 8.X")](../../assets/images/virtualbox-windows/install-os/rocky/user-creation-field.png) </kbd>
 
 === "Step19"
+    Paswoord is ook "guru3".
 
     <kbd> [![Installation operating system](../../assets/images/virtualbox-windows/install-os/rocky/user-creation-guru3.png "Rocky Linux 8.X")](../../assets/images/virtualbox-windows/install-os/rocky/user-creation-guru3.png) </kbd>
 

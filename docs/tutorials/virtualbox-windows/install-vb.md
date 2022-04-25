@@ -1,6 +1,8 @@
 # Installation VirtualBox 6.1.x
 
 ## Download
+Huidige versie: 6.1.34 (op 25/4/22)
+
 <kbd> [![Installation VirtualBox](../../assets/images/virtualbox-windows/install-vb/download.png "Download")](../../assets/images/virtualbox-windows/install-vb/download.png) </kbd>
 
 ## Welcome

@@ -1,4 +1,5 @@
 # Configuration virtual machine
+Doorloop eerst onderstaande tabbladen voor "Linux Mint 20.x". Vervolgens voor "Debian 11.x" en finaal voor "Rocky Linux 8.5". Ga dan pas naar "Install OS".
 
 ## Download ISO
 
