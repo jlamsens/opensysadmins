@@ -46,6 +46,7 @@ Doorloop eerst onderstaande tabbladen voor "Linux Mint 20.x". Vervolgens voor "D
 ## Boot order
 
 === "Linux Mint 20.X"
+    Je mag - ondanks de screenshot - de memory voor Linux Mint verhogen naar 4096 MB (4 GB) RAM. Later installeren we nl. de puppetserver.
 
     <kbd> [![Configuration virtual machine](../../assets/images/virtualbox-windows/configure-vm/mint/boot-order.png "Linux Mint 20.X")](../../assets/images/virtualbox-windows/configure-vm/mint/boot-order.png) </kbd>
 
