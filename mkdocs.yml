@@ -261,7 +261,6 @@ markdown_extensions:
         ## If a code blocks contains line numbers, enabling this setting will wrap them with anchor links, so they can be hyperlinked and shared more easily
         anchor_linenums: true
 
-        auto_title: true
 
     ## add support for syntax highlighting of inline code blocks
     ## built on top of the <Highlight> extension, from which it sources its configuration
@@ -317,7 +316,7 @@ extra:
   generator: false
 
 ## a custom copyright banner can be rendered as part of the footer, which is displayed next to the social links
-copyright: Copyright &copy; 2015 - 2021 Jurgen Lamsens
+copyright: Copyright &copy; 2022 Jurgen Lamsens
 
 nav:
   - Home: index.md
@@ -346,3 +345,15 @@ nav:
       - Configure OS: tutorials/virtualbox-windows/configure-os.md
       - Snapshot: tutorials/virtualbox-windows/snapshot.md
       - Final result: tutorials/virtualbox-windows/final-result.md
+    
+    - Puppet:
+      - tutorials/puppet/index.md #submenu overview/landing page
+      - Hands-on 1: tutorials/puppet/hands-on-1.md
+      - Hands-on 2: tutorials/puppet/hands-on-2.md
+      - Hands-on 3: tutorials/puppet/hands-on-3.md
+      - Hands-on 4: tutorials/puppet/hands-on-4.md
+      - Hands-on 5: tutorials/puppet/hands-on-5.md
+      - Hands-on 6: tutorials/puppet/hands-on-6.md
+      - Hands-on 7: tutorials/puppet/hands-on-7.md
+      - Hands-on 8: tutorials/puppet/hands-on-8.md
+      - Hands-on 9: tutorials/puppet/hands-on-9.md
