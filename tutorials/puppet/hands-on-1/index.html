@@ -12,21 +12,21 @@
         <meta name="author" content="Jurgen Lamsens">
       
       
-        <link rel="canonical" href="https://www.opensysadmins.com/">
+        <link rel="canonical" href="https://www.opensysadmins.com/tutorials/puppet/hands-on-1/">
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
-        <title>OpenSysAdmins</title>
+        <title>Hands-on 1 - OpenSysAdmins</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.edf004c2.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.edf004c2.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -40,7 +40,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome" class="md-skip">
+        <a href="#install-puppet-agent-on-debian-linux-11x" class="md-skip">
           Skip to content
         </a>
       
@@ -82,7 +82,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="OpenSysAdmins" class="md-header__button md-logo" aria-label="OpenSysAdmins" data-md-component="logo">
+    <a href="../../.." title="OpenSysAdmins" class="md-header__button md-logo" aria-label="OpenSysAdmins" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Hands-on 1
             
           </span>
         </div>
@@ -195,12 +195,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="." class="md-tabs__link md-tabs__link--active">
+    <a href="../../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -209,13 +207,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="tutorials/" class="md-tabs__link">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
         Tutorials
       </a>
     </li>
@@ -243,7 +243,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="OpenSysAdmins" class="md-nav__button md-logo" aria-label="OpenSysAdmins" data-md-component="logo">
+    <a href="../../.." title="OpenSysAdmins" class="md-nav__button md-logo" aria-label="OpenSysAdmins" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -272,21 +272,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
-      
     </li>
   
 
@@ -297,12 +287,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -320,7 +312,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="tutorials/">Tutorials</a>
+          <a href="../../">Tutorials</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -378,7 +370,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="tutorials/virtualbox-windows/">VirtualBox Windows</a>
+          <a href="../../virtualbox-windows/">VirtualBox Windows</a>
           
             <label for="__nav_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -401,7 +393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/virtualbox-windows/install-vb/" class="md-nav__link">
+      <a href="../../virtualbox-windows/install-vb/" class="md-nav__link">
         Install VB
       </a>
     </li>
@@ -415,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/virtualbox-windows/configure-vb/" class="md-nav__link">
+      <a href="../../virtualbox-windows/configure-vb/" class="md-nav__link">
         Configure VB
       </a>
     </li>
@@ -429,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/virtualbox-windows/create-vm/" class="md-nav__link">
+      <a href="../../virtualbox-windows/create-vm/" class="md-nav__link">
         Create VM
       </a>
     </li>
@@ -443,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/virtualbox-windows/configure-vm/" class="md-nav__link">
+      <a href="../../virtualbox-windows/configure-vm/" class="md-nav__link">
         Configure VM
       </a>
     </li>
@@ -457,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/virtualbox-windows/install-os/" class="md-nav__link">
+      <a href="../../virtualbox-windows/install-os/" class="md-nav__link">
         Install OS
       </a>
     </li>
@@ -471,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/virtualbox-windows/pre-configure-os/" class="md-nav__link">
+      <a href="../../virtualbox-windows/pre-configure-os/" class="md-nav__link">
         Pre-configure OS
       </a>
     </li>
@@ -485,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/virtualbox-windows/configure-os/" class="md-nav__link">
+      <a href="../../virtualbox-windows/configure-os/" class="md-nav__link">
         Configure OS
       </a>
     </li>
@@ -499,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/virtualbox-windows/snapshot/" class="md-nav__link">
+      <a href="../../virtualbox-windows/snapshot/" class="md-nav__link">
         Snapshot
       </a>
     </li>
@@ -513,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/virtualbox-windows/final-result/" class="md-nav__link">
+      <a href="../../virtualbox-windows/final-result/" class="md-nav__link">
         Final result
       </a>
     </li>
@@ -532,12 +524,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
       
       
       
@@ -567,7 +561,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="tutorials/puppet/">Puppet</a>
+          <a href="../">Puppet</a>
           
             <label for="__nav_2_3">
               <span class="md-nav__icon md-icon"></span>
@@ -588,11 +582,94 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="tutorials/puppet/hands-on-1/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Hands-on 1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Hands-on 1
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step0-as-this-is-a-lab-environment-dont-ask-for-the-sudo-password" class="md-nav__link">
+    step0: as this is a lab environment: don't ask for the sudo password
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step1-install-wget-package" class="md-nav__link">
+    step1: install wget package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step2-enable-puppet-repo" class="md-nav__link">
+    step2: enable puppet repo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step3-install-puppet-package" class="md-nav__link">
+    step3: install puppet package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step4-adjust-system-path" class="md-nav__link">
+    step4: adjust system path
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step5-comment-sudo-path-defaults" class="md-nav__link">
+    step5: comment (#) sudo path defaults
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step6-test-puppet" class="md-nav__link">
+    step6: test puppet
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -604,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/puppet/hands-on-2/" class="md-nav__link">
+      <a href="../hands-on-2/" class="md-nav__link">
         Hands-on 2
       </a>
     </li>
@@ -618,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/puppet/hands-on-3/" class="md-nav__link">
+      <a href="../hands-on-3/" class="md-nav__link">
         Hands-on 3
       </a>
     </li>
@@ -632,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/puppet/hands-on-4/" class="md-nav__link">
+      <a href="../hands-on-4/" class="md-nav__link">
         Hands-on 4
       </a>
     </li>
@@ -646,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/puppet/hands-on-5/" class="md-nav__link">
+      <a href="../hands-on-5/" class="md-nav__link">
         Hands-on 5
       </a>
     </li>
@@ -660,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/puppet/hands-on-6/" class="md-nav__link">
+      <a href="../hands-on-6/" class="md-nav__link">
         Hands-on 6
       </a>
     </li>
@@ -674,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/puppet/hands-on-7/" class="md-nav__link">
+      <a href="../hands-on-7/" class="md-nav__link">
         Hands-on 7
       </a>
     </li>
@@ -688,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/puppet/hands-on-8/" class="md-nav__link">
+      <a href="../hands-on-8/" class="md-nav__link">
         Hands-on 8
       </a>
     </li>
@@ -729,6 +806,63 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step0-as-this-is-a-lab-environment-dont-ask-for-the-sudo-password" class="md-nav__link">
+    step0: as this is a lab environment: don't ask for the sudo password
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step1-install-wget-package" class="md-nav__link">
+    step1: install wget package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step2-enable-puppet-repo" class="md-nav__link">
+    step2: enable puppet repo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step3-install-puppet-package" class="md-nav__link">
+    step3: install puppet package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step4-adjust-system-path" class="md-nav__link">
+    step4: adjust system path
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step5-comment-sudo-path-defaults" class="md-nav__link">
+    step5: comment (#) sudo path defaults
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step6-test-puppet" class="md-nav__link">
+    step6: test puppet
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -740,8 +874,82 @@
               
                 
 
-<h1 id="welcome">Welcome!</h1>
-<p>Landing page todo.</p>
+<h1 id="install-puppet-agent-on-debian-linux-11x">Install puppet-agent on Debian Linux 11.x</h1>
+<h2 id="step0-as-this-is-a-lab-environment-dont-ask-for-the-sudo-password">step0: as this is a lab environment: don't ask for the sudo password</h2>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">guru2@vm2:-$ _</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2"> ALL=(ALL:ALL) NOPASSWD: ALL&quot;</span> <span class="p">|</span> sudo tee /etc/sudoers.d/<span class="nv">$USER</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="step1-install-wget-package">step1: install wget package</h2>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">guru2@vm2:-$ _</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>sudo apt-get update
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>sudo apt-get install wget
+</code></pre></div>
+</td></tr></table>
+<h2 id="step2-enable-puppet-repo">step2: enable puppet repo</h2>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">guru2@vm2:-$ _</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>wget https://apt.puppet.com/puppet7-release-focal.deb
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>sudo dpkg -i puppet7-release-focal.deb
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>sudo apt-get update
+</code></pre></div>
+</td></tr></table>
+<h2 id="step3-install-puppet-package">step3: install puppet package</h2>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">guru2@vm2:-$ _</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>sudo apt-get install puppet-agent
+</code></pre></div>
+</td></tr></table>
+<h2 id="step4-adjust-system-path">step4: adjust system path</h2>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">guru2@vm2:-$ _</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nb">echo</span> <span class="s1">&#39;export PATH=/opt/puppetlabs/bin:/opt/puppetlabs/puppet/bin:$PATH&#39;</span> &gt;&gt; .bashrc
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="nb">source</span> .bashrc
+</code></pre></div>
+</td></tr></table>
+<h2 id="step5-comment-sudo-path-defaults">step5: comment (#) sudo path defaults</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">command</label><label for="__tabbed_1_2">contents</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">guru2@vm2:-$ _</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>sudo /usr/sbin/visudo
+</code></pre></div>
+</td></tr></table>
+</div>
+<div class="tabbed-block">
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">/etc/sudoers</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1">#</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="c1"># This file MUST be edited with the &#39;visudo&#39; command as root.</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="c1">#</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="c1"># Please consider adding local content in /etc/sudoers.d/ instead of</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="c1"># directly modifying this file.</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="c1">#</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="c1"># See the man page for details on how to write a sudoers file.</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="c1">#</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>Defaults    env_reset
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>Defaults    mail_badpass
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="hll"><span class="c1"># Defaults  secure_path=&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin&quot;</span>
+</span><a id="__codelineno-6-12" name="__codelineno-6-12"></a>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="c1"># Host alias specification</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="c1"># User alias specification</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+</div>
+</div>
+<h2 id="step6-test-puppet">step6: test puppet</h2>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">guru2@vm2:-$ _</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>sudo puppet <span class="nb">help</span>
+</code></pre></div>
+</td></tr></table>
 
               
             </article>
@@ -754,15 +962,30 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Overview
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="tutorials/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview" rel="next">
+        <a href="../hands-on-2/" class="md-footer__link md-footer__link--next" aria-label="Next: Hands-on 2" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Overview
+              Hands-on 2
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -807,10 +1030,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.indexes", "search.highlight", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.indexes", "search.highlight", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
-      <script src="assets/javascripts/bundle.e1a181d9.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.e1a181d9.min.js"></script>
       
     
   </body>
