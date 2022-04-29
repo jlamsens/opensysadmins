@@ -8,6 +8,7 @@ sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/p
 rm -f packages.microsoft.gpg
 sudo apt-get update
 ```
+
 ## step2: install the package
 ``` bash title="guru1@vm1:-$ _"
 sudo apt-get install code
@@ -21,7 +22,7 @@ sudo apt-get install code
     tree -ugp /etc/puppetlabs/code/environments/production/
     ```
 
-=== "directory"
+=== "output"
 
     ``` bash title="/etc/puppetlabs/code/environments/production/"
     ├── [drwxr-xr-x root     root    ]  data
@@ -54,5 +55,11 @@ code .
 - Close the "Extension: Puppet" tab
 
 ## step7: writing your first main manifest
+- Don't forget to File -> Save (All)
 
 <kbd> [![Main manifest](../../assets/images/puppet/hands-on-5/first-manifest.png "Linux Mint 20.X")](../../assets/images/puppet/hands-on-5/first-manifest.png) </kbd>
+
+## step8: run puppet manually (apply catalog)
+``` bash title="guru2@vm2:-$ _"
+sudo puppet agent --server=vm1.opensysadmins.lab --no-daemonize --verbose --onetime
+```

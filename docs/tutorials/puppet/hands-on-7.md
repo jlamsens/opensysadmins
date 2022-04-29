@@ -1,94 +1,59 @@
-# TIJDELIJK
+# Install puppet-agent on Rocky Linux 8.5
 
-## TIJDELIJK
-``` puppet title="tijdelijke site.pp"
-class base {
-  # this file gives a nice message at logon
-  file { '/etc/motd':
-    content => "This file is managed by Puppet. Do not change manually!\n"
-  }
-
-  # make sure the package is installed
-  package {'nmap':
-    ensure => installed,
-  }
-
-  # create user without password
-  user {'vdab':
-    ensure     => present,
-    uid        => '1001',
-    comment    => 'System admin',
-    shell      => '/bin/bash',
-    managehome => true,
-  }
-
-  # make sure the package is installed
-  package {'net-tools':
-    ensure => installed,
-  }
-}
-
-class ssh::install {
-  # make sure the package is installed
-  package { 'openssh-server':
-    ensure => installed,
-  }
-}
-
-class ssh::service {
-  # make sure the service is started at boot time, running at all times but only if it is installed
-  service {'sshd':
-    enable  => true,
-    ensure  => running,
-    require => Package['openssh-server'],
-  }
-}
-
-class ssh::config {
-  # this file is for customizing ssh settings
-  file {'/etc/ssh/sshd_config':
-    ensure  => present,
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0600',
-    notify  => Service['sshd'],
-    source  => $osfamily ? {
-      /(Ubuntu|Debian)/        => 'puppet:///modules/ssh/sshd_config',
-      /(RedHat|CentOS|Fedora)/ => 'puppet:///modules/ssh/sshd_config_rpm',
-    },
-  }
-}
-
-
-
-
-
-
-```
-## step2: 
-``` bash title="guru1@vm1:-$ _"
-command
-command
-...
+## step0: as this is a lab environment: don't ask for the sudo password
+``` bash title="guru3@vm3:-$ _"
+echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/$USER
 ```
 
-## step3: 
-``` bash title="guru1@vm1:-$ _"
-command
-command
-...
+## step1: enable puppet repo (run the rpm tool in upgrade mode)
+``` bash title="guru3@vm3:-$ _"
+sudo rpm -Uvh https://yum.puppet.com/puppet7-release-el-8.noarch.rpm
 ```
 
-## step4: 
-``` bash title="guru1@vm1:-$ _"
-command
-command
-...
+## step2: install package
+``` bash title="guru3@vm3:-$ _"
+sudo yum install puppet-agent
 ```
 
-## step5: 
-``` bash title="guru1@vm1:-$ _"
-command
-command
-...
+## step3: adjust system path
+``` bash title="guru3@vm3:-$ _"
+echo 'export PATH=/opt/puppetlabs/bin:/opt/puppetlabs/puppet/bin:$PATH' >> .bashrc
+source .bashrc
+```
+
+## step4: comment (#) sudo path defaults
+=== "command"
+
+    ``` bash title="guru3@vm3:-$ _"
+    sudo /usr/sbin/visudo
+    ```
+
+=== "contents"
+
+    ``` bash title="/etc/sudoers" hl_lines="10"
+    ## Sudoers allows particular users to run various commands as
+    ## the root user, without needing the root password.
+    ##
+    ## Examples are provided at the bottom of the file for collections
+    ## of related commands, which can then be delegated out to particular
+    ## users or groups.
+    ## 
+    ...
+    ...
+    # Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin
+    ...
+    ...
+    ```
+
+## step5: test puppet
+``` bash title="guru3@vm3:-$ _"
+sudo puppet help
+```
+
+## step6: adjust the main manifest to include vm3
+``` puppet title="site.pp" hl_lines="1"
+node 'vm2.opensysadmins.lab', 'vm3.opensysadmins.lab' {
+  include base
+  include ssh
+}
 ```

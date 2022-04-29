@@ -45,8 +45,9 @@ sudo apt-get install puppetserver -y
     server = vm1.opensysadmins.lab
     ```
 
-## step4: start and verify puppetserver service
+## step4: enable at boot, start and verify puppetserver service
 ``` bash title="guru1@vm1:-$ _"
+sudo systemctl enable puppetserver
 sudo systemctl start puppetserver
 systemctl status puppetserver
 /opt/puppetlabs/bin/puppetserver -v

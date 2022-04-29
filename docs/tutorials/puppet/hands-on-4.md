@@ -9,3 +9,7 @@ sudo puppet agent --server=vm1.opensysadmins.lab --no-daemonize --verbose --onet
 sudo /opt/puppetlabs/bin/puppetserver ca sign --certname vm2.opensysadmins.lab
 sudo /opt/puppetlabs/bin/puppetserver ca list --all
 ```
+## step3: run puppet manually (apply catalog)
+``` bash title="guru2@vm2:-$ _"
+sudo puppet agent --server=vm1.opensysadmins.lab --no-daemonize --verbose --onetime
+```

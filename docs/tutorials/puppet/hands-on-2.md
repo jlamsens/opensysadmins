@@ -17,7 +17,7 @@ puppet resource file /tmp/hello content='Hello world!'
 cat /tmp/hello
 ```
 
-## step4: describe a package resource that does not yet exist
+## step4: request a package resource description that does not yet exist
 ``` bash title="guru2@vm2:-$ _"
 puppet resource package apache2
 ```
@@ -27,7 +27,7 @@ puppet resource package apache2
 sudo puppet resource package apache2 ensure=present
 ```
 
-## step6: describe a package resource that exists
+## step6: describe a package resource that already exists
 ``` bash title="guru2@vm2:-$ _"
 puppet resource package apache2
 ```
@@ -46,6 +46,7 @@ puppet resource package apache2
         ensure => present,
     }
     ```
+
 ## step8: execute locally
 ``` bash title="guru2@vm2:-$ _"
 puppet apply create-tmp-papply.pp
