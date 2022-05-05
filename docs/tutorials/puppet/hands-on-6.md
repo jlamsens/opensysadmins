@@ -101,6 +101,7 @@ user { 'vdab':
 # make sure the package is installed
 package { 'openssh-server':
   ensure => installed,
+}
 ```
 
 ## step7: manage the service - first time "dependency"
@@ -128,6 +129,7 @@ user { 'vdab':
 # make sure the package is installed
 package { 'openssh-server':
   ensure => installed,
+}
 
 # make sure the service is started at boot time, running at all times but only if it is installed
 service { 'sshd':
@@ -687,7 +689,7 @@ node 'vm2.opensysadmins.lab' {
     ```
 
 ## step20: use conditional logic to determine file source
-``` puppet title="config.pp" hl_lines="9 10 11"
+``` puppet title="config.pp" hl_lines="9 10 11 12"
     class ssh::config {
     # this file is for customizing ssh settings
     file {'/etc/ssh/sshd_config':

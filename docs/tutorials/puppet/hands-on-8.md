@@ -7,7 +7,7 @@ sudo puppet agent --server=vm1.opensysadmins.lab --no-daemonize --verbose --onet
 
 ## step2: sign and verify the certificate on the puppetserver
 ``` bash title="guru1@vm1:-$ _"
-sudo /opt/puppetlabs/bin/puppetserver ca sign --certname vm2.opensysadmins.lab
+sudo /opt/puppetlabs/bin/puppetserver ca sign --certname vm3.opensysadmins.lab
 sudo /opt/puppetlabs/bin/puppetserver ca list --all
 ```
 
