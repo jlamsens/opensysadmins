@@ -1202,7 +1202,8 @@
 <span class="normal"><a href="#__codelineno-5-20">20</a></span>
 <span class="normal"><a href="#__codelineno-5-21">21</a></span>
 <span class="normal"><a href="#__codelineno-5-22">22</a></span>
-<span class="normal"><a href="#__codelineno-5-23">23</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c"># this file gives a nice message at logon</span>
+<span class="normal"><a href="#__codelineno-5-23">23</a></span>
+<span class="normal"><a href="#__codelineno-5-24">24</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c"># this file gives a nice message at logon</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">file</span> <span class="p">{</span> <span class="s">&#39;/etc/motd&#39;</span><span class="p">:</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3"></a>  <span class="na">content</span> <span class="o">=&gt;</span> <span class="s">&quot;This file is managed by Puppet. Do not change manually!\n&quot;</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="p">}</span><span class="c"></span>
@@ -1225,6 +1226,7 @@
 <a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="c"># make sure the package is installed</span>
 <a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="k">package</span> <span class="p">{</span> <span class="s">&#39;openssh-server&#39;</span><span class="p">:</span>
 <a id="__codelineno-5-23" name="__codelineno-5-23"></a>  <span class="na">ensure</span> <span class="o">=&gt;</span> <span class="k">installed</span><span class="p">,</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
 <h2 id="step7-manage-the-service-first-time-dependency">step7: manage the service - first time "dependency"</h2>
@@ -1257,7 +1259,8 @@
 <span class="normal"><a href="#__codelineno-6-27">27</a></span>
 <span class="normal"><a href="#__codelineno-6-28">28</a></span>
 <span class="normal"><a href="#__codelineno-6-29">29</a></span>
-<span class="normal"><a href="#__codelineno-6-30">30</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c"># this file gives a nice message at logon</span>
+<span class="normal"><a href="#__codelineno-6-30">30</a></span>
+<span class="normal"><a href="#__codelineno-6-31">31</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c"># this file gives a nice message at logon</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="k">file</span> <span class="p">{</span> <span class="s">&#39;/etc/motd&#39;</span><span class="p">:</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3"></a>  <span class="na">content</span> <span class="o">=&gt;</span> <span class="s">&quot;This file is managed by Puppet. Do not change manually!\n&quot;</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="p">}</span><span class="c"></span>
@@ -1279,14 +1282,15 @@
 <a id="__codelineno-6-20" name="__codelineno-6-20"></a>
 <a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="c"># make sure the package is installed</span>
 <a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="k">package</span> <span class="p">{</span> <span class="s">&#39;openssh-server&#39;</span><span class="p">:</span>
-<a id="__codelineno-6-23" name="__codelineno-6-23"></a>  <span class="na">ensure</span> <span class="o">=&gt;</span> <span class="k">installed</span><span class="p">,</span><span class="c"></span>
-<a id="__codelineno-6-24" name="__codelineno-6-24"></a>
-<a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="c"># make sure the service is started at boot time, running at all times but only if it is installed</span>
-<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="k">service</span> <span class="p">{</span> <span class="s">&#39;sshd&#39;</span><span class="p">:</span>
-<a id="__codelineno-6-27" name="__codelineno-6-27"></a>  <span class="na">enable</span>  <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
-<a id="__codelineno-6-28" name="__codelineno-6-28"></a>  <span class="na">ensure</span>  <span class="o">=&gt;</span> <span class="k">running</span><span class="p">,</span>
-<a id="__codelineno-6-29" name="__codelineno-6-29"></a>  <span class="na">require</span> <span class="o">=&gt;</span> <span class="k">Package</span><span class="p">[</span><span class="s">&#39;openssh-server&#39;</span><span class="p">],</span>
-<a id="__codelineno-6-30" name="__codelineno-6-30"></a><span class="p">}</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a>  <span class="na">ensure</span> <span class="o">=&gt;</span> <span class="k">installed</span><span class="p">,</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="p">}</span><span class="c"></span>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="c"># make sure the service is started at boot time, running at all times but only if it is installed</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a><span class="k">service</span> <span class="p">{</span> <span class="s">&#39;sshd&#39;</span><span class="p">:</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28"></a>  <span class="na">enable</span>  <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29"></a>  <span class="na">ensure</span>  <span class="o">=&gt;</span> <span class="k">running</span><span class="p">,</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30"></a>  <span class="na">require</span> <span class="o">=&gt;</span> <span class="k">Package</span><span class="p">[</span><span class="s">&#39;openssh-server&#39;</span><span class="p">],</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31"></a><span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
 <h2 id="step8-manage-the-configuration-of-the-service">step8: manage the configuration of the service</h2>
@@ -2302,8 +2306,8 @@
 <a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="hll">        <span class="na">source</span>  <span class="o">=&gt;</span> <span class="nv">$osfamily</span> <span class="o">?</span> <span class="p">{</span>
 </span><a id="__codelineno-18-10" name="__codelineno-18-10"></a><span class="hll">        <span class="o">/</span><span class="p">(</span><span class="na">Ubuntu</span><span class="o">|</span><span class="na">Debian</span><span class="p">)</span><span class="o">/</span>        <span class="o">=&gt;</span> <span class="s">&#39;puppet:///modules/ssh/sshd_config&#39;</span><span class="p">,</span>
 </span><a id="__codelineno-18-11" name="__codelineno-18-11"></a><span class="hll">        <span class="o">/</span><span class="p">(</span><span class="na">RedHat</span><span class="o">|</span><span class="na">CentOS</span><span class="o">|</span><span class="na">Fedora</span><span class="p">)</span><span class="o">/</span> <span class="o">=&gt;</span> <span class="s">&#39;puppet:///modules/ssh/sshd_config_rpm&#39;</span><span class="p">,</span>
-</span><a id="__codelineno-18-12" name="__codelineno-18-12"></a>        <span class="p">},</span>
-<a id="__codelineno-18-13" name="__codelineno-18-13"></a>    <span class="p">}</span>
+</span><a id="__codelineno-18-12" name="__codelineno-18-12"></a><span class="hll">        <span class="p">},</span>
+</span><a id="__codelineno-18-13" name="__codelineno-18-13"></a>    <span class="p">}</span>
 <a id="__codelineno-18-14" name="__codelineno-18-14"></a>    <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
