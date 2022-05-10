@@ -1,3 +1,4 @@
-# Welcome!
-
-Landing page todo.
+---
+title: Home
+template: home.html
+---

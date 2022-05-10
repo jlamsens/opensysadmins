@@ -1,6 +1,6 @@
 site_name: OpenSysAdmins
 site_url: https://www.opensysadmins.com
-site_description: tutorials that just work
+site_description: Standing on the shoulder of giants
 site_author: Jurgen Lamsens
 #site_favicon: favicon.ico
 
@@ -19,6 +19,7 @@ edit_uri: ""
 
 theme:
   name: material
+  custom_dir: docs/overrides
   features:
     ## clicks on all internal links will be intercepted and dispatched via XHR without fully reloading the page
     ## the resulting page is parsed and injected and all event handlers and components are rebound automatically, 
@@ -356,3 +357,6 @@ nav:
       - Hands-on 6: tutorials/puppet/hands-on-6.md
       - Hands-on 7: tutorials/puppet/hands-on-7.md
       - Hands-on 8: tutorials/puppet/hands-on-8.md
+    
+  - Blog:
+    - blog/index.md
