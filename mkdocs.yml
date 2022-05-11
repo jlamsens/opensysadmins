@@ -50,7 +50,7 @@ theme:
 
     ## a back-to-top button can be shown when the user, after scrolling down, starts to scroll up again
     ## rendered centered and just below the header
-    #- navigation.top
+    - navigation.top
 
     ## table of contents is rendered as part of the navigation sidebar on the left
     ## not compatible with navigation.indexes
@@ -358,5 +358,13 @@ nav:
       - Hands-on 7: tutorials/puppet/hands-on-7.md
       - Hands-on 8: tutorials/puppet/hands-on-8.md
     
-  - Blog:
-    - blog/index.md
+  - Blog: #listed in header, must be unique
+    - blog/index.md #menu overview/landing page
+    - 2022:
+      - blog4: blog/2022/blog4.md
+      - blog6: blog/2022/blog6.md
+      - blog5: blog/2022/blog5.md
+      - blog3: blog/2022/blog3.md
+    - 2021:
+      - blog2: blog/2021/blog2.md
+      - blog1: blog/2021/blog1.md
