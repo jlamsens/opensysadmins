@@ -1,4 +1,4 @@
-# Installation VirtualBox 6.1.x
+# Installation VirtualBox
 
 ## Download
 Huidige versie: 6.1.34 (op 25/4/22)

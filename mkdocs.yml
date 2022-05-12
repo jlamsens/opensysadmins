@@ -337,15 +337,16 @@ nav:
     - tutorials/index.md #menu overview/landing page
     - VirtualBox Windows:
       - tutorials/virtualbox-windows/index.md #submenu overview/landing page
-      - Install VB: tutorials/virtualbox-windows/install-vb.md
-      - Configure VB: tutorials/virtualbox-windows/configure-vb.md
-      - Create VM: tutorials/virtualbox-windows/create-vm.md
-      - Configure VM: tutorials/virtualbox-windows/configure-vm.md
-      - Install OS: tutorials/virtualbox-windows/install-os.md
-      - Pre-configure OS: tutorials/virtualbox-windows/pre-configure-os.md
-      - Configure OS: tutorials/virtualbox-windows/configure-os.md
-      - Snapshot: tutorials/virtualbox-windows/snapshot.md
-      - Final result: tutorials/virtualbox-windows/final-result.md
+      - 01 Install VB: tutorials/virtualbox-windows/01-install-vb.md
+      #- 02 Network modes: tutorials/virtualbox-windows/02-network-modes.md
+      - 03 Configure VB: tutorials/virtualbox-windows/03-configure-vb.md
+      - 04 Create VM: tutorials/virtualbox-windows/04-create-vm.md
+      - 05 Configure VM: tutorials/virtualbox-windows/05-configure-vm.md
+      - 06 Install OS: tutorials/virtualbox-windows/06-install-os.md
+      - 07 Pre-configure OS: tutorials/virtualbox-windows/07-pre-configure-os.md
+      - 08 Configure OS: tutorials/virtualbox-windows/08-configure-os.md
+      - 09 Snapshot: tutorials/virtualbox-windows/09-snapshot.md
+      - 10 Final result: tutorials/virtualbox-windows/10-final-result.md
     
     - Puppet:
       - tutorials/puppet/index.md #submenu overview/landing page

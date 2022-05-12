@@ -1,4 +1,4 @@
-# Configuration VirtualBox 6.1.x
+# Configuration VirtualBox
 
 ## Preferences
 <kbd> [![Configuration VirtualBox](../../assets/images/virtualbox-windows/configure-vb/preferences.png "Preferences")](../../assets/images/virtualbox-windows/configure-vb/preferences.png) </kbd>
