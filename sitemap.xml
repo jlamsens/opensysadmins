@@ -2,142 +2,142 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://www.opensysadmins.com/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/blog/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/blog/2021/blog1/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/blog/2021/blog2/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/blog/2022/blog3/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/blog/2022/blog4/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/blog/2022/blog5/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/blog/2022/blog6/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/puppet/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/puppet/hands-on-1/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/puppet/hands-on-2/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/puppet/hands-on-3/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/puppet/hands-on-4/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/puppet/hands-on-5/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/puppet/hands-on-6/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/puppet/hands-on-7/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/puppet/hands-on-8/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/configure-os/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/01-install-vb/</loc>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/configure-vb/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/03-configure-vb/</loc>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/configure-vm/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/04-create-vm/</loc>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/create-vm/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/05-configure-vm/</loc>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/final-result/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/06-install-os/</loc>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/install-os/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/07-pre-configure-os/</loc>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/install-vb/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/08-configure-os/</loc>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/pre-configure-os/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/09-snapshot/</loc>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/snapshot/</loc>
-         <lastmod>2022-05-11</lastmod>
+         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/10-final-result/</loc>
+         <lastmod>2022-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

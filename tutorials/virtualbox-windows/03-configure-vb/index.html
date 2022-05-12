@@ -12,14 +12,14 @@
         <meta name="author" content="Jurgen Lamsens">
       
       
-        <link rel="canonical" href="https://www.opensysadmins.com/tutorials/virtualbox-windows/create-vm/">
+        <link rel="canonical" href="https://www.opensysadmins.com/tutorials/virtualbox-windows/03-configure-vb/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
-        <title>Create VM - OpenSysAdmins</title>
+        <title>03 Configure VB - OpenSysAdmins</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creation-virtual-machine" class="md-skip">
+        <a href="#configuration-virtualbox" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Create VM
+              03 Configure VB
             
           </span>
         </div>
@@ -413,22 +413,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../install-vb/" class="md-nav__link">
-        Install VB
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../configure-vb/" class="md-nav__link">
-        Configure VB
+      <a href="../01-install-vb/" class="md-nav__link">
+        01 Install VB
       </a>
     </li>
   
@@ -451,12 +437,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Create VM
+          03 Configure VB
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Create VM
+        03 Configure VB
       </a>
       
         
@@ -475,57 +461,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#new" class="md-nav__link">
-    New
+  <a href="#preferences" class="md-nav__link">
+    Preferences
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#name-and-os" class="md-nav__link">
-    Name and OS
+  <a href="#no-updates" class="md-nav__link">
+    No updates
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#memory-size" class="md-nav__link">
-    Memory size
+  <a href="#add-nat-network" class="md-nav__link">
+    Add NAT network
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-harddisk" class="md-nav__link">
-    Create harddisk
+  <a href="#edit-nat-network" class="md-nav__link">
+    Edit NAT network
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#harddisk-type" class="md-nav__link">
-    Harddisk type
+  <a href="#nat-network-details" class="md-nav__link">
+    NAT network details
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#storage-type" class="md-nav__link">
-    Storage type
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#harddisk-location-and-size" class="md-nav__link">
-    Harddisk location and size
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#virtual-machine-details" class="md-nav__link">
-    Virtual machine details
+  <a href="#nat-network-renamed" class="md-nav__link">
+    NAT network renamed
   </a>
   
 </li>
@@ -545,8 +517,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../configure-vm/" class="md-nav__link">
-        Configure VM
+      <a href="../04-create-vm/" class="md-nav__link">
+        04 Create VM
       </a>
     </li>
   
@@ -559,8 +531,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../install-os/" class="md-nav__link">
-        Install OS
+      <a href="../05-configure-vm/" class="md-nav__link">
+        05 Configure VM
       </a>
     </li>
   
@@ -573,8 +545,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../pre-configure-os/" class="md-nav__link">
-        Pre-configure OS
+      <a href="../06-install-os/" class="md-nav__link">
+        06 Install OS
       </a>
     </li>
   
@@ -587,8 +559,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../configure-os/" class="md-nav__link">
-        Configure OS
+      <a href="../07-pre-configure-os/" class="md-nav__link">
+        07 Pre-configure OS
       </a>
     </li>
   
@@ -601,8 +573,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../snapshot/" class="md-nav__link">
-        Snapshot
+      <a href="../08-configure-os/" class="md-nav__link">
+        08 Configure OS
       </a>
     </li>
   
@@ -615,8 +587,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../final-result/" class="md-nav__link">
-        Final result
+      <a href="../09-snapshot/" class="md-nav__link">
+        09 Snapshot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-final-result/" class="md-nav__link">
+        10 Final result
       </a>
     </li>
   
@@ -1056,57 +1042,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#new" class="md-nav__link">
-    New
+  <a href="#preferences" class="md-nav__link">
+    Preferences
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#name-and-os" class="md-nav__link">
-    Name and OS
+  <a href="#no-updates" class="md-nav__link">
+    No updates
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#memory-size" class="md-nav__link">
-    Memory size
+  <a href="#add-nat-network" class="md-nav__link">
+    Add NAT network
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-harddisk" class="md-nav__link">
-    Create harddisk
+  <a href="#edit-nat-network" class="md-nav__link">
+    Edit NAT network
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#harddisk-type" class="md-nav__link">
-    Harddisk type
+  <a href="#nat-network-details" class="md-nav__link">
+    NAT network details
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#storage-type" class="md-nav__link">
-    Storage type
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#harddisk-location-and-size" class="md-nav__link">
-    Harddisk location and size
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#virtual-machine-details" class="md-nav__link">
-    Virtual machine details
+  <a href="#nat-network-renamed" class="md-nav__link">
+    NAT network renamed
   </a>
   
 </li>
@@ -1124,120 +1096,20 @@
               
                 
 
-<h1 id="creation-virtual-machine">Creation virtual machine</h1>
-<p>Doorloop eerst onderstaande tabbladen voor "Linux Mint 20.x". Vervolgens voor "Debian 11.x" en finaal voor "Rocky Linux 8.5". Ga dan pas naar "Configure VM".</p>
-<h2 id="new">New</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux Mint 20.2</label><label for="__tabbed_1_2">Debian 11.2</label><label for="__tabbed_1_3">Rocky Linux 8.5</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/mint/new.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/mint/new.png" title="Linux Mint 20.2" /></a> </kbd></p>
-</div>
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/debian/new.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/debian/new.png" title="Debian 11.2" /></a> </kbd></p>
-</div>
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/rocky/new.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/rocky/new.png" title="Rocky Linux 8.5" /></a> </kbd></p>
-</div>
-</div>
-</div>
-<h2 id="name-and-os">Name and OS</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux Mint 20.2</label><label for="__tabbed_2_2">Debian 11.2</label><label for="__tabbed_2_3">Rocky Linux 8.5</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/mint/name-and-os.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/mint/name-and-os.png" title="Linux Mint 20.2" /></a> </kbd></p>
-</div>
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/debian/name-and-os.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/debian/name-and-os.png" title="Debian 11.2" /></a> </kbd></p>
-</div>
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/rocky/name-and-os.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/rocky/name-and-os.png" title="Rocky Linux 8.5" /></a> </kbd></p>
-</div>
-</div>
-</div>
-<h2 id="memory-size">Memory size</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Linux Mint 20.2</label><label for="__tabbed_3_2">Debian 11.2</label><label for="__tabbed_3_3">Rocky Linux 8.5</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/mint/memory-size.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/mint/memory-size.png" title="Linux Mint 20.2" /></a> </kbd></p>
-</div>
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/debian/memory-size.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/debian/memory-size.png" title="Debian 11.2" /></a> </kbd></p>
-</div>
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/rocky/memory-size.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/rocky/memory-size.png" title="Rocky Linux 8.5" /></a> </kbd></p>
-</div>
-</div>
-</div>
-<h2 id="create-harddisk">Create harddisk</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Linux Mint 20.2</label><label for="__tabbed_4_2">Debian 11.2</label><label for="__tabbed_4_3">Rocky Linux 8.5</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/mint/create-harddisk.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/mint/create-harddisk.png" title="Linux Mint 20.2" /></a> </kbd></p>
-</div>
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/debian/create-harddisk.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/debian/create-harddisk.png" title="Debian 11.2" /></a> </kbd></p>
-</div>
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/rocky/create-harddisk.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/rocky/create-harddisk.png" title="Rocky Linux 8.5" /></a> </kbd></p>
-</div>
-</div>
-</div>
-<h2 id="harddisk-type">Harddisk type</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Linux Mint 20.2</label><label for="__tabbed_5_2">Debian 11.2</label><label for="__tabbed_5_3">Rocky Linux 8.5</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/mint/harddisk-type.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/mint/harddisk-type.png" title="Linux Mint 20.2" /></a> </kbd></p>
-</div>
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/debian/harddisk-type.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/debian/harddisk-type.png" title="Debian 11.2" /></a> </kbd></p>
-</div>
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/rocky/harddisk-type.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/rocky/harddisk-type.png" title="Rocky Linux 8.5" /></a> </kbd></p>
-</div>
-</div>
-</div>
-<h2 id="storage-type">Storage type</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Linux Mint 20.2</label><label for="__tabbed_6_2">Debian 11.2</label><label for="__tabbed_6_3">Rocky Linux 8.5</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/mint/storage-type.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/mint/storage-type.png" title="Linux Mint 20.2" /></a> </kbd></p>
-</div>
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/debian/storage-type.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/debian/storage-type.png" title="Debian 11.2" /></a> </kbd></p>
-</div>
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/rocky/storage-type.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/rocky/storage-type.png" title="Rocky Linux 8.5" /></a> </kbd></p>
-</div>
-</div>
-</div>
-<h2 id="harddisk-location-and-size">Harddisk location and size</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Linux Mint 20.2</label><label for="__tabbed_7_2">Debian 11.2</label><label for="__tabbed_7_3">Rocky Linux 8.5</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/mint/harddisk-location-and-size.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/mint/harddisk-location-and-size.png" title="Linux Mint 20.2" /></a> </kbd></p>
-</div>
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/debian/harddisk-location-and-size.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/debian/harddisk-location-and-size.png" title="Debian 11.2" /></a> </kbd></p>
-</div>
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/rocky/harddisk-location-and-size.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/rocky/harddisk-location-and-size.png" title="Rocky Linux 8.5" /></a> </kbd></p>
-</div>
-</div>
-</div>
-<h2 id="virtual-machine-details">Virtual machine details</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Linux Mint 20.2</label><label for="__tabbed_8_2">Debian 11.2</label><label for="__tabbed_8_3">Rocky Linux 8.5</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/mint/virtual-machine-details.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/mint/virtual-machine-details.png" title="Linux Mint 20.2" /></a> </kbd></p>
-</div>
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/debian/virtual-machine-details.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/debian/virtual-machine-details.png" title="Debian 11.2" /></a> </kbd></p>
-</div>
-<div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/create-vm/rocky/virtual-machine-details.png"><img alt="Creation virtual machine" src="../../../assets/images/virtualbox-windows/create-vm/rocky/virtual-machine-details.png" title="Rocky Linux 8.5" /></a> </kbd></p>
-</div>
-</div>
-</div>
+<h1 id="configuration-virtualbox">Configuration VirtualBox</h1>
+<h2 id="preferences">Preferences</h2>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-vb/preferences.png"><img alt="Configuration VirtualBox" src="../../../assets/images/virtualbox-windows/configure-vb/preferences.png" title="Preferences" /></a> </kbd></p>
+<h2 id="no-updates">No updates</h2>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-vb/no-updates.png"><img alt="Configuration VirtualBox" src="../../../assets/images/virtualbox-windows/configure-vb/no-updates.png" title="No updates" /></a> </kbd></p>
+<h2 id="add-nat-network">Add NAT network</h2>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-vb/add-nat-network.png"><img alt="Configuration VirtualBox" src="../../../assets/images/virtualbox-windows/configure-vb/add-nat-network.png" title="Add NAT network" /></a> </kbd></p>
+<h2 id="edit-nat-network">Edit NAT network</h2>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-vb/edit-nat-network.png"><img alt="Configuration VirtualBox" src="../../../assets/images/virtualbox-windows/configure-vb/edit-nat-network.png" title="Edit NAT network" /></a> </kbd></p>
+<h2 id="nat-network-details">NAT network details</h2>
+<p>Opgelet: DHCP uitzetten.</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-vb/nat-network-details.png"><img alt="Configuration VirtualBox" src="../../../assets/images/virtualbox-windows/configure-vb/nat-network-details.png" title="NAT network details" /></a> </kbd></p>
+<h2 id="nat-network-renamed">NAT network renamed</h2>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-vb/nat-network-renamed.png"><img alt="Configuration VirtualBox" src="../../../assets/images/virtualbox-windows/configure-vb/nat-network-renamed.png" title="NAT network renamed" /></a> </kbd></p>
 
               
             </article>
@@ -1256,7 +1128,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../configure-vb/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configure VB" rel="prev">
+        <a href="../01-install-vb/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 01 Install VB" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1265,20 +1137,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Configure VB
+              01 Install VB
             </div>
           </div>
         </a>
       
       
         
-        <a href="../configure-vm/" class="md-footer__link md-footer__link--next" aria-label="Next: Configure VM" rel="next">
+        <a href="../04-create-vm/" class="md-footer__link md-footer__link--next" aria-label="Next: 04 Create VM" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Configure VM
+              04 Create VM
             </div>
           </div>
           <div class="md-footer__button md-icon">

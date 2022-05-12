@@ -12,14 +12,14 @@
         <meta name="author" content="Jurgen Lamsens">
       
       
-        <link rel="canonical" href="https://www.opensysadmins.com/tutorials/virtualbox-windows/pre-configure-os/">
+        <link rel="canonical" href="https://www.opensysadmins.com/tutorials/virtualbox-windows/08-configure-os/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
-        <title>Pre-configure OS - OpenSysAdmins</title>
+        <title>08 Configure OS - OpenSysAdmins</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pre-configuration-operating-system" class="md-skip">
+        <a href="#configuration-operating-system" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pre-configure OS
+              08 Configure OS
             
           </span>
         </div>
@@ -413,8 +413,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../install-vb/" class="md-nav__link">
-        Install VB
+      <a href="../01-install-vb/" class="md-nav__link">
+        01 Install VB
       </a>
     </li>
   
@@ -427,8 +427,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../configure-vb/" class="md-nav__link">
-        Configure VB
+      <a href="../03-configure-vb/" class="md-nav__link">
+        03 Configure VB
       </a>
     </li>
   
@@ -441,8 +441,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../create-vm/" class="md-nav__link">
-        Create VM
+      <a href="../04-create-vm/" class="md-nav__link">
+        04 Create VM
       </a>
     </li>
   
@@ -455,8 +455,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../configure-vm/" class="md-nav__link">
-        Configure VM
+      <a href="../05-configure-vm/" class="md-nav__link">
+        05 Configure VM
       </a>
     </li>
   
@@ -469,8 +469,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../install-os/" class="md-nav__link">
-        Install OS
+      <a href="../06-install-os/" class="md-nav__link">
+        06 Install OS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-pre-configure-os/" class="md-nav__link">
+        07 Pre-configure OS
       </a>
     </li>
   
@@ -493,12 +507,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Pre-configure OS
+          08 Configure OS
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Pre-configure OS
+        08 Configure OS
       </a>
       
         
@@ -518,22 +532,43 @@
       
         <li class="md-nav__item">
   <a href="#linux-mint-20x" class="md-nav__link">
-    Linux Mint 20.X
+    Linux Mint 20.x
   </a>
   
-    <nav class="md-nav" aria-label="Linux Mint 20.X">
+    <nav class="md-nav" aria-label="Linux Mint 20.x">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#guest-additions-and-shared-folder-steps-1-4" class="md-nav__link">
-    Guest additions and shared folder: steps 1 --&gt; 4
+  <a href="#ipv4default-gatewaydns" class="md-nav__link">
+    IPv4/default gateway/DNS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#guest-additions-and-shared-folder-steps-5-10" class="md-nav__link">
-    Guest additions and shared folder: steps 5 --&gt; 10
+  <a href="#full-update" class="md-nav__link">
+    Full update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ignore-system-reports" class="md-nav__link">
+    Ignore system reports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolving-host-names" class="md-nav__link">
+    Resolving host names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shutdown" class="md-nav__link">
+    Shutdown
   </a>
   
 </li>
@@ -545,15 +580,83 @@
       
         <li class="md-nav__item">
   <a href="#debian-11x" class="md-nav__link">
-    Debian 11.X
+    Debian 11.x
   </a>
+  
+    <nav class="md-nav" aria-label="Debian 11.x">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ipv4default-gatewaydns_1" class="md-nav__link">
+    IPv4/default gateway/DNS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-update_1" class="md-nav__link">
+    Full update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolving-host-names_1" class="md-nav__link">
+    Resolving host names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shutdown_1" class="md-nav__link">
+    Shutdown
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#rocky-linux-8x" class="md-nav__link">
-    Rocky Linux 8.X
+    Rocky Linux 8.x
   </a>
+  
+    <nav class="md-nav" aria-label="Rocky Linux 8.x">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ipv4default-gatewaydns_2" class="md-nav__link">
+    IPv4/default gateway/DNS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-update_2" class="md-nav__link">
+    Full update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolving-host-names_2" class="md-nav__link">
+    Resolving host names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shutdown_2" class="md-nav__link">
+    Shutdown
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -572,8 +675,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../configure-os/" class="md-nav__link">
-        Configure OS
+      <a href="../09-snapshot/" class="md-nav__link">
+        09 Snapshot
       </a>
     </li>
   
@@ -586,22 +689,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../snapshot/" class="md-nav__link">
-        Snapshot
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../final-result/" class="md-nav__link">
-        Final result
+      <a href="../10-final-result/" class="md-nav__link">
+        10 Final result
       </a>
     </li>
   
@@ -1042,22 +1131,43 @@
       
         <li class="md-nav__item">
   <a href="#linux-mint-20x" class="md-nav__link">
-    Linux Mint 20.X
+    Linux Mint 20.x
   </a>
   
-    <nav class="md-nav" aria-label="Linux Mint 20.X">
+    <nav class="md-nav" aria-label="Linux Mint 20.x">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#guest-additions-and-shared-folder-steps-1-4" class="md-nav__link">
-    Guest additions and shared folder: steps 1 --&gt; 4
+  <a href="#ipv4default-gatewaydns" class="md-nav__link">
+    IPv4/default gateway/DNS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#guest-additions-and-shared-folder-steps-5-10" class="md-nav__link">
-    Guest additions and shared folder: steps 5 --&gt; 10
+  <a href="#full-update" class="md-nav__link">
+    Full update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ignore-system-reports" class="md-nav__link">
+    Ignore system reports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolving-host-names" class="md-nav__link">
+    Resolving host names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shutdown" class="md-nav__link">
+    Shutdown
   </a>
   
 </li>
@@ -1069,15 +1179,83 @@
       
         <li class="md-nav__item">
   <a href="#debian-11x" class="md-nav__link">
-    Debian 11.X
+    Debian 11.x
   </a>
+  
+    <nav class="md-nav" aria-label="Debian 11.x">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ipv4default-gatewaydns_1" class="md-nav__link">
+    IPv4/default gateway/DNS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-update_1" class="md-nav__link">
+    Full update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolving-host-names_1" class="md-nav__link">
+    Resolving host names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shutdown_1" class="md-nav__link">
+    Shutdown
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#rocky-linux-8x" class="md-nav__link">
-    Rocky Linux 8.X
+    Rocky Linux 8.x
   </a>
+  
+    <nav class="md-nav" aria-label="Rocky Linux 8.x">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ipv4default-gatewaydns_2" class="md-nav__link">
+    IPv4/default gateway/DNS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-update_2" class="md-nav__link">
+    Full update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolving-host-names_2" class="md-nav__link">
+    Resolving host names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shutdown_2" class="md-nav__link">
+    Shutdown
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1094,58 +1272,216 @@
               
                 
 
-<h1 id="pre-configuration-operating-system">Pre-configuration operating system</h1>
-<h2 id="linux-mint-20x">Linux Mint 20.X</h2>
-<h3 id="guest-additions-and-shared-folder-steps-1-4">Guest additions and shared folder: steps 1 &rarr; 4</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label><label for="__tabbed_1_4">Step4</label></div>
+<h1 id="configuration-operating-system">Configuration operating system</h1>
+<h2 id="linux-mint-20x">Linux Mint 20.x</h2>
+<h3 id="ipv4default-gatewaydns">IPv4/default gateway/DNS</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-insert-cd-image.png"><img alt="Pre-configuration operating system" src="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-insert-cd-image.png" title="Linux Mint 20.X" /></a> </kbd></p>
+<p>Rechtsklik op het "netwerk icoontje".</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/network-settings.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/network-settings.png" title="Linux Mint 20.x" /></a> </kbd></p>
 </div>
 <div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-run.png"><img alt="Pre-configuration operating system" src="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-run.png" title="Linux Mint 20.X" /></a> </kbd></p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/ipv4-and-dns.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/ipv4-and-dns.png" title="Linux Mint 20.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p>Gebruik de "schuif button" bij "Wired" om de connectie te activeren. Mocht de "Connection established" niet verschijnen, moet je mogelijks "herstarten".</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/connection-established.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/connection-established.png" title="Linux Mint 20.x" /></a> </kbd></p>
+</div>
+</div>
+</div>
+<h3 id="full-update">Full update</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:12"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><input id="__tabbed_2_7" name="__tabbed_2" type="radio" /><input id="__tabbed_2_8" name="__tabbed_2" type="radio" /><input id="__tabbed_2_9" name="__tabbed_2" type="radio" /><input id="__tabbed_2_10" name="__tabbed_2" type="radio" /><input id="__tabbed_2_11" name="__tabbed_2" type="radio" /><input id="__tabbed_2_12" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label><label for="__tabbed_2_3">Step3</label><label for="__tabbed_2_4">Step4</label><label for="__tabbed_2_5">Step5</label><label for="__tabbed_2_6">Step6</label><label for="__tabbed_2_7">Step7</label><label for="__tabbed_2_8">Step8</label><label for="__tabbed_2_9">Step9</label><label for="__tabbed_2_10">Step10</label><label for="__tabbed_2_11">Step11</label><label for="__tabbed_2_12">Step12</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/update-manager-icon.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/update-manager-icon.png" title="Linux Mint 20.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/update-manager-ok.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/update-manager-ok.png" title="Linux Mint 20.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p>Klik voorlopig op "No" in de blauwe balk.</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/local-mirror.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/local-mirror.png" title="Linux Mint 20.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/refresh.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/refresh.png" title="Linux Mint 20.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p>Mogelijks is een nieuwe versie van de "Update Manager" beschikbaar. Doe de update.</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/update-manager-new-version.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/update-manager-new-version.png" title="Linux Mint 20.x" /></a> </kbd></p>
 </div>
 <div class="tabbed-block">
 <p>Reminder: password is "guru1".</p>
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-authenticate.png"><img alt="Pre-configuration operating system" src="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-authenticate.png" title="Linux Mint 20.X" /></a> </kbd></p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/update-manager-authenticate.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/update-manager-authenticate.png" title="Linux Mint 20.x" /></a> </kbd></p>
 </div>
 <div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-installed.png"><img alt="Pre-configuration operating system" src="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-installed.png" title="Linux Mint 20.X" /></a> </kbd></p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/update-manager-install-updates.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/update-manager-install-updates.png" title="Linux Mint 20.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/update-manager-trigger-additional-changes.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/update-manager-trigger-additional-changes.png" title="Linux Mint 20.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p>Reminder: paswoord is "guru1".</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/update-manager-trigger-additional-changes-authenticate.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/update-manager-trigger-additional-changes-authenticate.png" title="Linux Mint 20.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/update-manager-downloading-packages.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/update-manager-downloading-packages.png" title="Linux Mint 20.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/system-reports-icon.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/system-reports-icon.png" title="Linux Mint 20.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/update-manager-system-updated.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/update-manager-system-updated.png" title="Linux Mint 20.x" /></a> </kbd></p>
 </div>
 </div>
 </div>
-<h3 id="guest-additions-and-shared-folder-steps-5-10">Guest additions and shared folder: steps 5 &rarr; 10</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:6"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Step5</label><label for="__tabbed_2_2">Step6</label><label for="__tabbed_2_3">Step7</label><label for="__tabbed_2_4">Step8</label><label for="__tabbed_2_5">Step9</label><label for="__tabbed_2_6">Step10</label></div>
+<h3 id="ignore-system-reports">Ignore system reports</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Step1</label><label for="__tabbed_3_2">Step2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-eject.png"><img alt="Pre-configuration operating system" src="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-eject.png" title="Linux Mint 20.X" /></a> </kbd></p>
+<p>Menu -&gt; Administration -&gt; System Reports. Selecteer telkens "Ignore this report" bij alle openstaande "reports".</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/system-reports-ignore-all.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/system-reports-ignore-all.png" title="Linux Mint 20.x" /></a> </kbd></p>
 </div>
 <div class="tabbed-block">
-<p>Kies "Restart".</p>
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-restart.png"><img alt="Pre-configuration operating system" src="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-restart.png" title="Linux Mint 20.X" /></a> </kbd></p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/system-reports-no-problems-detected.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/system-reports-no-problems-detected.png" title="Linux Mint 20.x" /></a> </kbd></p>
+</div>
+</div>
+</div>
+<h3 id="resolving-host-names">Resolving host names</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Step1</label><label for="__tabbed_4_2">Step2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Reminder: password is "guru1".</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/sudo-nano-etc-hosts.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/sudo-nano-etc-hosts.png" title="Linux Mint 20.x" /></a> </kbd></p>
 </div>
 <div class="tabbed-block">
-<p>Hoera! Volledige resolutie.</p>
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-full-screen.png"><img alt="Pre-configuration operating system" src="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-full-screen.png" title="Linux Mint 20.X" /></a> </kbd></p>
+<p>Text editor "nano" wijst zichzelf uit. Gebruikers van "vi", laat je gaan!</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/nano-hosts-adjust.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/nano-hosts-adjust.png" title="Linux Mint 20.x" /></a> </kbd></p>
+</div>
+</div>
+</div>
+<h3 id="shutdown">Shutdown</h3>
+<p>We verwijderen nog gauw even onze commando historiek en zetten de machine uit.</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/mint/history-clear-shutdown.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/mint/history-clear-shutdown.png" title="Linux Mint 20.x" /></a> </kbd></p>
+<h2 id="debian-11x">Debian 11.x</h2>
+<h3 id="ipv4default-gatewaydns_1">IPv4/default gateway/DNS</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:6"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><input id="__tabbed_5_4" name="__tabbed_5" type="radio" /><input id="__tabbed_5_5" name="__tabbed_5" type="radio" /><input id="__tabbed_5_6" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Step1</label><label for="__tabbed_5_2">Step2</label><label for="__tabbed_5_3">Step3</label><label for="__tabbed_5_4">Step4</label><label for="__tabbed_5_5">Step5</label><label for="__tabbed_5_6">Step6</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Login met gebruiker "guru2". Password is ook "guru2".</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/debian/login-guru2.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/debian/login-guru2.png" title="Debian 11.x" /></a> </kbd></p>
 </div>
 <div class="tabbed-block">
-<p>De "host folder" is momenteel nog niet beschikbaar. Dat is normaal. Zie volgende stap.</p>
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-shared-folder-no-permissions.png"><img alt="Pre-configuration operating system" src="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-shared-folder-no-permissions.png" title="Linux Mint 20.X" /></a> </kbd></p>
+<p>De netwerkinterface heet "enp0s3". We gaan die configureren.</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/debian/check-nic-name-nano-etc-network-interfaces.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/debian/check-nic-name-nano-etc-network-interfaces.png" title="Debian 11.x" /></a> </kbd></p>
 </div>
 <div class="tabbed-block">
-<p>Dit is nodig om de "host folder" beschikbaar te krijgen. Opgelet: doe een "log off/log on".</p>
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-sudo-adduser-vboxsf.png"><img alt="Pre-configuration operating system" src="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-sudo-adduser-vboxsf.png" title="Linux Mint 20.X" /></a> </kbd></p>
+<p>Neem onderstaande configuratie over.</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/debian/nano-etc-network-interfaces.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/debian/nano-etc-network-interfaces.png" title="Debian 11.x" /></a> </kbd></p>
 </div>
 <div class="tabbed-block">
-<p>Na de "logoff/logon" is de "host folder" beschikbaar.</p>
-<p><kbd> <a href="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-sf-downloads.png"><img alt="Pre-configuration operating system" src="../../../assets/images/virtualbox-windows/pre-configure-os/mint/guest-additions-sf-downloads.png" title="Linux Mint 20.X" /></a> </kbd></p>
+<p>Instellen nameserver.</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/debian/nano-etc-resolv-conf.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/debian/nano-etc-resolv-conf.png" title="Debian 11.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p>Neem onderstaande configuratie over.</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/debian/etc-resolv-conf.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/debian/etc-resolv-conf.png" title="Debian 11.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p>Herstart de netwerk service. Vervolgens zou de ping moeten lukken.</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/debian/restart-network-ping.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/debian/restart-network-ping.png" title="Debian 11.x" /></a> </kbd></p>
 </div>
 </div>
 </div>
-<h2 id="debian-11x">Debian 11.X</h2>
-<p>Geen pre-configuratie nodig.</p>
-<h2 id="rocky-linux-8x">Rocky Linux 8.X</h2>
-<p>Geen pre-configuratie nodig.</p>
+<h3 id="full-update_1">Full update</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:4"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><input id="__tabbed_6_4" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Step1</label><label for="__tabbed_6_2">Step2</label><label for="__tabbed_6_3">Step3</label><label for="__tabbed_6_4">Step4</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Configuratie van de package source file.</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/debian/nano-etc-apt-sources-list.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/debian/nano-etc-apt-sources-list.png" title="Debian 11.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p>Dit wordt het meeste typwerk. Geen fouten maken! ;-)</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/debian/etc-apt-sources-list.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/debian/etc-apt-sources-list.png" title="Debian 11.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p>Bijwerken van de lijst met beschikbare pakketten en hun versies.</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/debian/apt-update.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/debian/apt-update.png" title="Debian 11.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p>Uitvoeren van de effectieve "upgrade" van alle geïnstalleerde pakketten.</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/debian/apt-dist-upgrade.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/debian/apt-dist-upgrade.png" title="Debian 11.x" /></a> </kbd></p>
+</div>
+</div>
+</div>
+<h3 id="resolving-host-names_1">Resolving host names</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Step1</label><label for="__tabbed_7_2">Step2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/debian/nano-etc-hosts.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/debian/nano-etc-hosts.png" title="Debian 11.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/debian/etc-hosts.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/debian/etc-hosts.png" title="Debian 11.x" /></a> </kbd></p>
+</div>
+</div>
+</div>
+<h3 id="shutdown_1">Shutdown</h3>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/debian/clear-history-shutdown.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/debian/clear-history-shutdown.png" title="Debian 11.x" /></a> </kbd></p>
+<h2 id="rocky-linux-8x">Rocky Linux 8.x</h2>
+<h3 id="ipv4default-gatewaydns_2">IPv4/default gateway/DNS</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:4"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><input id="__tabbed_8_4" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Step1</label><label for="__tabbed_8_2">Step2</label><label for="__tabbed_8_3">Step3</label><label for="__tabbed_8_4">Step4</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Inloggen met "guru3". Password is ook "guru3".</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/rocky/login-guru3.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/rocky/login-guru3.png" title="Rocky Linux 8.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/rocky/check-nic-vi-nano-ifcfg-enp0s3.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/rocky/check-nic-vi-nano-ifcfg-enp0s3.png" title="Rocky Linux 8.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p>Neem onderstaande configuratie over. Sommige regels zijn reeds aanwezig (en/of moeten aangepast worden).</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/rocky/vi-ifcfg-enp0s3.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/rocky/vi-ifcfg-enp0s3.png" title="Rocky Linux 8.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p>Herstart de netwerk service. Vervolgens zou de ping moeten lukken.</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/rocky/ifup-ping.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/rocky/ifup-ping.png" title="Rocky Linux 8.x" /></a> </kbd></p>
+</div>
+</div>
+</div>
+<h3 id="full-update_2">Full update</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:3"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><input id="__tabbed_9_3" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Step1</label><label for="__tabbed_9_2">Step2</label><label for="__tabbed_9_3">Step3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/rocky/sudo-yum-check-update.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/rocky/sudo-yum-check-update.png" title="Rocky Linux 8.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/rocky/sudo-yum-update.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/rocky/sudo-yum-update.png" title="Rocky Linux 8.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/rocky/gpgkey-import-y.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/rocky/gpgkey-import-y.png" title="Rocky Linux 8.x" /></a> </kbd></p>
+</div>
+</div>
+</div>
+<h3 id="resolving-host-names_2">Resolving host names</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:4"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><input id="__tabbed_10_3" name="__tabbed_10" type="radio" /><input id="__tabbed_10_4" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Step1</label><label for="__tabbed_10_2">Step2</label><label for="__tabbed_10_3">Step3</label><label for="__tabbed_10_4">Step4</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Of gebruik "nano" indien meer comfortabel.</p>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/rocky/vi-etc-hosts.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/rocky/vi-etc-hosts.png" title="Rocky Linux 8.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/rocky/etc-hosts.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/rocky/etc-hosts.png" title="Rocky Linux 8.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/rocky/vi-etc-hostname.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/rocky/vi-etc-hostname.png" title="Rocky Linux 8.x" /></a> </kbd></p>
+</div>
+<div class="tabbed-block">
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/rocky/etc-hostname.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/rocky/etc-hostname.png" title="Rocky Linux 8.x" /></a> </kbd></p>
+</div>
+</div>
+</div>
+<h3 id="shutdown_2">Shutdown</h3>
+<p><kbd> <a href="../../../assets/images/virtualbox-windows/configure-os/rocky/sudo-shutdown.png"><img alt="Configuration operating system" src="../../../assets/images/virtualbox-windows/configure-os/rocky/sudo-shutdown.png" title="Rocky Linux 8.x" /></a> </kbd></p>
 
               
             </article>
@@ -1164,7 +1500,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../install-os/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Install OS" rel="prev">
+        <a href="../07-pre-configure-os/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 07 Pre-configure OS" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1173,20 +1509,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Install OS
+              07 Pre-configure OS
             </div>
           </div>
         </a>
       
       
         
-        <a href="../configure-os/" class="md-footer__link md-footer__link--next" aria-label="Next: Configure OS" rel="next">
+        <a href="../09-snapshot/" class="md-footer__link md-footer__link--next" aria-label="Next: 09 Snapshot" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Configure OS
+              09 Snapshot
             </div>
           </div>
           <div class="md-footer__button md-icon">
