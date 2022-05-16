@@ -362,7 +362,7 @@ nav:
   - Blog: #listed in header, must be unique
     - blog/index.md #menu overview/landing page
     - 2022:
-      - blog4: blog/2022/blog4.md
+      - Xmind 8: blog/2022/xmind-8.md
       - blog6: blog/2022/blog6.md
       - blog5: blog/2022/blog5.md
       - blog3: blog/2022/blog3.md
