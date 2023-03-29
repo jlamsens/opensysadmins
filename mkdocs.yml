@@ -307,7 +307,7 @@ plugins:
 extra:
   ## social links are rendered next to the copyright notice as part of the footer
   social:
-    - icon: fontawesome/brands/facebook-square
+    - icon: fontawesome/brands/facebook
       link: https://facebook.com/jessgandthemelons
       name: Campfire classics with Jess G and the Melons
     - icon: fontawesome/brands/linkedin
