@@ -6,37 +6,47 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/blog/</loc>
+         <loc>https://www.opensysadmins.com/blogs/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/blog/2021/blog1/</loc>
+         <loc>https://www.opensysadmins.com/blogs/YYYY_template/blog_template/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/blog/2021/blog2/</loc>
+         <loc>https://www.opensysadmins.com/explanations/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/blog/2022/blog3/</loc>
+         <loc>https://www.opensysadmins.com/explanations/explation_template/explanation_template/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/blog/2022/blog5/</loc>
+         <loc>https://www.opensysadmins.com/howtos/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/blog/2022/blog6/</loc>
+         <loc>https://www.opensysadmins.com/howtos/howto_template/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/blog/2022/xmind-8/</loc>
+         <loc>https://www.opensysadmins.com/howtos/xmind-8/</loc>
+         <lastmod>2023-03-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/references/</loc>
+         <lastmod>2023-03-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/references/reference_template/reference_template/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -46,97 +56,77 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/puppet/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/lab-pc/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/puppet/hands-on-1/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/lab-pc/configure-bios-vs-uefi/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/puppet/hands-on-2/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/lab-pc/configure-clonezilla-restore/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/puppet/hands-on-3/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/lab-pc/configure-linuxmint21/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/puppet/hands-on-4/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/lab-pc/configure-windows11/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/puppet/hands-on-5/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/lab-pc/final-result/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/puppet/hands-on-6/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/lab-pc/getting-started/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/puppet/hands-on-7/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/lab-pc/install-linuxmint21/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/puppet/hands-on-8/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/lab-pc/install-windows11/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/lab-pc/prepare-installation-media/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/01-install-vb/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/lab-pc/take-clonezilla-backup/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/03-configure-vb/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/tutorial_template/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/04-create-vm/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/tutorial_template/final-result_template/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/05-configure-vm/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/tutorial_template/getting-started_template/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/06-install-os/</loc>
-         <lastmod>2023-03-29</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/07-pre-configure-os/</loc>
-         <lastmod>2023-03-29</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/08-configure-os/</loc>
-         <lastmod>2023-03-29</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/09-snapshot/</loc>
-         <lastmod>2023-03-29</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.opensysadmins.com/tutorials/virtualbox-windows/10-final-result/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/tutorial_template/tutorial_template/</loc>
          <lastmod>2023-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
