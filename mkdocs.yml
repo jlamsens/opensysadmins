@@ -19,7 +19,7 @@ edit_uri: ""
 
 theme:
   name: material
-  custom_dir: docs/overrides
+  # custom_dir: docs/overrides
   features:
     ## clicks on all internal links will be intercepted and dispatched via XHR without fully reloading the page
     ## the resulting page is parsed and injected and all event handlers and components are rebound automatically, 
@@ -31,7 +31,7 @@ theme:
     - navigation.tracking
 
     ## top-level sections are rendered in a menu layer below the header for viewports above 1220px, but remain as-is on mobile
-    - navigation.tabs
+    #- navigation.tabs
 
     ## navigation tabs will lock below the header and always remain visible when scrolling down
     #- navigation.tabs.sticky
@@ -212,11 +212,11 @@ markdown_extensions:
     # - pymdownx.details
 
     ## automatically inlines bundled and custom icons and emojis in *.svg file format into the resulting HTML page
-    # - pymdownx.emoji:
+    - pymdownx.emoji:
     #   ## Python Markdown Extensions uses the pymdownx namespace, but in order to support the inlining of icons,
     #   ## the materialx namespace must be used, as it extends the functionality of pymdown
-    #   emoji_index: !!python/name:materialx.emoji.twemoji
-    #   emoji_generator: !!python/name:materialx.emoji.to_svg
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
 
 
     ## allows the usage of content tabs, a simple way to group related content and code blocks under accessible tabs
@@ -303,6 +303,10 @@ plugins:
     ## of words separated by other characters than whitespace and -
     ## default: automatically set
     # seperator: '[\s\-\.]'
+  
+  ## add image zoom functionality
+  ## see https://github.com/blueswen/mkdocs-glightbox#usage for configuration options
+  - glightbox
 
 extra:
   ## social links are rendered next to the copyright notice as part of the footer
@@ -321,51 +325,66 @@ copyright: Copyright &copy; 2022 Jurgen Lamsens
 
 nav:
   - Home: index.md
-  
-  # Tutorials template
-  #- menu1: #listed in header, must be unique
-  #  - menu-dir1/index.md #menu overview/landing page
-  #  - submenu1:
-  #    - menu-dir1/submenu-dir1/index.md #submenu overview/landing page
-  #    - section1: menu-dir1/submenu-dir1/section1.md
-  #    - section2: menu-dir1/submenu-dir1/section2.md
-  #    - section3: menu-dir1/submenu-dir1/section3.md
-  #    - section4: menu-dir1/submenu-dir1/section4.md
-  #    - section5: menu-dir1/submenu-dir1/section5.md
+
+  ####################################################################################
+
+  #- Blogs: #listed in header, must be unique
+  #  - blogs/index.md # overview/landing page
+
+  # Blog template
+  #  - YYYY_template:
+  #    - Blog template: blogs/YYYY_template/blog_template.md
+  #    - Blog template: blogs/YYYY_template/blog_template.md
+  #    - Blog template: blogs/YYYY_template/blog_template.md
+  #   - Blog template: blogs/YYYY_template/blog_template.md
+
+####################################################################################
 
   - Tutorials: #listed in header, must be unique
-    - tutorials/index.md #menu overview/landing page
-    - VirtualBox Windows:
-      - tutorials/virtualbox-windows/index.md #submenu overview/landing page
-      - 01 Install VB: tutorials/virtualbox-windows/01-install-vb.md
-      #- 02 Network modes: tutorials/virtualbox-windows/02-network-modes.md
-      - 03 Configure VB: tutorials/virtualbox-windows/03-configure-vb.md
-      - 04 Create VM: tutorials/virtualbox-windows/04-create-vm.md
-      - 05 Configure VM: tutorials/virtualbox-windows/05-configure-vm.md
-      - 06 Install OS: tutorials/virtualbox-windows/06-install-os.md
-      - 07 Pre-configure OS: tutorials/virtualbox-windows/07-pre-configure-os.md
-      - 08 Configure OS: tutorials/virtualbox-windows/08-configure-os.md
-      - 09 Snapshot: tutorials/virtualbox-windows/09-snapshot.md
-      - 10 Final result: tutorials/virtualbox-windows/10-final-result.md
+    - tutorials/index.md # overview/landing page
+
+  # Tutorial template
+  #  - Tutorial_template:
+  #    - tutorials/tutorial_template/index.md # overview/landing page
+  #    - 01 Getting started: tutorials/tutorial_template/getting-started_template.md
+  #    - 02 Tutorial template: tutorials/tutorial_template/tutorial_template.md
+  #    - XX Final result: tutorials/tutorial_template/final-result_template.md
     
-    - Puppet:
-      - tutorials/puppet/index.md #submenu overview/landing page
-      - Hands-on 1: tutorials/puppet/hands-on-1.md
-      - Hands-on 2: tutorials/puppet/hands-on-2.md
-      - Hands-on 3: tutorials/puppet/hands-on-3.md
-      - Hands-on 4: tutorials/puppet/hands-on-4.md
-      - Hands-on 5: tutorials/puppet/hands-on-5.md
-      - Hands-on 6: tutorials/puppet/hands-on-6.md
-      - Hands-on 7: tutorials/puppet/hands-on-7.md
-      - Hands-on 8: tutorials/puppet/hands-on-8.md
-    
-  - Blog: #listed in header, must be unique
-    - blog/index.md #menu overview/landing page
-    - 2022:
-      - Xmind 8: blog/2022/xmind-8.md
-      - blog6: blog/2022/blog6.md
-      - blog5: blog/2022/blog5.md
-      - blog3: blog/2022/blog3.md
-    - 2021:
-      - blog2: blog/2021/blog2.md
-      - blog1: blog/2021/blog1.md
+  #  - Install a LAB PC with local clonezilla restore option (BIOS):
+  #    - tutorials/lab-pc/index.md # overview/landing page
+  #    - 01 Getting started: tutorials/lab-pc/getting-started.md
+  #    - 03 Prepare installation media: tutorials/lab-pc/prepare-installation-media.md
+  #    - 03 Configure BIOS vs UEFI: tutorials/lab-pc/configure-bios-vs-uefi.md
+  #    - 04 Install Windows 11: tutorials/lab-pc/install-windows11.md
+  #    - 05 Configure Windows 11: tutorials/lab-pc/configure-windows11.md
+  #    - 06 Install Linux Mint 21: tutorials/lab-pc/install-linuxmint21.md
+  #    - 07 Configure Linux Mint 21: tutorials/lab-pc/configure-linuxmint21.md
+  #    - 08 Take Clonezilla backup: tutorials/lab-pc/take-clonezilla-backup.md
+  #    - 09 Configure Clonezilla restore: tutorials/lab-pc/configure-clonezilla-restore.md
+  #    - 10 Final result: tutorials/lab-pc/final-result.md
+
+####################################################################################
+
+  - Howtos: #listed in header, must be unique
+    - howtos/index.md # overview/landing page
+
+  # Howto template
+  #  - Howto_template: howtos/howto_template/index.md
+  #  - Howto_template: howtos/howto_template/index.md
+  #  - Howto_template: howtos/howto_template/index.md
+
+    - Xmind 8 on Linux Mint 21.x: howtos/xmind-8/index.md
+  
+####################################################################################
+
+   # References
+  - References: #listed in header, must be unique
+    - references/index.md # overview/landing page
+  
+####################################################################################
+
+   # Explanations
+  - Explanations: #listed in header, must be unique
+    - explanations/index.md # overview/landing page
+
+####################################################################################
