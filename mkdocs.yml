@@ -374,6 +374,7 @@ nav:
   #  - Howto_template: howtos/howto_template/index.md
 
     - Xmind 8 on Linux Mint 21.x: howtos/xmind-8/index.md
+    - Bootable USB flash drive: howtos/bootable-usb-flash-drive/index.md
   
 ####################################################################################
 
