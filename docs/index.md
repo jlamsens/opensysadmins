@@ -56,13 +56,13 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
 --->
 
 <!--- HOWTO XMIND-8 --->
-<img src="howtos/xmind-8/xmind-8.png" width="320" height="180" align=left />
+<img src="howtos/install-xmind-linux-mint/xmind-8.png" width="320" height="180" align=left />
 > *September 26, 2022 - in [Howtos](howtos/index.md) - 7 min guide*
 
 
 XMind is a mind mapping and brainstorming software. At the time of writing, the current downloadable version is XMind 2022 (12.0.2 evaluation version).
 If you happen to have some old .xmind files lying around...
 
-[Continue reading](howtos/xmind-8/index.md)
+[Continue reading](howtos/install-xmind-linux-mint/index.md)
 <br>
 <br>
