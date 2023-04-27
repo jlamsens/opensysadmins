@@ -55,8 +55,30 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
 <br>
 --->
 
+<!--- HOWTO Linux Mint 21 bootable usb flash drive --->
+<img src="howtos/linuxmint21-bootable-usb-flash-drive/home.png" width="320" height="180" align=left />
+> *March 10, 2023 - in [Howtos](howtos/index.md) - 10 min guide*
+
+
+Creating a Linux Mint 21 bootable USB flash drive is useful for a variety of purposes, including installing or trying out Linux Mint on a new computer or repairing a malfunctioning installation.
+
+[Continue reading](howtos/linuxmint21-bootable-usb-flash-drive/index.md)
+<br>
+<br>
+
+<!--- HOWTO Windows 11 bootable usb flash drive --->
+<img src="howtos/windows11-bootable-usb-flash-drive/home.png" width="320" height="180" align=left />
+> *February 2, 2023 - in [Howtos](howtos/index.md) - 12 min guide*
+
+
+A Windows 11 bootable USB flash drive is a removable storage device that has been formatted and prepared to allow a computer to boot and install Windows 11 from it. Essentially, it is a USB drive that has been configured to contain all the necessary files and software to launch a Windows 11 installation process.
+
+[Continue reading](howtos/windows11-bootable-usb-flash-drive/index.md)
+<br>
+<br>
+
 <!--- HOWTO XMIND-8 --->
-<img src="howtos/install-xmind-linux-mint/xmind-8.png" width="320" height="180" align=left />
+<img src="howtos/install-xmind-linux-mint/home.png" width="320" height="180" align=left />
 > *September 26, 2022 - in [Howtos](howtos/index.md) - 7 min guide*
 
 

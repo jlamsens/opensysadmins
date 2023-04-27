@@ -115,6 +115,8 @@
     <img src="rufus-eject-uefi.png" width="320" height="180"/>
 
 ### With Etcher
+Todo...
+<!--- start comment
 #### Download and install Etcher
 tab1 screenshot
 tab2 screenshot
@@ -130,7 +132,11 @@ tab1 screenshot
 tab2 screenshot
 tab3 screenshot
 tab4 screenshot
+-->
+
 ## On Linux Mint 21
+Todo...
+<!--- start comment
 ### With tool X
 #### Download and install tool X
 tab1 screenshot
@@ -163,19 +169,4 @@ tab1 screenshot
 tab2 screenshot
 tab3 screenshot
 tab4 screenshot
-
-<!--- start comment
-
-=== "Step1"
-
-    <img src="1280-720.png" width="320" height="180"/>
-
-=== "Step2"
-
-    <img src="1280-720.png" width="320" height="180"/>
-
-=== "Step3"
-
-    <img src="1280-720.png" width="320" height="180"/>
-
 -->
