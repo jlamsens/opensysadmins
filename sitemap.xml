@@ -2,132 +2,142 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://www.opensysadmins.com/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/blogs/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/blogs/YYYY_template/blog_template/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/explanations/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/explanations/explation_template/explanation_template/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/howtos/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/howtos/howto_template/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/howtos/xmind-8/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <loc>https://www.opensysadmins.com/howtos/install-xmind-linux-mint/</loc>
+         <lastmod>2023-04-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/howtos/linuxmint21-bootable-usb-flash-drive/</loc>
+         <lastmod>2023-04-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/howtos/windows11-bootable-usb-flash-drive/</loc>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/references/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/references/reference_template/reference_template/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/lab-pc/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/lab-pc/configure-bios-vs-uefi/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/lab-pc/configure-clonezilla-restore/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/lab-pc/configure-linuxmint21/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/lab-pc/configure-windows11/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/lab-pc/final-result/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/lab-pc/getting-started/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/lab-pc/install-linuxmint21/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/lab-pc/install-windows11/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/lab-pc/prepare-installation-media/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/lab-pc/take-clonezilla-backup/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/tutorial_template/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/tutorial_template/final-result_template/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/tutorial_template/getting-started_template/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/tutorial_template/tutorial_template/</loc>
-         <lastmod>2023-03-29</lastmod>
+         <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
