@@ -7,10 +7,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Standing on the shoulder of giants" name="description"/>
 <meta content="Jurgen Lamsens" name="author"/>
-<link href="https://www.opensysadmins.com/explanations/explation_template/explanation_template/" rel="canonical"/>
+<link href="https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-bios-vs-uefi/" rel="canonical"/>
+<link href="../prepare-installation-media/" rel="prev"/>
+<link href="../install-windows11/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
-<title>Explanation template - OpenSysAdmins</title>
+<title>03 Configure BIOS vs UEFI - OpenSysAdmins</title>
 <link href="../../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#explanation-template">
+<a class="md-skip" href="#configure-biosuefi">
           Skip to content
         </a>
 </div>
@@ -59,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Explanation template
+              03 Configure BIOS vs UEFI
             
           </span>
 </div>
@@ -146,81 +148,119 @@
         Home
       </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../tutorials/">Tutorials</a>
+<a href="../../">Tutorials</a>
 <label for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
           Tutorials
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/">Install a Windows 11 &amp; Linux Mint 21 dual boot LAB-PC (BIOS) with local Clonezilla backup &amp; restore</a>
+<a href="../">Install a Windows 11 &amp; Linux Mint 21 dual boot LAB-PC (BIOS) with local Clonezilla backup &amp; restore</a>
 <label for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
           Install a Windows 11 &amp; Linux Mint 21 dual boot LAB-PC (BIOS) with local Clonezilla backup &amp; restore
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/getting-started/">
+<a class="md-nav__link" href="../getting-started/">
         01 Getting started
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/prepare-installation-media/">
+<a class="md-nav__link" href="../prepare-installation-media/">
         02 Prepare installation media
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-bios-vs-uefi/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          03 Configure BIOS vs UEFI
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         03 Configure BIOS vs UEFI
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#turn-on-the-computer">
+    Turn on the computer
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/install-windows11/">
+<a class="md-nav__link" href="#enter-the-bios-setup-utility">
+    Enter the BIOS Setup Utility
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#select-the-boot-mode">
+    Select the boot mode
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#locate-the-boot-order-options">
+    Locate the boot order options
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#saveconfirm-your-changes-and-exit">
+    Save/confirm your changes and exit
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../install-windows11/">
         04 Install Windows 11
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-windows11/">
+<a class="md-nav__link" href="../configure-windows11/">
         05 Configure Windows 11
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/install-linuxmint21/">
+<a class="md-nav__link" href="../install-linuxmint21/">
         06 Install Linux Mint 21
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-linuxmint21/">
+<a class="md-nav__link" href="../configure-linuxmint21/">
         07 Configure Linux Mint 21
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/take-clonezilla-backup/">
+<a class="md-nav__link" href="../take-clonezilla-backup/">
         08 Take Clonezilla backup
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-clonezilla-restore/">
+<a class="md-nav__link" href="../configure-clonezilla-restore/">
         09 Configure Clonezilla restore
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/final-result/">
+<a class="md-nav__link" href="../final-result/">
         10 Final result
       </a>
 </li>
@@ -230,7 +270,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/">Install a Windows 11 and Linux Mint 21 dual boot PC (UEFI)</a>
+<a href="../../windows11-linuxmint21-dual-boot-uefi/">Install a Windows 11 and Linux Mint 21 dual boot PC (UEFI)</a>
 <label for="__nav_2_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -242,22 +282,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/getting-started/">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-uefi/getting-started/">
         01 Getting started
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/configure-uefi/">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-uefi/configure-uefi/">
         02 Configure UEFI
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/install-windows11/">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-uefi/install-windows11/">
         03 Install Windows 11
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/install-linuxmint21/">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-uefi/install-linuxmint21/">
         04 Install Linux Mint 21
       </a>
 </li>
@@ -321,7 +361,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../">Explanations</a>
+<a href="../../../explanations/">Explanations</a>
 </div>
 <nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
@@ -341,13 +381,59 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#turn-on-the-computer">
+    Turn on the computer
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#enter-the-bios-setup-utility">
+    Enter the BIOS Setup Utility
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#select-the-boot-mode">
+    Select the boot mode
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#locate-the-boot-order-options">
+    Locate the boot order options
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#saveconfirm-your-changes-and-exit">
+    Save/confirm your changes and exit
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="explanation-template">Explanation template</h1>
+<h1 id="configure-biosuefi">Configure BIOS/UEFI</h1>
+<h2 id="turn-on-the-computer">Turn on the computer</h2>
+<p>Turn on or restart your computer and watch for a message during the POST about a particular key, usually <span class="keys"><kbd class="key-delete">Del</kbd></span> or a function key like <span class="keys"><kbd class="key-f2">F2</kbd></span> (e.g. Fujitsu Esprimo) that you'll need to press to access the BIOS/UEFI setup utility. It's possible, you won't see such message at all, but a vendor splash screen instead. Consult your hardware manual.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../images/tutorials/lab-pc/1280-720.png"><img height="180" src="../../../images/tutorials/lab-pc/1280-720.png" width="320"/></a></p>
+<h2 id="enter-the-bios-setup-utility">Enter the BIOS Setup Utility</h2>
+<p>After pressing the correct keyboard command (in this case ...), you'll enter the BIOS Setup Utility. Specifics vary from computer to computer.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../images/tutorials/lab-pc/1280-720.png"><img height="180" src="../../../images/tutorials/lab-pc/1280-720.png" width="320"/></a></p>
+<h2 id="select-the-boot-mode">Select the boot mode</h2>
+<p>In this tutorial, we do not use UEFI, but BIOS-mode. Locate the option for enabling BIOS-compatible start mode (CSM or legacy mode).</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../images/tutorials/lab-pc/1280-720.png"><img height="180" src="../../../images/tutorials/lab-pc/1280-720.png" width="320"/></a></p>
+<h2 id="locate-the-boot-order-options">Locate the boot order options</h2>
+<p>Locate the option for changing the boot sequence. Verify that the harddrive is the first boot device.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../images/tutorials/lab-pc/1280-720.png"><img height="180" src="../../../images/tutorials/lab-pc/1280-720.png" width="320"/></a></p>
+<h2 id="saveconfirm-your-changes-and-exit">Save/confirm your changes and exit</h2>
+<p>If the harddrive was empty, the system won't boot. If it contained an operating system, it's possible it won't boot, but there is a chance it will boot.
+Nevermind. We will wipe the harddisk in the next steps.</p>
 </article>
 </div>
 </div>

@@ -7,10 +7,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Standing on the shoulder of giants" name="description"/>
 <meta content="Jurgen Lamsens" name="author"/>
-<link href="https://www.opensysadmins.com/explanations/explation_template/explanation_template/" rel="canonical"/>
+<link href="https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-uefi/configure-uefi/" rel="canonical"/>
+<link href="../getting-started/" rel="prev"/>
+<link href="../install-windows11/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
-<title>Explanation template - OpenSysAdmins</title>
+<title>02 Configure UEFI - OpenSysAdmins</title>
 <link href="../../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#explanation-template">
+<a class="md-skip" href="#configure-uefi">
           Skip to content
         </a>
 </div>
@@ -59,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Explanation template
+              02 Configure UEFI
             
           </span>
 </div>
@@ -146,15 +148,15 @@
         Home
       </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../tutorials/">Tutorials</a>
+<a href="../../">Tutorials</a>
 <label for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
           Tutorials
@@ -163,7 +165,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/">Install a Windows 11 &amp; Linux Mint 21 dual boot LAB-PC (BIOS) with local Clonezilla backup &amp; restore</a>
+<a href="../../windows11-linuxmint21-dual-boot-bios-clonezilla/">Install a Windows 11 &amp; Linux Mint 21 dual boot LAB-PC (BIOS) with local Clonezilla backup &amp; restore</a>
 <label for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -175,89 +177,142 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/getting-started/">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-bios-clonezilla/getting-started/">
         01 Getting started
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/prepare-installation-media/">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-bios-clonezilla/prepare-installation-media/">
         02 Prepare installation media
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-bios-vs-uefi/">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-bios-clonezilla/configure-bios-vs-uefi/">
         03 Configure BIOS vs UEFI
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/install-windows11/">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-bios-clonezilla/install-windows11/">
         04 Install Windows 11
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-windows11/">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-bios-clonezilla/configure-windows11/">
         05 Configure Windows 11
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/install-linuxmint21/">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-bios-clonezilla/install-linuxmint21/">
         06 Install Linux Mint 21
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-linuxmint21/">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-bios-clonezilla/configure-linuxmint21/">
         07 Configure Linux Mint 21
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/take-clonezilla-backup/">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-bios-clonezilla/take-clonezilla-backup/">
         08 Take Clonezilla backup
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-clonezilla-restore/">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-bios-clonezilla/configure-clonezilla-restore/">
         09 Configure Clonezilla restore
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/final-result/">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-bios-clonezilla/final-result/">
         10 Final result
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/">Install a Windows 11 and Linux Mint 21 dual boot PC (UEFI)</a>
+<a href="../">Install a Windows 11 and Linux Mint 21 dual boot PC (UEFI)</a>
 <label for="__nav_2_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_3">
 <span class="md-nav__icon md-icon"></span>
           Install a Windows 11 and Linux Mint 21 dual boot PC (UEFI)
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/getting-started/">
+<a class="md-nav__link" href="../getting-started/">
         01 Getting started
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/configure-uefi/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          02 Configure UEFI
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         02 Configure UEFI
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#turn-on-pc">
+    Turn on PC
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/install-windows11/">
+<a class="md-nav__link" href="#enter-setup-utility">
+    Enter setup utility
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#update-uefi">
+    Update UEFI
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#erase-disk-if-possible">
+    Erase disk (if possible)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#select-boot-mode">
+    Select boot mode
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#disable-secure-boot">
+    Disable Secure Boot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#change-boot-order">
+    Change boot order
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#save-changes-exit-shutdown">
+    Save changes / exit / shutdown
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../install-windows11/">
         03 Install Windows 11
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/install-linuxmint21/">
+<a class="md-nav__link" href="../install-linuxmint21/">
         04 Install Linux Mint 21
       </a>
 </li>
@@ -321,7 +376,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../">Explanations</a>
+<a href="../../../explanations/">Explanations</a>
 </div>
 <nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
@@ -341,13 +396,127 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#turn-on-pc">
+    Turn on PC
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#enter-setup-utility">
+    Enter setup utility
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#update-uefi">
+    Update UEFI
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#erase-disk-if-possible">
+    Erase disk (if possible)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#select-boot-mode">
+    Select boot mode
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#disable-secure-boot">
+    Disable Secure Boot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#change-boot-order">
+    Change boot order
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#save-changes-exit-shutdown">
+    Save changes / exit / shutdown
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="explanation-template">Explanation template</h1>
+<h1 id="configure-uefi">Configure UEFI</h1>
+<h2 id="turn-on-pc">Turn on PC</h2>
+<p>Turn on or restart your computer and watch for a message during the POST about a particular key, usually <span class="keys"><kbd class="key-delete">Del</kbd></span> or a function key like <span class="keys"><kbd class="key-f2">F2</kbd></span>, <span class="keys"><kbd class="key-f10">F10</kbd></span>, ...  that you'll need to press to access the BIOS/UEFI setup utility. It's possible, you won't see such message at all, but a vendor splash screen instead. Consult your hardware manual.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step</label><label for="__tabbed_1_2">Step</label><label for="__tabbed_1_3">Step</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</input></input></input></div>
+<h2 id="enter-setup-utility">Enter setup utility</h2>
+<p>After pressing the correct keyboard command (in this case ...), you'll enter the BIOS Setup Utility. Specifics vary from computer to computer.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step</label><label for="__tabbed_2_2">Step</label><label for="__tabbed_2_3">Step</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</input></input></input></div>
+<h2 id="update-uefi">Update UEFI</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Step</label><label for="__tabbed_3_2">Step</label><label for="__tabbed_3_3">Step</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</input></input></input></div>
+<h2 id="erase-disk-if-possible">Erase disk (if possible)</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Step</label><label for="__tabbed_4_2">Step</label><label for="__tabbed_4_3">Step</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</input></input></input></div>
+<h2 id="select-boot-mode">Select boot mode</h2>
+<p>In this tutorial, we do not use BIOS, but UEFI-mode only. Locate the option for enabling UEFI-mode.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><input id="__tabbed_5_3" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Step</label><label for="__tabbed_5_2">Step</label><label for="__tabbed_5_3">Step</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="disable-secure-boot">Disable Secure Boot</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><input id="__tabbed_6_3" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Step</label><label for="__tabbed_6_2">Step</label><label for="__tabbed_6_3">Step</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="change-boot-order">Change boot order</h2>
+<p>Locate the option for changing the boot sequence. Verify that the harddrive is the first boot device.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><input id="__tabbed_7_3" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">Step</label><label for="__tabbed_7_2">Step</label><label for="__tabbed_7_3">Step</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="save-changes-exit-shutdown">Save changes / exit / shutdown</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><input id="__tabbed_8_2" name="__tabbed_8" type="radio"/><input id="__tabbed_8_3" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="__tabbed_8_1">Step</label><label for="__tabbed_8_2">Step</label><label for="__tabbed_8_3">Step</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
 </article>
 </div>
 </div>

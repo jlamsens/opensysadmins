@@ -7,10 +7,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Standing on the shoulder of giants" name="description"/>
 <meta content="Jurgen Lamsens" name="author"/>
-<link href="https://www.opensysadmins.com/explanations/explation_template/explanation_template/" rel="canonical"/>
+<link href="https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-linuxmint21/" rel="canonical"/>
+<link href="../install-linuxmint21/" rel="prev"/>
+<link href="../take-clonezilla-backup/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
-<title>Explanation template - OpenSysAdmins</title>
+<title>07 Configure Linux Mint 21 - OpenSysAdmins</title>
 <link href="../../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#explanation-template">
+<a class="md-skip" href="#configure-linux-mint-21">
           Skip to content
         </a>
 </div>
@@ -59,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Explanation template
+              07 Configure Linux Mint 21
             
           </span>
 </div>
@@ -146,81 +148,82 @@
         Home
       </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../tutorials/">Tutorials</a>
+<a href="../../">Tutorials</a>
 <label for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
           Tutorials
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/">Install a Windows 11 &amp; Linux Mint 21 dual boot LAB-PC (BIOS) with local Clonezilla backup &amp; restore</a>
+<a href="../">Install a Windows 11 &amp; Linux Mint 21 dual boot LAB-PC (BIOS) with local Clonezilla backup &amp; restore</a>
 <label for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
           Install a Windows 11 &amp; Linux Mint 21 dual boot LAB-PC (BIOS) with local Clonezilla backup &amp; restore
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/getting-started/">
+<a class="md-nav__link" href="../getting-started/">
         01 Getting started
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/prepare-installation-media/">
+<a class="md-nav__link" href="../prepare-installation-media/">
         02 Prepare installation media
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-bios-vs-uefi/">
+<a class="md-nav__link" href="../configure-bios-vs-uefi/">
         03 Configure BIOS vs UEFI
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/install-windows11/">
+<a class="md-nav__link" href="../install-windows11/">
         04 Install Windows 11
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-windows11/">
+<a class="md-nav__link" href="../configure-windows11/">
         05 Configure Windows 11
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/install-linuxmint21/">
+<a class="md-nav__link" href="../install-linuxmint21/">
         06 Install Linux Mint 21
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-linuxmint21/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
         07 Configure Linux Mint 21
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/take-clonezilla-backup/">
+<a class="md-nav__link" href="../take-clonezilla-backup/">
         08 Take Clonezilla backup
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-clonezilla-restore/">
+<a class="md-nav__link" href="../configure-clonezilla-restore/">
         09 Configure Clonezilla restore
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/final-result/">
+<a class="md-nav__link" href="../final-result/">
         10 Final result
       </a>
 </li>
@@ -230,7 +233,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/">Install a Windows 11 and Linux Mint 21 dual boot PC (UEFI)</a>
+<a href="../../windows11-linuxmint21-dual-boot-uefi/">Install a Windows 11 and Linux Mint 21 dual boot PC (UEFI)</a>
 <label for="__nav_2_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -242,22 +245,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/getting-started/">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-uefi/getting-started/">
         01 Getting started
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/configure-uefi/">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-uefi/configure-uefi/">
         02 Configure UEFI
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/install-windows11/">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-uefi/install-windows11/">
         03 Install Windows 11
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/install-linuxmint21/">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-uefi/install-linuxmint21/">
         04 Install Linux Mint 21
       </a>
 </li>
@@ -321,7 +324,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../">Explanations</a>
+<a href="../../../explanations/">Explanations</a>
 </div>
 <nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
@@ -347,7 +350,24 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="explanation-template">Explanation template</h1>
+<h1 id="configure-linux-mint-21">Configure Linux Mint 21</h1>
+<!---
+- full updates, reports
+- tftp service (install) + CISCO images switches/routers
+- openssh-server (install)
+- minicom
+- unplug UTP-cable + restart
+- shut down
+-->
+<!---
+## tFTP service
+- apt update
+- apt install tftpd-hpa
+- cd /srv/tftp/
+- cp /media/sf_Downloads/c2960* .
+- chmod 644 c*
+- ip a ...
+-->
 </article>
 </div>
 </div>
