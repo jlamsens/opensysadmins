@@ -3,9 +3,14 @@ hide:
     - toc
 ---
 
-# Install Xmind 8 on Linux Mint 21.x
+# Install Xmind 8 on Linux Mint 21
 XMind is a mind mapping and brainstorming software. At the time of writing, the current downloadable version is XMind 2022 (12.0.2 evaluation version).
 If you happen to have some old .xmind files lying around (#like me), created in the award winning version XMind 8 v3.7.9, you can open them with the newer version without a problem. But if you are familiar with the "legacy" interface, you can still download and make that version work on a modern Linux system.
+
+## Prereqs
+- a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Linux Mint 21
+- internet connection
+
 
 ## Download
 === "guru@vm26:~$_"

@@ -1,4 +1,10 @@
 # Create a Linux Mint 21 bootable USB flash drive
+
+## Prereqs
+- USB flash drive that can hold the Linux Mint 21 installation files
+- access to a running PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Windows 11 or Linux Mint 21
+- internet connection
+
 ## Download ISO
 === "Step1"
     Use your favorite search engine to search for the Linux Mint 21 iso and choose the official Linux Mint website.

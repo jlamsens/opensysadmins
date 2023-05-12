@@ -1,4 +1,10 @@
 # Create a Windows 11 bootable USB flash drive
+
+## Prereqs
+- USB flash drive that can hold the Windows 11 installation files
+- access to a running PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Windows 11 or Linux Mint 21
+- internet connection
+
 ## Download ISO
 === "Step1"
     Use your favorite search engine to search for the Windows 11 iso and choose the official Microsoft website.
