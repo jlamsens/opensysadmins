@@ -56,6 +56,18 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
 --->
 
 === "1"
+
+    <!--- HOWTO do a password recovery on a Cisco 2960 switch --->
+    <img src="howtos/password-recovery-cisco2960/home.png" width="320" height="180" align=left />
+    > *May 18, 2023 - in [Howtos](howtos/index.md) - 15 min guide*
+
+
+    Cisco switches have a password recovery procedure that involves booting the switch into a special mode that allows you to reset the password. If you are unable to recover the password, you can perform a factory reset of the switch.
+
+    [Continue reading](howtos/password-recovery-cisco2960/index.md)
+    <br>
+    <br>
+
     <!--- HOWTO Linux Mint 21 bootable usb flash drive --->
     <img src="howtos/linuxmint21-bootable-usb-flash-drive/home.png" width="320" height="180" align=left />
     > *March 10, 2023 - in [Howtos](howtos/index.md) - 10 min guide*
@@ -67,12 +79,23 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <br>
     <br>
 
+    <!--- HOWTO (Re)install an IOS operating system on a Cisco 2960 switch --->
+    <img src="howtos/reinstall-ios-cisco2960/home.png" width="320" height="180" align=left />
+    > *March 07, 2023 - in [Howtos](howtos/index.md) - 20 min guide*
+
+
+    Upgrading to a new version. Recovery from software corruption. Factory reset. Configuration compatibility. License activation. There are a variety of reasons why it is sometimes necessary to (re)install an IOS on a Cisco 2960 switch.
+
+    [Continue reading](howtos/reinstall-ios-cisco2960/index.md)
+    <br>
+    <br>
+
     <!--- HOWTO Windows 11 bootable usb flash drive --->
     <img src="howtos/windows11-bootable-usb-flash-drive/home.png" width="320" height="180" align=left />
-    > *February 2, 2023 - in [Howtos](howtos/index.md) - 12 min guide*
+    >*February 2, 2023 - in [Howtos](howtos/index.md) - 12 min guide*
 
 
-    A Windows 11 bootable USB flash drive is a removable storage device that has been formatted and prepared to allow a computer to boot and install Windows 11 from it. Essentially, it is a USB drive that has been configured to contain all the necessary files and software to launch a Windows 11 installation process.
+    A Windows 11 bootable USB flash drive is a removable storage device that has been configured to contain all the necessary files and software to launch a Windows 11 installation or repair process.
 
     [Continue reading](howtos/windows11-bootable-usb-flash-drive/index.md)
     <br>
@@ -80,7 +103,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
 
     <!--- HOWTO XMIND-8 --->
     <img src="howtos/install-xmind-linux-mint/home.png" width="320" height="180" align=left />
-    > *September 26, 2022 - in [Howtos](howtos/index.md) - 7 min guide*
+    >*September 26, 2022 - in [Howtos](howtos/index.md) - 7 min guide*
 
 
     XMind is a mind mapping and brainstorming software. At the time of writing, the current downloadable version is XMind 2022 (12.0.2 evaluation version).
