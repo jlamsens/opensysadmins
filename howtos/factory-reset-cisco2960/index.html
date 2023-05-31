@@ -464,7 +464,7 @@
 <li>familiarity with the <a href="../todo/">lab environment</a></li>
 <li>a working IOS, so if necessary first <a href="../reinstall-ios-cisco2960/">(re)install an IOS operating system</a></li>
 </ul>
-<p>Following commands can be executed from within IOS or from within <a href="../acess-cisco-device-rommon/">ROMMON-mode</a>.</p>
+<p>Following commands can be executed from within IOS or from within <a href="../access-cisco-device-rommon/">ROMMON-mode</a>.</p>
 <h2 id="erase-startup-configuration">Erase startup configuration</h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label></div>
 <div class="tabbed-content">
@@ -486,15 +486,15 @@
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>Switch#dir nvram:startup-config
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>Directory of nvram:/startup-config
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    65  -rw-        1326                    &lt;no date&gt;  startup-config
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>...
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="hll">    65  -rw-        1326                    &lt;no date&gt;  startup-config
+</span><a id="__codelineno-0-6" name="__codelineno-0-6"></a>...
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a>
 <a id="__codelineno-0-8" name="__codelineno-0-8"></a>--- From ROMMON ---
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a>switch: dir flash:
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a>Directory of flash:/
 <a id="__codelineno-0-11" name="__codelineno-0-11"></a>   ...
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a>   11  -rwx  1362      &lt;date&gt;               config.text
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a>   ...
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="hll">   11  -rwx  1362      &lt;date&gt;               config.text
+</span><a id="__codelineno-0-13" name="__codelineno-0-13"></a>   ...
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -538,14 +538,14 @@
 <span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-2-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>--- From IOS ---
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="hll">Switch#show startup-config 
-</span><a id="__codelineno-2-3" name="__codelineno-2-3"></a>startup-config is not present
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>Switch#
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>Switch#show startup-config 
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="hll">startup-config is not present
+</span><a id="__codelineno-2-4" name="__codelineno-2-4"></a>Switch#
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a>
 <a id="__codelineno-2-6" name="__codelineno-2-6"></a>--- From ROMMON ---
 <a id="__codelineno-2-7" name="__codelineno-2-7"></a>switch: dir flash:config.text
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>unable to stat flash:config.text/: no such file or directory
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="hll">unable to stat flash:config.text/: no such file or directory
+</span><a id="__codelineno-2-9" name="__codelineno-2-9"></a>
 <a id="__codelineno-2-10" name="__codelineno-2-10"></a>switch: 
 </code></pre></div></td></tr></table></div>
 </div>
@@ -634,16 +634,16 @@
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>Switch#dir flash:
 <a id="__codelineno-5-3" name="__codelineno-5-3"></a>Directory of flash:/
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a>    ...
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a>    &lt;no vlan.dat&gt;
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a>    ...
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="hll">    &lt;no vlan.dat&gt;
+</span><a id="__codelineno-5-6" name="__codelineno-5-6"></a>    ...
 <a id="__codelineno-5-7" name="__codelineno-5-7"></a>Switch#
 <a id="__codelineno-5-8" name="__codelineno-5-8"></a>
 <a id="__codelineno-5-9" name="__codelineno-5-9"></a>--- From ROMMON ---
 <a id="__codelineno-5-10" name="__codelineno-5-10"></a>switch: dir flash:
 <a id="__codelineno-5-11" name="__codelineno-5-11"></a>Directory of flash:/
 <a id="__codelineno-5-12" name="__codelineno-5-12"></a>    ...
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a>    &lt;no vlan.dat&gt;
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a>    ...
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="hll">    &lt;no vlan.dat&gt;
+</span><a id="__codelineno-5-14" name="__codelineno-5-14"></a>    ...
 <a id="__codelineno-5-15" name="__codelineno-5-15"></a>switch: 
 </code></pre></div></td></tr></table></div>
 </div>
@@ -775,7 +775,7 @@
 <span class="normal"><a href="#__codelineno-11-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>--- From IOS ---
 <a id="__codelineno-11-2" name="__codelineno-11-2"></a>Switch#show sdm prefer 
 <a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="hll"> The current template is "dual-ipv4-and-ipv6 default" template.
-</span><a id="__codelineno-11-4" name="__codelineno-11-4"></a> The selected template optimizes the resources in
+</span><a id="__codelineno-11-4" name="__codelineno-11-4"></a> The selected template optimizes the resources in...
 <a id="__codelineno-11-5" name="__codelineno-11-5"></a>...
 <a id="__codelineno-11-6" name="__codelineno-11-6"></a>...
 <a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="hll">On next reload, template will be "default" template.
@@ -790,7 +790,7 @@
 </div>
 </input></input></input></div>
 <h2 id="set-default-environment-variables">Set default environment variables</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><input id="__tabbed_5_3" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Step1</label><label for="__tabbed_5_2">Step2</label><label for="__tabbed_5_3">Step2</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><input id="__tabbed_5_3" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Step1</label><label for="__tabbed_5_2">Step2</label><label for="__tabbed_5_3">Step3</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Command "show boot" should look something like this. Most of these variables can be set from within IOS and/or ROMMON.</p>
