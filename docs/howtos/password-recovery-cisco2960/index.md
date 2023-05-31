@@ -40,7 +40,7 @@
     ```
 
 === "Step3"
-    Now [boot the switch in ROMMON-mode](../acess-cisco-device-rommon/index.md) using a cold start.
+    Now [boot the switch in ROMMON-mode](../access-cisco-device-rommon/index.md) using a cold start.
 
     ``` title='' hl_lines="0"
     ...

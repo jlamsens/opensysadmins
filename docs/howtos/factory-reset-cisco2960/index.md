@@ -4,14 +4,14 @@
 - familiarity with the [lab environment](../todo/index.md)
 - a working IOS, so if necessary first [(re)install an IOS operating system](../reinstall-ios-cisco2960/index.md)
 
-Following commands can be executed from within IOS or from within [ROMMON-mode](../acess-cisco-device-rommon/index.md).
+Following commands can be executed from within IOS or from within [ROMMON-mode](../access-cisco-device-rommon/index.md).
 
 ## Erase startup configuration
 
 === "Step1"
     Check if the startup configuration is empty. If not, the file exists. In IOS the file is known as startup-config. In ROMMON, the file is config.text.
 
-    ``` title='' hl_lines="0"
+    ``` title='' hl_lines="5 12"
     --- From IOS ---
     Switch#dir nvram:startup-config
     Directory of nvram:/startup-config
@@ -49,7 +49,7 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
 === "Step3"
     Verify.
 
-    ``` title='' hl_lines="2"
+    ``` title='' hl_lines="3 8"
     --- From IOS ---
     Switch#show startup-config 
     startup-config is not present
@@ -106,7 +106,7 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
 === "Step3"
     Verify.
 
-    ``` title='' hl_lines="0"
+    ``` title='' hl_lines="5 13"
     --- From IOS ---
     Switch#dir flash:
     Directory of flash:/
@@ -208,7 +208,7 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
     --- From IOS ---
     Switch#show sdm prefer 
      The current template is "dual-ipv4-and-ipv6 default" template.
-     The selected template optimizes the resources in
+     The selected template optimizes the resources in...
     ...
     ...
     On next reload, template will be "default" template.
@@ -255,7 +255,7 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
     switch: set BOOT flash:<ios-file>
     ```
 
-=== "Step2"
+=== "Step3"
     Example2: BOOT manual.
 
     ``` title='' hl_lines="0"

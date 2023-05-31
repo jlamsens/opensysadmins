@@ -57,6 +57,30 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
 
 === "1"
 
+    <!--- HOWTO factory reset a Cisco 2960 switch --->
+    <img src="howtos/factory-reset-cisco2960/home.png" width="320" height="180" align=left />
+    > *May 25, 2023 - in [Howtos](howtos/index.md) - 20 min guide*
+
+
+    Factory reset = restore to default settings. Erase all configuration settings, including IP addresses, hostname, passwords, VLANs and other settings. Ready for network deployment, troubleshooting, resale or decommissioning.
+
+    [Continue reading](howtos/factory-reset-cisco2960/index.md)
+    <br>
+    <br>
+
+    <!--- HOWTO access a Cisco device ROMMON --->
+    <img src="howtos/access-cisco-device-rommon/home.png" width="320" height="180" align=left />
+    > *May 25, 2023 - in [Howtos](howtos/index.md) - 10 min guide*
+
+
+    ROMMON is a seperate firmware component embedded in the hardware of Cisco devices, a small program that runs - after POST - when a device is powered on or during the boot process. It is responsible for providing basic boot and recovery functionality.
+
+    [Continue reading](howtos/access-cisco-device-rommon/index.md)
+    <br>
+    <br>
+
+=== "2"
+
     <!--- HOWTO do a password recovery on a Cisco 2960 switch --->
     <img src="howtos/password-recovery-cisco2960/home.png" width="320" height="180" align=left />
     > *May 18, 2023 - in [Howtos](howtos/index.md) - 15 min guide*
