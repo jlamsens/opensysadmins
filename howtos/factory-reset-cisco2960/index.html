@@ -7,12 +7,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Standing on the shoulder of giants" name="description"/>
 <meta content="Jurgen Lamsens" name="author"/>
-<link href="https://www.opensysadmins.com/howtos/password-recovery-cisco2960/" rel="canonical"/>
-<link href="../reinstall-ios-cisco2960/" rel="prev"/>
-<link href="../factory-reset-cisco2960/" rel="next"/>
+<link href="https://www.opensysadmins.com/howtos/factory-reset-cisco2960/" rel="canonical"/>
+<link href="../password-recovery-cisco2960/" rel="prev"/>
+<link href="../../references/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
-<title>Do a password recovery on a Cisco 2960 switch - OpenSysAdmins</title>
+<title>Factory reset a Cisco 2960 switch - OpenSysAdmins</title>
 <link href="../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#howto-do-a-password-recovery-on-a-cisco-2960-switch">
+<a class="md-skip" href="#factory-reset-a-cisco-2960-switch">
           Skip to content
         </a>
 </div>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Do a password recovery on a Cisco 2960 switch
+              Factory reset a Cisco 2960 switch
             
           </span>
 </div>
@@ -303,14 +303,19 @@
         (Re)install an IOS operating system on a Cisco 2960 switch
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../password-recovery-cisco2960/">
+        Do a password recovery on a Cisco 2960 switch
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Do a password recovery on a Cisco 2960 switch
+          Factory reset a Cisco 2960 switch
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Do a password recovery on a Cisco 2960 switch
+        Factory reset a Cisco 2960 switch
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -324,31 +329,42 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#console-access">
-    Console access
-  </a>
-<nav aria-label="Console access" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#password-recovery-mechanism-enabled">
-    Password recovery mechanism enabled
+<a class="md-nav__link" href="#erase-startup-configuration">
+    Erase startup configuration
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#password-recovery-mechanism-disabled">
-    Password recovery mechanism disabled
+<a class="md-nav__link" href="#erase-vlandat">
+    Erase vlan.dat
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#enable-password-recovery-mechanism">
+    Enable password recovery mechanism
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#set-default-sdm-template">
+    Set default SDM template
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#set-default-environment-variables">
+    Set default environment variables
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reload">
+    Reload
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clean-switch">
+    Clean switch
   </a>
 </li>
 </ul>
 </nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../factory-reset-cisco2960/">
-        Factory reset a Cisco 2960 switch
-      </a>
 </li>
 </ul>
 </nav>
@@ -401,23 +417,39 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#console-access">
-    Console access
-  </a>
-<nav aria-label="Console access" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#password-recovery-mechanism-enabled">
-    Password recovery mechanism enabled
+<a class="md-nav__link" href="#erase-startup-configuration">
+    Erase startup configuration
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#password-recovery-mechanism-disabled">
-    Password recovery mechanism disabled
+<a class="md-nav__link" href="#erase-vlandat">
+    Erase vlan.dat
   </a>
 </li>
-</ul>
-</nav>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#enable-password-recovery-mechanism">
+    Enable password recovery mechanism
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#set-default-sdm-template">
+    Set default SDM template
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#set-default-environment-variables">
+    Set default environment variables
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reload">
+    Reload
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clean-switch">
+    Clean switch
+  </a>
 </li>
 </ul>
 </nav>
@@ -426,27 +458,47 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="howto-do-a-password-recovery-on-a-cisco-2960-switch">Howto do a password recovery on a Cisco 2960 switch</h1>
+<h1 id="factory-reset-a-cisco-2960-switch">Factory reset a Cisco 2960 switch</h1>
 <h2 id="prereqs">Prereqs</h2>
 <ul>
 <li>familiarity with the <a href="../todo/">lab environment</a></li>
+<li>a working IOS, so if necessary first <a href="../reinstall-ios-cisco2960/">(re)install an IOS operating system</a></li>
 </ul>
-<h2 id="console-access">Console access</h2>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="console-access.png"><img height="180" src="console-access.png" width="320"/></a></p>
-<h3 id="password-recovery-mechanism-enabled">Password recovery mechanism enabled</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:9"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><input id="__tabbed_1_6" name="__tabbed_1" type="radio"><input id="__tabbed_1_7" name="__tabbed_1" type="radio"><input id="__tabbed_1_8" name="__tabbed_1" type="radio"><input id="__tabbed_1_9" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label><label for="__tabbed_1_4">Step4</label><label for="__tabbed_1_5">Step5</label><label for="__tabbed_1_6">Step6</label><label for="__tabbed_1_7">Step7</label><label for="__tabbed_1_8">Step8</label><label for="__tabbed_1_9">Step9</label></div>
+<p>Following commands can be executed from within IOS or from within <a href="../acess-cisco-device-rommon/">ROMMON-mode</a>.</p>
+<h2 id="erase-startup-configuration">Erase startup configuration</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>The password recover mechanism is enabled by default. This is necessary to be able to recover the startup configuration file.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>Switch#show ver | incl password-recovery
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>The password-recovery mechanism is enabled.
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>Switch#
+<p>Check if the startup configuration is empty. If not, the file exists. In IOS the file is known as startup-config. In ROMMON, the file is config.text.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>--- From IOS ---
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>Switch#dir nvram:startup-config
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>Directory of nvram:/startup-config
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    65  -rw-        1326                    &lt;no date&gt;  startup-config
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>...
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>--- From ROMMON ---
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>switch: dir flash:
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>Directory of flash:/
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>   ...
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>   11  -rwx  1362      &lt;date&gt;               config.text
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>   ...
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Let's simulate a forgotten password.</p>
+<p>If necessary, erase the file using "erase startup-config", "erase nvram:" or "write erase" from IOS. In ROMMON, use the delete command.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -459,36 +511,51 @@
 <span class="normal"><a href="#__codelineno-1-10">10</a></span>
 <span class="normal"><a href="#__codelineno-1-11">11</a></span>
 <span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span>
-<span class="normal"><a href="#__codelineno-1-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>Switch#conf t
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>Enter configuration commands, one per line.  End with CNTL/Z.
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Switch(config)#enable secret J3#C'7B0_1PlM
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>Switch(config)#end
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>Switch#wr
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>Building configuration...
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>[OK]
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>Switch# exit
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a>Switch&gt;ena
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a>Password:   -----&gt; enter wrong password
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a>Password:   -----&gt; enter wrong password
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a>Password:   -----&gt; enter wrong password
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>% Bad secrets
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a>Switch&gt;
+<span class="normal"><a href="#__codelineno-1-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>--- From IOS ---
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>Switch#erase startup-config 
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Erasing the nvram filesystem will remove all configuration files! Continue? [confirm]
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="hll">[OK]
+</span><a id="__codelineno-1-5" name="__codelineno-1-5"></a>Erase of nvram: complete
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>Switch#
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>--- From ROMMON ---
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>switch: delete flash:config.text
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>Are you sure you want to delete "flash:config.text" (y/n)?y
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>File "flash:config.text" deleted
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>switch: 
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Now <a href="../acess-cisco-device-rommon/">boot the switch in ROMMON-mode</a> using a cold start.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>...
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>...
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>switch:
+<p>Verify.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>--- From IOS ---
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="hll">Switch#show startup-config 
+</span><a id="__codelineno-2-3" name="__codelineno-2-3"></a>startup-config is not present
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>Switch#
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>--- From ROMMON ---
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>switch: dir flash:config.text
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>unable to stat flash:config.text/: no such file or directory
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>switch: 
 </code></pre></div></td></tr></table></div>
 </div>
+</div>
+</input></input></input></div>
+<h2 id="erase-vlandat">Erase vlan.dat</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label><label for="__tabbed_2_3">Step3</label></div>
+<div class="tabbed-content">
 <div class="tabbed-block">
-<p>Initialize Flash manually.</p>
+<p>Check if the VLAN database file exists.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -499,21 +566,29 @@
 <span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-3-10">10</a></span>
-<span class="normal"><a href="#__codelineno-3-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>switch: flash_init
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>Initializing Flash...
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>flashfs[0]: 1 files, 1 directories
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>flashfs[0]: 0 orphaned files, 0 orphaned directories
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>flashfs[0]: Total bytes: 65544192
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>flashfs[0]: Bytes used: 3584
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a>flashfs[0]: Bytes available: 65540608
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a>flashfs[0]: flashfs fsck took 18 seconds.
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a>...done Initializing Flash.
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a>switch:
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>--- From IOS ---
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>Switch#dir flash:vlan.dat
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>Directory of flash:/vlan.dat
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="hll">    7  -rwx         616   Mar 1 1993 00:07:06 +00:00  vlan.dat
+</span><a id="__codelineno-3-6" name="__codelineno-3-6"></a>...
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a> --- From ROMMON ---
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>switch: dir flash:
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>Directory of flash:/
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>    ...
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="hll">    8  -rwx  616       &lt;date&gt;               vlan.dat
+</span><a id="__codelineno-3-13" name="__codelineno-3-13"></a>...
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>switch:
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>List the files stored in flash. The startup configuration is config.text. If you want to keep it, rename the file. If you want to discard all configuration, delete it. Then boot the switch.</p>
+<p>If necessary, delete the VLAN database.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
@@ -525,116 +600,127 @@
 <span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-4-10">10</a></span>
 <span class="normal"><a href="#__codelineno-4-11">11</a></span>
-<span class="normal"><a href="#__codelineno-4-12">12</a></span>
-<span class="normal"><a href="#__codelineno-4-13">13</a></span>
-<span class="normal"><a href="#__codelineno-4-14">14</a></span>
-<span class="normal"><a href="#__codelineno-4-15">15</a></span>
-<span class="normal"><a href="#__codelineno-4-16">16</a></span>
-<span class="normal"><a href="#__codelineno-4-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>switch: dir flash:
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>Directory of flash:/
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>    2  drwx  128       &lt;date&gt;               pnp-tech
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>    7  -rwx  1916      &lt;date&gt;               private-config.text
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>    4  drwx  0         &lt;date&gt;               pnp-info
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a>    5  -rwx  15979077  &lt;date&gt;               c2960-lanbasek9-mz.152-7.E7.bin
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a>    8  -rwx  1767      &lt;date&gt;               config.text
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a>    9  -rwx  4120      &lt;date&gt;               multiple-fs
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a>
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a>49466880 bytes available (16077312 bytes used)
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a>
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a>switch: rename flash:config.text flash:config.text.bak      -----&gt; or "delete flash:config.text"
-<a id="__codelineno-4-14" name="__codelineno-4-14"></a>
-<a id="__codelineno-4-15" name="__codelineno-4-15"></a>switch: boot
-<a id="__codelineno-4-16" name="__codelineno-4-16"></a>Loading "flash:c2960-lanbasek9-mz.152-7.E7.bin"...@@@@@@@@@@@@@@@@@
-<a id="__codelineno-4-17" name="__codelineno-4-17"></a>...
+<span class="normal"><a href="#__codelineno-4-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>--- From IOS ---
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>Switch#delete vlan.dat
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>Delete filename [vlan.dat]? 
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>Delete flash:/vlan.dat? [confirm]
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>Switch#
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>--- From ROMMON ---
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>switch: delete flash:vlan.dat
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>Are you sure you want to delete "flash:vlan.dat" (y/n)?y
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>File "flash:vlan.dat" deleted
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>switch: 
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Enter "no" at the initial configuration setup prompt.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span>
-<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>     --- System Configuration Dialog ---
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>Would you like to enter the initial configuration dialog? [yes/no]:     -----&gt; enter "no"
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>Switch&gt;
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>Change to privileged exec mode. Copy the contents of the backup startup configuration to the running configuration.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span>
-<span class="normal"><a href="#__codelineno-6-4">4</a></span>
-<span class="normal"><a href="#__codelineno-6-5">5</a></span>
-<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>Switch&gt;ena
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>Switch#
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a>Switch#copy flash:config.text.bak run
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a>Destination filename [running-config]? 
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a>1767 bytes copied in 5.545 secs (319 bytes/sec)
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a>Switch#
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>Change the privileged exec password and/or the console password. Restart the switch to verify if everything still works as expected.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-7-10">10</a></span>
-<span class="normal"><a href="#__codelineno-7-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>Switch#conf t
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>Switch(config)#enable secret MyNewPassword
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a>Switch(config)#line con 0
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a>...
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a>&lt;todo&gt;
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a>...
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a>Switch(config)#end
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a>Switch#wr         
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a>Building configuration...
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a>[OK]
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a>Switch#reload
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>Login using the new password. Delete the backup file (if not done already).</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span>
-<span class="normal"><a href="#__codelineno-8-4">4</a></span>
-<span class="normal"><a href="#__codelineno-8-5">5</a></span>
-<span class="normal"><a href="#__codelineno-8-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>Switch&gt;ena
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a>Password:       -----&gt; enter "MyNewPassword"
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a>Switch#delete flash:config.text.bak
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a>Delete filename [config.text.bak]? 
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a>Delete flash:/config.text.bak? [confirm]
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a>Switch#
+<p>Verify.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>--- From IOS ---
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>Switch#dir flash:
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>Directory of flash:/
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>    ...
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>    &lt;no vlan.dat&gt;
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>    ...
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>Switch#
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a>--- From ROMMON ---
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>switch: dir flash:
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>Directory of flash:/
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a>    ...
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a>    &lt;no vlan.dat&gt;
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a>    ...
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a>switch: 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
-</input></input></input></input></input></input></input></input></input></div>
-<h3 id="password-recovery-mechanism-disabled">Password recovery mechanism disabled</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"/><input id="__tabbed_2_5" name="__tabbed_2" type="radio"/><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label><label for="__tabbed_2_3">Step3</label><label for="__tabbed_2_4">Step4</label><label for="__tabbed_2_5">Step5</label></div>
+</input></input></input></div>
+<h2 id="enable-password-recovery-mechanism">Enable password recovery mechanism</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Step1</label><label for="__tabbed_3_2">Step2</label><label for="__tabbed_3_3">Step3</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>The password recovery mechanism is enabled by default. Disable it. It won't be possible to recover the startup configuration file.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
-<span class="normal"><a href="#__codelineno-9-2">2</a></span>
-<span class="normal"><a href="#__codelineno-9-3">3</a></span>
-<span class="normal"><a href="#__codelineno-9-4">4</a></span>
-<span class="normal"><a href="#__codelineno-9-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>Switch#conf t
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a>Enter configuration commands, one per line.  End with CNTL/Z.
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a>Switch(config)#no service password-recovery
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a>Switch#show ver | incl password-recovery
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a>Switch#
+<p>Check if the password recovery mechanism is enabled or disabled.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>Switch#show ver | incl password-recovery
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>The password-recovery mechanism is disabled.
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>Switch#
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Let's simulate a forgotten password.</p>
+<p>If necessary, enable it.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>Switch#conf t
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>Enter configuration commands, one per line.  End with CNTL/Z.
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>Switch(config)#service password-recovery 
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>Switch(config)#end
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>Switch#
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Verify.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>Switch#show ver | incl password-recovery
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>The password-recovery mechanism is enabled.
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>Switch#
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></input></div>
+<h2 id="set-default-sdm-template">Set default SDM template</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Step1</label><label for="__tabbed_4_2">Step2</label><label for="__tabbed_4_3">Step3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Show the current SDM prefer template. For example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>--- From IOS ---
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>Switch#show sdm prefer 
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="hll">The current template is "dual-ipv4-and-ipv6 default" template.
+</span><a id="__codelineno-9-4" name="__codelineno-9-4"></a>The selected template optimizes the resources in
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>the switch to support this level of features for
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>0 routed interfaces and 255 VLANs. 
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>...
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>...
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a>--- From ROMMON ---
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a>switch: set
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>...
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="hll">SDM_TEMPLATE_ID=2
+</span><a id="__codelineno-9-14" name="__codelineno-9-14"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>If necessary, change it back to the default. We will reload the switch at the end.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
@@ -649,45 +735,65 @@
 <span class="normal"><a href="#__codelineno-10-12">12</a></span>
 <span class="normal"><a href="#__codelineno-10-13">13</a></span>
 <span class="normal"><a href="#__codelineno-10-14">14</a></span>
-<span class="normal"><a href="#__codelineno-10-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>Switch#conf t
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a>Enter configuration commands, one per line.  End with CNTL/Z.
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a>Switch(config)#enable secret J3#C'7B0_1PlM
-<a id="__codelineno-10-4" name="__codelineno-10-4"></a>Switch(config)#end
-<a id="__codelineno-10-5" name="__codelineno-10-5"></a>Switch#wr
-<a id="__codelineno-10-6" name="__codelineno-10-6"></a>Building configuration...
-<a id="__codelineno-10-7" name="__codelineno-10-7"></a>[OK]
-<a id="__codelineno-10-8" name="__codelineno-10-8"></a>Switch# exit
-<a id="__codelineno-10-9" name="__codelineno-10-9"></a>Switch&gt;ena
-<a id="__codelineno-10-10" name="__codelineno-10-10"></a>Password:   -----&gt; enter wrong password
-<a id="__codelineno-10-11" name="__codelineno-10-11"></a>Password:   -----&gt; enter wrong password
-<a id="__codelineno-10-12" name="__codelineno-10-12"></a>Password:   -----&gt; enter wrong password
-<a id="__codelineno-10-13" name="__codelineno-10-13"></a>% Bad secrets
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span>
+<span class="normal"><a href="#__codelineno-10-17">17</a></span>
+<span class="normal"><a href="#__codelineno-10-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>--- From IOS ---
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>Switch#conf t
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>Enter configuration commands, one per line.  End with CNTL/Z.
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>Switch(config)#sdm prefer ?
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>default             Default bias
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>dual-ipv4-and-ipv6  Support both IPv4 and IPv6
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>lanbase-routing     Supports both IPv4 and IPv6 Static Routing
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>qos                 QoS bias
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="hll">Switch(config)#sdm prefer default 
+</span><a id="__codelineno-10-10" name="__codelineno-10-10"></a>Changes to the running SDM preferences have been stored, but cannot take effect 
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a>until the next reload.
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a>Use 'show sdm prefer' to see what SDM preference is currently active.
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a>Switch(config)#end
 <a id="__codelineno-10-14" name="__codelineno-10-14"></a>
-<a id="__codelineno-10-15" name="__codelineno-10-15"></a>Switch&gt;
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a>--- From ROMMON ---
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="hll">switch: unset SDM_TEMPLATE_ID
+</span><a id="__codelineno-10-17" name="__codelineno-10-17"></a>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a>switch:
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>First disconnect the power cable from the switch. Minicom gives no output yet.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span>
-<span class="normal"><a href="#__codelineno-11-3">3</a></span>
-<span class="normal"><a href="#__codelineno-11-4">4</a></span>
-<span class="normal"><a href="#__codelineno-11-5">5</a></span>
-<span class="normal"><a href="#__codelineno-11-6">6</a></span>
-<span class="normal"><a href="#__codelineno-11-7">7</a></span>
-<span class="normal"><a href="#__codelineno-11-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>Welcome to minicom 2.8
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a>OPTIONS: I18n 
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a>Port /dev/ttyUSB0, 13:50:27
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a>
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a>Press CTRL-A Z for help on special keys
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a>
-<a id="__codelineno-11-8" name="__codelineno-11-8"></a>&lt;blinking_cursor&gt;
+<p>Verify.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>--- From IOS ---
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>Switch#show sdm prefer 
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="hll"> The current template is "dual-ipv4-and-ipv6 default" template.
+</span><a id="__codelineno-11-4" name="__codelineno-11-4"></a> The selected template optimizes the resources in
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>...
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>...
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="hll">On next reload, template will be "default" template.
+</span><a id="__codelineno-11-8" name="__codelineno-11-8"></a>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a>--- From ROMMON ---
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a>switch: set
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a>...
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a>    &lt;no SDM_TEMPLATE_ID&gt;
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a>...    
 </code></pre></div></td></tr></table></div>
 </div>
+</div>
+</input></input></input></div>
+<h2 id="set-default-environment-variables">Set default environment variables</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><input id="__tabbed_5_3" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Step1</label><label for="__tabbed_5_2">Step2</label><label for="__tabbed_5_3">Step2</label></div>
+<div class="tabbed-content">
 <div class="tabbed-block">
-<p>Now reconnect the power cable. The switch boots and while doing the POST, the SYST LED blinks green.
-This takes about X seconds. After POST, the blinking LED changes pattern. Access to the boot loader prompt through the password-recovery mechanism is disallowed at this point.</p>
+<p>Command "show boot" should look something like this. Most of these variables can be set from within IOS and/or ROMMON.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
@@ -703,97 +809,101 @@ This takes about X seconds. After POST, the blinking LED changes pattern. Access
 <span class="normal"><a href="#__codelineno-12-13">13</a></span>
 <span class="normal"><a href="#__codelineno-12-14">14</a></span>
 <span class="normal"><a href="#__codelineno-12-15">15</a></span>
-<span class="normal"><a href="#__codelineno-12-16">16</a></span>
-<span class="normal"><a href="#__codelineno-12-17">17</a></span>
-<span class="normal"><a href="#__codelineno-12-18">18</a></span>
-<span class="normal"><a href="#__codelineno-12-19">19</a></span>
-<span class="normal"><a href="#__codelineno-12-20">20</a></span>
-<span class="normal"><a href="#__codelineno-12-21">21</a></span>
-<span class="normal"><a href="#__codelineno-12-22">22</a></span>
-<span class="normal"><a href="#__codelineno-12-23">23</a></span>
-<span class="normal"><a href="#__codelineno-12-24">24</a></span>
-<span class="normal"><a href="#__codelineno-12-25">25</a></span>
-<span class="normal"><a href="#__codelineno-12-26">26</a></span>
-<span class="normal"><a href="#__codelineno-12-27">27</a></span>
-<span class="normal"><a href="#__codelineno-12-28">28</a></span>
-<span class="normal"><a href="#__codelineno-12-29">29</a></span>
-<span class="normal"><a href="#__codelineno-12-30">30</a></span>
-<span class="normal"><a href="#__codelineno-12-31">31</a></span>
-<span class="normal"><a href="#__codelineno-12-32">32</a></span>
-<span class="normal"><a href="#__codelineno-12-33">33</a></span>
-<span class="normal"><a href="#__codelineno-12-34">34</a></span>
-<span class="normal"><a href="#__codelineno-12-35">35</a></span>
-<span class="normal"><a href="#__codelineno-12-36">36</a></span>
-<span class="normal"><a href="#__codelineno-12-37">37</a></span>
-<span class="normal"><a href="#__codelineno-12-38">38</a></span>
-<span class="normal"><a href="#__codelineno-12-39">39</a></span>
-<span class="normal"><a href="#__codelineno-12-40">40</a></span>
-<span class="normal"><a href="#__codelineno-12-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>Welcome to minicom 2.8
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a>
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a>OPTIONS: I18n 
-<a id="__codelineno-12-4" name="__codelineno-12-4"></a>Port /dev/ttyUSB0, 09:44:08
-<a id="__codelineno-12-5" name="__codelineno-12-5"></a>
-<a id="__codelineno-12-6" name="__codelineno-12-6"></a>Press CTRL-A Z for help on special keys
-<a id="__codelineno-12-7" name="__codelineno-12-7"></a>
-<a id="__codelineno-12-8" name="__codelineno-12-8"></a>
-<a id="__codelineno-12-9" name="__codelineno-12-9"></a>Boot Sector Filesystem (bs) installed, fsid: 2
-<a id="__codelineno-12-10" name="__codelineno-12-10"></a>Base ethernet MAC Address: 6c:41:0e:18:0b:00
-<a id="__codelineno-12-11" name="__codelineno-12-11"></a>Xmodem file system is available.
-<a id="__codelineno-12-12" name="__codelineno-12-12"></a>The password-recovery mechanism is disabled.
-<a id="__codelineno-12-13" name="__codelineno-12-13"></a>Initializing Flash...
-<a id="__codelineno-12-14" name="__codelineno-12-14"></a>flashfs[0]: 6 files, 3 directories
-<a id="__codelineno-12-15" name="__codelineno-12-15"></a>flashfs[0]: 0 orphaned files, 0 orphaned directories
-<a id="__codelineno-12-16" name="__codelineno-12-16"></a>flashfs[0]: Total bytes: 65544192
-<a id="__codelineno-12-17" name="__codelineno-12-17"></a>flashfs[0]: Bytes used: 16098816
-<a id="__codelineno-12-18" name="__codelineno-12-18"></a>flashfs[0]: Bytes available: 49445376
-<a id="__codelineno-12-19" name="__codelineno-12-19"></a>flashfs[0]: flashfs fsck took 21 seconds.
-<a id="__codelineno-12-20" name="__codelineno-12-20"></a>...done Initializing Flash.
-<a id="__codelineno-12-21" name="__codelineno-12-21"></a>done.
-<a id="__codelineno-12-22" name="__codelineno-12-22"></a>
-<a id="__codelineno-12-23" name="__codelineno-12-23"></a>The password-recovery mechanism has been triggered, but
-<a id="__codelineno-12-24" name="__codelineno-12-24"></a>is currently disabled.  Access to the boot loader prompt
-<a id="__codelineno-12-25" name="__codelineno-12-25"></a>through the password-recovery mechanism is disallowed at
-<a id="__codelineno-12-26" name="__codelineno-12-26"></a>this point.  However, if you agree to let the system be
-<a id="__codelineno-12-27" name="__codelineno-12-27"></a>reset back to the default system configuration, access
-<a id="__codelineno-12-28" name="__codelineno-12-28"></a>to the boot loader prompt can still be allowed.
-<a id="__codelineno-12-29" name="__codelineno-12-29"></a>
-<a id="__codelineno-12-30" name="__codelineno-12-30"></a>Would you like to reset the system back to the default configuration (y/n)?     -----&gt; enter "y"
-<a id="__codelineno-12-31" name="__codelineno-12-31"></a>
-<a id="__codelineno-12-32" name="__codelineno-12-32"></a>
-<a id="__codelineno-12-33" name="__codelineno-12-33"></a>The system has been interrupted, and the config file
-<a id="__codelineno-12-34" name="__codelineno-12-34"></a>has been deleted.  The following command will finish
-<a id="__codelineno-12-35" name="__codelineno-12-35"></a>loading the operating system software:
-<a id="__codelineno-12-36" name="__codelineno-12-36"></a>
-<a id="__codelineno-12-37" name="__codelineno-12-37"></a>    boot
-<a id="__codelineno-12-38" name="__codelineno-12-38"></a>
-<a id="__codelineno-12-39" name="__codelineno-12-39"></a>
-<a id="__codelineno-12-40" name="__codelineno-12-40"></a>switch: boot
-<a id="__codelineno-12-41" name="__codelineno-12-41"></a>Loading "flash:c2960-lanbasek9-mz.152-7.E8.bin"...@@@@@@@@@@@@@@@@@
+<span class="normal"><a href="#__codelineno-12-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>Switch#show boot
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>BOOT path-list      : flash:c2960-lanbasek9-mz.152-7.E7.bin
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>Config file         : flash:/config.text
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>Private Config file : flash:/private-config.text
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>Enable Break        : yes
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>Manual Boot         : no
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>Allow Dev Key         : yes
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a>HELPER path-list    : 
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a>Auto upgrade        : yes
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a>Auto upgrade path   : 
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a>NVRAM/Config file
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a>    buffer size:   65536
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a>Timeout for Config
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a>        Download:    0 seconds
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a>Config Download 
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a>    via DHCP:       disabled (next boot: disabled)
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Once the switch is up, there is no password and no startup configuration. Enable the password-recovery mechanism again. Verify.</p>
+<p>Example1: BOOT path-list.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
 <span class="normal"><a href="#__codelineno-13-2">2</a></span>
 <span class="normal"><a href="#__codelineno-13-3">3</a></span>
 <span class="normal"><a href="#__codelineno-13-4">4</a></span>
-<span class="normal"><a href="#__codelineno-13-5">5</a></span>
-<span class="normal"><a href="#__codelineno-13-6">6</a></span>
-<span class="normal"><a href="#__codelineno-13-7">7</a></span>
-<span class="normal"><a href="#__codelineno-13-8">8</a></span>
-<span class="normal"><a href="#__codelineno-13-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>Switch&gt;ena
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a>Switch#show startup-config 
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a>startup-config is not present
-<a id="__codelineno-13-4" name="__codelineno-13-4"></a>Switch#conf t
-<a id="__codelineno-13-5" name="__codelineno-13-5"></a>Enter configuration commands, one per line.  End with CNTL/Z.
-<a id="__codelineno-13-6" name="__codelineno-13-6"></a>Switch(config)#service password-recovery
-<a id="__codelineno-13-7" name="__codelineno-13-7"></a>Switch#show ver | inc password-recovery
-<a id="__codelineno-13-8" name="__codelineno-13-8"></a>The password-recovery mechanism is enabled.
-<a id="__codelineno-13-9" name="__codelineno-13-9"></a>Switch#
+<span class="normal"><a href="#__codelineno-13-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>From IOS:
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>Switch(config)# boot system flash:&lt;ios-file&gt;
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>From ROMMON:
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>switch: set BOOT flash:&lt;ios-file&gt;
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Example2: BOOT manual.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span>
+<span class="normal"><a href="#__codelineno-14-6">6</a></span>
+<span class="normal"><a href="#__codelineno-14-7">7</a></span>
+<span class="normal"><a href="#__codelineno-14-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>From IOS:
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>Switch(config)# no boot manual
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a>Switch(config)#
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a>From ROMMON:
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a>switch: unset MANUAL_BOOT
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a>switch:
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
-</input></input></input></div>
+</div>
+<h2 id="reload">Reload</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span>
+<span class="normal"><a href="#__codelineno-15-6">6</a></span>
+<span class="normal"><a href="#__codelineno-15-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>--- From IOS ---
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>Switch#reload
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>System configuration has been modified. Save? [yes/no]:     -----&gt; answer "no"
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a>Proceed with reload? [confirm]                              -----&gt; press "Enter"
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a>--- From ROMMON ---
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a>switch:reset
+</code></pre></div></td></tr></table></div>
+<h2 id="clean-switch">Clean switch</h2>
+<p>Say hi to the wizard. Answer "no".</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-16-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-16-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-16-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-16-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-16-10">10</a></span>
+<span class="normal"><a href="#__codelineno-16-11">11</a></span>
+<span class="normal"><a href="#__codelineno-16-12">12</a></span>
+<span class="normal"><a href="#__codelineno-16-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>        --- System Configuration Dialog ---
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>Enable secret warning
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a>----------------------------------
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a>In order to access the device manager, an enable secret is required
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a>If you enter the initial configuration dialog, you will be prompted for the enable secret
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a>If you choose not to enter the intial configuration dialog, or if you exit setup without setting the enable secret,
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a>please set an enable secret using the following CLI in configuration mode-
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a>enable secret 0 &lt;cleartext password&gt;
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a>----------------------------------
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a>Would you like to enter the initial configuration dialog? [yes/no]:     -----&gt; answer "no"
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a>Switch&gt;ena
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a>Switch#
+</code></pre></div></td></tr></table></div>
 </article>
 </div>
 </div>

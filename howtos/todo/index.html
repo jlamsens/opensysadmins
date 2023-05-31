@@ -306,6 +306,11 @@
         Do a password recovery on a Cisco 2960 switch
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../factory-reset-cisco2960/">
+        Factory reset a Cisco 2960 switch
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -346,6 +351,61 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#howtos">
+    Howto's
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references">
+    References
+  </a>
+<nav aria-label="References" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#environment-variables">
+    Environment variables
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#post">
+    POST
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rommon-mode">
+    ROMMON-mode
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#boot-loader">
+    Boot loader
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#boot-sequence-switch">
+    Boot sequence switch
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nvram">
+    NVRAM
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sdm-template">
+    SDM template
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -353,12 +413,97 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="todo">Todo</h1>
+<h2 id="howtos">Howto's</h2>
 <ul>
 <li>Howto acquire a valid Cisco IOS image</li>
 <li>Howto access a Cisco 2960 switch using a direct local serial console connection</li>
 <li>Howto install and configure a tFTP service on Linux Mint 21</li>
 <li>Howto install and configure a SSH service on Linux Mint 21</li>
 <li>Howto configure an IP address on Windows 11 / Linux Mint 21</li>
+</ul>
+<h2 id="references">References</h2>
+<h3 id="environment-variables">Environment variables</h3>
+<ul>
+<li>
+<p>What?
+"Environment variables" or "boot loader environment variables" in ROMMON mode are separate from the configuration settings stored in the switch's running configuration (RAM) or startup configuration file (NVRAM). They are specific to the boot process and have different storage and management mechanisms compared to the regular switch configuration. </p>
+</li>
+<li>
+<p>What not?
+In IOS, the "show environment" command provides information about the environmental conditions and status of the switch, such as temperature, power supply, fan status, and other hardware-related information. These "environment variables" are not the same as the "boot loader environment variables" stored in the ROMMON's reserved memory space. Once the switch has booted into IOS, the IOS environment takes over, and the boot loader environment variables are not directly accessible or displayed within the IOS environment.</p>
+</li>
+<li>
+<p>Examples?
+The exact set of available variables may vary depending on the specific switch model and firmware version, but some common boot loader environment variables:
+BOOT, BAUD rate, CONFIG_FILE, SDM prefer template</p>
+</li>
+<li>
+<p>Where?
+They are stored in NVRAM. The exact memory address or location of the boot loader environment variables in NVRAM is not exposed or accessible through user commands or configurations. It is managed by the firmware and is not intended to be modified directly by users. You <em>can</em> manipulate and view these variables through the ROMMON command interface or by using specific ROMMON commands such as "set" or "setenv" to modify or display their values. The firmware internally handles the storage and updates the corresponding values in the boot loader environment variables region of NVRAM.</p>
+</li>
+</ul>
+<p>The "set" command is used to modify runtime variables within ROMMON, which are temporary and not saved to NVRAM. On the other hand, the "setenv" command is used to modify the boot loader environment variables, which are persistent and stored in NVRAM.</p>
+<h3 id="post">POST</h3>
+<ul>
+<li>
+<p>What?
+Power-On Self Test (POST), a built-in diagnostic routine that runs independently of the operating system, executed during the boot process, when a Cisco device is powered on or restarted. The POST is executed before ROMMON is executed on Cisco devices.</p>
+</li>
+<li>
+<p>Task?
+    -&gt; the initial step that checks the critical hardware components (CPU, mem, interfaces, other hw modules) to ensure they are functioning correctly
+    -&gt; once the POST completes successfully and determines that the hardware is operational, the control is passed to the ROMMON firmware.</p>
+</li>
+</ul>
+<h3 id="rommon-mode">ROMMON-mode</h3>
+<ul>
+<li>
+<p>What?
+ROMMON (ROM Monitor): ROMMON is a seperate firmware component embedded in the hardware of Cisco devices, a small program that runs - after POST - when a device is powered on or during the boot process. Both ROMMON and the "boot loader" are essential components in the boot sequence of a Cisco device, working together to facilitate the startup and loading of the operating system.</p>
+</li>
+<li>
+<p>Task?
+It is responsible for providing basic boot and recovery functionality.<br/>
+    -&gt; It helps initialize the hardware
+    -&gt; load the boot loader from a specific location (such as flash memory, who ultimately loads the operating system)
+    -&gt; transfers control to the boot loader</p>
+</li>
+</ul>
+<h3 id="boot-loader">Boot loader</h3>
+<ul>
+<li>
+<p>What?
+The "boot loader", also known as the "bootstrap loader" or simply "boot image," is the software responsible for loading the operating system (such as Cisco IOS) into memory and initiating its execution. It is loaded and executed by ROMMON. Both ROMMON and the "boot loader" are essential components in the boot sequence of a Cisco device, working together to facilitate the startup and loading of the operating system.</p>
+</li>
+<li>
+<p>Where?
+Like ROMMON, it is also embedded in hardware and is considered a "firmware" component. It is typically stored in a separate section of memory, such as flash memory, which is non-volatile and retains its contents even when the device is powered off. This allows the boot loader to persist across reboots and provides the ability to upgrade or change the boot loader software when necessary. </p>
+</li>
+<li>
+<p>Task?
+    -&gt; additional hardware initialization
+    -&gt; file system management
+    -&gt; loading the operating system image into memory</p>
+</li>
+</ul>
+<h3 id="boot-sequence-switch">Boot sequence switch</h3>
+<p>Power-On: The device is powered on or restarted.
+POST (Power-On Self Test): The POST is executed to check the hardware components' functionality.
+ROMMON: After the successful completion of the POST, control is handed over to ROMMON.
+Boot Loader: ROMMON loads and executes the boot loader software.
+Operating System: The boot loader loads and executes the operating system image.</p>
+<h3 id="nvram">NVRAM</h3>
+<p>NVRAM (non-volatile RAM) is a type of memory that retains its contents even when the switch is powered off or restarted. It is used to store important system information, configuration settings, and environment variables.</p>
+<h3 id="sdm-template">SDM template</h3>
+<ul>
+<li>
+<p>What?
+The "show sdm prefer" command is used on Cisco switches to display the currently configured Switching Database Manager (SDM) template preference. The SDM templates determine how the switch allocates its resources for various functions, such as Layer 2 switching, Layer 3 routing, and multicast. The "show sdm prefer" command is useful for understanding the current resource allocation and capabilities of the switch based on the selected SDM template. It can help in determining if the switch has sufficient resources allocated for the desired features or if a different SDM template should be used to optimize resource utilization for specific requirements.</p>
+</li>
+<li>
+<p>Where?
+The Switching Database Manager (SDM) template preference is not stored in the startup configuration. It is stored in a separate area of the switch's memory called the "switch profile". The switch profile is stored in a specific region of the switch's memory and is not part of the running configuration that is stored in NVRAM. When you configure the SDM template preference using the "sdm prefer" command, the switch profile is updated, and the preference takes effect after reload. However, the preference is not reflected in the running configuration file. Once you have configured the SDM template preference and reloaded the switch, the preference will be maintained and applied consistently upon subsequent reboots.</p>
+</li>
 </ul>
 </article>
 </div>
