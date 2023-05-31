@@ -1,19 +1,16 @@
 # Howto do a password recovery on a Cisco 2960 switch
 
 ## Prereqs
-- access to a [LAB-PC running Windows 11 or Linux Mint 21](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)
-- Cisco 2960-24TT-L or Cisco 2960-Plus 24TC-L switch
-- [direct local console access](../todo/)
-- the "password recovery mechanism" must be enabled if you want to recover the startup configuration
+- familiarity with the [lab environment](../todo/index.md)
 
 ## Console access
 
 <img src="console-access.png" width="320" height="180"/>
 
-### Password-recovery mechanism enabled
+### Password recovery mechanism enabled
 
 === "Step1"
-    Start with the [base switch setup](../todo/index.md). The password recover mechanism is enabled by default. This is necessary to be able to recover the startup configuration file. Verify.
+    The password recover mechanism is enabled by default. This is necessary to be able to recover the startup configuration file.
 
     ``` title='' hl_lines="0"
     Switch#show ver | incl password-recovery
@@ -43,53 +40,15 @@
     ```
 
 === "Step3"
-    First disconnect the power cable from the switch. Minicom gives no output yet.
+    Now [boot the switch in ROMMON-mode](../acess-cisco-device-rommon/index.md) using a cold start.
 
     ``` title='' hl_lines="0"
-    Welcome to minicom 2.8
-
-    OPTIONS: I18n 
-    Port /dev/ttyUSB0, 13:50:27
-
-    Press CTRL-A Z for help on special keys
-
-    <blinking_cursor>
-    ```
-
-=== "Step4"
-    Now reconnect the power cable. The switch boots and while doing the POST, the SYST LED blinks green.
-    This takes about X seconds. After POST, the blinking LED changes pattern. Press the Mode button once. The switch _does not_ initialize Flash and enters ROMMON-mode.
-
-    ``` title='' hl_lines="0"
-    Welcome to minicom 2.8
-
-    OPTIONS: I18n 
-    Port /dev/ttyUSB0, 09:44:08
-
-    Press CTRL-A Z for help on special keys
-
-
-    Boot Sector Filesystem (bs) installed, fsid: 2
-    Base ethernet MAC Address: 6c:41:0e:18:0b:00
-    Xmodem file system is available.
-    The password-recovery mechanism is enabled.
-    Initializing Flash...
-    flashfs[0]: filesystem check interrupted!
-    ...done Initializing Flash.
-
-    The system has been interrupted, or encountered an error
-    during initialization of the flash filesystem.  The following
-    commands will initialize the flash filesystem, and finish
-    loading the operating system software:
-
-        flash_init
-        boot
-
-
+    ...
+    ...
     switch:
     ```
 
-=== "Step5"
+=== "Step4"
     Initialize Flash manually.
 
     ``` title='' hl_lines="0"
@@ -106,7 +65,7 @@
     switch:
     ```
 
-=== "Step6"
+=== "Step5"
     List the files stored in flash. The startup configuration is config.text. If you want to keep it, rename the file. If you want to discard all configuration, delete it. Then boot the switch.
 
     ``` title='' hl_lines="0"
@@ -125,11 +84,11 @@
     switch: rename flash:config.text flash:config.text.bak      -----> or "delete flash:config.text"
 
     switch: boot
-    Loading "flash:c2960-lanbasek9-mz.152-7.E8.bin"...@@@@@@@@@@@@@@@@@
+    Loading "flash:c2960-lanbasek9-mz.152-7.E7.bin"...@@@@@@@@@@@@@@@@@
     ...
     ```
 
-=== "Step7"
+=== "Step6"
     Enter "no" at the initial configuration setup prompt.
 
     ``` title='' hl_lines="0"
@@ -139,7 +98,7 @@
     Switch>
     ```
 
-=== "Step8"
+=== "Step7"
     Change to privileged exec mode. Copy the contents of the backup startup configuration to the running configuration.
 
     ``` title='' hl_lines="0"
@@ -151,12 +110,16 @@
     Switch#
     ```
 
-=== "Step9"
-    Change the console password. Restart the switch to verify if everything still works.
+=== "Step8"
+    Change the privileged exec password and/or the console password. Restart the switch to verify if everything still works as expected.
 
     ``` title='' hl_lines="0"
     Switch#conf t
-    Switch(config)#enable secret MyNewPassword  
+    Switch(config)#enable secret MyNewPassword
+    Switch(config)#line con 0
+    ...
+    <todo>
+    ...
     Switch(config)#end
     Switch#wr         
     Building configuration...
@@ -164,8 +127,8 @@
     Switch#reload
     ```
 
-=== "Step10"
-    Login using the new password. Delete the backup file (if not already done).
+=== "Step9"
+    Login using the new password. Delete the backup file (if not done already).
 
     ``` title='' hl_lines="0"
     Switch>ena
@@ -176,10 +139,10 @@
     Switch#
     ```
 
-### Password-recovery mechanism disabled
+### Password recovery mechanism disabled
 
 === "Step1"
-    Start with the [base switch setup](../todo/index.md). The password recover mechanism is enabled by default. Disable it. It won't be possible to recover the startup configuration file.
+    The password recovery mechanism is enabled by default. Disable it. It won't be possible to recover the startup configuration file.
 
     ``` title='' hl_lines="0"
     Switch#conf t
@@ -273,7 +236,7 @@
     ```
 
 === "Step5"
-    Once the switch is up, there is no password and no startup configuration. You can choose to enable the password-recovery mechanism again. Verify.
+    Once the switch is up, there is no password and no startup configuration. Enable the password-recovery mechanism again. Verify.
 
     ``` title='' hl_lines="0"
     Switch>ena

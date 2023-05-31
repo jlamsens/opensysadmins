@@ -1,21 +1,15 @@
 # (Re)install an IOS operating system on a Cisco 2960 switch
 
 ## Prereqs
-- access to a [LAB-PC running Windows 11 or Linux Mint 21](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)
-- Cisco 2960-24TT-L or Cisco 2960-Plus 24TC-L switch
-- [direct local console access](../todo/)
-- a [tFTP server](../todo/index.md), [SSH server](../todo/index.md) or [HTTP server](../todo/index.md)
+- familiarity with the [lab environment](../todo/index.md)
 - a [valid Cisco IOS image](../todo/)
-- [privileged exec mode](../todo/index.md)
 
-## Console access
-
+## IOS transfer over serial (xmodem)
 <img src="console-access.png" width="320" height="180"/>
 
-### Working IOS
-
+### From IOS
 === "Step1"
-    Start with the [base switch setup](../todo/index.md). Check that there is enough space left on the Flash filesystem.
+    Verify that there is enough space left on the Flash filesystem.
 
     ``` title='' hl_lines="9"
     Switch#dir flash:
@@ -142,7 +136,7 @@
     ```
 
 === "Step9"
-    If all went well, it's save to remove the old IOS image. Enjoy your new IOS!
+    If all went well, it's save to remove the old IOS image (if existing). Enjoy your new IOS!
 
     ``` title=''
     Switch#delete flash:c2960-lanbasek9-mz.152-7.E7.bin
@@ -170,118 +164,10 @@
     65536 bytes total (64460 bytes free)
     ```
 
-### No working IOS
-#### ROMMON-mode
+### From ROMMON
+First, [start the switch in ROMMON-mode](../todo/index.md).
 
 === "Step1"
-    Start with the [base switch setup](../todo/index.md). Let's simulate a non-working IOS by "accidently" erasing the flash filesystem. Restart the switch afterwards.
-
-    ``` title='' hl_lines="0"
-    Switch#erase flash:
-    Erasing the flash filesystem will remove all files! Continue? [confirm]
-    flashfs[2]: 0 files, 1 directories
-    flashfs[2]: 0 orphaned files, 0 orphaned directories
-    flashfs[2]: Total bytes: 65544192
-    flashfs[2]: Bytes used: 1024
-    flashfs[2]: Bytes available: 65543168
-    flashfs[2]: flashfs fsck took 25 seconds.
-    Erase of flash: complete
-    Switch#
-    Switch#reload
-
-    System configuration has been modified. Save? [yes/no]: no  <----- if asked
-    Proceed with reload? [confirm]
-
-    ```
-
-=== "Step2"
-    The BOOT environment variable is still set to boot c2960-lanbasek9-mz.152-7.E7.bin but it's not there. The switch will not be able to boot and will enter ROMMON-mode automatically.
-
-    ``` title='' hl_lines="0"
-    Welcome to minicom 2.8
-
-    OPTIONS: I18n 
-    Port /dev/ttyUSB0, 09:36:24
-
-    Press CTRL-A Z for help on special keys
-
-
-    Boot Sector Filesystem (bs) installed, fsid: 2
-    Base ethernet MAC Address: 6c:41:0e:18:0b:00
-    Xmodem file system is available.
-    The password-recovery mechanism is enabled.
-    Initializing Flash...
-    flashfs[0]: 1 files, 1 directories
-    flashfs[0]: 0 orphaned files, 0 orphaned directories
-    flashfs[0]: Total bytes: 65544192
-    flashfs[0]: Bytes used: 3584
-    flashfs[0]: Bytes available: 65540608
-    flashfs[0]: flashfs fsck took 18 seconds.
-    ...done Initializing Flash.
-    done.
-    Loading "flash:/c2960-lanbasek9-mz.152-7.E7.bin"...flash:/c2960-lanbasek9-mz.152-7.E7.bin: no such file or directory
-
-    Error loading "flash:/c2960-lanbasek9-mz.152-7.E7.bin"
-
-    Interrupt within 5 seconds to abort boot process.
-    Boot process failed...
-
-    The system is unable to boot automatically.  The BOOT
-    environment variable needs to be set to a bootable
-    image.
-
-
-    switch:
-    ```
-
-=== "Step3"
-    If you _do_ have a working IOS, you can enter ROMMON-mode manually. First disconnect the power cable from the switch. Minicom gives no output yet.
-
-    ``` title='' hl_lines="0"
-    Welcome to minicom 2.8
-
-    OPTIONS: I18n 
-    Port /dev/ttyUSB0, 13:50:27
-
-    Press CTRL-A Z for help on special keys
-
-    <blinking_cursor>
-    ```
-
-=== "Step4"
-    Now reconnect the power cable. The switch boots and while doing the POST, the SYST LED blinks green.
-    This takes about X seconds. After POST, the blinking LED changes pattern. Press the Mode button once. The switch _does not_ initialize Flash and enters ROMMON-mode.
-
-    ``` title='' hl_lines="0"
-    Welcome to minicom 2.8
-
-    OPTIONS: I18n 
-    Port /dev/ttyUSB0, 09:44:08
-
-    Press CTRL-A Z for help on special keys
-
-
-    Boot Sector Filesystem (bs) installed, fsid: 2
-    Base ethernet MAC Address: 6c:41:0e:18:0b:00
-    Xmodem file system is available.
-    The password-recovery mechanism is enabled.
-    Initializing Flash...
-    flashfs[0]: filesystem check interrupted!
-    ...done Initializing Flash.
-
-    The system has been interrupted, or encountered an error
-    during initialization of the flash filesystem.  The following
-    commands will initialize the flash filesystem, and finish
-    loading the operating system software:
-
-        flash_init
-        boot
-
-
-    switch:
-    ```
-
-=== "Step5"
     Initialize Flash manually.
 
     ``` title='' hl_lines="0"
@@ -297,9 +183,12 @@
 
     switch:
     ```
-#### Transfer IOS
 
-=== "Step1"
+=== "Step2"
+    Verify that there is enough space left on the Flash filesystem.
+    <todo>
+
+=== "Step3"
     Set the baud rate to 115200 to speed up the transfer. You will lose the connection after the last command. Some gibberish characters can emerge.
 
     ``` title='' hl_lines="0"
@@ -307,7 +196,7 @@
                        � 
     ```
 
-=== "Step2"
+=== "Step4"
     Adjust the settings in your terminal emulation program to match the new baud rate. For minicom, press ++control+a++ and then ++z++. 
     Type ++o++ and choose "Serial port setup". Change setting ++e++ and ++enter++ twice. Exit.
 
@@ -332,7 +221,7 @@
         +-----------------------------------------------------------------------+ 
     ```
 
-=== "Step3"
+=== "Step5"
     Press ++enter++ The connection is back. Initiate an xMODEM transfer. The switch will then prompt you to start the transfer from your terminal emulator.
 
     ``` title='' hl_lines="0"
@@ -341,12 +230,12 @@
     CCC
     ```
 
-=== "Step4"
+=== "Step6"
     For minicom, press ++control+a++ and then ++z++. Type ++s++ (Send files) and select "xmodem". Navigate your way to the new [IOS file](../todo/index.md) (here /home/guru/Downloads). Press ++space++ to tag the file and press "Okay" to send.
 
     <img src="xmodem-navigate-ios-rommon.png" width="320" height="180"/>
 
-=== "Step5"
+=== "Step7"
     Grab a coffee. This can take a long time depending on the size of the IOS image. Wait for the transfer to complete and then press ++enter++ to quit.
 
     ``` title='' hl_lines="8"
@@ -363,7 +252,7 @@
         +----------------------------------------------------------------------+ 
     ```
 
-=== "Step6"
+=== "Step8"
     Update the BOOT parameter to match the new IOS.
 
     ``` title='' hl_lines="0"
@@ -371,7 +260,7 @@
     Switch:
     ```
 
-=== "Step7"
+=== "Step9"
     Set the BAUD rate back to the default (9600 bps). You have to adjust the settings in your terminal emulation program again. Press ++enter++ The connection is back.
 
     ``` title='' hl_lines="0"
@@ -381,7 +270,7 @@
     switch:
     ```
 
-=== "Step8"
+=== "Step10"
     Finally, boot the switch manually.
 
     ``` title='' hl_lines="0"
@@ -389,7 +278,7 @@
     Loading "flash:c2960-lanbasek9-mz.152-7.E8.bin"...@@@@@@@@@@@@@@@@@
     ```
 
-=== "Step9"
+=== "Step11"
     Verify that the correct IOS image is loaded. Enjoy your new IOS!
 
     ``` title='' hl_lines="2 8 14"
@@ -411,12 +300,14 @@
     ... 
     ```
 
-## Console + network access
+## IOS transfer over network protocol (tFTP)
+Transfer using a network protocol is only possible from IOS, not from ROMMON-mode.
 
 <img src="network-access.png" width="320" height="180"/>
 
 ### tFTP
-=== "StepX"
+
+=== "Step1"
     [Install a tFTP service](../todo/index.md) on the LAB-PC. Copy a [valid Cisco IOS image](../todo/index.md) file to the tFTP directory where files are served from. Adjust permissions.
 
     ``` title='' hl_lines="0"
@@ -428,8 +319,8 @@
     guru@pc:~$ 
     ```
 
-=== "StepX"
-    Start with the [base switch setup](../todo/index.md). Configure an IP address and subnet mask. Verify.
+=== "Step2"
+    Configure an IP address and subnet mask on the switch. Verify.
 
     ``` title='' hl_lines="0"
     Switch#conf t
@@ -443,7 +334,7 @@
     ...
     ```
 
-=== "StepX"
+=== "Step3"
     Optional (in this case): ensure that the TFTP session is sourced from the correct interface (here: VLAN 1).
 
     ``` title='' hl_lines="0"
@@ -453,7 +344,7 @@
     Switch#
     ```
 
-=== "StepX"
+=== "Step4"
     Copy the IOS image from the TFTP server to the switch's flash memory.
 
     ``` title='' hl_lines="0"
@@ -466,7 +357,8 @@
     15979672 bytes copied in 217.886 secs (73340 bytes/sec)
     Switch#
     ```
-=== "StepX"
+
+=== "Step5"
     Make the switch boot from the newly transferred IOS image, verify and reboot.
 
     ``` title=''
@@ -484,7 +376,8 @@
     System configuration has been modified. Save? [yes/no]: no  <----- if asked
     Proceed with reload? [confirm]
     ```
-=== "Step9"
+
+=== "Step6"
     If all went well, it's save to remove the old IOS image. Enjoy your new IOS!
 
     ``` title=''
@@ -512,3 +405,7 @@
 
     65536 bytes total (64460 bytes free)
     ```
+
+### SSH (sFTP)
+
+### HTTP
