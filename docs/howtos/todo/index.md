@@ -72,3 +72,23 @@ The "show sdm prefer" command is used on Cisco switches to display the currently
 
 - Where?
 The Switching Database Manager (SDM) template preference is not stored in the startup configuration. It is stored in a separate area of the switch's memory called the "switch profile". The switch profile is stored in a specific region of the switch's memory and is not part of the running configuration that is stored in NVRAM. When you configure the SDM template preference using the "sdm prefer" command, the switch profile is updated, and the preference takes effect after reload. However, the preference is not reflected in the running configuration file. Once you have configured the SDM template preference and reloaded the switch, the preference will be maintained and applied consistently upon subsequent reboots.
+
+=== "StepX"
+    ``` title='' hl_lines="0"
+
+    ```
+
+=== "StepX"
+    ``` title='' hl_lines="0"
+
+    ```
+
+=== "StepX"
+    ``` title='' hl_lines="0"
+
+    ```
+
+=== "StepX"
+    ``` title='' hl_lines="0"
+
+    ```

@@ -2,8 +2,47 @@
 ## Cisco 2960 switch
 ### From IOS
 
-=== "StepX"
-    <todo>
+=== "Step1"
+    Bypass the normal boot process and enter ROMMON mode directly upon the next reboot.
+
+    ``` title='' hl_lines="0"
+    Switch#conf t
+    Enter configuration commands, one per line.  End with CNTL/Z.
+    Switch(config)#boot manual 
+    Switch(config)#end
+    Switch#reload
+
+    System configuration has been modified. Save? [yes/no]: no      <----- if asked
+    Proceed with reload? [confirm]                                  <----- press <Enter>
+    ```
+
+=== "Step2"
+    We're in ROMMON-mode.
+
+    ``` title='' hl_lines="22"
+    Boot Sector Filesystem (bs) installed, fsid: 2
+    Base ethernet MAC Address: bc:f1:f2:59:06:00
+    Xmodem file system is available.
+    The password-recovery mechanism is enabled.
+    Initializing Flash...
+    flashfs[0]: 4 files, 3 directories
+    flashfs[0]: 0 orphaned files, 0 orphaned directories
+    flashfs[0]: Total bytes: 65544192
+    flashfs[0]: Bytes used: 16104448
+    flashfs[0]: Bytes available: 49439744
+    flashfs[0]: flashfs fsck took 19 seconds.
+    ...done Initializing Flash.
+    done.
+
+    The system is not configured to boot automatically.  The
+    following command will finish loading the operating system
+    software:
+
+        boot
+
+
+    switch:
+    ```
 
 ### Missing or corrupt IOS
 
@@ -23,8 +62,8 @@
     Switch#
     Switch#reload
 
-    System configuration has been modified. Save? [yes/no]: no  <----- if asked
-    Proceed with reload? [confirm]
+    System configuration has been modified. Save? [yes/no]: no          <----- if asked
+    Proceed with reload? [confirm]                                      <----- press <Enter>
 
     ```
 

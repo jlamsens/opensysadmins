@@ -59,7 +59,7 @@
     
     <img src="rufus-main-screen-options-bios.png" width="320" height="180"/>
     
-    1. Insert a USB flash drive with enough space
+    1. Insert the USB flash drive
     2. Navigate to and select the Windows 11 ISO file
     3. Choose "Windows standard installation" as image option
     4. Choose "MBR" as partition scheme
@@ -92,7 +92,7 @@
     
     <img src="rufus-main-screen-options-uefi.png" width="320" height="180"/>
     
-    1. Insert a USB flash drive with enough space
+    1. Insert the USB flash drive
     2. Navigate to and select the Windows 11 ISO file
     3. Choose "Windows standard installation" as image option
     4. Choose "GPT" as partition scheme

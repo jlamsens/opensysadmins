@@ -54,11 +54,12 @@
     
     <img src="rufus-main-screen-options-bios.png" width="320" height="180"/>
     
-    1. Insert a USB flash drive with enough space
+    1. Insert the USB flash drive
+    2. Navigate to and select the Linux Mint 21 ISO file
     3. Choose "MBR" as partition scheme
-    5. Select "BIOS or UEFI" as target system
-    6. Select "Large FAT32 (Default)" as file system
-    7. Click "Start"
+    4. Select "BIOS or UEFI" as target system
+    5. Select "Large FAT32 (Default)" as file system
+    6. Click "Start"
 
 === "Step2"
     Select "Write in ISO Image mode (Recommended).
@@ -91,13 +92,14 @@
     <img src="rufus-main-screen-options-uefi.png" width="320" height="180"/>
     
     1. Insert a USB flash drive with enough space
+    2. Navigate to and select the Linux Mint 21 ISO file
     3. Choose "GPT" as partition scheme
     5. Select "UEFI (non-CSM)" as target system
     6. Select "Large FAT32 (Default)" as file system
     7. Click "Start"
 
 === "Step2"
-    Select "Write in ISO Image mode (Recommended).
+    Select "Write in ISO Image mode (Recommended)".
 
     <img src="rufus-iso-image-mode-uefi.png" width="320" height="180"/>
 
