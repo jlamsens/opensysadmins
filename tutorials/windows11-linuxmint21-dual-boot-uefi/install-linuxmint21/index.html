@@ -8,11 +8,11 @@
 <meta content="Standing on the shoulder of giants" name="description"/>
 <meta content="Jurgen Lamsens" name="author"/>
 <link href="https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-uefi/install-linuxmint21/" rel="canonical"/>
-<link href="../install-windows11/" rel="prev"/>
-<link href="../../../howtos/" rel="next"/>
+<link href="../configure-windows11/" rel="prev"/>
+<link href="../configure-linuxmint21/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
-<title>04 Install Linux Mint 21 - OpenSysAdmins</title>
+<title>06 Install Linux Mint 21 - OpenSysAdmins</title>
 <link href="../../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              04 Install Linux Mint 21
+              06 Install Linux Mint 21
             
           </span>
 </div>
@@ -249,23 +249,33 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../configure-uefi/">
-        02 Configure UEFI
+<a class="md-nav__link" href="../prepare-installation-media/">
+        02 Prepare installation media
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../configure-bios-vs-uefi/">
+        03 Configure BIOS vs UEFI
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../install-windows11/">
-        03 Install Windows 11
+        04 Install Windows 11
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../configure-windows11/">
+        05 Configure Windows 11
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          04 Install Linux Mint 21
+          06 Install Linux Mint 21
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        04 Install Linux Mint 21
+        06 Install Linux Mint 21
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -274,17 +284,47 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create-boot-media">
-    Create boot media
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#boot-from-usb">
     Boot from USB
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#x">
+    X
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#x_1">
+    X
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#x_2">
+    X
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#x_3">
+    X
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#x_4">
+    X
+  </a>
+</li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../configure-linuxmint21/">
+        07 Configure Linux Mint 21
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../final-result/">
+        08 Final result
+      </a>
 </li>
 </ul>
 </nav>
@@ -382,13 +422,33 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create-boot-media">
-    Create boot media
+<a class="md-nav__link" href="#boot-from-usb">
+    Boot from USB
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#boot-from-usb">
-    Boot from USB
+<a class="md-nav__link" href="#x">
+    X
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#x_1">
+    X
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#x_2">
+    X
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#x_3">
+    X
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#x_4">
+    X
   </a>
 </li>
 </ul>
@@ -399,8 +459,6 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="install-linux-mint-21">Install Linux Mint 21</h1>
-<h2 id="create-boot-media">Create boot media</h2>
-<p>Refer to <a href="../../../howtos/linuxmint21-bootable-usb-flash-drive/">this howto</a> to create a Windows 11 bootable USB flash drive.</p>
 <h2 id="boot-from-usb">Boot from USB</h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step</label><label for="__tabbed_1_2">Step</label><label for="__tabbed_1_3">Step</label></div>
 <div class="tabbed-content">
@@ -409,6 +467,46 @@
 <div class="tabbed-block"></div>
 </div>
 </input></input></input></div>
+<h2 id="x">X</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step</label><label for="__tabbed_2_2">Step</label><label for="__tabbed_2_3">Step</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</input></input></input></div>
+<h2 id="x_1">X</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Step</label><label for="__tabbed_3_2">Step</label><label for="__tabbed_3_3">Step</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</input></input></input></div>
+<h2 id="x_2">X</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Step</label><label for="__tabbed_4_2">Step</label><label for="__tabbed_4_3">Step</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</input></input></input></div>
+<h2 id="x_3">X</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><input id="__tabbed_5_3" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Step</label><label for="__tabbed_5_2">Step</label><label for="__tabbed_5_3">Step</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="x_4">X</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><input id="__tabbed_6_3" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Step</label><label for="__tabbed_6_2">Step</label><label for="__tabbed_6_3">Step</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
 </article>
 </div>
 </div>

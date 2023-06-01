@@ -8,11 +8,11 @@
 <meta content="Standing on the shoulder of giants" name="description"/>
 <meta content="Jurgen Lamsens" name="author"/>
 <link href="https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-uefi/install-windows11/" rel="canonical"/>
-<link href="../configure-uefi/" rel="prev"/>
-<link href="../install-linuxmint21/" rel="next"/>
+<link href="../configure-bios-vs-uefi/" rel="prev"/>
+<link href="../configure-windows11/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
-<title>03 Install Windows 11 - OpenSysAdmins</title>
+<title>04 Install Windows 11 - OpenSysAdmins</title>
 <link href="../../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              03 Install Windows 11
+              04 Install Windows 11
             
           </span>
 </div>
@@ -249,18 +249,23 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../configure-uefi/">
-        02 Configure UEFI
+<a class="md-nav__link" href="../prepare-installation-media/">
+        02 Prepare installation media
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../configure-bios-vs-uefi/">
+        03 Configure BIOS vs UEFI
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          03 Install Windows 11
+          04 Install Windows 11
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        03 Install Windows 11
+        04 Install Windows 11
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -269,23 +274,43 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create-boot-media">
-    Create boot media
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#boot-from-usb">
     Boot from USB
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#windows-setup">
-    Windows setup
+<a class="md-nav__link" href="#time-and-currency-format">
+    Time and currency format
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#harddrive">
-    Harddrive
+<a class="md-nav__link" href="#install-now">
+    Install now
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activation-depends">
+    Activation (depends)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#select-os-depends">
+    Select OS (depends)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license-agreement">
+    License agreement
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-of-installation">
+    Type of installation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installation-location-partitioning">
+    Installation location &amp; partitioning
   </a>
 </li>
 <li class="md-nav__item">
@@ -294,8 +319,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-    ...
+<a class="md-nav__link" href="#configuration">
+    Configuration
   </a>
 </li>
 <li class="md-nav__item">
@@ -304,16 +329,31 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#almost-ready">
-    Almost ready
+<a class="md-nav__link" href="#finishing">
+    Finishing
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../configure-windows11/">
+        05 Configure Windows 11
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../install-linuxmint21/">
-        04 Install Linux Mint 21
+        06 Install Linux Mint 21
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../configure-linuxmint21/">
+        07 Configure Linux Mint 21
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../final-result/">
+        08 Final result
       </a>
 </li>
 </ul>
@@ -412,23 +452,43 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create-boot-media">
-    Create boot media
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#boot-from-usb">
     Boot from USB
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#windows-setup">
-    Windows setup
+<a class="md-nav__link" href="#time-and-currency-format">
+    Time and currency format
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#harddrive">
-    Harddrive
+<a class="md-nav__link" href="#install-now">
+    Install now
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activation-depends">
+    Activation (depends)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#select-os-depends">
+    Select OS (depends)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license-agreement">
+    License agreement
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-of-installation">
+    Type of installation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installation-location-partitioning">
+    Installation location &amp; partitioning
   </a>
 </li>
 <li class="md-nav__item">
@@ -437,8 +497,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-    ...
+<a class="md-nav__link" href="#configuration">
+    Configuration
   </a>
 </li>
 <li class="md-nav__item">
@@ -447,8 +507,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#almost-ready">
-    Almost ready
+<a class="md-nav__link" href="#finishing">
+    Finishing
   </a>
 </li>
 </ul>
@@ -459,62 +519,175 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="install-windows-11">Install Windows 11</h1>
-<h2 id="create-boot-media">Create boot media</h2>
-<p>Refer to <a href="../../../howtos/windows11-bootable-usb-flash-drive/">this howto</a> to create a Windows 11 bootable USB flash drive.</p>
 <h2 id="boot-from-usb">Boot from USB</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step</label><label for="__tabbed_1_2">Step</label><label for="__tabbed_1_3">Step</label></div>
+<p>Select "UEFI - USB Disk...".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
+<h2 id="time-and-currency-format">Time and currency format</h2>
+<p>Dutch (Belgium). Keyboard or input method: “Belgian (Period).</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../time-currency.png"><img height="180" src="../time-currency.png" width="320"/></a></p>
+<h2 id="install-now">Install now</h2>
+<p>Notice, you also have a "repair" option here... Choose "Install now".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../install-now.png"><img height="180" src="../install-now.png" width="320"/></a></p>
+<h2 id="activation-depends">Activation (depends)</h2>
+<p>The presence or absence of the "Windows activation" screen during the installation of Windows 11 22H2 can depend on various factors. If you get this screen, choose "I don't have a product key".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../activation.png"><img height="180" src="../activation.png" width="320"/></a></p>
+<h2 id="select-os-depends">Select OS (depends)</h2>
+<p>The presence or absence of the "Select the operating system you want to install" screen during the installation of Windows 11 22H2 can depend on various factors. If you get this screen, choose "Windows 11 Pro".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../select-os.png"><img height="180" src="../select-os.png" width="320"/></a></p>
+<h2 id="license-agreement">License agreement</h2>
+<p>Accept.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../accept-license.png"><img height="180" src="../accept-license.png" width="320"/></a></p>
+<h2 id="type-of-installation">Type of installation</h2>
+<p>Select “Custom: Install Windows only (advanced)"</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../custom-install.png"><img height="180" src="../custom-install.png" width="320"/></a></p>
+<h2 id="installation-location-partitioning">Installation location &amp; partitioning</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step</label><label for="__tabbed_1_2">Step</label><label for="__tabbed_1_3">Step</label><label for="__tabbed_1_4">Step</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>If you were able to do a "secure erase" in BIOS/UEFI, there are no partitions. If not, delete all partitions.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../installation-location.png"><img height="180" src="../installation-location.png" width="320"/></a></p>
 </div>
-</input></input></input></div>
-<h2 id="windows-setup">Windows setup</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step</label><label for="__tabbed_2_2">Step</label><label for="__tabbed_2_3">Step</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Make sure "Num Lock" is activated on your keyboard. Check the LED if possible. Select "New" and create a partition of 60 GB (61440 MB) and click "apply".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../partition-60gb.png"><img height="180" src="../partition-60gb.png" width="320"/></a></p>
 </div>
-</input></input></input></div>
-<h2 id="harddrive">Harddrive</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Step</label><label for="__tabbed_3_2">Step</label><label for="__tabbed_3_3">Step</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Read and comprehend the message.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../additional-partitions.png"><img height="180" src="../additional-partitions.png" width="320"/></a></p>
 </div>
-</input></input></input></div>
+<div class="tabbed-block">
+<p>Windows creates additional partitions. Notice, there is some "Unallocated space" left. This is for the Linux installation later on.
+Select "Drive 0 Partition 3" for the Windows installation.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../windows-location.png"><img height="180" src="../windows-location.png" width="320"/></a></p>
+</div>
+</div>
+</input></input></input></input></div>
 <h2 id="installing">Installing</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Step</label><label for="__tabbed_4_2">Step</label><label for="__tabbed_4_3">Step</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step</label><label for="__tabbed_2_2">Step</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Grab a coffee.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../installing-windows.png"><img height="180" src="../installing-windows.png" width="320"/></a></p>
 </div>
-</input></input></input></div>
-<h2 id="_1">...</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><input id="__tabbed_5_3" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Step</label><label for="__tabbed_5_2">Step</label><label for="__tabbed_5_3">Step</label></div>
+<div class="tabbed-block">
+<p>The PC reboots for the first time. UEFI/BIOS won't boot of the USB flash drive, as it finds a Windows installation on the (hard)drive.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../reboot1.png"><img height="180" src="../reboot1.png" width="320"/></a></p>
+</div>
+</div>
+</input></input></div>
+<h2 id="configuration">Configuration</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:5"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><input id="__tabbed_3_4" name="__tabbed_3" type="radio"><input id="__tabbed_3_5" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Step</label><label for="__tabbed_3_2">Step</label><label for="__tabbed_3_3">Step</label><label for="__tabbed_3_4">Step</label><label for="__tabbed_3_5">Step</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Select "Belgium".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../country-region.png"><img height="180" src="../country-region.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Select "Belgian (Period)".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../belgian-period.png"><img height="180" src="../belgian-period.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Select "Skip"</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../second-keyboard-layout.png"><img height="180" src="../second-keyboard-layout.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Enter a computername. In this case "hp".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../device-name.png"><img height="180" src="../device-name.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Windows reboots for the 2<sup>nd</sup> time.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../reboot2.png"><img height="180" src="../reboot2.png" width="320"/></a></p>
 </div>
 </div>
+</input></input></input></input></input></div>
 <h2 id="account">Account</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><input id="__tabbed_6_3" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Step</label><label for="__tabbed_6_2">Step</label><label for="__tabbed_6_3">Step</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:11"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><input id="__tabbed_4_3" name="__tabbed_4" type="radio"/><input id="__tabbed_4_4" name="__tabbed_4" type="radio"/><input id="__tabbed_4_5" name="__tabbed_4" type="radio"/><input id="__tabbed_4_6" name="__tabbed_4" type="radio"/><input id="__tabbed_4_7" name="__tabbed_4" type="radio"/><input id="__tabbed_4_8" name="__tabbed_4" type="radio"/><input id="__tabbed_4_9" name="__tabbed_4" type="radio"/><input id="__tabbed_4_10" name="__tabbed_4" type="radio"/><input id="__tabbed_4_11" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Step</label><label for="__tabbed_4_2">Step</label><label for="__tabbed_4_3">Step</label><label for="__tabbed_4_4">Step</label><label for="__tabbed_4_5">Step</label><label for="__tabbed_4_6">Step</label><label for="__tabbed_4_7">Step</label><label for="__tabbed_4_8">Step</label><label for="__tabbed_4_9">Step</label><label for="__tabbed_4_10">Step</label><label for="__tabbed_4_11">Step</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Select "Set up for personal use".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../personal-use.png"><img height="180" src="../personal-use.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Read and comprehend the concept "Microsoft account". We do not want such an account for now. Previous versions allowed for a "local/offline account", via "Sign-in options". Starting of Windows 11 22H2, it does not work anymore. Use this trick: select "Sign in".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../microsoft-account.png"><img height="180" src="../microsoft-account.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Enter the random e-mailaddress "no@thankyou.com"</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../microsoft-account-signin.png"><img height="180" src="../microsoft-account-signin.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Enter "whatever" as password and select "Sign in".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../microsoft-account-password.png"><img height="180" src="../microsoft-account-password.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>You get an error. Nevermind. Just select "Next".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../ooops.png"><img height="180" src="../ooops.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Login: guru</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../login.png"><img height="180" src="../login.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Password: guru</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../password.png"><img height="180" src="../password.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Acknowlege the password: guru</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../password-acknowledge.png"><img height="180" src="../password-acknowledge.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Security question1: Doggy</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../security-question1.png"><img height="180" src="../security-question1.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Security question2: Wevelgem</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../security-question2.png"><img height="180" src="../security-question2.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Security question3: IT guru</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../security-question3.png"><img height="180" src="../security-question3.png" width="320"/></a></p>
 </div>
 </div>
-<h2 id="almost-ready">Almost ready</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><input id="__tabbed_7_3" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">Step</label><label for="__tabbed_7_2">Step</label><label for="__tabbed_7_3">Step</label></div>
+</input></div>
+<h2 id="finishing">Finishing</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:9"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><input id="__tabbed_5_3" name="__tabbed_5" type="radio"/><input id="__tabbed_5_4" name="__tabbed_5" type="radio"/><input id="__tabbed_5_5" name="__tabbed_5" type="radio"/><input id="__tabbed_5_6" name="__tabbed_5" type="radio"/><input id="__tabbed_5_7" name="__tabbed_5" type="radio"/><input id="__tabbed_5_8" name="__tabbed_5" type="radio"/><input id="__tabbed_5_9" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Step</label><label for="__tabbed_5_2">Step</label><label for="__tabbed_5_3">Step</label><label for="__tabbed_5_4">Step</label><label for="__tabbed_5_5">Step</label><label for="__tabbed_5_6">Step</label><label for="__tabbed_5_7">Step</label><label for="__tabbed_5_8">Step</label><label for="__tabbed_5_9">Step</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Location-based experiences: no.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../location.png"><img height="180" src="../location.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Find my device: no.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../find.png"><img height="180" src="../find.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Send diagnostic data: Required only.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../stats.png"><img height="180" src="../stats.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Improving inking &amp; typing: no.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../inking-typing.png"><img height="180" src="../inking-typing.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Get tailored experiences: no.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../tailored-experiences.png"><img height="180" src="../tailored-experiences.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Advertising id: no.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../advertising-id.png"><img height="180" src="../advertising-id.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Updates.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../updates.png"><img height="180" src="../updates.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Almost ready.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../almost-ready.png"><img height="180" src="../almost-ready.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Installation done!</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../done.png"><img height="180" src="../done.png" width="320"/></a></p>
+</div>
 </div>
 </div>
 </article>
