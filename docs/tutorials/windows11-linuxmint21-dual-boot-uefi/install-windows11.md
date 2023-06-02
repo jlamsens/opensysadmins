@@ -1,9 +1,16 @@
 # Install Windows 11
 
 ## Boot from USB
-Select "UEFI - USB Disk...".
+=== "Step"
+    Insert the [Windows 11 USB flash drive](../../howtos/windows11-bootable-usb-flash-drive/index.md). Make sure both monitors are "on". Start the PC. In this case (HP Z4 PC), press ++f9++ once at the "HP splash screen" and wait. Specifics vary from computer to computer. Consult your hardware manual.
 
-<img src="../1280-720.png" width="320" height="180"/>
+    <img src="../1280-720.png" width="320" height="180"/>
+
+=== "Step"
+    You get the "boot menu". Select the USB flash drive to boot from.
+
+    <img src="../1280-720.png" width="320" height="180"/>
+
 
 ## Time and currency format
 Dutch (Belgium). Keyboard or input method: “Belgian (Period).
@@ -16,12 +23,12 @@ Notice, you also have a "repair" option here... Choose "Install now".
 <img src="../install-now.png" width="320" height="180"/>
 
 ## Activation (depends)
-The presence or absence of the "Windows activation" screen during the installation of Windows 11 22H2 can depend on various factors. If you get this screen, choose "I don't have a product key".
+The presence or absence of the "Windows activation" screen during the installation of Windows 11 22H2 can depend on various factors. If you get this screen, choose "I don't have a product key". If not, proceed to the next step.
 
 <img src="../activation.png" width="320" height="180"/>
 
 ## Select OS (depends)
-The presence or absence of the "Select the operating system you want to install" screen during the installation of Windows 11 22H2 can depend on various factors. If you get this screen, choose "Windows 11 Pro".
+The presence or absence of the "Select the operating system you want to install" screen during the installation of Windows 11 22H2 can depend on various factors. If you get this screen, choose "Windows 11 Pro". If not, proceed to the next step.
 
 <img src="../select-os.png" width="320" height="180"/>
 
@@ -97,6 +104,12 @@ Select “Custom: Install Windows only (advanced)"
     Windows reboots for the 2nd time.
 
     <img src="../reboot2.png" width="320" height="180"/>
+
+=== "Step"
+    Should you get this message, select "Next".
+
+    <img src="../connect-network.png" width="320" height="180"/>
+
 
 ## Account
 
@@ -185,7 +198,7 @@ Select “Custom: Install Windows only (advanced)"
 === "Step"
     Advertising id: no.
 
-    <img src="../advertising-id.png" width="320" height="180"/>
+    <img src="../advertisingid.png" width="320" height="180"/>
 
 === "Step"
     Updates.

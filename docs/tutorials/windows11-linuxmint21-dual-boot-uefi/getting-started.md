@@ -7,5 +7,4 @@ Let's get set up! We have to make sure we’ve got all the prerequisites set.
 - (2) monitor(s), keyboard and mouse
 - can boot from a USB flash drive
 - internet access
-- [Windows 11 bootable USB flash drive](../../../howtos/windows11-bootable-usb-flash-drive/)
-- [Linux Mint 21 bootable USB flash drive](../../../howtos/linuxmint21-bootable-usb-flash-drive/)
+- 2 USB flash drives
