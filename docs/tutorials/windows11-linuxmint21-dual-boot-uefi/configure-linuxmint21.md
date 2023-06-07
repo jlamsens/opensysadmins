@@ -1,170 +1,149 @@
 # Configure Linux Mint 21
 
 ## Login
-=== "Step"
+=== "Step1"
     Login with "guru", password "guru" at the "MDM Login Manager" (MDM = Mint Display Manager).
 
-=== "Step"
+    <img src="../login-guru.png" width="320" height="180"/>
+
+=== "Step2"
     You're greeted with a "Welcome screen". Take a look around and then remove the check "Show this dialog at startup".
 
+    <img src="../welcome-screen.png" width="320" height="180"/>
+
 ## Add taskbar
-=== "Step"
+=== "Step1"
     In this case, I have 2 monitors. Go to Menu -> Preferences -> Display
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../preferences-display.png" width="320" height="180"/>
 
-=== "Step"
+=== "Step2"
     The left monitor must be the "primary". If necessary, switch monitor positions by dragging and click "Apply".
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../monitor-primary.png" width="320" height="180"/>
 
-=== "Step"
+=== "Step3"
     If everything looks good, confirm this configuration.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../confirm-display-configuration.png" width="320" height="180"/>
 
-=== "Step"
+=== "Step4"
     Left monitor: right-click on the taskbar and choose "Add a new panel".
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../add-new-panel.png" width="320" height="180"/>
 
-=== "Step"
+=== "Step5"
     Red bars become visible on each side of both monitors.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../red-bars.png" width="320" height="180"/>
 
-=== "Step"
+=== "Step6"
     Right monitor: click on the bottom red bar. A task bar is added and the red bars disappear.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../added-taskbar.png" width="320" height="180"/>
 
 ## Add applets
-=== "Step"
+=== "Step1"
     Right monitor: right-click and activate "Panel edit mode".
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../panel-edit-mode.png" width="320" height="180"/>
 
-=== "Step"
+=== "Step2"
     Right monitor: Choose "Applets".
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../applets.png" width="320" height="180"/>
 
-=== "Step"
-    Right monitor: navigate to "Grouped window list" and click on the + sign. A Firefox icon becomes visible at the bottom right. Probably a bug, but is hard to see that icon. Close the "Applet" window.
+=== "Step3"
+    Right monitor: navigate to "Grouped window list" and click on the + sign. Some icons become visible at the bottom right. Probably a bug, but is hard to see those icons. Close the "Applets" window.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../grouped-window-list.png" width="320" height="180"/>
 
-=== "Step"
-    Right monitor: Drag that icon all the way up to the left side of the screen (still on the right monitor!) until the mouse cursor changes in a "hand with arrow" and release the mouse.
+=== "Step4"
+    Right monitor: Drag those icons all the way up to the left side of the screen (still on the right monitor!) until the mouse cursor changes in a "hand with arrow" and release the mouse.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../drag-grouped-window-list.png" width="320" height="180"/>
 
-=== "Step"
+=== "Step5"
     Right monitor: right-click on the bottom taskbar and deactivate "Panel edit mode".
 
-    <img src="../1280-720.png" width="320" height="180"/>
-
+    <img src="../panel-edit-mode-disable.png" width="320" height="180"/>
 
 ## Configure update mirror
-=== "Step"
-    Go to Menu -> Administration -> Update Manager.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+=== "Step1"
+    Go to "Menu -> Administration -> Update Manager".
 
-=== "Step"
+    <img src="../update-manager.png" width="320" height="180"/>
+
+=== "Step2"
     Read the text and click "OK".
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../welcome-update-manager.png" width="320" height="180"/>
 
-=== "Step"
+=== "Step3"
     Let's use a local mirror for fast downloads. Click "Yes" in the blue bar.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../local-mirror.png" width="320" height="180"/>
 
-=== "Step"
-    Click in the field "Main (vanessa). Another window appears.
+=== "Step4"
+    Authenticate with the "guru" password.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../authenticate.png" width="320" height="180"/>
 
-=== "Step"
-    Select the repository with the fastest speed. In this case: choose LiteServer.
+=== "Step5"
+    Click in the field "Main (...)". Another window appears. Select the repository with the fastest speed. In this case, let's choose LiteServer and click "Apply".
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../select-mirror.png" width="320" height="180"/>
 
-=== "Step"
+=== "Step6"
     Afther changing the "repository mirror", the APT cache has to be updated. Click "OK".
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../update-apt-cache.png" width="320" height="180"/>
 
-=== "Step"
-    Close the "Software sources" window and proceed with the updates. The password of "guru" is needed.
+=== "Step7"
+    Close the "Software sources" window and proceed with the updates. In this case, a new version of the "Update Manager" is available. Apply the update.
+    Again, the password of "guru" is asked.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../update-manager-newversion.png" width="320" height="180"/>
 
 ## Install updates
-=== "Step"
+=== "Step1"
     A list of available updates is presented. Select "Install Updates".
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../list-available-updates.png" width="320" height="180"/>
 
-=== "Step"
-    Confirm the (possible) message concerning additional changes.
+=== "Step2"
+    Confirm the (possible) message concerning additional changes. Again, the password of "guru" is asked.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../additional-changes.png" width="320" height="180"/>
 
-=== "Step"
-    Again, the password of "guru" is needed.
+=== "Step3"
+    Finally, all updates get downloaded and installed. Grab another coffee!
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../download-install-updates.png" width="320" height="180"/>
 
-=== "Step"
-    Finally, all updates get downloaded and installed.
-
-    <img src="../1280-720.png" width="320" height="180"/>
-
-=== "Step"
+=== "Step4"
     When the system is up-to-date, reboot the PC.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../up-to-date-reboot.png" width="320" height="180"/>
 
-=== "Step"
+=== "Step5"
     Login. Start the "Update manager" again and click "Refresh". Your system should be up-to-date. If not, repeat previous steps.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../update-manager-refresh.png" width="320" height="180"/>
 
 ## System reports
-=== "Step"
-    Go to Menu -> Administration -> System Reports
+=== "Step1"
+    Go to "Menu -> Administration -> System Reports".
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../administration-system-reports.png" width="320" height="180"/>
 
-=== "Step"
-    Ignore the reports concerning "the system restore utility" and "language packs".
+=== "Step2"
+    Ignore the reports concerning the "language packs" and "the system restore utility".
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../ignore-restore-language.png" width="320" height="180"/>
 
-=== "Step"
+=== "Step3"
     No problems detected? Done!
 
-    <img src="../1280-720.png" width="320" height="180"/>
-
-
-
-<!---
-- full updates, reports
-- tftp service (install) + CISCO images switches/routers
-- openssh-server (install)
-- minicom
-- unplug UTP-cable + restart
-- shut down
--->
-
-<!---
-## tFTP service
-- apt update
-- apt install tftpd-hpa
-- cd /srv/tftp/
-- cp /media/sf_Downloads/c2960* .
-- chmod 644 c*
-- ip a ...
--->
+    <img src="../no-problems.png" width="320" height="180"/>

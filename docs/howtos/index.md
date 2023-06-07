@@ -1,4 +1,4 @@
-# Howtos landing page
+# Howtos overview
 
 ## What?
 How-to guides are directions that take you, the reader, through the steps required to solve a real-world problem. They are goal-oriented.

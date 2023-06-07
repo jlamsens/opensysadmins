@@ -57,9 +57,21 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
 
 === "1"
 
+    <!--- TUTORIAL Windows 11 & Linux Mint 21 dual boot --->
+    <img src="tutorials/windows11-linuxmint21-dual-boot-uefi/home.png" width="320" height="180" align=left />
+    > *Jun 03, 2023 - in [Tutorials](tutorials/index.md) - 90 min lesson*
+
+
+    Operating systems can coexist without (too many) conflicts, as long as you careful partition and follow installation procedures. Windows for software compatibility, multimedia and gaming. Linux for development, customization, security, privacy, learning and exploration.
+
+    [Continue reading](tutorials/windows11-linuxmint21-dual-boot-uefi/index.md)
+    <br>
+    <br>
+
+
     <!--- HOWTO factory reset a Cisco 2960 switch --->
     <img src="howtos/factory-reset-cisco2960/home.png" width="320" height="180" align=left />
-    > *May 25, 2023 - in [Howtos](howtos/index.md) - 20 min guide*
+    > *May 28, 2023 - in [Howtos](howtos/index.md) - 20 min guide*
 
 
     Factory reset = restore to default settings. Erase all configuration settings, including IP addresses, hostname, passwords, VLANs and other settings. Ready for network deployment, troubleshooting, resale or decommissioning.
