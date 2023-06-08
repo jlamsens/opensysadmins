@@ -389,10 +389,11 @@ nav:
 
     - Install Xmind 8 on Linux Mint 21.x: howtos/install-xmind-linux-mint/index.md
     - Create a Windows 11 bootable USB flash drive: howtos/windows11-bootable-usb-flash-drive/index.md
-    - Create a Linux Mint 21 bootable USB flash drive: howtos/linuxmint21-bootable-usb-flash-drive/index.md
+    - Create a Linux Mint 21.x bootable USB flash drive: howtos/linuxmint21-bootable-usb-flash-drive/index.md
     - (Re)install an IOS operating system on a Cisco 2960 switch: howtos/reinstall-ios-cisco2960/index.md
     - Do a password recovery on a Cisco 2960 switch: howtos/password-recovery-cisco2960/index.md
     - Factory reset a Cisco 2960 switch: howtos/factory-reset-cisco2960/index.md
+    - Install PacketTracer 8.2.1 on Linux Mint 21.x: howtos/install-packettracer-linux-mint/index.md
   
 ####################################################################################
 
