@@ -46,6 +46,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.opensysadmins.com/howtos/install-chrome-browser-linux-mint/</loc>
+         <lastmod>2023-06-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.opensysadmins.com/howtos/install-packettracer-linux-mint/</loc>
          <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
