@@ -16,44 +16,50 @@ Install the .deb package using the "apt install" command with the relative path 
 <img src="apt-install.png" width="320" height="180"/>
 
 ## License agreement
-Select "OK" and accept the license agreement.
+Read the license agreement :p and select "OK".
 
-<img src="1280-720.png" width="320" height="180"/>
+<img src="license1.png" width="320" height="180"/>
+
+## EULA terms
+Accept the terms.
+
+<img src="license2.png" width="320" height="180"/>
 
 ## Notice
 Ignore the "Notice" warning at the end of the installation. All went well.
 
-<img src="1280-720.png" width="320" height="180"/>
+<img src="notice.png" width="320" height="180"/>
 
 ## Activation link
 Member of Cisco Network Academy? You should have received an activation link on your private e-mail. Activate your account.
 
-<img src="1280-720.png" width="320" height="180"/>
+<img src="activation-link.png" width="320" height="180"/>
 
 ## Mint menu
 Select "Menu" and start typing "pac". Start "PacketTracer 8.2.1".
 
-<img src="1280-720.png" width="320" height="180"/>
+<img src="menu-pac.png" width="320" height="180"/>
 
 ## Multi-user
 Answer "no".
 
-<img src="1280-720.png" width="320" height="180"/>
+<img src="multi-user.png" width="320" height="180"/>
 
 ## Sign-in
 First choose "Keep me logged in (for 3 months) and then select "Cisco Networking Academy".
 
-<img src="1280-720.png" width="320" height="180"/>
+<img src="keep-me-logged-in.png" width="320" height="180"/>
 
 ## Login
 First accept "cookies" and then login with your private e-mailadress and password.
 
-<img src="1280-720.png" width="320" height="180"/>
+<img src="cookies-login.png" width="320" height="180"/>
 
 ## Font configuration
 Personal preference here. Select "Options -> Preferences -> Font". Increase the fontsize to 12 and click "Apply".
+Then close the window.
 
-<img src="1280-720.png" width="320" height="180"/>
+<img src="font-configuration.png" width="320" height="180"/>
 
 
 
