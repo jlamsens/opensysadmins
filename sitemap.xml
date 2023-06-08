@@ -2,192 +2,197 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://www.opensysadmins.com/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/blogs/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/blogs/YYYY_template/blog_template/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/explanations/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/explanations/explation_template/explanation_template/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/howtos/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/howtos/access-cisco-device-rommon/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/howtos/clonezilla-bootable-usb-flash-drive/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/howtos/factory-reset-cisco2960/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/howtos/install-packettracer-linux-mint/</loc>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/howtos/install-xmind-linux-mint/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/howtos/linuxmint21-bootable-usb-flash-drive/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/howtos/password-recovery-cisco2960/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/howtos/reinstall-ios-cisco2960/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/howtos/todo/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/howtos/windows11-bootable-usb-flash-drive/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/references/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/references/reference_template/reference_template/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-bios-vs-uefi/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-clonezilla-restore/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-linuxmint21/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-windows11/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/final-result/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/getting-started/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/install-linuxmint21/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/install-windows11/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/prepare-installation-media/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/take-clonezilla-backup/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-uefi/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-uefi/configure-bios-vs-uefi/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-uefi/configure-linuxmint21/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-uefi/configure-windows11/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-uefi/final-result/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-uefi/getting-started/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-uefi/install-linuxmint21/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-uefi/install-windows11/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-uefi/prepare-installation-media/</loc>
-         <lastmod>2023-06-07</lastmod>
+         <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
