@@ -57,6 +57,18 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
 
 === "1"
 
+    <!--- HOWTO install VirtualBox 6.1.44 on Linux Mint 21 --->
+    <img src="howtos/install-virtualbox-linux-mint/home.png" width="320" height="180" align=left />
+    > *May 28, 2023 - in [Howtos](howtos/index.md) - 20 min guide*
+
+
+    VirtualBox is a powerful virtualization software that allows you to create and run virtual machines on your computer. Developed by Oracle, VirtualBox enables you to emulate multiple operating systems within a single physical machine.
+
+    [Continue reading](howtos/install-virtualbox-linux-mint/index.md)
+    <br>
+    <br>
+
+
     <!--- TUTORIAL Windows 11 & Linux Mint 21 dual boot --->
     <img src="tutorials/windows11-linuxmint21-dual-boot-uefi/home.png" width="320" height="180" align=left />
     > *Jun 03, 2023 - in [Tutorials](tutorials/index.md) - 90 min lesson*

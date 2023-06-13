@@ -42,32 +42,32 @@
 === "Step1"
     You could perfectly choose for option1, but let's choose "Something else".
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../something-else.png" width="320" height="180"/>
 
 === "Step2"
     Let's manually create partitions. First, select the "free space" at the bottom and click on the + sign.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../freespace1.png" width="320" height="180"/>
 
 === "Step3"
     Make sure "Numlock" is active (check the LED, if any). Create a "swap partition" of size 16 GB (16384 MB). Look at the screenshot.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../swap-partition.png" width="320" height="180"/>
 
 === "Step4"
     Again, select the "free space" at the bottom and click on the + sign. Create a "root partition" with the remaining disk space.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../freespace2.png" width="320" height="180"/>
 
 === "Step5"
     Verify that the "Linux boot loader" will be installed on /dev/nvme0n1. Click "Install now".
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../boot-loader.png" width="320" height="180"/>
 
 === "Step6"
     Read, comprehend and acknowledge the message.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../partition-table.png" width="320" height="180"/>
 
 ## Installing
 === "Step1"

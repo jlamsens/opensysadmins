@@ -394,6 +394,7 @@ nav:
     - Do a password recovery on a Cisco 2960 switch: howtos/password-recovery-cisco2960/index.md
     - Factory reset a Cisco 2960 switch: howtos/factory-reset-cisco2960/index.md
     - Install PacketTracer 8.2.1 on Linux Mint 21.x: howtos/install-packettracer-linux-mint/index.md
+    - Install VirtualBox 6.1.44 on Linux Mint 21.x: howtos/install-virtualbox-linux-mint/index.md
   
 ####################################################################################
 
