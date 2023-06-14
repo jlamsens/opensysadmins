@@ -8,9 +8,11 @@
 <meta content="Standing on the shoulder of giants" name="description"/>
 <meta content="Jurgen Lamsens" name="author"/>
 <link href="https://www.opensysadmins.com/howtos/install-chrome-browser-linux-mint/" rel="canonical"/>
+<link href="../install-virtualbox-linux-mint/" rel="prev"/>
+<link href="../../references/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
-<title>Install Google Chrome browser on Linux Mint 21 - OpenSysAdmins</title>
+<title>Install Google Chrome browser on Linux Mint 21.x - OpenSysAdmins</title>
 <link href="../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -59,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Install Google Chrome browser on Linux Mint 21
+              Install Google Chrome browser on Linux Mint 21.x
             
           </span>
 </div>
@@ -287,15 +289,15 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../">Howtos</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
           Howtos
@@ -340,6 +342,59 @@
 <a class="md-nav__link" href="../install-virtualbox-linux-mint/">
         Install VirtualBox 6.1.44 on Linux Mint 21.x
       </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Install Google Chrome browser on Linux Mint 21.x
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Install Google Chrome browser on Linux Mint 21.x
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#download-and-import-googles-signed-key">
+    Download and import Google's signed key
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#add-googles-chrome-repository">
+    Add Google's Chrome repository
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#update-package-list">
+    Update package list
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-chrome">
+    Install Chrome
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#start-chrome">
+    Start Chrome
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preferences">
+    Preferences
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adguard">
+    Adguard
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -387,58 +442,38 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#xxx">
-    XXX
+<a class="md-nav__link" href="#download-and-import-googles-signed-key">
+    Download and import Google's signed key
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#xxx_1">
-    XXX
+<a class="md-nav__link" href="#add-googles-chrome-repository">
+    Add Google's Chrome repository
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#xxx_2">
-    XXX
+<a class="md-nav__link" href="#update-package-list">
+    Update package list
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#xxx_3">
-    XXX
+<a class="md-nav__link" href="#install-chrome">
+    Install Chrome
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#xxx_4">
-    XXX
+<a class="md-nav__link" href="#start-chrome">
+    Start Chrome
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#xxx_5">
-    XXX
+<a class="md-nav__link" href="#preferences">
+    Preferences
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#xxx_6">
-    XXX
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#xxx_7">
-    XXX
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#xxx_8">
-    XXX
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#xxx_9">
-    XXX
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#xxx_10">
-    XXX
+<a class="md-nav__link" href="#adguard">
+    Adguard
   </a>
 </li>
 </ul>
@@ -449,39 +484,178 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="install-google-chrome-browser-on-linux-mint-21">Install Google Chrome browser on Linux Mint 21</h1>
-<h2 id="xxx">XXX</h2>
-<p>XXX</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="1280-720.png"><img height="180" src="1280-720.png" width="320"/></a></p>
-<h2 id="xxx_1">XXX</h2>
-<p>XXX</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="1280-720.png"><img height="180" src="1280-720.png" width="320"/></a></p>
-<h2 id="xxx_2">XXX</h2>
-<p>XXX</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="1280-720.png"><img height="180" src="1280-720.png" width="320"/></a></p>
-<h2 id="xxx_3">XXX</h2>
-<p>XXX</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="1280-720.png"><img height="180" src="1280-720.png" width="320"/></a></p>
-<h2 id="xxx_4">XXX</h2>
-<p>XXX</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="1280-720.png"><img height="180" src="1280-720.png" width="320"/></a></p>
-<h2 id="xxx_5">XXX</h2>
-<p>XXX</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="1280-720.png"><img height="180" src="1280-720.png" width="320"/></a></p>
-<h2 id="xxx_6">XXX</h2>
-<p>XXX</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="1280-720.png"><img height="180" src="1280-720.png" width="320"/></a></p>
-<h2 id="xxx_7">XXX</h2>
-<p>XXX</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="1280-720.png"><img height="180" src="1280-720.png" width="320"/></a></p>
-<h2 id="xxx_8">XXX</h2>
-<p>XXX</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="1280-720.png"><img height="180" src="1280-720.png" width="320"/></a></p>
-<h2 id="xxx_9">XXX</h2>
-<p>XXX</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="1280-720.png"><img height="180" src="1280-720.png" width="320"/></a></p>
-<h2 id="xxx_10">XXX</h2>
-<p>XXX</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="1280-720.png"><img height="180" src="1280-720.png" width="320"/></a></p>
+<h2 id="download-and-import-googles-signed-key">Download and import Google's signed key</h2>
+<p>Signing keys are used to verify the authenticity and integrity of packages from repositories. Download Google's and import at once.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">guru@hp:~/Downloads$_</label><label for="__tabbed_1_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>curl -sS https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/google-chrome.gpg &amp;&gt; /dev/null
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a># No output here
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>guru@hp:~/Downloads$ curl -sS https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/google-chrome.gpg &amp;&gt; /dev/null
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>guru@hp:~/Downloads$
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="add-googles-chrome-repository">Add Google's Chrome repository</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">guru@hp:~/Downloads$_</label><label for="__tabbed_2_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" &gt; /etc/apt/sources.list.d/google-chrome.list'
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a># No output here
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>guru@hp:~/Downloads$ sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" &gt; /etc/apt/sources.list.d/google-chrome.list'
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>guru@hp:~/Downloads$ 
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="update-package-list">Update package list</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">guru@hp:~/Downloads$_</label><label for="__tabbed_3_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo apt update
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>guru@hp:~/Downloads$ sudo apt update
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>Ign:1 https://mintlinux.mirror.wearetriple.com/packages vera InRelease
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>Hit:2 https://mintlinux.mirror.wearetriple.com/packages vera Release                                        
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="hll">Get:3 http://dl.google.com/linux/chrome/deb stable InRelease [1.825 B]                                      
+</span><a id="__codelineno-5-5" name="__codelineno-5-5"></a>Hit:4 http://archive.ubuntu.com/ubuntu jammy InRelease                                                        
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>Hit:6 http://archive.ubuntu.com/ubuntu jammy-updates InRelease             
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="hll">Get:7 http://dl.google.com/linux/chrome/deb stable/main amd64 Packages [1.079 B]
+</span><a id="__codelineno-5-8" name="__codelineno-5-8"></a>Hit:8 http://security.ubuntu.com/ubuntu jammy-security InRelease                
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a>Get:9 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [108 kB]
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>Fetched 111 kB in 1s (114 kB/s)    
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>Reading package lists... Done
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a>Building dependency tree... Done
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a>Reading state information... Done
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a>175 packages can be upgraded. Run 'apt list --upgradable' to see them.
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="install-chrome">Install Chrome</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">guru@hp:~/Downloads$_</label><label for="__tabbed_4_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>sudo apt install google-chrome-stable
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span>
+<span class="normal"><a href="#__codelineno-7-25">25</a></span>
+<span class="normal"><a href="#__codelineno-7-26">26</a></span>
+<span class="normal"><a href="#__codelineno-7-27">27</a></span>
+<span class="normal"><a href="#__codelineno-7-28">28</a></span>
+<span class="normal"><a href="#__codelineno-7-29">29</a></span>
+<span class="normal"><a href="#__codelineno-7-30">30</a></span>
+<span class="normal"><a href="#__codelineno-7-31">31</a></span>
+<span class="normal"><a href="#__codelineno-7-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>guru@hp:~/Downloads$ sudo apt install google-chrome-stable
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>Reading package lists... Done
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>Building dependency tree... Done
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>Reading state information... Done
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>The following additional packages will be installed:
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>libu2f-udev
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>The following NEW packages will be installed:
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>google-chrome-stable libu2f-udev
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>0 upgraded, 2 newly installed, 0 to remove and 175 not upgraded.
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>Need to get 94,4 MB of archives.
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>After this operation, 322 MB of additional disk space will be used.
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>Do you want to continue? [Y/n] y
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a>Get:1 http://dl.google.com/linux/chrome/deb stable/main amd64 google-chrome-stable amd64 114.0.5735.133-1 [94,4 MB]
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a>Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libu2f-udev all 1.1.10-3build2 [4.190 B]
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a>Fetched 94,4 MB in 4s (24,2 MB/s)                                                 
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a>Selecting previously unselected package libu2f-udev.
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a>(Reading database ... 610101 files and directories currently installed.)
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a>Preparing to unpack .../libu2f-udev_1.1.10-3build2_all.deb ...
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a>Unpacking libu2f-udev (1.1.10-3build2) ...
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a>Selecting previously unselected package google-chrome-stable.
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a>Preparing to unpack .../google-chrome-stable_114.0.5735.133-1_amd64.deb ...
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a>Unpacking google-chrome-stable (114.0.5735.133-1) ...
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a>Setting up libu2f-udev (1.1.10-3build2) ...
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a>Setting up google-chrome-stable (114.0.5735.133-1) ...
+<a id="__codelineno-7-25" name="__codelineno-7-25"></a>update-alternatives: using /usr/bin/google-chrome-stable to provide /usr/bin/x-www-browser (x-www-browser) in auto mode
+<a id="__codelineno-7-26" name="__codelineno-7-26"></a>update-alternatives: using /usr/bin/google-chrome-stable to provide /usr/bin/gnome-www-browser (gnome-www-browser) in auto mode
+<a id="__codelineno-7-27" name="__codelineno-7-27"></a>update-alternatives: using /usr/bin/google-chrome-stable to provide /usr/bin/google-chrome (google-chrome) in auto mode
+<a id="__codelineno-7-28" name="__codelineno-7-28"></a>Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+<a id="__codelineno-7-29" name="__codelineno-7-29"></a>Processing triggers for man-db (2.10.2-1) ...
+<a id="__codelineno-7-30" name="__codelineno-7-30"></a>Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+<a id="__codelineno-7-31" name="__codelineno-7-31"></a>Processing triggers for desktop-file-utils (0.26+mint2+vera) ...
+<a id="__codelineno-7-32" name="__codelineno-7-32"></a>guru@hp:~/Downloads$ 
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="start-chrome">Start Chrome</h2>
+<p>Select "Menu" and start typing "chr". Start "Google Chrome".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="menu-chrome.png"><img height="180" src="menu-chrome.png" width="320"/></a></p>
+<h2 id="preferences">Preferences</h2>
+<p>Do not send any stats or crash reports for now.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="no-stats.png"><img height="180" src="no-stats.png" width="320"/></a></p>
+<h2 id="adguard">Adguard</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><input id="__tabbed_5_3" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">Step1</label><label for="__tabbed_5_2">Step2</label><label for="__tabbed_5_3">Step3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Use your favorite search engine to search for "adguard chrome extension"</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="chrome-adguard.png"><img height="180" src="chrome-adguard.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Click "Add to Chrome" and follow the steps.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="add-to-chrome.png"><img height="180" src="add-to-chrome.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Finally, enable the first 4 buttons. Restart the browser. It's now ready for use.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="configure-extensions.png"><img height="180" src="configure-extensions.png" width="320"/></a></p>
+</div>
+</div>
+</input></input></input></div>
 </article>
 </div>
 </div>

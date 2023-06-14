@@ -9,7 +9,7 @@
 <meta content="Jurgen Lamsens" name="author"/>
 <link href="https://www.opensysadmins.com/howtos/install-virtualbox-linux-mint/" rel="canonical"/>
 <link href="../install-packettracer-linux-mint/" rel="prev"/>
-<link href="../../references/" rel="next"/>
+<link href="../install-chrome-browser-linux-mint/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
 <title>Install VirtualBox 6.1.44 on Linux Mint 21.x - OpenSysAdmins</title>
@@ -364,8 +364,18 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#install-virtualbox-and-extension-pack">
-    Install VirtualBox and Extension pack
+<a class="md-nav__link" href="#install-virtualbox">
+    Install VirtualBox
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fix-broken-dependencies">
+    Fix broken dependencies
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-extension-pack">
+    Install Extension pack
   </a>
 </li>
 <li class="md-nav__item">
@@ -390,6 +400,11 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../install-chrome-browser-linux-mint/">
+        Install Google Chrome browser on Linux Mint 21.x
+      </a>
 </li>
 </ul>
 </nav>
@@ -447,8 +462,18 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#install-virtualbox-and-extension-pack">
-    Install VirtualBox and Extension pack
+<a class="md-nav__link" href="#install-virtualbox">
+    Install VirtualBox
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fix-broken-dependencies">
+    Fix broken dependencies
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-extension-pack">
+    Install Extension pack
   </a>
 </li>
 <li class="md-nav__item">
@@ -480,28 +505,212 @@
 <article class="md-content__inner md-typeset">
 <h1 id="install-virtualbox-6144-on-linux-mint-21">Install VirtualBox 6.1.44 on Linux Mint 21</h1>
 <h2 id="download">Download</h2>
-<p>Download "VirtualBox 6.1.44" and the "Extension Pack" from the official website.</p>
+<p>Download "VirtualBox 6.1.44" and the "Extension Pack" from the <a href="https://www.virtualbox.org/wiki/Download_Old_Builds_6_1">official website</a>.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="virtualbox-download.png"><img height="180" src="virtualbox-download.png" width="320"/></a></p>
 <h2 id="open-terminal">Open Terminal</h2>
 <p>Right-click on an empty space in the "Nemo" file manager and select "Open in Terminal".</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="downloads-open-terminal.png"><img height="180" src="downloads-open-terminal.png" width="320"/></a></p>
-<h2 id="install-virtualbox-and-extension-pack">Install VirtualBox and Extension pack</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label></div>
+<h2 id="install-virtualbox">Install VirtualBox</h2>
+<p>Use "dpkg" if you want to install a specific package version from a .deb file without repository interference. It's worth noting that when you use "dpkg" to install a package, it does not automatically resolve dependencies!</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">guru@hp:~/Downloads$_</label><label for="__tabbed_1_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Install the .deb package using the "apt install" command with the relative path to the package file. APT will recognize it and install the package along with its dependencies, if any.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="apt-install.png"><img height="180" src="apt-install.png" width="320"/></a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo dpkg -i virtualbox-6.1_6.1.44-156814~Ubuntu~jammy_amd64.deb
+</code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Install the "Extension pack" using command with the relative path to the package file. APT will recognize it and install the package along with its dependencies, if any.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="install-extension-pack.png"><img height="180" src="install-extension-pack.png" width="320"/></a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>guru@hp:~/Downloads$ sudo dpkg -i virtualbox-6.1_6.1.44-156814~Ubuntu~jammy_amd64.deb 
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>Selecting previously unselected package virtualbox-6.1.
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>(Reading database ... 610101 files and directories currently installed.)
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>Preparing to unpack virtualbox-6.1_6.1.44-156814~Ubuntu~jammy_amd64.deb ...
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>Unpacking virtualbox-6.1 (6.1.44-156814~Ubuntu~jammy) ...
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>dpkg: dependency problems prevent configuration of virtualbox-6.1:
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>virtualbox-6.1 depends on libqt5opengl5 (&gt;= 5.0.2); however:
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>Package libqt5opengl5 is not installed.
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>virtualbox-6.1 depends on libqt5printsupport5 (&gt;= 5.0.2); however:
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>Package libqt5printsupport5 is not installed.
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>virtualbox-6.1 depends on libqt5x11extras5 (&gt;= 5.6.0); however:
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>Package libqt5x11extras5 is not installed.
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>virtualbox-6.1 depends on libsdl1.2debian (&gt;= 1.2.11); however:
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>Package libsdl1.2debian is not installed.
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>dpkg: error processing package virtualbox-6.1 (--install):
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>dependency problems - leaving unconfigured
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a>Processing triggers for desktop-file-utils (0.26+mint2+vera) ...
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a>Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>Processing triggers for hicolor-icon-theme (0.17-2) ...
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a>Processing triggers for shared-mime-info (2.1-2) ...
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a>Errors were encountered while processing:
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a>virtualbox-6.1
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a>guru@hp:~/Downloads$
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="fix-broken-dependencies">Fix broken dependencies</h2>
+<p>This command will attempt to install any missing dependencies required by the package you installed via "dpkg".</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">guru@hp:~/Downloads$_</label><label for="__tabbed_2_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo apt install -f
+</code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Read the license agreement :p and typ "y".</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="vboxmanage-accept-terms.png"><img height="180" src="vboxmanage-accept-terms.png" width="320"/></a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span>
+<span class="normal"><a href="#__codelineno-3-27">27</a></span>
+<span class="normal"><a href="#__codelineno-3-28">28</a></span>
+<span class="normal"><a href="#__codelineno-3-29">29</a></span>
+<span class="normal"><a href="#__codelineno-3-30">30</a></span>
+<span class="normal"><a href="#__codelineno-3-31">31</a></span>
+<span class="normal"><a href="#__codelineno-3-32">32</a></span>
+<span class="normal"><a href="#__codelineno-3-33">33</a></span>
+<span class="normal"><a href="#__codelineno-3-34">34</a></span>
+<span class="normal"><a href="#__codelineno-3-35">35</a></span>
+<span class="normal"><a href="#__codelineno-3-36">36</a></span>
+<span class="normal"><a href="#__codelineno-3-37">37</a></span>
+<span class="normal"><a href="#__codelineno-3-38">38</a></span>
+<span class="normal"><a href="#__codelineno-3-39">39</a></span>
+<span class="normal"><a href="#__codelineno-3-40">40</a></span>
+<span class="normal"><a href="#__codelineno-3-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>guru@hp:~/Downloads$ sudo apt install -f
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>Reading package lists... Done
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>Building dependency tree... Done
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>Reading state information... Done
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>Correcting dependencies... Done
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>The following additional packages will be installed:
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>libqt5opengl5 libqt5printsupport5 libqt5x11extras5 libsdl1.2debian
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>The following NEW packages will be installed:
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>libqt5opengl5 libqt5printsupport5 libqt5x11extras5 libsdl1.2debian
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>0 upgraded, 4 newly installed, 0 to remove and 171 not upgraded.
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>1 not fully installed or removed.
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>Need to get 556 kB of archives.
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>After this operation, 1.966 kB of additional disk space will be used.
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>Do you want to continue? [Y/n] y
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libqt5opengl5 amd64 5.15.3+dfsg-2ubuntu0.2 [153 kB]
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a>Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libqt5printsupport5 amd64 5.15.3+dfsg-2ubuntu0.2 [214 kB]
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a>Get:3 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libqt5x11extras5 amd64 5.15.3-1 [10,9 kB]
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a>Get:4 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libsdl1.2debian amd64 1.2.15+dfsg2-6 [177 kB]
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a>Fetched 556 kB in 1s (504 kB/s)        
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a>Selecting previously unselected package libqt5opengl5:amd64.
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a>(Reading database ... 610864 files and directories currently installed.)
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a>Preparing to unpack .../libqt5opengl5_5.15.3+dfsg-2ubuntu0.2_amd64.deb ...
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a>Unpacking libqt5opengl5:amd64 (5.15.3+dfsg-2ubuntu0.2) ...
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a>Selecting previously unselected package libqt5printsupport5:amd64.
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a>Preparing to unpack .../libqt5printsupport5_5.15.3+dfsg-2ubuntu0.2_amd64.deb ...
+<a id="__codelineno-3-26" name="__codelineno-3-26"></a>Unpacking libqt5printsupport5:amd64 (5.15.3+dfsg-2ubuntu0.2) ...
+<a id="__codelineno-3-27" name="__codelineno-3-27"></a>Selecting previously unselected package libqt5x11extras5:amd64.
+<a id="__codelineno-3-28" name="__codelineno-3-28"></a>Preparing to unpack .../libqt5x11extras5_5.15.3-1_amd64.deb ...
+<a id="__codelineno-3-29" name="__codelineno-3-29"></a>Unpacking libqt5x11extras5:amd64 (5.15.3-1) ...
+<a id="__codelineno-3-30" name="__codelineno-3-30"></a>Selecting previously unselected package libsdl1.2debian:amd64.
+<a id="__codelineno-3-31" name="__codelineno-3-31"></a>Preparing to unpack .../libsdl1.2debian_1.2.15+dfsg2-6_amd64.deb ...
+<a id="__codelineno-3-32" name="__codelineno-3-32"></a>Unpacking libsdl1.2debian:amd64 (1.2.15+dfsg2-6) ...
+<a id="__codelineno-3-33" name="__codelineno-3-33"></a>Setting up libqt5x11extras5:amd64 (5.15.3-1) ...
+<a id="__codelineno-3-34" name="__codelineno-3-34"></a>Setting up libqt5printsupport5:amd64 (5.15.3+dfsg-2ubuntu0.2) ...
+<a id="__codelineno-3-35" name="__codelineno-3-35"></a>Setting up libsdl1.2debian:amd64 (1.2.15+dfsg2-6) ...
+<a id="__codelineno-3-36" name="__codelineno-3-36"></a>Setting up libqt5opengl5:amd64 (5.15.3+dfsg-2ubuntu0.2) ...
+<a id="__codelineno-3-37" name="__codelineno-3-37"></a>Setting up virtualbox-6.1 (6.1.44-156814~Ubuntu~jammy) ...
+<a id="__codelineno-3-38" name="__codelineno-3-38"></a>Adding group `vboxusers' (GID 138) ...
+<a id="__codelineno-3-39" name="__codelineno-3-39"></a>Done.
+<a id="__codelineno-3-40" name="__codelineno-3-40"></a>Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+<a id="__codelineno-3-41" name="__codelineno-3-41"></a>guru@hp:~/Downloads$ 
+</code></pre></div></td></tr></table></div>
 </div>
 </div>
-</input></input></input></div>
+</input></input></div>
+<h2 id="install-extension-pack">Install Extension pack</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">guru@hp:~/Downloads$_</label><label for="__tabbed_3_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.44.vbox-extpack
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>guru@hp:~/Downloads$ sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.44.vbox-extpack
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>VirtualBox Extension Pack Personal Use and Evaluation License (PUEL)
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>License version 11, 21 May 2020
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>PLEASE READ THE FOLLOWING ORACLE VM VIRTUALBOX EXTENSION PACK PERSONAL
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>&lt;snip&gt;
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a>Do you agree to these license terms and conditions (y/n)? y
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>License accepted. For batch installation add
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a>--accept-license=33d7284dc4a0ece381196fda3cfe2ed0e1e8e7ed7f27b9a9ebc4ee22e24bd23c
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a>to the VBoxManage command line.
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a>0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a>Successfully installed "Oracle VM VirtualBox Extension Pack".
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a>guru@hp:~/Downloads$ 
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
 <h2 id="start-virtualbox">Start VirtualBox</h2>
 <p>Select "Menu" and start typing "vir". Start "Oracle VM VirtualBox".</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="menu-virtualbox.png"><img height="180" src="menu-virtualbox.png" width="320"/></a></p>
@@ -512,7 +721,7 @@
 <p>Select "File -&gt; Preferences -&gt; Update". Disable "Check for Updates".</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="preferences-no-updates.png"><img height="180" src="preferences-no-updates.png" width="320"/></a></p>
 <h2 id="nat-configuration">NAT configuration</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label><label for="__tabbed_2_3">Step3</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Step1</label><label for="__tabbed_4_2">Step2</label><label for="__tabbed_4_3">Step3</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Select "File -&gt; Preferences -&gt; Network". Click on the + to create a NAT Network.</p>
