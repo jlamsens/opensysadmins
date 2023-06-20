@@ -38,7 +38,7 @@ Accept.
 <img src="../accept-license.png" width="320" height="180"/>
 
 ## Type of installation
-Select “Custom: Install Windows only (advanced)"
+Select “Custom: Install Windows only (advanced)".
 
 <img src="../custom-install.png" width="320" height="180"/>
 
