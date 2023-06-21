@@ -1,21 +1,20 @@
 # Snapshot VM
-=== "StepX"
-    Klik op het icoontje met de 3 vierkantjes/streepjes en kies “Snapshots”. Windows moet zeker “Powered Off” zijn.
+=== "Step1"
+    Select "Machine -> Tools -> Snapshots".
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../tools-snapshot.png" width="320" height="180"/>
 
-=== "StepX"
-    Selecteer de “current state” en klik op “Take”. Geef als naam “Clean install”.
+=== "Step2"
+    Select "Current State" and click "Take". Give a proper name, like "Clean install". A good "Snapshot Description" can be handy!
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../snapshot-current-state.png" width="320" height="180"/>
 
-=== "StepX"
-    Vanaf je iets wijzigt in deze virtuele machine, krijg je “Current State (changed). Mocht je nu “Windows” om zeep helpen, dan kan je steeds terugkeren naar een “Clean install” situatie via “Restore snapshot”.
+=== "Step3"
+    If you change "something" in this virtual machine, you will get "Current State (changed)". Want to revert those changes? Select "Clean install" and click "Restore". Be sure to remove the checkbox at "Create a snapshot of the current machine state" or you'll end up with another snapshot.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../restore-snapshot.png" width="320" height="180"/>
 
+=== "Step4"
+    You know if the snapshot has been properly restored, if the "Current State" equals the "Clean install" again.
 
-
-
-
-
+    <img src="../restore-successful.png" width="320" height="180"/>

@@ -36,7 +36,7 @@ Enable copy/paste in both directions.
 
 <img src="../bidirectional.png" width="320" height="180"/>
 
-## System -> Motherbord
+## System -> Motherboard
 First boot from disk. If there is no OS found, boot from the "virtual CD" (.ISO file).
 
 <img src="../boot-sequence.png" width="320" height="180"/>
@@ -69,7 +69,7 @@ Select "NAT Network" and "NATNetwork" at the dropdown boxes.
 <img src="../nat-network.png" width="320" height="180"/>
 
 ## Shared folder
-Click on the + sign. Browse to /home/guru/Downloads. Put a checkmark at "Auto-mount".
+Click on the + sign. Browse to "/home/guru/Downloads". Put a checkmark at "Auto-mount".
 
 <img src="../shared-folder.png" width="320" height="180"/>
 

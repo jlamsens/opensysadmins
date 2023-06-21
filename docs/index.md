@@ -57,6 +57,20 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
 
 === "1"
 
+    <!--- TUTORIAL Windows 11 in VirtualBox 6.1.x --->
+    <img src="tutorials/windows11-virtualbox/home.png" width="320" height="180" align=left />
+    > *Jun 03, 2023 - in [Tutorials](tutorials/index.md) - 120 min lesson*
+
+
+    Virtualizing an operating system is interesting because it allows for the creation of isolated and self-contained virtual environments that can run on a single physical machine, enabling efficient resource utilization and flexibility in testing, development, and deployment of software applications.
+
+    [Continue reading](tutorials/windows11-virtualbox/index.md)
+    <br>
+    <br>
+
+
+=== "2"
+
     <!--- HOWTO install Google Chrome browser on Linux Mint 21 --->
     <img src="howtos/install-chrome-browser-linux-mint/home.png" width="320" height="180" align=left />
     > *Jun 06, 2023 - in [Howtos](howtos/index.md) - 10 min guide*
@@ -115,7 +129,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <br>
     <br>
 
-=== "2"
+=== "3"
 
     <!--- HOWTO do a password recovery on a Cisco 2960 switch --->
     <img src="howtos/password-recovery-cisco2960/home.png" width="320" height="180" align=left />
