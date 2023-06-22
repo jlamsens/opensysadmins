@@ -1,8 +1,10 @@
 # (Re)install an IOS operating system on a Cisco 2960 switch
 
 ## Prereqs
-- familiarity with the [lab environment](../todo/index.md)
-- a [valid Cisco IOS image](../todo/)
+- a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Linux Mint 21
+- [minicom](../install-minicom-linux-mint/index.md) terminal emulation software
+- a [valid Cisco IOS image](../access-cisco-device-rommon/index.md)
+- a [tFTP service](../install-tftp-linux-mint/index.md)
 
 ## IOS transfer over serial (xmodem)
 <img src="console-access.png" width="320" height="180"/>

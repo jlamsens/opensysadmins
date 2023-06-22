@@ -1,5 +1,8 @@
 # Install VirtualBox 6.1.44 on Linux Mint 21
 
+## Prereqs
+- a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Linux Mint 21
+
 ## Download
 Download "VirtualBox 6.1.44" and the "Extension Pack" from the [official website](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1).
 

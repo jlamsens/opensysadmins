@@ -1,7 +1,8 @@
 # Howto do a password recovery on a Cisco 2960 switch
 
 ## Prereqs
-- familiarity with the [lab environment](../todo/index.md)
+- a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Linux Mint 21
+- [minicom](../install-minicom-linux-mint/index.md) terminal emulation software
 
 ## Console access
 

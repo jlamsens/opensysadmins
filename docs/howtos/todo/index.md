@@ -1,5 +1,9 @@
 # Todo
 
+In progress...
+
+<!--- HOWTO TEMPLATE
+
 ## Howto's
 - Howto acquire a valid Cisco IOS image
 - Howto access a Cisco 2960 switch using a direct local serial console connection
@@ -92,3 +96,5 @@ The Switching Database Manager (SDM) template preference is not stored in the st
     ``` title='' hl_lines="0"
 
     ```
+
+--->
