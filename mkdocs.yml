@@ -384,6 +384,15 @@ nav:
       - 06 Snapshot VM: tutorials/windows11-virtualbox/snapshot-vm.md
       - 07 Final result: tutorials/windows11-virtualbox/final-result.md
 
+#    - Install Windows Server 2022 in VirtualBox:
+#      - tutorials/windows-server-2022-virtualbox/index.md # overview/landing page
+#      - 01 Getting started: tutorials/windows-server-2022-virtualbox/getting-started.md
+#      - 02 Create VM: tutorials/windows-server-2022-virtualbox/create-vm.md
+#      - 03 Configure VM: tutorials/windows-server-2022-virtualbox/configure-vm.md
+#      - 04 Install OS: tutorials/windows-server-2022-virtualbox/install-os.md
+#      - 05 Configure OS: tutorials/windows-server-2022-virtualbox/configure-os.md
+#      - 06 Snapshot VM: tutorials/windows-server-2022-virtualbox/snapshot-vm.md
+#      - 07 Final result: tutorials/windows-server-2022-virtualbox/final-result.md
 
 
 ####################################################################################
@@ -405,6 +414,7 @@ nav:
     - Install PacketTracer 8.2.1 on Linux Mint 21: howtos/install-packettracer-linux-mint/index.md
     - Install VirtualBox 6.1.44 on Linux Mint 21: howtos/install-virtualbox-linux-mint/index.md
     - Install Google Chrome browser on Linux Mint 21: howtos/install-chrome-browser-linux-mint/index.md
+    - Clone a Windows 11 virtual machine in VirtualBox 6.1.44: howtos/clone-windows11-virtualbox/index.md
   
 ####################################################################################
 
