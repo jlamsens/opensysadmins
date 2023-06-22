@@ -41,6 +41,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.opensysadmins.com/howtos/clone-windows11-virtualbox/</loc>
+         <lastmod>2023-06-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.opensysadmins.com/howtos/clonezilla-bootable-usb-flash-drive/</loc>
          <lastmod>2023-06-22</lastmod>
          <changefreq>daily</changefreq>
@@ -122,6 +127,46 @@
     </url>
     <url>
          <loc>https://www.opensysadmins.com/tutorials/</loc>
+         <lastmod>2023-06-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/tutorials/windows-server-2022-virtualbox/</loc>
+         <lastmod>2023-06-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/tutorials/windows-server-2022-virtualbox/configure-os/</loc>
+         <lastmod>2023-06-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/tutorials/windows-server-2022-virtualbox/configure-vm/</loc>
+         <lastmod>2023-06-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/tutorials/windows-server-2022-virtualbox/create-vm/</loc>
+         <lastmod>2023-06-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/tutorials/windows-server-2022-virtualbox/final-result/</loc>
+         <lastmod>2023-06-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/tutorials/windows-server-2022-virtualbox/getting-started/</loc>
+         <lastmod>2023-06-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/tutorials/windows-server-2022-virtualbox/install-os/</loc>
+         <lastmod>2023-06-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/tutorials/windows-server-2022-virtualbox/snapshot-vm/</loc>
          <lastmod>2023-06-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
