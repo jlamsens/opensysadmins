@@ -2,29 +2,29 @@
 
 ## Download ISO
 === "Step1"
-    Use your favorite search engine to search for the Windows 11 iso and choose the official Microsoft website.
+    Use your favorite search engine to search for the Windows Server 2022 iso and choose the official Microsoft website.
 
-    <img src="../windows11-search-iso.png" width="320" height="180"/>
+    <img src="../windows2022-search-iso.png" width="320" height="180"/>
 
 === "Step2"
-    Select "Windows 11 (multi-edition ISO for x64 devices)" from the drop down menu and click "Download".
+    Select "Download the ISO".
 
-    <img src="../windows11-select-edition.png" width="320" height="180"/>
+    <img src="../windows2022-download-iso.png" width="320" height="180"/>
 
 === "Step3"
-    Select "English (United States)" as the product language and click "Confirm".
+    Fill in the form and click "Download".
 
-    <img src="../windows11-select-product-language.png" width="320" height="180"/>
+    <img src="../windows2022-form.png" width="320" height="180"/>
 
 === "Step4"
-    Click "64-bit Download". The ISO file will be downloaded...
+    Select "English (United States)", the 64-bit edition". The ISO file will be downloaded...
 
-    <img src="../windows11-download-iso.png" width="320" height="180"/>
+    <img src="../windows2022-en64.png" width="320" height="180"/>
 
 === "Step5"
     ...and saved to your local disk.
 
-    <img src="../windows11-localdisk.png" width="320" height="180"/>
+    <img src="../windows2022-localdisk.png" width="320" height="180"/>
 
 
 ## Edit settings
@@ -40,6 +40,12 @@ Enable copy/paste in both directions.
 First boot from disk. If there is no OS found, boot from the "virtual CD" (.ISO file).
 
 <img src="../boot-sequence.png" width="320" height="180"/>
+
+## System -> Processor
+Add a little bit of extra CPU power.
+
+<img src="../cpu-power.png" width="320" height="180"/>
+
 
 ## Storage
 
@@ -74,6 +80,6 @@ Click on the + sign. Browse to "/home/guru/Downloads". Put a checkmark at "Auto-
 <img src="../shared-folder.png" width="320" height="180"/>
 
 
-## Endresult
+## Current settings
 
 <img src="../endresult.png" width="320" height="180"/>

@@ -6,7 +6,7 @@
     <img src="../machine-new.png" width="320" height="180"/>
 
 === "Step2"
-    Select "Windows 11 (64-bit).
+    Under "Version", select "Windows 11 (64-bit).
 
     <img src="../name-os.png" width="320" height="180"/>
 

@@ -1,35 +1,35 @@
-# Clone Windows 11 in VirtualBox 6.1.44
+# Clone a Windows 11 virtual machine in VirtualBox 6.1.44
 
 ## Prereqs
 - an existing [Windows 11 virtual machine](../../tutorials/windows11-virtualbox/index.md)
 
 ## VirtualBox
-=== "StepX"
+=== "Step1"
     In this example, the "Current state" equals the "Clean install" snapshot (otherwise it would have been "Current state (Changed)")
 
     <img src="clean-equals-current-state.png" width="320" height="180"/>
 
-=== "StepX"
+=== "Step2"
     Select "Machine -> Clone".
 
     <img src="machine-clone.png" width="320" height="180"/>
 
-=== "StepX"
+=== "Step3"
     Click on the "Expert mode" button to show extra options.
 
     <img src="expert-mode.png" width="320" height="180"/>
 
-=== "StepX"
+=== "Step4"
     Change the name of the virtual machine. Clone type: full clone. Snapshots: current machine state. Be sure to generate new MAC addresses for all network adapters. Look at the screenshot below.
 
     <img src="advanced-clone.png" width="320" height="180"/>
 
-=== "StepX"
+=== "Step5"
     Click "Clone". This won't take too long.
 
     <img src="cloning.png" width="320" height="180"/>
 
-=== "StepX"
+=== "Step6"
     Endresult: a clone of vm6 without snapshot(s).
 
     <img src="clone-endresult.png" width="320" height="180"/>
@@ -62,7 +62,7 @@
 
 ## Computername
 === "Step1"
-    Go to "Settings -> About" and change the computer name to “vm7”. Restart now.
+    Right-click on "Start -> System. Change the computer name to "vm8". Restart now.
 
     <img src="rename-pc.png" width="320" height="180"/>
 

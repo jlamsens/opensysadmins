@@ -1,4 +1,4 @@
-# Howto do a password recovery on a Cisco 2960 switch
+# Password recovery on a Cisco 2960 switch
 
 ## Prereqs
 - a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Linux Mint 21

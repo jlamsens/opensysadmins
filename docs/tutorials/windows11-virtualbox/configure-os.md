@@ -68,7 +68,7 @@
     <img src="../network-icon.png" width="320" height="180"/>
 
 ## Computername
-Go to "Settings -> About" and change the computer name to “vm6”. Restart later.
+Go to "Settings -> About" and change the computer name to "vm6". Restart later.
 
 <img src="../change-computer-name.png" width="320" height="180"/>
 

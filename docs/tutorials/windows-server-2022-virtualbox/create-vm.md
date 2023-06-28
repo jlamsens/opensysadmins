@@ -6,12 +6,12 @@
     <img src="../machine-new.png" width="320" height="180"/>
 
 === "Step2"
-    Select "Windows 11 (64-bit).
+    Under "Version", select "Windows Server 2019 (64-bit)", as there is no possibility to choose "Windows Server 2022 (64-bit)" (>= VirtualBox 7).
 
     <img src="../name-os.png" width="320" height="180"/>
 
 === "Step3"
-    Enter 4096 MB (4 GB) memory.
+    Enter 8192 MB (8 GB) memory.
 
     <img src="../memory-size.png" width="320" height="180"/>
 
@@ -31,7 +31,7 @@
     <img src="../storage-dynamic.png" width="320" height="180"/>
 
 === "Step7"
-    Enter 80 GB disk size.
+    Enter 100 GB disk size.
 
     <img src="../file-location-size.png" width="320" height="180"/>
 

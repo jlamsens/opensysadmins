@@ -57,12 +57,36 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
 
 === "1"
 
+    <!--- TUTORIAL Windows Server 2022 in VirtualBox 6.1.x --->
+    <img src="tutorials/windows-server-2022-virtualbox/home.png" width="320" height="180" align=left />
+    > *Jun 15, 2023 - in [Tutorials](tutorials/index.md) - 90 min lesson*
+
+
+    Virtualizing an OS is interesting because it allows for the creation of isolated and self-contained virtual environments that can run on a single physical machine, enabling efficient resource utilization and flexibility in testing, development...
+
+    [Continue reading](tutorials/windows-server-2022-virtualbox/index.md)
+    <br>
+    <br>
+
+
+    <!--- HOWTO Clone Windows 11 in VirtualBox 6.1.x --->
+    <img src="howtos/clone-windows11-virtualbox/home.png" width="320" height="180" align=left />
+    > *Jun 20, 2023 - in [Howtos](howtos/index.md) - 5 min guide*
+
+
+    Cloning a virtual machine in VirtualBox allows for easy replication of an existing virtual environment, enabling efficient testing and development without starting from scratch.
+
+    [Continue reading](howtos/clone-windows11-virtualbox/index.md)
+    <br>
+    <br>
+
+
     <!--- TUTORIAL Windows 11 in VirtualBox 6.1.x --->
     <img src="tutorials/windows11-virtualbox/home.png" width="320" height="180" align=left />
-    > *Jun 03, 2023 - in [Tutorials](tutorials/index.md) - 120 min lesson*
+    > *Jun 15, 2023 - in [Tutorials](tutorials/index.md) - 120 min lesson*
 
 
-    Virtualizing an operating system is interesting because it allows for the creation of isolated and self-contained virtual environments that can run on a single physical machine, enabling efficient resource utilization and flexibility in testing, development, and deployment of software applications.
+    Virtualizing an OS is interesting because it allows for the creation of isolated and self-contained virtual environments that can run on a single physical machine, enabling efficient resource utilization and flexibility in testing, development...
 
     [Continue reading](tutorials/windows11-virtualbox/index.md)
     <br>
@@ -73,7 +97,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
 
     <!--- HOWTO install Google Chrome browser on Linux Mint 21 --->
     <img src="howtos/install-chrome-browser-linux-mint/home.png" width="320" height="180" align=left />
-    > *Jun 06, 2023 - in [Howtos](howtos/index.md) - 10 min guide*
+    > *Jun 08, 2023 - in [Howtos](howtos/index.md) - 10 min guide*
 
 
     Google Chrome browser is a popular web browser developed by Google that offers a fast, secure, and feature-rich browsing experience. It is based on the open-source Chromium project and supports a wide range of extensions and platforms.
@@ -100,7 +124,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     > *Jun 03, 2023 - in [Tutorials](tutorials/index.md) - 90 min lesson*
 
 
-    Operating systems can coexist without (too many) conflicts, as long as you careful partition and follow installation procedures. Windows for software compatibility, multimedia and gaming. Linux for development, customization, security, privacy, learning and exploration.
+    Operating systems can coexist without (too many) conflicts, as long as you careful partition and follow installation procedures. Windows for software compatibility, multimedia and gaming. Linux for development, customization, security, ...
 
     [Continue reading](tutorials/windows11-linuxmint21-dual-boot-uefi/index.md)
     <br>

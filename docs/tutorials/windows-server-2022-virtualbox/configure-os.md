@@ -2,6 +2,11 @@
 
 ## Guest additions
 === "Step1"
+    Login ("Administrator"/"Admin123"). As we use VirtualBox, we have to press the right ++ctrl++ button + ++delete++
+
+    <img src="../login.png" width="320" height="180"/>
+
+=== "Step2"
     Select "Devices -> Insert Guest Additions CD Image". In the background, a "virtual cd" gets mounted.
     
     <img src="../insert-guest-additions.png" width="320" height="180"/>
@@ -17,69 +22,54 @@
     <img src="../installing-guest-additions.png" width="320" height="180"/>
 
 === "Step4"
-    Login ("guru"/"guru") and select "View -> Full-screen Mode".
+    Login ("Administrator"/"Admin123"). Select "View -> Full-screen Mode".
 
     <img src="../view-fullscreen.png" width="320" height="180"/>
 
 === "Step5"
-    Read and comprehend the popup message.
-
-    <img src="../message-fullscreen.png" width="320" height="180"/>
-
-=== "Step6"
     Hooray, full screen! Start "Windows Explorer". Right-click on D:\ -> Eject (= "remove the virtual cd", Windows Explorer closes)
 
     <img src="../eject-guest-additions.png" width="320" height="180"/>
 
-=== "Step7"
+=== "Step6"
     The shared folder "/home/guru/Downloads" is visible in "Windows Explorer" via drive-letter Z:
 
     <img src="../shared-folder-explorer.png" width="320" height="180"/>
 
 ## IP address
 === "Step1"
-    Right-click on the network icon on the bottom-right taskbar -> Network and Internet settings.
+    Right-click on the network icon on the bottom-right taskbar -> Open Network and Internet settings.
 
     <img src="../network-internet-settings.png" width="320" height="180"/>
 
 === "Step2"
-    Select “Ethernet”.
+    Select "Change adapter options".
 
-    <img src="../ethernet.png" width="320" height="180"/>
+    <img src="../change-adapter-options.png" width="320" height="180"/>
 
 === "Step3"
-    Select “Edit”.
-
-    <img src="../edit.png" width="320" height="180"/>
-
-=== "Step4"
-    Change "DHCP" to "Manual", activate "IPv4" and configure the IP, subnetmask, gateway and DNS server. Click "Save".
+    Double-click on "Ethernet", select "Properties", double-click on "Internet Protocol Version 4 (TCP/IPv4) and enter the correct values.
 
     <img src="../ip-settings.png" width="320" height="180"/>
 
-=== "Step5"
-    Click "Start" and typ "cmd" to open a command prompt: verify the internet connection.
+=== "Step4"
+    Close all windows. Click "Start" and typ "cmd" to open a command prompt: verify the internet connection.  The network icon on the bottom-right taskbar will soon change.
 
     <img src="../verify-internet-connection.png" width="320" height="180"/>
 
-=== "Step6"
-    The network icon on the bottom-right taskbar will soon change to this:
-
-    <img src="../network-icon.png" width="320" height="180"/>
-
 ## Computername
-Go to "Settings -> About" and change the computer name to “vm6”. Restart later.
+Right-click on "Start -> System" and change the computer name to "vm8". Restart later.
 
 <img src="../change-computer-name.png" width="320" height="180"/>
 
 ## Automatic updates
 === "Step1"
-    Go to "System -> Windows update" and install all available updates.
+    Right-click on "Start -> Settings" and select "Update & Security".
 
     <img src="../install-updates.png" width="320" height="180"/>
 
 === "Step2"
-    Reboot when asked to. Repeat "Check for updates/installing updates" until no more updates are available.
+    Install all available updates. Reboot when asked to. Repeat "Check for updates/installing updates" until no more updates are available.
 
     <img src="../up-to-date.png" width="320" height="180"/>
 

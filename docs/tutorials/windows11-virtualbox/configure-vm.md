@@ -74,6 +74,6 @@ Click on the + sign. Browse to "/home/guru/Downloads". Put a checkmark at "Auto-
 <img src="../shared-folder.png" width="320" height="180"/>
 
 
-## Endresult
+## Current settings
 
 <img src="../endresult.png" width="320" height="180"/>

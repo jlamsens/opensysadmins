@@ -10,7 +10,7 @@
     <img src="../snapshot-current-state.png" width="320" height="180"/>
 
 === "Step3"
-    If you change "something" in this virtual machine, you will get "Current State (changed)". Want to revert those changes? Select "Clean install" and click "Restore". Be sure to remove the checkbox at "Create a snapshot of the current machine state" or you'll end up with another snapshot.
+    If you change "something" in this virtual machine, you will get "Current State (changed)". Want to revert those changes? Select "Clean install" and click "Restore". Be sure to clear the checkbox at "Create a snapshot of the current machine state" or you'll end up with another snapshot.
 
     <img src="../restore-snapshot.png" width="320" height="180"/>
 

@@ -6,7 +6,7 @@
 
 
 ## Download
-=== "guru@vm26:~$_"
+=== "guru@hp:~$_"
 
     ``` title=''
     # directory Downloads/XMind will be created
@@ -15,8 +15,8 @@
 
 === "output"
 
-    ``` title='' hl_lines="17"
-    guru@vm26:~$ wget https://www.xmind.net/xmind/downloads/xmind-8-update9-linux.zip -P Downloads/Xmind/
+    ``` title='' hl_lines="16"
+    guru@hp:~$ wget https://www.xmind.net/xmind/downloads/xmind-8-update9-linux.zip -P Downloads/Xmind/
     --2022-05-13 14:09:16--  https://www.xmind.net/xmind/downloads/xmind-8-update9-linux.zip
     Resolving www.xmind.net (www.xmind.net)... 3.232.41.189, 44.194.150.33
     Connecting to www.xmind.net (www.xmind.net)|3.232.41.189|:443... connected.
@@ -33,11 +33,11 @@
 
     2022-05-13 14:09:28 (9.98 MB/s) - ‘Downloads/Xmind/xmind-8-update9-linux.zip’ saved [120292589/120292589]
 
-    guru@vm26:~$
+    guru@hp:~$
     ```
 
 ## Unzip and remove zip file
-=== "guru@vm26:~$_"
+=== "guru@hp:~$_"
 
     ``` title=''
     unzip Downloads/Xmind/xmind-8-update9-linux.zip -d Downloads/Xmind/ > /dev/null 2>&1
@@ -47,17 +47,17 @@
 === "output"
 
     ``` title=''
-    guru@vm26:~$ unzip Downloads/Xmind/xmind-8-update9-linux.zip -d Downloads/Xmind/ > /dev/null 2>&1
-    guru@vm26:~$ rm Downloads/Xmind/xmind-8-update9-linux.zip
-    guru@vm26:~$
+    guru@hp:~$ unzip Downloads/Xmind/xmind-8-update9-linux.zip -d Downloads/Xmind/ > /dev/null 2>&1
+    guru@hp:~$ rm Downloads/Xmind/xmind-8-update9-linux.zip
+    guru@hp:~$
     ```
 
 ## Check and adjust requirements
 === "Step1"
-    List the contents of the installation directory. Notice setup.sh
+    List the contents of the installation directory. Notice "setup.sh".
 
     ``` title='' hl_lines="11"
-    guru@vm26:~$ ls -lh Downloads/Xmind/
+    guru@hp:~$ ls -lh Downloads/Xmind/
     total 676K
     -rw-r--r--  1 guru guru 403K Dec  9  2019 artifacts.xml
     drwxr-xr-x  2 guru guru 4.0K Dec  9  2019 configuration
@@ -71,14 +71,14 @@
     drwxr-xr-x  4 guru guru 4.0K Dec  9  2019 XMind_amd64
     drwxr-xr-x  4 guru guru 4.0K Dec  9  2019 XMind_i386
     -rw-r--r--  1 guru guru 3.2K Jul 23  2018 xpla.txt
-    guru@vm26:~$
+    guru@hp:~$
     ```
 
 === "Step2"
     Check the contents of that file. Notice the required packages.
 
     ``` title='' hl_lines="10"
-    guru@vm26:~$ cat Downloads/Xmind/setup.sh
+    guru@hp:~$ cat Downloads/Xmind/setup.sh
     #!/bin/bash
 
     set -e
@@ -100,14 +100,14 @@
     fi
 
     echo "[setup] Done."
-    guru@vm26:~$
+    guru@hp:~$
     ```
 
 === "Step3"
-    Notice that package libwebkitgtk-1.0-0 is not available in the repository. There is a package libwebkit2gtk-4.0-37 already installed though...
+    Notice that package "libwebkitgtk-1.0-0" is not available in the repository. There is a package "libwebkit2gtk-4.0-37" already installed though...
 
     ``` title='' hl_lines="4 10"
-    guru@vm26:~$ apt-cache policy openjdk-8-jre libgtk2.0-0 libwebkitgtk-1.0-0 lame libc6 libglib2.0-0 | grep "Candidate"
+    guru@hp:~$ apt-cache policy openjdk-8-jre libgtk2.0-0 libwebkitgtk-1.0-0 lame libc6 libglib2.0-0 | grep "Candidate"
       Candidate: 8u312-b07-0ubuntu1~20.04
       Candidate: 2.24.32-4ubuntu4
       Candidate: (none)
@@ -115,28 +115,28 @@
       Candidate: 2.31-0ubuntu9.9
       Candidate: 2.64.6-1~ubuntu20.04.4
     
-    guru@vm26:~$ dpkg -l | grep libwebkit
+    guru@hp:~$ dpkg -l | grep libwebkit
     ii  libwebkit2gtk-4.0-37:amd64                 2.34.6-0ubuntu0.20.04.1             amd64        Web content engine library for GTK
-    guru@vm26:~$ 
+    guru@hp:~$ 
     ```
 
 === "Step4"
-    And notice that packages libgtk2.0-0, libc6 and libglib2.0-0 are already installed.
+    And notice that packages "libgtk2.0-0", "libc6" and "libglib2.0-0" are already installed.
 
     ``` title='' hl_lines="3 6 7"
-    guru@vm26:~$ apt-cache policy openjdk-8-jre libgtk2.0-0 libwebkitgtk-1.0-0 lame libc6 libglib2.0-0 | grep "Installed"
+    guru@hp:~$ apt-cache policy openjdk-8-jre libgtk2.0-0 libwebkitgtk-1.0-0 lame libc6 libglib2.0-0 | grep "Installed"
       Installed: (none)
       Installed: 2.24.32-4ubuntu4
       Installed: (none)
       Installed: (none)
       Installed: 2.31-0ubuntu9.7
       Installed: 2.64.6-1~ubuntu20.04.4
-    guru@vm26:~$ 
+    guru@hp:~$ 
     ```
 
 ## Adjust setup.sh
-=== "guru@vm26:~$_"
-    I don't know why I would need lame. So we only need 1 package. This sed-oneliner makes the adjustment.
+=== "guru@hp:~$_"
+    I don't know why I would need "lame". So we only need 1 package. This sed-oneliner makes the adjustment.
 
     ``` bash title=''
     sed -i '/apt-get/c\apt-get install openjdk-8-jre' Downloads/Xmind/setup.sh
@@ -168,7 +168,7 @@
     echo "[setup] Done."
     ```
 ## Execute setup.sh
-=== "guru@vm26:~$_"
+=== "guru@hp:~$_"
 
     ``` title=''
     sudo Downloads/Xmind/setup.sh
@@ -177,7 +177,7 @@
 === "output"
 
     ``` title=''
-    guru@vm26:~$ sudo Downloads/Xmind/setup.sh
+    guru@hp:~$ sudo Downloads/Xmind/setup.sh
     [sudo] password for guru:     
     [setup] Installing dependencies....
     Reading package lists... Done
@@ -197,7 +197,7 @@
     ```
 
 ## Find out the path for java-8
-=== "guru@vm26:~$_"
+=== "guru@hp:~$_"
 
     ``` bash title=''
     update-alternatives --display java
@@ -206,7 +206,7 @@
 === "output"
 
     ``` title='' hl_lines="9"
-    guru@vm26:~$ update-alternatives --display java
+    guru@hp:~$ update-alternatives --display java
     java - auto mode
       link best version is /usr/lib/jvm/java-11-openjdk-amd64/bin/java
       link currently points to /usr/lib/jvm/java-11-openjdk-amd64/bin/java
@@ -219,7 +219,7 @@
     ```
 
 ## Adjust xmind.ini
-=== "guru@vm26:~$_"
+=== "guru@hp:~$_"
     This sed-onliner adds 2 lines at the beginning of the file. Xmind 8 needs the older java runtime.
 
     ``` bash title=''
