@@ -8,9 +8,11 @@
 <meta content="Standing on the shoulder of giants" name="description"/>
 <meta content="Jurgen Lamsens" name="author"/>
 <link href="https://www.opensysadmins.com/tutorials/windows-server-2022-virtualbox/configure-vm/" rel="canonical"/>
+<link href="../create-vm/" rel="prev"/>
+<link href="../install-os/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
-<title>Configure VM - OpenSysAdmins</title>
+<title>03 Configure VM - OpenSysAdmins</title>
 <link href="../../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -59,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Configure VM
+              03 Configure VM
             
           </span>
 </div>
@@ -146,15 +148,15 @@
         Home
       </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../../">Tutorials</a>
 <label for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
           Tutorials
@@ -336,6 +338,121 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../">Install Windows Server 2022 in VirtualBox</a>
+<label for="__nav_2_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_2_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_5">
+<span class="md-nav__icon md-icon"></span>
+          Install Windows Server 2022 in VirtualBox
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting-started/">
+        01 Getting started
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../create-vm/">
+        02 Create VM
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          03 Configure VM
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        03 Configure VM
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#download-iso">
+    Download ISO
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#edit-settings">
+    Edit settings
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#general-advanced">
+    General -&gt; Advanced
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-motherboard">
+    System -&gt; Motherboard
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-processor">
+    System -&gt; Processor
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#storage">
+    Storage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#audio">
+    Audio
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#network">
+    Network
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shared-folder">
+    Shared folder
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#current-settings">
+    Current settings
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../install-os/">
+        04 Install OS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../configure-os/">
+        05 Configure OS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../snapshot-vm/">
+        06 Snapshot VM
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../final-result/">
+        07 Final result
+      </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -375,7 +492,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../howtos/password-recovery-cisco2960/">
-        Do a password recovery on a Cisco 2960 switch
+        Password recovery on a Cisco 2960 switch
       </a>
 </li>
 <li class="md-nav__item">
@@ -469,6 +586,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#system-processor">
+    System -&gt; Processor
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#storage">
     Storage
   </a>
@@ -489,8 +611,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#endresult">
-    Endresult
+<a class="md-nav__link" href="#current-settings">
+    Current settings
   </a>
 </li>
 </ul>
@@ -505,24 +627,24 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label><label for="__tabbed_1_4">Step4</label><label for="__tabbed_1_5">Step5</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Use your favorite search engine to search for the Windows 11 iso and choose the official Microsoft website.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../windows11-search-iso.png"><img height="180" src="../windows11-search-iso.png" width="320"/></a></p>
+<p>Use your favorite search engine to search for the Windows Server 2022 iso and choose the official Microsoft website.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../windows2022-search-iso.png"><img height="180" src="../windows2022-search-iso.png" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>Select "Windows 11 (multi-edition ISO for x64 devices)" from the drop down menu and click "Download".</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../windows11-select-edition.png"><img height="180" src="../windows11-select-edition.png" width="320"/></a></p>
+<p>Select "Download the ISO".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../windows2022-download-iso.png"><img height="180" src="../windows2022-download-iso.png" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>Select "English (United States)" as the product language and click "Confirm".</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../windows11-select-product-language.png"><img height="180" src="../windows11-select-product-language.png" width="320"/></a></p>
+<p>Fill in the form and click "Download".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../windows2022-form.png"><img height="180" src="../windows2022-form.png" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>Click "64-bit Download". The ISO file will be downloaded...</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../windows11-download-iso.png"><img height="180" src="../windows11-download-iso.png" width="320"/></a></p>
+<p>Select "English (United States)", the 64-bit edition". The ISO file will be downloaded...</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../windows2022-en64.png"><img height="180" src="../windows2022-en64.png" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
 <p>...and saved to your local disk.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../windows11-localdisk.png"><img height="180" src="../windows11-localdisk.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../windows2022-localdisk.png"><img height="180" src="../windows2022-localdisk.png" width="320"/></a></p>
 </div>
 </div>
 </input></input></input></input></input></div>
@@ -534,6 +656,9 @@
 <h2 id="system-motherboard">System -&gt; Motherboard</h2>
 <p>First boot from disk. If there is no OS found, boot from the "virtual CD" (.ISO file).</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../boot-sequence.png"><img height="180" src="../boot-sequence.png" width="320"/></a></p>
+<h2 id="system-processor">System -&gt; Processor</h2>
+<p>Add a little bit of extra CPU power.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../cpu-power.png"><img height="180" src="../cpu-power.png" width="320"/></a></p>
 <h2 id="storage">Storage</h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label><label for="__tabbed_2_3">Step3</label></div>
 <div class="tabbed-content">
@@ -560,7 +685,7 @@
 <h2 id="shared-folder">Shared folder</h2>
 <p>Click on the + sign. Browse to "/home/guru/Downloads". Put a checkmark at "Auto-mount".</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../shared-folder.png"><img height="180" src="../shared-folder.png" width="320"/></a></p>
-<h2 id="endresult">Endresult</h2>
+<h2 id="current-settings">Current settings</h2>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../endresult.png"><img height="180" src="../endresult.png" width="320"/></a></p>
 </article>
 </div>
