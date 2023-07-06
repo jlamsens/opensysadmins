@@ -415,6 +415,7 @@ nav:
     - Install VirtualBox 6.1.44 on Linux Mint 21: howtos/install-virtualbox-linux-mint/index.md
     - Install Google Chrome browser on Linux Mint 21: howtos/install-chrome-browser-linux-mint/index.md
     - Clone a Windows 11 virtual machine in VirtualBox 6.1.44: howtos/clone-windows11-virtualbox/index.md
+    - Clone a Windows Server 2022 virtual machine in VirtualBox 6.1.44: howtos/clone-windows2022-virtualbox/index.md
   
 ####################################################################################
 

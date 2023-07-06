@@ -2,7 +2,7 @@
 
 ## Boot from ISO
 === "Step1"
-    Start the virtual machine. If you do nothing, you'll get an interactive shell. The first time you start a virtual machine, you get the "Auto capture keyboard" and "mouse pointer integration" messages. Read them and then select the "Do not show this message again" checkboxes.
+    Start the virtual machine. If you do nothing, you'll get an interactive shell. If this is the first time you start a virtual machine, you get the "Auto capture keyboard" and "mouse pointer integration" messages. Read them and then tick the "Do not show this message again" checkboxes.
 
     <img src="../interactive-shell.png" width="320" height="180"/>
 

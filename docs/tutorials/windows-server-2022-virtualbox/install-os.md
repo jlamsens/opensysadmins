@@ -2,17 +2,12 @@
 
 ## Boot from ISO
 === "Step1"
-    Start the virtual machine. If you do nothing, you'll get an interactive shell. The first time you start a virtual machine, you get the "Auto capture keyboard" and "mouse pointer integration" messages. Read them and then select the "Do not show this message again" checkboxes.
+    Start the virtual machine. If you do nothing, you'll get an interactive shell. If this is the first time you start a virtual machine (in this screenshot example Windows 11), you get the "Auto capture keyboard" and "mouse pointer integration" messages. Read them and then tick the "Do not show this message again" checkboxes.
 
     <img src="../interactive-shell.png" width="320" height="180"/>
 
 === "Step2"
-    Close the window and choose "Power off the machine". Start the virtual machine again and quickly click into the window at the "Press any key..." prompt, so it gets the focus, and press ++enter++. Be fast!
-
-    <img src="../press-any-key.png" width="320" height="180"/>
-
-=== "Step3"
-    The Windows installer should start. Time & currency format: "Dutch (Belgium)". Keyboard or input method: “Belgian (Period).
+    Close the window and choose "Power off the machine". Start the virtual machine again. This time, you do _not_ get the "Press any key..." prompt. The Windows installer should start immediately. Time & currency format: "Dutch (Belgium)". Keyboard or input method: “Belgian (Period).
 
     <img src="../install-start.png" width="320" height="180"/>
 
