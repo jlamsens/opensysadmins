@@ -515,6 +515,11 @@
         Clone a Windows 11 virtual machine in VirtualBox 6.1.44
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../howtos/clone-windows2022-virtualbox/">
+        Clone a Windows Server 2022 virtual machine in VirtualBox 6.1.44
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -614,22 +619,18 @@
 <article class="md-content__inner md-typeset">
 <h1 id="install-os">Install OS</h1>
 <h2 id="boot-from-iso">Boot from ISO</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Start the virtual machine. If you do nothing, you'll get an interactive shell. The first time you start a virtual machine, you get the "Auto capture keyboard" and "mouse pointer integration" messages. Read them and then select the "Do not show this message again" checkboxes.</p>
+<p>Start the virtual machine. If you do nothing, you'll get an interactive shell. If this is the first time you start a virtual machine (in this screenshot example Windows 11), you get the "Auto capture keyboard" and "mouse pointer integration" messages. Read them and then tick the "Do not show this message again" checkboxes.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../interactive-shell.png"><img height="180" src="../interactive-shell.png" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>Close the window and choose "Power off the machine". Start the virtual machine again and quickly click into the window at the "Press any key..." prompt, so it gets the focus, and press <span class="keys"><kbd class="key-enter">Enter</kbd></span>. Be fast!</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../press-any-key.png"><img height="180" src="../press-any-key.png" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>The Windows installer should start. Time &amp; currency format: "Dutch (Belgium)". Keyboard or input method: “Belgian (Period).</p>
+<p>Close the window and choose "Power off the machine". Start the virtual machine again. This time, you do <em>not</em> get the "Press any key..." prompt. The Windows installer should start immediately. Time &amp; currency format: "Dutch (Belgium)". Keyboard or input method: “Belgian (Period).</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../install-start.png"><img height="180" src="../install-start.png" width="320"/></a></p>
 </div>
 </div>
-</input></input></input></div>
+</input></input></div>
 <h2 id="install-now">Install now</h2>
 <p>Notice, you also have a "repair" option here... Choose "Install now".</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../install-now.png"><img height="180" src="../install-now.png" width="320"/></a></p>
