@@ -217,58 +217,29 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#download-and-optional-verify">
-    Download (and optional verify)
+<a class="md-nav__link" href="#boot-from-usb">
+    Boot from USB
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create-boot-media">
-    Create boot media
+<a class="md-nav__link" href="#languagekeyboardcodecs">
+    Language/keyboard/codecs
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#live-boot">
-    Live boot
+<a class="md-nav__link" href="#installation-typepartioning">
+    Installation type/partioning
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#installation">
-    Installation
+<a class="md-nav__link" href="#installing">
+    Installing
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configuration">
-    Configuration
+<a class="md-nav__link" href="#finishing">
+    Finishing
   </a>
-<nav aria-label="Configuration" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#full-update">
-    Full update
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#post-installation-packages">
-    Post-installation packages
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ignore-system-reports">
-    Ignore system reports
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#configure-grub">
-    Configure GRUB
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#clean-history-and-shutdown">
-    Clean history and shutdown
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -279,18 +250,23 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../grub-configuration/">
+        08 GRUB configuration
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../take-clonezilla-backup/">
-        08 Take Clonezilla backup
+        09 Take Clonezilla backup
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../configure-clonezilla-restore/">
-        09 Configure Clonezilla restore
+        10 Configure Clonezilla restore
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../final-result/">
-        10 Final result
+        11 Final result
       </a>
 </li>
 </ul>
@@ -529,6 +505,11 @@
         Clone a Windows Server 2022 virtual machine in VirtualBox 6.1.44
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../howtos/use-minicom-linux-mint/">
+        Use minicom on Linux Mint 21
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -575,58 +556,29 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#download-and-optional-verify">
-    Download (and optional verify)
+<a class="md-nav__link" href="#boot-from-usb">
+    Boot from USB
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#create-boot-media">
-    Create boot media
+<a class="md-nav__link" href="#languagekeyboardcodecs">
+    Language/keyboard/codecs
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#live-boot">
-    Live boot
+<a class="md-nav__link" href="#installation-typepartioning">
+    Installation type/partioning
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#installation">
-    Installation
+<a class="md-nav__link" href="#installing">
+    Installing
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configuration">
-    Configuration
+<a class="md-nav__link" href="#finishing">
+    Finishing
   </a>
-<nav aria-label="Configuration" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#full-update">
-    Full update
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#post-installation-packages">
-    Post-installation packages
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ignore-system-reports">
-    Ignore system reports
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#configure-grub">
-    Configure GRUB
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#clean-history-and-shutdown">
-    Clean history and shutdown
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -636,23 +588,101 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="install-linux-mint-21">Install Linux Mint 21</h1>
-<h2 id="download-and-optional-verify">Download (and optional verify)</h2>
-<p>Cinnamon.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">On Windows</label><label for="__tabbed_1_2">On Linux</label></div>
+<h2 id="boot-from-usb">Boot from USB</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label><label for="__tabbed_1_4">Step4</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Insert the <a href="../../../howtos/linuxmint21-bootable-usb-flash-drive/">Linux Mint 21 USB flash drive</a>. Make sure the monitor is "on". Start the PC. In this case (Fujitusu Esprimo PC), press <span class="keys"><kbd class="key-f12">F12</kbd></span> once at the "Fujitsu splash screen" and wait. Specifics vary from computer to computer. Consult your hardware manual.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../insert-usb.png"><img height="180" src="../insert-usb.png" width="320"/></a></p>
 </div>
-</input></input></div>
-<h2 id="create-boot-media">Create boot media</h2>
-<h2 id="live-boot">Live boot</h2>
-<h2 id="installation">Installation</h2>
-<h2 id="configuration">Configuration</h2>
-<h3 id="full-update">Full update</h3>
-<h3 id="post-installation-packages">Post-installation packages</h3>
-<h3 id="ignore-system-reports">Ignore system reports</h3>
-<h3 id="configure-grub">Configure GRUB</h3>
-<h3 id="clean-history-and-shutdown">Clean history and shutdown</h3>
+<div class="tabbed-block">
+<p>You get the "boot menu". Select the USB flash drive to boot from.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../boot-menu.png"><img height="180" src="../boot-menu.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Select the first option at the GRUB menu.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../grub-menu.png"><img height="180" src="../grub-menu.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>You're in the live-environment.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../live-environment.png"><img height="180" src="../live-environment.png" width="320"/></a></p>
+</div>
+</div>
+</input></input></input></input></div>
+<h2 id="languagekeyboardcodecs">Language/keyboard/codecs</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label><label for="__tabbed_2_3">Step3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Doubleclick on "Install Linux Mint". Select "English".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../english.png"><img height="180" src="../english.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Keyboard layout: Belgian/Belgian. Test some characters in the test field.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../keyboard.png"><img height="180" src="../keyboard.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Install the multimedia codecs.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../multimedia-codecs.png"><img height="180" src="../multimedia-codecs.png" width="320"/></a></p>
+</div>
+</div>
+</input></input></input></div>
+<h2 id="installation-typepartioning">Installation type/partioning</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:6"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><input id="__tabbed_3_4" name="__tabbed_3" type="radio"><input id="__tabbed_3_5" name="__tabbed_3" type="radio"><input id="__tabbed_3_6" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Step1</label><label for="__tabbed_3_2">Step2</label><label for="__tabbed_3_3">Step3</label><label for="__tabbed_3_4">Step4</label><label for="__tabbed_3_5">Step5</label><label for="__tabbed_3_6">Step6</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a href="../../windows11-linuxmint21-dual-boot-uefi/something-else.png">In UEFI-mode</a>, the Linux Mint 21.x installer finds the "Windows 11 installation", but for one reason or another (bug?) not in BIOS (non-CSM) mode (in this case). Nevermind. Just select "Something else" (after installation, GRUB will find the "Windows 11 installation" anyway).</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../windows-not-detected.png"><img height="180" src="../windows-not-detected.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Let's manually create partitions. First, select the "free space" at the bottom and click on the + sign. Make sure "Numlock" is active (check the LED, if any). Create a "swap partition" of size 32 GB (32468 MB). Look at the screenshot.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../create-32gb-swap.png"><img height="180" src="../create-32gb-swap.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Again, select the "free space" at the bottom and click on the + sign. Create a "root partition" of size 400 GB (409600 MB).</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../create-400gb-root.png"><img height="180" src="../create-400gb-root.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>We still have some free space left. This is for the Clonezilla dump later. Verify that the "Linux boot loader" will be installed on /dev/sda. Click "Install now".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../partitioning-done.png"><img height="180" src="../partitioning-done.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>I don't know why the installer complains about an EFI partition, as we are booted in BIOS-mode (non-CSM). Bug? Just click "Continue".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../no-efi-partition.png"><img height="180" src="../no-efi-partition.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Read, comprehend and acknowledge the message.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../write-partition-table.png"><img height="180" src="../write-partition-table.png" width="320"/></a></p>
+</div>
+</div>
+</input></input></input></input></input></input></div>
+<h2 id="installing">Installing</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:5"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><input id="__tabbed_4_3" name="__tabbed_4" type="radio"/><input id="__tabbed_4_4" name="__tabbed_4" type="radio"/><input id="__tabbed_4_5" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Step1</label><label for="__tabbed_4_2">Step2</label><label for="__tabbed_4_3">Step3</label><label for="__tabbed_4_4">Step4</label><label for="__tabbed_4_5">Step5</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>In this case, "Brussels" will be suggested as location.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../brussels.png"><img height="180" src="../brussels.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Your name: guru. Computer name: lab. Username: guru. Password: guru.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../who-are-you.png"><img height="180" src="../who-are-you.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Enjoy the slideshow.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../slideshow.png"><img height="180" src="../slideshow.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>The installation is finished. Select "Restart Now".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../installation-finished.png"><img height="180" src="../installation-finished.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Remove the USB flash drive and press <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../remove-installation-medium.png"><img height="180" src="../remove-installation-medium.png" width="320"/></a></p>
+</div>
+</div>
+</input></div>
+<h2 id="finishing">Finishing</h2>
+<p>After reboot, you have a menu where you can choose between "Linux Mint 21 Cinnamon" and "Windows Recovery Environment" (this name is not correctly identified, must be a bug?). There is a counter from 10s to 0s. Make your choice in time. By default, "Linux Mint 21 Cinnamon" gets started.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../grub-linux-windows.png"><img height="180" src="../grub-linux-windows.png" width="320"/></a></p>
 </article>
 </div>
 </div>

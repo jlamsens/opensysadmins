@@ -9,7 +9,7 @@
 <meta content="Jurgen Lamsens" name="author"/>
 <link href="https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-linuxmint21/" rel="canonical"/>
 <link href="../install-linuxmint21/" rel="prev"/>
-<link href="../take-clonezilla-backup/" rel="next"/>
+<link href="../grub-configuration/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
 <title>07 Configure Linux Mint 21 - OpenSysAdmins</title>
@@ -208,23 +208,65 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          07 Configure Linux Mint 21
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         07 Configure Linux Mint 21
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#login">
+    Login
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configure-update-mirror">
+    Configure update mirror
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-updates">
+    Install updates
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-reports">
+    System reports
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#applications-optional">
+    Applications (optional)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../grub-configuration/">
+        08 GRUB configuration
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../take-clonezilla-backup/">
-        08 Take Clonezilla backup
+        09 Take Clonezilla backup
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../configure-clonezilla-restore/">
-        09 Configure Clonezilla restore
+        10 Configure Clonezilla restore
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../final-result/">
-        10 Final result
+        11 Final result
       </a>
 </li>
 </ul>
@@ -463,6 +505,11 @@
         Clone a Windows Server 2022 virtual machine in VirtualBox 6.1.44
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../howtos/use-minicom-linux-mint/">
+        Use minicom on Linux Mint 21
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -503,6 +550,37 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#login">
+    Login
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configure-update-mirror">
+    Configure update mirror
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-updates">
+    Install updates
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-reports">
+    System reports
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#applications-optional">
+    Applications (optional)
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -510,23 +588,101 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="configure-linux-mint-21">Configure Linux Mint 21</h1>
-<!---
-- full updates, reports
-- tftp service (install) + CISCO images switches/routers
-- openssh-server (install)
-- minicom
-- unplug UTP-cable + restart
-- shut down
--->
-<!---
-## tFTP service
-- apt update
-- apt install tftpd-hpa
-- cd /srv/tftp/
-- cp /media/sf_Downloads/c2960* .
-- chmod 644 c*
-- ip a ...
--->
+<h2 id="login">Login</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Login with "guru", password "guru" at the "MDM Login Manager" (MDM = Mint Display Manager).</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../login-guru.png"><img height="180" src="../login-guru.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>You're greeted with a "Welcome screen". Take a look around and then remove the check "Show this dialog at startup".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../welcome-screen.png"><img height="180" src="../welcome-screen.png" width="320"/></a></p>
+</div>
+</div>
+</input></input></div>
+<h2 id="configure-update-mirror">Configure update mirror</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:7"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><input id="__tabbed_2_5" name="__tabbed_2" type="radio"><input id="__tabbed_2_6" name="__tabbed_2" type="radio"><input id="__tabbed_2_7" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label><label for="__tabbed_2_3">Step3</label><label for="__tabbed_2_4">Step4</label><label for="__tabbed_2_5">Step5</label><label for="__tabbed_2_6">Step6</label><label for="__tabbed_2_7">Step7</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Go to "Menu -&gt; Administration -&gt; Update Manager".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../update-manager.png"><img height="180" src="../update-manager.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Read the text and click "OK".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../welcome-update-manager.png"><img height="180" src="../welcome-update-manager.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Let's use a local mirror for fast downloads. Click "Yes" in the blue bar.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../local-mirror.png"><img height="180" src="../local-mirror.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Authenticate with the "guru" password.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../authenticate.png"><img height="180" src="../authenticate.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Click in the field "Main (...)". Another window appears. Select the repository with the fastest speed. In this case, let's choose LiteServer and click "Apply".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../select-mirror.png"><img height="180" src="../select-mirror.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>After changing the "repository mirror", the APT cache has to be updated. Click "OK".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../update-apt-cache.png"><img height="180" src="../update-apt-cache.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Close the "Software sources" window and proceed with the updates. In this case, a new version of the "Update Manager" is available. Apply the update.
+Again, the password of "guru" is asked.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../update-manager-newversion.png"><img height="180" src="../update-manager-newversion.png" width="320"/></a></p>
+</div>
+</div>
+</input></input></input></input></input></input></input></div>
+<h2 id="install-updates">Install updates</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:5"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><input id="__tabbed_3_4" name="__tabbed_3" type="radio"><input id="__tabbed_3_5" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Step1</label><label for="__tabbed_3_2">Step2</label><label for="__tabbed_3_3">Step3</label><label for="__tabbed_3_4">Step4</label><label for="__tabbed_3_5">Step5</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>A list of available updates is presented. Select "Install Updates".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../list-available-updates.png"><img height="180" src="../list-available-updates.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Confirm the (possible) message concerning additional changes. Again, the password of "guru" is asked.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../additional-changes.png"><img height="180" src="../additional-changes.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Finally, all updates get downloaded and installed. Grab another coffee!</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../download-install-updates.png"><img height="180" src="../download-install-updates.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>When the system is up-to-date, reboot the PC.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../up-to-date-reboot.png"><img height="180" src="../up-to-date-reboot.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Login. Start the "Update manager" again and click "Refresh". Your system should be up-to-date. If not, repeat previous steps.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../update-manager-refresh.png"><img height="180" src="../update-manager-refresh.png" width="320"/></a></p>
+</div>
+</div>
+</input></input></input></input></input></div>
+<h2 id="system-reports">System reports</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><input id="__tabbed_4_3" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Step1</label><label for="__tabbed_4_2">Step2</label><label for="__tabbed_4_3">Step3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Go to "Menu -&gt; Administration -&gt; System Reports".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../administration-system-reports.png"><img height="180" src="../administration-system-reports.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Ignore the reports concerning the "language packs" and "the system restore utility".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../ignore-restore-language.png"><img height="180" src="../ignore-restore-language.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>No problems detected? Done!</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../no-problems.png"><img height="180" src="../no-problems.png" width="320"/></a></p>
+</div>
+</div>
+</div>
+<h2 id="applications-optional">Applications (optional)</h2>
+<ul>
+<li><a href="../../../howtos/install-chrome-browser-linux-mint/">Install Google Chrome browser</a></li>
+<li><a href="../../../howtos/install-wireshark-linux-mint21/">Install Wireshark</a></li>
+<li><a href="../../../howtos/install-tftp-linux-mint/">Install tFTP</a></li>
+</ul>
 </article>
 </div>
 </div>

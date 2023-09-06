@@ -207,8 +207,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#enter-the-bios-setup-utility">
-    Enter the BIOS Setup Utility
+<a class="md-nav__link" href="#enter-the-biosuefi-setup-utility">
+    Enter the BIOS/UEFI Setup Utility
   </a>
 </li>
 <li class="md-nav__item">
@@ -217,13 +217,18 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#locate-the-boot-order-options">
-    Locate the boot order options
+<a class="md-nav__link" href="#secure-boot">
+    Secure boot
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#saveconfirm-your-changes-and-exit">
     Save/confirm your changes and exit
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shutdown">
+    Shutdown
   </a>
 </li>
 </ul>
@@ -250,18 +255,23 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../grub-configuration/">
+        08 GRUB configuration
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../take-clonezilla-backup/">
-        08 Take Clonezilla backup
+        09 Take Clonezilla backup
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../configure-clonezilla-restore/">
-        09 Configure Clonezilla restore
+        10 Configure Clonezilla restore
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../final-result/">
-        10 Final result
+        11 Final result
       </a>
 </li>
 </ul>
@@ -500,6 +510,11 @@
         Clone a Windows Server 2022 virtual machine in VirtualBox 6.1.44
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../howtos/use-minicom-linux-mint/">
+        Use minicom on Linux Mint 21
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -551,8 +566,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#enter-the-bios-setup-utility">
-    Enter the BIOS Setup Utility
+<a class="md-nav__link" href="#enter-the-biosuefi-setup-utility">
+    Enter the BIOS/UEFI Setup Utility
   </a>
 </li>
 <li class="md-nav__item">
@@ -561,13 +576,18 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#locate-the-boot-order-options">
-    Locate the boot order options
+<a class="md-nav__link" href="#secure-boot">
+    Secure boot
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#saveconfirm-your-changes-and-exit">
     Save/confirm your changes and exit
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shutdown">
+    Shutdown
   </a>
 </li>
 </ul>
@@ -580,19 +600,42 @@
 <h1 id="configure-biosuefi">Configure BIOS/UEFI</h1>
 <h2 id="turn-on-the-computer">Turn on the computer</h2>
 <p>Turn on or restart your computer and watch for a message during the POST about a particular key, usually <span class="keys"><kbd class="key-delete">Del</kbd></span> or a function key like <span class="keys"><kbd class="key-f2">F2</kbd></span> (e.g. Fujitsu Esprimo PC) that you'll need to press to access the BIOS/UEFI setup utility. It's possible, you won't see such message at all, but a vendor splash screen instead. Specifics vary from computer to computer. Consult your hardware manual.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../images/tutorials/lab-pc/1280-720.png"><img height="180" src="../../../images/tutorials/lab-pc/1280-720.png" width="320"/></a></p>
-<h2 id="enter-the-bios-setup-utility">Enter the BIOS Setup Utility</h2>
-<p>After pressing the correct keyboard command (in this case ...), you'll enter the BIOS Setup Utility.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../images/tutorials/lab-pc/1280-720.png"><img height="180" src="../../../images/tutorials/lab-pc/1280-720.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../vendor-splash.png"><img height="180" src="../vendor-splash.png" width="320"/></a></p>
+<h2 id="enter-the-biosuefi-setup-utility">Enter the BIOS/UEFI Setup Utility</h2>
+<p>After pressing the correct keyboard command, you'll enter the BIOS/UEFI Setup Utility.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../bios-uefi-utility.png"><img height="180" src="../bios-uefi-utility.png" width="320"/></a></p>
 <h2 id="select-the-boot-mode">Select the boot mode</h2>
-<p>In this tutorial, we do not use UEFI, but BIOS-mode. Locate the option for enabling BIOS-compatible start mode (CSM or legacy mode).</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../images/tutorials/lab-pc/1280-720.png"><img height="180" src="../../../images/tutorials/lab-pc/1280-720.png" width="320"/></a></p>
-<h2 id="locate-the-boot-order-options">Locate the boot order options</h2>
-<p>Locate the option for changing the boot sequence. Verify that the harddrive is the first boot device.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../../images/tutorials/lab-pc/1280-720.png"><img height="180" src="../../../images/tutorials/lab-pc/1280-720.png" width="320"/></a></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>In this tutorial, we do not use UEFI, but BIOS-mode. For e.g. a "Fujitsu Esprimo PC", select "Boot-&gt; CSM Configuration".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../boot-csm-configuration.png"><img height="180" src="../boot-csm-configuration.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Make sure "Launch CSM" is <em>enabled</em> and configure <em>Legacy only</em> for all options.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../csm-legacy-only.png"><img height="180" src="../csm-legacy-only.png" width="320"/></a></p>
+</div>
+</div>
+</input></input></div>
+<h2 id="secure-boot">Secure boot</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Navigate to "Security -&gt; Secure boot".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../security-secureboot.png"><img height="180" src="../security-secureboot.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Make sure "secure boot" is disabled.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../disable-secureboot.png"><img height="180" src="../disable-secureboot.png" width="320"/></a></p>
+</div>
+</div>
+</input></input></div>
 <h2 id="saveconfirm-your-changes-and-exit">Save/confirm your changes and exit</h2>
-<p>If the harddrive was empty, the system won't boot. If it contained an operating system, it's possible it won't boot, but there is a chance it will boot.
-Nevermind. We will wipe the harddisk in the next steps.</p>
+<p>Exit the utility and save changes.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../exit-save-changes.png"><img height="180" src="../exit-save-changes.png" width="320"/></a></p>
+<h2 id="shutdown">Shutdown</h2>
+<p>If there <em>is</em> an operating system on the harddisk, it may or may not boot. If there is no operating system on the the harddisk, the sytem tries to PXE boot. Anyway, shutdown the PC by pressing the "power button".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../pxe-boot.png"><img height="180" src="../pxe-boot.png" width="320"/></a></p>
 </article>
 </div>
 </div>

@@ -198,9 +198,66 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          05 Configure Windows 11
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         05 Configure Windows 11
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activation">
+    Activation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#device-drivers">
+    Device drivers
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updates">
+    Updates
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#power">
+    Power
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#copy-iso-files">
+    Copy ISO files
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#applications-optional">
+    Applications (optional)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cleanup-final-restart">
+    Cleanup + final restart
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shutdown1-and-power-up">
+    Shutdown1 and power-up
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shutdown2-and-reconnect-the-network">
+    Shutdown2 and reconnect the network.
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../install-linuxmint21/">
@@ -213,18 +270,23 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../grub-configuration/">
+        08 GRUB configuration
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../take-clonezilla-backup/">
-        08 Take Clonezilla backup
+        09 Take Clonezilla backup
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../configure-clonezilla-restore/">
-        09 Configure Clonezilla restore
+        10 Configure Clonezilla restore
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../final-result/">
-        10 Final result
+        11 Final result
       </a>
 </li>
 </ul>
@@ -463,6 +525,11 @@
         Clone a Windows Server 2022 virtual machine in VirtualBox 6.1.44
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../howtos/use-minicom-linux-mint/">
+        Use minicom on Linux Mint 21
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -503,6 +570,57 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activation">
+    Activation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#device-drivers">
+    Device drivers
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updates">
+    Updates
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#power">
+    Power
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#copy-iso-files">
+    Copy ISO files
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#applications-optional">
+    Applications (optional)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cleanup-final-restart">
+    Cleanup + final restart
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shutdown1-and-power-up">
+    Shutdown1 and power-up
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shutdown2-and-reconnect-the-network">
+    Shutdown2 and reconnect the network.
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -510,23 +628,133 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="configure-windows-11">Configure Windows 11</h1>
-<!---
-- activation
-- full updates + disable updates
-- device drivers
-- copy tools from USB Flash drive -> Downloads
-- teraterm (install)
-- putty (install)
-- winscp (install)
-- wireshark (don't install yet, only installer in downloads folder)
-- chrome/firefox (install)
-- private network
-- windows explorer configuration
-- desktop shortcuts
-- empty bin
-- unplug UTP-cable + restart
-- shut down
--->
+<h2 id="activation">Activation</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Click on the "Start" button. Then click on the gear icon labeled "Settings" to open the Settings app.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../start-settings.png"><img height="180" src="../start-settings.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>In the Settings app, click on the "System" category.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../settings-system.png"><img height="180" src="../settings-system.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>On the right, click on the "Activation" option. This will open the Activation page where you can view the activation status. Here it says: "Windows is activated with a digital license". Consult official Microsoft documentation for your situation.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../digital-license.png"><img height="180" src="../digital-license.png" width="320"/></a></p>
+</div>
+</div>
+</input></input></input></div>
+<h2 id="device-drivers">Device drivers</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>For a "Fujitsu Esprimo E900", some hardware is not yet properly recognized.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../device-manager.png"><img height="180" src="../device-manager.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>The correct drivers - even for Windows 11 - can only be found when "Windows 10 (64-bit) Version 1506" is selected in the dropdown box. When the "chipset software installation utility" was downloaded and installed, all hardware was properly recognized.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../intel-chipset-fujitsu.png"><img height="180" src="../intel-chipset-fujitsu.png" width="320"/></a></p>
+</div>
+</div>
+</input></input></div>
+<h2 id="updates">Updates</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:8"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><input id="__tabbed_3_4" name="__tabbed_3" type="radio"><input id="__tabbed_3_5" name="__tabbed_3" type="radio"><input id="__tabbed_3_6" name="__tabbed_3" type="radio"><input id="__tabbed_3_7" name="__tabbed_3" type="radio"><input id="__tabbed_3_8" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Step1</label><label for="__tabbed_3_2">Step2</label><label for="__tabbed_3_3">Step3</label><label for="__tabbed_3_4">Step4</label><label for="__tabbed_3_5">Step5</label><label for="__tabbed_3_6">Step6</label><label for="__tabbed_3_7">Step7</label><label for="__tabbed_3_8">Step8</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Click on the "Start" button. Then click on the gear icon labeled "Settings" to open the Settings app.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../start-settings.png"><img height="180" src="../start-settings.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>In the Settings app, click on the "Windows Update" category.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../settings-windows-updates.png"><img height="180" src="../settings-windows-updates.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>On the Windows Update page, click on the "Check for updates" button. This will initiate a check for available updates for your Windows 11 installation.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../check-for-updates.png"><img height="180" src="../check-for-updates.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>If any updates are found, downloading begins automatically. After the updates are downloaded, Windows may prompt you to restart your computer to install them. Reboot.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../download-and-restart.png"><img height="180" src="../download-and-restart.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Once your computer restarts, Windows will automatically install the downloaded updates. This process may take some time, and your computer may restart multiple times during the installation.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../updates-restart.png"><img height="180" src="../updates-restart.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>After the initial set of updates is installed, it's a good idea to check for updates again to ensure that your system is fully up to date. Repeat previous steps to check for any additional updates that may be available.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../up-to-date.png"><img height="180" src="../up-to-date.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Once all the updates are installed, you can verify the Windows 11 version and update status by going to the Settings app, clicking on the "System" category, and then selecting "About". Here, you can see the installed version of Windows 11 and confirm that your system is up to date.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../system-about.png"><img height="180" src="../system-about.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>As this is a lab environment, "disable" the automatic updates for now; click "Start", type "services.msc" and select the "Services" app. In the Services window, scroll down and locate the "Windows Update" service. Right-click on "Windows Update" and select "Properties" from the context menu. In the Properties window, under the "General" tab, locate the "Startup type" dropdown menu. Change the startup type to "Disabled". Click on "OK" to save the changes and close the window.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../disable-automatic-updates.png"><img height="180" src="../disable-automatic-updates.png" width="320"/></a></p>
+</div>
+</div>
+</input></input></input></input></input></input></input></input></div>
+<h2 id="power">Power</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Step1</label><label for="__tabbed_4_2">Step2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>In the "Settings" app, choose "Power".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../settings-power.png"><img height="180" src="../settings-power.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>As this is a lab computer, make sure the monitor and device never go to sleep.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../sleep-never.png"><img height="180" src="../sleep-never.png" width="320"/></a></p>
+</div>
+</div>
+</input></div>
+<h2 id="copy-iso-files">Copy ISO files</h2>
+<p>In order to create some installation media with Rufus when we're offline, copy over the ISO files you need.</p>
+<!-- Win, Lin, Clonezilla -->
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
+<h2 id="applications-optional">Applications (optional)</h2>
+<ul>
+<li><a href="../../../howtos/install-rufus-windows11/">Install Rufus on Windows 11</a> -&gt; make USB-key to download GRUB and syslinux</li>
+<li><a href="../../../howtos/install-putty-windows11/">Install Putty on Windows 11</a></li>
+<li><a href="../../../howtos/install-teraterm-windows11/">Install Teraterm on Windows 11</a></li>
+<li><a href="../../../howtos/install-winscp-windows11/">Install WinSCP on Windows 11</a></li>
+<li><a href="../../../howtos/install-wireshark-windows11/">Install Wireshark on Windows 11</a> -&gt; download ONLY</li>
+<li><a href="../../../howtos/install-chrome-windows11/">Install Chrome on Windows 11</a></li>
+<li><a href="../../../howtos/install-firefox-windows11/">Install Firefox on Windows 11</a></li>
+</ul>
+<h2 id="cleanup-final-restart">Cleanup + final restart</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:6"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><input id="__tabbed_5_3" name="__tabbed_5" type="radio"/><input id="__tabbed_5_4" name="__tabbed_5" type="radio"/><input id="__tabbed_5_5" name="__tabbed_5" type="radio"/><input id="__tabbed_5_6" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Step1</label><label for="__tabbed_5_2">Step2</label><label for="__tabbed_5_3">Step3</label><label for="__tabbed_5_4">Step4</label><label for="__tabbed_5_5">Step5</label><label for="__tabbed_5_6">Step6</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Verify the network type. It must be "public network".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Configure desktop shortcuts.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Empty the recycle bin.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Right-click "Start -&gt; Settings"." Click on "Personalization -&gt; Start". Uncheck all settings.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Reboot the PC for the last time, to make sure all remaining updates are properly installed/configured.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Start a command prompt and execute "ipconfig /flushdns" followed by "ipconfig /release" and unplug the UTP cable.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
+</div>
+</div>
+</div>
+<h2 id="shutdown1-and-power-up">Shutdown1 and power-up</h2>
+<p>Shutdown the PC. Power on the PC. It is possible that some last "updates" are getting processed.</p>
+<h2 id="shutdown2-and-reconnect-the-network">Shutdown2 and reconnect the network.</h2>
+<p>Finally, login and shutdown Windows 11 for the last time. You can reconnect the network cable now (but do not boot into Windows anymore).</p>
 </article>
 </div>
 </div>
