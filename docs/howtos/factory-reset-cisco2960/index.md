@@ -2,7 +2,7 @@
 
 ## Prereqs
 - a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Linux Mint 21
-- [minicom](../install-minicom-linux-mint/index.md) terminal emulation software
+- [minicom](../use-minicom-linux-mint/index.md) terminal emulation software
 - a working IOS, so if necessary first [(re)install an IOS operating system](../reinstall-ios-cisco2960/index.md)
 
 Following commands can be executed from within IOS or from within [ROMMON-mode](../access-cisco-device-rommon/index.md).

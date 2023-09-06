@@ -91,7 +91,7 @@
     <img src="../authenticate.png" width="320" height="180"/>
 
 === "Step5"
-    Click in the field "Main (...)". Another window appears. Select the repository with the fastest speed. In this case, let's choose LiteServer and click "Apply".
+    Click in the field "Main (...)". Another window appears. Select the repository with the fastest speed. In this case, let's choose "LiteServer" and click "Apply".
 
     <img src="../select-mirror.png" width="320" height="180"/>
 

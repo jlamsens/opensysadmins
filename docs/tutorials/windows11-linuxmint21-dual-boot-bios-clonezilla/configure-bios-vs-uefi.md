@@ -3,23 +3,43 @@
 ## Turn on the computer
 Turn on or restart your computer and watch for a message during the POST about a particular key, usually ++delete++ or a function key like ++f2++ (e.g. Fujitsu Esprimo PC) that you'll need to press to access the BIOS/UEFI setup utility. It's possible, you won't see such message at all, but a vendor splash screen instead. Specifics vary from computer to computer. Consult your hardware manual.
 
-<img src="../../../images/tutorials/lab-pc/1280-720.png" width="320" height="180"/>
+<img src="../vendor-splash.png" width="320" height="180"/>
 
-## Enter the BIOS Setup Utility
-After pressing the correct keyboard command (in this case ...), you'll enter the BIOS Setup Utility.
+## Enter the BIOS/UEFI Setup Utility
+After pressing the correct keyboard command, you'll enter the BIOS/UEFI Setup Utility.
 
-<img src="../../../images/tutorials/lab-pc/1280-720.png" width="320" height="180"/>
+<img src="../bios-uefi-utility.png" width="320" height="180"/>
 
 ## Select the boot mode
-In this tutorial, we do not use UEFI, but BIOS-mode. Locate the option for enabling BIOS-compatible start mode (CSM or legacy mode).
 
-<img src="../../../images/tutorials/lab-pc/1280-720.png" width="320" height="180"/>
+=== "Step1"
+    In this tutorial, we do not use UEFI, but BIOS-mode. For e.g. a "Fujitsu Esprimo PC", select "Boot-> CSM Configuration".
 
-## Locate the boot order options
-Locate the option for changing the boot sequence. Verify that the harddrive is the first boot device.
+    <img src="../boot-csm-configuration.png" width="320" height="180"/>
 
-<img src="../../../images/tutorials/lab-pc/1280-720.png" width="320" height="180"/>
+=== "Step2"
+    Make sure "Launch CSM" is _enabled_ and configure _Legacy only_ for all options.
+
+    <img src="../csm-legacy-only.png" width="320" height="180"/>
+
+## Secure boot
+
+=== "Step1"
+    Navigate to "Security -> Secure boot".
+
+    <img src="../security-secureboot.png" width="320" height="180"/>
+
+=== "Step2"
+    Make sure "secure boot" is disabled.
+
+    <img src="../disable-secureboot.png" width="320" height="180"/>
 
 ## Save/confirm your changes and exit
-If the harddrive was empty, the system won't boot. If it contained an operating system, it's possible it won't boot, but there is a chance it will boot.
-Nevermind. We will wipe the harddisk in the next steps.
+Exit the utility and save changes.
+
+<img src="../exit-save-changes.png" width="320" height="180"/>
+
+## Shutdown
+If there _is_ an operating system on the harddisk, it may or may not boot. If there is no operating system on the the harddisk, the sytem tries to PXE boot. Anyway, shutdown the PC by pressing the "power button".
+
+<img src="../pxe-boot.png" width="320" height="180"/>

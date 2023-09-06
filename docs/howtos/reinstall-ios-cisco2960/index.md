@@ -2,7 +2,7 @@
 
 ## Prereqs
 - a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Linux Mint 21
-- [minicom](../install-minicom-linux-mint/index.md) terminal emulation software
+- [minicom](../use-minicom-linux-mint/index.md) terminal emulation software
 - a [valid Cisco IOS image](../acquire-valid-ios-image/index.md)
 - a [tFTP service](../install-tftp-linux-mint/index.md)
 
