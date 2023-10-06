@@ -2,7 +2,7 @@
 
 ## Boot from USB
 === "Step1"
-    Insert the [Windows 11 USB flash drive](../../howtos/windows11-bootable-usb-flash-drive/index.md). Make sure the monitor is "on". Start the PC. In this case a "Fujitsu Esprimo", press ++f12++ once at the "Fujitsu splash screen" and wait. Specifics vary from computer to computer. Consult your hardware manual.
+    Insert the [Windows 11 USB flash drive](../../howtos/windows11-bootable-usb-flash-drive/index.md) you just created. Make sure the monitor is "on". Start the PC. In this case a "Fujitsu Esprimo", press ++f12++ once at the "Fujitsu splash screen" and wait. Specifics vary from computer to computer. Consult your hardware manual.
 
     <img src="../insert-usb.png" width="320" height="180"/>
 
@@ -71,7 +71,7 @@ Select “Custom: Install Windows only (advanced)".
     <img src="../additional-partitions.png" width="320" height="180"/>
 
 === "Step4"
-    Windows creates additional partitions. Notice, there is some "Unallocated space" left. This is for the Linux installation later on.
+    Windows creates additional partitions. Notice, there is some "Unallocated space" left. This is for the Linux installation and Clonezilla dump later on.
     Select "Drive 0 Partition 3" for the Windows installation.
 
     <img src="../windows-location.png" width="320" height="180"/>

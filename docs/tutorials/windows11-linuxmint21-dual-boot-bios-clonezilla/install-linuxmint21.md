@@ -96,6 +96,6 @@
     <img src="../remove-installation-medium.png" width="320" height="180"/>
 
 ## Finishing
-After reboot, you have a menu where you can choose between "Linux Mint 21 Cinnamon" and "Windows Recovery Environment" (this name is not correctly identified, must be a bug?). There is a counter from 10s to 0s. Make your choice in time. By default, "Linux Mint 21 Cinnamon" gets started.
+After reboot, you have a menu where you can choose between "Linux Mint 21.x Cinnamon" and "Windows Recovery Environment" (this name is not correctly identified, must be a bug?). There is a counter from 10s to 0s. Make your choice in time. By default, "Linux Mint" gets started.
 
 <img src="../grub-linux-windows.png" width="320" height="180"/>

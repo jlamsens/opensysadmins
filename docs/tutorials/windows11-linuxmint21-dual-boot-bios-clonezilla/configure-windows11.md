@@ -18,7 +18,7 @@
 
 ## Device drivers
 === "Step1"
-    For a "Fujitsu Esprimo E900", some hardware is not yet properly recognized.
+    For a "Fujitsu Esprimo E900", some hardware is not yet properly recognized. Specifics vary from computer to computer.
 
     <img src="../device-manager.png" width="320" height="180"/>
 
@@ -80,7 +80,7 @@
     <img src="../sleep-never.png" width="320" height="180"/>
 
 ## Copy ISO files
-In order to create some installation media with Rufus when we're offline, copy over the ISO files you need.
+In order to [create some installation media with Rufus](../../howtos/install-rufus-windows11/index.md) when we're offline, copy over the ISO files you need.
 <!-- Win, Lin, Clonezilla -->
 
 <img src="../1280-720.png" width="320" height="180"/>
@@ -126,7 +126,7 @@ In order to create some installation media with Rufus when we're offline, copy o
     <img src="../1280-720.png" width="320" height="180"/>
 
 ## Shutdown1 and power-up
-Shutdown the PC. Power on the PC. It is possible that some last "updates" are getting processed.
+Shutdown the PC. Power on the PC. It is possible that some last "updates" are getting configured.
 
 ## Shutdown2 and reconnect the network.
 Finally, login and shutdown Windows 11 for the last time. You can reconnect the network cable now (but do not boot into Windows anymore).
