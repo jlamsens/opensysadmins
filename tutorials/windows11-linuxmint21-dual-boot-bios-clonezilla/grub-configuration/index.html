@@ -213,9 +213,46 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          08 GRUB configuration
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         08 GRUB configuration
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#download-clonezilla">
+    Download Clonezilla
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remove-grub-countdown-timer">
+    Remove GRUB countdown timer
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#custom-configuration">
+    Custom configuration
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adjust-file-permissions">
+    Adjust file permissions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#regenerate-grub-configuration">
+    Regenerate GRUB configuration
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../take-clonezilla-backup/">
@@ -513,6 +550,37 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#download-clonezilla">
+    Download Clonezilla
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remove-grub-countdown-timer">
+    Remove GRUB countdown timer
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#custom-configuration">
+    Custom configuration
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adjust-file-permissions">
+    Adjust file permissions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#regenerate-grub-configuration">
+    Regenerate GRUB configuration
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -520,6 +588,130 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="grub-configuration">GRUB configuration</h1>
+<h2 id="download-clonezilla">Download Clonezilla</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label><label for="__tabbed_1_4">Step4</label><label for="__tabbed_1_5">Step5</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Use your favorite search engine to search for "Clonezilla" and choose the official website.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clonezilla-search-iso.png"><img height="180" src="../clonezilla-search-iso.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Choose the "Ubuntu-based alternative stable" version.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clonezilla-select-edition.png"><img height="180" src="../clonezilla-select-edition.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Make sure the CPU archictecture is "amd64" and the file type is "iso". Click "Download".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clonezilla-download-iso.png"><img height="180" src="../clonezilla-download-iso.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>The file will be downloaded to the "Downloads" folder.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clonezilla-downloads-folder.png"><img height="180" src="../clonezilla-downloads-folder.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Create a directory "ISO" and move the file into that directory.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
+</div>
+</div>
+</input></input></input></input></input></div>
+<h2 id="remove-grub-countdown-timer">Remove GRUB countdown timer</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">guru@lab:~$_</label><label for="__tabbed_2_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/GRUB_TIMEOUT=10/GRUB_TIMEOUT=-1/g'</span><span class="w"> </span>/etc/default/grub
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>guru@lab:~$ sudo sed -i 's/GRUB_TIMEOUT=10/GRUB_TIMEOUT=-1/g' /etc/default/grub
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="custom-configuration">Custom configuration</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:7"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><input id="__tabbed_3_4" name="__tabbed_3" type="radio"><input id="__tabbed_3_5" name="__tabbed_3" type="radio"><input id="__tabbed_3_6" name="__tabbed_3" type="radio"><input id="__tabbed_3_7" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">step1</label><label for="__tabbed_3_2">step2</label><label for="__tabbed_3_3">step3</label><label for="__tabbed_3_4">step4</label><label for="__tabbed_3_5">step5</label><label for="__tabbed_3_6">step6a</label><label for="__tabbed_3_7">step6b</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Open /etc/grub.d/40_custom in an editor (as root)</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo xed /etc/grub.d/40_custom &amp;
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Open /boot/grub/grub.cfg in an editor (as non-root user)
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>xed /boot/grub/grub.cfg &amp;
+</code></pre></div></td></tr></table></div></p>
+</div>
+<div class="tabbed-block">
+<p>Copy over "Linux part".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Copy over "Windows part".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Add "empty menu" entry.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Copy this text to paste later on.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>...
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>...
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Add "Clonezilla restore" entry.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
+</div>
+</div>
+</input></input></input></input></input></input></input></div>
+<h2 id="adjust-file-permissions">Adjust file permissions</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">guru@lab:~$_</label><label for="__tabbed_4_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>cd /etc/grub.d/
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>sudo chmod -x *
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>sudo chmod +x 00* 05* 40*
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>ls -lh
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>...
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>...
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>...
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<h2 id="regenerate-grub-configuration">Regenerate GRUB configuration</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">guru@pc:~$_</label><label for="__tabbed_5_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>sudo update-grub
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>guru@pc:~$ ssudo &lt;execute some command&gt;
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>[sudo] password for guru:     
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>...
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
 </article>
 </div>
 </div>
