@@ -78,7 +78,7 @@
 === "Step5"
     For minicom, press ++control+a++ and then ++z++. Type ++s++ (Send files) and select "xmodem". Navigate your way to the new [IOS file](../todo/index.md) (here /home/guru/Downloads). Press ++space++ to tag the file and press "Okay" to send.
 
-    <img src="xmodem-navigate-ios.png" width="320" height="180"/>
+    <img src="1280-720.png" width="320" height="180"/>
 
 === "Step6"
     Grab a coffee. This can take a long time depending on the size of the IOS image. Wait for the transfer to complete and then press ++enter++ to quit.

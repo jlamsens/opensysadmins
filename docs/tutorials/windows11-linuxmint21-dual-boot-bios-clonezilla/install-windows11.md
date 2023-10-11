@@ -2,7 +2,7 @@
 
 ## Boot from USB
 === "Step1"
-    Insert the [Windows 11 USB flash drive](../../howtos/windows11-bootable-usb-flash-drive/index.md) you just created. Make sure the monitor is "on". Start the PC. In this case a "Fujitsu Esprimo", press ++f12++ once at the "Fujitsu splash screen" and wait. Specifics vary from computer to computer. Consult your hardware manual.
+    Insert the [Windows 11 USB flash drive](../../howtos/windows11-bootable-usb-flash-drive/index.md){:target="_blank"} you just created. Make sure the monitor is "on". Start the PC. In this case a "Fujitsu Esprimo", press ++f12++ once at the "Fujitsu splash screen" and wait. Specifics vary from computer to computer. Consult your hardware manual.
 
     <img src="../insert-usb.png" width="320" height="180"/>
 
@@ -12,6 +12,8 @@
     <img src="../boot-menu.png" width="320" height="180"/>
 
 ## Bypass checks
+Windows 11 has specific hardware requirements, including the need for TPM version 2.0 and certain CPU/RAM requirements. A "Fujitsu Esprimo E900" does not meet these requirements, but is more than enough for a lab environment, so let's bypass these checks.
+
 === "Step1"
     Press ++shift++ ++f10++ to open up a command prompt. Typ "regedit" and press ++enter++ The registry editor opens.
 
@@ -72,7 +74,7 @@ Select “Custom: Install Windows only (advanced)".
 
 === "Step4"
     Windows creates additional partitions. Notice, there is some "Unallocated space" left. This is for the Linux installation and Clonezilla dump later on.
-    Select "Drive 0 Partition 3" for the Windows installation.
+    Select "Drive 0 Partition 2" for the Windows installation.
 
     <img src="../windows-location.png" width="320" height="180"/>
 

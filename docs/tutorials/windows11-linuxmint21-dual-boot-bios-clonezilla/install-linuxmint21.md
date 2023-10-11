@@ -2,7 +2,7 @@
 
 ## Boot from USB
 === "Step1"
-    Insert the [Linux Mint 21 USB flash drive](../../howtos/linuxmint21-bootable-usb-flash-drive/index.md). Make sure the monitor is "on". Start the PC. In this case (Fujitusu Esprimo PC), press ++f12++ once at the "Fujitsu splash screen" and wait. Specifics vary from computer to computer. Consult your hardware manual.
+    Insert the [Linux Mint 21 USB flash drive](../../howtos/linuxmint21-bootable-usb-flash-drive/index.md){:target="_blank"}. Make sure the monitor is "on". Start the PC. In this case (Fujitusu Esprimo PC), press ++f12++ once at the "Fujitsu splash screen" and wait. Specifics vary from computer to computer. Consult your hardware manual.
 
     <img src="../insert-usb.png" width="320" height="180"/>
 

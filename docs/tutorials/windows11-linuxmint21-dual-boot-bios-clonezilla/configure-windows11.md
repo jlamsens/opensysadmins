@@ -80,19 +80,19 @@
     <img src="../sleep-never.png" width="320" height="180"/>
 
 ## Copy ISO files
-In order to [create some installation media with Rufus](../../howtos/install-rufus-windows11/index.md) when we're offline, copy over the ISO files you need.
+In order to [create some installation media with Rufus](../../howtos/install-rufus-windows11/index.md){:target="_blank"} when we're offline later on, copy over the ISO files you need.
 <!-- Win, Lin, Clonezilla -->
 
 <img src="../1280-720.png" width="320" height="180"/>
 
 ## Applications (optional)
-- [Install Rufus on Windows 11](../../../howtos/install-rufus-windows11/) -> make USB-key to download GRUB and syslinux
-- [Install Putty on Windows 11](../../../howtos/install-putty-windows11/)
-- [Install Teraterm on Windows 11](../../../howtos/install-teraterm-windows11/)
-- [Install WinSCP on Windows 11](../../../howtos/install-winscp-windows11/)
-- [Install Wireshark on Windows 11](../../../howtos/install-wireshark-windows11/) -> download ONLY
-- [Install Chrome on Windows 11](../../../howtos/install-chrome-windows11/)
-- [Install Firefox on Windows 11](../../../howtos/install-firefox-windows11/)
+- [Install Rufus on Windows 11](../../../howtos/install-rufus-windows11/){:target="_blank"} -> make USB-key to download GRUB and syslinux
+- [Install Putty on Windows 11](../../../howtos/install-putty-windows11/){:target="_blank"}
+- [Install Teraterm on Windows 11](../../../howtos/install-teraterm-windows11/){:target="_blank"}
+- [Install WinSCP on Windows 11](../../../howtos/install-winscp-windows11/){:target="_blank"}
+- [Install Wireshark on Windows 11](../../../howtos/install-wireshark-windows11/){:target="_blank"} -> download ONLY
+- [Install Chrome on Windows 11](../../../howtos/install-chrome-windows11/){:target="_blank"}
+- [Install Firefox on Windows 11](../../../howtos/install-firefox-windows11/){:target="_blank"}
 
 ## Cleanup + final restart
 === "Step1"
@@ -129,4 +129,4 @@ In order to [create some installation media with Rufus](../../howtos/install-ruf
 Shutdown the PC. Power on the PC. It is possible that some last "updates" are getting configured.
 
 ## Shutdown2 and reconnect the network.
-Finally, login and shutdown Windows 11 for the last time. You can reconnect the network cable now (but do not boot into Windows anymore).
+Finally, login and shutdown Windows 11 for the last time. Reconnect the UTP network cable now (but do not boot into Windows anymore).
