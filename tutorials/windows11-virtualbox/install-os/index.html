@@ -217,18 +217,33 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-bios-clonezilla/take-clonezilla-backup/">
-        09 Take Clonezilla backup
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-bios-clonezilla/create-storage-partition/">
+        09 Create storage partition
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-bios-clonezilla/configure-clonezilla-restore/">
-        10 Configure Clonezilla restore
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-bios-clonezilla/create-clonezilla-network-backup/">
+        10 Create Clonezilla network backup
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-bios-clonezilla/restore-clonezilla-network-backup/">
+        11 Restore Clonezilla network backup
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-bios-clonezilla/activate-windows/">
+        12 Activate Windows
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-bios-clonezilla/create-local-clonezilla-dump/">
+        13 Create local Clonezilla dump
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../windows11-linuxmint21-dual-boot-bios-clonezilla/final-result/">
-        11 Final result
+        14 Final result
       </a>
 </li>
 </ul>
@@ -696,7 +711,7 @@
 </div>
 </input></input></input></div>
 <h2 id="bypass-checks">Bypass checks</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label><label for="__tabbed_2_3">Step3</label><label for="__tabbed_2_4">Step4</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label><label for="__tabbed_2_3">Step3</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Press <span class="keys"><kbd class="key-shift">Shift</kbd></span> <span class="keys"><kbd class="key-f10">F10</kbd></span> to open up a command prompt. Typ "regedit" and press <span class="keys"><kbd class="key-enter">Enter</kbd></span> The registry editor opens.</p>
@@ -707,15 +722,11 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../labconfig.png"><img height="180" src="../labconfig.png" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>selecteer "New -&gt; DWORD (32-bit)". Give this "Value" the name "BypassTPMCheck". Doubleclick on this value and change the "Value data" of 0 to 1.</p>
+<p>Select "New -&gt; DWORD (32-bit)". Give this "Value" the name "BypassTPMCheck". Doubleclick on this value and change the "Value data" of 0 to 1. Do the same for "“BypassRAMCheck” and "BypassSecureBootCheck". Compare with the screenshot below. Close the registry editor and command prompt windows.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../dword.png"><img height="180" src="../dword.png" width="320"/></a></p>
 </div>
-<div class="tabbed-block">
-<p>Do the same for "“BypassRAMCheck” and "BypassSecureBootCheck". Compare with the screenshot below. Close the registry editor and command prompt windows.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../bypass.png"><img height="180" src="../bypass.png" width="320"/></a></p>
 </div>
-</div>
-</input></input></input></input></div>
+</input></input></input></div>
 <h2 id="time-and-currency-format">Time and currency format</h2>
 <p>Dutch (Belgium). Keyboard or input method: “Belgian (Period).</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../keyboard.png"><img height="180" src="../keyboard.png" width="320"/></a></p>
@@ -772,14 +783,14 @@
 </div>
 </input></input></input></div>
 <h2 id="bypass-internet-connection">Bypass internet connection</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><input id="__tabbed_5_3" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Step1</label><label for="__tabbed_5_2">Step2</label><label for="__tabbed_5_3">Step3</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><input id="__tabbed_5_3" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Step1</label><label for="__tabbed_5_2">Step2</label><label for="__tabbed_5_3">Step3</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>At this moment, we do not have an active internet connection (NAT network, no static IP address yet). Microsoft want to push us for a "Microsoft account". We don't want that. Press <span class="keys"><kbd class="key-shift">Shift</kbd></span> <span class="keys"><kbd class="key-f10">F10</kbd></span> for a command prompt. Typ "oobe\bypassnro" (attention: the letter "o" and not the number "0") and press <span class="keys"><kbd class="key-enter">Enter</kbd></span></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../bypass-nro.png"><img height="180" src="../bypass-nro.png" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>The virtual machine reboots and the OOBE (out-of-the-box-experience) restart. Unfortunately, you have to choose the correct region (Belgium) and keyboard layout - Belgium(period) - again. Also skip the extra keyboard layout again. You will get an extra option "I don't have internet".</p>
+<p>The virtual machine reboots and the OOBE (out-of-the-box-experience) restarts. Unfortunately, you have to choose the correct region (Belgium) and keyboard layout - Belgium(period) - again. Also skip the extra keyboard layout again. You will get an extra option "I don't have internet".</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../no-internet.png"><img height="180" src="../no-internet.png" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
@@ -787,7 +798,7 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../limited-setup.png"><img height="180" src="../limited-setup.png" width="320"/></a></p>
 </div>
 </div>
-</input></div>
+</input></input></div>
 <h2 id="account">Account</h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:5"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><input id="__tabbed_6_3" name="__tabbed_6" type="radio"/><input id="__tabbed_6_4" name="__tabbed_6" type="radio"/><input id="__tabbed_6_5" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Step1</label><label for="__tabbed_6_2">Step2</label><label for="__tabbed_6_3">Step3</label><label for="__tabbed_6_4">Step4</label><label for="__tabbed_6_5">Step5</label></div>
 <div class="tabbed-content">

@@ -7,12 +7,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Standing on the shoulder of giants" name="description"/>
 <meta content="Jurgen Lamsens" name="author"/>
-<link href="https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/take-clonezilla-backup/" rel="canonical"/>
+<link href="https://www.opensysadmins.com/tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/create-storage-partition/" rel="canonical"/>
 <link href="../grub-configuration/" rel="prev"/>
-<link href="../configure-clonezilla-restore/" rel="next"/>
+<link href="../create-clonezilla-network-backup/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
-<title>09 Take Clonezilla backup - OpenSysAdmins</title>
+<title>09 Create storage partition - OpenSysAdmins</title>
 <link href="../../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#take-clonezilla-backup">
+<a class="md-skip" href="#create-storage-partition">
           Skip to content
         </a>
 </div>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              09 Take Clonezilla backup
+              09 Create storage partition
             
           </span>
 </div>
@@ -219,11 +219,11 @@
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          09 Take Clonezilla backup
+          09 Create storage partition
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        09 Take Clonezilla backup
+        09 Create storage partition
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -231,6 +231,16 @@
       Table of contents
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#check-partition-number-and-unallocated-disk-space">
+    Check partition number and unallocated disk space
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#expand-and-verify-extended-partition">
+    Expand and verify extended partition
+  </a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#create-partition">
     Create partition
@@ -241,22 +251,32 @@
     Create filesystem
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#make-clonezilla-dump">
-    Make clonezilla dump
-  </a>
-</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../configure-clonezilla-restore/">
-        10 Configure Clonezilla restore
+<a class="md-nav__link" href="../create-clonezilla-network-backup/">
+        10 Create Clonezilla network backup
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../restore-clonezilla-network-backup/">
+        11 Restore Clonezilla network backup
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../activate-windows/">
+        12 Activate Windows
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../create-local-clonezilla-dump/">
+        13 Create local Clonezilla dump
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../final-result/">
-        11 Final result
+        14 Final result
       </a>
 </li>
 </ul>
@@ -546,6 +566,16 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#check-partition-number-and-unallocated-disk-space">
+    Check partition number and unallocated disk space
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#expand-and-verify-extended-partition">
+    Expand and verify extended partition
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#create-partition">
     Create partition
   </a>
@@ -555,11 +585,6 @@
     Create filesystem
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#make-clonezilla-dump">
-    Make clonezilla dump
-  </a>
-</li>
 </ul>
 </nav>
 </div>
@@ -567,95 +592,165 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="take-clonezilla-backup">Take Clonezilla backup</h1>
-<h2 id="create-partition">Create partition</h2>
+<h1 id="create-storage-partition">Create storage partition</h1>
+<h2 id="check-partition-number-and-unallocated-disk-space">Check partition number and unallocated disk space</h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">guru@pc:~$_</label><label for="__tabbed_1_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo &lt;execute some command&gt;
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo parted -s /dev/sda unit s print free
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>guru@pc:~$ sudo &lt;execute some command&gt;
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>[sudo] password for guru:     
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>...
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>...
+<p>The extended partition has number 4 and ends at sector 1702858751. There is some unallocated disk space available.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>guru@lab:~$ sudo parted -s /dev/sda unit s print free
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>Model: ATA ST1000DM003-1CH1 (scsi)
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Disk /dev/sda: 1953525168s
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>Sector size (logical/physical): 512B/4096B
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>Partition Table: msdos
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>Disk Flags: 
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>Number  Start        End          Size        Type      File system     Flags
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>        63s          2047s        1985s                 Free Space
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>1      2048s        206847s      204800s     primary   ntfs            boot
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>2      206848s      837578751s   837371904s  primary   ntfs
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>3      837578752s   838858751s   1280000s    primary   ntfs            msftres
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>        838858752s   838860797s   2046s                 Free Space
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="hll">4      838860798s   1702858751s  863997954s  extended
+</span><a id="__codelineno-1-15" name="__codelineno-1-15"></a>5      838860800s   902858751s   63997952s   logical   linux-swap(v1)
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>6      902860800s   1702858751s  799997952s  logical   ext4
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="hll">        1702858752s  1953525167s  250666416s            Free Space
+</span><a id="__codelineno-1-18" name="__codelineno-1-18"></a>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a>guru@lab:~$ 
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="expand-and-verify-extended-partition">Expand and verify extended partition</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">guru@pc:~$_</label><label for="__tabbed_2_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>This is an interactive command. See output.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo parted /dev/sda
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>guru@lab:~$ sudo parted /dev/sda
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>[sudo] password for guru:     
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>GNU Parted 3.4
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>Using /dev/sda
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>Welcome to GNU Parted! Type 'help' to view a list of commands.
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="hll">(parted) resizepart 4                                                     
+</span><a id="__codelineno-3-7" name="__codelineno-3-7"></a>Warning: Partition /dev/sda4 is being used. Are you sure you want to continue?
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="hll">Yes/No? Yes                                                               
+</span><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="hll">End?  [872GB]? -0                                                         
+</span><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="hll">(parted) quit                                                             
+</span><a id="__codelineno-3-11" name="__codelineno-3-11"></a>Information: You may need to update /etc/fstab.
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>guru@lab:~$
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="create-partition">Create partition</h2>
+<p>We'll use all remaining unallocated (free) space. First use the sector found in step one. This will fail. See output.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">guru@pc:~$_</label><label for="__tabbed_3_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo parted -s /dev/sda mkpart logical ext4 1702858752s -- -1s      &lt;--- fails
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>sudo parted -s /dev/sda mkpart logical ext4 1702858753s -- -1s      &lt;--- OK
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>guru@lab:~$ sudo parted -s /dev/sda mkpart logical ext4 1702858752s -- -1s
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>Error: You requested a partition from 872GB to 1000GB (sectors 1702858752..1953525167).
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>The closest location we can manage is 872GB to 1000GB (sectors 1702858753..1953525167).
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>guru@lab:~$ sudo parted -s /dev/sda mkpart logical ext4 1702858753s -- -1s
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>Warning: The resulting partition is not properly aligned for best performance: 1702858753s % 2048s != 0s
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>guru@lab:~$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
 <h2 id="create-filesystem">Create filesystem</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">guru@pc:~$_</label><label for="__tabbed_2_2">output</label></div>
+<p>Just create it. No need to mount it.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">guru@pc:~$_</label><label for="__tabbed_4_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo &lt;execute some command&gt;
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>sudo mkfs.ext4 /dev/sda7
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>guru@pc:~$ sudo &lt;execute some command&gt;
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>[sudo] password for guru:     
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>...
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>...
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>guru@lab:~$ sudo mkfs.ext4 /dev/sda7
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>mke2fs 1.46.5 (30-Dec-2021)
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>/dev/sda7 alignment is offset by 3584 bytes.
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>This may result in very poor performance, (re)-partitioning suggested.
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>Creating filesystem with 31333301 4k blocks and 7839744 inodes
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>Filesystem UUID: 4d53f383-64b7-4aa7-9093-b3829e27c1f4
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>Superblock backups stored on blocks: 
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>    32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, 
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>    4096000, 7962624, 11239424, 20480000, 23887872
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>Allocating group tables: done                            
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>Writing inode tables: done                            
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a>Creating journal (131072 blocks): done
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a>Writing superblocks and filesystem accounting information: done   
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a>guru@lab:~$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
-<h2 id="make-clonezilla-dump">Make clonezilla dump</h2>
-<p>(Optional) task explanation.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:11"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><input id="__tabbed_3_4" name="__tabbed_3" type="radio"><input id="__tabbed_3_5" name="__tabbed_3" type="radio"><input id="__tabbed_3_6" name="__tabbed_3" type="radio"><input id="__tabbed_3_7" name="__tabbed_3" type="radio"><input id="__tabbed_3_8" name="__tabbed_3" type="radio"><input id="__tabbed_3_9" name="__tabbed_3" type="radio"><input id="__tabbed_3_10" name="__tabbed_3" type="radio"><input id="__tabbed_3_11" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Step1</label><label for="__tabbed_3_2">StepX</label><label for="__tabbed_3_3">StepX</label><label for="__tabbed_3_4">StepX</label><label for="__tabbed_3_5">StepX</label><label for="__tabbed_3_6">StepX</label><label for="__tabbed_3_7">StepX</label><label for="__tabbed_3_8">StepX</label><label for="__tabbed_3_9">StepX</label><label for="__tabbed_3_10">StepX</label><label for="__tabbed_3_11">StepX</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>(Optional) step explanation.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>(Optional) step explanation.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>(Optional) step explanation.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>(Optional) step explanation.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>(Optional) step explanation.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>(Optional) step explanation.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>(Optional) step explanation.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>(Optional) step explanation.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>(Optional) step explanation.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>(Optional) step explanation.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>(Optional) step explanation.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
-</div>
-</div>
-</input></input></input></input></input></input></input></input></input></input></div>
 </article>
 </div>
 </div>
