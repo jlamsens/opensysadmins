@@ -28,14 +28,9 @@
     <img src="../labconfig.png" width="320" height="180"/>
 
 === "Step3"
-    selecteer "New -> DWORD (32-bit)". Give this "Value" the name "BypassTPMCheck". Doubleclick on this value and change the "Value data" of 0 to 1.
+    Select "New -> DWORD (32-bit)". Give this "Value" the name "BypassTPMCheck". Doubleclick on this value and change the "Value data" of 0 to 1. Do the same for "“BypassRAMCheck” and "BypassSecureBootCheck". Compare with the screenshot below. Close the registry editor and command prompt windows.
 
     <img src="../dword.png" width="320" height="180"/>
-
-=== "Step4"
-    Do the same for "“BypassRAMCheck” and "BypassSecureBootCheck". Compare with the screenshot below. Close the registry editor and command prompt windows.
-
-    <img src="../bypass.png" width="320" height="180"/>
 
 ## Time and currency format
 Dutch (Belgium). Keyboard or input method: “Belgian (Period).
@@ -111,7 +106,7 @@ There are no partitions yet. Click "next".
     <img src="../bypass-nro.png" width="320" height="180"/>
 
 === "Step2"
-    The virtual machine reboots and the OOBE (out-of-the-box-experience) restart. Unfortunately, you have to choose the correct region (Belgium) and keyboard layout - Belgium(period) - again. Also skip the extra keyboard layout again. You will get an extra option "I don't have internet".
+    The virtual machine reboots and the OOBE (out-of-the-box-experience) restarts. Unfortunately, you have to choose the correct region (Belgium) and keyboard layout - Belgium(period) - again. Also skip the extra keyboard layout again. You will get an extra option "I don't have internet".
 
     <img src="../no-internet.png" width="320" height="180"/>
 

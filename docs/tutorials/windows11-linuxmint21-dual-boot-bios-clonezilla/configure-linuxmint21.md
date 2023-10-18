@@ -96,3 +96,20 @@
 - [Install Wireshark](../../howtos/install-wireshark-linux-mint21/index.md){:target="_blank"}
 - [Acquire a valid Cisco IOS image](../../howtos/acquire-valid-ios-image/index.md){:target="_blank"}
 - [Install tFTP](../../howtos/install-tftp-linux-mint/index.md){:target="_blank"}
+- [Install minicom](../../howtos/install-minicom-linux-mint/index.md){:target="_blank"}
+
+## Cleanup
+Turn off the screen: never
+
+Screensaver
+
+Remove browser history
+
+Remove bash history
+
+Empty trash
+
+Change background (commodore 64)
+
+Desktop shortcuts: Chrome, Firefox, Wireshark
+Panel shortcuts: Chrome, Firefox

@@ -1,7 +1,7 @@
 # Clone a Windows 11 virtual machine in VirtualBox 6.1.44
 
 ## Prereqs
-- an existing [Windows 11 virtual machine](../../tutorials/windows11-virtualbox/index.md)
+- an existing [Windows 11 virtual machine](../../tutorials/windows11-virtualbox/index.md){:target="_blank"}
 
 ## VirtualBox
 === "Step1"
@@ -56,13 +56,13 @@
     <img src="verify-internet-connection.png" width="320" height="180"/>
 
 === "Step5"
-    The network icon on the bottom-right taskbar will soon change to this:
+    The network icon on the bottom-right taskbar should look like this:
 
     <img src="network-icon.png" width="320" height="180"/>
 
 ## Computername
 === "Step1"
-    Right-click on "Start -> System. Change the computer name to "vm8". Restart now.
+    Right-click on "Start -> System. Change the computer name to "vm7". Click "Next" and select "Restart now".
 
     <img src="rename-pc.png" width="320" height="180"/>
 

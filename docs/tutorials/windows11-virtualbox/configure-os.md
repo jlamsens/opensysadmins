@@ -32,7 +32,7 @@
     <img src="../eject-guest-additions.png" width="320" height="180"/>
 
 === "Step7"
-    The shared folder "/home/guru/Downloads" is visible in "Windows Explorer" via drive-letter Z:
+    Restart Windows Explorer. The shared folder "/home/guru/Downloads" is visible in "Windows Explorer" via drive-letter Z:
 
     <img src="../shared-folder-explorer.png" width="320" height="180"/>
 
@@ -90,11 +90,9 @@ Go to "Settings -> About" and change the computer name to "vm6". Restart later.
 
 ## Restart and shutdown
 === "Step1"
-    Let's do a final restart so all updates are properly installed.
+    Let's do a final restart so all pending updates are properly installed.
 
     <img src="../final-restart.png" width="320" height="180"/>
 
 === "Step2"
     Finally, "shutdown" Windows.
-
-    <img src="../shutdown.png" width="320" height="180"/>

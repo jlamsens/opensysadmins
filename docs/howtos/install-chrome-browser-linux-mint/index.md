@@ -6,7 +6,7 @@
 ## Download and import Google's signed key
 Signing keys are used to verify the authenticity and integrity of packages from repositories. Download Google's and import at once.
 
-=== "guru@hp:~/Downloads$_"
+=== "guru@hp:~$_"
 
     ``` title='' hl_lines="0"
     curl -sS https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/google-chrome.gpg &> /dev/null
@@ -15,14 +15,14 @@ Signing keys are used to verify the authenticity and integrity of packages from 
 === "output"
 
     ``` title='' hl_lines="0"
-    # No output here
-    guru@hp:~/Downloads$ curl -sS https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/google-chrome.gpg &> /dev/null
-    guru@hp:~/Downloads$
+    guru@hp:~$ curl -sS https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/google-chrome.gpg &> /dev/null
+    [sudo] password for guru:     
+    guru@hp:~$ 
     ```
 
 ## Add Google's Chrome repository
 
-=== "guru@hp:~/Downloads$_"
+=== "guru@hp:~$_"
 
     ``` title='' hl_lines="0"
     sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
@@ -32,8 +32,8 @@ Signing keys are used to verify the authenticity and integrity of packages from 
 
     ``` title='' hl_lines="0"
     # No output here
-    guru@hp:~/Downloads$ sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
-    guru@hp:~/Downloads$ 
+    guru@hp:~$ sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
+    guru@hp:~$ 
     ```
 
 ## Update package list

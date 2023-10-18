@@ -360,9 +360,12 @@ nav:
       - 06 Install Linux Mint 21: tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/install-linuxmint21.md
       - 07 Configure Linux Mint 21: tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-linuxmint21.md
       - 08 GRUB configuration: tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/grub-configuration.md
-      - 09 Take Clonezilla backup: tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/take-clonezilla-backup.md
-      - 10 Configure Clonezilla restore: tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-clonezilla-restore.md
-      - 11 Final result: tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/final-result.md
+      - 09 Create storage partition: tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/create-storage-partition.md
+      - 10 Create Clonezilla network backup: tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/create-clonezilla-network-backup.md
+      - 11 Restore Clonezilla network backup: tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/restore-clonezilla-network-backup.md
+      - 12 Activate Windows: tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/activate-windows.md
+      - 13 Create local Clonezilla dump: tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/create-local-clonezilla-dump.md
+      - 14 Final result: tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/final-result.md
 
     - Install a Windows 11 and Linux Mint 21 dual boot PC (UEFI):
       - tutorials/windows11-linuxmint21-dual-boot-uefi/index.md # overview/landing page

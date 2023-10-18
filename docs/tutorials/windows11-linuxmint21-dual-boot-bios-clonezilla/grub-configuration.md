@@ -38,7 +38,8 @@
 === "output"
     ``` title=''
     guru@lab:~$ sudo sed -i 's/GRUB_TIMEOUT=10/GRUB_TIMEOUT=-1/g' /etc/default/grub
-    ...
+    [sudo] password for guru:     
+    guru@lab:~$ 
     ```
 
 ## Custom configuration
@@ -116,8 +117,12 @@
 === "output"
     
     ``` title='' hl_lines="0"
-    guru@pc:~$ ssudo <execute some command>
+    guru@lab:~$ sudo update-grub
     [sudo] password for guru:     
-    ...
-    ...
+    Sourcing file `/etc/default/grub'
+    Sourcing file `/etc/default/grub.d/50_linuxmint.cfg'
+    Sourcing file `/etc/default/grub.d/init-select.cfg'
+    Generating grub configuration file ...
+    done
+    guru@lab:~$ 
     ```
