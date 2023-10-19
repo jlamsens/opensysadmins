@@ -30,13 +30,13 @@
     <img src="cloning.png" width="320" height="180"/>
 
 === "Step6"
-    Endresult: a clone of "vm8" without snapshot(s).
+    Endresult: a clone of "vm16" without snapshot(s).
 
     <img src="clone-endresult.png" width="320" height="180"/>
 
 ## IP address
 === "Step1"
-    Right-click on the network icon on the bottom-right taskbar -> Open Network and Internet settings.
+    Start the cloned virtual machine "vm17" and login. Right-click on the network icon on the bottom-right taskbar -> Open Network and Internet settings.
 
     <img src="network-internet-settings.png" width="320" height="180"/>
 
@@ -51,13 +51,13 @@
     <img src="ip-settings.png" width="320" height="180"/>
 
 === "Step4"
-    Close all windows. Click "Start" and typ "cmd" to open a command prompt: verify the internet connection.  The network icon on the bottom-right taskbar will soon change.
+    Close all windows. Click "Start" and typ "cmd" to open a command prompt: verify the internet connection.  The network icon on the bottom-right taskbar will show connectivity.
 
     <img src="verify-internet-connection.png" width="320" height="180"/>
 
 ## Computername
 === "Step1"
-    Right-click on "Start -> System". Change the computer name from "vm8" to "vm9". Restart now.
+    Right-click on "Start -> System". Change the computer name from "vm16" to "vm17". Restart now.
 
     <img src="rename-pc.png" width="320" height="180"/>
 

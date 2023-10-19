@@ -53,12 +53,17 @@
     <img src="../ip-settings.png" width="320" height="180"/>
 
 === "Step4"
-    Close all windows. Click "Start" and typ "cmd" to open a command prompt: verify the internet connection.  The network icon on the bottom-right taskbar will soon change.
+    Watch closely for the popup. Select "No" at this time.
+
+    <img src="../not-discoverable.png" width="320" height="180"/>
+
+=== "Step5"
+    Close all windows. Click "Start" and typ "cmd" to open a command prompt: verify the internet connection.  The network icon on the bottom-right taskbar will show connectivity.
 
     <img src="../verify-internet-connection.png" width="320" height="180"/>
 
 ## Computername
-Right-click on "Start -> System" and change the computer name to "vm8". Restart later.
+Right-click on "Start -> System" and change the computer name to "vm16". **Restart later**.
 
 <img src="../change-computer-name.png" width="320" height="180"/>
 
