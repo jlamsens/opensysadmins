@@ -1,4 +1,4 @@
-# Create Clonezilla network backup
+# Create local Clonezilla dump
 
 ## Step1 -> 8
 
@@ -65,115 +65,63 @@
     <img src="../clone10.jpg" width="320" height="180"/>
 
 === "Step13"
-    The image will be stored on a SSH server.
+    The image will be stored on the local disk.
     
-    <img src="../clone11.jpg" width="320" height="180"/>
+    <img src="../clone-local11.jpg" width="320" height="180"/>
 
 === "Step14"
-    Depending on your network; I choose "DHCP".
+    X.
     
-    <img src="../clone12.jpg" width="320" height="180"/>
+    <img src="../clone-local12.jpg" width="320" height="180"/>
 
 === "Step15"
-    My SSH server is at 192.168.120.254
+    X
     
-    <img src="../clone13.jpg" width="320" height="180"/>
+    <img src="../clone-local13.jpg" width="320" height="180"/>
 
 === "Step16"
-    The SSH service listens at port 22.
+    X.
     
-    <img src="../clone14.jpg" width="320" height="180"/>
+    <img src="../clone-local14.jpg" width="320" height="180"/>
 
 ## Step17 -> 24
 
 === "Step17"
-    There is a regular user "guru" on the SSH server.
+    X.
     
-    <img src="../clone15.jpg" width="320" height="180"/>
+    <img src="../clone-local15.jpg" width="320" height="180"/>
 
 === "Step18"
-    The image will be stored in the homedirectory.
+    X.
     
-    <img src="../clone16.jpg" width="320" height="180"/>
+    <img src="../clone-local16.jpg" width="320" height="180"/>
 
 === "Step19"
-    Read the message.
+    X.
     
-    <img src="../clone17.jpg" width="320" height="180"/>
+    <img src="../clone-local17.jpg" width="320" height="180"/>
 
 === "Step20"
-    Acknowledge that you want to make a connection.
+    X.
     
-    <img src="../clone18.jpg" width="320" height="180"/>
+    <img src="../clone-local18.jpg" width="320" height="180"/>
 
 === "Step21"
-    Enter the password for user "guru".
+    X.
     
-    <img src="../clone19.jpg" width="320" height="180"/>
+    <img src="../clone-local19.jpg" width="320" height="180"/>
 
 === "Step22"
-    With a correct password, the remote folder gets mounted locally.
+    X.
     
-    <img src="../clone20.jpg" width="320" height="180"/>
+    <img src="../clone-local20.jpg" width="320" height="180"/>
 
 === "Step23"
-    Select "Beginner".
+    X.
     
-    <img src="../clone21.jpg" width="320" height="180"/>
+    <img src="../clone-local21.jpg" width="320" height="180"/>
 
 === "Step24"
-    We will save the local disk to an image.
+    X.
     
-    <img src="../clone22.jpg" width="320" height="180"/>
-
-## Step25 -> 34
-
-=== "Step25"
-    Give a meaningful name.
-
-    <img src="../clone23.jpg" width="320" height="180"/>
-
-=== "Step26"
-    The local disk "sda" is the source disk.
-
-    <img src="../clone24.jpg" width="320" height="180"/>
-
-=== "Step27"
-    Select the "-z9p" compression option.
-    
-    <img src="../clone25.jpg" width="320" height="180"/>
-
-=== "Step28"
-    Skip checking the source file system.
-    
-    <img src="../clone26.jpg" width="320" height="180"/>
-
-=== "Step29"
-    Skip checking the saved image.
-    
-    <img src="../clone27.jpg" width="320" height="180"/>
-
-=== "Step30"
-    No need for encryption here.
-    
-    <img src="../clone28.jpg" width="320" height="180"/>
-
-=== "Step31"
-    Poweroff the PC when the dump is completed.
-    
-    <img src="../clone29.jpg" width="320" height="180"/>
-
-=== "Step32"
-    Notice the command with all the options. Press ++enter++ to begin.
-    
-    <img src="../clone30.jpg" width="320" height="180"/>
-
-=== "Step33"
-    Confirm "y" to continue.
-    
-    <img src="../clone31.jpg" width="320" height="180"/>
-
-=== "Step34"
-    Grab a coffee. This can take a while. The PC will be powered off at the end.
-    
-    <img src="../clone32.jpg" width="320" height="180"/>
+    <img src="../clone-local22.jpg" width="320" height="180"/>

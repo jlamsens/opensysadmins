@@ -83,7 +83,7 @@
 In order to [create some installation media with Rufus](../../howtos/install-rufus-windows11/index.md){:target="_blank"} when we're offline later on, copy over the ISO files you need.
 <!-- Win, Lin, Clonezilla -->
 
-<img src="../1280-720.png" width="320" height="180"/>
+<img src="../copy-iso-files.png" width="320" height="180"/>
 
 ## Applications (optional)
 - [Install Rufus on Windows 11](../../../howtos/install-rufus-windows11/){:target="_blank"} -> make USB-key to download GRUB and syslinux
@@ -96,34 +96,29 @@ In order to [create some installation media with Rufus](../../howtos/install-ruf
 
 ## Cleanup + final restart
 === "Step1"
-    Verify the network type. It must be "public network".
-
-    <img src="../1280-720.png" width="320" height="180"/>
-
-=== "Step2"
     Configure desktop shortcuts.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../configure-desktop-shortcuts.png" width="320" height="180"/>
 
-=== "Step3"
+=== "Step2"
     Empty the recycle bin.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../empty-recycle-bin.png" width="320" height="180"/>
 
-=== "Step4"
+=== "Step3"
     Right-click "Start -> Settings"." Click on "Personalization -> Start". Uncheck all settings.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../uncheck-start-settings.png" width="320" height="180"/>
 
-=== "Step5"
+=== "Step4"
     Reboot the PC for the last time, to make sure all remaining updates are properly installed/configured.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../reboot1.png" width="320" height="180"/>
 
-=== "Step6"
+=== "Step5"
     Start a command prompt and execute "ipconfig /flushdns" followed by "ipconfig /release" and unplug the UTP cable.
 
-    <img src="../1280-720.png" width="320" height="180"/>
+    <img src="../flush-release.png" width="320" height="180"/>
 
 ## Shutdown1 and power-up
 Shutdown the PC. Power on the PC. It is possible that some last "updates" are getting configured.

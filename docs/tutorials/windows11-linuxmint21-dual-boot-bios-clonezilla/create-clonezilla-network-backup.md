@@ -75,7 +75,7 @@
     <img src="../clone12.jpg" width="320" height="180"/>
 
 === "Step15"
-    My SSH server is at 192.168.120.254
+    My SSH server is at 192.168.1.105
     
     <img src="../clone13.jpg" width="320" height="180"/>
 
@@ -92,7 +92,7 @@
     <img src="../clone15.jpg" width="320" height="180"/>
 
 === "Step18"
-    The image will be stored in the homedirectory.
+    The image will be stored in guru's homedirectory, in an existing subdirectory "Downloads/DUMPS".
     
     <img src="../clone16.jpg" width="320" height="180"/>
 

@@ -99,17 +99,33 @@
 - [Install minicom](../../howtos/install-minicom-linux-mint/index.md){:target="_blank"}
 
 ## Cleanup
-Turn off the screen: never
 
-Screensaver
+=== "Step1"
+    Let's set a nice background.
 
-Remove browser history
+    <img src="../desktop-background.png" width="320" height="180"/>
 
-Remove bash history
+=== "Step2"
+    Click Menu -> Preferences -> Power Management. Change both "Power Options" to "Never".
 
-Empty trash
+    <img src="../power-options.png" width="320" height="180"/>
 
-Change background (commodore 64)
+=== "Step3"
+    Clear Chrome/Firefox browser history.
 
-Desktop shortcuts: Chrome, Firefox, Wireshark
-Panel shortcuts: Chrome, Firefox
+    <img src="../clear-browsing-data.png" width="320" height="180"/>
+
+=== "Step4"
+    Clear bash history.
+
+    <img src="../clear-bash-history.png" width="320" height="180"/>
+
+=== "Step5"
+    Empty trash.
+
+    <img src="../empty-trash.png" width="320" height="180"/>
+
+=== "Step6"
+    Desktop shortcuts: Firefox, Chrome, Wireshark. Panel shortcuts: Files, Firefox, Chrome, Terminal.
+
+    <img src="../desktop-panel-shortcuts.png" width="320" height="180"/>
