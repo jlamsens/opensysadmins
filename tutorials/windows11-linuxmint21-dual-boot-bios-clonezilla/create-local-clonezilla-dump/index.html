@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#create-clonezilla-network-backup">
+<a class="md-skip" href="#create-local-clonezilla-dump">
           Skip to content
         </a>
 </div>
@@ -264,11 +264,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#step17-24">
     Step17 -&gt; 24
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step25-34">
-    Step25 -&gt; 34
   </a>
 </li>
 </ul>
@@ -580,11 +575,6 @@
     Step17 -&gt; 24
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#step25-34">
-    Step25 -&gt; 34
-  </a>
-</li>
 </ul>
 </nav>
 </div>
@@ -592,7 +582,7 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="create-clonezilla-network-backup">Create Clonezilla network backup</h1>
+<h1 id="create-local-clonezilla-dump">Create local Clonezilla dump</h1>
 <h2 id="step1-8">Step1 -&gt; 8</h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:8"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><input id="__tabbed_1_6" name="__tabbed_1" type="radio"><input id="__tabbed_1_7" name="__tabbed_1" type="radio"><input id="__tabbed_1_8" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label><label for="__tabbed_1_4">Step4</label><label for="__tabbed_1_5">Step5</label><label for="__tabbed_1_6">Step6</label><label for="__tabbed_1_7">Step7</label><label for="__tabbed_1_8">Step8</label></div>
 <div class="tabbed-content">
@@ -650,20 +640,20 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone10.jpg"><img height="180" src="../clone10.jpg" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>The image will be stored on a SSH server.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone11.jpg"><img height="180" src="../clone11.jpg" width="320"/></a></p>
+<p>The image will be stored on the local disk.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone-local11.jpg"><img height="180" src="../clone-local11.jpg" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>Depending on your network; I choose "DHCP".</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone12.jpg"><img height="180" src="../clone12.jpg" width="320"/></a></p>
+<p>X.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone-local12.jpg"><img height="180" src="../clone-local12.jpg" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>My SSH server is at 192.168.120.254</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone13.jpg"><img height="180" src="../clone13.jpg" width="320"/></a></p>
+<p>X</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone-local13.jpg"><img height="180" src="../clone-local13.jpg" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>The SSH service listens at port 22.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone14.jpg"><img height="180" src="../clone14.jpg" width="320"/></a></p>
+<p>X.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone-local14.jpg"><img height="180" src="../clone-local14.jpg" width="320"/></a></p>
 </div>
 </div>
 </input></input></input></input></input></input></div>
@@ -671,81 +661,36 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="3:8"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><input id="__tabbed_3_3" name="__tabbed_3" type="radio"/><input id="__tabbed_3_4" name="__tabbed_3" type="radio"/><input id="__tabbed_3_5" name="__tabbed_3" type="radio"/><input id="__tabbed_3_6" name="__tabbed_3" type="radio"/><input id="__tabbed_3_7" name="__tabbed_3" type="radio"/><input id="__tabbed_3_8" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Step17</label><label for="__tabbed_3_2">Step18</label><label for="__tabbed_3_3">Step19</label><label for="__tabbed_3_4">Step20</label><label for="__tabbed_3_5">Step21</label><label for="__tabbed_3_6">Step22</label><label for="__tabbed_3_7">Step23</label><label for="__tabbed_3_8">Step24</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>There is a regular user "guru" on the SSH server.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone15.jpg"><img height="180" src="../clone15.jpg" width="320"/></a></p>
+<p>X.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone-local15.jpg"><img height="180" src="../clone-local15.jpg" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>The image will be stored in the homedirectory.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone16.jpg"><img height="180" src="../clone16.jpg" width="320"/></a></p>
+<p>X.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone-local16.jpg"><img height="180" src="../clone-local16.jpg" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>Read the message.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone17.jpg"><img height="180" src="../clone17.jpg" width="320"/></a></p>
+<p>X.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone-local17.jpg"><img height="180" src="../clone-local17.jpg" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>Acknowledge that you want to make a connection.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone18.jpg"><img height="180" src="../clone18.jpg" width="320"/></a></p>
+<p>X.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone-local18.jpg"><img height="180" src="../clone-local18.jpg" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>Enter the password for user "guru".</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone19.jpg"><img height="180" src="../clone19.jpg" width="320"/></a></p>
+<p>X.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone-local19.jpg"><img height="180" src="../clone-local19.jpg" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>With a correct password, the remote folder gets mounted locally.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone20.jpg"><img height="180" src="../clone20.jpg" width="320"/></a></p>
+<p>X.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone-local20.jpg"><img height="180" src="../clone-local20.jpg" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>Select "Beginner".</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone21.jpg"><img height="180" src="../clone21.jpg" width="320"/></a></p>
+<p>X.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone-local21.jpg"><img height="180" src="../clone-local21.jpg" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>We will save the local disk to an image.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone22.jpg"><img height="180" src="../clone22.jpg" width="320"/></a></p>
-</div>
-</div>
-</div>
-<h2 id="step25-34">Step25 -&gt; 34</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:10"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><input id="__tabbed_4_3" name="__tabbed_4" type="radio"/><input id="__tabbed_4_4" name="__tabbed_4" type="radio"/><input id="__tabbed_4_5" name="__tabbed_4" type="radio"/><input id="__tabbed_4_6" name="__tabbed_4" type="radio"/><input id="__tabbed_4_7" name="__tabbed_4" type="radio"/><input id="__tabbed_4_8" name="__tabbed_4" type="radio"/><input id="__tabbed_4_9" name="__tabbed_4" type="radio"/><input id="__tabbed_4_10" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Step25</label><label for="__tabbed_4_2">Step26</label><label for="__tabbed_4_3">Step27</label><label for="__tabbed_4_4">Step28</label><label for="__tabbed_4_5">Step29</label><label for="__tabbed_4_6">Step30</label><label for="__tabbed_4_7">Step31</label><label for="__tabbed_4_8">Step32</label><label for="__tabbed_4_9">Step33</label><label for="__tabbed_4_10">Step34</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Give a meaningful name.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone23.jpg"><img height="180" src="../clone23.jpg" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>The local disk "sda" is the source disk.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone24.jpg"><img height="180" src="../clone24.jpg" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>Select the "-z9p" compression option.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone25.jpg"><img height="180" src="../clone25.jpg" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>Skip checking the source file system.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone26.jpg"><img height="180" src="../clone26.jpg" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>Skip checking the saved image.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone27.jpg"><img height="180" src="../clone27.jpg" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>No need for encryption here.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone28.jpg"><img height="180" src="../clone28.jpg" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>Poweroff the PC when the dump is completed.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone29.jpg"><img height="180" src="../clone29.jpg" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>Notice the command with all the options. Press <span class="keys"><kbd class="key-enter">Enter</kbd></span> to begin.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone30.jpg"><img height="180" src="../clone30.jpg" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>Confirm "y" to continue.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone31.jpg"><img height="180" src="../clone31.jpg" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>Grab a coffee. This can take a while. The PC will be powered off at the end.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone32.jpg"><img height="180" src="../clone32.jpg" width="320"/></a></p>
+<p>X.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clone-local22.jpg"><img height="180" src="../clone-local22.jpg" width="320"/></a></p>
 </div>
 </div>
 </div>

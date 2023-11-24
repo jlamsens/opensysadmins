@@ -624,7 +624,7 @@
 </div>
 <div class="tabbed-block">
 <p>Create a directory "ISO" and move the file into that directory.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../directory-iso.png"><img height="180" src="../directory-iso.png" width="320"/></a></p>
 </div>
 </div>
 </input></input></input></input></input></div>
@@ -659,29 +659,35 @@
 </code></pre></div></td></tr></table></div></p>
 </div>
 <div class="tabbed-block">
-<p>Copy over "Linux part".</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
+<p>Copy over the "Linux part".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../copy-over-linux-part.png"><img height="180" src="../copy-over-linux-part.png" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>Copy over "Windows part".</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
+<p>Copy over the "Windows part". Then close grub.cfg, we don't need that file anymore.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../copy-over-windows-part.png"><img height="180" src="../copy-over-windows-part.png" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
 <p>Add "empty menu" entry.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../empty-menu.png"><img height="180" src="../empty-menu.png" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
 <p>Copy this text to paste later on.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>...
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>...
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>...
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>menuentry 'Restore CLEAN INSTALL' {
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>    set isofile="/home/guru/Downloads/ISO/clonezilla-live-20230426-lunar-amd64.iso"
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>    loopback loop $isofile
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>    linux (loop)/live/vmlinuz boot=live union=overlay username=user config components quiet noswap nolocales edd=on nomodeset ocs_prerun=\"mount /dev/sda7 /home/partimag\" ocs_live_run=\"/usr/sbin/ocs-sr --batch -e1 auto -e2 -t -r -j2 -k -scr -p poweroff restoreparts win-lin sda1 sda2 sda3 sda4 sda5 sda6\" ocs_live_extra_param=\"\" keyboard-layouts=\"NONE \" ocs_live_batch=\"yes\" locales= vga=788 ip=frommedia nosplash toram=filesystem.squashfs findiso=$isofile
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>    initrd (loop)/live/initrd.img
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>}
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <p>Add "Clonezilla restore" entry.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../1280-720.png"><img height="180" src="../1280-720.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../add-clonezilla-restore.png"><img height="180" src="../add-clonezilla-restore.png" width="320"/></a></p>
 </div>
 </div>
 </input></input></input></input></input></input></input></div>
@@ -699,13 +705,39 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span>
-<span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>...
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>...
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a>...
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a>...
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>guru@lab:~$ cd /etc/grub.d
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>guru@lab:/etc/grub.d$ sudo chmod -x *
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>guru@lab:/etc/grub.d$ sudo chmod +x 00* 05* 40*
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>guru@lab:/etc/grub.d$ ls -lh
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>total 136K
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>-rwxr-xr-x 1 root root  11K Dec 18  2022 00_header
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>-rwxr-xr-x 1 root root 6,2K Dec  2  2022 05_debian_theme
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>-rw-r--r-- 1 root root  19K Dec 18  2022 10_linux
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>-rw-r--r-- 1 root root  43K Dec 18  2022 10_linux_zfs
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>-rw-r--r-- 1 root root  15K Dec 18  2022 20_linux_xen
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>-rw-r--r-- 1 root root  14K Dec 18  2022 30_os-prober
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>-rw-r--r-- 1 root root 1,4K Dec 18  2022 30_uefi-firmware
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>-rw-r--r-- 1 root root  700 Sep 20  2022 35_fwupd
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>-rwxr-xr-x 1 root root 2,8K Oct 11 13:26 40_custom
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a>-rw-r--r-- 1 root root  215 Dec 18  2022 41_custom
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a>-rw-r--r-- 1 root root  483 Dec 18  2022 README
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a>guru@lab:/etc/grub.d$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>

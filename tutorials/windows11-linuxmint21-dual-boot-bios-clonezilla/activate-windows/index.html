@@ -233,9 +233,31 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          12 Activate Windows
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         12 Activate Windows
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#boot-into-windows">
+    Boot into Windows
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activation">
+    Activation
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../create-local-clonezilla-dump/">
@@ -528,6 +550,22 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#boot-into-windows">
+    Boot into Windows
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activation">
+    Activation
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -535,6 +573,37 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="activate-windows">Activate windows</h1>
+<p>Windows uses a system called Product Activation to ensure that it is only installed and used on one device at a time. Activation is closely tied to the hardware of the machine, including details like the motherboard, CPU, and other components. When you restore a system image to a different machine, Windows detects that the hardware has changed significantly. Those changes in hardware often trigger a reactivation requirement.</p>
+<h2 id="boot-into-windows">Boot into Windows</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Choose "Windows 11 Pro 22H2" at the GRUB boot menu.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../grub-boot-menu.jpg"><img height="180" src="../grub-boot-menu.jpg" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Windows detects that the hardware has changed significantly.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../hardware-detection.jpg"><img height="180" src="../hardware-detection.jpg" width="320"/></a></p>
+</div>
+</div>
+</input></input></div>
+<h2 id="activation">Activation</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label><label for="__tabbed_2_3">Step3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Click on the "Start" button. Then click on the gear icon labeled "Settings" to open the Settings app.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../start-settings.png"><img height="180" src="../start-settings.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>In the Settings app, click on the "System" category.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../settings-system.png"><img height="180" src="../settings-system.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>On the right, click on the "Activation" option. This will open the Activation page where you can view the activation status. Here it says: "Windows is activated with a digital license". Consult official Microsoft documentation for your situation.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../digital-license.png"><img height="180" src="../digital-license.png" width="320"/></a></p>
+</div>
+</div>
+</input></input></input></div>
 </article>
 </div>
 </div>
