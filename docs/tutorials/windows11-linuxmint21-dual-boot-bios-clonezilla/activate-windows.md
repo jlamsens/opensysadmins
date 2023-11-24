@@ -24,6 +24,6 @@ Windows uses a system called Product Activation to ensure that it is only instal
     <img src="../settings-system.png" width="320" height="180"/>
 
 === "Step3"
-    On the right, click on the "Activation" option. This will open the Activation page where you can view the activation status. Here it says: "Windows is activated with a digital license". Consult official Microsoft documentation for your situation.
+    On the right, click on the "Activation" option. This will open the Activation page where you can view the activation status. Here it says: "Windows is activated with a digital license". This is because we have "internet access" so Windows could re-activate. Consult official Microsoft documentation for your situation.
 
     <img src="../digital-license.png" width="320" height="180"/>

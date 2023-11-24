@@ -1,4 +1,5 @@
 # Create local Clonezilla dump
+Finally, let's make a local backup available on the storage partition, ready to be restored.
 
 ## Step1 -> 8
 

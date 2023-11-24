@@ -1,8 +1,10 @@
 # Create storage partition
+A local storage partition will be used, to hold the clonezilla backup of all other partitions.
+
 
 ## Check partition number and unallocated disk space
 
-=== "guru@pc:~$_"
+=== "guru@lab:~$_"
 
     ``` title=''
     sudo parted -s /dev/sda unit s print free
@@ -35,7 +37,7 @@
 
 ## Expand and verify extended partition
 
-=== "guru@pc:~$_"
+=== "guru@lab:~$_"
     This is an interactive command. See output.
 
     ``` title=''
@@ -62,7 +64,7 @@
 ## Create partition
 We'll use all remaining unallocated (free) space. First use the sector found in step one. This will fail. See output.
 
-=== "guru@pc:~$_"
+=== "guru@lab:~$_"
 
     ``` title=''
     sudo parted -s /dev/sda mkpart logical ext4 1702858752s -- -1s      <--- fails
@@ -84,7 +86,7 @@ We'll use all remaining unallocated (free) space. First use the sector found in 
 ## Create filesystem
 Just create it. No need to mount it.
 
-=== "guru@pc:~$_"
+=== "guru@lab:~$_"
 
     ``` title=''
     sudo mkfs.ext4 /dev/sda7

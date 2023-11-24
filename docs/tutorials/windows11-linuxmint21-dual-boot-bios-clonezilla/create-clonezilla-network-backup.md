@@ -1,4 +1,5 @@
 # Create Clonezilla network backup
+Let's take an image of our "gold PC" to a storage PC using SSH.
 
 ## Step1 -> 8
 

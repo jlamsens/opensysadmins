@@ -18,7 +18,7 @@
 
 ## Device drivers
 === "Step1"
-    For a "Fujitsu Esprimo E900", some hardware is not yet properly recognized. Specifics vary from computer to computer.
+    For a "Fujitsu Esprimo E920", some hardware is not yet properly recognized. Specifics vary from computer to computer.
 
     <img src="../device-manager.png" width="320" height="180"/>
 

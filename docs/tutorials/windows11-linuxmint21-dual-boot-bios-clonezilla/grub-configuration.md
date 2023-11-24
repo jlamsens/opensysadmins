@@ -1,4 +1,5 @@
 # GRUB configuration
+Let's create a nice and simple boot menu with 3 choices.
 
 ## Download Clonezilla
 
@@ -124,7 +125,7 @@
 
 ## Regenerate GRUB configuration
 
-=== "guru@pc:~$_"
+=== "guru@lab:~$_"
 
     ``` title=''
     sudo update-grub

@@ -25,7 +25,7 @@ Clonezilla is a free and open-source disk cloning and imaging software that allo
 === "Overview4"
     All restoring.
 
-    <img src="1280-720.png" width="320" height="180"/>
+    <img src="all-restoring.png" width="320" height="180"/>
 
 === "Overview5"
     Workflow.

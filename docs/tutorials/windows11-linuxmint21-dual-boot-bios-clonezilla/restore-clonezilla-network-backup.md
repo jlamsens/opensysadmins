@@ -1,4 +1,5 @@
 # Restore Clonezilla network backup
+Now let's restore the image saved on the "storage PC" to another "lab PC" using SSH.
 
 ## Step1 -> 8
 
@@ -92,7 +93,7 @@
     <img src="../clone15.jpg" width="320" height="180"/>
 
 === "Step18"
-    The image will be stored in guru's homedirectory, in an existing subdirectory "Downloads/DUMPS".
+    The image is stored in guru's homedirectory, in an existing subdirectory "Downloads/DUMPS".
     
     <img src="../clone16.jpg" width="320" height="180"/>
 
@@ -122,14 +123,14 @@
     <img src="../clone21.jpg" width="320" height="180"/>
 
 === "Step24"
-    ...
+    Clonezilla finds a valid image, so the option "restoredisk/parts/..." is available.
     
     <img src="../restore24.jpg" width="320" height="180"/>
 
 ## Step25 -> 33
 
 === "Step25"
-    Choose "win-lin" for the image file to restore.
+    All available images are listed. Choose "win-lin" for the image file to restore.
 
     <img src="../restore25.jpg" width="320" height="180"/>
 
