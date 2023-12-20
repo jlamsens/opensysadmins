@@ -34,9 +34,42 @@
 
     <img src="clone-endresult.png" width="320" height="180"/>
 
+## Sysprep
+Sysprep is used to remove system-specific information from a Windows installation, such as the computer name and security identifier (SID). This is necessary, if you want to add a cloned Windows machine to a Windows active directory domain.
+
+=== "Step1"
+    Boot the newly cloned VM and login. Start Explorer and navigate to "c:\Windows\System32\Sysprep". Right-click on "sysprep" and select "Run as Administrator".
+
+    <img src="sysprep_as_administrator.png" width="320" height="180"/>
+
+=== "Step2"
+    Select "Enter System Out-of-Box Experience (OOBE)" and put a check next to "Generalize". Select "Reboot" as shutdown option.
+
+    <img src="sysprep_oobe_reboot.png" width="320" height="180"/>
+
+=== "Step3"
+    Sysprep is now running and will reboot Windows afterwards.
+
+    <img src="sysprep_running.png" width="320" height="180"/>
+
+=== "Step4"
+    You are greeted with a welcome screen. Personal preference here.
+
+    <img src="sysprep_hi.png" width="320" height="180"/>
+
+=== "Step5"
+    Accept the license terms.
+
+    <img src="sysprep_accept_license.png" width="320" height="180"/>
+
+=== "Step6"
+    Configure the password for the built-in administrator account ("Admin123" for this lab environment). Windows reboots afterwards.
+
+    <img src="sysprep_password.png" width="320" height="180"/>
+
 ## IP address
 === "Step1"
-    Start the cloned virtual machine "vm17" and login. Right-click on the network icon on the bottom-right taskbar -> Open Network and Internet settings.
+    Login. Right-click on the network icon on the bottom-right taskbar -> Open Network and Internet settings.
 
     <img src="network-internet-settings.png" width="320" height="180"/>
 
@@ -46,7 +79,7 @@
     <img src="change-adapter-options.png" width="320" height="180"/>
 
 === "Step3"
-    Double-click on "Ethernet", select "Properties", double-click on "Internet Protocol Version 4 (TCP/IPv4) and change "192.168.10.8" to "192.168.10.9".
+    Double-click on "Ethernet", select "Properties", double-click on "Internet Protocol Version 4 (TCP/IPv4)" and configure IP settings.
 
     <img src="ip-settings.png" width="320" height="180"/>
 
