@@ -503,6 +503,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#sysprep">
+    Sysprep
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#ip-address">
     IP address
   </a>
@@ -581,6 +586,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#sysprep">
+    Sysprep
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#ip-address">
     IP address
   </a>
@@ -636,11 +646,41 @@
 </div>
 </div>
 </input></input></input></input></input></input></div>
-<h2 id="ip-address">IP address</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label><label for="__tabbed_2_3">Step3</label><label for="__tabbed_2_4">Step4</label></div>
+<h2 id="sysprep">Sysprep</h2>
+<p>Sysprep is used to remove system-specific information from a Windows installation, such as the computer name and security identifier (SID). This is necessary, if you want to add a cloned Windows machine to a Windows active directory domain.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:6"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><input id="__tabbed_2_5" name="__tabbed_2" type="radio"><input id="__tabbed_2_6" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label><label for="__tabbed_2_3">Step3</label><label for="__tabbed_2_4">Step4</label><label for="__tabbed_2_5">Step5</label><label for="__tabbed_2_6">Step6</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Start the cloned virtual machine "vm17" and login. Right-click on the network icon on the bottom-right taskbar -&gt; Open Network and Internet settings.</p>
+<p>Boot the newly cloned VM and login. Start Explorer and navigate to "c:\Windows\System32\Sysprep". Right-click on "sysprep" and select "Run as Administrator".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="sysprep_as_administrator.png"><img height="180" src="sysprep_as_administrator.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Select "Enter System Out-of-Box Experience (OOBE)" and put a check next to "Generalize". Select "Reboot" as shutdown option.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="sysprep_oobe_reboot.png"><img height="180" src="sysprep_oobe_reboot.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Sysprep is now running and will reboot Windows afterwards.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="sysprep_running.png"><img height="180" src="sysprep_running.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>You are greeted with a welcome screen. Personal preference here.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="sysprep_hi.png"><img height="180" src="sysprep_hi.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Accept the license terms.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="sysprep_accept_license.png"><img height="180" src="sysprep_accept_license.png" width="320"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Configure the password for the built-in administrator account ("Admin123" for this lab environment). Windows reboots afterwards.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="sysprep_password.png"><img height="180" src="sysprep_password.png" width="320"/></a></p>
+</div>
+</div>
+</input></input></input></input></input></input></div>
+<h2 id="ip-address">IP address</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"/><input id="__tabbed_3_4" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Step1</label><label for="__tabbed_3_2">Step2</label><label for="__tabbed_3_3">Step3</label><label for="__tabbed_3_4">Step4</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Login. Right-click on the network icon on the bottom-right taskbar -&gt; Open Network and Internet settings.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="network-internet-settings.png"><img height="180" src="network-internet-settings.png" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
@@ -648,7 +688,7 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="change-adapter-options.png"><img height="180" src="change-adapter-options.png" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>Double-click on "Ethernet", select "Properties", double-click on "Internet Protocol Version 4 (TCP/IPv4) and change "192.168.10.8" to "192.168.10.9".</p>
+<p>Double-click on "Ethernet", select "Properties", double-click on "Internet Protocol Version 4 (TCP/IPv4)" and configure IP settings.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="ip-settings.png"><img height="180" src="ip-settings.png" width="320"/></a></p>
 </div>
 <div class="tabbed-block">
@@ -656,9 +696,9 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="verify-internet-connection.png"><img height="180" src="verify-internet-connection.png" width="320"/></a></p>
 </div>
 </div>
-</input></input></input></input></div>
+</input></input></div>
 <h2 id="computername">Computername</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Step1</label><label for="__tabbed_3_2">Step2</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Step1</label><label for="__tabbed_4_2">Step2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Right-click on "Start -&gt; System". Change the computer name from "vm16" to "vm17". Restart now.</p>
@@ -669,9 +709,9 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="shutdown.png"><img height="180" src="shutdown.png" width="320"/></a></p>
 </div>
 </div>
-</input></input></div>
+</div>
 <h2 id="snapshot">Snapshot</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:4"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"/><input id="__tabbed_4_4" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Step1</label><label for="__tabbed_4_2">Step2</label><label for="__tabbed_4_3">Step3</label><label for="__tabbed_4_4">Step4</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:4"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><input id="__tabbed_5_3" name="__tabbed_5" type="radio"/><input id="__tabbed_5_4" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Step1</label><label for="__tabbed_5_2">Step2</label><label for="__tabbed_5_3">Step3</label><label for="__tabbed_5_4">Step4</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Select "Machine -&gt; Tools -&gt; Snapshots".</p>
@@ -690,7 +730,7 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="restore-successful.png"><img height="180" src="restore-successful.png" width="320"/></a></p>
 </div>
 </div>
-</input></input></div>
+</div>
 </article>
 </div>
 </div>
