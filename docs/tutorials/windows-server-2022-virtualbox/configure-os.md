@@ -7,31 +7,31 @@
     <img src="../login.png" width="320" height="180"/>
 
 === "Step2"
-    Select "Devices -> Insert Guest Additions CD Image". In the background, a "virtual cd" gets mounted.
+    Select "Devices -> Insert Guest Additions CD Image". You won't *see* anything, but in the background, a "virtual cd" gets mounted. Just go to the next step.
     
     <img src="../insert-guest-additions.png" width="320" height="180"/>
 
-=== "Step2"
+=== "Step3"
     Start the "Windows Explorer". You can see the "virtual cd" via the D:\ drive. Double-click on "VboxWindowsAdditions-amd64".
 
     <img src="../explorer-guest-additions.png" width="320" height="180"/>
 
-=== "Step3"
+=== "Step4"
     Read and comprehend all messages. Follow the installation steps and restart.
 
     <img src="../installing-guest-additions.png" width="320" height="180"/>
 
-=== "Step4"
+=== "Step5"
     Login ("Administrator"/"Admin123"). Select "View -> Full-screen Mode".
 
     <img src="../view-fullscreen.png" width="320" height="180"/>
 
-=== "Step5"
+=== "Step6"
     Hooray, full screen! Start "Windows Explorer". Right-click on D:\ -> Eject (= "remove the virtual cd", Windows Explorer closes)
 
     <img src="../eject-guest-additions.png" width="320" height="180"/>
 
-=== "Step6"
+=== "Step7"
     The shared folder "/home/guru/Downloads" is visible in "Windows Explorer" via drive-letter Z:
 
     <img src="../shared-folder-explorer.png" width="320" height="180"/>
