@@ -23,7 +23,7 @@
 ## A shell command shows the syntax + output in tabs.
 (Optional) task explanation.
 
-=== "guru@pc:~$_"
+=== "guru@hp:~$_"
     (Optional) step explanation.
 
     ``` title=''
@@ -34,7 +34,7 @@
     (Optional) step explanation.
 
     ``` title='' hl_lines="0"
-    guru@pc:~$ sudo <execute some command>
+    guru@hp:~$ sudo <execute some command>
     [sudo] password for guru:     
     ...
     ...
@@ -43,7 +43,7 @@
 ## Changing contents of a file shows the command and the contents of that file in tabs.
 (Optional) task explanation.
 
-=== "guru@pc:~$_"
+=== "guru@hp:~$_"
     (Optional) step explanation.
 
     ``` title=''

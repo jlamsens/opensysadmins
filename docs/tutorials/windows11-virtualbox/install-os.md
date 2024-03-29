@@ -4,181 +4,163 @@
 === "Step1"
     Start the virtual machine. If you do nothing, you'll get an interactive shell. If this is the first time you start a virtual machine, you get the "Auto capture keyboard" and "mouse pointer integration" messages. Read them and then tick the "Do not show this message again" checkboxes.
 
-    <img src="../interactive-shell.png" width="320" height="180"/>
+    <img src="../interactive-shell.png"/>
 
 === "Step2"
     Close the window and choose "Power off the machine". Start the virtual machine again and quickly click into the window at the "Press any key..." prompt, so it gets the focus, and press ++enter++. Be fast!
 
-    <img src="../press-any-key.png" width="320" height="180"/>
+    <img src="../press-any-key.png"/>
 
 === "Step3"
-    The Windows installer should start.
+    If you clicked the mouse inside the VM display window for the first time, you get this information message. Select "Do not show this message again" and click "Capture". To "uncapture", press that "host key".
 
-    <img src="../install-start.png" width="320" height="180"/>
+    <img src="../click-info-message.png"/>
+
+=== "Step4"
+    Again, close the window and choose "Power off the machine". Start the virtual machine and quickly click into the window at the "Press any key..." prompt, so it gets the focus, and press ++enter++. Be fast! The Windows 11 installer should now start. Time and currency format: Dutch (Belgium). Keyboard or input method: “Belgian (Period)".
+
+    <img src="../install-start.png"/>
 
 ## Bypass checks
 === "Step1"
-    Press ++shift++ ++f10++ to open up a command prompt. Typ "regedit" and press ++enter++ The registry editor opens.
+    Press ++shift++ ++f10++ to open up a command prompt. Typ "regedit" and press ++enter++ The registry editor opens. Navigate to "HKEY_LOCAL_MACHINE\SYSTEM\Setup", right-click on the "Setup" key and select "New -> Key". Give this key the name "LabConfig" (be aware: qwerty!)
 
-    <img src="../regedit.png" width="320" height="180"/>
+    <img src="../regedit-labconfig.png"/>
 
 === "Step2"
-    Navigate to "HKEY_LOCAL_MACHINE\SYSTEM\Setup", right-click on the "Setup" key and select "New -> Key". Give this key the name "LabConfig" (be aware: qwerty!)
+    Select "New -> DWORD (32-bit)". Give this "Value" the name "BypassTPMCheck". Doubleclick on this value and change the "Value data" of 0 to 1. Do the same for "“BypassRAMCheck” and "BypassSecureBootCheck". Compare with the screenshot below. Close the registry editor and command prompt window.
 
-    <img src="../labconfig.png" width="320" height="180"/>
-
-=== "Step3"
-    Select "New -> DWORD (32-bit)". Give this "Value" the name "BypassTPMCheck". Doubleclick on this value and change the "Value data" of 0 to 1. Do the same for "“BypassRAMCheck” and "BypassSecureBootCheck". Compare with the screenshot below. Close the registry editor and command prompt windows.
-
-    <img src="../dword.png" width="320" height="180"/>
-
-## Time and currency format
-Dutch (Belgium). Keyboard or input method: “Belgian (Period).
-
-<img src="../keyboard.png" width="320" height="180"/>
-
-## Install now
-Notice, you also have a "repair" option here... Choose "Install now".
-
-<img src="../install-now.png" width="320" height="180"/>
-
-## Activation (depends)
-The presence or absence of the "Windows activation" screen during the installation of Windows 11 22H2 can depend on various factors. If you get this screen, choose "I don't have a product key". If not, proceed to the next step.
-
-<img src="../activation.png" width="320" height="180"/>
-
-## Select OS (depends)
-The presence or absence of the "Select the operating system you want to install" screen during the installation of "Windows 11 22H2" can depend on various factors. If you get this screen, choose "Windows 11 Pro". If not, proceed to the next step.
-
-<img src="../select-os.png" width="320" height="180"/>
-
-## License agreement
-Accept.
-
-<img src="../accept-license.png" width="320" height="180"/>
-
-## Type of installation
-Select “Custom: Install Windows only (advanced)".
-
-<img src="../type-installation.png" width="320" height="180"/>
-
-## Installation location & partitioning
-There are no partitions yet. Click "next".
-
-<img src="../no-partitions.png" width="320" height="180"/>
+    <img src="../dword.png"/>
 
 ## Installing
-=== "Step1"
-    Grab a coffee.
 
-    <img src="../installing.png" width="320" height="180"/>
+=== "Step1"
+    Choose "Install now". Notice, you also have a "repair" option here...
+    
+    <img src="../install-now.png"/>
 
 === "Step2"
-    The VM reboots for the first time. Virtual UEFI/BIOS won't boot of the ISO image, as it finds a Windows installation on the virtual harddrive.
-
-    <img src="../reboot1.png" width="320" height="180"/>
+    Accept the license agreement.
+    
+    <img src="../accept-license.png"/>
 
 === "Step3"
-    The VM reboots for the second time.
+    Select “Custom: Install Windows only (advanced)".
+    
+    <img src="../type-installation.png"/>
 
-    <img src="../reboot2.png" width="320" height="180"/>
+=== "Step4"
+    There are no partitions yet. Click "next".
+    
+    <img src="../no-partitions.png"/>
+
+=== "Step5"
+    Grab a coffee.
+    
+    <img src="../installing.png"/>
+
+=== "Step6"
+    The VM reboots for the first time. Virtual UEFI/BIOS won't boot of the ISO image, as it finds a Windows installation on the virtual harddrive.
+    
+    <img src="../reboot1.png"/>
+
+=== "Step7"
+    The VM reboots for the second time.
+    
+    <img src="../reboot2.png"/>
+
 
 ## Configuration
 === "Step1"
     Personal preference here. I select "Belgium".
 
-    <img src="../belgium.png" width="320" height="180"/>
+    <img src="../belgium.png"/>
 
 === "Step2"
     Personal preference here. I select "Belgian (Period)".
 
-    <img src="../belgian-period.png" width="320" height="180"/>
+    <img src="../belgian-period.png"/>
 
 === "Step3"
-    Select "Skip".
+    Select "Skip". The VM will reboot for the 3rd time.
 
-    <img src="../skip-keyboard.png" width="320" height="180"/>
+    <img src="../skip-keyboard.png"/>
 
-## Bypass internet connection
+## Sign in.
 === "Step1"
-    At this moment, we do not have an active internet connection (NAT network, no static IP address yet). Microsoft want to push us for a "Microsoft account". We don't want that. Press ++shift++ ++f10++ for a command prompt. Typ "oobe\bypassnro" (attention: the letter "o" and not the number "0") and press ++enter++
+    Click "Sign-in options".
 
-    <img src="../bypass-nro.png" width="320" height="180"/>
+    <img src="../sign-in-options.png"/>
 
 === "Step2"
-    The virtual machine reboots and the OOBE (out-of-the-box-experience) restarts. Unfortunately, you have to choose the correct region (Belgium) and keyboard layout - Belgium(period) - again. Also skip the extra keyboard layout again. You will get an extra option "I don't have internet".
+    Select "Domain join instead".
 
-    <img src="../no-internet.png" width="320" height="180"/>
-
-=== "Step3"
-    Select "Continue with limited setup".
-
-    <img src="../limited-setup.png" width="320" height="180"/>
-
-## Account
-=== "Step1"
-    Create user "guru".
-
-    <img src="../user-guru.png" width="320" height="180"/>
-
-=== "Step2"
-    Create and acknowlege password "guru".
-
-    <img src="../password-guru.png" width="320" height="180"/>
+    <img src="../domain-join.png"/>
 
 === "Step3"
-    Security question1: "Doggy" ;-)
+    Your name: "guru".
 
-    <img src="../security-question1.png" width="320" height="180"/>
+    <img src="../user-guru.png"/>
 
 === "Step4"
-    Security question2: "Wevelgem".
+    Create and confirm password: "guru".
 
-    <img src="../security-question2.png" width="320" height="180"/>
+    <img src="../password-guru.png"/>
 
 === "Step5"
-    Security question3: "IT dude" ;-)
+    Security question1: "Doggy" ;-)
 
-    <img src="../security-question3.png" width="320" height="180"/>
+    <img src="../security-question1.png"/>
+
+=== "Step6"
+    Security question2: "Wevelgem".
+
+    <img src="../security-question2.png"/>
+
+=== "Step7"
+    Security question3: "IT guru" ;-)
+
+    <img src="../security-question3.png"/>
+
 
 ## Finishing
 
 === "Step1"
     Location based services: "No".
 
-    <img src="../location-based-services.png" width="320" height="180"/>
+    <img src="../location-based-services.png"/>
 
 === "Step2"
     Find my device: "No".
 
-    <img src="../find-my-device.png" width="320" height="180"/>
+    <img src="../find-my-device.png"/>
 
 === "Step3"
     Diagnostic data: "Required only".
 
-    <img src="../diagnostic-data.png" width="320" height="180"/>
+    <img src="../diagnostic-data.png"/>
 
 === "Step4"
     Inking & typing: "No".
 
-    <img src="../inking-typing.png" width="320" height="180"/>
+    <img src="../inking-typing.png"/>
 
 === "Step5"
     Tailored experiences: "No".
 
-    <img src="../tailored-experiences.png" width="320" height="180"/>
+    <img src="../tailored-experiences.png"/>
 
 === "Step6"
     Advertising ID: "No".
 
-    <img src="../advertisingid.png" width="320" height="180"/>
+    <img src="../advertisingid.png"/>
 
 === "Step7"
     Installing...
 
-    <img src="../installing.png" width="320" height="180"/>
+    <img src="../wait-few-minutes.png"/>
 
 === "Step8"
     Done! Notice, that there is no "full screen" possible yet. Later on, we'll install the "virtualbox guest additions" for that.
 
-    <img src="../done.png" width="320" height="180"/>
+    <img src="../done.png"/>

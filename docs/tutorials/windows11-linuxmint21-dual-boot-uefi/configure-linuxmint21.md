@@ -77,7 +77,7 @@
     <img src="../local-mirror.png" width="320" height="180"/>
 
 === "Step4"
-    Click in the field "Main (victoria)". Another window appears. Select the repository with the fastest speed. In this case, I choose "LiteServer" for lab purposes and click "Apply".
+    Click in the field "Main (...)". Another window appears. Select the repository with the fastest speed. In this case, I choose "LiteServer" for lab purposes and click "Apply".
 
     <img src="../select-mirror.png" width="320" height="180"/>
 

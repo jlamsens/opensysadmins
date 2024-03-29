@@ -22,12 +22,12 @@ Notice, you also have a "repair" option here... Choose "Install now".
 <img src="../install-now.png" width="320" height="180"/>
 
 ## Activation (depends)
-The presence or absence of the "Windows activation" screen during the installation of Windows 11 22H2 can depend on various factors. If you get this screen, choose "I don't have a product key". If not, proceed to the next step.
+The presence or absence of the "Windows activation" screen during the installation of Windows 11 23H2 can depend on various factors. If you get this screen, choose "I don't have a product key". If not, proceed to the next step.
 
 <img src="../activation.png" width="320" height="180"/>
 
 ## Select OS (depends)
-The presence or absence of the "Select the operating system you want to install" screen during the installation of "Windows 11 22H2" can depend on various factors. If you get this screen, choose "Windows 11 Pro". If not, proceed to the next step.
+The presence or absence of the "Select the operating system you want to install" screen during the installation of "Windows 11 23H2" can depend on various factors. If you get this screen, choose "Windows 11 Pro". If not, proceed to the next step.
 
 <img src="../select-os.png" width="320" height="180"/>
 
@@ -45,7 +45,7 @@ Select “Custom: Install Windows only (advanced)".
 ## Installation location & partitioning
 
 === "Step1"
-    If you were able to do a [secure erase](../configure-bios-vs-uefi/#wipe-the-harddisk-if-possible) in BIOS/UEFI, there are no partitions. If not, delete all partitions.
+    If you were able to do a [secure erase](../configure-bios-vs-uefi/#wipe-the-harddisk-if-possible) in BIOS/UEFI, there are no partitions. If not, delete all partitions manually.
 
     <img src="../installation-location.png" width="320" height="180"/>
 
@@ -95,17 +95,22 @@ Select “Custom: Install Windows only (advanced)".
     <img src="../second-keyboard-layout.png" width="320" height="180"/>
 
 === "Step4"
+    Windows reboots for the 2nd time.
+
+    <img src="../reboot2-3.png" width="320" height="180"/>
+
+=== "Step5"
     Enter a computername. In this case "hp".
 
     <img src="../device-name.png" width="320" height="180"/>
 
-=== "Step5"
-    Windows reboots for the 2nd time.
-
-    <img src="../reboot2.png" width="320" height="180"/>
-
 === "Step6"
-    The presence or absence of the "Let's connect you to a network" screen during the installation of Windows 11 22H2 can depend on various factors. If you get this screen, choose "Next".
+    Windows reboots for the 3rd time.
+
+    <img src="../reboot2-3.png" width="320" height="180"/>
+
+=== "Step7"
+    The presence or absence of the "Let's connect you to a network" screen during the installation of Windows 11 23H2 can depend on various factors. If you get this screen, choose "Next".
 
     <img src="../connect-network.png" width="320" height="180"/>
 
@@ -117,7 +122,7 @@ Select “Custom: Install Windows only (advanced)".
     <img src="../personal-use.png" width="320" height="180"/>
 
 === "Step2"
-    Read and comprehend the concept "Microsoft account". We do not want such an account for now. Previous versions allowed for a "local/offline account", via "Sign-in options". Starting of Windows 11 22H2, it does not work anymore. Use this trick: select "Sign in".
+    Read and comprehend the concept "Microsoft account". We do not want such an account for now. Previous versions allowed for a "local/offline account", via "Sign-in options". Starting of Windows 11 23H2, it does not work anymore. Use this trick: select "Sign in".
 
     <img src="../microsoft-account.png" width="320" height="180"/>
 
