@@ -16,7 +16,7 @@
     <img src="../windows11-download-iso.png"/>
 
 === "Step4"
-    Give the file an apappropriate filename.
+    Give the file an appropriate filename.
 
     <img src="../windows11-rename-iso.png"/>
 

@@ -385,8 +385,10 @@ nav:
       - 03 Configure VM: tutorials/windows11-virtualbox/configure-vm.md
       - 04 Install OS: tutorials/windows11-virtualbox/install-os.md
       - 05 Configure OS: tutorials/windows11-virtualbox/configure-os.md
-      - 06 Snapshot VM: tutorials/windows11-virtualbox/snapshot-vm.md
-      - 07 Final result: tutorials/windows11-virtualbox/final-result.md
+      - 06 Create snapshot clean install: tutorials/windows11-virtualbox/create-snapshot-clean-install.md
+      - 07 Create sysprep: tutorials/windows11-virtualbox/create-sysprep.md
+      - 08 Create snapshot sysprep: tutorials/windows11-virtualbox/create-snapshot-sysprep.md
+      - 09 Final result: tutorials/windows11-virtualbox/final-result.md
 
     - Install Windows Server 2022 in VirtualBox 6.1.50:
       - tutorials/windows-server-2022-virtualbox/index.md # overview/landing page
@@ -395,8 +397,21 @@ nav:
       - 03 Configure VM: tutorials/windows-server-2022-virtualbox/configure-vm.md
       - 04 Install OS: tutorials/windows-server-2022-virtualbox/install-os.md
       - 05 Configure OS: tutorials/windows-server-2022-virtualbox/configure-os.md
-      - 06 Snapshot VM: tutorials/windows-server-2022-virtualbox/snapshot-vm.md
-      - 07 Final result: tutorials/windows-server-2022-virtualbox/final-result.md
+      - 06 Create snapshot clean install: tutorials/windows-server-2022-virtualbox/create-snapshot-clean-install.md
+      - 07 Create sysprep: tutorials/windows-server-2022-virtualbox/create-sysprep.md
+      - 08 Create snapshot sysprep: tutorials/windows-server-2022-virtualbox/create-snapshot-sysprep.md    
+      - 09 Final result: tutorials/windows-server-2022-virtualbox/final-result.md
+
+    - Install a Windows testlab in VirtualBox 6.1.50:
+      - tutorials/windows-testlab-virtualbox/index.md # overview/landing page
+      - 01 Getting started: tutorials/windows-testlab-virtualbox/getting-started.md
+      - 02 Clone VMs: tutorials/windows-testlab-virtualbox/clone-vms.md
+      - 03 Group VMs: tutorials/windows-testlab-virtualbox/group-vms.md
+      - 04 Configure VM: tutorials/windows-testlab-virtualbox/configure-vm.md
+      - 05 Configure OS: tutorials/windows-testlab-virtualbox/configure-os.md
+      - 06 Create snapshot clean install: tutorials/windows-testlab-virtualbox/create-snapshot-clean-install.md
+      - 07 Final result: tutorials/windows-testlab-virtualbox/final-result.md
+
 
 ####################################################################################
 

@@ -17,7 +17,7 @@
     <img src="../installing-guest-additions.png"/>
 
 === "Step4"
-    Login ("guru"/"guru") and select "View -> Full-screen Mode".
+    Login ("guru"/"guru") and select "View -> Full-screen Mode". It takes a second, but the screen should maximize.
 
     <img src="../view-fullscreen.png"/>
 
