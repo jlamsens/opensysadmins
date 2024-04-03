@@ -9,7 +9,7 @@
 <meta content="Jurgen Lamsens" name="author"/>
 <link href="https://www.opensysadmins.com/tutorials/windows-server-2022-virtualbox/configure-os/" rel="canonical"/>
 <link href="../install-os/" rel="prev"/>
-<link href="../snapshot-vm/" rel="next"/>
+<link href="../create-snapshot-clean-install/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
 <title>05 Configure OS - OpenSysAdmins</title>
@@ -346,13 +346,23 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../windows11-virtualbox/snapshot-vm/">
-        06 Snapshot VM
+<a class="md-nav__link" href="../../windows11-virtualbox/create-snapshot-clean-install/">
+        06 Create snapshot clean install
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../windows11-virtualbox/create-sysprep/">
+        07 Create sysprep
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../windows11-virtualbox/create-snapshot-sysprep/">
+        08 Create snapshot sysprep
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../windows11-virtualbox/final-result/">
-        07 Final result
+        09 Final result
       </a>
 </li>
 </ul>
@@ -413,35 +423,87 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ip-address">
-    IP address
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#computername">
-    Computername
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#automatic-updates">
     Automatic updates
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#restart-and-shutdown">
-    Restart and shutdown
+<a class="md-nav__link" href="#clean-up">
+    Clean up.
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../snapshot-vm/">
-        06 Snapshot VM
+<a class="md-nav__link" href="../create-snapshot-clean-install/">
+        06 Create snapshot clean install
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../create-sysprep/">
+        07 Create sysprep
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../create-snapshot-sysprep/">
+        08 Create snapshot sysprep
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../final-result/">
+        09 Final result
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_6" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../windows-testlab-virtualbox/">Install a Windows testlab in VirtualBox 6.1.50</a>
+<label for="__nav_2_6">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_6">
+<span class="md-nav__icon md-icon"></span>
+          Install a Windows testlab in VirtualBox 6.1.50
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../windows-testlab-virtualbox/getting-started/">
+        01 Getting started
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../windows-testlab-virtualbox/clone-vms/">
+        02 Clone VMs
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../windows-testlab-virtualbox/group-vms/">
+        03 Group VMs
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../windows-testlab-virtualbox/configure-vm/">
+        04 Configure VM
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../windows-testlab-virtualbox/configure-os/">
+        05 Configure OS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../windows-testlab-virtualbox/create-snapshot-clean-install/">
+        06 Create snapshot clean install
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../windows-testlab-virtualbox/final-result/">
         07 Final result
       </a>
 </li>
@@ -576,23 +638,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ip-address">
-    IP address
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#computername">
-    Computername
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#automatic-updates">
     Automatic updates
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#restart-and-shutdown">
-    Restart and shutdown
+<a class="md-nav__link" href="#clean-up">
+    Clean up.
   </a>
 </li>
 </ul>
@@ -607,93 +659,69 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:7"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><input id="__tabbed_1_6" name="__tabbed_1" type="radio"><input id="__tabbed_1_7" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label><label for="__tabbed_1_4">Step4</label><label for="__tabbed_1_5">Step5</label><label for="__tabbed_1_6">Step6</label><label for="__tabbed_1_7">Step7</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Login ("Administrator"/"Admin123"). As we use VirtualBox, we have to press the right <span class="keys"><kbd class="key-control">Ctrl</kbd></span> button + <span class="keys"><kbd class="key-delete">Del</kbd></span></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../login.png"><img height="180" src="../login.png" width="320"/></a></p>
+<p>Logon using right <span class="keys"><kbd class="key-control">Ctrl</kbd></span> + <span class="keys"><kbd class="key-delete">Del</kbd></span> ("Administrator"/"Admin123"). Answer "No" on the question, if your PC has to be discoverable. Close all Windows for now.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../close-windows.png"><img src="../close-windows.png"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>Select "Devices -&gt; Insert Guest Additions CD Image". You won't <em>see</em> anything, but in the background, a "virtual cd" gets mounted. Just go to the next step.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../insert-guest-additions.png"><img height="180" src="../insert-guest-additions.png" width="320"/></a></p>
+<p>Select "Devices -&gt; Insert Guest Additions CD Image". At first glance, nothing will happen, but in the background, a "virtual cd" gets mounted.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../insert-guest-additions.png"><img src="../insert-guest-additions.png"/></a></p>
 </div>
 <div class="tabbed-block">
 <p>Start the "Windows Explorer". You can see the "virtual cd" via the D:\ drive. Double-click on "VboxWindowsAdditions-amd64".</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../explorer-guest-additions.png"><img height="180" src="../explorer-guest-additions.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../explorer-guest-additions.png"><img src="../explorer-guest-additions.png"/></a></p>
 </div>
 <div class="tabbed-block">
 <p>Read and comprehend all messages. Follow the installation steps and restart.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../installing-guest-additions.png"><img height="180" src="../installing-guest-additions.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../installing-guest-additions.png"><img src="../installing-guest-additions.png"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>Login ("Administrator"/"Admin123"). Select "View -&gt; Full-screen Mode".</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../view-fullscreen.png"><img height="180" src="../view-fullscreen.png" width="320"/></a></p>
+<p>Login ("Administrator"/"Admin123") and select "View -&gt; Full-screen Mode". It takes a second, but the screen should maximize.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../view-fullscreen.png"><img src="../view-fullscreen.png"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>Hooray, full screen! Start "Windows Explorer". Right-click on D:\ -&gt; Eject (= "remove the virtual cd", Windows Explorer closes)</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../eject-guest-additions.png"><img height="180" src="../eject-guest-additions.png" width="320"/></a></p>
+<p>Hooray, full screen! Play with "Host+F" key in combination with maximizing the screen. I choose to see both my "Linux desktop menu" as the "Windows Start menu".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../linux-windows-menu.png"><img src="../linux-windows-menu.png"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>The shared folder "/home/guru/Downloads" is visible in "Windows Explorer" via drive-letter Z:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../shared-folder-explorer.png"><img height="180" src="../shared-folder-explorer.png" width="320"/></a></p>
+<p>Start "Windows Explorer". Right-click on D:\ -&gt; Eject (= "remove the virtual cd"). Windows Explorer will close.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../eject-guest-additions.png"><img src="../eject-guest-additions.png"/></a></p>
 </div>
 </div>
 </input></input></input></input></input></input></input></div>
-<h2 id="ip-address">IP address</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><input id="__tabbed_2_5" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label><label for="__tabbed_2_3">Step3</label><label for="__tabbed_2_4">Step4</label><label for="__tabbed_2_5">Step5</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Right-click on the network icon on the bottom-right taskbar -&gt; Open Network and Internet settings.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../network-internet-settings.png"><img height="180" src="../network-internet-settings.png" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>Select "Change adapter options".</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../change-adapter-options.png"><img height="180" src="../change-adapter-options.png" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>Double-click on "Ethernet", select "Properties", double-click on "Internet Protocol Version 4 (TCP/IPv4) and enter the correct values.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../ip-settings.png"><img height="180" src="../ip-settings.png" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>Watch closely for the popup. Select "No" at this time.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../not-discoverable.png"><img height="180" src="../not-discoverable.png" width="320"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>Close all windows. Click "Start" and typ "cmd" to open a command prompt: verify the internet connection.  The network icon on the bottom-right taskbar will show connectivity.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../verify-internet-connection.png"><img height="180" src="../verify-internet-connection.png" width="320"/></a></p>
-</div>
-</div>
-</input></input></input></input></input></div>
-<h2 id="computername">Computername</h2>
-<p>Right-click on "Start -&gt; System" and change the computer name to "vm16". <strong>Restart later</strong>.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../change-computer-name.png"><img height="180" src="../change-computer-name.png" width="320"/></a></p>
 <h2 id="automatic-updates">Automatic updates</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Step1</label><label for="__tabbed_3_2">Step2</label><label for="__tabbed_3_3">Step3</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label><label for="__tabbed_2_3">Step3</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Right-click on "Start -&gt; Settings" and select "Update &amp; Security".</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../install-updates.png"><img height="180" src="../install-updates.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../install-updates.png"><img src="../install-updates.png"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>Install all available updates. Reboot when asked to. Repeat "Check for updates/installing updates" until no more updates are available.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../up-to-date.png"><img height="180" src="../up-to-date.png" width="320"/></a></p>
+<p>Install all available updates. Reboot when asked to. Repeat "Check for updates/installing updates".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../check-updates.png"><img src="../check-updates.png"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>As this is a lab environment, "disable" the automatic updates for now; click "Start", type "services.msc" and select the "Services" app. In the Services window, scroll down and locate the "Windows Update" service. Right-click on "Windows Update" and select "Properties" from the context menu. In the Properties window, under the "General" tab, locate the "Startup type" dropdown menu. Change the startup type to "Disabled". Click on "OK" to save the changes and close the window.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../disable-automatic-updates.png"><img height="180" src="../disable-automatic-updates.png" width="320"/></a></p>
+<p>There should be no more updates available.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../screenshot-todo.png"><img src="../screenshot-todo.png"/></a></p>
 </div>
 </div>
-</input></input></div>
-<h2 id="restart-and-shutdown">Restart and shutdown</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Step1</label><label for="__tabbed_4_2">Step2</label></div>
+</input></input></input></div>
+<h2 id="clean-up">Clean up.</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Step1</label><label for="__tabbed_3_2">Step2</label><label for="__tabbed_3_3">Step3</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<p>Clear all notifications.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../clear-notifications.png"><img src="../clear-notifications.png"/></a></p>
+</div>
+<div class="tabbed-block">
 <p>Let's do a final restart so all updates are properly installed.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../final-restart.png"><img height="180" src="../final-restart.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../final-restart.png"><img src="../final-restart.png"/></a></p>
 </div>
 <div class="tabbed-block">
 <p>Finally, "shutdown" Windows.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../shutdown.png"><img height="180" src="../shutdown.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../shutdown.png"><img src="../shutdown.png"/></a></p>
 </div>
 </div>
-</div>
+</input></input></input></div>
 </article>
 </div>
 </div>
