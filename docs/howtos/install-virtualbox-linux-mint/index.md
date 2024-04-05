@@ -238,20 +238,3 @@ The "VirtualBox Guest Additions" package provides an iso image which contains th
 Select "Menu" and start typing "vir". Start "Oracle VM VirtualBox".
 
 <img src="menu-virtualbox.png" width="320" height="180"/>
-
-## NAT configuration
-=== "Step1"
-    Select "File -> Preferences -> Network". Click on the + to create a NAT Network.
-
-    <img src="plus-new-network.png" width="320" height="180"/>
-
-=== "Step2"
-    Mouse right-click "Edit NAT Network".
-
-    <img src="edit-nat-network.png" width="320" height="180"/>
-
-=== "Step3"
-    Change the network CIDR to "192.168.10.0/24" and remove the check "Supports DHCP". Close all screens with "OK".
-
-    <img src="nat-network-details.png" width="320" height="180"/>
-

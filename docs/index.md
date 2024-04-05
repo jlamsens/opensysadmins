@@ -57,14 +57,26 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
 
 === "1"
 
-    <!--- HOWTO Clone Windows Server 2022 in VirtualBox 6.1.x --->
-    <img src="howtos/clone-windows2022-virtualbox/home.png" width="320" height="180" align=left />
-    > *Jun 20, 2023 - in [Howtos](howtos/index.md) - 15 min guide*
+    <!--- TUTORIAL Windows 11 & Linux Mint 21 dual boot BIOS--->
+    <img src="tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/home.png" width="320" height="180" align=left />
+    > *Apr 05, 2023 - in [Tutorials](tutorials/index.md) - 90 min lesson*
 
 
-    Cloning a virtual machine in VirtualBox allows for easy replication of an existing virtual environment, enabling efficient testing and development without starting from scratch.
+    Operating systems can coexist without (too many) conflicts, as long as you careful partition and follow installation procedures. Windows for software compatibility, multimedia and gaming. Linux for development, customization, security, ...
 
-    [Continue reading](howtos/clone-windows2022-virtualbox/index.md)
+    [Continue reading](tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/index.md)
+    <br>
+    <br>
+
+
+    <!--- TUTORIAL Windows client/server testlab in VirtualBox --->
+    <img src="tutorials/windows-testlab-virtualbox/home.png" width="320" height="180" align=left />
+    > *Apr 05, 2024 - in [Tutorials](tutorials/index.md) - 180 min lesson*
+
+
+    Setting up a Windows client/server test lab in VirtualBox provides a cost-effective and efficient way to experiment with various network configurations, software installations, and system setups without the need for physical hardware...
+
+    [Continue reading](tutorials/windows11-virtualbox/index.md)
     <br>
     <br>
 
@@ -77,18 +89,6 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     Virtualizing an OS is interesting because it allows for the creation of isolated and self-contained virtual environments that can run on a single physical machine, enabling efficient resource utilization and flexibility in testing, development...
 
     [Continue reading](tutorials/windows-server-2022-virtualbox/index.md)
-    <br>
-    <br>
-
-
-    <!--- HOWTO Clone Windows 11 in VirtualBox 6.1.x --->
-    <img src="howtos/clone-windows11-virtualbox/home.png" width="320" height="180" align=left />
-    > *Jun 20, 2023 - in [Howtos](howtos/index.md) - 15 min guide*
-
-
-    Cloning a virtual machine in VirtualBox allows for easy replication of an existing virtual environment, enabling efficient testing and development without starting from scratch.
-
-    [Continue reading](howtos/clone-windows11-virtualbox/index.md)
     <br>
     <br>
 

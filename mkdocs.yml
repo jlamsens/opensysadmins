@@ -407,10 +407,11 @@ nav:
       - 01 Getting started: tutorials/windows-testlab-virtualbox/getting-started.md
       - 02 Clone VMs: tutorials/windows-testlab-virtualbox/clone-vms.md
       - 03 Group VMs: tutorials/windows-testlab-virtualbox/group-vms.md
-      - 04 Configure VM: tutorials/windows-testlab-virtualbox/configure-vm.md
-      - 05 Configure OS: tutorials/windows-testlab-virtualbox/configure-os.md
-      - 06 Create snapshot clean install: tutorials/windows-testlab-virtualbox/create-snapshot-clean-install.md
-      - 07 Final result: tutorials/windows-testlab-virtualbox/final-result.md
+      - 04 Configure VMs: tutorials/windows-testlab-virtualbox/configure-vms.md
+      - 05 Configure Windows 11: tutorials/windows-testlab-virtualbox/configure-windows11.md
+      - 06 Configure Windows Server 2022: tutorials/windows-testlab-virtualbox/configure-windows-server-2022.md
+      - 07 Create snapshot clean install: tutorials/windows-testlab-virtualbox/create-snapshot-clean-install.md
+      - 08 Final result: tutorials/windows-testlab-virtualbox/final-result.md
 
 
 ####################################################################################
@@ -432,9 +433,8 @@ nav:
     - Install PacketTracer 8.2.1 on Linux Mint 21: howtos/install-packettracer-linux-mint/index.md
     - Install VirtualBox 6.1.50 on Linux Mint 21: howtos/install-virtualbox-linux-mint/index.md
     - Install Google Chrome browser on Linux Mint 21: howtos/install-chrome-browser-linux-mint/index.md
-    - Clone a Windows 11 virtual machine in VirtualBox 6.1.44: howtos/clone-windows11-virtualbox/index.md
-    - Clone a Windows Server 2022 virtual machine in VirtualBox 6.1.44: howtos/clone-windows2022-virtualbox/index.md
     - Use minicom on Linux Mint 21: howtos/use-minicom-linux-mint/index.md
+    - Access a Cisco device ROMMON: howtos/access-cisco-device-rommon/index.md
   
 ####################################################################################
 

@@ -1,23 +1,25 @@
 # Install OS
 
 ## Boot from ISO
+
 === "Step1"
-    Start the virtual machine. If you do nothing, you'll get an interactive shell. If this is the first time you start a virtual machine, you get the "Auto capture keyboard" and "mouse pointer integration" messages. Read them and then tick the "Do not show this message again" checkboxes.
+    Start the virtual machine. Click inside the VM display window. If this is the first time, you get this information message. Read it! Select "Do not show this message again" and click "Capture". The mouse is now captured inside the window. Now "uncapture", by pressing "that host key" (right ++ctrl++).
+
+    <img src="../click-info-message.png"/>
+
+=== "Step2"
+    Also, if this is the first time you start a virtual machine, you get the "Auto capture keyboard" and "mouse pointer integration" messages. Read them and then tick the "Do not show this message again" checkboxes. We get this interactive shell, as we did not "press any key" to boot from the virtual CD-ROM.
 
     <img src="../interactive-shell.png"/>
 
-=== "Step2"
+=== "Step3"
     Close the window and choose "Power off the machine". Start the virtual machine again and quickly click into the window at the "Press any key..." prompt, so it gets the focus, and press ++enter++. Be fast!
 
     <img src="../press-any-key.png"/>
 
-=== "Step3"
-    If you clicked the mouse inside the VM display window for the first time, you get this information message. Select "Do not show this message again" and click "Capture". To "uncapture", press that "host key".
-
-    <img src="../click-info-message.png"/>
 
 === "Step4"
-    Again, close the window and choose "Power off the machine". Start the virtual machine and quickly click into the window at the "Press any key..." prompt, so it gets the focus, and press ++enter++. Be fast! The Windows 11 installer should now start. Time and currency format: Dutch (Belgium). Keyboard or input method: “Belgian (Period)".
+    The Windows 11 installer should now start. Time and currency format: Dutch (Belgium). Keyboard or input method: “Belgian (Period)". Do not click "Next" yet!
 
     <img src="../install-start.png"/>
 
@@ -28,7 +30,7 @@
     <img src="../regedit-labconfig.png"/>
 
 === "Step2"
-    Select "New -> DWORD (32-bit)". Give this "Value" the name "BypassTPMCheck". Doubleclick on this value and change the "Value data" of 0 to 1. Do the same for "“BypassRAMCheck” and "BypassSecureBootCheck". Compare with the screenshot below. Close the registry editor and command prompt window.
+    In the white space in the right window, right-click -> New -> DWORD (32-bit). Give this "Value" the name "BypassTPMCheck". Doubleclick on this value and change the "Value data" of 0 to 1. Do the same for "“BypassRAMCheck” and "BypassSecureBootCheck". Compare with the screenshot below. Close the registry editor and command prompt window.
 
     <img src="../dword.png"/>
 

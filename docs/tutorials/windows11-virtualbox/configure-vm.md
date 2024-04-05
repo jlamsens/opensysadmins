@@ -39,12 +39,12 @@
     <img src="../boot-sequence.png"/>
 
 === "Step4"
-    Add a virtual optical disk.
+    Storage -> select "Empty". Add a virtual optical disk.
 
     <img src="../virtual-cd.png"/>
 
 === "Step5"
-    Select "Add" and browse to "/home/guru/Downloads". Double-click the .ISO file.
+    Select "Add" and browse to "/home/guru/Downloads". Double-click the Windows 11 .ISO file.
 
     <img src="../optical-disk-file.png"/>
 
