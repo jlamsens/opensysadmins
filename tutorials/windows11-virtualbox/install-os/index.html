@@ -503,23 +503,28 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../windows-testlab-virtualbox/configure-vm/">
-        04 Configure VM
+<a class="md-nav__link" href="../../windows-testlab-virtualbox/configure-vms/">
+        04 Configure VMs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../windows-testlab-virtualbox/configure-os/">
-        05 Configure OS
+<a class="md-nav__link" href="../../windows-testlab-virtualbox/configure-windows11/">
+        05 Configure Windows 11
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../windows-testlab-virtualbox/configure-windows-server-2022/">
+        06 Configure Windows Server 2022
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../windows-testlab-virtualbox/create-snapshot-clean-install/">
-        06 Create snapshot clean install
+        07 Create snapshot clean install
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../windows-testlab-virtualbox/final-result/">
-        07 Final result
+        08 Final result
       </a>
 </li>
 </ul>
@@ -588,18 +593,13 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../howtos/clone-windows11-virtualbox/">
-        Clone a Windows 11 virtual machine in VirtualBox 6.1.44
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../howtos/clone-windows2022-virtualbox/">
-        Clone a Windows Server 2022 virtual machine in VirtualBox 6.1.44
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../../howtos/use-minicom-linux-mint/">
         Use minicom on Linux Mint 21
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../howtos/access-cisco-device-rommon/">
+        Access a Cisco device ROMMON
       </a>
 </li>
 </ul>
@@ -689,7 +689,11 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label><label for="__tabbed_1_4">Step4</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Start the virtual machine. If you do nothing, you'll get an interactive shell. If this is the first time you start a virtual machine, you get the "Auto capture keyboard" and "mouse pointer integration" messages. Read them and then tick the "Do not show this message again" checkboxes.</p>
+<p>Start the virtual machine. Click inside the VM display window. If this is the first time, you get this information message. Read it! Select "Do not show this message again" and click "Capture". The mouse is now captured inside the window. Now "uncapture", by pressing "that host key" (right <span class="keys"><kbd class="key-control">Ctrl</kbd></span>).</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../click-info-message.png"><img src="../click-info-message.png"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Also, if this is the first time you start a virtual machine, you get the "Auto capture keyboard" and "mouse pointer integration" messages. Read them and then tick the "Do not show this message again" checkboxes. We get this interactive shell, as we did not "press any key" to boot from the virtual CD-ROM.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../interactive-shell.png"><img src="../interactive-shell.png"/></a></p>
 </div>
 <div class="tabbed-block">
@@ -697,11 +701,7 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../press-any-key.png"><img src="../press-any-key.png"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>If you clicked the mouse inside the VM display window for the first time, you get this information message. Select "Do not show this message again" and click "Capture". To "uncapture", press that "host key".</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../click-info-message.png"><img src="../click-info-message.png"/></a></p>
-</div>
-<div class="tabbed-block">
-<p>Again, close the window and choose "Power off the machine". Start the virtual machine and quickly click into the window at the "Press any key..." prompt, so it gets the focus, and press <span class="keys"><kbd class="key-enter">Enter</kbd></span>. Be fast! The Windows 11 installer should now start. Time and currency format: Dutch (Belgium). Keyboard or input method: “Belgian (Period)".</p>
+<p>The Windows 11 installer should now start. Time and currency format: Dutch (Belgium). Keyboard or input method: “Belgian (Period)". Do not click "Next" yet!</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../install-start.png"><img src="../install-start.png"/></a></p>
 </div>
 </div>
@@ -714,7 +714,7 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../regedit-labconfig.png"><img src="../regedit-labconfig.png"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>Select "New -&gt; DWORD (32-bit)". Give this "Value" the name "BypassTPMCheck". Doubleclick on this value and change the "Value data" of 0 to 1. Do the same for "“BypassRAMCheck” and "BypassSecureBootCheck". Compare with the screenshot below. Close the registry editor and command prompt window.</p>
+<p>In the white space in the right window, right-click -&gt; New -&gt; DWORD (32-bit). Give this "Value" the name "BypassTPMCheck". Doubleclick on this value and change the "Value data" of 0 to 1. Do the same for "“BypassRAMCheck” and "BypassSecureBootCheck". Compare with the screenshot below. Close the registry editor and command prompt window.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../dword.png"><img src="../dword.png"/></a></p>
 </div>
 </div>

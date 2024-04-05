@@ -8,9 +8,11 @@
 <meta content="Standing on the shoulder of giants" name="description"/>
 <meta content="Jurgen Lamsens" name="author"/>
 <link href="https://www.opensysadmins.com/howtos/access-cisco-device-rommon/" rel="canonical"/>
+<link href="../use-minicom-linux-mint/" rel="prev"/>
+<link href="../../references/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
-<title>Access a Cisco device in ROMMON-mode - OpenSysAdmins</title>
+<title>Access a Cisco device ROMMON - OpenSysAdmins</title>
 <link href="../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -59,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Access a Cisco device in ROMMON-mode
+              Access a Cisco device ROMMON
             
           </span>
 </div>
@@ -458,23 +460,28 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/windows-testlab-virtualbox/configure-vm/">
-        04 Configure VM
+<a class="md-nav__link" href="../../tutorials/windows-testlab-virtualbox/configure-vms/">
+        04 Configure VMs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../tutorials/windows-testlab-virtualbox/configure-os/">
-        05 Configure OS
+<a class="md-nav__link" href="../../tutorials/windows-testlab-virtualbox/configure-windows11/">
+        05 Configure Windows 11
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/windows-testlab-virtualbox/configure-windows-server-2022/">
+        06 Configure Windows Server 2022
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../tutorials/windows-testlab-virtualbox/create-snapshot-clean-install/">
-        06 Create snapshot clean install
+        07 Create snapshot clean install
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../tutorials/windows-testlab-virtualbox/final-result/">
-        07 Final result
+        08 Final result
       </a>
 </li>
 </ul>
@@ -483,15 +490,15 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../">Howtos</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
           Howtos
@@ -543,19 +550,56 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../clone-windows11-virtualbox/">
-        Clone a Windows 11 virtual machine in VirtualBox 6.1.44
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../clone-windows2022-virtualbox/">
-        Clone a Windows Server 2022 virtual machine in VirtualBox 6.1.44
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../use-minicom-linux-mint/">
         Use minicom on Linux Mint 21
       </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Access a Cisco device ROMMON
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Access a Cisco device ROMMON
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cisco-2960-switch">
+    Cisco 2960 switch
+  </a>
+<nav aria-label="Cisco 2960 switch" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#from-ios">
+    From IOS
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#missing-or-corrupt-ios">
+    Missing or corrupt IOS
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cold-start">
+    Cold start
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cisco-1941-router">
+    Cisco 1941 router
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
