@@ -77,7 +77,7 @@ Select “Custom: Install Windows only (advanced)".
 
     <img src="../reboot1.png" width="320" height="180"/>
 
-## Configuration
+## Keyboard and network
 
 === "Step1"
     Personal preference here. I select "Belgium".
@@ -100,16 +100,6 @@ Select “Custom: Install Windows only (advanced)".
     <img src="../reboot2-3.png" width="320" height="180"/>
 
 === "Step5"
-    Enter a computername. In this case "hp".
-
-    <img src="../device-name.png" width="320" height="180"/>
-
-=== "Step6"
-    Windows reboots for the 3rd time.
-
-    <img src="../reboot2-3.png" width="320" height="180"/>
-
-=== "Step7"
     The presence or absence of the "Let's connect you to a network" screen during the installation of Windows 11 23H2 can depend on various factors. If you get this screen, choose "Next".
 
     <img src="../connect-network.png" width="320" height="180"/>
@@ -117,59 +107,45 @@ Select “Custom: Install Windows only (advanced)".
 ## Account
 
 === "Step1"
-    Select "Set up for personal use".
+    Select "sign-in options".
 
-    <img src="../personal-use.png" width="320" height="180"/>
+    <img src="../1280-720.png" width="320" height="180"/>
 
 === "Step2"
-    Read and comprehend the concept "Microsoft account". We do not want such an account for now. Previous versions allowed for a "local/offline account", via "Sign-in options". Starting of Windows 11 23H2, it does not work anymore. Use this trick: select "Sign in".
+    Select "Domain join instead".
 
-    <img src="../microsoft-account.png" width="320" height="180"/>
+    <img src="../1280-720.png" width="320" height="180"/>
 
 === "Step3"
-    Enter the random e-mailaddress "no@thankyou.com"
-
-    <img src="../microsoft-account-signin.png" width="320" height="180"/>
-
-=== "Step4"
-    Enter "whatever" as password and select "Sign in".
-
-    <img src="../microsoft-account-password.png" width="320" height="180"/>
-
-=== "Step5"
-    You get an error. Nevermind. Just select "Next".
-
-    <img src="../ooops.png" width="320" height="180"/>
-
-=== "Step6"
     Login: guru
 
     <img src="../login.png" width="320" height="180"/>
 
-=== "Step7"
+=== "Step4"
     Password: guru
 
     <img src="../password.png" width="320" height="180"/>
 
-=== "Step8"
+=== "Step5"
     Acknowlege the password: guru
 
     <img src="../password-acknowledge.png" width="320" height="180"/>
 
-=== "Step9"
+=== "Step6"
     Security question1: Doggy
 
     <img src="../security-question1.png" width="320" height="180"/>
 
-=== "Step10"
+=== "Step7"
     Security question2: Wevelgem
 
     <img src="../security-question2.png" width="320" height="180"/>
 
-=== "Step11"
+=== "Step8"
     Security question3: IT guru
 
     <img src="../security-question3.png" width="320" height="180"/>
+
 
 ## Finishing
 
