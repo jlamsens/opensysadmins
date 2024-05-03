@@ -430,7 +430,7 @@ nav:
     - (Re)install an IOS operating system on a Cisco 2960 switch: howtos/reinstall-ios-cisco2960/index.md
     - Password recovery on a Cisco 2960 switch: howtos/password-recovery-cisco2960/index.md
     - Factory reset a Cisco 2960 switch: howtos/factory-reset-cisco2960/index.md
-    - Install PacketTracer 8.2.1 on Linux Mint 21: howtos/install-packettracer-linux-mint/index.md
+    - Install PacketTracer 8.2.2 on Linux Mint 21: howtos/install-packettracer-linux-mint/index.md
     - Install VirtualBox 6.1.50 on Linux Mint 21: howtos/install-virtualbox-linux-mint/index.md
     - Install Google Chrome browser on Linux Mint 21: howtos/install-chrome-browser-linux-mint/index.md
     - Use minicom on Linux Mint 21: howtos/use-minicom-linux-mint/index.md
