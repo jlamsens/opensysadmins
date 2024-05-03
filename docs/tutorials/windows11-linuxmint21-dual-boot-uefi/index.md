@@ -1,4 +1,4 @@
-# Overview
+# Install a Windows 11 and Linux Mint 21 dual boot PC (UEFI)
 
 There are several reasons why someone might choose to install a dual boot system with Windows 11 and Linux Mint 21. Here are some common motivations:
 
