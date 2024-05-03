@@ -87,7 +87,7 @@ First choose "Keep me logged in (for 3 months) and then select "Cisco Networking
 <img src="keep-me-logged-in.png"/>
 
 ## Login
-Type your private e-mailadress. Put a checkmark next to "Remember me".
+Type your private e-mailadress. Put a checkmark next to "Remember me" and click "Login". The password field appears. Fill in your password.
 
 <img src="login.png"/>
 
