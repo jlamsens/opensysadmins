@@ -12,7 +12,7 @@
 <link href="../install-virtualbox-linux-mint/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
-<title>Install PacketTracer 8.2.1 on Linux Mint 21 - OpenSysAdmins</title>
+<title>Install PacketTracer 8.2.2 on Linux Mint 21 - OpenSysAdmins</title>
 <link href="../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#install-packettracer-821-on-linux-mint-21">
+<a class="md-skip" href="#install-packettracer-822-on-linux-mint-21">
           Skip to content
         </a>
 </div>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Install PacketTracer 8.2.1 on Linux Mint 21
+              Install PacketTracer 8.2.2 on Linux Mint 21
             
           </span>
 </div>
@@ -537,11 +537,11 @@
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Install PacketTracer 8.2.1 on Linux Mint 21
+          Install PacketTracer 8.2.2 on Linux Mint 21
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Install PacketTracer 8.2.1 on Linux Mint 21
+        Install PacketTracer 8.2.2 on Linux Mint 21
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -754,23 +754,23 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="install-packettracer-821-on-linux-mint-21">Install PacketTracer 8.2.1 on Linux Mint 21</h1>
+<h1 id="install-packettracer-822-on-linux-mint-21">Install PacketTracer 8.2.2 on Linux Mint 21</h1>
 <h2 id="prereqs">Prereqs</h2>
 <ul>
 <li>a PC (<a href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/">BIOS</a>/<a href="../../tutorials/windows11-linuxmint21-dual-boot-uefi/">UEFI</a>) running Linux Mint 21</li>
 </ul>
 <h2 id="download">Download</h2>
 <p>Download PacketTracer from an official Cisco location (e.g Netacad.com, Skillsforall.com) and save it to disk (here: "Downloads")</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="netacad-packettracer.png"><img height="180" src="netacad-packettracer.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="netacad-packettracer.png"><img src="netacad-packettracer.png"/></a></p>
 <h2 id="open-terminal">Open Terminal</h2>
 <p>Right-click on an empty space in the "Nemo" file manager and select "Open in Terminal".</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="downloads.png"><img height="180" src="downloads.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="downloads.png"><img src="downloads.png"/></a></p>
 <h2 id="install">Install</h2>
 <p>Install the .deb package using the "apt install" command with the relative path to the package file. APT will recognize it and install the package along with its dependencies, if any.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">guru@hp:~/Downloads$_</label><label for="__tabbed_1_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo apt install ./CiscoPacketTracer_821_Ubuntu_64bit.deb
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo apt install ./CiscoPacketTracer822_amd64_signed.deb
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -794,76 +794,62 @@
 <span class="normal"><a href="#__codelineno-1-18">18</a></span>
 <span class="normal"><a href="#__codelineno-1-19">19</a></span>
 <span class="normal"><a href="#__codelineno-1-20">20</a></span>
-<span class="normal"><a href="#__codelineno-1-21">21</a></span>
-<span class="normal"><a href="#__codelineno-1-22">22</a></span>
-<span class="normal"><a href="#__codelineno-1-23">23</a></span>
-<span class="normal"><a href="#__codelineno-1-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>guru@hp:~/Downloads$ sudo apt install ./CiscoPacketTracer_821_Ubuntu_64bit.deb
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>[sudo] password for guru:     
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Reading package lists... Done
+<span class="normal"><a href="#__codelineno-1-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>guru@vm26:~/Downloads$ sudo apt install ./CiscoPacketTracer822_amd64_signed.deb
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="hll">[sudo] password for guru:     
+</span><a id="__codelineno-1-3" name="__codelineno-1-3"></a>Reading package lists... Done
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a>Building dependency tree... Done
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a>Reading state information... Done
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>Note, selecting 'packettracer' instead of './CiscoPacketTracer_821_Ubuntu_64bit.deb'
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>Note, selecting 'packettracer' instead of './CiscoPacketTracer822_amd64_signed.deb'
 <a id="__codelineno-1-7" name="__codelineno-1-7"></a>The following additional packages will be installed:
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>libgl1-mesa-glx libpthread-stubs0-dev libxau-dev libxcb-xinerama0-dev libxcb1-dev libxdmcp-dev x11proto-dev xorg-sgml-doctools
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a>Suggested packages:
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a>libxcb-doc
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a>The following NEW packages will be installed:
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a>libgl1-mesa-glx libpthread-stubs0-dev libxau-dev libxcb-xinerama0-dev libxcb1-dev libxdmcp-dev packettracer x11proto-dev
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>xorg-sgml-doctools
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a>0 upgraded, 9 newly installed, 0 to remove and 171 not upgraded.
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a>Need to get 755 kB/324 MB of archives.
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a>After this operation, 2.763 kB of additional disk space will be used.
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a>Do you want to continue? [Y/n] y
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a>Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libgl1-mesa-glx amd64 22.2.5-0ubuntu0.1~22.04.1 [5.466 B]
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a>Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libpthread-stubs0-dev amd64 0.4-1build2 [5.516 B]
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a>Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 xorg-sgml-doctools all 1:1.11-1.1 [10,9 kB]
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a>Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 x11proto-dev all 2021.5-1 [604 kB]
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a>Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxau-dev amd64 1:1.0.9-1build5 [9.724 B]
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a>&lt;snip&gt;
-<a id="__codelineno-1-24" name="__codelineno-1-24"></a>guru@vm26:~/Downloads$ 
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>  libgl1-mesa-glx libpthread-stubs0-dev libxau-dev libxcb-xinerama0-dev libxcb1-dev libxdmcp-dev
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>  x11proto-dev xorg-sgml-doctools
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>Suggested packages:
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>  libxcb-doc
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>The following NEW packages will be installed:
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>  libgl1-mesa-glx libpthread-stubs0-dev libxau-dev libxcb-xinerama0-dev libxcb1-dev libxdmcp-dev
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>  packettracer x11proto-dev xorg-sgml-doctools
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>0 upgraded, 9 newly installed, 0 to remove and 1 not upgraded.
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>Need to get 755 kB/284 MB of archives.
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>After this operation, 2.765 kB of additional disk space will be used.
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="hll">Do you want to continue? [Y/n] y
+</span><a id="__codelineno-1-19" name="__codelineno-1-19"></a>Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libgl1-mesa-glx amd64 23.0.4-0ubuntu1~22.04.1 [5.584 B]
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a>...
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>...
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
 <h2 id="license-agreement">License agreement</h2>
 <p>Read the license agreement :p and select "OK".</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="license1.png"><img height="180" src="license1.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="license1.png"><img src="license1.png"/></a></p>
 <h2 id="eula-terms">EULA terms</h2>
 <p>Accept the terms.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="license2.png"><img height="180" src="license2.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="license2.png"><img src="license2.png"/></a></p>
 <h2 id="notice">Notice</h2>
 <p>Ignore the "Notice" warning at the end of the installation. All went well.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span>
-<span class="normal"><a href="#__codelineno-2-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>Setting up libxdmcp-dev:amd64 (1:1.1.3-0ubuntu5) ...
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>Setting up libxcb1-dev:amd64 (1.14-3ubuntu3) ...
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>Setting up libxcb-xinerama0-dev:amd64 (1.14-3ubuntu3) ...
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>Setting up packettracer (8.2.1) ...
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>gtk-update-icon-cache: Cache file created successfully.
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="hll">N: Download is performed unsandboxed as root as file '/home/guru/Downloads/CiscoPacketTracer_821_Ubuntu_64bit.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
-</span></code></pre></div></td></tr></table></div>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="hll">N: Download is performed unsandboxed as root as file '/home/guru/Downloads/CiscoPacketTracer822_amd64_signed.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+</span><a id="__codelineno-2-2" name="__codelineno-2-2"></a>guru@vm26:~/Downloads$ 
+</code></pre></div></td></tr></table></div>
 <h2 id="activation-link">Activation link</h2>
 <p>Member of Cisco Network Academy? You should have received an activation link on your private e-mail. Activate your account.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="activation-link.png"><img height="180" src="activation-link.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="activation-link.png"><img src="activation-link.png"/></a></p>
 <h2 id="mint-menu">Mint menu</h2>
-<p>Select "Menu" and start typing "pac". Start "PacketTracer 8.2.1".</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="menu-pac.png"><img height="180" src="menu-pac.png" width="320"/></a></p>
+<p>Select "Menu" and start typing "pac". Start "PacketTracer 8.2.2".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="menu-pac.png"><img src="menu-pac.png"/></a></p>
 <h2 id="multi-user">Multi-user</h2>
 <p>Answer "no".</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="multi-user.png"><img height="180" src="multi-user.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="multi-user.png"><img src="multi-user.png"/></a></p>
 <h2 id="sign-in">Sign-in</h2>
 <p>First choose "Keep me logged in (for 3 months) and then select "Cisco Networking Academy".</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="keep-me-logged-in.png"><img height="180" src="keep-me-logged-in.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="keep-me-logged-in.png"><img src="keep-me-logged-in.png"/></a></p>
 <h2 id="login">Login</h2>
-<p>First accept "cookies" and then login with your private e-mailadress and password.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="cookies-login.png"><img height="180" src="cookies-login.png" width="320"/></a></p>
+<p>Type your private e-mailadress. Put a checkmark next to "Remember me".</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="login.png"><img src="login.png"/></a></p>
 <h2 id="font-configuration">Font configuration</h2>
 <p>Personal preference here. Select "Options -&gt; Preferences -&gt; Font". Increase the fontsize to 12 and click "Apply".
 Then close the window.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="font-configuration.png"><img height="180" src="font-configuration.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="font-configuration.png"><img src="font-configuration.png"/></a></p>
 </article>
 </div>
 </div>
