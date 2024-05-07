@@ -5,6 +5,8 @@
     <img src="../commandprompt-dministrator.png"/>
 
 === "Step2"
-    First change the path. Then enter the sysprep command with parameters. A pop-up window appears. Finally, the system shuts down.
+    1. First change the path. 
+    
+    2. Then enter the sysprep command with parameters. A pop-up window appears. Finally, the system shuts down.
 
     <img src="../sysprep-working.png"/>
