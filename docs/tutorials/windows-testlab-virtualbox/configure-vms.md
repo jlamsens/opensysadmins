@@ -12,7 +12,8 @@
     <img src="../nat-network-edit.png"/>
 
 === "Step3"
-    Change the network CIDR to "192.168.10.0/24" and remove the check "Supports DHCP". Close all screens with "OK".
+    1. Change the "Network Name" to "My_NAT_Network".
+    2. Change the "Network CIDR" to "192.168.10.0/24" and remove the check "Supports DHCP". Close all screens with "OK".
 
     <img src="../nat-network-settings.png"/>
 
