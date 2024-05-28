@@ -7,12 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Standing on the shoulder of giants" name="description"/>
 <meta content="Jurgen Lamsens" name="author"/>
-<link href="https://www.opensysadmins.com/howtos/password-recovery-cisco2960/" rel="canonical"/>
-<link href="../reinstall-ios-cisco2960/" rel="prev"/>
-<link href="../factory-reset-cisco2960/" rel="next"/>
+<link href="https://www.opensysadmins.com/howtos/configure-password-recovery-mechanism/" rel="canonical"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
-<title>Password recovery on a Cisco 2960 switch - OpenSysAdmins</title>
+<title>Configure the password recovery mechanism - OpenSysAdmins</title>
 <link href="../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#password-recovery-on-a-cisco-2960-switch">
+<a class="md-skip" href="#configure-the-password-recovery-mechanism">
           Skip to content
         </a>
 </div>
@@ -61,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Password recovery on a Cisco 2960 switch
+              Configure the password recovery mechanism
             
           </span>
 </div>
@@ -490,15 +488,15 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../">Howtos</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
           Howtos
@@ -524,67 +522,10 @@
         (Re)install an IOS operating system on a Cisco 2960 switch
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Password recovery on a Cisco 2960 switch
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../password-recovery-cisco2960/">
         Password recovery on a Cisco 2960 switch
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#prereqs">
-    Prereqs
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setup">
-    Setup
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#situation">
-    Situation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#password-recovery-mechanism">
-    Password recovery mechanism
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rommon">
-    ROMMON
-  </a>
-<nav aria-label="ROMMON" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#password-recovery-mechanism-enabled">
-    Password recovery mechanism enabled
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#password-recovery-mechanism-disabled">
-    Password recovery mechanism disabled
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ios">
-    IOS
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../factory-reset-cisco2960/">
@@ -662,47 +603,13 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prereqs">
-    Prereqs
+<a class="md-nav__link" href="#check">
+    Check
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setup">
-    Setup
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#situation">
-    Situation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#password-recovery-mechanism">
-    Password recovery mechanism
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rommon">
-    ROMMON
-  </a>
-<nav aria-label="ROMMON" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#password-recovery-mechanism-enabled">
-    Password recovery mechanism enabled
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#password-recovery-mechanism-disabled">
-    Password recovery mechanism disabled
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ios">
-    IOS
+<a class="md-nav__link" href="#enable">
+    Enable
   </a>
 </li>
 </ul>
@@ -712,299 +619,26 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="password-recovery-on-a-cisco-2960-switch">Password recovery on a Cisco 2960 switch</h1>
-<h2 id="prereqs">Prereqs</h2>
-<ul>
-<li>a PC (<a href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/">BIOS</a>/<a href="../../tutorials/windows11-linuxmint21-dual-boot-uefi/">UEFI</a>) running Linux Mint 21<ul>
-<li><a href="../use-minicom-linux-mint/">minicom</a> terminal emulation software</li>
-</ul>
-</li>
-<li>a console cable</li>
-<li>a Cisco 2960 24TT-L or 24TC-L Plus switch<ul>
-<li>a working but inaccessible (forgotten console and/or enable password) IOS</li>
-</ul>
-</li>
-</ul>
-<h2 id="setup">Setup</h2>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="console-access.png"><img height="180" src="console-access.png" width="320"/></a></p>
-<h2 id="situation">Situation</h2>
-<p>The "console password" and "enable password" (Privileged EXEC mode) are - amongst other switch configuration settings - stored in startup-config (NVRAM). Recovery of a lost password is only useful if you have a inacessible (but working) IOS. If not, you have a bigger problem and have to <a href="../reinstall-ios-cisco2960/">(re)install an IOS operating system</a> first.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Problem1</label><label for="__tabbed_1_2">Problem2</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>No access to the console.</p>
+<h1 id="configure-the-password-recovery-mechanism">Configure the password recovery mechanism</h1>
+<p>In progress...</p>
+<h2 id="check">Check</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>...
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>User Access Verification
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>Password:           &lt;--- enter wrong password
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>Password:           &lt;--- enter wrong password
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>Password:           &lt;--- enter wrong password
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>% Bad passwords
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>Switch#show version | incl password-recovery
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>The password-recovery mechanism is disabled.
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>Switch#
 </code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>No access to privileged exec mode.</p>
+<h2 id="enable">Enable</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span>
-<span class="normal"><a href="#__codelineno-1-6">6</a></span>
-<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>Switch&gt;enable
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>Password:           &lt;--- enter wrong password
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Password:           &lt;--- enter wrong password
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>Password:           &lt;--- enter wrong password
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>% Bad secrets
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>Switch&gt;
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>Switch#conf terminal
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>Enter configuration commands, one per line.  End with CNTL/Z.
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Switch(config)#service password-recovery 
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>Switch(config)#end
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>Switch#
 </code></pre></div></td></tr></table></div>
-</div>
-</div>
-</input></input></div>
-<h2 id="password-recovery-mechanism">Password recovery mechanism</h2>
-<p><a href="../configure-password-recovery-mechanism/">Verify the status</a> of the <a href="../../references/">password recovery mechanism</a> as this has consequences for the next steps.</p>
-<h2 id="rommon">ROMMON</h2>
-<p><a href="../access-cisco-device-rommon/">Boot the switch in ROMMON-mode</a> using a cold start.</p>
-<h3 id="password-recovery-mechanism-enabled">Password recovery mechanism enabled</h3>
-<p>If the password recovery mechanism is enabled, it is possible to either keep the startup configuration file or choose to discard it.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label><label for="__tabbed_2_3">Step3</label><label for="__tabbed_2_4">Step4</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>List the files stored in flash. The startup configuration file in this mode is named "config.text".</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>switch: dir flash:
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>Directory of flash:/
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>    2  -rwx  15979776  &lt;date&gt;               c2960-lanbasek9-mz.152-7.E8.bin
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>    3  drwx  128       &lt;date&gt;               pnp-tech
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a>    4  drwx  0         &lt;date&gt;               pnp-info
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>    5  -rwx  1781      &lt;date&gt;               config.text
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>    8  -rwx  1921      &lt;date&gt;               private-config.text
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a>    9  -rwx  3096      &lt;date&gt;               multiple-fs
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a>49462784 bytes available (16081408 bytes used)
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a>switch: 
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>Optional: should you choose to keep the startup configuration file, temporary rename that file. Otherwise, skip this step.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>switch: rename flash:config.text flash:config.text.bak
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>switch:
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>Optional: should you choose to discard the startup configuration file, delete that file. Otherwise, skip this step.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>switch: delete flash:config.text
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>switch:
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>Boot the switch manually.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>switch: boot
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>Loading "flash:c2960-lanbasek9-mz.152-7.E8.bin"...@@@@@@@@@@@@@@@@@
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>...
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
-</input></input></input></input></div>
-<h3 id="password-recovery-mechanism-disabled">Password recovery mechanism disabled</h3>
-<p>If the password recovery mechanism is disabled, it is not possible to keep the startup configuration file and you HAVE to reset the system back to the default configuration.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Step1</label><label for="__tabbed_3_2">Step2</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>List the files stored in flash. The startup configuration file is absent!</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-6-10">10</a></span>
-<span class="normal"><a href="#__codelineno-6-11">11</a></span>
-<span class="normal"><a href="#__codelineno-6-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>switch: dir flash:
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>Directory of flash:/
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a>    2  -rwx  15979776  &lt;date&gt;               c2960-lanbasek9-mz.152-7.E8.bin
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a>    3  drwx  128       &lt;date&gt;               pnp-tech
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a>    4  drwx  0         &lt;date&gt;               pnp-info
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a>    8  -rwx  5         &lt;date&gt;               private-config.text
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a>    9  -rwx  3096      &lt;date&gt;               multiple-fs
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a>49415168 bytes available (16129024 bytes used)
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a>
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a>switch: 
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>Boot the switch manually.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
-<span class="normal"><a href="#__codelineno-7-2">2</a></span>
-<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>switch: boot
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>Loading "flash:c2960-lanbasek9-mz.152-7.E8.bin"...@@@@@@@@@@@@@@@@@
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a>...
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
-</input></input></div>
-<h2 id="ios">IOS</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:5"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"><input id="__tabbed_4_4" name="__tabbed_4" type="radio"><input id="__tabbed_4_5" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Step1</label><label for="__tabbed_4_2">Step2</label><label for="__tabbed_4_3">Step3</label><label for="__tabbed_4_4">Step4</label><label for="__tabbed_4_5">Step5</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>A this point, there is no startup configuration file (only a backup startup configuration file, if chosen). Enter "no" at the initial configuration setup prompt and change to privileged exec mode.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span>
-<span class="normal"><a href="#__codelineno-8-4">4</a></span>
-<span class="normal"><a href="#__codelineno-8-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>        --- System Configuration Dialog ---
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a>Would you like to enter the initial configuration dialog? [yes/no]:     -----&gt; enter "no"
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a>Switch&gt;enable
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a>Switch#
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>If you have a backup startup configuration file and want to restore it, copy the contents of the backup startup configuration file to the running configuration and delete the backup file. If not, skip this step.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-9-10">10</a></span>
-<span class="normal"><a href="#__codelineno-9-11">11</a></span>
-<span class="normal"><a href="#__codelineno-9-12">12</a></span>
-<span class="normal"><a href="#__codelineno-9-13">13</a></span>
-<span class="normal"><a href="#__codelineno-9-14">14</a></span>
-<span class="normal"><a href="#__codelineno-9-15">15</a></span>
-<span class="normal"><a href="#__codelineno-9-16">16</a></span>
-<span class="normal"><a href="#__codelineno-9-17">17</a></span>
-<span class="normal"><a href="#__codelineno-9-18">18</a></span>
-<span class="normal"><a href="#__codelineno-9-19">19</a></span>
-<span class="normal"><a href="#__codelineno-9-20">20</a></span>
-<span class="normal"><a href="#__codelineno-9-21">21</a></span>
-<span class="normal"><a href="#__codelineno-9-22">22</a></span>
-<span class="normal"><a href="#__codelineno-9-23">23</a></span>
-<span class="normal"><a href="#__codelineno-9-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>Switch#copy flash:config.text.bak running-config
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a>Destination filename [running-config]?                  ---&gt; ENTER
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a>% Login disabled on line 1, until 'password' is set
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a>% Login disabled on line 2, until 'password' is set
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a>% Login disabled on line 3, until 'password' is set
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a>% Login disabled on line 4, until 'password' is set
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a>% Login disabled on line 5, until 'password' is set
-<a id="__codelineno-9-8" name="__codelineno-9-8"></a>% Login disabled on line 6, until 'password' is set
-<a id="__codelineno-9-9" name="__codelineno-9-9"></a>% Login disabled on line 7, until 'password' is set
-<a id="__codelineno-9-10" name="__codelineno-9-10"></a>% Login disabled on line 8, until 'password' is set
-<a id="__codelineno-9-11" name="__codelineno-9-11"></a>% Login disabled on line 9, until 'password' is set
-<a id="__codelineno-9-12" name="__codelineno-9-12"></a>% Login disabled on line 10, until 'password' is set
-<a id="__codelineno-9-13" name="__codelineno-9-13"></a>% Login disabled on line 11, until 'password' is set
-<a id="__codelineno-9-14" name="__codelineno-9-14"></a>% Login disabled on line 12, until 'password' is set
-<a id="__codelineno-9-15" name="__codelineno-9-15"></a>% Login disabled on line 13, until 'password' is set
-<a id="__codelineno-9-16" name="__codelineno-9-16"></a>% Login disabled on line 14, until 'password' is set
-<a id="__codelineno-9-17" name="__codelineno-9-17"></a>% Login disabled on line 15, until 'password' is set
-<a id="__codelineno-9-18" name="__codelineno-9-18"></a>% Login disabled on line 16, until 'password' is set
-<a id="__codelineno-9-19" name="__codelineno-9-19"></a>1781 bytes copied in 0.964 secs (1848 bytes/sec)
-<a id="__codelineno-9-20" name="__codelineno-9-20"></a>
-<a id="__codelineno-9-21" name="__codelineno-9-21"></a>Switch#delete flash:config.text.bak
-<a id="__codelineno-9-22" name="__codelineno-9-22"></a>Delete filename [config.text.bak]?                      ---&gt; ENTER
-<a id="__codelineno-9-23" name="__codelineno-9-23"></a>Delete flash:/config.text.bak? [confirm]                ---&gt; ENTER
-<a id="__codelineno-9-24" name="__codelineno-9-24"></a>Switch#
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>Set the necessary password(s) and obscure the console clear-text password.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-10-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>Switch#configure terminal 
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a>Enter configuration commands, one per line.  End with CNTL/Z.
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a>Switch(config)#enable secret cisco-EN-pass
-<a id="__codelineno-10-4" name="__codelineno-10-4"></a>Switch(config)#line console 0
-<a id="__codelineno-10-5" name="__codelineno-10-5"></a>Switch(config-line)#password cisco-CON-pass
-<a id="__codelineno-10-6" name="__codelineno-10-6"></a>Switch(config-line)#login
-<a id="__codelineno-10-7" name="__codelineno-10-7"></a>Switch(config-line)#exit
-<a id="__codelineno-10-8" name="__codelineno-10-8"></a>Switch(config)#service password-encryption 
-<a id="__codelineno-10-9" name="__codelineno-10-9"></a>Switch(config)#end
-<a id="__codelineno-10-10" name="__codelineno-10-10"></a>Switch#
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>Copy the running configuration to the startup configuration. Restart the switch.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span>
-<span class="normal"><a href="#__codelineno-11-3">3</a></span>
-<span class="normal"><a href="#__codelineno-11-4">4</a></span>
-<span class="normal"><a href="#__codelineno-11-5">5</a></span>
-<span class="normal"><a href="#__codelineno-11-6">6</a></span>
-<span class="normal"><a href="#__codelineno-11-7">7</a></span>
-<span class="normal"><a href="#__codelineno-11-8">8</a></span>
-<span class="normal"><a href="#__codelineno-11-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>Switch#copy running-configuration startup-configuration         
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a>Building configuration...
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a>[OK]
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a>
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a>Switch#reload
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a>Proceed with reload? [confirm]                          ---&gt; ENTER
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a>
-<a id="__codelineno-11-8" name="__codelineno-11-8"></a>*Mar  1 00:15:53.633: %SYS-5-RELOAD: Reload requested by console. Reload Reason: Reload command.
-<a id="__codelineno-11-9" name="__codelineno-11-9"></a>...
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>Login using the new console password. Enter privileged exec mode using the new "enable" password.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
-<span class="normal"><a href="#__codelineno-12-2">2</a></span>
-<span class="normal"><a href="#__codelineno-12-3">3</a></span>
-<span class="normal"><a href="#__codelineno-12-4">4</a></span>
-<span class="normal"><a href="#__codelineno-12-5">5</a></span>
-<span class="normal"><a href="#__codelineno-12-6">6</a></span>
-<span class="normal"><a href="#__codelineno-12-7">7</a></span>
-<span class="normal"><a href="#__codelineno-12-8">8</a></span>
-<span class="normal"><a href="#__codelineno-12-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>User Access Verification
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a>
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a>Password:                                               ---&gt; enter "cisco-CON-pass"
-<a id="__codelineno-12-4" name="__codelineno-12-4"></a>
-<a id="__codelineno-12-5" name="__codelineno-12-5"></a>Switch&gt;
-<a id="__codelineno-12-6" name="__codelineno-12-6"></a>
-<a id="__codelineno-12-7" name="__codelineno-12-7"></a>Switch&gt;enable
-<a id="__codelineno-12-8" name="__codelineno-12-8"></a>Password:                                               ---&gt; enter "cisco-EN-pass"
-<a id="__codelineno-12-9" name="__codelineno-12-9"></a>Switch#
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
-</input></input></input></input></input></div>
 </article>
 </div>
 </div>

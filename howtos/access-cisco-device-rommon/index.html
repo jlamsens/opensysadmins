@@ -759,7 +759,7 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Let's simulate a non-working IOS by "accidently" erasing the flash filesystem. Restart the switch afterwards.</p>
+<p>Let's simulate a non-working IOS by "accidently" erasing the "flash" filesystem instead of the "nvram". Restart the switch afterwards.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -863,7 +863,7 @@
 </div>
 </input></input></div>
 <h3 id="cold-start">Cold start</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Step1</label><label for="__tabbed_3_2">Step2</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><input id="__tabbed_3_4" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Step1</label><label for="__tabbed_3_2">Step2</label><label for="__tabbed_3_3">Step3a</label><label for="__tabbed_3_4">Step3b</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>First disconnect the power cable from the switch. Minicom gives no output yet.</p>
@@ -886,7 +886,11 @@
 </div>
 <div class="tabbed-block">
 <p>Now reconnect the power cable. The switch boots and while doing the POST, the SYST LED blinks green.
-This takes about X seconds. After POST, the blinking LED changes pattern. Press the Mode button once. The switch <em>does not</em> initialize Flash and enters ROMMON-mode.</p>
+This takes about X seconds. After POST, the blinking LED changes pattern. Press the Mode button once.</p>
+<p>-&gt; insert image MODE button</p>
+</div>
+<div class="tabbed-block">
+<p>If the password recovery mechanism is enabled (line12), you have to manually initialize flash (line28).</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
@@ -912,7 +916,19 @@ This takes about X seconds. After POST, the blinking LED changes pattern. Press 
 <span class="normal"><a href="#__codelineno-5-23">23</a></span>
 <span class="normal"><a href="#__codelineno-5-24">24</a></span>
 <span class="normal"><a href="#__codelineno-5-25">25</a></span>
-<span class="normal"><a href="#__codelineno-5-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>Welcome to minicom 2.8
+<span class="normal"><a href="#__codelineno-5-26">26</a></span>
+<span class="normal"><a href="#__codelineno-5-27">27</a></span>
+<span class="normal"><a href="#__codelineno-5-28">28</a></span>
+<span class="normal"><a href="#__codelineno-5-29">29</a></span>
+<span class="normal"><a href="#__codelineno-5-30">30</a></span>
+<span class="normal"><a href="#__codelineno-5-31">31</a></span>
+<span class="normal"><a href="#__codelineno-5-32">32</a></span>
+<span class="normal"><a href="#__codelineno-5-33">33</a></span>
+<span class="normal"><a href="#__codelineno-5-34">34</a></span>
+<span class="normal"><a href="#__codelineno-5-35">35</a></span>
+<span class="normal"><a href="#__codelineno-5-36">36</a></span>
+<span class="normal"><a href="#__codelineno-5-37">37</a></span>
+<span class="normal"><a href="#__codelineno-5-38">38</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>Welcome to minicom 2.8
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>
 <a id="__codelineno-5-3" name="__codelineno-5-3"></a>OPTIONS: I18n 
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a>Port /dev/ttyUSB0, 09:44:08
@@ -921,10 +937,10 @@ This takes about X seconds. After POST, the blinking LED changes pattern. Press 
 <a id="__codelineno-5-7" name="__codelineno-5-7"></a>
 <a id="__codelineno-5-8" name="__codelineno-5-8"></a>
 <a id="__codelineno-5-9" name="__codelineno-5-9"></a>Boot Sector Filesystem (bs) installed, fsid: 2
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a>Base ethernet MAC Address: 6c:41:0e:18:0b:00
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>Base ethernet MAC Address: bc:f1:f2:59:06:00
 <a id="__codelineno-5-11" name="__codelineno-5-11"></a>Xmodem file system is available.
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a>The password-recovery mechanism is enabled.
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a>Initializing Flash...
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="hll">The password-recovery mechanism is enabled.
+</span><a id="__codelineno-5-13" name="__codelineno-5-13"></a>Initializing Flash...
 <a id="__codelineno-5-14" name="__codelineno-5-14"></a>flashfs[0]: filesystem check interrupted!
 <a id="__codelineno-5-15" name="__codelineno-5-15"></a>...done Initializing Flash.
 <a id="__codelineno-5-16" name="__codelineno-5-16"></a>
@@ -937,11 +953,106 @@ This takes about X seconds. After POST, the blinking LED changes pattern. Press 
 <a id="__codelineno-5-23" name="__codelineno-5-23"></a>    boot
 <a id="__codelineno-5-24" name="__codelineno-5-24"></a>
 <a id="__codelineno-5-25" name="__codelineno-5-25"></a>
-<a id="__codelineno-5-26" name="__codelineno-5-26"></a>switch:
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a>switch: 
+<a id="__codelineno-5-27" name="__codelineno-5-27"></a>
+<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="hll">switch: flash_init
+</span><a id="__codelineno-5-29" name="__codelineno-5-29"></a>Initializing Flash...
+<a id="__codelineno-5-30" name="__codelineno-5-30"></a>flashfs[0]: 6 files, 3 directories
+<a id="__codelineno-5-31" name="__codelineno-5-31"></a>flashfs[0]: 0 orphaned files, 0 orphaned directories
+<a id="__codelineno-5-32" name="__codelineno-5-32"></a>flashfs[0]: Total bytes: 65544192
+<a id="__codelineno-5-33" name="__codelineno-5-33"></a>flashfs[0]: Bytes used: 16081408
+<a id="__codelineno-5-34" name="__codelineno-5-34"></a>flashfs[0]: Bytes available: 49462784
+<a id="__codelineno-5-35" name="__codelineno-5-35"></a>flashfs[0]: flashfs fsck took 19 seconds.
+<a id="__codelineno-5-36" name="__codelineno-5-36"></a>...done Initializing Flash.
+<a id="__codelineno-5-37" name="__codelineno-5-37"></a>
+<a id="__codelineno-5-38" name="__codelineno-5-38"></a>switch: 
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>If the password recovery mechanism is disabled (line12), you will lose all the configuration. Flash is initialised for you. Choose "y" at the prompt (line31).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span>
+<span class="normal"><a href="#__codelineno-6-23">23</a></span>
+<span class="normal"><a href="#__codelineno-6-24">24</a></span>
+<span class="normal"><a href="#__codelineno-6-25">25</a></span>
+<span class="normal"><a href="#__codelineno-6-26">26</a></span>
+<span class="normal"><a href="#__codelineno-6-27">27</a></span>
+<span class="normal"><a href="#__codelineno-6-28">28</a></span>
+<span class="normal"><a href="#__codelineno-6-29">29</a></span>
+<span class="normal"><a href="#__codelineno-6-30">30</a></span>
+<span class="normal"><a href="#__codelineno-6-31">31</a></span>
+<span class="normal"><a href="#__codelineno-6-32">32</a></span>
+<span class="normal"><a href="#__codelineno-6-33">33</a></span>
+<span class="normal"><a href="#__codelineno-6-34">34</a></span>
+<span class="normal"><a href="#__codelineno-6-35">35</a></span>
+<span class="normal"><a href="#__codelineno-6-36">36</a></span>
+<span class="normal"><a href="#__codelineno-6-37">37</a></span>
+<span class="normal"><a href="#__codelineno-6-38">38</a></span>
+<span class="normal"><a href="#__codelineno-6-39">39</a></span>
+<span class="normal"><a href="#__codelineno-6-40">40</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>Welcome to minicom 2.8
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>OPTIONS: I18n 
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>Port /dev/ttyUSB0, 09:44:08
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>Press CTRL-A Z for help on special keys
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>Boot Sector Filesystem (bs) installed, fsid: 2
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>Base ethernet MAC Address: bc:f1:f2:59:06:00
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>Xmodem file system is available.
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="hll">The password-recovery mechanism is disabled.
+</span><a id="__codelineno-6-13" name="__codelineno-6-13"></a>Initializing Flash...
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>flashfs[0]: 6 files, 3 directories
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a>flashfs[0]: 0 orphaned files, 0 orphaned directories
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a>flashfs[0]: Total bytes: 65544192
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a>flashfs[0]: Bytes used: 16131584
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a>flashfs[0]: Bytes available: 49412608
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a>flashfs[0]: flashfs fsck took 19 seconds.
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a>...done Initializing Flash.
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a>done.
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a>The password-recovery mechanism has been triggered, but
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a>is currently disabled.  Access to the boot loader prompt
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a>through the password-recovery mechanism is disallowed at
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a>this point.  However, if you agree to let the system be
+<a id="__codelineno-6-28" name="__codelineno-6-28"></a>reset back to the default system configuration, access
+<a id="__codelineno-6-29" name="__codelineno-6-29"></a>to the boot loader prompt can still be allowed.
+<a id="__codelineno-6-30" name="__codelineno-6-30"></a>
+<a id="__codelineno-6-31" name="__codelineno-6-31"></a><span class="hll">Would you like to reset the system back to the default configuration (y/n)?y            ---&gt; answer "y"
+</span><a id="__codelineno-6-32" name="__codelineno-6-32"></a>
+<a id="__codelineno-6-33" name="__codelineno-6-33"></a>The system has been interrupted, and the config file
+<a id="__codelineno-6-34" name="__codelineno-6-34"></a>has been deleted.  The following command will finish
+<a id="__codelineno-6-35" name="__codelineno-6-35"></a>loading the operating system software:
+<a id="__codelineno-6-36" name="__codelineno-6-36"></a>
+<a id="__codelineno-6-37" name="__codelineno-6-37"></a>boot
+<a id="__codelineno-6-38" name="__codelineno-6-38"></a>
+<a id="__codelineno-6-39" name="__codelineno-6-39"></a>
+<a id="__codelineno-6-40" name="__codelineno-6-40"></a>switch: 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
-</input></input></div>
+</input></input></input></input></div>
 <h2 id="cisco-1941-router">Cisco 1941 router</h2>
 </article>
 </div>
