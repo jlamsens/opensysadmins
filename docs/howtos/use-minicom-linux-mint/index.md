@@ -4,6 +4,10 @@
 - a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Linux Mint 21
 - internet connection
 - a serial cable / console cable
+- a Cisco device (switch, router)
+
+## Console access
+<img src="console-access.png" width="320" height="180"/>
 
 ## Install minicom
 Refresh the cache and install the package.
@@ -84,7 +88,7 @@ In the terminal, run the following command to start the Minicom configuration:
 === "guru@hp:~$_"
 
     ``` title='' hl_lines="0"
-        sudo minicom -s
+    sudo minicom -s
     ```
 
 === "output"

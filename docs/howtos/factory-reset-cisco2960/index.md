@@ -283,7 +283,7 @@ switch:reset
 ```
 
 ## Clean switch
-Say hi to the wizard. Answer "no".
+Say hi to the wizard. Answer "no". Now just pull the power plug to shutdown the switch, as there is no on/off switch like on e.g. a Cisco 1941 router.
 
 ``` title='' hl_lines="0"
         --- System Configuration Dialog ---

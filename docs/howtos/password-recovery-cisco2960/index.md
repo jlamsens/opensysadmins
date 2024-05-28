@@ -1,255 +1,213 @@
 # Password recovery on a Cisco 2960 switch
 
 ## Prereqs
-- a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Linux Mint 21
-- [minicom](../use-minicom-linux-mint/index.md) terminal emulation software
-- a console cable
-- a Cisco 2960 24TT-L or 24TC-L Plus switch
-- a working IOS, so if necessary first [(re)install an IOS operating system](../reinstall-ios-cisco2960/index.md)
+* a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Linux Mint 21
+    * [minicom](../use-minicom-linux-mint/index.md) terminal emulation software
+* a console cable
+* a Cisco 2960 24TT-L or 24TC-L Plus switch
+    * a working but inaccessible (forgotten console and/or enable password) IOS
 
-## Console access
+## Setup
 
 <img src="console-access.png" width="320" height="180"/>
 
-### Password recovery mechanism enabled
+## Situation
+The "console password" and "enable password" (Privileged EXEC mode) are - amongst other switch configuration settings - stored in startup-config (NVRAM). Recovery of a lost password is only useful if you have a inacessible (but working) IOS. If not, you have a bigger problem and have to [(re)install an IOS operating system](../reinstall-ios-cisco2960/index.md) first.
 
-=== "Step1"
-    The password recover mechanism is enabled by default. This is necessary to be able to recover the startup configuration file.
+=== "Problem1"
+    No access to the console.
 
     ``` title='' hl_lines="0"
-    Switch#show ver | incl password-recovery
-    The password-recovery mechanism is enabled.
-    Switch#
+    ...
+    User Access Verification
+
+    Password:           <--- enter wrong password
+    Password:           <--- enter wrong password
+    Password:           <--- enter wrong password
+    % Bad passwords
     ```
 
-=== "Step2"
-    Let's simulate a forgotten password.
+=== "Problem2"
+    No access to privileged exec mode.
 
     ``` title='' hl_lines="0"
-    Switch#conf t
-    Enter configuration commands, one per line.  End with CNTL/Z.
-    Switch(config)#enable secret J3#C'7B0_1PlM
-    Switch(config)#end
-    Switch#wr
-    Building configuration...
-    [OK]
-    Switch# exit
-    Switch>ena
-    Password:   -----> enter wrong password
-    Password:   -----> enter wrong password
-    Password:   -----> enter wrong password
+    Switch>enable
+    Password:           <--- enter wrong password
+    Password:           <--- enter wrong password
+    Password:           <--- enter wrong password
     % Bad secrets
 
     Switch>
     ```
 
-=== "Step3"
-    Now [boot the switch in ROMMON-mode](../access-cisco-device-rommon/index.md) using a cold start.
+## Password recovery mechanism
+[Verify the status](../../howtos/configure-password-recovery-mechanism/index.md) of the [password recovery mechanism](../../references/index.md) as this has consequences for the next steps.
 
-    ``` title='' hl_lines="0"
-    ...
-    ...
-    switch:
-    ```
+## ROMMON
+[Boot the switch in ROMMON-mode](../access-cisco-device-rommon/index.md) using a cold start.
 
-=== "Step4"
-    Initialize Flash manually.
+### Password recovery mechanism enabled
+If the password recovery mechanism is enabled, it is possible to either keep the startup configuration file or choose to discard it.
 
-    ``` title='' hl_lines="0"
-    switch: flash_init
-    Initializing Flash...
-    flashfs[0]: 1 files, 1 directories
-    flashfs[0]: 0 orphaned files, 0 orphaned directories
-    flashfs[0]: Total bytes: 65544192
-    flashfs[0]: Bytes used: 3584
-    flashfs[0]: Bytes available: 65540608
-    flashfs[0]: flashfs fsck took 18 seconds.
-    ...done Initializing Flash.
-
-    switch:
-    ```
-
-=== "Step5"
-    List the files stored in flash. The startup configuration is config.text. If you want to keep it, rename the file. If you want to discard all configuration, delete it. Then boot the switch.
+=== "Step1"
+    List the files stored in flash. The startup configuration file in this mode is named "config.text".
 
     ``` title='' hl_lines="0"
     switch: dir flash:
     Directory of flash:/
 
-        2  drwx  128       <date>               pnp-tech
-        7  -rwx  1916      <date>               private-config.text
+        2  -rwx  15979776  <date>               c2960-lanbasek9-mz.152-7.E8.bin
+        3  drwx  128       <date>               pnp-tech
         4  drwx  0         <date>               pnp-info
-        5  -rwx  15979077  <date>               c2960-lanbasek9-mz.152-7.E7.bin
-        8  -rwx  1767      <date>               config.text
-        9  -rwx  4120      <date>               multiple-fs
+        5  -rwx  1781      <date>               config.text
+        8  -rwx  1921      <date>               private-config.text
+        9  -rwx  3096      <date>               multiple-fs
 
-    49466880 bytes available (16077312 bytes used)
+    49462784 bytes available (16081408 bytes used)
 
-    switch: rename flash:config.text flash:config.text.bak      -----> or "delete flash:config.text"
+    switch: 
+    ```
 
+=== "Step2"
+    Optional: should you choose to keep the startup configuration file, temporary rename that file. Otherwise, skip this step.
+
+    ``` title='' hl_lines="0"
+    switch: rename flash:config.text flash:config.text.bak
+    switch:
+    ```
+
+=== "Step3"
+    Optional: should you choose to discard the startup configuration file, delete that file. Otherwise, skip this step.
+
+    ``` title='' hl_lines="0"
+    switch: delete flash:config.text
+    switch:
+    ```
+
+=== "Step4"
+    Boot the switch manually.
+
+    ``` title='' hl_lines="0"
     switch: boot
-    Loading "flash:c2960-lanbasek9-mz.152-7.E7.bin"...@@@@@@@@@@@@@@@@@
+    Loading "flash:c2960-lanbasek9-mz.152-7.E8.bin"...@@@@@@@@@@@@@@@@@
     ...
-    ```
-
-=== "Step6"
-    Enter "no" at the initial configuration setup prompt.
-
-    ``` title='' hl_lines="0"
-         --- System Configuration Dialog ---
-
-    Would you like to enter the initial configuration dialog? [yes/no]:     -----> enter "no"
-    Switch>
-    ```
-
-=== "Step7"
-    Change to privileged exec mode. Copy the contents of the backup startup configuration to the running configuration.
-
-    ``` title='' hl_lines="0"
-    Switch>ena
-    Switch#
-    Switch#copy flash:config.text.bak run
-    Destination filename [running-config]? 
-    1767 bytes copied in 5.545 secs (319 bytes/sec)
-    Switch#
-    ```
-
-=== "Step8"
-    Change the privileged exec password and/or the console password. Restart the switch to verify if everything still works as expected.
-
-    ``` title='' hl_lines="0"
-    Switch#conf t
-    Switch(config)#enable secret MyNewPassword
-    Switch(config)#line con 0
-    ...
-    <todo>
-    ...
-    Switch(config)#end
-    Switch#wr         
-    Building configuration...
-    [OK]
-    Switch#reload
-    ```
-
-=== "Step9"
-    Login using the new password. Delete the backup file (if not done already).
-
-    ``` title='' hl_lines="0"
-    Switch>ena
-    Password:       -----> enter "MyNewPassword"
-    Switch#delete flash:config.text.bak
-    Delete filename [config.text.bak]? 
-    Delete flash:/config.text.bak? [confirm]
-    Switch#
     ```
 
 ### Password recovery mechanism disabled
+If the password recovery mechanism is disabled, it is not possible to keep the startup configuration file and you HAVE to reset the system back to the default configuration.
 
 === "Step1"
-    The password recovery mechanism is enabled by default. Disable it. It won't be possible to recover the startup configuration file.
+    List the files stored in flash. The startup configuration file is absent!
 
     ``` title='' hl_lines="0"
-    Switch#conf t
-    Enter configuration commands, one per line.  End with CNTL/Z.
-    Switch(config)#no service password-recovery
-    Switch#show ver | incl password-recovery
+    switch: dir flash:
+    Directory of flash:/
+
+        2  -rwx  15979776  <date>               c2960-lanbasek9-mz.152-7.E8.bin
+        3  drwx  128       <date>               pnp-tech
+        4  drwx  0         <date>               pnp-info
+        8  -rwx  5         <date>               private-config.text
+        9  -rwx  3096      <date>               multiple-fs
+
+    49415168 bytes available (16129024 bytes used)
+
+    switch: 
+    ```
+
+=== "Step2"
+    Boot the switch manually.
+
+    ``` title='' hl_lines="0"
+    switch: boot
+    Loading "flash:c2960-lanbasek9-mz.152-7.E8.bin"...@@@@@@@@@@@@@@@@@
+    ...
+    ```
+
+## IOS
+
+=== "Step1"
+    A this point, there is no startup configuration file (only a backup startup configuration file, if chosen). Enter "no" at the initial configuration setup prompt and change to privileged exec mode.
+
+    ``` title='' hl_lines="0"
+            --- System Configuration Dialog ---
+
+    Would you like to enter the initial configuration dialog? [yes/no]:     -----> enter "no"
+    Switch>enable
     Switch#
     ```
 
 === "Step2"
-    Let's simulate a forgotten password.
+    If you have a backup startup configuration file and want to restore it, copy the contents of the backup startup configuration file to the running configuration and delete the backup file. If not, skip this step.
 
     ``` title='' hl_lines="0"
-    Switch#conf t
-    Enter configuration commands, one per line.  End with CNTL/Z.
-    Switch(config)#enable secret J3#C'7B0_1PlM
-    Switch(config)#end
-    Switch#wr
-    Building configuration...
-    [OK]
-    Switch# exit
-    Switch>ena
-    Password:   -----> enter wrong password
-    Password:   -----> enter wrong password
-    Password:   -----> enter wrong password
-    % Bad secrets
-
-    Switch>
+    Switch#copy flash:config.text.bak running-config
+    Destination filename [running-config]?                  ---> ENTER
+    % Login disabled on line 1, until 'password' is set
+    % Login disabled on line 2, until 'password' is set
+    % Login disabled on line 3, until 'password' is set
+    % Login disabled on line 4, until 'password' is set
+    % Login disabled on line 5, until 'password' is set
+    % Login disabled on line 6, until 'password' is set
+    % Login disabled on line 7, until 'password' is set
+    % Login disabled on line 8, until 'password' is set
+    % Login disabled on line 9, until 'password' is set
+    % Login disabled on line 10, until 'password' is set
+    % Login disabled on line 11, until 'password' is set
+    % Login disabled on line 12, until 'password' is set
+    % Login disabled on line 13, until 'password' is set
+    % Login disabled on line 14, until 'password' is set
+    % Login disabled on line 15, until 'password' is set
+    % Login disabled on line 16, until 'password' is set
+    1781 bytes copied in 0.964 secs (1848 bytes/sec)
+    
+    Switch#delete flash:config.text.bak
+    Delete filename [config.text.bak]?                      ---> ENTER
+    Delete flash:/config.text.bak? [confirm]                ---> ENTER
+    Switch#
     ```
 
 === "Step3"
-    First disconnect the power cable from the switch. Minicom gives no output yet.
+    Set the necessary password(s) and obscure the console clear-text password.
 
     ``` title='' hl_lines="0"
-    Welcome to minicom 2.8
-
-    OPTIONS: I18n 
-    Port /dev/ttyUSB0, 13:50:27
-
-    Press CTRL-A Z for help on special keys
-
-    <blinking_cursor>
+    Switch#configure terminal 
+    Enter configuration commands, one per line.  End with CNTL/Z.
+    Switch(config)#enable secret cisco-EN-pass
+    Switch(config)#line console 0
+    Switch(config-line)#password cisco-CON-pass
+    Switch(config-line)#login
+    Switch(config-line)#exit
+    Switch(config)#service password-encryption 
+    Switch(config)#end
+    Switch#
     ```
 
 === "Step4"
-    Now reconnect the power cable. The switch boots and while doing the POST, the SYST LED blinks green.
-    This takes about X seconds. After POST, the blinking LED changes pattern. Access to the boot loader prompt through the password-recovery mechanism is disallowed at this point.
+    Copy the running configuration to the startup configuration. Restart the switch.
 
     ``` title='' hl_lines="0"
-    Welcome to minicom 2.8
+    Switch#copy running-configuration startup-configuration         
+    Building configuration...
+    [OK]
 
-    OPTIONS: I18n 
-    Port /dev/ttyUSB0, 09:44:08
+    Switch#reload
+    Proceed with reload? [confirm]                          ---> ENTER
 
-    Press CTRL-A Z for help on special keys
-
-
-    Boot Sector Filesystem (bs) installed, fsid: 2
-    Base ethernet MAC Address: 6c:41:0e:18:0b:00
-    Xmodem file system is available.
-    The password-recovery mechanism is disabled.
-    Initializing Flash...
-    flashfs[0]: 6 files, 3 directories
-    flashfs[0]: 0 orphaned files, 0 orphaned directories
-    flashfs[0]: Total bytes: 65544192
-    flashfs[0]: Bytes used: 16098816
-    flashfs[0]: Bytes available: 49445376
-    flashfs[0]: flashfs fsck took 21 seconds.
-    ...done Initializing Flash.
-    done.
-
-    The password-recovery mechanism has been triggered, but
-    is currently disabled.  Access to the boot loader prompt
-    through the password-recovery mechanism is disallowed at
-    this point.  However, if you agree to let the system be
-    reset back to the default system configuration, access
-    to the boot loader prompt can still be allowed.
-
-    Would you like to reset the system back to the default configuration (y/n)?     -----> enter "y"
-
-
-    The system has been interrupted, and the config file
-    has been deleted.  The following command will finish
-    loading the operating system software:
-
-        boot
-
-
-    switch: boot
-    Loading "flash:c2960-lanbasek9-mz.152-7.E8.bin"...@@@@@@@@@@@@@@@@@
+    *Mar  1 00:15:53.633: %SYS-5-RELOAD: Reload requested by console. Reload Reason: Reload command.
+    ...
     ```
 
 === "Step5"
-    Once the switch is up, there is no password and no startup configuration. Enable the password-recovery mechanism again. Verify.
+    Login using the new console password. Enter privileged exec mode using the new "enable" password.
 
     ``` title='' hl_lines="0"
-    Switch>ena
-    Switch#show startup-config 
-    startup-config is not present
-    Switch#conf t
-    Enter configuration commands, one per line.  End with CNTL/Z.
-    Switch(config)#service password-recovery
-    Switch#show ver | inc password-recovery
-    The password-recovery mechanism is enabled.
+    User Access Verification
+
+    Password:                                               ---> enter "cisco-CON-pass"
+
+    Switch>
+
+    Switch>enable
+    Password:                                               ---> enter "cisco-EN-pass"
     Switch#
     ```

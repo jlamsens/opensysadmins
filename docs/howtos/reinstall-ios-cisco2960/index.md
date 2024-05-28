@@ -2,9 +2,10 @@
 
 ## Prereqs
 - a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Linux Mint 21
-- [minicom](../use-minicom-linux-mint/index.md) terminal emulation software
-- a [tFTP service](../install-tftp-linux-mint/index.md)
+    - [minicom](../use-minicom-linux-mint/index.md) terminal emulation software
+    - (a [tFTP service](../install-tftp-linux-mint/index.md))
 - a console cable
+- (a network cable)
 - a Cisco 2960 24TT-L or 24TC-L Plus switch
 
 ## IOS transfer over serial (xmodem)
@@ -303,7 +304,7 @@ First, [start the switch in ROMMON-mode](../todo/index.md).
     ... 
     ```
 
-## IOS transfer over network protocol (tFTP)
+## IOS transfer over network protocol
 Transfer using a network protocol is only possible from IOS, not from ROMMON-mode.
 
 <img src="network-access.png" width="320" height="180"/>

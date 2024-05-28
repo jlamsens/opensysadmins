@@ -47,7 +47,7 @@
 ### Missing or corrupt IOS
 
 === "Step1"
-    Let's simulate a non-working IOS by "accidently" erasing the flash filesystem. Restart the switch afterwards.
+    Let's simulate a non-working IOS by "accidently" erasing the "flash" filesystem instead of the "nvram". Restart the switch afterwards.
 
     ``` title='' hl_lines="0"
     Switch#erase flash:
@@ -125,9 +125,14 @@
 
 === "Step2"
     Now reconnect the power cable. The switch boots and while doing the POST, the SYST LED blinks green.
-    This takes about X seconds. After POST, the blinking LED changes pattern. Press the Mode button once. The switch _does not_ initialize Flash and enters ROMMON-mode.
+    This takes about X seconds. After POST, the blinking LED changes pattern. Press the Mode button once.
 
-    ``` title='' hl_lines="0"
+    -> insert image MODE button
+
+=== "Step3a"
+    If the password recovery mechanism is enabled (line12), you have to manually initialize flash (line28).
+
+    ``` title='' hl_lines="12 28"
     Welcome to minicom 2.8
 
     OPTIONS: I18n 
@@ -137,7 +142,7 @@
 
 
     Boot Sector Filesystem (bs) installed, fsid: 2
-    Base ethernet MAC Address: 6c:41:0e:18:0b:00
+    Base ethernet MAC Address: bc:f1:f2:59:06:00
     Xmodem file system is available.
     The password-recovery mechanism is enabled.
     Initializing Flash...
@@ -153,7 +158,66 @@
         boot
 
 
-    switch:
+    switch: 
+
+    switch: flash_init
+    Initializing Flash...
+    flashfs[0]: 6 files, 3 directories
+    flashfs[0]: 0 orphaned files, 0 orphaned directories
+    flashfs[0]: Total bytes: 65544192
+    flashfs[0]: Bytes used: 16081408
+    flashfs[0]: Bytes available: 49462784
+    flashfs[0]: flashfs fsck took 19 seconds.
+    ...done Initializing Flash.
+
+    switch: 
     ```
+
+=== "Step3b"
+    If the password recovery mechanism is disabled (line12), you will lose all the configuration. Flash is initialised for you. Choose "y" at the prompt (line31).
+
+    ``` title='' hl_lines="12 31"
+    Welcome to minicom 2.8
+
+    OPTIONS: I18n 
+    Port /dev/ttyUSB0, 09:44:08
+
+    Press CTRL-A Z for help on special keys
+
+
+    Boot Sector Filesystem (bs) installed, fsid: 2
+    Base ethernet MAC Address: bc:f1:f2:59:06:00
+    Xmodem file system is available.
+    The password-recovery mechanism is disabled.
+    Initializing Flash...
+    flashfs[0]: 6 files, 3 directories
+    flashfs[0]: 0 orphaned files, 0 orphaned directories
+    flashfs[0]: Total bytes: 65544192
+    flashfs[0]: Bytes used: 16131584
+    flashfs[0]: Bytes available: 49412608
+    flashfs[0]: flashfs fsck took 19 seconds.
+    ...done Initializing Flash.
+    done.
+
+
+    The password-recovery mechanism has been triggered, but
+    is currently disabled.  Access to the boot loader prompt
+    through the password-recovery mechanism is disallowed at
+    this point.  However, if you agree to let the system be
+    reset back to the default system configuration, access
+    to the boot loader prompt can still be allowed.
+
+    Would you like to reset the system back to the default configuration (y/n)?y            ---> answer "y"
+
+    The system has been interrupted, and the config file
+    has been deleted.  The following command will finish
+    loading the operating system software:
+
+    boot
+
+
+    switch: 
+    ```
+
 
 ## Cisco 1941 router

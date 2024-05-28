@@ -1,0 +1,32 @@
+label Clonezilla NETWORK DUMP VDAB LAB
+  # MENU DEFAULT
+  # MENU HIDE
+  MENU LABEL NETWORK DUMP VDAB LAB
+  # MENU PASSWD
+  kernel /live/vmlinuz
+  append initrd=/live/initrd.img boot=live union=overlay username=user hostname=lunar config quiet loglevel=0 noswap edd=on nomodeset enforcing=0 noeject locales="en_US.UTF-8" keyboard-layouts="NONE" ocs_repository="nfs4://172.16.11.73/clonezilla/" ocs_live_run="ocs-sr --batch -g auto -e1 auto -e2 -r -j2 -k0 -scr -p poweroff savedisk win-lin-v2 sda" vga=791 ip=eth0:172.16.41.251:255.255.255.0:172.16.41.254:8.8.8.8 net.ifnames=0 splash i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes vmwgfx.enable_fbdev=1
+  TEXT HELP
+  VDAB NETWORK DUMP VDAB LAB
+  ENDTEXT
+
+label Clonezilla NETWORK RESTORE VDAB LAB
+  MENU DEFAULT
+  # MENU HIDE
+  MENU LABEL NETWORK RESTORE VDAB LAB
+  # MENU PASSWD
+  kernel /live/vmlinuz
+  append initrd=/live/initrd.img boot=live union=overlay username=user hostname=lunar config quiet loglevel=0 noswap edd=on nomodeset enforcing=0 noeject locales="en_US.UTF-8" keyboard-layouts="NONE" ocs_repository="nfs4://172.16.11.73/clonezilla/" ocs_live_run="ocs-sr --batch -g auto -e1 auto -e2 -r -j2 -k0 -scr -p poweroff restoredisk win-lin-v2 sda" vga=791 ip=eth0:172.16.41.251:255.255.255.0:172.16.41.254:8.8.8.8 net.ifnames=0 splash i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes vmwgfx.enable_fbdev=1
+  TEXT HELP
+  VDAB NETWORK RESTORE VDAB LAB
+  ENDTEXT
+
+label Clonezilla LOCAL DUMP VDAB LAB
+  # MENU DEFAULT
+  # MENU HIDE
+  MENU LABEL LOCAL DUMP VDAB LAB
+  # MENU PASSWD
+  kernel /live/vmlinuz
+  append initrd=/live/initrd.img boot=live union=overlay username=user hostname=lunar config quiet loglevel=0 noswap edd=on nomodeset enforcing=0 noeject locales="en_US.UTF-8" keyboard-layouts="NONE" ocs_live_run="ocs-sr --batch -q2 -c -j2 -z9p -i 0 -sfsck -scs -senc -p poweroff saveparts win-lin sda1 sda2 sda3 sda5 sda6" vga=791 splash i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes vmwgfx.enable_fbdev=1
+  TEXT HELP
+  VDAB LOCAL DUMP VDAB LAB
+  ENDTEXT
