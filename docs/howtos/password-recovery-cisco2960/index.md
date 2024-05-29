@@ -40,14 +40,11 @@ The "console password" and "enable password" (Privileged EXEC mode) are - amongs
     Switch>
     ```
 
-## Password recovery mechanism
-[Verify the status](../../howtos/configure-password-recovery-mechanism/index.md) of the [password recovery mechanism](../../references/index.md) as this has consequences for the next steps.
-
 ## ROMMON
-[Boot the switch in ROMMON-mode](../access-cisco-device-rommon/index.md) using a cold start.
+[Boot the switch in ROMMON-mode](../access-cisco-device-rommon/index.md) using a cold start. If the password recovery mechanism is enabled, it is possible to either keep the startup configuration file or choose to discard it. If the password recovery mechanism is disabled, you are forced to discard all device configuration.
 
 ### Password recovery mechanism enabled
-If the password recovery mechanism is enabled, it is possible to either keep the startup configuration file or choose to discard it.
+
 
 === "Step1"
     List the files stored in flash. The startup configuration file in this mode is named "config.text".
@@ -69,7 +66,7 @@ If the password recovery mechanism is enabled, it is possible to either keep the
     ```
 
 === "Step2"
-    Optional: should you choose to keep the startup configuration file, temporary rename that file. Otherwise, skip this step.
+    Optional: should you choose to keep the startup configuration file, temporary rename that file. If not, skip this step.
 
     ``` title='' hl_lines="0"
     switch: rename flash:config.text flash:config.text.bak
@@ -77,7 +74,7 @@ If the password recovery mechanism is enabled, it is possible to either keep the
     ```
 
 === "Step3"
-    Optional: should you choose to discard the startup configuration file, delete that file. Otherwise, skip this step.
+    Optional: should you choose to discard the startup configuration file, delete that file. If not, skip this step.
 
     ``` title='' hl_lines="0"
     switch: delete flash:config.text
@@ -94,7 +91,7 @@ If the password recovery mechanism is enabled, it is possible to either keep the
     ```
 
 ### Password recovery mechanism disabled
-If the password recovery mechanism is disabled, it is not possible to keep the startup configuration file and you HAVE to reset the system back to the default configuration.
+If the password recovery mechanism is disabled, it is not possible to keep the startup configuration file and you had to reset the system back to the default configuration.
 
 === "Step1"
     List the files stored in flash. The startup configuration file is absent!
@@ -126,7 +123,7 @@ If the password recovery mechanism is disabled, it is not possible to keep the s
 ## IOS
 
 === "Step1"
-    A this point, there is no startup configuration file (only a backup startup configuration file, if chosen). Enter "no" at the initial configuration setup prompt and change to privileged exec mode.
+    At this point, there is no startup configuration file (only a backup startup configuration file, if chosen). Enter "no" at the initial configuration setup prompt and change to privileged exec mode.
 
     ``` title='' hl_lines="0"
             --- System Configuration Dialog ---
@@ -137,7 +134,7 @@ If the password recovery mechanism is disabled, it is not possible to keep the s
     ```
 
 === "Step2"
-    If you have a backup startup configuration file and want to restore it, copy the contents of the backup startup configuration file to the running configuration and delete the backup file. If not, skip this step.
+    If you have a backup startup configuration file and want to restore it, copy the contents of the backup startup configuration file to the running configuration and delete that backup file. If not, skip this step.
 
     ``` title='' hl_lines="0"
     Switch#copy flash:config.text.bak running-config
