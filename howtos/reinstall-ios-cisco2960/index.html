@@ -540,6 +540,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#situation">
+    Situation
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#ios-transfer-over-serial-xmodem">
     IOS transfer over serial (xmodem)
   </a>
@@ -671,6 +676,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#situation">
+    Situation
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#ios-transfer-over-serial-xmodem">
     IOS transfer over serial (xmodem)
   </a>
@@ -732,13 +742,21 @@
 <li>(a network cable)</li>
 <li>a Cisco 2960 24TT-L or 24TC-L Plus switch</li>
 </ul>
+<h2 id="situation">Situation</h2>
+<p>At the time of writing, the latest IOS for...</p>
+<ul>
+<li>a "Cisco 2960 24TT-L switch" is "15.0(2)SE11"</li>
+<li>a "24TC-L Plus switch" it is "15.2(7)E8"</li>
+</ul>
+<p>Version "15.2(7)E8" does NOT run on a "Cisco 2960 24TT-L switch".
+Version 15.0(2)SE11 runs on both switches. I'll use that version for the examples.</p>
 <h2 id="ios-transfer-over-serial-xmodem">IOS transfer over serial (xmodem)</h2>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="console-access.png"><img height="180" src="console-access.png" width="320"/></a></p>
 <h3 id="from-ios">From IOS</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:9"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><input id="__tabbed_1_6" name="__tabbed_1" type="radio"><input id="__tabbed_1_7" name="__tabbed_1" type="radio"><input id="__tabbed_1_8" name="__tabbed_1" type="radio"><input id="__tabbed_1_9" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label><label for="__tabbed_1_4">Step4</label><label for="__tabbed_1_5">Step5</label><label for="__tabbed_1_6">Step6</label><label for="__tabbed_1_7">Step7</label><label for="__tabbed_1_8">Step8</label><label for="__tabbed_1_9">Step9</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:8"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><input id="__tabbed_1_6" name="__tabbed_1" type="radio"><input id="__tabbed_1_7" name="__tabbed_1" type="radio"><input id="__tabbed_1_8" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label><label for="__tabbed_1_4">Step4</label><label for="__tabbed_1_5">Step5</label><label for="__tabbed_1_6">Step6</label><label for="__tabbed_1_7">Step7</label><label for="__tabbed_1_8">Step8</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Verify that there is enough space left on the Flash filesystem.</p>
+<p>Verify that there is enough space left on the Flash filesystem to add an (additional) IOS. In this example, I will simulate a missing IOS by deleting it. Do not reload!</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -748,16 +766,24 @@
 <span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>Switch#dir flash:
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>Directory of flash:/
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="hll">Switch#dir flash:
+</span><a id="__codelineno-0-2" name="__codelineno-0-2"></a>Directory of flash:/
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    2  -rwx    15979136   Mar 1 1993 01:25:54 +00:00  c2960-lanbasek9-mz.152-7.E7.bin     &lt;---- OLD image
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    3  drwx         128   Mar 1 1993 00:06:45 +00:00  pnp-tech
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    4  drwx           0   Mar 1 1993 00:01:03 +00:00  pnp-info
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>    5  -rwx        1048   Mar 1 1993 00:01:08 +00:00  multiple-fs
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    3  drwx         128  May 29 2024 10:34:46 +00:00  pnp-tech
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    4  drwx           0   Mar 1 1993 00:01:03 +00:00  pnp-info
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    9  -rwx    11832946  May 29 2024 11:35:59 +00:00  c2960-lanbasek9-mz.150-2.SE11.bin
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>10  -rwx        1048  May 29 2024 11:37:31 +00:00  multiple-fs
 <a id="__codelineno-0-8" name="__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="hll">65544192 bytes total (49417728 bytes free)
-</span><a id="__codelineno-0-10" name="__codelineno-0-10"></a>Switch#
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>65544192 bytes total (53509632 bytes free)
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>Switch#
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="hll">Switch#delete flash:/c2960-lanbasek9-mz.150-2.SE11.bin
+</span><a id="__codelineno-0-12" name="__codelineno-0-12"></a>Delete filename [c2960-lanbasek9-mz.150-2.SE11.bin]? 
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>Delete flash:/c2960-lanbasek9-mz.150-2.SE11.bin? [confirm]
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>Switch#
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -766,9 +792,9 @@
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>Switch#conf t
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>Switch#configure terminal
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>Enter configuration commands, one per line.  End with CNTL/Z.
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Switch(config)#line con 0
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Switch(config)#line console 0
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="hll">Switch(config-line)#speed 115200
 </span><a id="__codelineno-1-5" name="__codelineno-1-5"></a>C�
 </code></pre></div></td></tr></table></div>
@@ -824,18 +850,22 @@ Type <span class="keys"><kbd class="key-o">O</kbd></span> and choose "Serial por
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
 <span class="normal"><a href="#__codelineno-3-4">4</a></span>
 <span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>    Switch(config-line)#end
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>    Switch#copy xmodem: flash:c2960-lanbasek9-mz.152-7.E8.bin
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>    Destination filename [c2960-lanbasek9-mz.152-7.E8.bin]?     &lt;----- press ENTER
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>    Switch#copy xmodem: flash:c2960-lanbasek9-mz.150-2.SE11.bin
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>    Destination filename [c2960-lanbasek9-mz.150-2.SE11.bin]?     &lt;----- press ENTER
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a>    Begin the Xmodem or Xmodem-1K transfer now...
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a>    CCC
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>For minicom, press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span> and then <span class="keys"><kbd class="key-z">Z</kbd></span>. Type <span class="keys"><kbd class="key-s">S</kbd></span> (Send files) and select "xmodem". Navigate your way to the new <a href="../todo/">IOS file</a> (here /home/guru/Downloads). Press <span class="keys"><kbd class="key-space">Space</kbd></span> to tag the file and press "Okay" to send.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="1280-720.png"><img height="180" src="1280-720.png" width="320"/></a></p>
+<p>For minicom, press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span> and then <span class="keys"><kbd class="key-z">Z</kbd></span>. Type <span class="keys"><kbd class="key-s">S</kbd></span> (Send files) and select "xmodem". Navigate your way to the new <a href="../todo/">IOS file</a> (here /srv/tftp). Press <span class="keys"><kbd class="key-space">Space</kbd></span> to tag the file and press "Okay" to send.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="xmodem-navigate-ios-serial.png"><img src="xmodem-navigate-ios-serial.png"/></a></p>
 </div>
 <div class="tabbed-block">
 <p>Grab a coffee. This can take a long time depending on the size of the IOS image. Wait for the transfer to complete and then press <span class="keys"><kbd class="key-enter">Enter</kbd></span> to quit.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="xmodem-transfer-ios-serial.png"><img src="xmodem-transfer-ios-serial.png"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Make the switch boot from the newly transferred IOS image, verify and reboot.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
@@ -846,23 +876,21 @@ Type <span class="keys"><kbd class="key-o">O</kbd></span> and choose "Serial por
 <span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-4-10">10</a></span>
-<span class="normal"><a href="#__codelineno-4-11">11</a></span>
-<span class="normal"><a href="#__codelineno-4-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>Switch#conf t                                                                                                         
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>Enter configuration commands, one per line.  End with CNTL/Z.                                                         
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>Switch(config)#line con 0                                                                                             
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>Swit+----------------[xmodem upload - Press CTRL-C to quit]----------------+                                          
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>C�  |l XMODEM receive command now.                                         |                                          
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>Swit|Xmodem sectors/kbytes sent: 109625/13703kRetry 0: NAK on sector       |                                          
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a>Swit|Bytes Sent:15979776   BPS:8950                                        |                                          
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a>*Mar|                                                                      |                                          
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="hll">Swit|Transfer complete                                                     |                                          
-</span><a id="__codelineno-4-10" name="__codelineno-4-10"></a>Dest|                                                                      |                                          
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a>Begi| READY: press any key to continue...                                  |                                          
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a>CCC +----------------------------------------------------------------------+                                          
+<span class="normal"><a href="#__codelineno-4-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>Switch(config)#boot system flash:/c2960-lanbasek9-mz.150-2.SE11.bin
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>Switch(config)#end
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>Switch#show boot
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>BOOT path-list      : flash:/c2960-lanbasek9-mz.150-2.SE11.bin
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>...
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>...
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>Switch#reload
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>System configuration has been modified. Save? [yes/no]: no  &lt;----- if asked
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>Proceed with reload? [confirm]
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Make the switch boot from the newly transferred IOS image, verify and reboot.</p>
+<p>You have to adjust the settings in your terminal emulation program again, to match the default baud of 9600. Verify that the correct IOS image is loaded. Enjoy your new IOS!</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
@@ -873,21 +901,39 @@ Type <span class="keys"><kbd class="key-o">O</kbd></span> and choose "Serial por
 <span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-5-10">10</a></span>
-<span class="normal"><a href="#__codelineno-5-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>Switch(config)#boot system flash:/c2960-lanbasek9-mz.152-7.E8.bin
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>Switch(config)#end
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>Switch#show boot
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>BOOT path-list      : flash:/c2960-lanbasek9-mz.152-7.E8.bin
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a>...
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a>...
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a>Switch#reload
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>Switch#show version
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="hll">Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.0(2)SE11, RELEASE SOFTWARE (fc3)
+</span><a id="__codelineno-5-3" name="__codelineno-5-3"></a>...
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>...
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>System returned to ROM by power-on
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="hll">System image file is "flash:/c2960-lanbasek9-mz.150-2.SE11.bin"
+</span><a id="__codelineno-5-7" name="__codelineno-5-7"></a>...
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>...
 <a id="__codelineno-5-9" name="__codelineno-5-9"></a>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a>System configuration has been modified. Save? [yes/no]: no  &lt;----- if asked
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a>Proceed with reload? [confirm]
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>Switch Ports Model              SW Version            SW Image                 
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>------ ----- -----              ----------            ----------               
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="hll">*    1 26    WS-C2960+24TC-L    15.0(2)SE11           C2960-LANBASEK9-M        
+</span><a id="__codelineno-5-13" name="__codelineno-5-13"></a>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a>Configuration register is 0xF
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a>Switch#
 </code></pre></div></td></tr></table></div>
 </div>
+</div>
+</input></input></input></input></input></input></input></input></div>
+<h3 id="from-rommon">From ROMMON</h3>
+<p>First, <a href="../todo/">start the switch in ROMMON-mode</a>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:10"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><input id="__tabbed_2_5" name="__tabbed_2" type="radio"><input id="__tabbed_2_6" name="__tabbed_2" type="radio"><input id="__tabbed_2_7" name="__tabbed_2" type="radio"><input id="__tabbed_2_8" name="__tabbed_2" type="radio"/><input id="__tabbed_2_9" name="__tabbed_2" type="radio"/><input id="__tabbed_2_10" name="__tabbed_2" type="radio"/><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label><label for="__tabbed_2_3">Step3</label><label for="__tabbed_2_4">Step4</label><label for="__tabbed_2_5">Step5</label><label for="__tabbed_2_6">Step6</label><label for="__tabbed_2_7">Step7</label><label for="__tabbed_2_8">Step8</label><label for="__tabbed_2_9">Step9</label><label for="__tabbed_2_10">Step10</label></div>
+<div class="tabbed-content">
 <div class="tabbed-block">
-<p>You have to adjust the settings in your terminal emulation program again, to match the default baud of 9600. Verify that the correct IOS image is loaded.</p>
+<p>Verify that there is enough space left on the Flash filesystem to add an (additional) IOS. In this example, I will simulate a missing IOS by deleting it.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
@@ -902,82 +948,33 @@ Type <span class="keys"><kbd class="key-o">O</kbd></span> and choose "Serial por
 <span class="normal"><a href="#__codelineno-6-12">12</a></span>
 <span class="normal"><a href="#__codelineno-6-13">13</a></span>
 <span class="normal"><a href="#__codelineno-6-14">14</a></span>
-<span class="normal"><a href="#__codelineno-6-15">15</a></span>
-<span class="normal"><a href="#__codelineno-6-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>Switch#show version
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="hll">Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.2(7)E8, RELEASE SOFTWARE (fc1)
-</span><a id="__codelineno-6-3" name="__codelineno-6-3"></a>Technical Support: http://www.cisco.com/techsupport
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a>Copyright (c) 1986-2023 by Cisco Systems, Inc.
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a>...
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a>...
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a>System returned to ROM by power-on
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="hll">System image file is "flash:/c2960-lanbasek9-mz.152-7.E8.bin"
-</span><a id="__codelineno-6-9" name="__codelineno-6-9"></a>Last reload reason: Reload command
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a>...
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a>...
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a>Switch Ports Model                     SW Version            SW Image                 
-<a id="__codelineno-6-13" name="__codelineno-6-13"></a>------ ----- -----                     ----------            ----------               
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="hll">*    1 26    WS-C2960+24TC-L           15.2(7)E8             C2960-LANBASEK9-M
-</span><a id="__codelineno-6-15" name="__codelineno-6-15"></a>...
-<a id="__codelineno-6-16" name="__codelineno-6-16"></a>...
+<span class="normal"><a href="#__codelineno-6-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="hll">switch: dir flash:
+</span><a id="__codelineno-6-2" name="__codelineno-6-2"></a>Directory of flash:/
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>    2  -rwx  11832960  &lt;date&gt;               c2960-lanbasek9-mz.150-2.SE11.bin
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>    3  drwx  128       &lt;date&gt;               pnp-tech
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>    4  drwx  0         &lt;date&gt;               pnp-info
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>    10  -rwx  1048      &lt;date&gt;               multiple-fs
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>53509632 bytes available (12034560 bytes used)
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="hll">switch: delete flash:c2960-lanbasek9-mz.150-2.SE11.bin
+</span><a id="__codelineno-6-12" name="__codelineno-6-12"></a>Are you sure you want to delete "flash:c2960-lanbasek9-mz.150-2.SE11.bin" (y/n)?y
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>File "flash:c2960-lanbasek9-mz.150-2.SE11.bin" deleted
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a>switch: 
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>If all went well, it's save to remove the old IOS image (if existing). Enjoy your new IOS!</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-7-10">10</a></span>
-<span class="normal"><a href="#__codelineno-7-11">11</a></span>
-<span class="normal"><a href="#__codelineno-7-12">12</a></span>
-<span class="normal"><a href="#__codelineno-7-13">13</a></span>
-<span class="normal"><a href="#__codelineno-7-14">14</a></span>
-<span class="normal"><a href="#__codelineno-7-15">15</a></span>
-<span class="normal"><a href="#__codelineno-7-16">16</a></span>
-<span class="normal"><a href="#__codelineno-7-17">17</a></span>
-<span class="normal"><a href="#__codelineno-7-18">18</a></span>
-<span class="normal"><a href="#__codelineno-7-19">19</a></span>
-<span class="normal"><a href="#__codelineno-7-20">20</a></span>
-<span class="normal"><a href="#__codelineno-7-21">21</a></span>
-<span class="normal"><a href="#__codelineno-7-22">22</a></span>
-<span class="normal"><a href="#__codelineno-7-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>Switch#delete flash:c2960-lanbasek9-mz.152-7.E7.bin
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>Delete filename [c2960-lanbasek9-mz.152-7.E7.bin]? 
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a>Delete flash:/c2960-lanbasek9-mz.152-7.E7.bin? [confirm]
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a>Switch#dir flash:
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a>Directory of flash:/
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a>
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a>2  -rwx    15979672   Mar 1 1993 00:25:20 +00:00  c2960-lanbasek9-mz.152-7.E8.bin
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a>3  drwx         128   Mar 1 1993 00:01:37 +00:00  pnp-tech
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a>4  drwx           0   Mar 1 1993 00:01:03 +00:00  pnp-info
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a>5  -rwx        1048   Mar 1 1993 00:01:08 +00:00  multiple-fs
-<a id="__codelineno-7-12" name="__codelineno-7-12"></a>
-<a id="__codelineno-7-13" name="__codelineno-7-13"></a>65544192 bytes total (49461248 bytes free)
-<a id="__codelineno-7-14" name="__codelineno-7-14"></a>
-<a id="__codelineno-7-15" name="__codelineno-7-15"></a>Switch#dir nvram:
-<a id="__codelineno-7-16" name="__codelineno-7-16"></a>Directory of nvram:/
-<a id="__codelineno-7-17" name="__codelineno-7-17"></a>
-<a id="__codelineno-7-18" name="__codelineno-7-18"></a>65  -rw-           0                    &lt;no date&gt;  startup-config
-<a id="__codelineno-7-19" name="__codelineno-7-19"></a>66  ----           0                    &lt;no date&gt;  private-config
-<a id="__codelineno-7-20" name="__codelineno-7-20"></a>67  -rw-           0                    &lt;no date&gt;  underlying-config
-<a id="__codelineno-7-21" name="__codelineno-7-21"></a> 1  ----          71                    &lt;no date&gt;  persistent-data
-<a id="__codelineno-7-22" name="__codelineno-7-22"></a>
-<a id="__codelineno-7-23" name="__codelineno-7-23"></a>65536 bytes total (64460 bytes free)
+<p>Set the baud rate to 115200 to speed up the transfer. You will lose the connection after the last command. Some gibberish characters can emerge.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>switch: set BAUD 115200
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>                   � 
 </code></pre></div></td></tr></table></div>
 </div>
-</div>
-</input></input></input></input></input></input></input></input></input></div>
-<h3 id="from-rommon">From ROMMON</h3>
-<p>First, <a href="../todo/">start the switch in ROMMON-mode</a>.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:11"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><input id="__tabbed_2_5" name="__tabbed_2" type="radio"><input id="__tabbed_2_6" name="__tabbed_2" type="radio"><input id="__tabbed_2_7" name="__tabbed_2" type="radio"/><input id="__tabbed_2_8" name="__tabbed_2" type="radio"/><input id="__tabbed_2_9" name="__tabbed_2" type="radio"/><input id="__tabbed_2_10" name="__tabbed_2" type="radio"/><input id="__tabbed_2_11" name="__tabbed_2" type="radio"/><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label><label for="__tabbed_2_3">Step3</label><label for="__tabbed_2_4">Step4</label><label for="__tabbed_2_5">Step5</label><label for="__tabbed_2_6">Step6</label><label for="__tabbed_2_7">Step7</label><label for="__tabbed_2_8">Step8</label><label for="__tabbed_2_9">Step9</label><label for="__tabbed_2_10">Step10</label><label for="__tabbed_2_11">Step11</label></div>
-<div class="tabbed-content">
 <div class="tabbed-block">
-<p>Initialize Flash manually.</p>
+<p>Adjust the settings in your terminal emulation program to match the new baud rate. For minicom, press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span> and then <span class="keys"><kbd class="key-z">Z</kbd></span>. 
+Type <span class="keys"><kbd class="key-o">O</kbd></span> and choose "Serial port setup". Change setting <span class="keys"><kbd class="key-e">E</kbd></span> to "115200" and <span class="keys"><kbd class="key-enter">Enter</kbd></span> twice. Exit the configuration menu.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
@@ -988,135 +985,182 @@ Type <span class="keys"><kbd class="key-o">O</kbd></span> and choose "Serial por
 <span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-8-10">10</a></span>
-<span class="normal"><a href="#__codelineno-8-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>switch: flash_init
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a>Initializing Flash...
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a>flashfs[0]: 1 files, 1 directories
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a>flashfs[0]: 0 orphaned files, 0 orphaned directories
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a>flashfs[0]: Total bytes: 65544192
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a>flashfs[0]: Bytes used: 3584
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a>flashfs[0]: Bytes available: 65540608
-<a id="__codelineno-8-8" name="__codelineno-8-8"></a>flashfs[0]: flashfs fsck took 18 seconds.
-<a id="__codelineno-8-9" name="__codelineno-8-9"></a>...done Initializing Flash.
-<a id="__codelineno-8-10" name="__codelineno-8-10"></a>
-<a id="__codelineno-8-11" name="__codelineno-8-11"></a>switch:
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>Verify that there is enough space left on the Flash filesystem.
-<todo></todo></p>
-</div>
-<div class="tabbed-block">
-<p>Set the baud rate to 115200 to speed up the transfer. You will lose the connection after the last command. Some gibberish characters can emerge.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
-<span class="normal"><a href="#__codelineno-9-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>switch: set BAUD 115200
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a>                   � 
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>Adjust the settings in your terminal emulation program to match the new baud rate. For minicom, press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span> and then <span class="keys"><kbd class="key-z">Z</kbd></span>. 
-Type <span class="keys"><kbd class="key-o">O</kbd></span> and choose "Serial port setup". Change setting <span class="keys"><kbd class="key-e">E</kbd></span> and <span class="keys"><kbd class="key-enter">Enter</kbd></span> twice. Exit.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-10-10">10</a></span>
-<span class="normal"><a href="#__codelineno-10-11">11</a></span>
-<span class="normal"><a href="#__codelineno-10-12">12</a></span>
-<span class="normal"><a href="#__codelineno-10-13">13</a></span>
-<span class="normal"><a href="#__codelineno-10-14">14</a></span>
-<span class="normal"><a href="#__codelineno-10-15">15</a></span>
-<span class="normal"><a href="#__codelineno-10-16">16</a></span>
-<span class="normal"><a href="#__codelineno-10-17">17</a></span>
-<span class="normal"><a href="#__codelineno-10-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>swit+-----------------+---------[Comm Parameters]----------+----------------+                                    
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a>swit| A -    Serial De|                                    |                |                                    
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="hll">C�  | B - Lockfile Loc|     Current:  9600 8N1             |                |                                    
-</span><a id="__codelineno-10-4" name="__codelineno-10-4"></a>    | C -   Callin Pro| Speed            Parity      Data  |                |                                    
-<a id="__codelineno-10-5" name="__codelineno-10-5"></a>    | D -  Callout Pro| A: &lt;next&gt;        L: None     S: 5  |                |                                    
-<a id="__codelineno-10-6" name="__codelineno-10-6"></a>    | E -    Bps/Par/B| B: &lt;prev&gt;        M: Even     T: 6  |                |                                    
-<a id="__codelineno-10-7" name="__codelineno-10-7"></a>    | F - Hardware Flo| C:   9600        N: Odd      U: 7  |                |                                    
-<a id="__codelineno-10-8" name="__codelineno-10-8"></a>    | G - Software Flo| D:  38400        O: Mark     V: 8  |                |                                    
-<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="hll">    | H -     RS485 En| E: 115200        P: Space          |                |                                    
-</span><a id="__codelineno-10-10" name="__codelineno-10-10"></a>    | I -   RS485 Rts |                                    |                |                                    
-<a id="__codelineno-10-11" name="__codelineno-10-11"></a>    | J -  RS485 Rts A| Stopbits                           |                |                                    
-<a id="__codelineno-10-12" name="__codelineno-10-12"></a>    | K -  RS485 Rx Du| W: 1             Q: 8-N-1          |                |                                    
-<a id="__codelineno-10-13" name="__codelineno-10-13"></a>    | L -  RS485 Termi| X: 2             R: 7-E-1          |                |                                    
-<a id="__codelineno-10-14" name="__codelineno-10-14"></a>    | M - RS485 Delay |                                    |                |                                    
-<a id="__codelineno-10-15" name="__codelineno-10-15"></a>    | N - RS485 Delay |                                    |                |                                    
-<a id="__codelineno-10-16" name="__codelineno-10-16"></a>    |                 | Choice, or &lt;Enter&gt; to exit?        |                |                                    
-<a id="__codelineno-10-17" name="__codelineno-10-17"></a>    |    Change which +------------------------------------+                |                                    
-<a id="__codelineno-10-18" name="__codelineno-10-18"></a>    +-----------------------------------------------------------------------+ 
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>swit+-----------------+---------[Comm Parameters]----------+----------------+                                    
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>swit| A -    Serial De|                                    |                |                                    
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="hll">C�  | B - Lockfile Loc|     Current:  9600 8N1             |                |                                    
+</span><a id="__codelineno-8-4" name="__codelineno-8-4"></a>    | C -   Callin Pro| Speed            Parity      Data  |                |                                    
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>    | D -  Callout Pro| A: &lt;next&gt;        L: None     S: 5  |                |                                    
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>    | E -    Bps/Par/B| B: &lt;prev&gt;        M: Even     T: 6  |                |                                    
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>    | F - Hardware Flo| C:   9600        N: Odd      U: 7  |                |                                    
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>    | G - Software Flo| D:  38400        O: Mark     V: 8  |                |                                    
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="hll">    | H -     RS485 En| E: 115200        P: Space          |                |                                    
+</span><a id="__codelineno-8-10" name="__codelineno-8-10"></a>    | I -   RS485 Rts |                                    |                |                                    
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>    | J -  RS485 Rts A| Stopbits                           |                |                                    
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a>    | K -  RS485 Rx Du| W: 1             Q: 8-N-1          |                |                                    
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a>    | L -  RS485 Termi| X: 2             R: 7-E-1          |                |                                    
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a>    | M - RS485 Delay |                                    |                |                                    
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a>    | N - RS485 Delay |                                    |                |                                    
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a>    |                 | Choice, or &lt;Enter&gt; to exit?        |                |                                    
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a>    |    Change which +------------------------------------+                |                                    
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a>    +-----------------------------------------------------------------------+ 
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <p>Press <span class="keys"><kbd class="key-enter">Enter</kbd></span> The connection is back. Initiate an xMODEM transfer. The switch will then prompt you to start the transfer from your terminal emulator.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span>
-<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>switch: copy xmodem: flash:c2960-lanbasek9-mz.152-7.E8.bin                                                            
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a>Begin the Xmodem or Xmodem-1K transfer now...                                                                         
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a>CCC
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>switch: copy xmodem: flash:c2960-lanbasek9-mz.152-7.E8.bin                                                            
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>Begin the Xmodem or Xmodem-1K transfer now...                                                                         
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>CCC
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <p>For minicom, press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span> and then <span class="keys"><kbd class="key-z">Z</kbd></span>. Type <span class="keys"><kbd class="key-s">S</kbd></span> (Send files) and select "xmodem". Navigate your way to the new <a href="../todo/">IOS file</a> (here /home/guru/Downloads). Press <span class="keys"><kbd class="key-space">Space</kbd></span> to tag the file and press "Okay" to send.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="xmodem-navigate-ios-rommon.png"><img height="180" src="xmodem-navigate-ios-rommon.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="xmodem-navigate-ios-serial-rommon.png"><img src="xmodem-navigate-ios-serial-rommon.png"/></a></p>
 </div>
 <div class="tabbed-block">
 <p>Grab a coffee. This can take a long time depending on the size of the IOS image. Wait for the transfer to complete and then press <span class="keys"><kbd class="key-enter">Enter</kbd></span> to quit.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-12-10">10</a></span>
-<span class="normal"><a href="#__codelineno-12-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>switch: copy xmodem: flash:c2960-lanbasek9-mz.152-7.E8.bin                                                                                                    
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a>Begin the Xmodem or Xmodem-1K transfer now...                                                                                                                 
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a>CCC +----------------[xmodem upload - Press CTRL-C to quit]----------------+                                                                                  
-<a id="__codelineno-12-4" name="__codelineno-12-4"></a>    |Sending c2960-lanbasek9-mz.152-7.E8.bin, 124841 blocks: Give your loca|                                                                                  
-<a id="__codelineno-12-5" name="__codelineno-12-5"></a>    |l XMODEM receive command now.                                         |                                                                                  
-<a id="__codelineno-12-6" name="__codelineno-12-6"></a>    |Bytes Sent:15979776   BPS:9379                                        |                                                                                  
-<a id="__codelineno-12-7" name="__codelineno-12-7"></a>    |                                                                      |                                                                                  
-<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="hll">    |Transfer complete                                                     |                                                                                  
-</span><a id="__codelineno-12-9" name="__codelineno-12-9"></a>    |                                                                      |                                                                                  
-<a id="__codelineno-12-10" name="__codelineno-12-10"></a>    | READY: press any key to continue...                                  |                                                                                  
-<a id="__codelineno-12-11" name="__codelineno-12-11"></a>    +----------------------------------------------------------------------+ 
-</code></pre></div></td></tr></table></div>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="xmodem-transfer-ios-serial-rommon.png"><img src="xmodem-transfer-ios-serial-rommon.png"/></a></p>
 </div>
 <div class="tabbed-block">
 <p>Update the BOOT parameter to match the new IOS.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
-<span class="normal"><a href="#__codelineno-13-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>Switch: set BOOT flash:c2960-lanbasek9-mz.152-7.E8.bin
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a>Switch:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span>
+<span class="normal"><a href="#__codelineno-10-7">7</a></span>
+<span class="normal"><a href="#__codelineno-10-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>switch: copy xmodem: flash:c2960-lanbasek9-mz.150-2.SE11.bin                                                            
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>Begin the Xmodem or Xmodem-1K transfer now...                                                                         
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>C...........................................................................................................................................................
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>File "xmodem:" successfully copied to "flash:c2960-lanbasek9-mz.150-2.SE11.bin"                                         
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="hll">switch: set BOOT flash:c2960-lanbasek9-mz.150-2.SE11.bin                                                                
+</span><a id="__codelineno-10-7" name="__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>switch: 
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <p>Set the BAUD rate back to the default (9600 bps). You have to adjust the settings in your terminal emulation program again. Press <span class="keys"><kbd class="key-enter">Enter</kbd></span> The connection is back.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
-<span class="normal"><a href="#__codelineno-14-2">2</a></span>
-<span class="normal"><a href="#__codelineno-14-3">3</a></span>
-<span class="normal"><a href="#__codelineno-14-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>switch: unset BAUD                                                                                                                                            
-<a id="__codelineno-14-2" name="__codelineno-14-2"></a>                }                                                                                                                                           
-<a id="__codelineno-14-3" name="__codelineno-14-3"></a>
-<a id="__codelineno-14-4" name="__codelineno-14-4"></a>switch:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>switch: unset BAUD                                                                                                                                            
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>                }                                                                                                                                           
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>switch:
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <p>Finally, boot the switch manually.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
-<span class="normal"><a href="#__codelineno-15-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>switch: boot                                                                                                                                                  
-<a id="__codelineno-15-2" name="__codelineno-15-2"></a>Loading "flash:c2960-lanbasek9-mz.152-7.E8.bin"...@@@@@@@@@@@@@@@@@
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>switch: boot                                                                                                                                                  
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>Loading "flash:c2960-lanbasek9-mz.150-2.SE11.bin"...@@@@@@@@@@@@@@@@@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <p>Verify that the correct IOS image is loaded. Enjoy your new IOS!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>Switch#show version
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="hll">Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.0(2)SE11, RELEASE SOFTWARE (fc3)
+</span><a id="__codelineno-13-3" name="__codelineno-13-3"></a>...
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>...
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>System returned to ROM by power-on
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="hll">System image file is "flash:/c2960-lanbasek9-mz.150-2.SE11.bin"
+</span><a id="__codelineno-13-7" name="__codelineno-13-7"></a>...
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a>...
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a>Switch Ports Model              SW Version            SW Image                 
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a>------ ----- -----              ----------            ----------               
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="hll">*    1 26    WS-C2960+24TC-L    15.0(2)SE11           C2960-LANBASEK9-M        
+</span><a id="__codelineno-13-13" name="__codelineno-13-13"></a>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a>Configuration register is 0xF
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a>Switch#
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></input></input></input></input></input></div>
+<h2 id="ios-transfer-over-network-protocol">IOS transfer over network protocol</h2>
+<p>Transfer using a network protocol is only possible from IOS, not from ROMMON-mode.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="network-access.png"><img height="180" src="network-access.png" width="320"/></a></p>
+<h3 id="tftp">tFTP</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:9"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><input id="__tabbed_3_3" name="__tabbed_3" type="radio"/><input id="__tabbed_3_4" name="__tabbed_3" type="radio"/><input id="__tabbed_3_5" name="__tabbed_3" type="radio"/><input id="__tabbed_3_6" name="__tabbed_3" type="radio"/><input id="__tabbed_3_7" name="__tabbed_3" type="radio"/><input id="__tabbed_3_8" name="__tabbed_3" type="radio"/><input id="__tabbed_3_9" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Step1</label><label for="__tabbed_3_2">Step2</label><label for="__tabbed_3_3">Step3</label><label for="__tabbed_3_4">Step4</label><label for="__tabbed_3_5">Step5</label><label for="__tabbed_3_6">Step6</label><label for="__tabbed_3_7">Step7</label><label for="__tabbed_3_8">Step8</label><label for="__tabbed_3_9">Step9</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Verify that there is enough space left on the Flash filesystem to add an (additional) IOS. In this example, I will simulate a missing IOS by deleting it.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="hll">Switch#dir flash:
+</span><a id="__codelineno-14-2" name="__codelineno-14-2"></a>Directory of flash:/
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>    2  -rwx    11832946   Mar 1 1993 00:12:06 +00:00  c2960-lanbasek9-mz.150-2.SE11.bin
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a>    3  -rwx        1048   Mar 1 1993 00:01:03 +00:00  multiple-fs
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a>32514048 bytes total (20678144 bytes free)
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a>Switch# delete flash:c2960-lanbasek9-mz.150-2.SE11.bin
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="hll">Are you sure you want to delete "flash:c2960-lanbasek9-mz.150-2.SE11.bin" (y/n)?y
+</span><a id="__codelineno-14-12" name="__codelineno-14-12"></a>File "flash:c2960-lanbasek9-mz.150-2.SE11.bin" deleted
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a>Switch# 
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>You need <a href="../todo/">a tFTP service</a> on the LAB-PC. Copy a <a href="../todo/">valid Cisco IOS image</a> file to the tFTP directory where files are served from. Adjust permissions.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span>
+<span class="normal"><a href="#__codelineno-15-6">6</a></span>
+<span class="normal"><a href="#__codelineno-15-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>&lt;TODO COPY AND PERMISSIONS&gt;
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>guru@lab:~$ ls -lh /srv/tftp/
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>total 852M
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a>...
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a>-rw-r--r-- 1 guru guru  12M sep  2  2021 c2960-lanbasek9-mz.150-2.SE11.bin
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a>...
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a>guru@lab:~$ 
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Show the name of the network interface on the LAB-PC. Configure an temporary IP address and subnet mask. Verify.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
@@ -1131,78 +1175,68 @@ Type <span class="keys"><kbd class="key-o">O</kbd></span> and choose "Serial por
 <span class="normal"><a href="#__codelineno-16-12">12</a></span>
 <span class="normal"><a href="#__codelineno-16-13">13</a></span>
 <span class="normal"><a href="#__codelineno-16-14">14</a></span>
-<span class="normal"><a href="#__codelineno-16-15">15</a></span>
-<span class="normal"><a href="#__codelineno-16-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>Switch#show version
-<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="hll">Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.2(7)E8, RELEASE SOFTWARE (fc1)
-</span><a id="__codelineno-16-3" name="__codelineno-16-3"></a>Technical Support: http://www.cisco.com/techsupport
-<a id="__codelineno-16-4" name="__codelineno-16-4"></a>Copyright (c) 1986-2023 by Cisco Systems, Inc.
-<a id="__codelineno-16-5" name="__codelineno-16-5"></a>...
-<a id="__codelineno-16-6" name="__codelineno-16-6"></a>...
-<a id="__codelineno-16-7" name="__codelineno-16-7"></a>System returned to ROM by power-on
-<a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="hll">System image file is "flash:/c2960-lanbasek9-mz.152-7.E8.bin"
-</span><a id="__codelineno-16-9" name="__codelineno-16-9"></a>Last reload reason: Reload command
-<a id="__codelineno-16-10" name="__codelineno-16-10"></a>...
-<a id="__codelineno-16-11" name="__codelineno-16-11"></a>...
-<a id="__codelineno-16-12" name="__codelineno-16-12"></a>Switch Ports Model                     SW Version            SW Image                 
-<a id="__codelineno-16-13" name="__codelineno-16-13"></a>------ ----- -----                     ----------            ----------               
-<a id="__codelineno-16-14" name="__codelineno-16-14"></a><span class="hll">*    1 26    WS-C2960+24TC-L           15.2(7)E8             C2960-LANBASEK9-M
-</span><a id="__codelineno-16-15" name="__codelineno-16-15"></a>...
-<a id="__codelineno-16-16" name="__codelineno-16-16"></a>... 
+<span class="normal"><a href="#__codelineno-16-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>guru@lab:~$ sudo ip link show
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>[sudo] password for guru:     
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a>    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="hll">2: enp0s25: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+</span><a id="__codelineno-16-6" name="__codelineno-16-6"></a>    link/ether 90:1b:0e:18:b9:8e brd ff:ff:ff:ff:ff:ff
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="hll">guru@lab:~$ sudo ip address add 192.168.1.101/24 dev enp0s25
+</span><a id="__codelineno-16-9" name="__codelineno-16-9"></a>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="hll">guru@lab:~$ ip a
+</span><a id="__codelineno-16-11" name="__codelineno-16-11"></a>...
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a>2: enp0s25: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc fq_codel state UP group default qlen 1000
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a>    link/ether 90:1b:0e:18:b9:8e brd ff:ff:ff:ff:ff:ff
+<a id="__codelineno-16-14" name="__codelineno-16-14"></a>    inet 192.168.1.101/24 scope global enp0s25
+<a id="__codelineno-16-15" name="__codelineno-16-15"></a>    valid_lft forever preferred_lft forever
 </code></pre></div></td></tr></table></div>
 </div>
-</div>
-</input></input></input></input></input></input></div>
-<h2 id="ios-transfer-over-network-protocol">IOS transfer over network protocol</h2>
-<p>Transfer using a network protocol is only possible from IOS, not from ROMMON-mode.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="network-access.png"><img height="180" src="network-access.png" width="320"/></a></p>
-<h3 id="tftp">tFTP</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:6"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><input id="__tabbed_3_3" name="__tabbed_3" type="radio"/><input id="__tabbed_3_4" name="__tabbed_3" type="radio"/><input id="__tabbed_3_5" name="__tabbed_3" type="radio"/><input id="__tabbed_3_6" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Step1</label><label for="__tabbed_3_2">Step2</label><label for="__tabbed_3_3">Step3</label><label for="__tabbed_3_4">Step4</label><label for="__tabbed_3_5">Step5</label><label for="__tabbed_3_6">Step6</label></div>
-<div class="tabbed-content">
 <div class="tabbed-block">
-<p><a href="../todo/">Install a tFTP service</a> on the LAB-PC. Copy a <a href="../todo/">valid Cisco IOS image</a> file to the tFTP directory where files are served from. Adjust permissions.</p>
+<p>Configure an IP address and subnet mask on the switch. Verify.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
 <span class="normal"><a href="#__codelineno-17-2">2</a></span>
 <span class="normal"><a href="#__codelineno-17-3">3</a></span>
 <span class="normal"><a href="#__codelineno-17-4">4</a></span>
 <span class="normal"><a href="#__codelineno-17-5">5</a></span>
-<span class="normal"><a href="#__codelineno-17-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>&lt;TODO COPY AND PERMISSIONS&gt;
-<a id="__codelineno-17-2" name="__codelineno-17-2"></a>guru@pc:~$ ls -lh /srv/tftp/
-<a id="__codelineno-17-3" name="__codelineno-17-3"></a>total 31M
-<a id="__codelineno-17-4" name="__codelineno-17-4"></a>-rw-r--r-- 1 root root 16M May 17 13:14 c2960-lanbasek9-mz.152-7.E7.bin
-<a id="__codelineno-17-5" name="__codelineno-17-5"></a>-rw-r--r-- 1 root root 16M May 17 13:14 c2960-lanbasek9-mz.152-7.E8.bin
-<a id="__codelineno-17-6" name="__codelineno-17-6"></a>guru@pc:~$ 
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>Configure an IP address and subnet mask on the switch. Verify.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
-<span class="normal"><a href="#__codelineno-18-2">2</a></span>
-<span class="normal"><a href="#__codelineno-18-3">3</a></span>
-<span class="normal"><a href="#__codelineno-18-4">4</a></span>
-<span class="normal"><a href="#__codelineno-18-5">5</a></span>
-<span class="normal"><a href="#__codelineno-18-6">6</a></span>
-<span class="normal"><a href="#__codelineno-18-7">7</a></span>
-<span class="normal"><a href="#__codelineno-18-8">8</a></span>
-<span class="normal"><a href="#__codelineno-18-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>Switch#conf t
-<a id="__codelineno-18-2" name="__codelineno-18-2"></a>Enter configuration commands, one per line.  End with CNTL/Z.
-<a id="__codelineno-18-3" name="__codelineno-18-3"></a>Switch(config)#int vlan 1
-<a id="__codelineno-18-4" name="__codelineno-18-4"></a>Switch(config-if)#ip add 192.168.1.86 255.255.255.0
-<a id="__codelineno-18-5" name="__codelineno-18-5"></a>Switch(config-if)#no shut
-<a id="__codelineno-18-6" name="__codelineno-18-6"></a>Switch(config-if)#do show ip int br
-<a id="__codelineno-18-7" name="__codelineno-18-7"></a>Interface              IP-Address      OK? Method Status                Protocol
-<a id="__codelineno-18-8" name="__codelineno-18-8"></a>Vlan1                  192.168.1.86    YES manual up                    up      
-<a id="__codelineno-18-9" name="__codelineno-18-9"></a>...
+<span class="normal"><a href="#__codelineno-17-6">6</a></span>
+<span class="normal"><a href="#__codelineno-17-7">7</a></span>
+<span class="normal"><a href="#__codelineno-17-8">8</a></span>
+<span class="normal"><a href="#__codelineno-17-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>Switch#conf t
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>Enter configuration commands, one per line.  End with CNTL/Z.
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a>Switch(config)#int vlan 1
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>Switch(config-if)#ip add 192.168.1.84 255.255.255.0
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>Switch(config-if)#no shut
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a>Switch(config-if)#do show ip int br
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a>Interface              IP-Address      OK? Method Status                Protocol
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a>Vlan1                  192.168.1.84    YES manual up                    up      
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a>...
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <p>Optional (in this case): ensure that the TFTP session is sourced from the correct interface (here: VLAN 1).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span>
+<span class="normal"><a href="#__codelineno-18-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>Switch(config-if)#exit
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a>Switch(config)#ip tftp source-interface vlan 1
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a>Switch(config)#end
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a>Switch#
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Verify connectivity between the LAB-PC and the switch.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
 <span class="normal"><a href="#__codelineno-19-2">2</a></span>
 <span class="normal"><a href="#__codelineno-19-3">3</a></span>
-<span class="normal"><a href="#__codelineno-19-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>Switch(config-if)#exit
-<a id="__codelineno-19-2" name="__codelineno-19-2"></a>Switch(config)#ip tftp source-interface vlan 1
-<a id="__codelineno-19-3" name="__codelineno-19-3"></a>Switch(config)#end
-<a id="__codelineno-19-4" name="__codelineno-19-4"></a>Switch#
+<span class="normal"><a href="#__codelineno-19-4">4</a></span>
+<span class="normal"><a href="#__codelineno-19-5">5</a></span>
+<span class="normal"><a href="#__codelineno-19-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>Switch#ping 192.168.1.101
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>Type escape sequence to abort.
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a>Sending 5, 100-byte ICMP Echos to 192.168.1.101, timeout is 2 seconds:
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a>!!!!!
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a>Success rate is 100 percent (5/5), round-trip min/avg/max = 1/205/1015 ms
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a>Switch#
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -1214,13 +1248,13 @@ Type <span class="keys"><kbd class="key-o">O</kbd></span> and choose "Serial por
 <span class="normal"><a href="#__codelineno-20-5">5</a></span>
 <span class="normal"><a href="#__codelineno-20-6">6</a></span>
 <span class="normal"><a href="#__codelineno-20-7">7</a></span>
-<span class="normal"><a href="#__codelineno-20-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a>Switch#copy tftp://192.168.1.101/c2960-lanbasek9-mz.152-7.E8.bin flash:
-<a id="__codelineno-20-2" name="__codelineno-20-2"></a>Destination filename [c2960-lanbasek9-mz.152-7.E8.bin]?     &lt;----- press ENTER
-<a id="__codelineno-20-3" name="__codelineno-20-3"></a>Accessing tftp://192.168.1.101/c2960-lanbasek9-mz.152-7.E8.bin...
-<a id="__codelineno-20-4" name="__codelineno-20-4"></a>Loading c2960-lanbasek9-mz.152-7.E8.bin from 192.168.1.101 (via Vlan1): !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-<a id="__codelineno-20-5" name="__codelineno-20-5"></a>[OK - 15979672 bytes]
+<span class="normal"><a href="#__codelineno-20-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a>Switch#copy tftp://192.168.1.101/c2960-lanbasek9-mz.150-2.SE11.bin flash:
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>Destination filename [c2960-lanbasek9-mz.150-2.SE11.bin]? 
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a>Accessing tftp://192.168.1.101/c2960-lanbasek9-mz.150-2.SE11.bin...
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a>Loading c2960-lanbasek9-mz.150-2.SE11.bin from 192.168.1.101 (via Vlan1): !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a>[OK - 11832946 bytes]
 <a id="__codelineno-20-6" name="__codelineno-20-6"></a>
-<a id="__codelineno-20-7" name="__codelineno-20-7"></a>15979672 bytes copied in 217.886 secs (73340 bytes/sec)
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a>11832946 bytes copied in 144.938 secs (81641 bytes/sec)
 <a id="__codelineno-20-8" name="__codelineno-20-8"></a>Switch#
 </code></pre></div></td></tr></table></div>
 </div>
@@ -1238,23 +1272,23 @@ Type <span class="keys"><kbd class="key-o">O</kbd></span> and choose "Serial por
 <span class="normal"><a href="#__codelineno-21-10">10</a></span>
 <span class="normal"><a href="#__codelineno-21-11">11</a></span>
 <span class="normal"><a href="#__codelineno-21-12">12</a></span>
-<span class="normal"><a href="#__codelineno-21-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>Switch#conf t
-<a id="__codelineno-21-2" name="__codelineno-21-2"></a>Enter configuration commands, one per line.  End with CNTL/Z.
-<a id="__codelineno-21-3" name="__codelineno-21-3"></a>Switch(config)#boot system flash:/c2960-lanbasek9-mz.152-7.E8.bin
-<a id="__codelineno-21-4" name="__codelineno-21-4"></a>Switch(config)#end
+<span class="normal"><a href="#__codelineno-21-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>Switch(config)#boot system flash:/c2960-lanbasek9-mz.150-2.SE11.bin
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>Switch(config)#end
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a>Switch#
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>
 <a id="__codelineno-21-5" name="__codelineno-21-5"></a>Switch#show boot
-<a id="__codelineno-21-6" name="__codelineno-21-6"></a>BOOT path-list      : flash:/c2960-lanbasek9-mz.152-7.E8.bin
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a>BOOT path-list      : flash:/c2960-lanbasek9-mz.150-2.SE11.bin
 <a id="__codelineno-21-7" name="__codelineno-21-7"></a>...
 <a id="__codelineno-21-8" name="__codelineno-21-8"></a>...
-<a id="__codelineno-21-9" name="__codelineno-21-9"></a>
-<a id="__codelineno-21-10" name="__codelineno-21-10"></a>Switch#reload
-<a id="__codelineno-21-11" name="__codelineno-21-11"></a>
-<a id="__codelineno-21-12" name="__codelineno-21-12"></a>System configuration has been modified. Save? [yes/no]: no  &lt;----- if asked
-<a id="__codelineno-21-13" name="__codelineno-21-13"></a>Proceed with reload? [confirm]
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a>Switch#reload
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a>
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a>System configuration has been modified. Save? [yes/no]: no
+<a id="__codelineno-21-12" name="__codelineno-21-12"></a>Proceed with reload? [confirm]
+<a id="__codelineno-21-13" name="__codelineno-21-13"></a>...
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>If all went well, it's save to remove the old IOS image. Enjoy your new IOS!</p>
+<p>Verify that the correct IOS image is loaded. Enjoy your new IOS!</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-22-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-22-3"> 3</a></span>
@@ -1271,35 +1305,23 @@ Type <span class="keys"><kbd class="key-o">O</kbd></span> and choose "Serial por
 <span class="normal"><a href="#__codelineno-22-14">14</a></span>
 <span class="normal"><a href="#__codelineno-22-15">15</a></span>
 <span class="normal"><a href="#__codelineno-22-16">16</a></span>
-<span class="normal"><a href="#__codelineno-22-17">17</a></span>
-<span class="normal"><a href="#__codelineno-22-18">18</a></span>
-<span class="normal"><a href="#__codelineno-22-19">19</a></span>
-<span class="normal"><a href="#__codelineno-22-20">20</a></span>
-<span class="normal"><a href="#__codelineno-22-21">21</a></span>
-<span class="normal"><a href="#__codelineno-22-22">22</a></span>
-<span class="normal"><a href="#__codelineno-22-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a>Switch#delete flash:c2960-lanbasek9-mz.152-7.E7.bin
-<a id="__codelineno-22-2" name="__codelineno-22-2"></a>Delete filename [c2960-lanbasek9-mz.152-7.E7.bin]? 
-<a id="__codelineno-22-3" name="__codelineno-22-3"></a>Delete flash:/c2960-lanbasek9-mz.152-7.E7.bin? [confirm]
-<a id="__codelineno-22-4" name="__codelineno-22-4"></a>
-<a id="__codelineno-22-5" name="__codelineno-22-5"></a>Switch#dir flash:
-<a id="__codelineno-22-6" name="__codelineno-22-6"></a>Directory of flash:/
-<a id="__codelineno-22-7" name="__codelineno-22-7"></a>
-<a id="__codelineno-22-8" name="__codelineno-22-8"></a>2  -rwx    15979672   Mar 1 1993 00:25:20 +00:00  c2960-lanbasek9-mz.152-7.E8.bin
-<a id="__codelineno-22-9" name="__codelineno-22-9"></a>3  drwx         128   Mar 1 1993 00:01:37 +00:00  pnp-tech
-<a id="__codelineno-22-10" name="__codelineno-22-10"></a>4  drwx           0   Mar 1 1993 00:01:03 +00:00  pnp-info
-<a id="__codelineno-22-11" name="__codelineno-22-11"></a>5  -rwx        1048   Mar 1 1993 00:01:08 +00:00  multiple-fs
-<a id="__codelineno-22-12" name="__codelineno-22-12"></a>
-<a id="__codelineno-22-13" name="__codelineno-22-13"></a>65544192 bytes total (49461248 bytes free)
+<span class="normal"><a href="#__codelineno-22-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a>Switch#show version
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="hll">Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.0(2)SE11, RELEASE SOFTWARE (fc3)
+</span><a id="__codelineno-22-3" name="__codelineno-22-3"></a>...
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a>...
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a>System returned to ROM by power-on
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="hll">System image file is "flash:/c2960-lanbasek9-mz.150-2.SE11.bin"
+</span><a id="__codelineno-22-7" name="__codelineno-22-7"></a>...
+<a id="__codelineno-22-8" name="__codelineno-22-8"></a>...
+<a id="__codelineno-22-9" name="__codelineno-22-9"></a>
+<a id="__codelineno-22-10" name="__codelineno-22-10"></a>Switch Ports Model              SW Version            SW Image                 
+<a id="__codelineno-22-11" name="__codelineno-22-11"></a>------ ----- -----              ----------            ----------               
+<a id="__codelineno-22-12" name="__codelineno-22-12"></a><span class="hll">*    1 26    WS-C2960+24TC-L    15.0(2)SE11           C2960-LANBASEK9-M        
+</span><a id="__codelineno-22-13" name="__codelineno-22-13"></a>
 <a id="__codelineno-22-14" name="__codelineno-22-14"></a>
-<a id="__codelineno-22-15" name="__codelineno-22-15"></a>Switch#dir nvram:
-<a id="__codelineno-22-16" name="__codelineno-22-16"></a>Directory of nvram:/
-<a id="__codelineno-22-17" name="__codelineno-22-17"></a>
-<a id="__codelineno-22-18" name="__codelineno-22-18"></a>65  -rw-           0                    &lt;no date&gt;  startup-config
-<a id="__codelineno-22-19" name="__codelineno-22-19"></a>66  ----           0                    &lt;no date&gt;  private-config
-<a id="__codelineno-22-20" name="__codelineno-22-20"></a>67  -rw-           0                    &lt;no date&gt;  underlying-config
-<a id="__codelineno-22-21" name="__codelineno-22-21"></a> 1  ----          71                    &lt;no date&gt;  persistent-data
-<a id="__codelineno-22-22" name="__codelineno-22-22"></a>
-<a id="__codelineno-22-23" name="__codelineno-22-23"></a>65536 bytes total (64460 bytes free)
+<a id="__codelineno-22-15" name="__codelineno-22-15"></a>Configuration register is 0xF
+<a id="__codelineno-22-16" name="__codelineno-22-16"></a>
+<a id="__codelineno-22-17" name="__codelineno-22-17"></a>Switch#
 </code></pre></div></td></tr></table></div>
 </div>
 </div>

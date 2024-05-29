@@ -570,6 +570,16 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#prereqs">
+    Prereqs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setup">
+    Setup
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#cisco-2960-switch">
     Cisco 2960 switch
   </a>
@@ -647,6 +657,16 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#prereqs">
+    Prereqs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setup">
+    Setup
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#cisco-2960-switch">
     Cisco 2960 switch
   </a>
@@ -683,31 +703,41 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="access-a-cisco-device-in-rommon-mode">Access a Cisco device in ROMMON-mode</h1>
+<h2 id="prereqs">Prereqs</h2>
+<ul>
+<li>a PC (<a href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/">BIOS</a>/<a href="../../tutorials/windows11-linuxmint21-dual-boot-uefi/">UEFI</a>) running Linux Mint 21<ul>
+<li><a href="../use-minicom-linux-mint/">minicom</a> terminal emulation software</li>
+</ul>
+</li>
+<li>a console cable</li>
+<li>a Cisco 2960 24TT-L or 24TC-L Plus switch</li>
+<li>a Cisco 1941 router</li>
+</ul>
+<h2 id="setup">Setup</h2>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="console-access.png"><img height="180" src="console-access.png" width="320"/></a></p>
 <h2 id="cisco-2960-switch">Cisco 2960 switch</h2>
 <h3 id="from-ios">From IOS</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Bypass the normal boot process and enter ROMMON mode directly upon the next reboot.</p>
+<p>By default, the switch will boot the configured boot image (line2) automatically, without waiting for user input (line6).</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
 <span class="normal"><a href="#__codelineno-0-5">5</a></span>
 <span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span>
-<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>Switch#conf t
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>Enter configuration commands, one per line.  End with CNTL/Z.
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>Switch(config)#boot manual 
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>Switch(config)#end
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>Switch#reload
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>System configuration has been modified. Save? [yes/no]: no      &lt;----- if asked
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a>Proceed with reload? [confirm]                                  &lt;----- press &lt;Enter&gt;
+<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>Switch#show boot
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="hll">BOOT path-list      : flash:c2960-lanbasek9-mz.152-7.E8.bin
+</span><a id="__codelineno-0-3" name="__codelineno-0-3"></a>Config file         : flash:/config.text
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>Private Config file : flash:/private-config.text
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>Enable Break        : yes
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="hll">Manual Boot         : no
+</span><a id="__codelineno-0-7" name="__codelineno-0-7"></a>...
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>We're in ROMMON-mode.</p>
+<p>Bypass the normal boot process (line3) and enter ROMMON mode directly upon the next reboot (line5).</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -718,48 +748,21 @@
 <span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span>
-<span class="normal"><a href="#__codelineno-1-15">15</a></span>
-<span class="normal"><a href="#__codelineno-1-16">16</a></span>
-<span class="normal"><a href="#__codelineno-1-17">17</a></span>
-<span class="normal"><a href="#__codelineno-1-18">18</a></span>
-<span class="normal"><a href="#__codelineno-1-19">19</a></span>
-<span class="normal"><a href="#__codelineno-1-20">20</a></span>
-<span class="normal"><a href="#__codelineno-1-21">21</a></span>
-<span class="normal"><a href="#__codelineno-1-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>Boot Sector Filesystem (bs) installed, fsid: 2
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>Base ethernet MAC Address: bc:f1:f2:59:06:00
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Xmodem file system is available.
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>The password-recovery mechanism is enabled.
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>Initializing Flash...
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>flashfs[0]: 4 files, 3 directories
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>flashfs[0]: 0 orphaned files, 0 orphaned directories
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>flashfs[0]: Total bytes: 65544192
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a>flashfs[0]: Bytes used: 16104448
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a>flashfs[0]: Bytes available: 49439744
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a>flashfs[0]: flashfs fsck took 19 seconds.
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a>...done Initializing Flash.
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>done.
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a>The system is not configured to boot automatically.  The
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a>following command will finish loading the operating system
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a>software:
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a>    boot
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a>
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a>
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="hll">switch:
-</span></code></pre></div></td></tr></table></div>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>Switch#configure terminal
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>Enter configuration commands, one per line.  End with CNTL/Z.
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="hll">Switch(config)#boot manual 
+</span><a id="__codelineno-1-4" name="__codelineno-1-4"></a>Switch(config)#end
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="hll">Switch#reload
+</span><a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>System configuration has been modified. Save? [yes/no]: no      &lt;----- if asked
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>Proceed with reload? [confirm]                                  &lt;----- press &lt;Enter&gt;
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>*Mar  1 16:21:22.615: %SYS-5-RELOAD: Reload requested by console. Reload Reason: Reload command.
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>...
+</code></pre></div></td></tr></table></div>
 </div>
-</div>
-</input></input></div>
-<h3 id="missing-or-corrupt-ios">Missing or corrupt IOS</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label></div>
-<div class="tabbed-content">
 <div class="tabbed-block">
-<p>Let's simulate a non-working IOS by "accidently" erasing the "flash" filesystem instead of the "nvram". Restart the switch afterwards.</p>
+<p>We're in ROMMON-mode.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -773,24 +776,45 @@
 <span class="normal"><a href="#__codelineno-2-11">11</a></span>
 <span class="normal"><a href="#__codelineno-2-12">12</a></span>
 <span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>Switch#erase flash:
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>Erasing the flash filesystem will remove all files! Continue? [confirm]
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>flashfs[2]: 0 files, 1 directories
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>flashfs[2]: 0 orphaned files, 0 orphaned directories
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>flashfs[2]: Total bytes: 65544192
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a>flashfs[2]: Bytes used: 1024
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>flashfs[2]: Bytes available: 65543168
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>flashfs[2]: flashfs fsck took 25 seconds.
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a>Erase of flash: complete
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a>Switch#
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a>Switch#reload
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a>System configuration has been modified. Save? [yes/no]: no          &lt;----- if asked
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a>Proceed with reload? [confirm]                                      &lt;----- press &lt;Enter&gt;
-</code></pre></div></td></tr></table></div>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>Boot Sector Filesystem (bs) installed, fsid: 2
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>Base ethernet MAC Address: bc:f1:f2:59:06:00
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>Xmodem file system is available.
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>The password-recovery mechanism is disabled.
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>Initializing Flash...
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>flashfs[0]: 6 files, 3 directories
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>flashfs[0]: 0 orphaned files, 0 orphaned directories
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>flashfs[0]: Total bytes: 65544192
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>flashfs[0]: Bytes used: 16074240
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>flashfs[0]: Bytes available: 49469952
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>flashfs[0]: flashfs fsck took 18 seconds.
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>...done Initializing Flash.
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>done.
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a>The system is not configured to boot automatically.  The
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a>following command will finish loading the operating system
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a>software:
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a>    boot
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="hll">switch: 
+</span></code></pre></div></td></tr></table></div>
 </div>
+</div>
+</input></input></input></div>
+<h3 id="missing-or-corrupt-ios">Missing or corrupt IOS</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label></div>
+<div class="tabbed-content">
 <div class="tabbed-block">
-<p>The BOOT environment variable is still set to boot c2960-lanbasek9-mz.152-7.E7.bin but it's not there. The switch will not be able to boot and will enter ROMMON-mode automatically.</p>
+<p>Let's simulate a non-working IOS by "accidently" erasing the "flash" filesystem instead of the "nvram". Restart the switch afterwards.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -807,57 +831,94 @@
 <span class="normal"><a href="#__codelineno-3-14">14</a></span>
 <span class="normal"><a href="#__codelineno-3-15">15</a></span>
 <span class="normal"><a href="#__codelineno-3-16">16</a></span>
-<span class="normal"><a href="#__codelineno-3-17">17</a></span>
-<span class="normal"><a href="#__codelineno-3-18">18</a></span>
-<span class="normal"><a href="#__codelineno-3-19">19</a></span>
-<span class="normal"><a href="#__codelineno-3-20">20</a></span>
-<span class="normal"><a href="#__codelineno-3-21">21</a></span>
-<span class="normal"><a href="#__codelineno-3-22">22</a></span>
-<span class="normal"><a href="#__codelineno-3-23">23</a></span>
-<span class="normal"><a href="#__codelineno-3-24">24</a></span>
-<span class="normal"><a href="#__codelineno-3-25">25</a></span>
-<span class="normal"><a href="#__codelineno-3-26">26</a></span>
-<span class="normal"><a href="#__codelineno-3-27">27</a></span>
-<span class="normal"><a href="#__codelineno-3-28">28</a></span>
-<span class="normal"><a href="#__codelineno-3-29">29</a></span>
-<span class="normal"><a href="#__codelineno-3-30">30</a></span>
-<span class="normal"><a href="#__codelineno-3-31">31</a></span>
-<span class="normal"><a href="#__codelineno-3-32">32</a></span>
-<span class="normal"><a href="#__codelineno-3-33">33</a></span>
-<span class="normal"><a href="#__codelineno-3-34">34</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>Welcome to minicom 2.8
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>OPTIONS: I18n 
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>Port /dev/ttyUSB0, 09:36:24
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>Press CTRL-A Z for help on special keys
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a>Boot Sector Filesystem (bs) installed, fsid: 2
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a>Base ethernet MAC Address: 6c:41:0e:18:0b:00
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a>Xmodem file system is available.
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a>The password-recovery mechanism is enabled.
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a>Initializing Flash...
-<a id="__codelineno-3-14" name="__codelineno-3-14"></a>flashfs[0]: 1 files, 1 directories
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a>flashfs[0]: 0 orphaned files, 0 orphaned directories
-<a id="__codelineno-3-16" name="__codelineno-3-16"></a>flashfs[0]: Total bytes: 65544192
-<a id="__codelineno-3-17" name="__codelineno-3-17"></a>flashfs[0]: Bytes used: 3584
-<a id="__codelineno-3-18" name="__codelineno-3-18"></a>flashfs[0]: Bytes available: 65540608
-<a id="__codelineno-3-19" name="__codelineno-3-19"></a>flashfs[0]: flashfs fsck took 18 seconds.
-<a id="__codelineno-3-20" name="__codelineno-3-20"></a>...done Initializing Flash.
-<a id="__codelineno-3-21" name="__codelineno-3-21"></a>done.
-<a id="__codelineno-3-22" name="__codelineno-3-22"></a>Loading "flash:/c2960-lanbasek9-mz.152-7.E7.bin"...flash:/c2960-lanbasek9-mz.152-7.E7.bin: no such file or directory
-<a id="__codelineno-3-23" name="__codelineno-3-23"></a>
-<a id="__codelineno-3-24" name="__codelineno-3-24"></a>Error loading "flash:/c2960-lanbasek9-mz.152-7.E7.bin"
-<a id="__codelineno-3-25" name="__codelineno-3-25"></a>
-<a id="__codelineno-3-26" name="__codelineno-3-26"></a>Interrupt within 5 seconds to abort boot process.
-<a id="__codelineno-3-27" name="__codelineno-3-27"></a>Boot process failed...
-<a id="__codelineno-3-28" name="__codelineno-3-28"></a>
-<a id="__codelineno-3-29" name="__codelineno-3-29"></a>The system is unable to boot automatically.  The BOOT
-<a id="__codelineno-3-30" name="__codelineno-3-30"></a>environment variable needs to be set to a bootable
-<a id="__codelineno-3-31" name="__codelineno-3-31"></a>image.
-<a id="__codelineno-3-32" name="__codelineno-3-32"></a>
-<a id="__codelineno-3-33" name="__codelineno-3-33"></a>
-<a id="__codelineno-3-34" name="__codelineno-3-34"></a>switch:
+<span class="normal"><a href="#__codelineno-3-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>Switch#erase flash:
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>Erasing the flash filesystem will remove all files! Continue? [confirm]
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>flashfs[2]: 0 files, 1 directories
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>flashfs[2]: 0 orphaned files, 0 orphaned directories
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>flashfs[2]: Total bytes: 65544192
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>flashfs[2]: Bytes used: 1024
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>flashfs[2]: Bytes available: 65543168
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>flashfs[2]: flashfs fsck took 25 seconds.
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>Erase of flash: complete
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>Switch#
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>Switch#reload
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>System configuration has been modified. Save? [yes/no]: no          &lt;----- if asked
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>Proceed with reload? [confirm]                                      &lt;----- press &lt;Enter&gt;
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a>*Mar  1 00:28:22.946: %SYS-5-RELOAD: Reload requested by console. Reload Reason: Reload command.
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>The BOOT environment variable is still set to boot c2960-lanbasek9-mz.152-7.E8.bin but it's not there. The switch will not be able to boot and will enter ROMMON-mode automatically.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span>
+<span class="normal"><a href="#__codelineno-4-27">27</a></span>
+<span class="normal"><a href="#__codelineno-4-28">28</a></span>
+<span class="normal"><a href="#__codelineno-4-29">29</a></span>
+<span class="normal"><a href="#__codelineno-4-30">30</a></span>
+<span class="normal"><a href="#__codelineno-4-31">31</a></span>
+<span class="normal"><a href="#__codelineno-4-32">32</a></span>
+<span class="normal"><a href="#__codelineno-4-33">33</a></span>
+<span class="normal"><a href="#__codelineno-4-34">34</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>Welcome to minicom 2.8
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>OPTIONS: I18n 
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>Port /dev/ttyUSB0, 09:36:24
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>Press CTRL-A Z for help on special keys
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>Boot Sector Filesystem (bs) installed, fsid: 2
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>Base ethernet MAC Address: bc:f1:f2:59:06:00
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>Xmodem file system is available.
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>The password-recovery mechanism is enabled.                     ---&gt; or "disabled"
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a>Initializing Flash...
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a>flashfs[0]: 3 files, 1 directories
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a>flashfs[0]: 0 orphaned files, 0 orphaned directories
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a>flashfs[0]: Total bytes: 65544192
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a>flashfs[0]: Bytes used: 12800
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a>flashfs[0]: Bytes available: 65531392
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a>flashfs[0]: flashfs fsck took 18 seconds.
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a>...done Initializing Flash.
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a>done.
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a>Loading "flash:c2960-lanbasek9-mz.152-7.E8.bin"...flash:c2960-lanbasek9-mz.152-7.E8.bin: no such file or directory
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a>
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a>Error loading "flash:c2960-lanbasek9-mz.152-7.E8.bin"
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a>
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a>Interrupt within 5 seconds to abort boot process.
+<a id="__codelineno-4-27" name="__codelineno-4-27"></a>Boot process failed...
+<a id="__codelineno-4-28" name="__codelineno-4-28"></a>
+<a id="__codelineno-4-29" name="__codelineno-4-29"></a>The system is unable to boot automatically.  The BOOT
+<a id="__codelineno-4-30" name="__codelineno-4-30"></a>environment variable needs to be set to a bootable
+<a id="__codelineno-4-31" name="__codelineno-4-31"></a>image.
+<a id="__codelineno-4-32" name="__codelineno-4-32"></a>
+<a id="__codelineno-4-33" name="__codelineno-4-33"></a>
+<a id="__codelineno-4-34" name="__codelineno-4-34"></a>switch: 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -867,21 +928,21 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>First disconnect the power cable from the switch. Minicom gives no output yet.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span>
-<span class="normal"><a href="#__codelineno-4-7">7</a></span>
-<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>Welcome to minicom 2.8
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>OPTIONS: I18n 
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>Port /dev/ttyUSB0, 13:50:27
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>Press CTRL-A Z for help on special keys
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a>&lt;blinking_cursor&gt;
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span>
+<span class="normal"><a href="#__codelineno-5-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>Welcome to minicom 2.8
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>OPTIONS: I18n 
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>Port /dev/ttyUSB0, 13:50:27
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>Press CTRL-A Z for help on special keys
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>&lt;blinking_cursor&gt;
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -891,85 +952,6 @@ This takes about X seconds. After POST, the blinking LED changes pattern. Press 
 </div>
 <div class="tabbed-block">
 <p>If the password recovery mechanism is enabled (line12), you have to manually initialize flash (line28).</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-5-10">10</a></span>
-<span class="normal"><a href="#__codelineno-5-11">11</a></span>
-<span class="normal"><a href="#__codelineno-5-12">12</a></span>
-<span class="normal"><a href="#__codelineno-5-13">13</a></span>
-<span class="normal"><a href="#__codelineno-5-14">14</a></span>
-<span class="normal"><a href="#__codelineno-5-15">15</a></span>
-<span class="normal"><a href="#__codelineno-5-16">16</a></span>
-<span class="normal"><a href="#__codelineno-5-17">17</a></span>
-<span class="normal"><a href="#__codelineno-5-18">18</a></span>
-<span class="normal"><a href="#__codelineno-5-19">19</a></span>
-<span class="normal"><a href="#__codelineno-5-20">20</a></span>
-<span class="normal"><a href="#__codelineno-5-21">21</a></span>
-<span class="normal"><a href="#__codelineno-5-22">22</a></span>
-<span class="normal"><a href="#__codelineno-5-23">23</a></span>
-<span class="normal"><a href="#__codelineno-5-24">24</a></span>
-<span class="normal"><a href="#__codelineno-5-25">25</a></span>
-<span class="normal"><a href="#__codelineno-5-26">26</a></span>
-<span class="normal"><a href="#__codelineno-5-27">27</a></span>
-<span class="normal"><a href="#__codelineno-5-28">28</a></span>
-<span class="normal"><a href="#__codelineno-5-29">29</a></span>
-<span class="normal"><a href="#__codelineno-5-30">30</a></span>
-<span class="normal"><a href="#__codelineno-5-31">31</a></span>
-<span class="normal"><a href="#__codelineno-5-32">32</a></span>
-<span class="normal"><a href="#__codelineno-5-33">33</a></span>
-<span class="normal"><a href="#__codelineno-5-34">34</a></span>
-<span class="normal"><a href="#__codelineno-5-35">35</a></span>
-<span class="normal"><a href="#__codelineno-5-36">36</a></span>
-<span class="normal"><a href="#__codelineno-5-37">37</a></span>
-<span class="normal"><a href="#__codelineno-5-38">38</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>Welcome to minicom 2.8
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>OPTIONS: I18n 
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>Port /dev/ttyUSB0, 09:44:08
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a>Press CTRL-A Z for help on special keys
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a>
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a>Boot Sector Filesystem (bs) installed, fsid: 2
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a>Base ethernet MAC Address: bc:f1:f2:59:06:00
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a>Xmodem file system is available.
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="hll">The password-recovery mechanism is enabled.
-</span><a id="__codelineno-5-13" name="__codelineno-5-13"></a>Initializing Flash...
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a>flashfs[0]: filesystem check interrupted!
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a>...done Initializing Flash.
-<a id="__codelineno-5-16" name="__codelineno-5-16"></a>
-<a id="__codelineno-5-17" name="__codelineno-5-17"></a>The system has been interrupted, or encountered an error
-<a id="__codelineno-5-18" name="__codelineno-5-18"></a>during initialization of the flash filesystem.  The following
-<a id="__codelineno-5-19" name="__codelineno-5-19"></a>commands will initialize the flash filesystem, and finish
-<a id="__codelineno-5-20" name="__codelineno-5-20"></a>loading the operating system software:
-<a id="__codelineno-5-21" name="__codelineno-5-21"></a>
-<a id="__codelineno-5-22" name="__codelineno-5-22"></a>    flash_init
-<a id="__codelineno-5-23" name="__codelineno-5-23"></a>    boot
-<a id="__codelineno-5-24" name="__codelineno-5-24"></a>
-<a id="__codelineno-5-25" name="__codelineno-5-25"></a>
-<a id="__codelineno-5-26" name="__codelineno-5-26"></a>switch: 
-<a id="__codelineno-5-27" name="__codelineno-5-27"></a>
-<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="hll">switch: flash_init
-</span><a id="__codelineno-5-29" name="__codelineno-5-29"></a>Initializing Flash...
-<a id="__codelineno-5-30" name="__codelineno-5-30"></a>flashfs[0]: 6 files, 3 directories
-<a id="__codelineno-5-31" name="__codelineno-5-31"></a>flashfs[0]: 0 orphaned files, 0 orphaned directories
-<a id="__codelineno-5-32" name="__codelineno-5-32"></a>flashfs[0]: Total bytes: 65544192
-<a id="__codelineno-5-33" name="__codelineno-5-33"></a>flashfs[0]: Bytes used: 16081408
-<a id="__codelineno-5-34" name="__codelineno-5-34"></a>flashfs[0]: Bytes available: 49462784
-<a id="__codelineno-5-35" name="__codelineno-5-35"></a>flashfs[0]: flashfs fsck took 19 seconds.
-<a id="__codelineno-5-36" name="__codelineno-5-36"></a>...done Initializing Flash.
-<a id="__codelineno-5-37" name="__codelineno-5-37"></a>
-<a id="__codelineno-5-38" name="__codelineno-5-38"></a>switch: 
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>If the password recovery mechanism is disabled (line12), you will lose all the configuration. Flash is initialised for you. Choose "y" at the prompt (line31).</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
@@ -1007,9 +989,7 @@ This takes about X seconds. After POST, the blinking LED changes pattern. Press 
 <span class="normal"><a href="#__codelineno-6-35">35</a></span>
 <span class="normal"><a href="#__codelineno-6-36">36</a></span>
 <span class="normal"><a href="#__codelineno-6-37">37</a></span>
-<span class="normal"><a href="#__codelineno-6-38">38</a></span>
-<span class="normal"><a href="#__codelineno-6-39">39</a></span>
-<span class="normal"><a href="#__codelineno-6-40">40</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>Welcome to minicom 2.8
+<span class="normal"><a href="#__codelineno-6-38">38</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>Welcome to minicom 2.8
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a>
 <a id="__codelineno-6-3" name="__codelineno-6-3"></a>OPTIONS: I18n 
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a>Port /dev/ttyUSB0, 09:44:08
@@ -1020,35 +1000,116 @@ This takes about X seconds. After POST, the blinking LED changes pattern. Press 
 <a id="__codelineno-6-9" name="__codelineno-6-9"></a>Boot Sector Filesystem (bs) installed, fsid: 2
 <a id="__codelineno-6-10" name="__codelineno-6-10"></a>Base ethernet MAC Address: bc:f1:f2:59:06:00
 <a id="__codelineno-6-11" name="__codelineno-6-11"></a>Xmodem file system is available.
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="hll">The password-recovery mechanism is disabled.
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="hll">The password-recovery mechanism is enabled.
 </span><a id="__codelineno-6-13" name="__codelineno-6-13"></a>Initializing Flash...
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a>flashfs[0]: 6 files, 3 directories
-<a id="__codelineno-6-15" name="__codelineno-6-15"></a>flashfs[0]: 0 orphaned files, 0 orphaned directories
-<a id="__codelineno-6-16" name="__codelineno-6-16"></a>flashfs[0]: Total bytes: 65544192
-<a id="__codelineno-6-17" name="__codelineno-6-17"></a>flashfs[0]: Bytes used: 16131584
-<a id="__codelineno-6-18" name="__codelineno-6-18"></a>flashfs[0]: Bytes available: 49412608
-<a id="__codelineno-6-19" name="__codelineno-6-19"></a>flashfs[0]: flashfs fsck took 19 seconds.
-<a id="__codelineno-6-20" name="__codelineno-6-20"></a>...done Initializing Flash.
-<a id="__codelineno-6-21" name="__codelineno-6-21"></a>done.
-<a id="__codelineno-6-22" name="__codelineno-6-22"></a>
-<a id="__codelineno-6-23" name="__codelineno-6-23"></a>
-<a id="__codelineno-6-24" name="__codelineno-6-24"></a>The password-recovery mechanism has been triggered, but
-<a id="__codelineno-6-25" name="__codelineno-6-25"></a>is currently disabled.  Access to the boot loader prompt
-<a id="__codelineno-6-26" name="__codelineno-6-26"></a>through the password-recovery mechanism is disallowed at
-<a id="__codelineno-6-27" name="__codelineno-6-27"></a>this point.  However, if you agree to let the system be
-<a id="__codelineno-6-28" name="__codelineno-6-28"></a>reset back to the default system configuration, access
-<a id="__codelineno-6-29" name="__codelineno-6-29"></a>to the boot loader prompt can still be allowed.
-<a id="__codelineno-6-30" name="__codelineno-6-30"></a>
-<a id="__codelineno-6-31" name="__codelineno-6-31"></a><span class="hll">Would you like to reset the system back to the default configuration (y/n)?y            ---&gt; answer "y"
-</span><a id="__codelineno-6-32" name="__codelineno-6-32"></a>
-<a id="__codelineno-6-33" name="__codelineno-6-33"></a>The system has been interrupted, and the config file
-<a id="__codelineno-6-34" name="__codelineno-6-34"></a>has been deleted.  The following command will finish
-<a id="__codelineno-6-35" name="__codelineno-6-35"></a>loading the operating system software:
-<a id="__codelineno-6-36" name="__codelineno-6-36"></a>
-<a id="__codelineno-6-37" name="__codelineno-6-37"></a>boot
-<a id="__codelineno-6-38" name="__codelineno-6-38"></a>
-<a id="__codelineno-6-39" name="__codelineno-6-39"></a>
-<a id="__codelineno-6-40" name="__codelineno-6-40"></a>switch: 
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>flashfs[0]: filesystem check interrupted!
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a>...done Initializing Flash.
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a>The system has been interrupted, or encountered an error
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a>during initialization of the flash filesystem.  The following
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a>commands will initialize the flash filesystem, and finish
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a>loading the operating system software:
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a>    flash_init
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a>    boot
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a>switch: 
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a>
+<a id="__codelineno-6-28" name="__codelineno-6-28"></a><span class="hll">switch: flash_init
+</span><a id="__codelineno-6-29" name="__codelineno-6-29"></a>Initializing Flash...
+<a id="__codelineno-6-30" name="__codelineno-6-30"></a>flashfs[0]: 6 files, 3 directories
+<a id="__codelineno-6-31" name="__codelineno-6-31"></a>flashfs[0]: 0 orphaned files, 0 orphaned directories
+<a id="__codelineno-6-32" name="__codelineno-6-32"></a>flashfs[0]: Total bytes: 65544192
+<a id="__codelineno-6-33" name="__codelineno-6-33"></a>flashfs[0]: Bytes used: 16081408
+<a id="__codelineno-6-34" name="__codelineno-6-34"></a>flashfs[0]: Bytes available: 49462784
+<a id="__codelineno-6-35" name="__codelineno-6-35"></a>flashfs[0]: flashfs fsck took 19 seconds.
+<a id="__codelineno-6-36" name="__codelineno-6-36"></a>...done Initializing Flash.
+<a id="__codelineno-6-37" name="__codelineno-6-37"></a>
+<a id="__codelineno-6-38" name="__codelineno-6-38"></a>switch: 
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>If the password recovery mechanism is disabled (line12), you will lose all the configuration. Flash is initialised for you. Choose "y" at the prompt (line31).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span>
+<span class="normal"><a href="#__codelineno-7-25">25</a></span>
+<span class="normal"><a href="#__codelineno-7-26">26</a></span>
+<span class="normal"><a href="#__codelineno-7-27">27</a></span>
+<span class="normal"><a href="#__codelineno-7-28">28</a></span>
+<span class="normal"><a href="#__codelineno-7-29">29</a></span>
+<span class="normal"><a href="#__codelineno-7-30">30</a></span>
+<span class="normal"><a href="#__codelineno-7-31">31</a></span>
+<span class="normal"><a href="#__codelineno-7-32">32</a></span>
+<span class="normal"><a href="#__codelineno-7-33">33</a></span>
+<span class="normal"><a href="#__codelineno-7-34">34</a></span>
+<span class="normal"><a href="#__codelineno-7-35">35</a></span>
+<span class="normal"><a href="#__codelineno-7-36">36</a></span>
+<span class="normal"><a href="#__codelineno-7-37">37</a></span>
+<span class="normal"><a href="#__codelineno-7-38">38</a></span>
+<span class="normal"><a href="#__codelineno-7-39">39</a></span>
+<span class="normal"><a href="#__codelineno-7-40">40</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>Welcome to minicom 2.8
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>OPTIONS: I18n 
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>Port /dev/ttyUSB0, 09:44:08
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>Press CTRL-A Z for help on special keys
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>Boot Sector Filesystem (bs) installed, fsid: 2
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>Base ethernet MAC Address: bc:f1:f2:59:06:00
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>Xmodem file system is available.
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="hll">The password-recovery mechanism is disabled.
+</span><a id="__codelineno-7-13" name="__codelineno-7-13"></a>Initializing Flash...
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a>flashfs[0]: 6 files, 3 directories
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a>flashfs[0]: 0 orphaned files, 0 orphaned directories
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a>flashfs[0]: Total bytes: 65544192
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a>flashfs[0]: Bytes used: 16131584
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a>flashfs[0]: Bytes available: 49412608
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a>flashfs[0]: flashfs fsck took 19 seconds.
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a>...done Initializing Flash.
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a>done.
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a>
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a>The password-recovery mechanism has been triggered, but
+<a id="__codelineno-7-25" name="__codelineno-7-25"></a>is currently disabled.  Access to the boot loader prompt
+<a id="__codelineno-7-26" name="__codelineno-7-26"></a>through the password-recovery mechanism is disallowed at
+<a id="__codelineno-7-27" name="__codelineno-7-27"></a>this point.  However, if you agree to let the system be
+<a id="__codelineno-7-28" name="__codelineno-7-28"></a>reset back to the default system configuration, access
+<a id="__codelineno-7-29" name="__codelineno-7-29"></a>to the boot loader prompt can still be allowed.
+<a id="__codelineno-7-30" name="__codelineno-7-30"></a>
+<a id="__codelineno-7-31" name="__codelineno-7-31"></a><span class="hll">Would you like to reset the system back to the default configuration (y/n)?y            ---&gt; answer "y"
+</span><a id="__codelineno-7-32" name="__codelineno-7-32"></a>
+<a id="__codelineno-7-33" name="__codelineno-7-33"></a>The system has been interrupted, and the config file
+<a id="__codelineno-7-34" name="__codelineno-7-34"></a>has been deleted.  The following command will finish
+<a id="__codelineno-7-35" name="__codelineno-7-35"></a>loading the operating system software:
+<a id="__codelineno-7-36" name="__codelineno-7-36"></a>
+<a id="__codelineno-7-37" name="__codelineno-7-37"></a>boot
+<a id="__codelineno-7-38" name="__codelineno-7-38"></a>
+<a id="__codelineno-7-39" name="__codelineno-7-39"></a>
+<a id="__codelineno-7-40" name="__codelineno-7-40"></a>switch: 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
