@@ -746,7 +746,7 @@
 <p>At the time of writing, the latest IOS for...</p>
 <ul>
 <li>a "Cisco 2960 24TT-L switch" is "15.0(2)SE11"</li>
-<li>a "24TC-L Plus switch" it is "15.2(7)E8"</li>
+<li>a "24TC-L Plus switch" is "15.2(7)E8"</li>
 </ul>
 <p>Version "15.2(7)E8" does NOT run on a "Cisco 2960 24TT-L switch".
 Version 15.0(2)SE11 runs on both switches. I'll use that version for the examples.</p>
@@ -800,7 +800,7 @@ Version 15.0(2)SE11 runs on both switches. I'll use that version for the example
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Adjust the settings in your terminal emulation program to match the new baud rate. For <a href="../todo/">minicom</a>, press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span> and then <span class="keys"><kbd class="key-z">Z</kbd></span>. 
+<p>Adjust the settings in your terminal emulation program to match the new baud rate. For <a href="../use-minicom-linux-mint/">minicom</a>, press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span> and then <span class="keys"><kbd class="key-z">Z</kbd></span>. 
 Type <span class="keys"><kbd class="key-o">O</kbd></span> and choose "Serial port setup". Change setting <span class="keys"><kbd class="key-e">E</kbd></span> and <span class="keys"><kbd class="key-enter">Enter</kbd></span> twice. Exit.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
@@ -850,14 +850,14 @@ Type <span class="keys"><kbd class="key-o">O</kbd></span> and choose "Serial por
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
 <span class="normal"><a href="#__codelineno-3-4">4</a></span>
 <span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>    Switch(config-line)#end
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>    Switch#copy xmodem: flash:c2960-lanbasek9-mz.150-2.SE11.bin
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>    Destination filename [c2960-lanbasek9-mz.150-2.SE11.bin]?     &lt;----- press ENTER
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="hll">    Switch#copy xmodem: flash:c2960-lanbasek9-mz.150-2.SE11.bin
+</span><a id="__codelineno-3-3" name="__codelineno-3-3"></a>    Destination filename [c2960-lanbasek9-mz.150-2.SE11.bin]?     &lt;----- press ENTER
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a>    Begin the Xmodem or Xmodem-1K transfer now...
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a>    CCC
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>For minicom, press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span> and then <span class="keys"><kbd class="key-z">Z</kbd></span>. Type <span class="keys"><kbd class="key-s">S</kbd></span> (Send files) and select "xmodem". Navigate your way to the new <a href="../todo/">IOS file</a> (here /srv/tftp). Press <span class="keys"><kbd class="key-space">Space</kbd></span> to tag the file and press "Okay" to send.</p>
+<p>For minicom, press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span> and then <span class="keys"><kbd class="key-z">Z</kbd></span>. Type <span class="keys"><kbd class="key-s">S</kbd></span> (Send files) and select "xmodem". Navigate your way to the new <a href="../todo/">IOS file</a> (here /srv/tftp). Press <span class="keys"><kbd class="key-space">Space</kbd></span> to tag the file and enter "Okay" to send.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="xmodem-navigate-ios-serial.png"><img src="xmodem-navigate-ios-serial.png"/></a></p>
 </div>
 <div class="tabbed-block">
@@ -876,15 +876,15 @@ Type <span class="keys"><kbd class="key-o">O</kbd></span> and choose "Serial por
 <span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-4-10">10</a></span>
-<span class="normal"><a href="#__codelineno-4-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>Switch(config)#boot system flash:/c2960-lanbasek9-mz.150-2.SE11.bin
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>Switch(config)#end
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>Switch#show boot
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>BOOT path-list      : flash:/c2960-lanbasek9-mz.150-2.SE11.bin
+<span class="normal"><a href="#__codelineno-4-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="hll">Switch(config)#boot system flash:/c2960-lanbasek9-mz.150-2.SE11.bin
+</span><a id="__codelineno-4-2" name="__codelineno-4-2"></a>Switch(config)#end
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="hll">Switch#show boot
+</span><a id="__codelineno-4-4" name="__codelineno-4-4"></a>BOOT path-list      : flash:/c2960-lanbasek9-mz.150-2.SE11.bin
 <a id="__codelineno-4-5" name="__codelineno-4-5"></a>...
 <a id="__codelineno-4-6" name="__codelineno-4-6"></a>...
 <a id="__codelineno-4-7" name="__codelineno-4-7"></a>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a>Switch#reload
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="hll">Switch#reload
+</span><a id="__codelineno-4-9" name="__codelineno-4-9"></a>
 <a id="__codelineno-4-10" name="__codelineno-4-10"></a>System configuration has been modified. Save? [yes/no]: no  &lt;----- if asked
 <a id="__codelineno-4-11" name="__codelineno-4-11"></a>Proceed with reload? [confirm]
 </code></pre></div></td></tr></table></div>
@@ -1016,7 +1016,7 @@ Type <span class="keys"><kbd class="key-o">O</kbd></span> and choose "Serial por
 <p>Press <span class="keys"><kbd class="key-enter">Enter</kbd></span> The connection is back. Initiate an xMODEM transfer. The switch will then prompt you to start the transfer from your terminal emulator.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
-<span class="normal"><a href="#__codelineno-9-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>switch: copy xmodem: flash:c2960-lanbasek9-mz.152-7.E8.bin                                                            
+<span class="normal"><a href="#__codelineno-9-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>switch: copy xmodem: flash:c2960-lanbasek9-mz.150-2.SE11.bin                                                            
 <a id="__codelineno-9-2" name="__codelineno-9-2"></a>Begin the Xmodem or Xmodem-1K transfer now...                                                                         
 <a id="__codelineno-9-3" name="__codelineno-9-3"></a>CCC
 </code></pre></div></td></tr></table></div>

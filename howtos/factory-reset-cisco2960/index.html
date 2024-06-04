@@ -729,19 +729,23 @@
 <span class="normal"><a href="#__codelineno-0-10">10</a></span>
 <span class="normal"><a href="#__codelineno-0-11">11</a></span>
 <span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>--- From IOS ---
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>--- From IOS ---
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>Switch#dir nvram:startup-config
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>Directory of nvram:/startup-config
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="hll">    65  -rw-        1326                    &lt;no date&gt;  startup-config
-</span><a id="__codelineno-0-6" name="__codelineno-0-6"></a>...
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a>--- From ROMMON ---
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>switch: dir flash:
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a>Directory of flash:/
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a>   ...
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="hll">   11  -rwx  1362      &lt;date&gt;               config.text
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="hll">62  -rw-        1349                    &lt;no date&gt;  startup-config
+</span><a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>65536 bytes total (62082 bytes free)
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>Switch#
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>--- From ROMMON ---
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>switch: dir flash:
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="hll">Directory of flash:/
 </span><a id="__codelineno-0-13" name="__codelineno-0-13"></a>   ...
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>   11  -rwx  1362      &lt;date&gt;               config.text
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>   ...
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -900,7 +904,7 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Step1</label><label for="__tabbed_3_2">Step2</label><label for="__tabbed_3_3">Step3</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Check if the password recovery mechanism is enabled or disabled.</p>
+<p>Check if the password recovery mechanism is enabled or disabled. In this example, it is disabled.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span>
 <span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>Switch#show ver | incl password-recovery
@@ -967,7 +971,7 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>If necessary, change it back to the default. We will reload the switch at the end.</p>
+<p>If necessary, change it back to the default. We will reload/boot the switch at the end.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
@@ -1057,7 +1061,7 @@
 <span class="normal"><a href="#__codelineno-12-14">14</a></span>
 <span class="normal"><a href="#__codelineno-12-15">15</a></span>
 <span class="normal"><a href="#__codelineno-12-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>Switch#show boot
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a>BOOT path-list      : flash:c2960-lanbasek9-mz.152-7.E7.bin
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>BOOT path-list      : flash:/c2960-lanbasek9-mz.150-2.SE11.bin
 <a id="__codelineno-12-3" name="__codelineno-12-3"></a>Config file         : flash:/config.text
 <a id="__codelineno-12-4" name="__codelineno-12-4"></a>Private Config file : flash:/private-config.text
 <a id="__codelineno-12-5" name="__codelineno-12-5"></a>Enable Break        : yes
@@ -1075,7 +1079,7 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Example1: BOOT path-list.</p>
+<p>Example1: if necessary, correct the "BOOT path-list" parameter</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
 <span class="normal"><a href="#__codelineno-13-2">2</a></span>
 <span class="normal"><a href="#__codelineno-13-3">3</a></span>
@@ -1088,7 +1092,7 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Example2: BOOT manual.</p>
+<p>Example2: it necessary, correct the "BOOT manual" parameter</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
 <span class="normal"><a href="#__codelineno-14-2">2</a></span>
 <span class="normal"><a href="#__codelineno-14-3">3</a></span>
@@ -1117,14 +1121,14 @@
 <span class="normal"><a href="#__codelineno-15-6">6</a></span>
 <span class="normal"><a href="#__codelineno-15-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>--- From IOS ---
 <a id="__codelineno-15-2" name="__codelineno-15-2"></a>Switch#reload
-<a id="__codelineno-15-3" name="__codelineno-15-3"></a>System configuration has been modified. Save? [yes/no]:     -----&gt; answer "no"
-<a id="__codelineno-15-4" name="__codelineno-15-4"></a>Proceed with reload? [confirm]                              -----&gt; press "Enter"
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="hll">System configuration has been modified. Save? [yes/no]:     -----&gt; answer "no"
+</span><a id="__codelineno-15-4" name="__codelineno-15-4"></a>Proceed with reload? [confirm]                              -----&gt; press "Enter"
 <a id="__codelineno-15-5" name="__codelineno-15-5"></a>
 <a id="__codelineno-15-6" name="__codelineno-15-6"></a>--- From ROMMON ---
 <a id="__codelineno-15-7" name="__codelineno-15-7"></a>switch:reset
 </code></pre></div></td></tr></table></div>
 <h2 id="clean-switch">Clean switch</h2>
-<p>Say hi to the wizard. Answer "no". Now just pull the power plug to shutdown the switch, as there is no on/off switch like on e.g. a Cisco 1941 router.</p>
+<p>Say hi to the wizard. Answer "no" at the prompt. Now just pull the power plug to shutdown the switch, as there is no on/off switch like on e.g. a Cisco 1941 router.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
@@ -1148,7 +1152,7 @@
 <a id="__codelineno-16-9" name="__codelineno-16-9"></a>enable secret 0 &lt;cleartext password&gt;
 <a id="__codelineno-16-10" name="__codelineno-16-10"></a>----------------------------------
 <a id="__codelineno-16-11" name="__codelineno-16-11"></a>Would you like to enter the initial configuration dialog? [yes/no]:     -----&gt; answer "no"
-<a id="__codelineno-16-12" name="__codelineno-16-12"></a>Switch&gt;ena
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a>Switch&gt;enable
 <a id="__codelineno-16-13" name="__codelineno-16-13"></a>Switch#
 </code></pre></div></td></tr></table></div>
 </article>
