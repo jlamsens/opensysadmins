@@ -17,8 +17,10 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
     Switch#dir nvram:startup-config
     Directory of nvram:/startup-config
 
-        65  -rw-        1326                    <no date>  startup-config
-    ...
+    62  -rw-        1349                    <no date>  startup-config
+
+    65536 bytes total (62082 bytes free)
+    Switch#
 
     --- From ROMMON ---
     switch: dir flash:
@@ -128,7 +130,7 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
 ## Enable password recovery mechanism
 
 === "Step1"
-    Check if the password recovery mechanism is enabled or disabled.
+    Check if the password recovery mechanism is enabled or disabled. In this example, it is disabled.
 
     ``` title='' hl_lines="0"
     Switch#show ver | incl password-recovery
@@ -179,7 +181,7 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
     ```
 
 === "Step2"
-    If necessary, change it back to the default. We will reload the switch at the end.
+    If necessary, change it back to the default. We will reload/boot the switch at the end.
 
     ``` title='' hl_lines="9 16"
     --- From IOS ---
@@ -228,7 +230,7 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
 
     ``` title='' hl_lines="0"
     Switch#show boot
-    BOOT path-list      : flash:c2960-lanbasek9-mz.152-7.E7.bin
+    BOOT path-list      : flash:/c2960-lanbasek9-mz.150-2.SE11.bin
     Config file         : flash:/config.text
     Private Config file : flash:/private-config.text
     Enable Break        : yes
@@ -246,7 +248,7 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
     ```
 
 === "Step2"
-    Example1: BOOT path-list.
+    Example1: if necessary, correct the "BOOT path-list" parameter
 
     ``` title='' hl_lines="0"
     From IOS:
@@ -257,7 +259,7 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
     ```
 
 === "Step3"
-    Example2: BOOT manual.
+    Example2: it necessary, correct the "BOOT manual" parameter
 
     ``` title='' hl_lines="0"
     From IOS:
@@ -272,7 +274,7 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
 
 ## Reload
 
-``` title='' hl_lines="0"
+``` title='' hl_lines="3"
 --- From IOS ---
 Switch#reload
 System configuration has been modified. Save? [yes/no]:     -----> answer "no"
@@ -283,7 +285,7 @@ switch:reset
 ```
 
 ## Clean switch
-Say hi to the wizard. Answer "no". Now just pull the power plug to shutdown the switch, as there is no on/off switch like on e.g. a Cisco 1941 router.
+Say hi to the wizard. Answer "no" at the prompt. Now just pull the power plug to shutdown the switch, as there is no on/off switch like on e.g. a Cisco 1941 router.
 
 ``` title='' hl_lines="0"
         --- System Configuration Dialog ---
@@ -297,6 +299,6 @@ please set an enable secret using the following CLI in configuration mode-
 enable secret 0 <cleartext password>
 ----------------------------------
 Would you like to enter the initial configuration dialog? [yes/no]:     -----> answer "no"
-Switch>ena
+Switch>enable
 Switch#
 ```

@@ -12,7 +12,7 @@
 At the time of writing, the latest IOS for...
 
 - a "Cisco 2960 24TT-L switch" is "15.0(2)SE11"
-- a "24TC-L Plus switch" it is "15.2(7)E8"
+- a "24TC-L Plus switch" is "15.2(7)E8"
 
 Version "15.2(7)E8" does NOT run on a "Cisco 2960 24TT-L switch".
 Version 15.0(2)SE11 runs on both switches. I'll use that version for the examples.
@@ -53,7 +53,7 @@ Version 15.0(2)SE11 runs on both switches. I'll use that version for the example
     ```
 
 === "Step3"
-    Adjust the settings in your terminal emulation program to match the new baud rate. For [minicom](../todo/index.md), press ++control+a++ and then ++z++. 
+    Adjust the settings in your terminal emulation program to match the new baud rate. For [minicom](../use-minicom-linux-mint/index.md), press ++control+a++ and then ++z++. 
     Type ++o++ and choose "Serial port setup". Change setting ++e++ and ++enter++ twice. Exit.
 
     ``` title='' hl_lines="5 11"
@@ -82,7 +82,7 @@ Version 15.0(2)SE11 runs on both switches. I'll use that version for the example
 === "Step4"
     Press ++enter++ The connection is back. Initiate an xMODEM transfer. Confirm the destination filename. The switch will then prompt you to start the transfer from your terminal emulator.
 
-    ``` title=''
+    ``` title='' hl_lines="2"
         Switch(config-line)#end
         Switch#copy xmodem: flash:c2960-lanbasek9-mz.150-2.SE11.bin
         Destination filename [c2960-lanbasek9-mz.150-2.SE11.bin]?     <----- press ENTER
@@ -91,7 +91,7 @@ Version 15.0(2)SE11 runs on both switches. I'll use that version for the example
     ```
 
 === "Step5"
-    For minicom, press ++control+a++ and then ++z++. Type ++s++ (Send files) and select "xmodem". Navigate your way to the new [IOS file](../todo/index.md) (here /srv/tftp). Press ++space++ to tag the file and press "Okay" to send.
+    For minicom, press ++control+a++ and then ++z++. Type ++s++ (Send files) and select "xmodem". Navigate your way to the new [IOS file](../todo/index.md) (here /srv/tftp). Press ++space++ to tag the file and enter "Okay" to send.
 
     <img src="xmodem-navigate-ios-serial.png">
 
@@ -103,7 +103,7 @@ Version 15.0(2)SE11 runs on both switches. I'll use that version for the example
 === "Step7"
     Make the switch boot from the newly transferred IOS image, verify and reboot.
 
-    ``` title=''
+    ``` title='' hl_lines="1 3 8"
     Switch(config)#boot system flash:/c2960-lanbasek9-mz.150-2.SE11.bin
     Switch(config)#end
     Switch#show boot
@@ -201,7 +201,7 @@ First, [start the switch in ROMMON-mode](../todo/index.md).
     Press ++enter++ The connection is back. Initiate an xMODEM transfer. The switch will then prompt you to start the transfer from your terminal emulator.
 
     ``` title='' hl_lines="0"
-    switch: copy xmodem: flash:c2960-lanbasek9-mz.152-7.E8.bin                                                            
+    switch: copy xmodem: flash:c2960-lanbasek9-mz.150-2.SE11.bin                                                            
     Begin the Xmodem or Xmodem-1K transfer now...                                                                         
     CCC
     ```

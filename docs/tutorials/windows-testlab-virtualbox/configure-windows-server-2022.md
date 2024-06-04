@@ -30,11 +30,11 @@ Configure following steps on VM16, VM17 and VM18. The example is for VM16.
 === "Step2"
     Double-click "Ethernet" and click "Properties". Double-click "Internet Protocol Version 4 (TCP/IPv4)". Configure according to the screenshot.
 
-    * VM16 is 192.192.10.16
+    * VM16 is 192.168.10.16
 
-    * VM17 is 192.192.10.17
+    * VM17 is 192.168.10.17
 
-    * VM18 is 192.192.10.18
+    * VM18 is 192.168.10.18
     
     <img src="../edit-ip-settings-server.png"/>
 

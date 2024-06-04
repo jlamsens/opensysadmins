@@ -15,11 +15,11 @@
 ### From IOS
 
 === "Step1"
-    By default, the switch will boot the configured boot image (line2) automatically, without waiting for user input (line6).
+    By default, the switch will boot the configured boot image automatically, without waiting for user input.
 
     ``` title='' hl_lines="2 6"
     Switch#show boot
-    BOOT path-list      : flash:c2960-lanbasek9-mz.152-7.E8.bin
+    BOOT path-list      : flash:c2960-lanbasek9-mz.150-2.SE11.bin
     Config file         : flash:/config.text
     Private Config file : flash:/private-config.text
     Enable Break        : yes
@@ -28,7 +28,7 @@
     ```
 
 === "Step2"
-    Bypass the normal boot process (line3) and enter ROMMON mode directly upon the next reboot (line5).
+    Bypass the normal boot process and enter ROMMON mode directly upon the next reboot.
 
     ``` title='' hl_lines="3 5"
     Switch#configure terminal
@@ -98,7 +98,7 @@
     ```
 
 === "Step2"
-    The BOOT environment variable is still set to boot c2960-lanbasek9-mz.152-7.E8.bin but it's not there. The switch will not be able to boot and will enter ROMMON-mode automatically.
+    The BOOT environment variable is still set to boot c2960-lanbasek9-mz.150-2.SE11.bin but it's not there. The switch will not be able to boot and will enter ROMMON-mode automatically.
 
     ``` title='' hl_lines="0"
     Welcome to minicom 2.8
@@ -122,9 +122,9 @@
     flashfs[0]: flashfs fsck took 18 seconds.
     ...done Initializing Flash.
     done.
-    Loading "flash:c2960-lanbasek9-mz.152-7.E8.bin"...flash:c2960-lanbasek9-mz.152-7.E8.bin: no such file or directory
+    Loading "flash:c2960-lanbasek9-mz.150-2.SE11.bin"...flash:c2960-lanbasek9-mz.150-2.SE11.bin: no such file or directory
 
-    Error loading "flash:c2960-lanbasek9-mz.152-7.E8.bin"
+    Error loading "flash:c2960-lanbasek9-mz.150-2.SE11.bin"
 
     Interrupt within 5 seconds to abort boot process.
     Boot process failed...
@@ -161,7 +161,7 @@
     -> insert image MODE button
 
 === "Step3a"
-    If the password recovery mechanism is enabled (line12), you have to manually initialize flash (line28).
+    If the password recovery mechanism is enabled, you have to manually initialize flash.
 
     ``` title='' hl_lines="12 28"
     Welcome to minicom 2.8
@@ -205,7 +205,7 @@
     ```
 
 === "Step3b"
-    If the password recovery mechanism is disabled (line12), you will lose all the configuration. Flash is initialised for you. Choose "y" at the prompt (line31).
+    If the password recovery mechanism is disabled, you will lose all the configuration. Flash is initialised for you. Choose "y" at the prompt.
 
     ``` title='' hl_lines="12 31"
     Welcome to minicom 2.8

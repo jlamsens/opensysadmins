@@ -53,7 +53,7 @@ The "console password" and "enable password" (Privileged EXEC mode) are - amongs
     switch: dir flash:
     Directory of flash:/
 
-        2  -rwx  15979776  <date>               c2960-lanbasek9-mz.152-7.E8.bin
+        2  -rwx  15979776  <date>               c2960-lanbasek9-mz.150-2.SE11.bin
         3  drwx  128       <date>               pnp-tech
         4  drwx  0         <date>               pnp-info
         5  -rwx  1781      <date>               config.text
@@ -86,7 +86,7 @@ The "console password" and "enable password" (Privileged EXEC mode) are - amongs
 
     ``` title='' hl_lines="0"
     switch: boot
-    Loading "flash:c2960-lanbasek9-mz.152-7.E8.bin"...@@@@@@@@@@@@@@@@@
+    Loading "flash:c2960-lanbasek9-mz.150-2.SE11.bin"...@@@@@@@@@@@@@@@@@
     ...
     ```
 
@@ -100,7 +100,7 @@ If the password recovery mechanism is disabled, it is not possible to keep the s
     switch: dir flash:
     Directory of flash:/
 
-        2  -rwx  15979776  <date>               c2960-lanbasek9-mz.152-7.E8.bin
+        2  -rwx  15979776  <date>               c2960-lanbasek9-mz.150-2.SE11.bin
         3  drwx  128       <date>               pnp-tech
         4  drwx  0         <date>               pnp-info
         8  -rwx  5         <date>               private-config.text
@@ -116,7 +116,7 @@ If the password recovery mechanism is disabled, it is not possible to keep the s
 
     ``` title='' hl_lines="0"
     switch: boot
-    Loading "flash:c2960-lanbasek9-mz.152-7.E8.bin"...@@@@@@@@@@@@@@@@@
+    Loading "flash:c2960-lanbasek9-mz.150-2.SE11.bin"...@@@@@@@@@@@@@@@@@
     ...
     ```
 
