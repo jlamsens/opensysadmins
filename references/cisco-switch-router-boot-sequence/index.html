@@ -7,17 +7,19 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Standing on the shoulder of giants" name="description"/>
 <meta content="Jurgen Lamsens" name="author"/>
-<link href="https://www.opensysadmins.com/references/reference_template/reference_template/" rel="canonical"/>
-<link href="../../../assets/images/favicon.png" rel="icon"/>
+<link href="https://www.opensysadmins.com/references/cisco-switch-router-boot-sequence/" rel="canonical"/>
+<link href="../cisco-switch-router-components/" rel="prev"/>
+<link href="../../explanations/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
-<title>Reference template - OpenSysAdmins</title>
-<link href="../../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<title>Cisco switch and router boot sequence - OpenSysAdmins</title>
+<link href="../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=ubuntu:300,300i,400,400i,700,700i%7Cubuntu+mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"ubuntu";--md-code-font:"ubuntu mono"}</style>
-<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -28,14 +30,14 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#reference-template">
+<a class="md-skip" href="#cisco-switch-and-router-boot-sequence">
           Skip to content
         </a>
 </div>
@@ -43,7 +45,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="OpenSysAdmins" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="OpenSysAdmins">
+<a aria-label="OpenSysAdmins" class="md-header__button md-logo" data-md-component="logo" href="../.." title="OpenSysAdmins">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -59,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Reference template
+              Cisco switch and router boot sequence
             
           </span>
 </div>
@@ -125,7 +127,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="OpenSysAdmins" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="OpenSysAdmins">
+<a aria-label="OpenSysAdmins" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="OpenSysAdmins">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
     OpenSysAdmins
@@ -142,14 +144,14 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../..">
         Home
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../tutorials/">Tutorials</a>
+<a href="../../tutorials/">Tutorials</a>
 <label for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -163,7 +165,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/">Install a Windows 11 &amp; Linux Mint 21 dual boot LAB-PC (BIOS) with local Clonezilla backup &amp; restore</a>
+<a href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/">Install a Windows 11 &amp; Linux Mint 21 dual boot LAB-PC (BIOS) with local Clonezilla backup &amp; restore</a>
 <label for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -175,72 +177,72 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/getting-started/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/getting-started/">
         01 Getting started
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/prepare-installation-media/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/prepare-installation-media/">
         02 Prepare installation media
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-bios-vs-uefi/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-bios-vs-uefi/">
         03 Configure BIOS vs UEFI
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/install-windows11/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/install-windows11/">
         04 Install Windows 11
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-windows11/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-windows11/">
         05 Configure Windows 11
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/install-linuxmint21/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/install-linuxmint21/">
         06 Install Linux Mint 21
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-linuxmint21/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/configure-linuxmint21/">
         07 Configure Linux Mint 21
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/grub-configuration/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/grub-configuration/">
         08 GRUB configuration
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/create-storage-partition/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/create-storage-partition/">
         09 Create storage partition
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/create-clonezilla-network-backup/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/create-clonezilla-network-backup/">
         10 Create Clonezilla network backup
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/restore-clonezilla-network-backup/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/restore-clonezilla-network-backup/">
         11 Restore Clonezilla network backup
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/activate-windows/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/activate-windows/">
         12 Activate Windows
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/create-local-clonezilla-dump/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/create-local-clonezilla-dump/">
         13 Create local Clonezilla dump
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/final-result/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/final-result/">
         14 Final result
       </a>
 </li>
@@ -250,7 +252,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/">Install a Windows 11 and Linux Mint 21 dual boot PC (UEFI)</a>
+<a href="../../tutorials/windows11-linuxmint21-dual-boot-uefi/">Install a Windows 11 and Linux Mint 21 dual boot PC (UEFI)</a>
 <label for="__nav_2_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -262,42 +264,42 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/getting-started/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-uefi/getting-started/">
         01 Getting started
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/prepare-installation-media/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-uefi/prepare-installation-media/">
         02 Prepare installation media
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/configure-bios-vs-uefi/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-uefi/configure-bios-vs-uefi/">
         03 Configure BIOS vs UEFI
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/install-windows11/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-uefi/install-windows11/">
         04 Install Windows 11
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/configure-windows11/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-uefi/configure-windows11/">
         05 Configure Windows 11
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/install-linuxmint21/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-uefi/install-linuxmint21/">
         06 Install Linux Mint 21
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/configure-linuxmint21/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-uefi/configure-linuxmint21/">
         07 Configure Linux Mint 21
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-linuxmint21-dual-boot-uefi/final-result/">
+<a class="md-nav__link" href="../../tutorials/windows11-linuxmint21-dual-boot-uefi/final-result/">
         08 Final result
       </a>
 </li>
@@ -307,7 +309,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../tutorials/windows11-virtualbox/">Install Windows 11 in VirtualBox 6.1.50</a>
+<a href="../../tutorials/windows11-virtualbox/">Install Windows 11 in VirtualBox 6.1.50</a>
 <label for="__nav_2_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -319,47 +321,47 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-virtualbox/getting-started/">
+<a class="md-nav__link" href="../../tutorials/windows11-virtualbox/getting-started/">
         01 Getting started
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-virtualbox/create-vm/">
+<a class="md-nav__link" href="../../tutorials/windows11-virtualbox/create-vm/">
         02 Create VM
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-virtualbox/configure-vm/">
+<a class="md-nav__link" href="../../tutorials/windows11-virtualbox/configure-vm/">
         03 Configure VM
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-virtualbox/install-os/">
+<a class="md-nav__link" href="../../tutorials/windows11-virtualbox/install-os/">
         04 Install OS
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-virtualbox/configure-os/">
+<a class="md-nav__link" href="../../tutorials/windows11-virtualbox/configure-os/">
         05 Configure OS
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-virtualbox/create-snapshot-clean-install/">
+<a class="md-nav__link" href="../../tutorials/windows11-virtualbox/create-snapshot-clean-install/">
         06 Create snapshot clean install
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-virtualbox/create-sysprep/">
+<a class="md-nav__link" href="../../tutorials/windows11-virtualbox/create-sysprep/">
         07 Create sysprep
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-virtualbox/create-snapshot-sysprep/">
+<a class="md-nav__link" href="../../tutorials/windows11-virtualbox/create-snapshot-sysprep/">
         08 Create snapshot sysprep
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows11-virtualbox/final-result/">
+<a class="md-nav__link" href="../../tutorials/windows11-virtualbox/final-result/">
         09 Final result
       </a>
 </li>
@@ -369,7 +371,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../tutorials/windows-server-2022-virtualbox/">Install Windows Server 2022 in VirtualBox 6.1.50</a>
+<a href="../../tutorials/windows-server-2022-virtualbox/">Install Windows Server 2022 in VirtualBox 6.1.50</a>
 <label for="__nav_2_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -381,47 +383,47 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows-server-2022-virtualbox/getting-started/">
+<a class="md-nav__link" href="../../tutorials/windows-server-2022-virtualbox/getting-started/">
         01 Getting started
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows-server-2022-virtualbox/create-vm/">
+<a class="md-nav__link" href="../../tutorials/windows-server-2022-virtualbox/create-vm/">
         02 Create VM
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows-server-2022-virtualbox/configure-vm/">
+<a class="md-nav__link" href="../../tutorials/windows-server-2022-virtualbox/configure-vm/">
         03 Configure VM
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows-server-2022-virtualbox/install-os/">
+<a class="md-nav__link" href="../../tutorials/windows-server-2022-virtualbox/install-os/">
         04 Install OS
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows-server-2022-virtualbox/configure-os/">
+<a class="md-nav__link" href="../../tutorials/windows-server-2022-virtualbox/configure-os/">
         05 Configure OS
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows-server-2022-virtualbox/create-snapshot-clean-install/">
+<a class="md-nav__link" href="../../tutorials/windows-server-2022-virtualbox/create-snapshot-clean-install/">
         06 Create snapshot clean install
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows-server-2022-virtualbox/create-sysprep/">
+<a class="md-nav__link" href="../../tutorials/windows-server-2022-virtualbox/create-sysprep/">
         07 Create sysprep
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows-server-2022-virtualbox/create-snapshot-sysprep/">
+<a class="md-nav__link" href="../../tutorials/windows-server-2022-virtualbox/create-snapshot-sysprep/">
         08 Create snapshot sysprep
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows-server-2022-virtualbox/final-result/">
+<a class="md-nav__link" href="../../tutorials/windows-server-2022-virtualbox/final-result/">
         09 Final result
       </a>
 </li>
@@ -431,7 +433,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../tutorials/windows-testlab-virtualbox/">Install a Windows testlab in VirtualBox 6.1.50</a>
+<a href="../../tutorials/windows-testlab-virtualbox/">Install a Windows testlab in VirtualBox 6.1.50</a>
 <label for="__nav_2_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -443,42 +445,42 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows-testlab-virtualbox/getting-started/">
+<a class="md-nav__link" href="../../tutorials/windows-testlab-virtualbox/getting-started/">
         01 Getting started
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows-testlab-virtualbox/clone-vms/">
+<a class="md-nav__link" href="../../tutorials/windows-testlab-virtualbox/clone-vms/">
         02 Clone VMs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows-testlab-virtualbox/group-vms/">
+<a class="md-nav__link" href="../../tutorials/windows-testlab-virtualbox/group-vms/">
         03 Group VMs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows-testlab-virtualbox/configure-vms/">
+<a class="md-nav__link" href="../../tutorials/windows-testlab-virtualbox/configure-vms/">
         04 Configure VMs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows-testlab-virtualbox/configure-windows11/">
+<a class="md-nav__link" href="../../tutorials/windows-testlab-virtualbox/configure-windows11/">
         05 Configure Windows 11
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows-testlab-virtualbox/configure-windows-server-2022/">
+<a class="md-nav__link" href="../../tutorials/windows-testlab-virtualbox/configure-windows-server-2022/">
         06 Configure Windows Server 2022
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows-testlab-virtualbox/create-snapshot-clean-install/">
+<a class="md-nav__link" href="../../tutorials/windows-testlab-virtualbox/create-snapshot-clean-install/">
         07 Create snapshot clean install
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../tutorials/windows-testlab-virtualbox/final-result/">
+<a class="md-nav__link" href="../../tutorials/windows-testlab-virtualbox/final-result/">
         08 Final result
       </a>
 </li>
@@ -491,7 +493,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../howtos/">Howtos</a>
+<a href="../../howtos/">Howtos</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -503,81 +505,151 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../howtos/install-xmind-linux-mint/">
+<a class="md-nav__link" href="../../howtos/install-xmind-linux-mint/">
         Install Xmind 8 on Linux Mint 21
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../howtos/windows11-bootable-usb-flash-drive/">
+<a class="md-nav__link" href="../../howtos/windows11-bootable-usb-flash-drive/">
         Create a Windows 11 bootable USB flash drive
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../howtos/linuxmint21-bootable-usb-flash-drive/">
+<a class="md-nav__link" href="../../howtos/linuxmint21-bootable-usb-flash-drive/">
         Create a Linux Mint 21 bootable USB flash drive
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../howtos/reinstall-ios-cisco2960/">
+<a class="md-nav__link" href="../../howtos/reinstall-ios-cisco2960/">
         (Re)install an IOS operating system on a Cisco 2960 switch
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../howtos/password-recovery-cisco2960/">
+<a class="md-nav__link" href="../../howtos/password-recovery-cisco2960/">
         Password recovery on a Cisco 2960 switch
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../howtos/factory-reset-cisco2960/">
+<a class="md-nav__link" href="../../howtos/factory-reset-cisco2960/">
         Factory reset a Cisco 2960 switch
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../howtos/install-packettracer-linux-mint/">
+<a class="md-nav__link" href="../../howtos/install-packettracer-linux-mint/">
         Install PacketTracer 8.2.2 on Linux Mint 21
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../howtos/install-virtualbox-linux-mint/">
+<a class="md-nav__link" href="../../howtos/install-virtualbox-linux-mint/">
         Install VirtualBox 6.1.50 on Linux Mint 21
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../howtos/install-chrome-browser-linux-mint/">
+<a class="md-nav__link" href="../../howtos/install-chrome-browser-linux-mint/">
         Install Google Chrome browser on Linux Mint 21
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../howtos/use-minicom-linux-mint/">
+<a class="md-nav__link" href="../../howtos/use-minicom-linux-mint/">
         Use minicom on Linux Mint 21
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../howtos/access-cisco-device-rommon/">
+<a class="md-nav__link" href="../../howtos/access-cisco-device-rommon/">
         Access a Cisco device ROMMON
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../">References</a>
+<a href="../">References</a>
+<label for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
           References
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cisco-switch-router-components/">
+        Cisco switch and router components
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Cisco switch and router boot sequence
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Cisco switch and router boot sequence
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#general-overview">
+    General overview
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-by-step-boot-process">
+    Step-by-step boot process
+  </a>
+<nav aria-label="Step-by-step boot process" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#power-on-self-test-post">
+    Power-On Self Test (POST)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#boot-loader-initialization">
+    Boot Loader Initialization
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loading-the-cisco-ios-image">
+    Loading the Cisco IOS Image
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loading-the-configuration">
+    Loading the Configuration
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-initialization">
+    System Initialization
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recovery-and-troubleshooting">
+    Recovery and troubleshooting
+  </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../explanations/">Explanations</a>
+<a href="../../explanations/">Explanations</a>
 </div>
 <nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
@@ -597,13 +669,155 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#general-overview">
+    General overview
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-by-step-boot-process">
+    Step-by-step boot process
+  </a>
+<nav aria-label="Step-by-step boot process" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#power-on-self-test-post">
+    Power-On Self Test (POST)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#boot-loader-initialization">
+    Boot Loader Initialization
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loading-the-cisco-ios-image">
+    Loading the Cisco IOS Image
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loading-the-configuration">
+    Loading the Configuration
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-initialization">
+    System Initialization
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recovery-and-troubleshooting">
+    Recovery and troubleshooting
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="reference-template">Reference template</h1>
+<h1 id="cisco-switch-and-router-boot-sequence">Cisco switch and router boot sequence</h1>
+<h2 id="general-overview">General overview</h2>
+<ul>
+<li>Power-On Self Test (POST)</li>
+<li>Boot Loader Initialization</li>
+<li>Loading the Cisco IOS Image</li>
+<li>Loading the Configuration</li>
+<li>System Initialization</li>
+</ul>
+<h2 id="step-by-step-boot-process">Step-by-step boot process</h2>
+<h3 id="power-on-self-test-post">Power-On Self Test (POST)</h3>
+<ul>
+<li>
+<p>When a Cisco router or switch is powered on, it performs a Power-On Self Test (POST) to verify the integrity and functionality of its hardware components, including:</p>
+<ul>
+<li>CPU</li>
+<li>memory</li>
+<li>network interfaces</li>
+<li>detect new installed components (added memory, ...)</li>
+</ul>
+</li>
+<li>
+<p>A switch, for example, checks its system LEDs during this phase, and the System LED will initially be amber. Because a full operating system has not yet been loaded when the switch performs POST, it needs a way to tell the human user if POST worked well, if it failed partly, or if the switch is totally unusable. To communicate the status, the switch uses the light-emitting diodes (LEDs) on the front panel of the switch. During POST, these LEDs have one set of meanings; during normal operation, the LEDs are used for other purposes.</p>
+</li>
+<li>
+<p>The POST is stored in and run from ROM.</p>
+</li>
+</ul>
+<h3 id="boot-loader-initialization">Boot Loader Initialization</h3>
+<ul>
+<li>
+<p>The "boot loader", also called "boot loader program" or "boot loader image" or "system bootstrap" or "bootstrap", is the first program executed after "POST". 
+ It:</p>
+<ul>
+<li>initializes the basic hardware components, including the CPU, memory and interfaces</li>
+<li>provides basic system functions such as access to the file system in "flash" memory and network interfaces</li>
+<li>locates the "IOS image" in a certain order, depending on the value of the "configuration register".</li>
+</ul>
+</li>
+<li>
+<p>It is a small, specialized piece of software/program (no IOS!) typically stored in and run from "flash" memory or a dedicated "boot ROM".</p>
+</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Boot loader mode</label><label for="__tabbed_1_2">ROMMON-mode</label><label for="__tabbed_1_3">RXBOOT</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The boot loader provides a command-line interface (CLI) that allows for recovery and diagnostic functions. If the main IOS image cannot be loaded, the "boot loader mode" can be used to perform tasks such as loading a new IOS image, recovering passwords, or formatting the flash memory.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>...
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>switch:
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>ROMMON-mode is a lower-level diagnostic and recovery environment than the "boot loader mode". It provides a more comprehensive set of commands for troubleshooting, hardware diagnostics, and recovery operations. It is used when the device fails to load the "boot loader" or "IOS", or when manually invoked for recovery purposes using "break" or via the "configuration register". "Break" (system interrupt) is always enabled for 60 seconds after the router reboots, regardless of whether it is configured on or off in the "configuration register". During this 60-second window, you can break to the ROM monitor prompt by pressing the "Break key".</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>...
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>rommon 1&gt;
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Older routers (e.g. Cisco AS2511 or Cisco 1600) would actually run IOS straight from FLASH, so you could not overwrite it whilst running, they did not have the ability to load an IOS image via the network either, so you needed to use RXBOOT, a reduced command set image. It contains only IP-code (but no routing capabilities!) just to able to boot from tFTP and mainly used to download "system images" to a router. You can see it as an intermediate step between the ROMMON mode and the IOS mode.
+RXBOOT is also called:</p>
+<ul>
+<li>a "mini operating system" (0x2101)</li>
+<li>a "MINI-IOS"</li>
+<li>a "limited functions IOS"</li>
+<li>a "limited feature IOS"</li>
+<li>a "partial IOS"</li>
+<li>a "cut-down version of IOS"</li>
+<li>a "stripped down version of IOS"</li>
+<li>a "helper image"</li>
+<li>a "subset of IOS image"</li>
+</ul>
+<p>Modern day routers don’t have that (0x2102). RXBOOT is stored in ROM (low-end routers) or bootflash (high-end routers).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>...
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>X
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></input></div>
+<h3 id="loading-the-cisco-ios-image">Loading the Cisco IOS Image</h3>
+<p>The "configuration register" is a special 16-bit value used to control various aspects of the device's behavior during the boot process. This register can be configured to alter how the device behaves when it starts up, including how it locates its operating system image and how it handles its "startup configuration".</p>
+<h3 id="loading-the-configuration">Loading the Configuration</h3>
+<h3 id="system-initialization">System Initialization</h3>
+<h2 id="recovery-and-troubleshooting">Recovery and troubleshooting</h2>
+<p>"boot loader mode" (switch: prompt). A Cisco router drops into "ROMMON-mode" or "ROM monitor MODE" (rommon 1&gt; prompt). A switch "boot loader mode" is not the same as a router "ROMMON-mode"!</p>
 </article>
 </div>
 </div>
@@ -635,7 +849,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.highlight", "header.autohide"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../assets/javascripts/bundle.19047be9.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.top", "search.highlight", "header.autohide"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.19047be9.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

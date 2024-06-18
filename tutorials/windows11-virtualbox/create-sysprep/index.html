@@ -567,6 +567,9 @@
 <input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../../../references/">References</a>
+<label for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
 </div>
 <nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
@@ -574,6 +577,16 @@
           References
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../references/cisco-switch-router-components/">
+        Cisco switch and router components
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../references/cisco-switch-router-boot-sequence/">
+        Cisco switch and router boot sequence
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -607,7 +620,7 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="create-sysprep">Create sysprep.</h1>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:7"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><input id="__tabbed_1_6" name="__tabbed_1" type="radio"><input id="__tabbed_1_7" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label><label for="__tabbed_1_4">Step4</label><label for="__tabbed_1_5">Step5</label><label for="__tabbed_1_6">Step6</label><label for="__tabbed_1_7">Step7</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Start the VM and login ("guru"/"guru"). Run a commandprompt as administrator.</p>
@@ -619,13 +632,38 @@
 <p>First change the path. </p>
 </li>
 <li>
-<p>Then enter the sysprep command with parameters. A pop-up window appears. Finally, the system shuts down.</p>
+<p>Then enter the sysprep command with parameters. It is possible you get an error, like here. If not, skip the next steps.</p>
 </li>
 </ol>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../sysprep-error.png"><img src="../sysprep-error.png"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Let's find out what the fuss is all about. Open the log file. A web search leads me to <a href="https://learn.microsoft.com/en-us/troubleshoot/windows-client/installing-updates-features-roles/sysprep-fails-remove-or-update-store-apps">here</a>.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../sysprep-error-bing.png"><img src="../sysprep-error-bing.png"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Open Powershell as "Administrator" and run the following cmdlets.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>Import-Module Appx
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>Import-Module Dism
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>Get-AppxPackage -AllUsers | Where PublisherId -eq 8wekyb3d8bbwe | Format-List -Property PackageFullName,PackageUserInformation
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Look for a package "BingSearch" and copy it's full name</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../powershell-bingsearch-copy.png"><img src="../powershell-bingsearch-copy.png"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Remove that package using Powershell.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../powershell-bingsearch-remove.png"><img src="../powershell-bingsearch-remove.png"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Go back to the regular command prompt. The sysprep should be working and the system will shutdown afterwards.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../sysprep-working.png"><img src="../sysprep-working.png"/></a></p>
 </div>
 </div>
-</input></input></div>
+</input></input></input></input></input></input></input></div>
 </article>
 </div>
 </div>
