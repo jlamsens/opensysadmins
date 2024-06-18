@@ -441,6 +441,9 @@ nav:
    # References
   - References: #listed in header, must be unique
     - references/index.md # overview/landing page
+
+    - Cisco switch and router components: references/cisco-switch-router-components/index.md
+    - Cisco switch and router boot sequence: references/cisco-switch-router-boot-sequence/index.md
   
 ####################################################################################
 

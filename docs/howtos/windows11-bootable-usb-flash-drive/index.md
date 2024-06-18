@@ -8,6 +8,7 @@
 ## Download ISO
 === "Step1"
     Use your favorite search engine to search for the Windows 11 iso and choose the official Microsoft website.
+    **(VDAB users: download from your Google Drive!)**
 
     <img src="windows11-search-iso.png" width="320" height="180"/>
 

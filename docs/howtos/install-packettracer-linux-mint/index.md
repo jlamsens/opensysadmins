@@ -4,7 +4,8 @@
 - a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Linux Mint 21
 
 ## Download
-Download PacketTracer from an official Cisco location (e.g Netacad.com, Skillsforall.com) and save it to disk (here: "Downloads")
+Download PacketTracer from an official Cisco location (e.g Netacad.com, Skillsforall.com) and save it to disk.
+**(VDAB users: download from your Google Drive!)**
 
 <img src="netacad-packettracer.png"/>
 

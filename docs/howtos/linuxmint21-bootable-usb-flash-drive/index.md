@@ -8,6 +8,7 @@
 ## Download ISO
 === "Step1"
     Use your favorite search engine to search for the Linux Mint 21 iso and choose the official Linux Mint website.
+    **(VDAB users: download from your Google Drive!)**
 
     <img src="linuxmint21-search-iso.png" width="320" height="180"/>
 

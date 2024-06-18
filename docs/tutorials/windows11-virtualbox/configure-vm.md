@@ -3,6 +3,7 @@
 ## Download ISO
 === "Step1"
     Use your favorite search engine to search for the Windows 11 trial iso and choose the official Microsoft website. Registration is needed.
+    **(VDAB users: download from your Google Drive!)**
 
     <img src="../windows11-search-iso.png"/>
 
