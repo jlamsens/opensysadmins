@@ -1,15 +1,15 @@
 # Password recovery on a Cisco 2960 switch
 
 ## Prereqs
-* a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Linux Mint 21
-    * [minicom](../use-minicom-linux-mint/index.md) terminal emulation software
-* a console cable
+* a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/){:target="_blank"}/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/){:target="_blank"}) running Linux Mint 21
+    * [minicom](../use-minicom-linux-mint/index.md){:target="_blank"} terminal emulation software
+* a serial console cable
 * a Cisco 2960 24TT-L or 24TC-L Plus switch
-    * a working but inaccessible (forgotten console and/or enable password) IOS
+    * a [working IOS](../reinstall-ios-cisco2960/index.md){:target="_blank"}, but inaccessible (forgotten console and/or enable password)
 
 ## Setup
 
-<img src="console-access.png" width="320" height="180"/>
+<img src="console-access.png"/>
 
 ## Situation
 The "console password" and "enable password" (Privileged EXEC mode) are - amongst other switch configuration settings - stored in startup-config (NVRAM). Recovery of a lost password is only useful if you have a inacessible (but working) IOS. If not, you have a bigger problem and have to [(re)install an IOS operating system](../reinstall-ios-cisco2960/index.md) first.
@@ -28,7 +28,7 @@ The "console password" and "enable password" (Privileged EXEC mode) are - amongs
     ```
 
 === "Problem2"
-    No access to privileged exec mode.
+    Access to the console, but no access to privileged exec mode.
 
     ``` title='' hl_lines="0"
     Switch>enable
@@ -41,7 +41,7 @@ The "console password" and "enable password" (Privileged EXEC mode) are - amongs
     ```
 
 ## ROMMON
-[Boot the switch in ROMMON-mode](../access-cisco-device-rommon/index.md) using a cold start. If the password recovery mechanism is enabled, it is possible to either keep the startup configuration file or choose to discard it. If the password recovery mechanism is disabled, you are forced to discard all device configuration.
+[Boot the switch in ROMMON-mode](../access-cisco-device-rommon/index.md){:target="_blank"} using a cold start. If the password recovery mechanism is *enabled*, it is possible to either keep the startup configuration file or choose to discard it. If the password recovery mechanism is *disabled*, you are forced to discard all device configuration.
 
 ### Password recovery mechanism enabled
 
@@ -66,7 +66,7 @@ The "console password" and "enable password" (Privileged EXEC mode) are - amongs
     ```
 
 === "Step2"
-    Optional: should you choose to keep the startup configuration file, temporary rename that file. If not, skip this step.
+    Optional: should you choose to *keep* the startup configuration file, temporary rename that file. If not, skip this step.
 
     ``` title='' hl_lines="0"
     switch: rename flash:config.text flash:config.text.bak
@@ -74,7 +74,7 @@ The "console password" and "enable password" (Privileged EXEC mode) are - amongs
     ```
 
 === "Step3"
-    Optional: should you choose to discard the startup configuration file, delete that file. If not, skip this step.
+    Optional: should you choose to *discard* the startup configuration file, delete that file. If not, skip this step.
 
     ``` title='' hl_lines="0"
     switch: delete flash:config.text
@@ -91,7 +91,7 @@ The "console password" and "enable password" (Privileged EXEC mode) are - amongs
     ```
 
 ### Password recovery mechanism disabled
-If the password recovery mechanism is disabled, it is not possible to keep the startup configuration file and you had to reset the system back to the default configuration.
+If the password recovery mechanism is disabled, it was not possible to keep the startup configuration file and you had to reset the system back to the default configuration.
 
 === "Step1"
     List the files stored in flash. The startup configuration file is absent!

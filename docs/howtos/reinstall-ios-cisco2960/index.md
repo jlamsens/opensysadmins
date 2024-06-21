@@ -18,7 +18,7 @@ Version "15.2(7)E8" does NOT run on a "Cisco 2960 24TT-L switch".
 Version 15.0(2)SE11 runs on both switches. I'll use that version for the examples.
 
 ## IOS transfer over serial (xmodem)
-<img src="console-access.png" width="320" height="180"/>
+<img src="console-access.png"/>
 
 ### From IOS
 === "Step1"
@@ -141,7 +141,7 @@ Version 15.0(2)SE11 runs on both switches. I'll use that version for the example
     ```
 
 ### From ROMMON
-First, [start the switch in ROMMON-mode](../todo/index.md).
+First, [start the switch in ROMMON-mode](../access-cisco-device-rommon/index.md).
 
 === "Step1"
     Verify that there is enough space left on the Flash filesystem to add an (additional) IOS. In this example, I will simulate a missing IOS by deleting it.
@@ -274,14 +274,14 @@ First, [start the switch in ROMMON-mode](../todo/index.md).
 ## IOS transfer over network protocol
 Transfer using a network protocol is only possible from IOS, not from ROMMON-mode.
 
-<img src="network-access.png" width="320" height="180"/>
+<img src="network-access.png"/>
 
 ### tFTP
 
 === "Step1"
     Verify that there is enough space left on the Flash filesystem to add an (additional) IOS. In this example, I will simulate a missing IOS by deleting it.
 
-    ``` title='' hl_lines="1 11"
+    ``` title='' hl_lines="1 10"
     Switch#dir flash:
     Directory of flash:/
 
@@ -372,7 +372,7 @@ Transfer using a network protocol is only possible from IOS, not from ROMMON-mod
 === "Step7"
     Copy the IOS image from the TFTP server to the switch's flash memory.
 
-    ``` title='' hl_lines="0"
+    ``` title='' hl_lines="1"
     Switch#copy tftp://192.168.1.101/c2960-lanbasek9-mz.150-2.SE11.bin flash:
     Destination filename [c2960-lanbasek9-mz.150-2.SE11.bin]? 
     Accessing tftp://192.168.1.101/c2960-lanbasek9-mz.150-2.SE11.bin...
@@ -386,7 +386,8 @@ Transfer using a network protocol is only possible from IOS, not from ROMMON-mod
 === "Step8"
     Make the switch boot from the newly transferred IOS image, verify and reboot.
 
-    ``` title=''
+    ``` title='' hl_lines="2"
+    Switch#configure terminal
     Switch(config)#boot system flash:/c2960-lanbasek9-mz.150-2.SE11.bin
     Switch(config)#end
     Switch#
@@ -426,5 +427,7 @@ Transfer using a network protocol is only possible from IOS, not from ROMMON-mod
     ```
 
 ### SSH (sFTP)
+todo
 
 ### HTTP
+todo
