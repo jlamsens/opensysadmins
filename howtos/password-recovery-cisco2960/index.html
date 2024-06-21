@@ -718,18 +718,18 @@
 <h1 id="password-recovery-on-a-cisco-2960-switch">Password recovery on a Cisco 2960 switch</h1>
 <h2 id="prereqs">Prereqs</h2>
 <ul>
-<li>a PC (<a href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/">BIOS</a>/<a href="../../tutorials/windows11-linuxmint21-dual-boot-uefi/">UEFI</a>) running Linux Mint 21<ul>
-<li><a href="../use-minicom-linux-mint/">minicom</a> terminal emulation software</li>
+<li>a PC (<a href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/" target="_blank">BIOS</a>/<a href="../../tutorials/windows11-linuxmint21-dual-boot-uefi/" target="_blank">UEFI</a>) running Linux Mint 21<ul>
+<li><a href="../use-minicom-linux-mint/" target="_blank">minicom</a> terminal emulation software</li>
 </ul>
 </li>
-<li>a console cable</li>
+<li>a serial console cable</li>
 <li>a Cisco 2960 24TT-L or 24TC-L Plus switch<ul>
-<li>a working but inaccessible (forgotten console and/or enable password) IOS</li>
+<li>a <a href="../reinstall-ios-cisco2960/" target="_blank">working IOS</a>, but inaccessible (forgotten console and/or enable password)</li>
 </ul>
 </li>
 </ul>
 <h2 id="setup">Setup</h2>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="console-access.png"><img height="180" src="console-access.png" width="320"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="console-access.png"><img src="console-access.png"/></a></p>
 <h2 id="situation">Situation</h2>
 <p>The "console password" and "enable password" (Privileged EXEC mode) are - amongst other switch configuration settings - stored in startup-config (NVRAM). Recovery of a lost password is only useful if you have a inacessible (but working) IOS. If not, you have a bigger problem and have to <a href="../reinstall-ios-cisco2960/">(re)install an IOS operating system</a> first.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Problem1</label><label for="__tabbed_1_2">Problem2</label></div>
@@ -752,7 +752,7 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>No access to privileged exec mode.</p>
+<p>Access to the console, but no access to privileged exec mode.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -771,7 +771,7 @@
 </div>
 </input></input></div>
 <h2 id="rommon">ROMMON</h2>
-<p><a href="../access-cisco-device-rommon/">Boot the switch in ROMMON-mode</a> using a cold start. If the password recovery mechanism is enabled, it is possible to either keep the startup configuration file or choose to discard it. If the password recovery mechanism is disabled, you are forced to discard all device configuration.</p>
+<p><a href="../access-cisco-device-rommon/" target="_blank">Boot the switch in ROMMON-mode</a> using a cold start. If the password recovery mechanism is <em>enabled</em>, it is possible to either keep the startup configuration file or choose to discard it. If the password recovery mechanism is <em>disabled</em>, you are forced to discard all device configuration.</p>
 <h3 id="password-recovery-mechanism-enabled">Password recovery mechanism enabled</h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label><label for="__tabbed_2_3">Step3</label><label for="__tabbed_2_4">Step4</label></div>
 <div class="tabbed-content">
@@ -805,14 +805,14 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Optional: should you choose to keep the startup configuration file, temporary rename that file. If not, skip this step.</p>
+<p>Optional: should you choose to <em>keep</em> the startup configuration file, temporary rename that file. If not, skip this step.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>switch: rename flash:config.text flash:config.text.bak
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>switch:
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Optional: should you choose to discard the startup configuration file, delete that file. If not, skip this step.</p>
+<p>Optional: should you choose to <em>discard</em> the startup configuration file, delete that file. If not, skip this step.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>switch: delete flash:config.text
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a>switch:
@@ -830,7 +830,7 @@
 </div>
 </input></input></input></input></div>
 <h3 id="password-recovery-mechanism-disabled">Password recovery mechanism disabled</h3>
-<p>If the password recovery mechanism is disabled, it is not possible to keep the startup configuration file and you had to reset the system back to the default configuration.</p>
+<p>If the password recovery mechanism is disabled, it was not possible to keep the startup configuration file and you had to reset the system back to the default configuration.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Step1</label><label for="__tabbed_3_2">Step2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
