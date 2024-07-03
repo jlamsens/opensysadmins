@@ -328,28 +328,20 @@ nav:
 
   ####################################################################################
 
-  #- Blogs: #listed in header, must be unique
-  #  - blogs/index.md # overview/landing page
+  - Blogs: #listed in header, must be unique
+    - blogs/index.md # overview/landing page
 
-  # Blog template
-  #  - YYYY_template:
-  #    - Blog template: blogs/YYYY_template/blog_template.md
-  #    - Blog template: blogs/YYYY_template/blog_template.md
-  #    - Blog template: blogs/YYYY_template/blog_template.md
-  #   - Blog template: blogs/YYYY_template/blog_template.md
+    - 2024:
+      - no matching cypher found: blogs/2024/no-matching-cypher-found.md
+      #- Blog template: blogs/YYYY_template/blog_template.md
+      #- Blog template: blogs/YYYY_template/blog_template.md
+      #- Blog template: blogs/YYYY_template/blog_template.md
 
 ####################################################################################
 
   - Tutorials: #listed in header, must be unique
     - tutorials/index.md # overview/landing page
 
-  # Tutorial template
-  #  - Tutorial_template:
-  #    - tutorials/tutorial_template/index.md # overview/landing page
-  #    - 01 Getting started: tutorials/tutorial_template/getting-started_template.md
-  #    - 02 Tutorial template: tutorials/tutorial_template/tutorial_template.md
-  #    - XX Final result: tutorials/tutorial_template/final-result_template.md
-    
     - Install a Windows 11 & Linux Mint 21 dual boot LAB-PC (BIOS) with local Clonezilla backup & restore:
       - tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/index.md # overview/landing page
       - 01 Getting started: tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/getting-started.md
