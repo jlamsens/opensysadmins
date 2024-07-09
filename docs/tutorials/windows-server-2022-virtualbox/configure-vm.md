@@ -2,7 +2,7 @@
 
 ## Download ISO
 === "Step1"
-    Use your favorite search engine to search for the Windows 11 trial iso and choose the official Microsoft website. Registration is needed.
+    Use your favorite search engine to search for the Windows Server 2019 trial iso and choose the official Microsoft website. Registration is needed.
 
     <img src="../windows2022-search-iso.png"/>
 

@@ -7,7 +7,7 @@
 === "Step2"
     Select "Current State" and click "Take". Give a proper name, like "Clean install". A good "Snapshot Description" can be handy!
 
-    <img src="../screenshot-todo.png"/>
+    <img src="../snapshot-current-state.png"/>
 
 === "Step3"
     If you change "something" in this virtual machine, you will get "Current State (changed)". Want to revert those changes? Select "Clean install" and click "Restore". Be sure to clear the checkbox at "Create a snapshot of the current machine state" or you'll end up with another snapshot.

@@ -5,6 +5,44 @@ hide:
 
 # No matching cypher found
 
+## Setup
+<img src="../no-matching-cypher-found-setup.png"/>
+
+=== "S1"
+    ``` title='' hl_lines="0"
+    Switch>enable 
+    Switch#clock set 11:59:00 Jul 02 2024
+    Switch#conf terminal 
+    Switch(config)#hostname S1
+    S1(config)#int vlan1
+    S1(config-if)#ip add 192.168.10.3 255.255.255.0
+    S1(config-if)#no shut
+    S1(config-if)#end
+    S1#
+    ```
+
+=== "R1"
+    ``` title='' hl_lines="0"
+    Router>enable
+    Router#clock set 11:59:00 Jul 02 2024
+    Router#conf t
+    Router(config)#enable secret admin
+    Router(config)#hostname R1
+    R1(config)#ip domain-name opensysadmins.lab
+    R1(config)#crypto key generate rsa modulus 2048
+    R1(config)#username admin secret admin
+    R1(config)#line vty 0 15
+    R1(config-line)#transport input ssh
+    R1(config-line)#login local
+    R1(config-line)#exit
+
+    R1(config)#int g0/1
+    R1(config-if)#ip add 192.168.10.254 255.255.255.0
+    R1(config-if)#no shut
+    R1(config-if)#end
+    R1#
+    ```
+
 ## Problem
 Connecting from a Cisco 2960 switch to a Cisco 1941 router using SSH gives a "no matching cypher found" error. (Nevermind the date/time settings on switch and router, they are a bit off as I set them manually).
 
@@ -14,7 +52,7 @@ Connecting from a Cisco 2960 switch to a Cisco 1941 router using SSH gives a "no
     S1#ssh -l admin 192.168.10.254
     [Connection to 192.168.10.254 aborted: error status 0]
     S1#
-    Jul  2 13:32:48.621: %SSH-3-NO_MATCH: No matching cipher found: client aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc server aes128-ctr,aes192-ctr,aes256-ctr
+    Jul  9 10:50:01.914: %SSH-3-NO_MATCH: No matching cipher found: client aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc server aes128-ctr,aes1r
     S1#
     ```
 
@@ -22,43 +60,7 @@ Connecting from a Cisco 2960 switch to a Cisco 1941 router using SSH gives a "no
 
     ``` title='' hl_lines="0"
     R1#
-    Jul  2 13:32:46.639: %SSH-3-NO_MATCH: No matching cipher found: client aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc server aes128-ctr,aes192-ctr,aes256-ctr
-    R1#
-    ```
-
-## Setup
-<img src="../no-matching-cypher-found-setup.png"/>
-
-=== "S1"
-    ``` title='' hl_lines="0"
-    Switch>enable 
-    Switch#conf terminal 
-    Switch(config)#hostname S1
-    S1(config)#int vlan1
-    S1(config-if)#ip add 192.168.10.3 255.255.255.0
-    S1(config-if)#no shut
-    S1(config-if)#end
-    S1#clock set 11:59:00 Jul 02 2024
-    S1#
-    ```
-
-=== "R1"
-    ``` title='' hl_lines="0"
-    Router>enable
-    Router#conf t
-    Router(config)#hostname R1
-    R1(config)#ip domain-name opensysadmins.lab
-    R1(config)#crypto key generate rsa modulus 2048
-    R1(config)#username admin secret admin
-    R1(config)#line vty 0 15
-    R1(config-line)#transport input ssh
-    R1(config-line)#exit
-
-    R1(config)#int g0/1
-    R1(config-if)#ip add 192.168.10.254 255.255.255.0
-    R1(config-if)#no shut
-    R1(config-if)#end
-    R1#clock set 11:59:00 Jul 02 2024
+    Jul  9 10:49:58.823: %SSH-3-NO_MATCH: No matching cipher found: client aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc server aes128-ctr,aes1r
     R1#
     ```
 
@@ -134,6 +136,7 @@ In CTR (Counter) mode, a counter value is combined with an initial value and the
     KEX Algorithms:diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
     ...
     ```
+
 ## Different cypher lists.
 Why is e.g. *aes256-ctr* not available on a Cisco 2960 switch?
 
@@ -144,6 +147,33 @@ Why is e.g. *aes256-ctr* not available on a Cisco 2960 switch?
 It is important to consult the documentation of specific Cisco devices and IOS versions to know which encryption methods and modes are supported.
 
 ## Solution
-You can customize the list of supported and used encryption algorithms for the SSH server through Cisco IOS configuration. This can be done by adjusting the SSH server configuration to add or remove specific ciphers. This would limit the show ip ssh output to only the specifically configured algorithms.
+You can customize the list of supported and used encryption algorithms for the SSH server through Cisco IOS configuration. This can be done by adjusting the SSH server configuration to add or remove specific ciphers. This example would limit the `show ip ssh output` to only the specifically configured algorithms:
 
-To be continued...
+=== "R1"
+
+    ``` title='' hl_lines="2 7"
+    R1#conf t
+    R1(config)#ip ssh server algorithm encryption aes256-cbc
+    R1(config)#end
+
+    R1#show ip ssh
+    ...
+    Encryption Algorithms:aes256-cbc
+    MAC Algorithms:hmac-sha2-256,hmac-sha2-512,hmac-sha1,hmac-sha1-96
+    KEX Algorithms:diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+    ...
+    R1#
+    ```
+
+=== "S1"
+
+    ``` title='' hl_lines="0"
+    S1#ssh -l admin 192.168.10.254
+    Password:         <--- enter "admin"
+
+    R1>enable
+    Password:         <--- enter "admin"
+    R1#
+    ```
+
+

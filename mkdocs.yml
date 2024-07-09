@@ -333,6 +333,7 @@ nav:
 
     - 2024:
       - no matching cypher found: blogs/2024/no-matching-cypher-found.md
+      - no matching key exchange method found: blogs/2024/no-matching-key-exchange-method-found.md
       #- Blog template: blogs/YYYY_template/blog_template.md
       #- Blog template: blogs/YYYY_template/blog_template.md
       #- Blog template: blogs/YYYY_template/blog_template.md
