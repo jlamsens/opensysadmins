@@ -7,12 +7,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Standing on the shoulder of giants" name="description"/>
 <meta content="Jurgen Lamsens" name="author"/>
-<link href="https://www.opensysadmins.com/blogs/2024/no-matching-cypher-found/" rel="canonical"/>
-<link href="../../" rel="prev"/>
-<link href="../no-matching-key-exchange-method-found/" rel="next"/>
+<link href="https://www.opensysadmins.com/blogs/2024/no-matching-key-exchange-method-found/" rel="canonical"/>
+<link href="../no-matching-cypher-found/" rel="prev"/>
+<link href="../../../tutorials/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
-<title>no matching cypher found - OpenSysAdmins</title>
+<title>no matching key exchange method found - OpenSysAdmins</title>
 <link href="../../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#no-matching-cypher-found">
+<a class="md-skip" href="#no-matching-key-exchange-method-found">
           Skip to content
         </a>
 </div>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              no matching cypher found
+              no matching key exchange method found
             
           </span>
 </div>
@@ -174,14 +174,19 @@
           2024
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../no-matching-cypher-found/">
+        no matching cypher found
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          no matching cypher found
+          no matching key exchange method found
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        no matching cypher found
+        no matching key exchange method found
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -200,18 +205,23 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#cipher-list-on-the-switch">
-    Cipher list on the switch.
+<a class="md-nav__link" href="#cipher-list">
+    Cipher list.
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#cipher-list-on-the-router">
-    Cipher list on the router.
+<a class="md-nav__link" href="#key-exchange">
+    Key exchange
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#different-cypher-lists">
-    Different cypher lists.
+<a class="md-nav__link" href="#solution-and-new-problem">
+    Solution and new problem
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#host-key-type">
+    Host key type
   </a>
 </li>
 <li class="md-nav__item">
@@ -221,11 +231,6 @@
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../no-matching-key-exchange-method-found/">
-        no matching key exchange method found
-      </a>
 </li>
 </ul>
 </nav>
@@ -713,18 +718,23 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#cipher-list-on-the-switch">
-    Cipher list on the switch.
+<a class="md-nav__link" href="#cipher-list">
+    Cipher list.
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#cipher-list-on-the-router">
-    Cipher list on the router.
+<a class="md-nav__link" href="#key-exchange">
+    Key exchange
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#different-cypher-lists">
-    Different cypher lists.
+<a class="md-nav__link" href="#solution-and-new-problem">
+    Solution and new problem
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#host-key-type">
+    Host key type
   </a>
 </li>
 <li class="md-nav__item">
@@ -739,7 +749,7 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="no-matching-cypher-found">No matching cypher found</h1>
+<h1 id="no-matching-key-exchange-method-found">No matching key exchange method found</h1>
 <h2 id="setup">Setup</h2>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../no-matching-cypher-found-setup.png"><img src="../no-matching-cypher-found-setup.png"/></a></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">S1</label><label for="__tabbed_1_2">R1</label></div>
@@ -805,81 +815,76 @@
 </div>
 </input></input></div>
 <h2 id="problem">Problem</h2>
-<p>Connecting from a Cisco 2960 switch to a Cisco 1941 router using SSH gives a "no matching cypher found" error. (Nevermind the date/time settings on switch and router, they are a bit off as I set them manually).</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">S1</label><label for="__tabbed_2_2">R1</label></div>
+<p>Connecting from a Linux Mint 21 LAB-PC to a Cisco 1941 router using SSH gives a "no matching key exchange method found" error. Notice that the router gives a "No matching cipher found" error, which is different than the error on the LAB-PC! (Nevermind the date/time settings on switch and router, they are a bit off as I set them manually)</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">LAB-PC</label><label for="__tabbed_2_2">R1</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>S1#ssh -l admin 192.168.10.254
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>[Connection to 192.168.10.254 aborted: error status 0]
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>S1#
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>Jul  9 10:50:01.914: %SSH-3-NO_MATCH: No matching cipher found: client aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc server aes128-ctr,aes1r
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>S1#
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>guru@lab:~$ ssh -l admin 192.168.10.254
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="hll">Unable to negotiate with 192.168.10.254 port 22: no matching key exchange method found. Their offer: diffie-hellman-group-exchange-sha1,
+</span><a id="__codelineno-2-3" name="__codelineno-2-3"></a>diffie-hellman-group14-sha1
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>guru@lab:~$ 
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>R1#
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>Jul  9 10:49:58.823: %SSH-3-NO_MATCH: No matching cipher found: client aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc server aes128-ctr,aes1r
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>R1#
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>R1#
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="hll">Jul  9 11:25:38.179: %SSH-3-NO_MATCH: No matching cipher found: client aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc server aes25
+</span><a id="__codelineno-3-3" name="__codelineno-3-3"></a>6-cbc
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>R1#
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
-<h2 id="cipher-list-on-the-switch">Cipher list on the switch.</h2>
-<p>First things first. What does a cipher list like <em>aes256-cbc</em> mean on a Cisco 2960 switch?</p>
-<p>It refers to the <em>encryption method</em> used for secure communication, for example, with SSH (Secure Shell) or for securing data transfer.</p>
-<ul>
-<li>AES: Advanced Encryption Standard, a highly secure and widely used encryption standard.</li>
-<li>256: The key size in bits. In this case, it is a 256-bit key, which provides a very high level of security.</li>
-<li>CBC: Cipher Block Chaining, a mode of AES that provides additional security by making each data block dependent on the previous block.</li>
-</ul>
-<p>When you run <code>ssh -c ?</code> the system displays a list of <em>all supported encryption algorithms</em> for the SSH client that can be used when establishing an SSH connection to another device. When you run <code>show ip ssh</code>, it shows the default configured and supported encryption algorithms for the SSH server service, should the client be running one. This indicates which algorithms will be used by default when an SSH connection is established to the switch. In this case, the switch is not running an SSH server.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">S1 as client</label><label for="__tabbed_3_2">S1 as server</label></div>
+<h2 id="cipher-list">Cipher list.</h2>
+<p>Via <a href="../no-matching-cypher-found/">this post</a>, we already know how to fix that cipher error on the "server side". Here, we will use a cipher on the Linux client that the server (R1) understands. Now we are left with "no matching key exchange method found" error on both sides.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">LAB-PC</label><label for="__tabbed_3_2">R1</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span>
-<span class="normal"><a href="#__codelineno-4-7">7</a></span>
-<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>S1#ssh -c ?
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>  3des        triple des
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>SSHv2 only cipher list:
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>  aes128-cbc  AES 128 bits
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>  aes192-cbc  AES 192 bits
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>  aes256-cbc  AES 256 bits
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a>S1#
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a># By default, the SSH client speaks these Ciphers
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>guru@lab:~$ grep "Cipher" /etc/ssh/ssh_config
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>    Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a># Make the SSH client speak a cipher that the router understands
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>guru@lab:~$ ssh -c aes256-cbc -l admin 192.168.10.254
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="hll">Unable to negotiate with 192.168.10.254 port 22: no matching key exchange method found. Their offer: diffie-hellman-group-exchange-sha1,
+</span><a id="__codelineno-4-8" name="__codelineno-4-8"></a>diffie-hellman-group14-sha1
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>guru@lab:~$ 
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>S1#
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
-<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>S1#show ip ssh
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="hll">SSH Disabled - version 1.99
-</span><a id="__codelineno-5-3" name="__codelineno-5-3"></a>...
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>S1#
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>R1#
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="hll">Jul  9 12:43:57.403: %SSH-3-NO_MATCH: No matching kex algorithm found: client curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-n
+</span><a id="__codelineno-5-3" name="__codelineno-5-3"></a>istp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,sntrup761x25519-sha512@openssh.com,diffie-hellman-group-exchange-sha256,diffie-hellman-gro
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>up16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com server diffie-hellman-gr
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>oup-exchange-sha1,diffie-hellman-group14-sha1
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>R1#
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
-<h2 id="cipher-list-on-the-router">Cipher list on the router.</h2>
-<p>On a Cisco 1941 router, e.g. <em>aes256-ctr</em> refers to a different mode of the AES encryption standard, where:</p>
-<ul>
-<li>AES: Advanced Encryption Standard.</li>
-<li>256: The key size in bits, again 256 bits.</li>
-<li>CTR: Counter mode, a mode of AES where a counter is used to make each data block independent of the other blocks.</li>
-</ul>
-<p>In CTR (Counter) mode, a counter value is combined with an initial value and then encrypted. The resulting output is then combined with the plaintext block to form the encrypted text block. This mode makes each block encryption independent, which has advantages such as the ability to encrypt and decrypt blocks in parallel, improving speed.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">R1 as client</label><label for="__tabbed_4_2">R1 as server</label></div>
+<h2 id="key-exchange">Key exchange</h2>
+<p>There is a discrepancy between the key exchange algorithms shown in the output of <code>ssh -Q kex</code> and those observed during the actual SSH negotiation with <code>ssh -vvv</code>. The algorithms listed in <code>ssh -Q kex</code> include all supported algorithms, but some may be deprecated or considered less secure. During actual connections, OpenSSH may prioritize more secure algorithms.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">LAB-PC</label><label for="__tabbed_4_2">R1</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
@@ -892,17 +897,49 @@
 <span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-6-10">10</a></span>
-<span class="normal"><a href="#__codelineno-6-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>R1#ssh -c ?
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>  3des        triple des
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a>SSHv2 only cipher list:
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a>  aes128-cbc  AES 128 bits
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a>  aes128-ctr  AES-CTR 128 bits
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a>  aes192-cbc  AES 192 bits
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a>  aes192-ctr  AES-CTR 192 bits
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a>  aes256-cbc  AES 256 bits
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a>  aes256-ctr  AES-CTR 256 bits
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span>
+<span class="normal"><a href="#__codelineno-6-23">23</a></span>
+<span class="normal"><a href="#__codelineno-6-24">24</a></span>
+<span class="normal"><a href="#__codelineno-6-25">25</a></span>
+<span class="normal"><a href="#__codelineno-6-26">26</a></span>
+<span class="normal"><a href="#__codelineno-6-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a># Do a verbose connection to see which key exchange algorithms are tried
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>guru@lab:~$ ssh -vvv -c aes256-cbc -l admin 192.168.10.254
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>...
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>...
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>debug2: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,sntrup76
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>1x25519-sha512@openssh.com,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellm
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>an-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>...
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>
 <a id="__codelineno-6-10" name="__codelineno-6-10"></a>
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a>R1#    
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a># List the supported key exchange algorithms on the SSH client
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>guru@lab:~$ ssh -Q kex
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="hll">diffie-hellman-group1-sha1 NOT TRIED
+</span><a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="hll">diffie-hellman-group14-sha1 NOT TRIED
+</span><a id="__codelineno-6-15" name="__codelineno-6-15"></a>diffie-hellman-group14-sha256 &lt;--- TRIED
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a>diffie-hellman-group16-sha512 &lt;--- TRIED
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a>diffie-hellman-group18-sha512 &lt;--- TRIED
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="hll">diffie-hellman-group-exchange-sha1 NOT TRIED
+</span><a id="__codelineno-6-19" name="__codelineno-6-19"></a>diffie-hellman-group-exchange-sha256 &lt;--- TRIED
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a>ecdh-sha2-nistp256 &lt;--- TRIED
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a>ecdh-sha2-nistp384 &lt;--- TRIED
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a>ecdh-sha2-nistp521 &lt;--- TRIED
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a>curve25519-sha256 &lt;--- TRIED
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a>curve25519-sha256@libssh.org &lt;--- TRIED
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a>sntrup76 &lt;--- TRIED
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a>1x25519-sha512@openssh.com &lt;--- TRIED
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a>guru@lab:~$
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -915,52 +952,28 @@
 <span class="normal"><a href="#__codelineno-7-7">7</a></span>
 <span class="normal"><a href="#__codelineno-7-8">8</a></span>
 <span class="normal"><a href="#__codelineno-7-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>R1#show ip ssh 
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="hll">SSH Enabled - version 1.99
-</span><a id="__codelineno-7-3" name="__codelineno-7-3"></a>Authentication methods:publickey,keyboard-interactive,password
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>SSH Enabled - version 1.99
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>Authentication methods:publickey,keyboard-interactive,password
 <a id="__codelineno-7-4" name="__codelineno-7-4"></a>Authentication Publickey Algorithms:x509v3-ssh-rsa,ssh-rsa
 <a id="__codelineno-7-5" name="__codelineno-7-5"></a>Hostkey Algorithms:x509v3-ssh-rsa,ssh-rsa
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="hll">Encryption Algorithms:aes128-ctr,aes192-ctr,aes256-ctr
-</span><a id="__codelineno-7-7" name="__codelineno-7-7"></a>MAC Algorithms:hmac-sha2-256,hmac-sha2-512,hmac-sha1,hmac-sha1-96
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a>KEX Algorithms:diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a>...
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>Encryption Algorithms:aes128-ctr,aes192-ctr,aes256-ctr
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>MAC Algorithms:hmac-sha2-256,hmac-sha2-512,hmac-sha1,hmac-sha1-96
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="hll">KEX Algorithms:diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+</span><a id="__codelineno-7-9" name="__codelineno-7-9"></a>...
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
-<h2 id="different-cypher-lists">Different cypher lists.</h2>
-<p>Why is e.g. <em>aes256-ctr</em> not available on a Cisco 2960 switch?</p>
-<ul>
-<li>Hardware and software support: Not all devices support all encryption modes. The absence of aes256-ctr on the Cisco 2960 switch may be due to hardware or software limitations of the switch. Cisco 2960 switches are primarily designed as access switches and may not have the same extensive cryptographic capabilities as a router like the Cisco 1941.</li>
-<li>Different use cases: Switches and routers often have different use cases. Routers, such as the Cisco 1941, are more often used for WAN connections and VPN tunnels, where strong and flexible encryption is necessary. Therefore, they may support a broader range of encryption algorithms and modes. Switches, on the other hand, are usually used within LANs and may not need the same level of encryption support.</li>
-<li>Configuration and licenses: The available cipher suites on a switch or router may also depend on the configuration, the IOS version, or specific licenses installed on the device.</li>
-</ul>
-<p>It is important to consult the documentation of specific Cisco devices and IOS versions to know which encryption methods and modes are supported.</p>
-<h2 id="solution">Solution</h2>
-<p>You can customize the list of supported and used encryption algorithms for the SSH server through Cisco IOS configuration. This can be done by adjusting the SSH server configuration to add or remove specific ciphers. This example would limit the <code>show ip ssh output</code> to only the specifically configured algorithms:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">R1</label><label for="__tabbed_5_2">S1</label></div>
+<h2 id="solution-and-new-problem">Solution and new problem</h2>
+<p>The Linux client (LAB-PC) has to use a key exchange algorithm that the server (R1) supports; either diffie-hellman-group-exchange-sha1 or diffie-hellman-group14-sha1 in this case. Let's use the first one. Now we get the error "no matching host key type found".</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">LAB-PC</label><label for="__tabbed_5_2">R1</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-8-10">10</a></span>
-<span class="normal"><a href="#__codelineno-8-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>R1#conf t
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="hll">R1(config)#ip ssh server algorithm encryption aes256-cbc
-</span><a id="__codelineno-8-3" name="__codelineno-8-3"></a>R1(config)#end
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a>R1#show ip ssh
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a>...
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="hll">Encryption Algorithms:aes256-cbc
-</span><a id="__codelineno-8-8" name="__codelineno-8-8"></a>MAC Algorithms:hmac-sha2-256,hmac-sha2-512,hmac-sha1,hmac-sha1-96
-<a id="__codelineno-8-9" name="__codelineno-8-9"></a>KEX Algorithms:diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
-<a id="__codelineno-8-10" name="__codelineno-8-10"></a>...
-<a id="__codelineno-8-11" name="__codelineno-8-11"></a>R1#
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>guru@lab:~$ ssh -c aes256-cbc -oKexAlgorithms=+diffie-hellman-group-exchange-sha1 -l admin 192.168.10.254
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="hll">Unable to negotiate with 192.168.10.254 port 22: no matching host key type found. Their offer: ssh-rsa
+</span><a id="__codelineno-8-3" name="__codelineno-8-3"></a>guru@lab:~$
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -969,12 +982,154 @@
 <span class="normal"><a href="#__codelineno-9-3">3</a></span>
 <span class="normal"><a href="#__codelineno-9-4">4</a></span>
 <span class="normal"><a href="#__codelineno-9-5">5</a></span>
-<span class="normal"><a href="#__codelineno-9-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>S1#ssh -l admin 192.168.10.254
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a>Password:         &lt;--- enter "admin"
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a>
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a>R1&gt;enable
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a>Password:         &lt;--- enter "admin"
+<span class="normal"><a href="#__codelineno-9-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>R1# Jul  9 13:17:59.767: %SSH-3-NO_MATCH: No matching hostkey algorithm found: client ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-c
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>ert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,sk-ssh-ed25519-cert-v01@openssh.co
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>m,sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,rsa-sha2-512,rsa-sha2-25
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>6 server ssh-rsa
 <a id="__codelineno-9-6" name="__codelineno-9-6"></a>R1#
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="host-key-type">Host key type</h2>
+<p>There is a discrepancy between the host key types shown in the output of <code>ssh -Q key</code> and those observed during the actual SSH negotiation with <code>ssh -vvv</code>. The algorithms listed in <code>ssh -Q key</code> include all supported key types, but during actual connections, OpenSSH may prioritize more secure key types.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">LAB-PC</label><label for="__tabbed_6_2">R1</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span>
+<span class="normal"><a href="#__codelineno-10-17">17</a></span>
+<span class="normal"><a href="#__codelineno-10-18">18</a></span>
+<span class="normal"><a href="#__codelineno-10-19">19</a></span>
+<span class="normal"><a href="#__codelineno-10-20">20</a></span>
+<span class="normal"><a href="#__codelineno-10-21">21</a></span>
+<span class="normal"><a href="#__codelineno-10-22">22</a></span>
+<span class="normal"><a href="#__codelineno-10-23">23</a></span>
+<span class="normal"><a href="#__codelineno-10-24">24</a></span>
+<span class="normal"><a href="#__codelineno-10-25">25</a></span>
+<span class="normal"><a href="#__codelineno-10-26">26</a></span>
+<span class="normal"><a href="#__codelineno-10-27">27</a></span>
+<span class="normal"><a href="#__codelineno-10-28">28</a></span>
+<span class="normal"><a href="#__codelineno-10-29">29</a></span>
+<span class="normal"><a href="#__codelineno-10-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a># Do a verbose connection to see which host key types are tried
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>guru@lab:~$ ssh -vvv -c aes256-cbc -oKexAlgorithms=+diffie-hellman-group-exchange-sha1 -l admin 192.168.10.254
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>...
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>...
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>debug2: host key algorithms: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@open
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>ssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,sk-ssh-ed25519-cert-v01@openssh.com,sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,rsa-sha
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,rsa-sha2-512,rsa-sha2-256
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a>...
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a># List the supported host key types on the SSH client
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a>guru@lab:~$ ssh -Q key
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a>ssh-ed25519
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a>ssh-ed25519-cert-v01@openssh.com
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a>sk-ssh-ed25519@openssh.com
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a>sk-ssh-ed25519-cert-v01@openssh.com
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="hll">ssh-rsa &lt;--- NOT TRIED
+</span><a id="__codelineno-10-19" name="__codelineno-10-19"></a>ssh-dss
+<a id="__codelineno-10-20" name="__codelineno-10-20"></a>ecdsa-sha2-nistp256
+<a id="__codelineno-10-21" name="__codelineno-10-21"></a>ecdsa-sha2-nistp384
+<a id="__codelineno-10-22" name="__codelineno-10-22"></a>ecdsa-sha2-nistp521
+<a id="__codelineno-10-23" name="__codelineno-10-23"></a>sk-ecdsa-sha2-nistp256@openssh.com
+<a id="__codelineno-10-24" name="__codelineno-10-24"></a>ssh-rsa-cert-v01@openssh.com
+<a id="__codelineno-10-25" name="__codelineno-10-25"></a>ssh-dss-cert-v01@openssh.com
+<a id="__codelineno-10-26" name="__codelineno-10-26"></a>ecdsa-sha2-nistp256-cert-v01@openssh.com
+<a id="__codelineno-10-27" name="__codelineno-10-27"></a>ecdsa-sha2-nistp384-cert-v01@openssh.com
+<a id="__codelineno-10-28" name="__codelineno-10-28"></a>ecdsa-sha2-nistp521-cert-v01@openssh.com
+<a id="__codelineno-10-29" name="__codelineno-10-29"></a>sk-ecdsa-sha2-nistp256-cert-v01@openssh.com
+<a id="__codelineno-10-30" name="__codelineno-10-30"></a>guru@lab:~$ 
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span>
+<span class="normal"><a href="#__codelineno-11-6">6</a></span>
+<span class="normal"><a href="#__codelineno-11-7">7</a></span>
+<span class="normal"><a href="#__codelineno-11-8">8</a></span>
+<span class="normal"><a href="#__codelineno-11-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>R1#show ip ssh 
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>SSH Enabled - version 1.99
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>Authentication methods:publickey,keyboard-interactive,password
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>Authentication Publickey Algorithms:x509v3-ssh-rsa,ssh-rsa
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="hll">Hostkey Algorithms:x509v3-ssh-rsa,ssh-rsa
+</span><a id="__codelineno-11-6" name="__codelineno-11-6"></a>Encryption Algorithms:aes128-ctr,aes192-ctr,aes256-ctr
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>MAC Algorithms:hmac-sha2-256,hmac-sha2-512,hmac-sha1,hmac-sha1-96
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a>KEX Algorithms:diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="solution">Solution</h2>
+<p>The client (LAB-PC) has to use a host key type that the server (R1) supports; ssh-rsa</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">LAB-PC</label><label for="__tabbed_7_2">R1</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span>
+<span class="normal"><a href="#__codelineno-12-6">6</a></span>
+<span class="normal"><a href="#__codelineno-12-7">7</a></span>
+<span class="normal"><a href="#__codelineno-12-8">8</a></span>
+<span class="normal"><a href="#__codelineno-12-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>guru@lab:~$ ssh -c aes256-cbc -oKexAlgorithms=+diffie-hellman-group-exchange-sha1 -o HostKeyAlgorithms=+ssh-rsa -l admin 192.168.10.254
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>The authenticity of host '192.168.10.254 (192.168.10.254)' can't be established.
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>RSA key fingerprint is SHA256:X+55b1YqibQQ6qlzHP/DxeEbUQ7b1J8k9z78syYa3bY.
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>This key is not known by any other names
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>Warning: Permanently added '192.168.10.254' (RSA) to the list of known hosts.
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>(admin@192.168.10.254) Password: 
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a>R1# 
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>R1#show ssh
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>Connection Version Mode  Encryption  Hmac          State                Username
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>0          2.0     IN   aes256-cbc  hmac-sha2-256 Session started       admin
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>0          2.0     OUT  aes256-cbc  hmac-sha2-256 Session started       admin
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a>R1#show users
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a>    Line       User       Host(s)              Idle       Location
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a>*  0 con 0                idle                 00:00:00   
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="hll">132 vty 0     admin      idle                 00:01:32 192.168.10.2
+</span><a id="__codelineno-13-10" name="__codelineno-13-10"></a>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a>  Interface    User               Mode         Idle     Peer Address
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a>R1#    
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
