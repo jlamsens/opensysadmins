@@ -12,7 +12,7 @@
 At the time of writing, the latest IOS for...
 
 - a "Cisco 2960 24TT-L switch" is "15.0(2)SE11"
-- a "24TC-L Plus switch" is "15.2(7)E8"
+- a "Cisco 24TC-L Plus switch" is "15.2(7)E8"
 
 Version "15.2(7)E8" does NOT run on a "Cisco 2960 24TT-L switch".
 Version 15.0(2)SE11 runs on both switches. I'll use that version for the examples.
@@ -312,9 +312,11 @@ Transfer using a network protocol is only possible from IOS, not from ROMMON-mod
     ```
 
 === "Step3"
-    Show the name of the network interface on the LAB-PC. Configure an temporary IP address and subnet mask. Verify.
+    - Show the name of the network interface on the LAB-PC (in this case: enp0s25)
+    - Configure an temporary IP address and subnet mask. 
+    - Verify.
 
-    ``` title='' hl_lines="5 8 10"
+    ``` title='' hl_lines="1 8 10"
     guru@lab:~$ sudo ip link show
     [sudo] password for guru:     
     1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000

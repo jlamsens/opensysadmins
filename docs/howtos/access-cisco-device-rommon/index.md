@@ -190,7 +190,9 @@
 ### Break sequence
 
 === "Step1"
-    Verify if the break sequence mechanism is enabled or not. If not, enable it.
+    - If you have access to a working IOS, verify if the break sequence mechanism is enabled or not. If not, enable it.
+    - If you do not have access to a working IOS, you can only "try" if the break sequence works. If not, you have to use the "cold start" method.
+    
 
     ``` title='' hl_lines="1 6"
     Switch#show boot | include Break
@@ -282,7 +284,7 @@
     Now reconnect the power cable. The switch boots and while doing the POST, the SYST LED blinks green.
     This takes about X seconds. After POST, the blinking LED changes pattern. Press the Mode button once.
 
-    -> insert image MODE button
+    <img src="mode-button.png"/>
 
 === "Step3a"
     If the password recovery mechanism is enabled, you have to manually initialize flash.
@@ -394,11 +396,13 @@
 === "Step1"
     The "show boot" command is not available on a Cisco 1941 router, like it is for a Cisco 2960 switch. You can still display the boot system commands in the running configuration, if any.
 
-    ``` title='' hl_lines="1 7 12"
+    ``` title='' hl_lines="1 6"
+    # if no boot statement is present, an IOS will be searched on flash
     Router#show running-config | include boot
     boot-start-marker
     boot-end-marker
 
+    # if a boot statement is present, that IOS will be booted
     Router#configure terminal
     Enter configuration commands, one per line.  End with CNTL/Z.
     Router(config)#boot system flash:c1900-universalk9-mz.SPA.157-3.M8.bin
@@ -542,7 +546,7 @@
 ### Break sequence
 
 === "Step1"
-    Power cycle the router or "reload" from within a running IOS.
+    To my knowledge, there is no break sequence mechanism on a Cisco 1941 router like there is on a Cisco 2960 switch. There is no such thing as "boot enable-break" to en/disable the break sequence behavior. Just poower cycle the router or "reload" from within a running IOS.
 
     ``` title='' hl_lines="0"
     Router#reload

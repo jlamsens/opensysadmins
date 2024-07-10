@@ -428,6 +428,8 @@ nav:
     - Install Google Chrome browser on Linux Mint 21: howtos/install-chrome-browser-linux-mint/index.md
     - Use minicom on Linux Mint 21: howtos/use-minicom-linux-mint/index.md
     - Access a Cisco device ROMMON: howtos/access-cisco-device-rommon/index.md
+    - Password recovery on a Cisco 1941 router: howtos/password-recovery-cisco1941/index.md
+    - (Re)install an IOS operating system on a Cisco 1941 router: howtos/reinstall-ios-cisco1941/index.md
   
 ####################################################################################
 
