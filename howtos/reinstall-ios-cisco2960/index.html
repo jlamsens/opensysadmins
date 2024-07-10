@@ -667,6 +667,16 @@
         Access a Cisco device ROMMON
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../password-recovery-cisco1941/">
+        Password recovery on a Cisco 1941 router
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../reinstall-ios-cisco1941/">
+        (Re)install an IOS operating system on a Cisco 1941 router
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -801,7 +811,7 @@
 <p>At the time of writing, the latest IOS for...</p>
 <ul>
 <li>a "Cisco 2960 24TT-L switch" is "15.0(2)SE11"</li>
-<li>a "24TC-L Plus switch" is "15.2(7)E8"</li>
+<li>a "Cisco 24TC-L Plus switch" is "15.2(7)E8"</li>
 </ul>
 <p>Version "15.2(7)E8" does NOT run on a "Cisco 2960 24TT-L switch".
 Version 15.0(2)SE11 runs on both switches. I'll use that version for the examples.</p>
@@ -1215,7 +1225,11 @@ Type <span class="keys"><kbd class="key-o">O</kbd></span> and choose "Serial por
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Show the name of the network interface on the LAB-PC. Configure an temporary IP address and subnet mask. Verify.</p>
+<ul>
+<li>Show the name of the network interface on the LAB-PC (in this case: enp0s25)</li>
+<li>Configure an temporary IP address and subnet mask. </li>
+<li>Verify.</li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
@@ -1230,12 +1244,12 @@ Type <span class="keys"><kbd class="key-o">O</kbd></span> and choose "Serial por
 <span class="normal"><a href="#__codelineno-16-12">12</a></span>
 <span class="normal"><a href="#__codelineno-16-13">13</a></span>
 <span class="normal"><a href="#__codelineno-16-14">14</a></span>
-<span class="normal"><a href="#__codelineno-16-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>guru@lab:~$ sudo ip link show
-<a id="__codelineno-16-2" name="__codelineno-16-2"></a>[sudo] password for guru:     
+<span class="normal"><a href="#__codelineno-16-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="hll">guru@lab:~$ sudo ip link show
+</span><a id="__codelineno-16-2" name="__codelineno-16-2"></a>[sudo] password for guru:     
 <a id="__codelineno-16-3" name="__codelineno-16-3"></a>1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
 <a id="__codelineno-16-4" name="__codelineno-16-4"></a>    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="hll">2: enp0s25: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
-</span><a id="__codelineno-16-6" name="__codelineno-16-6"></a>    link/ether 90:1b:0e:18:b9:8e brd ff:ff:ff:ff:ff:ff
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a>2: enp0s25: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a>    link/ether 90:1b:0e:18:b9:8e brd ff:ff:ff:ff:ff:ff
 <a id="__codelineno-16-7" name="__codelineno-16-7"></a>
 <a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="hll">guru@lab:~$ sudo ip address add 192.168.1.101/24 dev enp0s25
 </span><a id="__codelineno-16-9" name="__codelineno-16-9"></a>

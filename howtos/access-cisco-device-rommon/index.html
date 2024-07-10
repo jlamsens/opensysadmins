@@ -9,7 +9,7 @@
 <meta content="Jurgen Lamsens" name="author"/>
 <link href="https://www.opensysadmins.com/howtos/access-cisco-device-rommon/" rel="canonical"/>
 <link href="../use-minicom-linux-mint/" rel="prev"/>
-<link href="../../references/" rel="next"/>
+<link href="../password-recovery-cisco1941/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
 <title>Access a Cisco device ROMMON - OpenSysAdmins</title>
@@ -687,6 +687,16 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../password-recovery-cisco1941/">
+        Password recovery on a Cisco 1941 router
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../reinstall-ios-cisco1941/">
+        (Re)install an IOS operating system on a Cisco 1941 router
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1134,7 +1144,10 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><input id="__tabbed_3_4" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Step1</label><label for="__tabbed_3_2">Step2</label><label for="__tabbed_3_3">Step3</label><label for="__tabbed_3_4">(Step4)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Verify if the break sequence mechanism is enabled or not. If not, enable it.</p>
+<ul>
+<li>If you have access to a working IOS, verify if the break sequence mechanism is enabled or not. If not, enable it.</li>
+<li>If you do not have access to a working IOS, you can only "try" if the break sequence works. If not, you have to use the "cold start" method.</li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
@@ -1268,7 +1281,7 @@
 <div class="tabbed-block">
 <p>Now reconnect the power cable. The switch boots and while doing the POST, the SYST LED blinks green.
 This takes about X seconds. After POST, the blinking LED changes pattern. Press the Mode button once.</p>
-<p>-&gt; insert image MODE button</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="mode-button.png"><img src="mode-button.png"/></a></p>
 </div>
 <div class="tabbed-block">
 <p>If the password recovery mechanism is enabled, you have to manually initialize flash.</p>
@@ -1466,20 +1479,24 @@ This takes about X seconds. After POST, the blinking LED changes pattern. Press 
 <span class="normal"><a href="#__codelineno-14-11">11</a></span>
 <span class="normal"><a href="#__codelineno-14-12">12</a></span>
 <span class="normal"><a href="#__codelineno-14-13">13</a></span>
-<span class="normal"><a href="#__codelineno-14-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="hll">Router#show running-config | include boot
-</span><a id="__codelineno-14-2" name="__codelineno-14-2"></a>boot-start-marker
-<a id="__codelineno-14-3" name="__codelineno-14-3"></a>boot-end-marker
-<a id="__codelineno-14-4" name="__codelineno-14-4"></a>
-<a id="__codelineno-14-5" name="__codelineno-14-5"></a>Router#configure terminal
-<a id="__codelineno-14-6" name="__codelineno-14-6"></a>Enter configuration commands, one per line.  End with CNTL/Z.
-<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="hll">Router(config)#boot system flash:c1900-universalk9-mz.SPA.157-3.M8.bin
-</span><a id="__codelineno-14-8" name="__codelineno-14-8"></a>Router(config)#end
-<a id="__codelineno-14-9" name="__codelineno-14-9"></a>
-<a id="__codelineno-14-10" name="__codelineno-14-10"></a>Router#show running-config | include boot
-<a id="__codelineno-14-11" name="__codelineno-14-11"></a>boot-start-marker
-<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="hll">boot system flash:c1900-universalk9-mz.SPA.157-3.M8.bin
-</span><a id="__codelineno-14-13" name="__codelineno-14-13"></a>boot-end-marker
-<a id="__codelineno-14-14" name="__codelineno-14-14"></a>Router#
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span>
+<span class="normal"><a href="#__codelineno-14-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="hll"># if no boot statement is present, an IOS will be searched on flash
+</span><a id="__codelineno-14-2" name="__codelineno-14-2"></a>Router#show running-config | include boot
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a>boot-start-marker
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>boot-end-marker
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="hll"># if a boot statement is present, that IOS will be booted
+</span><a id="__codelineno-14-7" name="__codelineno-14-7"></a>Router#configure terminal
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a>Enter configuration commands, one per line.  End with CNTL/Z.
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a>Router(config)#boot system flash:c1900-universalk9-mz.SPA.157-3.M8.bin
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a>Router(config)#end
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a>Router#show running-config | include boot
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a>boot-start-marker
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a>boot system flash:c1900-universalk9-mz.SPA.157-3.M8.bin
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a>boot-end-marker
+<a id="__codelineno-14-16" name="__codelineno-14-16"></a>Router#
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -1696,7 +1713,7 @@ This takes about X seconds. After POST, the blinking LED changes pattern. Press 
 <div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">Step1</label><label for="__tabbed_7_2">Step2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Power cycle the router or "reload" from within a running IOS.</p>
+<p>To my knowledge, there is no break sequence mechanism on a Cisco 1941 router like there is on a Cisco 2960 switch. There is no such thing as "boot enable-break" to en/disable the break sequence behavior. Just poower cycle the router or "reload" from within a running IOS.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
 <span class="normal"><a href="#__codelineno-20-2">2</a></span>
 <span class="normal"><a href="#__codelineno-20-3">3</a></span>
