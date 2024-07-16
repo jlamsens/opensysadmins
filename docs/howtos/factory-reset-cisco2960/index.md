@@ -7,39 +7,53 @@
 
 Following commands can be executed from within IOS or from within [ROMMON-mode](../access-cisco-device-rommon/index.md).
 
-## Erase startup configuration
+## Erase nvram contents
 
 === "Step1"
-    Check if the startup configuration is empty. If not, the file exists. In IOS the file is known as startup-config. In ROMMON, the file is config.text.
+    Check the nvram filesystem. If you saved the running configuration to the startup configuration, a configuration file known as `startup-config` will be present. It is possible that other files are there too. In ROMMON, the file is named `config.text`. Notice, you cannot access `nvram:` from ROMMON, but have to use the flash filesystem to get to that file (symbolic link).
 
-    ``` title='' hl_lines="5 12"
+    ``` title='' hl_lines="1 17"
     --- From IOS ---
-    Switch#dir nvram:startup-config
-    Directory of nvram:/startup-config
 
-    62  -rw-        1349                    <no date>  startup-config
+    Switch#dir nvram:
+    Directory of nvram:/
 
-    65536 bytes total (62082 bytes free)
+        62  -rw-        1296                    <no date>  startup-config
+        63  ----           5                    <no date>  private-config
+        1   ----          35                    <no date>  persistent-data
+        2   -rw-           0                    <no date>  ifIndex-table
+        3   -rw-        1296                    <no date>  test2.txt
+        5   -rw-        1296                    <no date>  test1.txt
+
+    65536 bytes total (58039 bytes free)
     Switch#
+
 
     --- From ROMMON ---
     switch: dir flash:
     Directory of flash:/
-       ...
-       11  -rwx  1362      <date>               config.text
-       ...
+
+        2  -rwx  11832960  <date>               c2960-lanbasek9-mz.150-2.SE11.bin
+        3  -rwx  1296      <date>               config.text
+        5  -rwx  5         <date>               private-config.text
+        6  -rwx  6168      <date>               multiple-fs
+
+    53701120 bytes available (11843072 bytes used)
+
+    switch: 
     ```
 
 === "Step2"
-    If necessary, erase the file using "erase startup-config", "erase nvram:" or "write erase" from IOS. In ROMMON, use the delete command.
+    If you only want to erase all configuration files, use `erase startup-config`, `erase nvram:` or `write erase` from IOS. In ROMMON, use the `delete` command on the flash filesystem.
 
-    ``` title='' hl_lines="4"
+    ``` title='' hl_lines="1 9"
     --- From IOS ---
     Switch#erase startup-config 
     Erasing the nvram filesystem will remove all configuration files! Continue? [confirm]
     [OK]
     Erase of nvram: complete
     Switch#
+
 
     --- From ROMMON ---
     switch: delete flash:config.text
@@ -50,13 +64,25 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
     ```
 
 === "Step3"
-    Verify.
+    For a clean setup, it is better to erase *everything* using `erase /all nvram:` from IOS. You cannot do that from ROMMON.
 
-    ``` title='' hl_lines="3 8"
+    ``` title='' hl_lines="1 18"
     --- From IOS ---
-    Switch#show startup-config 
-    startup-config is not present
+    Switch#erase /all nvram:
+    Erasing the nvram filesystem will remove all files! Continue? [confirm]
+    [OK]
+    Erase of nvram: complete
+    
+    Switch#dir nvram:
+    Directory of nvram:/
+
+    62  -rw-           0                    <no date>  startup-config
+    63  ----           0                    <no date>  private-config
+    1   ----          35                    <no date>  persistent-data
+
+    65536 bytes total (64460 bytes free)
     Switch#
+
 
     --- From ROMMON ---
     switch: dir flash:config.text
@@ -68,9 +94,9 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
 ## Erase vlan.dat
 
 === "Step1"
-    Check if the VLAN database file exists.
+    The VLAN database file is saved in flash. Check if the file exists.
 
-    ``` title='' hl_lines="5 12"
+    ``` title='' hl_lines="1 8"
     --- From IOS ---
     Switch#dir flash:vlan.dat
     Directory of flash:/vlan.dat
@@ -91,7 +117,7 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
 === "Step2"
     If necessary, delete the VLAN database.
 
-    ``` title='' hl_lines="0"
+    ``` title='' hl_lines="1 7"
     --- From IOS ---
     Switch#delete vlan.dat
     Delete filename [vlan.dat]? 
@@ -109,7 +135,7 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
 === "Step3"
     Verify.
 
-    ``` title='' hl_lines="5 13"
+    ``` title='' hl_lines="1 9"
     --- From IOS ---
     Switch#dir flash:
     Directory of flash:/
@@ -132,30 +158,54 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
 === "Step1"
     Check if the password recovery mechanism is enabled or disabled. In this example, it is disabled.
 
-    ``` title='' hl_lines="0"
+    ``` title='' hl_lines="1 7"
+    --- From IOS ---
     Switch#show ver | incl password-recovery
     The password-recovery mechanism is disabled.
     Switch#
+
+
+    --- From ROMMON ---
+    switch: set
+    ...
+    PASSWD_RECOVERY=no
+    ...
+    switch:
     ```
 
 === "Step2"
     If necessary, enable it.
 
-    ``` title='' hl_lines="0"
+    ``` title='' hl_lines="1 9"
+    --- From IOS ---
     Switch#conf t
     Enter configuration commands, one per line.  End with CNTL/Z.
     Switch(config)#service password-recovery 
     Switch(config)#end
     Switch#
+
+
+    --- From ROMMON ---
+    switch: unset PASSWD_RECOVERY
+
+    switch: 
     ```
 
 === "Step3"
     Verify.
 
-    ``` title='' hl_lines="0"
+    ``` title='' hl_lines="1 7"
+    --- From IOS ---
     Switch#show ver | incl password-recovery
     The password-recovery mechanism is enabled.
     Switch#
+
+
+    --- From ROMMON ---
+    switch: set
+    ...
+    <no PASSWD_RECOVERY variable present>
+    ...
     ```
 
 ## Set default SDM template
@@ -163,7 +213,7 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
 === "Step1"
     Show the current SDM prefer template. For example:
 
-    ``` title='' hl_lines="3 13"
+    ``` title='' hl_lines="1 10"
     --- From IOS ---
     Switch#show sdm prefer 
     The current template is "dual-ipv4-and-ipv6 default" template.
@@ -183,7 +233,7 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
 === "Step2"
     If necessary, change it back to the default. We will reload/boot the switch at the end.
 
-    ``` title='' hl_lines="9 16"
+    ``` title='' hl_lines="1 15"
     --- From IOS ---
     Switch#conf t
     Enter configuration commands, one per line.  End with CNTL/Z.
@@ -207,7 +257,7 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
 === "Step3"
     Verify.
 
-    ``` title='' hl_lines="3 7"
+    ``` title='' hl_lines="1 9"
     --- From IOS ---
     Switch#show sdm prefer 
      The current template is "dual-ipv4-and-ipv6 default" template.
@@ -226,7 +276,7 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
 ## Set default environment variables
 
 === "Step1"
-    Command "show boot" should look something like this. Most of these variables can be set from within IOS and/or ROMMON.
+    Command `show boot` should look something like this. Most of these variables can be set from within IOS and/or ROMMON.
 
     ``` title='' hl_lines="0"
     Switch#show boot
@@ -248,20 +298,20 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
     ```
 
 === "Step2"
-    Example1: if necessary, correct the "BOOT path-list" parameter
+    Example1: *only if necessary*, correct the "BOOT path-list" parameter
 
-    ``` title='' hl_lines="0"
+    ``` title='' hl_lines="1 4"
     From IOS:
-    Switch(config)# boot system flash:<ios-file>
+    Switch(config)# boot system flash:/c2960-lanbasek9-mz.150-2.SE11.bin
 
     From ROMMON:
-    switch: set BOOT flash:<ios-file>
+    switch: set BOOT flash:/c2960-lanbasek9-mz.150-2.SE11.bin
     ```
 
 === "Step3"
-    Example2: it necessary, correct the "BOOT manual" parameter
+    Example2: *only if necessary*, correct the "BOOT manual" parameter.
 
-    ``` title='' hl_lines="0"
+    ``` title='' hl_lines="1 5"
     From IOS:
     Switch(config)# no boot manual
     Switch(config)#
@@ -272,9 +322,24 @@ Following commands can be executed from within IOS or from within [ROMMON-mode](
     switch:
     ```
 
+=== "Step4"
+    Example3: *only if necessary*, correct the "Enable break" parameter.
+
+    ``` title='' hl_lines="1 5"
+    From IOS:
+    Switch(config)# boot enable-break
+    Switch(config)#
+
+    From ROMMON:
+    switch: unset ...
+
+    switch:
+    ```
+
+
 ## Reload
 
-``` title='' hl_lines="3"
+``` title='' hl_lines="1 6"
 --- From IOS ---
 Switch#reload
 System configuration has been modified. Save? [yes/no]:     -----> answer "no"

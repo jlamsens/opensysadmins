@@ -420,31 +420,35 @@ nav:
     - Install Xmind 8 on Linux Mint 21: howtos/install-xmind-linux-mint/index.md
     - Create a Windows 11 bootable USB flash drive: howtos/windows11-bootable-usb-flash-drive/index.md
     - Create a Linux Mint 21 bootable USB flash drive: howtos/linuxmint21-bootable-usb-flash-drive/index.md
-    - (Re)install an IOS operating system on a Cisco 2960 switch: howtos/reinstall-ios-cisco2960/index.md
-    - Password recovery on a Cisco 2960 switch: howtos/password-recovery-cisco2960/index.md
-    - Factory reset a Cisco 2960 switch: howtos/factory-reset-cisco2960/index.md
     - Install PacketTracer 8.2.2 on Linux Mint 21: howtos/install-packettracer-linux-mint/index.md
     - Install VirtualBox 6.1.50 on Linux Mint 21: howtos/install-virtualbox-linux-mint/index.md
     - Install Google Chrome browser on Linux Mint 21: howtos/install-chrome-browser-linux-mint/index.md
     - Use minicom on Linux Mint 21: howtos/use-minicom-linux-mint/index.md
-    - Access a Cisco device ROMMON: howtos/access-cisco-device-rommon/index.md
-    - Password recovery on a Cisco 1941 router: howtos/password-recovery-cisco1941/index.md
+    - (Re)install an IOS operating system on a Cisco 2960 switch: howtos/reinstall-ios-cisco2960/index.md
     - (Re)install an IOS operating system on a Cisco 1941 router: howtos/reinstall-ios-cisco1941/index.md
-  
+    - Password recovery on a Cisco 2960 switch: howtos/password-recovery-cisco2960/index.md
+    - Password recovery on a Cisco 1941 router: howtos/password-recovery-cisco1941/index.md
+    - Factory reset a Cisco 2960 switch: howtos/factory-reset-cisco2960/index.md
+    - Access a Cisco device ROMMON: howtos/access-cisco-device-rommon/index.md
+      
 ####################################################################################
 
    # References
   - References: #listed in header, must be unique
     - references/index.md # overview/landing page
 
-    - Cisco switch and router components: references/cisco-switch-router-components/index.md
-    - Cisco switch and router boot sequence: references/cisco-switch-router-boot-sequence/index.md
+    
   
 ####################################################################################
 
    # Explanations
   - Explanations: #listed in header, must be unique
     - explanations/index.md # overview/landing page
+
+    - Cisco switch and router components: explanations/cisco-switch-router-components/index.md
+    - Cisco switch and router boot sequence: explanations/cisco-switch-router-boot-sequence/index.md
+    - Password recovery mechanism: explanations/password-recovery-mechanism/index.md
+    - Break sequence mechanism: explanations/break-sequence-mechanism/index.md
 
 ####################################################################################
 

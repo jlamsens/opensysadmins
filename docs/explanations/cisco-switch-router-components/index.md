@@ -18,6 +18,7 @@ Cisco devices have many different locations where they can store images, configu
 - non-volatile (permanent) after reboot
 - a kind of EEPROM designed for high speed and high density
 - different types, depending on the hardware (EPROM, SIMM, DIMM, Flash memory card)
+- stores the Cisco "IOS image" and VLAN database file "vlan.dat"
 - different forms, depending on the hardware
     - internal (onboard)
         - flash:
@@ -32,9 +33,7 @@ Cisco devices have many different locations where they can store images, configu
         - a Flash memory card that is inserted in to a Personal Computer Memory Card International Association (PCMCIA) slot
         - additional flash memory
         - slot0: PCMCIA flash card in slot0, slot1: PCMCIA flash card in slot1
-
-- stores the "Cisco IOS software image" and VLAN database file "vlan.dat"
-- some routers, including the Cisco 2500 series routers, do not have sufficient RAM to hold the Cisco IOS image and, therefore, run the Cisco IOS image directly from flash memory (Cisco IOS images that are run from flash memory are not compressed)
+- some routers, including the Cisco 2500 series routers, do not have sufficient RAM to hold the Cisco "IOS image" and, therefore, run the Cisco "IOS image" directly from flash memory (Cisco IOS images that are run from flash memory are not compressed)
 - has a directory structure and typical flash commands (dir, format, copy, del)
 
 ### (SD)RAM
@@ -46,7 +45,7 @@ Cisco devices have many different locations where they can store images, configu
 - provides temporary storage for the operating system during runtime and for data structures used by the CPU
 - fastest amongst all memories
 - often comes on dual in-line memory modules (DIMMs)
-- runs the "IOS system image"
+- runs the "IOS image"
 
 ### NVRAM
 - Non Volatile Random Access Memory
