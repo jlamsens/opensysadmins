@@ -7,12 +7,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Standing on the shoulder of giants" name="description"/>
 <meta content="Jurgen Lamsens" name="author"/>
-<link href="https://www.opensysadmins.com/references/cisco-switch-router-components/" rel="canonical"/>
-<link href="../" rel="prev"/>
-<link href="../cisco-switch-router-boot-sequence/" rel="next"/>
+<link href="https://www.opensysadmins.com/explanations/cisco-switch-router-boot-sequence/" rel="canonical"/>
+<link href="../cisco-switch-router-components/" rel="prev"/>
+<link href="../password-recovery-mechanism/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
-<title>Cisco switch and router components - OpenSysAdmins</title>
+<title>Cisco switch and router boot sequence - OpenSysAdmins</title>
 <link href="../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#cisco-switch-and-router-components">
+<a class="md-skip" href="#cisco-switch-and-router-boot-sequence">
           Skip to content
         </a>
 </div>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Cisco switch and router components
+              Cisco switch and router boot sequence
             
           </span>
 </div>
@@ -562,21 +562,6 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../howtos/reinstall-ios-cisco2960/">
-        (Re)install an IOS operating system on a Cisco 2960 switch
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../howtos/password-recovery-cisco2960/">
-        Password recovery on a Cisco 2960 switch
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../howtos/factory-reset-cisco2960/">
-        Factory reset a Cisco 2960 switch
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../howtos/install-packettracer-linux-mint/">
         Install PacketTracer 8.2.2 on Linux Mint 21
       </a>
@@ -597,8 +582,18 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../howtos/access-cisco-device-rommon/">
-        Access a Cisco device ROMMON
+<a class="md-nav__link" href="../../howtos/reinstall-ios-cisco2960/">
+        (Re)install an IOS operating system on a Cisco 2960 switch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../howtos/reinstall-ios-cisco1941/">
+        (Re)install an IOS operating system on a Cisco 1941 router
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../howtos/password-recovery-cisco2960/">
+        Password recovery on a Cisco 2960 switch
       </a>
 </li>
 <li class="md-nav__item">
@@ -607,35 +602,59 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../howtos/reinstall-ios-cisco1941/">
-        (Re)install an IOS operating system on a Cisco 1941 router
+<a class="md-nav__link" href="../../howtos/factory-reset-cisco2960/">
+        Factory reset a Cisco 2960 switch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../howtos/access-cisco-device-rommon/">
+        Access a Cisco device ROMMON
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">References</a>
-<label for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
-</label>
+<a href="../../references/">References</a>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
           References
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../">Explanations</a>
+<label for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          Explanations
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cisco-switch-router-components/">
+        Cisco switch and router components
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Cisco switch and router components
+          Cisco switch and router boot sequence
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Cisco switch and router components
+        Cisco switch and router boot sequence
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -644,111 +663,62 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#chassis">
-    Chassis
+<a class="md-nav__link" href="#general-overview">
+    General overview
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#power-supply-unit-psu">
-    Power Supply Unit (PSU)
+<a class="md-nav__link" href="#step-by-step-boot-process">
+    Step-by-step boot process
   </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#central-processing-unit-cpu">
-    Central Processing Unit (CPU)
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#memory">
-    Memory
-  </a>
-<nav aria-label="Memory" class="md-nav">
+<nav aria-label="Step-by-step boot process" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#flash">
-    FLASH
+<a class="md-nav__link" href="#power-on-self-test-post">
+    Power-On Self Test (POST)
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sdram">
-    (SD)RAM
+<a class="md-nav__link" href="#boot-loader-initialization">
+    Boot loader initialization
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#nvram">
-    NVRAM
+<a class="md-nav__link" href="#read-the-configuration-register">
+    Read the configuration register
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#eprom">
-    (EP)ROM
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#switching-fabric">
-    Switching Fabric
+<a class="md-nav__link" href="#executing-ios">
+    Executing IOS
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#network-ports">
-    Network Ports
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#poe-controllers">
-    PoE Controllers
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#led-indicators">
-    LED Indicators
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cooling-system">
-    Cooling System
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#console-and-management-ports">
-    Console and Management Ports
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#asics">
-    ASICs
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#backplane">
-    Backplane
+<a class="md-nav__link" href="#system-initialization">
+    System Initialization
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../cisco-switch-router-boot-sequence/">
-        Cisco switch and router boot sequence
+<a class="md-nav__link" href="#recovery-and-troubleshooting">
+    Recovery and troubleshooting
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../password-recovery-mechanism/">
+        Password recovery mechanism
       </a>
 </li>
-</ul>
-</nav>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../break-sequence-mechanism/">
+        Break sequence mechanism
+      </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../explanations/">Explanations</a>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_6">
-<span class="md-nav__icon md-icon"></span>
-          Explanations
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
@@ -767,87 +737,47 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#chassis">
-    Chassis
+<a class="md-nav__link" href="#general-overview">
+    General overview
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#power-supply-unit-psu">
-    Power Supply Unit (PSU)
+<a class="md-nav__link" href="#step-by-step-boot-process">
+    Step-by-step boot process
   </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#central-processing-unit-cpu">
-    Central Processing Unit (CPU)
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#memory">
-    Memory
-  </a>
-<nav aria-label="Memory" class="md-nav">
+<nav aria-label="Step-by-step boot process" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#flash">
-    FLASH
+<a class="md-nav__link" href="#power-on-self-test-post">
+    Power-On Self Test (POST)
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sdram">
-    (SD)RAM
+<a class="md-nav__link" href="#boot-loader-initialization">
+    Boot loader initialization
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#nvram">
-    NVRAM
+<a class="md-nav__link" href="#read-the-configuration-register">
+    Read the configuration register
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#eprom">
-    (EP)ROM
+<a class="md-nav__link" href="#executing-ios">
+    Executing IOS
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-initialization">
+    System Initialization
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#switching-fabric">
-    Switching Fabric
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#network-ports">
-    Network Ports
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#poe-controllers">
-    PoE Controllers
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#led-indicators">
-    LED Indicators
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cooling-system">
-    Cooling System
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#console-and-management-ports">
-    Console and Management Ports
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#asics">
-    ASICs
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#backplane">
-    Backplane
+<a class="md-nav__link" href="#recovery-and-troubleshooting">
+    Recovery and troubleshooting
   </a>
 </li>
 </ul>
@@ -857,107 +787,263 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="cisco-switch-and-router-components">Cisco switch and router components</h1>
-<p>The hardware components of a Cisco switch and router include the following:</p>
-<h2 id="chassis">Chassis</h2>
-<p>The physical casing that houses all internal components of the switch. It includes mounting options for rack or wall installation.</p>
-<h2 id="power-supply-unit-psu">Power Supply Unit (PSU)</h2>
-<p>Provides the necessary power to the switch. Some models come with internal power supplies, while others support external power supplies. Additionally, some models offer Power over Ethernet (PoE) or PoE+ capabilities.</p>
-<h2 id="central-processing-unit-cpu">Central Processing Unit (CPU)</h2>
-<p>Manages the switch's operations, processing control plane activities, and executing the switch's operating system (IOS).</p>
-<h2 id="memory">Memory</h2>
-<p>Cisco devices have many different locations where they can store images, configuration files, and microcode.</p>
-<h3 id="flash">FLASH</h3>
-<ul>
-<li>non-volatile (permanent) after reboot</li>
-<li>a kind of EEPROM designed for high speed and high density</li>
-<li>different types, depending on the hardware (EPROM, SIMM, DIMM, Flash memory card)</li>
-<li>
-<p>different forms, depending on the hardware</p>
+<h1 id="cisco-switch-and-router-boot-sequence">Cisco switch and router boot sequence</h1>
+<h2 id="general-overview">General overview</h2>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="boot-sequence.png"><img src="boot-sequence.png"/></a></p>
+<h2 id="step-by-step-boot-process">Step-by-step boot process</h2>
+<h3 id="power-on-self-test-post">Power-On Self Test (POST)</h3>
 <ul>
 <li>
-<p>internal (onboard)</p>
+<p>When a Cisco router or switch is powered on, it performs a Power-On Self Test (POST) to verify the integrity and functionality of its hardware components, including:</p>
 <ul>
-<li>flash:<ul>
-<li>the main “Flash memory storage area” on all platforms</li>
-<li>alias slot0: for platforms without a device named flash:</li>
-<li>can store as many "IOS images" as there is space to hold</li>
-</ul>
-</li>
-<li>bootflash:<ul>
-<li>depending on model/essentially the difference is just naming convention between ”flash:” and “bootflash:”</li>
-<li>can store "images", "configuration files", crashinfo, … but generally hosts a (small basic) "bootloader program” on high-end systems</li>
-</ul>
-</li>
+<li>CPU</li>
+<li>memory</li>
+<li>network interfaces</li>
+<li>detect new installed components (added memory, ...)</li>
 </ul>
 </li>
 <li>
-<p>external (removable)</p>
-<ul>
-<li>a Flash memory card that is inserted in to a Personal Computer Memory Card International Association (PCMCIA) slot</li>
-<li>additional flash memory</li>
-<li>slot0: PCMCIA flash card in slot0, slot1: PCMCIA flash card in slot1</li>
-</ul>
+<p>A switch, for example, checks its system LEDs during this phase, and the System LED will initially be amber. Because a full operating system has not yet been loaded when the switch performs POST, it needs a way to tell the human user if POST worked well, if it failed partly, or if the switch is totally unusable. To communicate the status, the switch uses the light-emitting diodes (LEDs) on the front panel of the switch. During POST, these LEDs have one set of meanings; during normal operation, the LEDs are used for other purposes.</p>
 </li>
+<li>
+<p>The POST is stored in and run from ROM.</p>
+</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Switch</label><label for="__tabbed_1_2">Router</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>POST messages on the console.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>POST: CPU MIC register Tests : Begin
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>POST: CPU MIC register Tests : End, Status Passed
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>POST: PortASIC Memory Tests : Begin
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>POST: PortASIC Memory Tests : End, Status Passed
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>POST: CPU MIC interface Loopback Tests : Begin
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>POST: CPU MIC interface Loopback Tests : End, Status Passed
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>POST: PortASIC RingLoopback Tests : Begin
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>POST: PortASIC RingLoopback Tests : End, Status Passed
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>POST: PortASIC CAM Subsystem Tests : Begin
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>POST: PortASIC CAM Subsystem Tests : End, Status Passed
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>POST: PortASIC Port Loopback Tests : Begin
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>POST: PortASIC Port Loopback Tests : End, Status Passed
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>No such thing visible on a Cisco 1941 router.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>...
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h3 id="boot-loader-initialization">Boot loader initialization</h3>
+<ul>
+<li>
+<p>The "boot loader", also called "boot loader program" or "boot loader image" or "system bootstrap" or "bootstrap", is the first program executed after "POST". 
+ It:</p>
+<ul>
+<li>initializes the basic hardware components, including the CPU, memory and interfaces</li>
+<li>provides basic system functions such as access to the file system in "flash" memory and network interfaces</li>
+<li>locates the "IOS image" in a certain order, depending on the value of the "configuration register".</li>
 </ul>
 </li>
 <li>
-<p>stores the "Cisco IOS software image" and VLAN database file "vlan.dat"</p>
+<p>It is a small, specialized piece of software/program (no IOS!) typically stored in and run from "flash" memory or a dedicated "boot ROM".</p>
 </li>
-<li>some routers, including the Cisco 2500 series routers, do not have sufficient RAM to hold the Cisco IOS image and, therefore, run the Cisco IOS image directly from flash memory (Cisco IOS images that are run from flash memory are not compressed)</li>
-<li>has a directory structure and typical flash commands (dir, format, copy, del)</li>
 </ul>
-<h3 id="sdram">(SD)RAM</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Switch</label><label for="__tabbed_2_2">Router</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Boot loader in action.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>Boot Sector Filesystem (bs) installed, fsid: 2
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>Base ethernet MAC Address: b0:c5:3c:26:a0:80
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>Xmodem file system is available.
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>The password-recovery mechanism is enabled.
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>...
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>...
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>Switch#show version
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>...
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>ROM: Bootstrap program is C2960 boot loader
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 15.0(2r)EZ1, RELEASE SOFTWARE (fc1)
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>...
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Boot loader in action.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>System Bootstrap, Version 15.0(1r)M16, RELEASE SOFTWARE (fc1)
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>Technical Support: http://www.cisco.com/techsupport
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>Copyright (c) 2012 by cisco Systems, Inc.
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>Total memory size = 512 MB - On-board = 512 MB, DIMM0 = 0 MB
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>CISCO1941/K9 platform with 524288 Kbytes of main memory
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>Main memory is configured to 64/-1(On-board/DIMM0) bit mode with ECC disabled
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>Readonly ROMMON initialized
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>program load complete, entry point: 0x80803000, size: 0x1b340
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>program load complete, entry point: 0x80803000, size: 0x1b340
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>...
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>...
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>Router#show version
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a>...
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a>ROM: System Bootstrap, Version 15.0(1r)M16, RELEASE SOFTWARE (fc1)
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h3 id="read-the-configuration-register">Read the configuration register</h3>
+<p>The "configuration register" is a special 16-bit value used to control various aspects of the device's behavior during the boot process. The purpose and functionality of the configuration register differ slightly between Cisco switches like the Catalyst 2960 and routers like the Cisco 1941. It is stored in NVRAM.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Switch</label><label for="__tabbed_3_2">Router</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Configuration register of a switch.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>Switch#show version | incl Configuration
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>Configuration register is 0xF
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>Switch#
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Configuration register of a router.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>Router#show version | incl Configuration
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>Configuration register is 0x2102
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>Router#
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h4 id="router">Router</h4>
+<p>For Cisco routers, including the Cisco 1941, the configuration register plays a crucial role in various aspects of the device’s operation, including:</p>
 <ul>
-<li>(Synchronous Dynamic) Random Access Memory</li>
-<li>volatile (temporary memory)</li>
-<li>2 types:<ul>
-<li>primary, main, or processor memory, which is reserved for the CPU to execute Cisco IOS software and to hold the running configuration and routing tables</li>
-<li>shared, packet, or I/O memory, which buffers data transmitted or received by the router’s network interfaces</li>
+<li>Determining How the Router Boots<ul>
+<li>Booting into ROMMON Mode: setting the configuration register to a value such as 0x???? tells the router to boot into ROMMON mode, which is useful for recovery operations.</li>
+<li>Booting from a Specific Image: Different values can instruct the router to boot from different IOS images or locations, such as from flash memory or a TFTP server.</li>
 </ul>
 </li>
-<li>provides temporary storage for the operating system during runtime and for data structures used by the CPU</li>
-<li>fastest amongst all memories</li>
-<li>often comes on dual in-line memory modules (DIMMs)</li>
-<li>runs the "IOS system image"</li>
+<li>Specifying Baud Rate: certain configuration register settings can change the console port baud rate for communication.</li>
+<li>Controlling Boot Options<ul>
+<li>Controlling Boot Options<ul>
+<li>ignore NVRAM Contents: setting the configuration register to 0x2142 tells the router to ignore the saved configuration in NVRAM. This is commonly used for password recovery as it allows the router to boot with a default configuration without overwriting the existing saved configuration.</li>
 </ul>
-<h3 id="nvram">NVRAM</h3>
+</li>
+</ul>
+</li>
+<li>Configuring Break Sequence Behavior: the configuration register can enable or disable the break sequence, allowing access to ROMMON mode during boot.</li>
+</ul>
+<h4 id="switch">Switch</h4>
+<p>For Cisco Catalyst 2960 switches, the concept of a configuration register as seen in routers does not apply. Instead, similar functionalities are handled through different commands and settings.</p>
 <ul>
-<li>Non Volatile Random Access Memory</li>
-<li>small chunk of RAM between 32 K and 128 K in size</li>
-<li>kept alive by a battery in the system board so the contents are not lost</li>
-<li>stores the "startup-configuration" and the software "configuration register"</li>
+<li>Boot Parameters and Environment Variables: Cisco 2960 switches use environment variables and specific boot commands to control boot behavior. Commands like <code>boot enable-break</code> or setting the <code>...</code> variable from ROMMON are used to control boot parameters and recovery options.</li>
+<li>Password Recovery Mechanism: the command <code>service password-recovery</code> within IOS is used to enable or disable the password recovery mechanism.</li>
 </ul>
-<h3 id="eprom">(EP)ROM</h3>
+<h3 id="executing-ios">Executing IOS</h3>
+<h3 id="system-initialization">System Initialization</h3>
+<h2 id="recovery-and-troubleshooting">Recovery and troubleshooting</h2>
+<p>A Cisco router drops into "ROMMON-mode" or "ROM monitor MODE" (rommon 1&gt; prompt). A switch "boot loader mode" is not the same as a router "ROMMON-mode"!</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Boot loader mode</label><label for="__tabbed_4_2">ROMMON-mode</label><label for="__tabbed_4_3">RXBOOT</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The boot loader provides a command-line interface (CLI) that allows for recovery and diagnostic functions. If the main IOS image cannot be loaded, the "boot loader mode" can be used to perform tasks such as loading a new IOS image, recovering passwords, or formatting the flash memory.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>...
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>switch:
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>ROMMON-mode is a lower-level diagnostic and recovery environment than the "boot loader mode". It provides a more comprehensive set of commands for troubleshooting, hardware diagnostics, and recovery operations. It is used when the device fails to load the "boot loader" or "IOS", or when manually invoked for recovery purposes using "break" or via the "configuration register". "Break" (system interrupt) is always enabled for 60 seconds after the router reboots, regardless of whether it is configured on or off in the "configuration register". During this 60-second window, you can break to the ROM monitor prompt by pressing the "Break key".</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>...
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>rommon 1&gt;
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Older routers (e.g. Cisco AS2511 or Cisco 1600) would actually run IOS straight from FLASH, so you could not overwrite it whilst running, they did not have the ability to load an IOS image via the network either, so you needed to use RXBOOT, a reduced command set image. It contains only IP-code (but no routing capabilities!) just to able to boot from tFTP and mainly used to download "system images" to a router. You can see it as an intermediate step between the ROMMON mode and the IOS mode.
+RXBOOT is also called:</p>
 <ul>
-<li>(Electrically Erasable) Read Only Memory</li>
-<li>non-volatile (permanent): code defined in silicon, cannot accidentally be erased by users</li>
-<li>often referred to simply as "ROM"</li>
-<li>stores hardcoded micro-code: POST, bootstrap, ROMMON, RXBoot (mini-IOS), ...</li>
+<li>a "mini operating system" (0x2101)</li>
+<li>a "MINI-IOS"</li>
+<li>a "limited functions IOS"</li>
+<li>a "limited feature IOS"</li>
+<li>a "partial IOS"</li>
+<li>a "cut-down version of IOS"</li>
+<li>a "stripped down version of IOS"</li>
+<li>a "helper image"</li>
+<li>a "subset of IOS image"</li>
 </ul>
-<h2 id="switching-fabric">Switching Fabric</h2>
-<p>The internal architecture that handles data packet processing and switching within the switch.</p>
-<h2 id="network-ports">Network Ports</h2>
-<ul>
-<li>Ethernet Ports: The primary interfaces for connecting devices, available in various speeds (Fast Ethernet, Gigabit Ethernet).</li>
-<li>Uplink Ports: Often support higher speeds (Gigabit or 10 Gigabit Ethernet) and are used to connect to other switches or routers in the network.</li>
-</ul>
-<h2 id="poe-controllers">PoE Controllers</h2>
-<p>In PoE models, these controllers manage the power distribution to connected devices (such as IP phones or wireless access points) over Ethernet cables.</p>
-<h2 id="led-indicators">LED Indicators</h2>
-<p>Provide status information for power, network activity, and port status, helping with troubleshooting and monitoring.</p>
-<h2 id="cooling-system">Cooling System</h2>
-<p>Includes fans and heat sinks to manage the thermal output and maintain optimal operating temperatures for the switch components.</p>
-<h2 id="console-and-management-ports">Console and Management Ports</h2>
-<ul>
-<li>Console Port: Used for initial setup and configuration via a direct serial connection.</li>
-<li>Management Ethernet Port: Provides out-of-band management access to the switch.</li>
-</ul>
-<h2 id="asics">ASICs</h2>
-<p>Application-Specific Integrated Circuits: custom chips designed to handle specific tasks such as packet forwarding, QoS (Quality of Service), and security features, offloading these tasks from the CPU.</p>
-<h2 id="backplane">Backplane</h2>
-<p>The internal data pathway that interconnects the various components, allowing data to move efficiently within the switch.</p>
-<p>These components work together to provide the functionality required for network connectivity, management, and performance in an enterprise environment.</p>
+<p>Modern day routers don’t have that (0x2102). RXBOOT is stored in ROM (low-end routers) or bootflash (high-end routers).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>...
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>X
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></input></div>
 </article>
 </div>
 </div>

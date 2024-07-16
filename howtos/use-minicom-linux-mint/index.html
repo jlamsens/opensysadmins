@@ -9,7 +9,7 @@
 <meta content="Jurgen Lamsens" name="author"/>
 <link href="https://www.opensysadmins.com/howtos/use-minicom-linux-mint/" rel="canonical"/>
 <link href="../install-chrome-browser-linux-mint/" rel="prev"/>
-<link href="../access-cisco-device-rommon/" rel="next"/>
+<link href="../reinstall-ios-cisco2960/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
 <title>Use minicom on Linux Mint 21 - OpenSysAdmins</title>
@@ -562,21 +562,6 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reinstall-ios-cisco2960/">
-        (Re)install an IOS operating system on a Cisco 2960 switch
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../password-recovery-cisco2960/">
-        Password recovery on a Cisco 2960 switch
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../factory-reset-cisco2960/">
-        Factory reset a Cisco 2960 switch
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../install-packettracer-linux-mint/">
         Install PacketTracer 8.2.2 on Linux Mint 21
       </a>
@@ -612,8 +597,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#console-access">
-    Console access
+<a class="md-nav__link" href="#setup">
+    Setup
   </a>
 </li>
 <li class="md-nav__item">
@@ -627,21 +612,31 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configure-minicom">
-    Configure minicom
+<a class="md-nav__link" href="#configure-and-use-minicom">
+    Configure and use minicom
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#use-minicom">
-    Use minicom
+<a class="md-nav__link" href="#alternative-use">
+    Alternative use
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../access-cisco-device-rommon/">
-        Access a Cisco device ROMMON
+<a class="md-nav__link" href="../reinstall-ios-cisco2960/">
+        (Re)install an IOS operating system on a Cisco 2960 switch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../reinstall-ios-cisco1941/">
+        (Re)install an IOS operating system on a Cisco 1941 router
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../password-recovery-cisco2960/">
+        Password recovery on a Cisco 2960 switch
       </a>
 </li>
 <li class="md-nav__item">
@@ -650,8 +645,13 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reinstall-ios-cisco1941/">
-        (Re)install an IOS operating system on a Cisco 1941 router
+<a class="md-nav__link" href="../factory-reset-cisco2960/">
+        Factory reset a Cisco 2960 switch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../access-cisco-device-rommon/">
+        Access a Cisco device ROMMON
       </a>
 </li>
 </ul>
@@ -661,9 +661,6 @@
 <input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../../references/">References</a>
-<label for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
-</label>
 </div>
 <nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
@@ -671,16 +668,6 @@
           References
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../references/cisco-switch-router-components/">
-        Cisco switch and router components
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../references/cisco-switch-router-boot-sequence/">
-        Cisco switch and router boot sequence
-      </a>
-</li>
 </ul>
 </nav>
 </li>
@@ -688,6 +675,9 @@
 <input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../../explanations/">Explanations</a>
+<label for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+</label>
 </div>
 <nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_6">
@@ -695,6 +685,26 @@
           Explanations
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanations/cisco-switch-router-components/">
+        Cisco switch and router components
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanations/cisco-switch-router-boot-sequence/">
+        Cisco switch and router boot sequence
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanations/password-recovery-mechanism/">
+        Password recovery mechanism
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../explanations/break-sequence-mechanism/">
+        Break sequence mechanism
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -718,8 +728,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#console-access">
-    Console access
+<a class="md-nav__link" href="#setup">
+    Setup
   </a>
 </li>
 <li class="md-nav__item">
@@ -733,13 +743,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configure-minicom">
-    Configure minicom
+<a class="md-nav__link" href="#configure-and-use-minicom">
+    Configure and use minicom
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#use-minicom">
-    Use minicom
+<a class="md-nav__link" href="#alternative-use">
+    Alternative use
   </a>
 </li>
 </ul>
@@ -754,110 +764,44 @@
 <ul>
 <li>a PC (<a href="../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/">BIOS</a>/<a href="../../tutorials/windows11-linuxmint21-dual-boot-uefi/">UEFI</a>) running Linux Mint 21</li>
 <li>internet connection</li>
-<li>a serial cable / console cable</li>
+<li>a serial/console cable</li>
 <li>a Cisco device (switch, router)</li>
 </ul>
-<h2 id="console-access">Console access</h2>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="console-access.png"><img height="180" src="console-access.png" width="320"/></a></p>
+<h2 id="setup">Setup</h2>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="console-access.png"><img src="console-access.png"/></a></p>
 <h2 id="install-minicom">Install minicom</h2>
 <p>Refresh the cache and install the package.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">guru@hp:~$_</label><label for="__tabbed_1_2">output</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">guru@lab:~$_</label><label for="__tabbed_1_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo apt update; sudo apt install minicom -y
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span>
-<span class="normal"><a href="#__codelineno-1-15">15</a></span>
-<span class="normal"><a href="#__codelineno-1-16">16</a></span>
-<span class="normal"><a href="#__codelineno-1-17">17</a></span>
-<span class="normal"><a href="#__codelineno-1-18">18</a></span>
-<span class="normal"><a href="#__codelineno-1-19">19</a></span>
-<span class="normal"><a href="#__codelineno-1-20">20</a></span>
-<span class="normal"><a href="#__codelineno-1-21">21</a></span>
-<span class="normal"><a href="#__codelineno-1-22">22</a></span>
-<span class="normal"><a href="#__codelineno-1-23">23</a></span>
-<span class="normal"><a href="#__codelineno-1-24">24</a></span>
-<span class="normal"><a href="#__codelineno-1-25">25</a></span>
-<span class="normal"><a href="#__codelineno-1-26">26</a></span>
-<span class="normal"><a href="#__codelineno-1-27">27</a></span>
-<span class="normal"><a href="#__codelineno-1-28">28</a></span>
-<span class="normal"><a href="#__codelineno-1-29">29</a></span>
-<span class="normal"><a href="#__codelineno-1-30">30</a></span>
-<span class="normal"><a href="#__codelineno-1-31">31</a></span>
-<span class="normal"><a href="#__codelineno-1-32">32</a></span>
-<span class="normal"><a href="#__codelineno-1-33">33</a></span>
-<span class="normal"><a href="#__codelineno-1-34">34</a></span>
-<span class="normal"><a href="#__codelineno-1-35">35</a></span>
-<span class="normal"><a href="#__codelineno-1-36">36</a></span>
-<span class="normal"><a href="#__codelineno-1-37">37</a></span>
-<span class="normal"><a href="#__codelineno-1-38">38</a></span>
-<span class="normal"><a href="#__codelineno-1-39">39</a></span>
-<span class="normal"><a href="#__codelineno-1-40">40</a></span>
-<span class="normal"><a href="#__codelineno-1-41">41</a></span>
-<span class="normal"><a href="#__codelineno-1-42">42</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>guru@hp:~$ sudo apt update; sudo apt install minicom -y
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span>
+<span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>guru@lab:~$ sudo apt update; sudo apt install minicom -y
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>[sudo] password for guru:     
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a>Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a>Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>Ign:3 https://mintlinux.mirror.wearetriple.com/packages vera InRelease                  
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>Hit:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease                          
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>Hit:5 https://mintlinux.mirror.wearetriple.com/packages vera Release
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>Hit:6 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a>Reading package lists... Done
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a>Building dependency tree... Done
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a>Reading state information... Done
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a>1 package can be upgraded. Run 'apt list --upgradable' to see it.
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>Reading package lists... Done
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a>Building dependency tree... Done
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a>Reading state information... Done
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a>The following packages were automatically installed and are no longer required:
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a>linux-headers-5.15.0-69 linux-headers-5.15.0-69-generic linux-image-5.15.0-69-generic linux-modules-5.15.0-69-generic linux-modules-extra-5.15.0-69-generic
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a>Use 'sudo apt autoremove' to remove them.
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a>The following additional packages will be installed:
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a>lrzsz
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a>The following NEW packages will be installed:
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a>lrzsz minicom
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a>0 upgraded, 2 newly installed, 0 to remove and 1 not upgraded.
-<a id="__codelineno-1-24" name="__codelineno-1-24"></a>Need to get 328 kB of archives.
-<a id="__codelineno-1-25" name="__codelineno-1-25"></a>After this operation, 1.603 kB of additional disk space will be used.
-<a id="__codelineno-1-26" name="__codelineno-1-26"></a>Get:1 http://archive.ubuntu.com/ubuntu jammy/universe amd64 lrzsz amd64 0.12.21-10 [74,8 kB]
-<a id="__codelineno-1-27" name="__codelineno-1-27"></a>Get:2 http://archive.ubuntu.com/ubuntu jammy/universe amd64 minicom amd64 2.8-2 [253 kB]
-<a id="__codelineno-1-28" name="__codelineno-1-28"></a>Fetched 328 kB in 0s (1.146 kB/s)
-<a id="__codelineno-1-29" name="__codelineno-1-29"></a>Selecting previously unselected package lrzsz.
-<a id="__codelineno-1-30" name="__codelineno-1-30"></a>(Reading database ... 645621 files and directories currently installed.)
-<a id="__codelineno-1-31" name="__codelineno-1-31"></a>Preparing to unpack .../lrzsz_0.12.21-10_amd64.deb ...
-<a id="__codelineno-1-32" name="__codelineno-1-32"></a>Unpacking lrzsz (0.12.21-10) ...
-<a id="__codelineno-1-33" name="__codelineno-1-33"></a>Selecting previously unselected package minicom.
-<a id="__codelineno-1-34" name="__codelineno-1-34"></a>Preparing to unpack .../minicom_2.8-2_amd64.deb ...
-<a id="__codelineno-1-35" name="__codelineno-1-35"></a>Unpacking minicom (2.8-2) ...
-<a id="__codelineno-1-36" name="__codelineno-1-36"></a>Setting up minicom (2.8-2) ...
-<a id="__codelineno-1-37" name="__codelineno-1-37"></a>Setting up lrzsz (0.12.21-10) ...
-<a id="__codelineno-1-38" name="__codelineno-1-38"></a>Processing triggers for desktop-file-utils (0.26+mint2+vera) ...
-<a id="__codelineno-1-39" name="__codelineno-1-39"></a>Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
-<a id="__codelineno-1-40" name="__codelineno-1-40"></a>Processing triggers for man-db (2.10.2-1) ...
-<a id="__codelineno-1-41" name="__codelineno-1-41"></a>Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
-<a id="__codelineno-1-42" name="__codelineno-1-42"></a>guru@hp:~$ 
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>...
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>...
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>Processing triggers for man-db (2.10.2-1) ...
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>guru@lab:~$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
 <h2 id="identify-serial-port">Identify serial port</h2>
-<p>Connect your device to the Linux Mint PC using a serial cable. In the terminal, run the following command to list the available serial ports. Note down the name of the serial port (e.g. "/dev/ttyUSB0") corresponding to your device.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">guru@hp:~$_</label><label for="__tabbed_2_2">output</label></div>
+<p>Your Cisco device is connected to the Linux Mint LAB-PC using a serial cable. On that PC, run the following command to list the available serial ports. Note down the name of the serial port (e.g. <code>/dev/ttyUSB0</code>) corresponding to your device.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">guru@lab:~$_</label><label for="__tabbed_2_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>dmesg | grep tty
@@ -867,20 +811,22 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>guru@hp:~$ dmesg | grep tty
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>guru@lab:~$ dmesg | grep tty
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>[    0.206150] printk: console [tty0] enabled
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="hll">[18977.539042] usb 1-4: pl2303 converter now attached to ttyUSB0
-</span><a id="__codelineno-3-4" name="__codelineno-3-4"></a>guru@hp:~$ 
+</span><a id="__codelineno-3-4" name="__codelineno-3-4"></a>guru@lab:~$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
-<h2 id="configure-minicom">Configure minicom</h2>
-<p>In the terminal, run the following command to start the Minicom configuration:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">guru@hp:~$_</label><label for="__tabbed_3_2">output</label></div>
+<h2 id="configure-and-use-minicom">Configure and use minicom</h2>
+<p>In the terminal, run the following command to start the "Minicom configuration" and then "Minicom".</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">guru@lab:~$_</label><label for="__tabbed_3_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo minicom -s
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo minicom -s
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>sudo minicom
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -893,13 +839,13 @@
 <li>Press "Save setup as dfl" to save the configuration.</li>
 <li>Press "Exit from Minicom". </li>
 </ul>
-<p>These settings will be saved in file /etc/minicom/minirc.dfl for all future runs.</p>
+<p>These settings will be saved in file <code>/etc/minicom/minirc.dfl</code> for all future runs.</p>
 </div>
 </div>
 </input></input></div>
-<h2 id="use-minicom">Use minicom</h2>
+<h2 id="alternative-use">Alternative use</h2>
 <p>Instead of doing the setup first, you can give the correct parameters on the commandline instead. Minicom will open and display the terminal window.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">guru@hp:~$_</label><label for="__tabbed_4_2">output</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">guru@lab:~$_</label><label for="__tabbed_4_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>sudo minicom -b 9600 -D /dev/ttyUSB0
