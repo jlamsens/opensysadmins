@@ -430,6 +430,7 @@ nav:
     - Password recovery on a Cisco 1941 router: howtos/password-recovery-cisco1941/index.md
     - Factory reset a Cisco 2960 switch: howtos/factory-reset-cisco2960/index.md
     - Access a Cisco device ROMMON: howtos/access-cisco-device-rommon/index.md
+    - Install VirtualBox 7 on Linux Mint 21: howtos/install-virtualbox7-linux-mint21/index.md
       
 ####################################################################################
 

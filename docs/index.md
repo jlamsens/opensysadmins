@@ -57,6 +57,42 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
 
 === "1"
 
+    <!--- HOWTO install VirtualBox 7 on Linux Mint 21 --->
+    <img src="howtos/install-virtualbox7-linux-mint21/home.png" width="320" height="180" align=left />
+    > *Jun 06, 2023 - in [Howtos](howtos/index.md) - 20 min guide*
+
+
+    VirtualBox is a powerful virtualization software that allows you to create and run virtual machines on your computer. Developed by Oracle, VirtualBox enables you to emulate multiple operating systems within a single physical machine.
+
+    [Continue reading](howtos/install-virtualbox7-linux-mint21/index.md)
+    <br>
+    <br>
+
+
+    <!--- HOWTO install Minicom on Linux Mint 21 --->
+    <img src="howtos/install-minicom-linux-mint/home.png" width="320" height="180" align=left />
+    > *Sep 10, 2023 - in [Howtos](howtos/index.md) - 5 min guide*
+
+
+    Minicom is an open source clone of the MS-DOS "Telix" communication program. It emulates ANSI and VT102 terminals, has a dialing directory and auto zmodem download.
+
+    [Continue reading](howtos/install-minicom-linux-mint/index.md)
+    <br>
+    <br>
+
+=== "2"
+
+    <!--- HOWTO install Packet Tracer 8 on Linux Mint 21 --->
+    <img src="howtos/install-packettracer-linux-mint/home.png" width="320" height="180" align=left />
+    > *Jun 08, 2023 - in [Howtos](howtos/index.md) - 5 min guide*
+
+
+    Packet Tracer is a cross-platform visual simulation tool designed by Cisco Systems that allows users to create network topologies and imitate modern computer networks. It simulates, not emulates, the configuration of Cisco routers and switches.
+
+    [Continue reading](howtos/install-packettracer-linux-mint/index.md)
+    <br>
+    <br>
+
     <!--- TUTORIAL Windows 11 & Linux Mint 21 dual boot BIOS--->
     <img src="tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/home.png" width="320" height="180" align=left />
     > *Apr 05, 2023 - in [Tutorials](tutorials/index.md) - 90 min lesson*
@@ -105,7 +141,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <br>
 
 
-=== "2"
+=== "3"
 
     <!--- HOWTO install Google Chrome browser on Linux Mint 21 --->
     <img src="howtos/install-chrome-browser-linux-mint/home.png" width="320" height="180" align=left />
@@ -165,7 +201,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <br>
     <br>
 
-=== "3"
+=== "4"
 
     <!--- HOWTO do a password recovery on a Cisco 2960 switch --->
     <img src="howtos/password-recovery-cisco2960/home.png" width="320" height="180" align=left />
