@@ -200,18 +200,13 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#situation">
-    Situation
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#problem">
     Problem
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#solution1-use-previous-kernel">
-    Solution1: use previous kernel
+<a class="md-nav__link" href="#solution1-use-older-working-kernel">
+    Solution1: use older working kernel
   </a>
 </li>
 <li class="md-nav__item">
@@ -747,18 +742,13 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#situation">
-    Situation
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#problem">
     Problem
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#solution1-use-previous-kernel">
-    Solution1: use previous kernel
+<a class="md-nav__link" href="#solution1-use-older-working-kernel">
+    Solution1: use older working kernel
   </a>
 </li>
 <li class="md-nav__item">
@@ -798,8 +788,15 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="virtualbox-guru-meditation">VirtualBox guru meditation</h1>
-<h2 id="situation">Situation</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label><label for="__tabbed_1_4">Step4</label></div>
+<h2 id="problem">Problem</h2>
+<p>VirtualBox virtual machines stop working after installing kernel update. Situation:</p>
+<ul>
+<li>&lt;= 5.15.0-113: ok</li>
+<li>5.15.0-116: nok</li>
+<li>5.15.0-118: nok</li>
+<li>(5.15.0-119: fixed but not available yet in the repository)</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><input id="__tabbed_1_6" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Step1</label><label for="__tabbed_1_2">Step2</label><label for="__tabbed_1_3">Step3</label><label for="__tabbed_1_4">Step4</label><label for="__tabbed_1_5">Step5</label><label for="__tabbed_1_6">Step6</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>You are running Linux Mint 21 kernel 5.15.0-113</p>
@@ -817,11 +814,6 @@
 <p>VirtualBox modules get compiled/installed successfully.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../virtualbox6-guru-meditation-dkms-virtualbox.png"><img src="../virtualbox6-guru-meditation-dkms-virtualbox.png"/></a></p>
 </div>
-</div>
-</input></input></input></input></div>
-<h2 id="problem">Problem</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label></div>
-<div class="tabbed-content">
 <div class="tabbed-block">
 <p>Once rebooted with that new 5.15.0-116 kernel, things go wrong when installing/operating VMs.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../virtualbox6-guru-meditation-error.png"><img src="../virtualbox6-guru-meditation-error.png"/></a></p>
@@ -831,12 +823,15 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../virtualbox6-guru-meditation-errorlog.png"><img src="../virtualbox6-guru-meditation-errorlog.png"/></a></p>
 </div>
 </div>
-</input></input></div>
-<h2 id="solution1-use-previous-kernel">Solution1: use previous kernel</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:7"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><input id="__tabbed_3_4" name="__tabbed_3" type="radio"><input id="__tabbed_3_5" name="__tabbed_3" type="radio"><input id="__tabbed_3_6" name="__tabbed_3" type="radio"><input id="__tabbed_3_7" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Step1</label><label for="__tabbed_3_2">Step2</label><label for="__tabbed_3_3">Step3</label><label for="__tabbed_3_4">Step4</label><label for="__tabbed_3_5">Step5</label><label for="__tabbed_3_6">Step6</label><label for="__tabbed_3_7">Step7</label></div>
+</input></input></input></input></input></input></div>
+<h2 id="solution1-use-older-working-kernel">Solution1: use older working kernel</h2>
+<p>Linux systems frequently receive updates, including new versions of the kernel (the core of the operating system that manages hardware and system resources). However, sometimes a new kernel can introduce compatibility issues with specific hardware or software configurations. By keeping multiple kernels installed, users can easily switch back to an older, stable kernel if the new one causes problems (e.g., hardware drivers not working, system crashes). In Linux Mint 21.3, and most Linux distributions, you can choose different kernels at the GRUB (GRand Unified Bootloader) menu.</p>
+<p>On BIOS systems, pressing and holding or sometimes repeatedly tapping the <span class="keys"><kbd class="key-shift">Shift</kbd></span> key during boot will bring up the GRUB menu. On UEFI systems, the <span class="keys"><kbd class="key-escape">Esc</kbd></span> key is used. If you have a dual-boot setup, GRUB may appear automatically.</p>
+<p>An example: you come from kernel 5.15.0-91 -&gt; 5.15.0-113 -&gt; 5.15.0-116 (most recent kernel at the time of writing)</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:7"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><input id="__tabbed_2_5" name="__tabbed_2" type="radio"><input id="__tabbed_2_6" name="__tabbed_2" type="radio"><input id="__tabbed_2_7" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Step1</label><label for="__tabbed_2_2">Step2</label><label for="__tabbed_2_3">Step3</label><label for="__tabbed_2_4">Step4</label><label for="__tabbed_2_5">Step5</label><label for="__tabbed_2_6">Step6</label><label for="__tabbed_2_7">Step7</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Do a cold start of Linux Mint 21 and hit the <span class="keys"><kbd class="key-escape">Esc</kbd></span> button to get the GRUB menu. Select "Advanced options..."</p>
+<p>Do a cold start of Linux Mint 21 and try to get the GRUB menu. Select "Advanced options..."</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../virtualbox6-guru-meditation-grub-advanced-options.png"><img src="../virtualbox6-guru-meditation-grub-advanced-options.png"/></a></p>
 </div>
 <div class="tabbed-block">
@@ -852,7 +847,7 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../virtualbox6-guru-meditation-removing-kernel.png"><img src="../virtualbox6-guru-meditation-removing-kernel.png"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>After removing the kernel, it will become available again for installation. Right-click -&gt; Ignore the current update for this package. That kernel will not be installed anymore.</p>
+<p>After removing the kernel, it will become available again for installation. Right-click -&gt; Ignore the current update for this package. No newer 5.15 kernel will be installed from now on.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../virtualbox6-guru-meditation-ignore-kernel.png"><img src="../virtualbox6-guru-meditation-ignore-kernel.png"/></a></p>
 </div>
 <div class="tabbed-block">
@@ -867,7 +862,7 @@
 </input></input></input></input></input></input></input></div>
 <h2 id="solution2-install-virtualbox-7020">Solution2: install VirtualBox 7.0.20</h2>
 <h3 id="check-the-installed-packages-of-virtualbox-6150">Check the installed packages of VirtualBox 6.1.50</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">guru@lab:~$_</label><label for="__tabbed_4_2">output</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">guru@lab:~$_</label><label for="__tabbed_3_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>dpkg -l | grep -i virtualbox
@@ -892,7 +887,7 @@
 </div>
 </input></input></div>
 <h3 id="remove-those-packages">Remove those packages</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">guru@lab:~$_</label><label for="__tabbed_5_2">output</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">guru@lab:~$_</label><label for="__tabbed_4_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo apt purge virtualbox* -y
@@ -1125,7 +1120,7 @@
 <h3 id="install-virtualbox-7020">Install VirtualBox 7.0.20</h3>
 <p>Use the howto <a href="../../../howtos/install-virtualbox7-linux-mint21/">Install VirtualBox 7 on Linux Mint 21</a></p>
 <h2 id="solution3-use-kernel-650-44">Solution3: use kernel 6.5.0-44</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:4"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><input id="__tabbed_6_3" name="__tabbed_6" type="radio"/><input id="__tabbed_6_4" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Step1</label><label for="__tabbed_6_2">Step2</label><label for="__tabbed_6_3">Step3</label><label for="__tabbed_6_4">Step4</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:4"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><input id="__tabbed_5_3" name="__tabbed_5" type="radio"/><input id="__tabbed_5_4" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Step1</label><label for="__tabbed_5_2">Step2</label><label for="__tabbed_5_3">Step3</label><label for="__tabbed_5_4">Step4</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Go to the Mint menu -&gt; Update Manager -&gt; View -&gt; Linux kernels. The newest kernel 6.8.0-35 (at the time of writing) does not work for VirtualBox 6.1.50</p>
