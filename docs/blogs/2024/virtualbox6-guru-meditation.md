@@ -1,6 +1,12 @@
 # VirtualBox guru meditation
 
-## Situation
+## Problem
+VirtualBox virtual machines stop working after installing kernel update. Situation:
+
+* <= 5.15.0-113: ok
+* 5.15.0-116: nok
+* 5.15.0-118: nok
+* (5.15.0-119: fixed but not available yet in the repository)
 
 === "Step1"
     You are running Linux Mint 21 kernel 5.15.0-113
@@ -23,23 +29,26 @@
     
     <img src="../virtualbox6-guru-meditation-dkms-virtualbox.png"/>
 
-## Problem
-
-=== "Step1"
+=== "Step5"
     Once rebooted with that new 5.15.0-116 kernel, things go wrong when installing/operating VMs.
     
     <img src="../virtualbox6-guru-meditation-error.png"/>
 
-=== "Step2"
+=== "Step6"
     The log is giving you a "Guru Meditation" error.
     
     <img src="../virtualbox6-guru-meditation-errorlog.png"/>
 
 
-## Solution1: use previous kernel
+## Solution1: use older working kernel
+Linux systems frequently receive updates, including new versions of the kernel (the core of the operating system that manages hardware and system resources). However, sometimes a new kernel can introduce compatibility issues with specific hardware or software configurations. By keeping multiple kernels installed, users can easily switch back to an older, stable kernel if the new one causes problems (e.g., hardware drivers not working, system crashes). In Linux Mint 21.3, and most Linux distributions, you can choose different kernels at the GRUB (GRand Unified Bootloader) menu.
+
+On BIOS systems, pressing and holding or sometimes repeatedly tapping the ++shift++ key during boot will bring up the GRUB menu. On UEFI systems, the ++esc++ key is used. If you have a dual-boot setup, GRUB may appear automatically.
+
+An example: you come from kernel 5.15.0-91 -> 5.15.0-113 -> 5.15.0-116 (most recent kernel at the time of writing)
 
 === "Step1"
-    Do a cold start of Linux Mint 21 and hit the ++escape++ button to get the GRUB menu. Select "Advanced options..."
+    Do a cold start of Linux Mint 21 and try to get the GRUB menu. Select "Advanced options..."
     
     <img src="../virtualbox6-guru-meditation-grub-advanced-options.png"/>
 
@@ -59,7 +68,7 @@
     <img src="../virtualbox6-guru-meditation-removing-kernel.png"/>
 
 === "Step5"
-    After removing the kernel, it will become available again for installation. Right-click -> Ignore the current update for this package. That kernel will not be installed anymore.
+    After removing the kernel, it will become available again for installation. Right-click -> Ignore the current update for this package. No newer 5.15 kernel will be installed from now on.
     
     <img src="../virtualbox6-guru-meditation-ignore-kernel.png"/>
 
@@ -72,6 +81,7 @@
     Reboot Linux Mint 21. It will use the old 5.15.0-113 kernel again. Enjoy working VMs.
     
     <img src="../virtualbox6-guru-meditation-workingvm.png"/>
+
 
 
 ## Solution2: install VirtualBox 7.0.20
