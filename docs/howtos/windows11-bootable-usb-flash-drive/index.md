@@ -119,7 +119,7 @@
 === "Step5"
     Close Rufus and eject the USB media.
 
-    <img src="rufus-eject-uefi.png" width="320" height="180"/>
+    <img src="rufus-eject-uefi.png"/>
 
 ### With Etcher
 Todo...
