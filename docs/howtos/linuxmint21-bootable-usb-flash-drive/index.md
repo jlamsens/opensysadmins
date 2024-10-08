@@ -90,39 +90,39 @@
 #### For UEFI (non-CSM)
 === "Step1"
     
-    <img src="rufus-main-screen-options-uefi.png" width="320" height="180"/>
+    <img src="rufus-main-screen-options-uefi.png"/>
     
     1. Insert a USB flash drive with enough space
     2. Navigate to and select the Linux Mint 21 ISO file
     3. Choose "GPT" as partition scheme
     5. Select "UEFI (non-CSM)" as target system
-    6. Select "Large FAT32 (Default)" as file system
+    6. Select "NTFS" as file system
     7. Click "Start"
 
 === "Step2"
     Select "Write in ISO Image mode (Recommended)".
 
-    <img src="rufus-iso-image-mode-uefi.png" width="320" height="180"/>
+    <img src="rufus-iso-image-mode-uefi.png"/>
 
 === "Step3"
-    Let Rufus download the latest syslinux files (if asked).
+    If asked, let Rufus download the latest syslinux files. Otherwise, skip this step.
 
-    <img src="rufus-syslinux-uefi.png" width="320" height="180"/>
+    <img src="rufus-syslinux-uefi.png"/>
 
 === "Step4"
     Click "OK" to confirm the USB’s deletion and the bootable drive’s creation.
 
-    <img src="rufus-warning-data-destruction-uefi.png" width="320" height="180"/>
+    <img src="rufus-warning-data-destruction-uefi.png"/>
 
 === "Step5"
     Time to grab a coffee. Wait until the status is "Ready".
 
-    <img src="rufus-status-uefi.png" width="320" height="180"/>
+    <img src="rufus-status-uefi.png"/>
 
 === "Step6"
     Close Rufus and eject the USB media.
 
-    <img src="rufus-eject-uefi.png" width="320" height="180"/>
+    <img src="rufus-eject-uefi.png"/>
 
 ### With Etcher
 Todo...

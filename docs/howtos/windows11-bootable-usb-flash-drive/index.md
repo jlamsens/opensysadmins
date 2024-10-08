@@ -58,7 +58,7 @@
 #### For BIOS (or UEFI-CSM)
 === "Step1"
     
-    <img src="rufus-main-screen-options-bios.png" width="320" height="180"/>
+    <img src="rufus-main-screen-options-bios.png"/>
     
     1. Insert the USB flash drive
     2. Navigate to and select the Windows 11 ISO file
@@ -71,7 +71,7 @@
 === "Step2"
     Clear all check marks. We want the Windows installation the same as the official Microsoft installation.
 
-    <img src="rufus-customize-windows-installation-bios.png" width="320" height="180"/>
+    <img src="rufus-customize-windows-installation-bios.png"/>
 
 === "Step3"
     Click "OK" to confirm the USB’s deletion and the bootable drive’s creation.
@@ -91,7 +91,7 @@
 #### For UEFI (non-CSM)
 === "Step1"
     
-    <img src="rufus-main-screen-options-uefi.png" width="320" height="180"/>
+    <img src="rufus-main-screen-options-uefi.png"/>
     
     1. Insert the USB flash drive
     2. Navigate to and select the Windows 11 ISO file
@@ -104,17 +104,17 @@
 === "Step2"
     Clear all check marks. We want the Windows installation the same as the official Microsoft installation.
 
-    <img src="rufus-customize-windows-installation-uefi.png" width="320" height="180"/>
+    <img src="rufus-customize-windows-installation-uefi.png"/>
 
 === "Step3"
     Click "OK" to confirm the USB’s deletion and the bootable drive’s creation.
 
-    <img src="rufus-warning-data-destruction-uefi.png" width="320" height="180"/>
+    <img src="rufus-warning-data-destruction-uefi.png"/>
 
 === "Step4"
     Time to grab a coffee. Wait until the status is "Ready".
 
-    <img src="rufus-status-uefi.png" width="320" height="180"/>
+    <img src="rufus-status-uefi.png"/>
 
 === "Step5"
     Close Rufus and eject the USB media.
