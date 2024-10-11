@@ -38,7 +38,7 @@ Signing keys are used to verify the authenticity and integrity of packages from 
 
 ## Update package list
 
-=== "guru@hp:~/Downloads$_"
+=== "guru@hp:~$_"
 
     ``` title='' hl_lines="0"
     sudo apt update
@@ -47,7 +47,7 @@ Signing keys are used to verify the authenticity and integrity of packages from 
 === "output"
 
     ``` title='' hl_lines="4 7"
-    guru@hp:~/Downloads$ sudo apt update
+    guru@hp:~$ sudo apt update
     Ign:1 https://mintlinux.mirror.wearetriple.com/packages vera InRelease
     Hit:2 https://mintlinux.mirror.wearetriple.com/packages vera Release                                        
     Get:3 http://dl.google.com/linux/chrome/deb stable InRelease [1.825 B]                                      
@@ -61,12 +61,13 @@ Signing keys are used to verify the authenticity and integrity of packages from 
     Building dependency tree... Done
     Reading state information... Done
     175 packages can be upgraded. Run 'apt list --upgradable' to see them.
+    guru@hp:~$
     ```
 
 ## Install Chrome
 
 
-=== "guru@hp:~/Downloads$_"
+=== "guru@hp:~$_"
 
     ``` title='' hl_lines="0"
     sudo apt install google-chrome-stable
@@ -75,7 +76,7 @@ Signing keys are used to verify the authenticity and integrity of packages from 
 === "output"
 
     ``` title='' hl_lines="0"
-    guru@hp:~/Downloads$ sudo apt install google-chrome-stable
+    guru@hp:~$ sudo apt install google-chrome-stable
     Reading package lists... Done
     Building dependency tree... Done
     Reading state information... Done
@@ -106,7 +107,7 @@ Signing keys are used to verify the authenticity and integrity of packages from 
     Processing triggers for man-db (2.10.2-1) ...
     Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
     Processing triggers for desktop-file-utils (0.26+mint2+vera) ...
-    guru@hp:~/Downloads$ 
+    guru@hp:~$ 
     ```
 
 ## Start Chrome
