@@ -2,9 +2,9 @@
 
 
 ## Prereqs
-- a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Linux Mint 21
-    - [minicom](../use-minicom-linux-mint/index.md) terminal emulation software
-    - (a [tFTP service](../install-tftp-linux-mint/index.md))
+- a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/index.md){:target="_blank"}/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/index.md){:target="_blank"}) running Linux Mint 21
+    - [minicom](../use-minicom-linux-mint/index.md){:target="_blank"} terminal emulation software
+    - (a [tFTP service](../install-tftp-linux-mint/index.md){:target="_blank"})
 - a console cable
 - (a network cable)
 - a Cisco 1941 router

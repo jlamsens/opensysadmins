@@ -1,7 +1,7 @@
 # Install Google Chrome browser on Linux Mint 21
 
 ## Prereqs
-- a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Linux Mint 21
+- a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/index.md){:target="_blank"}/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/index.md){:target="_blank"}) running Linux Mint 21
 
 ## Download and import Google's signed key
 Signing keys are used to verify the authenticity and integrity of packages from repositories. Download Google's and import at once.

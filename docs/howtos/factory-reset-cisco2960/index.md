@@ -1,11 +1,11 @@
 # Factory reset a Cisco 2960 switch
 
 ## Prereqs
-- a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Linux Mint 21
-- [minicom](../use-minicom-linux-mint/index.md) terminal emulation software
-- a working IOS, so if necessary first [(re)install an IOS operating system](../reinstall-ios-cisco2960/index.md)
+- a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/index.md){:target="_blank"}/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/index.md){:target="_blank"}) running Linux Mint 21
+- [minicom](../use-minicom-linux-mint/index.md){:target="_blank"} terminal emulation software
+- a working IOS, so if necessary first [(re)install an IOS operating system](../reinstall-ios-cisco2960/index.md){:target="_blank"}
 
-Following commands can be executed from within IOS or from within [ROMMON-mode](../access-cisco-device-rommon/index.md).
+Following commands can be executed from within IOS or from within [ROMMON-mode](../access-cisco-device-rommon/index.md){:target="_blank"}.
 
 ## Erase nvram contents
 

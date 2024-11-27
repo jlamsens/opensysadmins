@@ -1,7 +1,7 @@
 # Clone a Windows Server 2022 virtual machine in VirtualBox 6.1.44
 
 ## Prereqs
-- an existing [Windows Server 2022 virtual machine](../../tutorials/windows-server-2022-virtualbox/index.md)
+- an existing [Windows Server 2022 virtual machine](../../tutorials/windows-server-2022-virtualbox/index.md){:target="_blank"}
 
 ## VirtualBox
 === "Step1"

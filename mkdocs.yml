@@ -215,7 +215,7 @@ markdown_extensions:
     - pymdownx.emoji:
     #   ## Python Markdown Extensions uses the pymdownx namespace, but in order to support the inlining of icons,
     #   ## the materialx namespace must be used, as it extends the functionality of pymdown
-        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
         emoji_generator: !!python/name:materialx.emoji.to_svg
 
 
@@ -432,6 +432,7 @@ nav:
     - Factory reset a Cisco 2960 switch: howtos/factory-reset-cisco2960/index.md
     - Access a Cisco device ROMMON: howtos/access-cisco-device-rommon/index.md
     - Install VirtualBox 7 on Linux Mint 21: howtos/install-virtualbox7-linux-mint21/index.md
+    - Install Ansible on Linux Mint 21: howtos/install-ansible-linux-mint21/index.md
       
 ####################################################################################
 

@@ -86,13 +86,13 @@ In order to [create some installation media with Rufus](../../howtos/install-ruf
 <img src="../copy-iso-files.png" width="320" height="180"/>
 
 ## Applications (optional)
-- [Install Rufus on Windows 11](../../../howtos/install-rufus-windows11/){:target="_blank"} -> make USB-key to download GRUB and syslinux
-- [Install Putty on Windows 11](../../../howtos/install-putty-windows11/){:target="_blank"}
-- [Install Teraterm on Windows 11](../../../howtos/install-teraterm-windows11/){:target="_blank"}
-- [Install WinSCP on Windows 11](../../../howtos/install-winscp-windows11/){:target="_blank"}
-- [Install Wireshark on Windows 11](../../../howtos/install-wireshark-windows11/){:target="_blank"} -> download ONLY
-- [Install Chrome on Windows 11](../../../howtos/install-chrome-windows11/){:target="_blank"}
-- [Install Firefox on Windows 11](../../../howtos/install-firefox-windows11/){:target="_blank"}
+- [Install Rufus on Windows 11](../../howtos/install-rufus-windows11/index.md){:target="_blank"} -> make USB-key to download GRUB and syslinux
+- [Install Putty on Windows 11](../../howtos/install-putty-windows11/index.md){:target="_blank"}
+- [Install Teraterm on Windows 11](../../howtos/install-teraterm-windows11/index.md){:target="_blank"}
+- [Install WinSCP on Windows 11](../../howtos/install-winscp-windows11/index.md){:target="_blank"}
+- [Install Wireshark on Windows 11](../../howtos/install-wireshark-windows11/index.md){:target="_blank"} -> download ONLY
+- [Install Chrome on Windows 11](../../howtos/install-chrome-windows11/index.md){:target="_blank"}
+- [Install Firefox on Windows 11](../../howtos/install-firefox-windows11/index.md){:target="_blank"}
 
 ## Cleanup + final restart
 === "Step1"

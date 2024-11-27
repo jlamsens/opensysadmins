@@ -1,7 +1,7 @@
 # Password recovery on a Cisco 1941 router
 
 ## Prereqs
-* a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/){:target="_blank"}/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/){:target="_blank"}) running Linux Mint 21
+* a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/index.md){:target="_blank"}/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/index.md){:target="_blank"}) running Linux Mint 21
     * [minicom](../use-minicom-linux-mint/index.md){:target="_blank"} terminal emulation software
 * a serial console cable
 * a Cisco 1941 router

@@ -34,7 +34,7 @@ Select “Custom: Install Windows only (advanced)".
 ## Installation location & partitioning
 
 === "Step1"
-    If you were able to do a [secure erase](../configure-bios-vs-uefi/#wipe-the-harddisk-if-possible){:target="_blank"} in BIOS/UEFI, there are no partitions. If not, delete all partitions manually.
+    If you were able to do a [secure erase](configure-bios-vs-uefi.md#wipe-the-harddisk-if-possible){:target="_blank"} in BIOS/UEFI, there are no partitions. If not, delete all partitions manually.
 
     <img src="../installation-location.png" width="706"/>
 

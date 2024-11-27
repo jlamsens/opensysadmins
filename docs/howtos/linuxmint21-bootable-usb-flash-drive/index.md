@@ -2,12 +2,12 @@
 
 ## Prereqs
 - USB flash drive that can hold the Linux Mint 21 installation files
-- a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Windows 11 or Linux Mint 21
+- a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/index.md){:target="_blank"}/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/index.md){:target="_blank"}) running Windows 11 or Linux Mint 21
 - internet connection
 
 ## Download ISO
 === "Step1"
-    Use your favorite search engine to search for the Linux Mint 21 iso and choose the official Linux Mint website.
+    Use your favorite search engine to search for the Linux Mint 21 iso and choose the official Linux Mint website. At the time of writing, Linux Mint 21.1 is the most recent version. It it possible a more recent version is already out, when you read this. This howto still uses the [Linux mint 21 Cinnamon edition](https://linuxmint.com/edition.php?id=311){:target="_blank"}
     **(VDAB users: download from your Google Drive!)**
 
     <img src="linuxmint21-search-iso.png" width="320" height="180"/>

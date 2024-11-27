@@ -1,8 +1,8 @@
 # Access a Cisco device in ROMMON-mode
 
 ## Prereqs
-* a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Linux Mint 21
-    * [minicom](../use-minicom-linux-mint/index.md) terminal emulation software
+* a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/index.md){:target="_blank"}/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/index.md){:target="_blank"}) running Linux Mint 21
+    * [minicom](../use-minicom-linux-mint/index.md){:target="_blank"} terminal emulation software
 * a console cable
 * a Cisco 2960 24TT-L or 24TC-L Plus switch
 * a Cisco 1941 router
@@ -209,7 +209,7 @@
 
 
 === "Step2"
-    Power cycle the switch or "reload" from within a running IOS. Immediately after the switch starts booting (within the first X seconds), send the [break sequence](../../references/index.md#break-sequence-mechanism) from your terminal emulator. For Minicom, press ++ctrl++ + ++a++ then ++f++. The switch should respond by stopping the boot process and entering ROMMON mode, indicated by the switch: prompt.
+    Power cycle the switch or "reload" from within a running IOS. Immediately after the switch starts booting (within the first X seconds), send the [break sequence](../../explanations/break-sequence-mechanism/index.md) from your terminal emulator. For Minicom, press ++ctrl++ + ++a++ then ++f++. The switch should respond by stopping the boot process and entering ROMMON mode, indicated by the switch: prompt.
 
     ``` title='' hl_lines="1 8"
     Switch#reload
@@ -556,7 +556,7 @@
     ```
 
 === "Step2"
-    Immediately after the router starts booting (within the first X seconds), send the [break sequence](../../references/index.md#break-sequence-mechanism) from your terminal emulator. For Minicom, press ++ctrl++ + ++a++ then ++f++. The router should respond by stopping the boot process and entering ROMMON mode, indicated by the rommon X> prompt.
+    Immediately after the router starts booting (within the first X seconds), send the [break sequence](../../explanations/break-sequence-mechanism/index.md) from your terminal emulator. For Minicom, press ++ctrl++ + ++a++ then ++f++. The router should respond by stopping the boot process and entering ROMMON mode, indicated by the rommon X> prompt.
 
     ``` title='' hl_lines="6"
     System Bootstrap, Version 15.0(1r)M16, RELEASE SOFTWARE (fc1)

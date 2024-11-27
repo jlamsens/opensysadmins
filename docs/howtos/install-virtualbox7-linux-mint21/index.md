@@ -1,7 +1,7 @@
 # Install VirtualBox 7 on Linux Mint 21
 
 ## Prereqs
-- a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/)/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/)) running Linux Mint 21
+- a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/index.md){:target="_blank"}/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/index.md){:target="_blank"}) running Linux Mint 21
 
 ## Import GPG key
 By default, VirtualBox 6 is available in the Linux Mint 21 repo, not VirtualBox 7. In the next step, we'll add it to our system. First, let's import the Oracle VirtualBox GPG keys that sign the software.
