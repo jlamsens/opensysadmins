@@ -36,6 +36,6 @@
     <img src="../powershell-bingsearch-remove.png"/>
 
 === "Step7"
-    Go back to the regular command prompt. The sysprep should be working and the system will shutdown afterwards.
+    Go back to the regular command prompt. Execute the sysprep command again. Should you encounter another error, repeat the previous steps! It is possible you have to remove a package or two. Finally, the sysprep should be working and the system will shutdown afterwards.
 
     <img src="../sysprep-working.png"/>
