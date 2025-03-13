@@ -37,7 +37,7 @@ De kern van het probleem ligt in het [verdienmodel](https://www.standaard.be/cnt
 "Het is geen eerlijk gevecht: je zit op Facebook en je gaat tegen kunstmatige intelligentie in die alles van je weet, je volgende zet uitstippelt, en jij weet van niks, behalve dat er kattenfilmpjes en verjaardagen zijn."
 
 ## Regulering.
-Het is OK is dat bedrijven geld willen verdienen. Het is niet OK dat er [geen regels en geen concurrentie](https://www.standaard.be/cnt/dmf20241218_97723641){:target="_blank"} is en dat bedrijven zich gedragen als een soort facto regeringen. Die bedrijven kunnen zichzelf niet reguleren; dat is belachelijk. Dat is een leugen.
+Het is OK is dat bedrijven geld willen verdienen. Het is niet OK dat er [geen regels en geen concurrentie](https://www.standaard.be/cnt/dmf20241218_97723641){:target="_blank"} is en dat bedrijven zich gedragen als een soort regeringen. Die bedrijven zeggen dat ze zichzelf wel kunnen reguleren; dat is belachelijk. Dat is een leugen.
 
 We zijn winstgevender voor een bedrijf als we naar een scherm staren, of naar een reclame dan als we ons leven leven. Bedrijven gebruiken [krachtige kunstmatige intelligentie](https://www.businessinsider.nl/amerikaanse-big-tech-bedrijven-blijven-gigantische-bedragen-van-tientallen-miljarden-in-ai-steken/){:target="_blank"} om ons te slim af te zijn zijn en onze aandacht te trekken naar wat zij willen in plaats van wat past bij onze doelen en ons leven.
 
