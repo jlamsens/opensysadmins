@@ -91,7 +91,7 @@
     <img src="../installation-finished.png" width="706"/>
 
 === "Step5"
-    Remove the USB flash drive and press ++enter++.
+    Remove the USB flash drive and press ++enter++
 
     <img src="../remove-installation-medium.png" width="706"/>
 

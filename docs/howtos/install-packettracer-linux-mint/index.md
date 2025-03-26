@@ -83,7 +83,8 @@ Answer "no".
 <img src="multi-user.png"/>
 
 ## Sign-in
-First choose "Keep me logged in (for 3 months) and then select "Cisco Networking Academy".
+First choose "Keep me logged in (for 3 months) and then select "Skills For All". You cannot use "Network Academy" at this moment. Afther the merge
+of "netacad.com" and "skillsforall.com", the Packet Tracer application is not yet adjusted properly.
 
 <img src="keep-me-logged-in.png"/>
 
