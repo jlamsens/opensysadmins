@@ -8,7 +8,7 @@
 ## Download ISO
 === "Step1"
     Use your favorite search engine to search for the Windows 11 iso and choose the official Microsoft website.
-    **(VDAB users: download from your Google Drive!)**
+    **(VDAB students: download from your Google Drive!)**
 
     <img src="windows11-search-iso.png" width="320" height="180"/>
 
@@ -29,7 +29,8 @@
 
 ## On Windows 11
 ### With Rufus
-#### Download and install Rufus
+#### Download and install Rufus - VDAB students: skip
+
 === "Step1"
     Use your favorite search engine to search for Rufus and choose the official website.
 
@@ -55,7 +56,7 @@
 
     <img src="rufus-run.png" width="320" height="180"/>
 
-#### For BIOS (or UEFI-CSM)
+#### For BIOS (or UEFI-CSM) - VDAB students: skip
 === "Step1"
     
     <img src="rufus-main-screen-options-bios.png"/>

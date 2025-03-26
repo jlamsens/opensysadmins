@@ -1,7 +1,7 @@
 # Configure BIOS/UEFI
 
 ## Turn on the computer
-Turn on or restart your computer and watch for a message during the POST about a particular key, usually ++delete++ or a function key like ++f10++ (e.g. HP Z2 PC) that you'll need to press to access the BIOS/UEFI setup utility. It's possible, you won't see such message at all, but a vendor splash screen instead.
+Turn on or restart your computer and watch for a message during the POST about a particular key, usually ++delete++ or a function key like ++f10++ (e.g. HP Z4 PC) that you'll need to press to access the BIOS/UEFI setup utility. It's possible, you won't see such message at all, but a vendor splash screen instead.
 
 <img src="../vendor-splash.png" width="706"/>
 
@@ -44,7 +44,7 @@ Some systems make wiping the harddisk possible from BIOS/UEFI (e.g. "HP Z2 PC").
     <img src="../secure-erase-confirm2.png" width="706"/>
 
 === "Step7"
-    The wipe completes successfully.
+    The wipe completes successfully. Press ++esc++.
 
     <img src="../secure-erase-done.png" width="706"/>
 
@@ -56,16 +56,16 @@ Some systems make wiping the harddisk possible from BIOS/UEFI (e.g. "HP Z2 PC").
     <img src="../secure-boot-configuration.png" width="706"/>
 
 === "Step2"
-    Choose "Legacy Support Disable, Secure Boot Disable".
+    Make sure "Legacy Support Disable, Secure Boot Disable" is selected.
 
     <img src="../legacy-disable-secureboot-disable.png" width="706"/>
 
 ## Save/confirm your changes and exit
-Exit the utility using ++esc++ and save changes.
+Exit the utility using ++esc++ and save changes - if any.
 
 <img src="../exit-save-changes.png" width="706"/>
 
 ## Shutdown
-If you could wipe the harddisk, the sytem tries to PXE boot. If you could not, it may or may not boot. Nevermind. We will eventually erase possible partitions in the next steps. Shutdown the PC by pressing the "power button" long enough.
+If you could wipe the harddisk, the sytem tries to PXE boot (and it will fail, that's expected). If you could not wipe the harddisk, it may or may not boot (depending on whether an OS is present or not). Nevermind. We will eventually erase possible partitions in the next steps. Shutdown the PC by pressing the "power button" long enough.
 
 <img src="../pxe-boot.png" width="706"/>
