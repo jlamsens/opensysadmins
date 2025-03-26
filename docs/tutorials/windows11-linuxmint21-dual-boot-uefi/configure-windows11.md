@@ -52,8 +52,8 @@
 
     <img src="../system-about.png" width="706"/>
 
-## Shutdown
-Shutdown the PC.
+## Reboot + Shutdown
+Reboot Windows 11 for the last time, then shutdown the PC.
 
 <img src="../shutdown.png" width="706"/>
 

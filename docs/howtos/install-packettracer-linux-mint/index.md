@@ -5,7 +5,7 @@
 
 ## Download
 Download PacketTracer from an official Cisco location (e.g Netacad.com, Skillsforall.com) and save it to disk.
-**(VDAB users: download from your Google Drive!)**
+**(VDAB students: download from your Google Drive!)**
 
 <img src="netacad-packettracer.png"/>
 
