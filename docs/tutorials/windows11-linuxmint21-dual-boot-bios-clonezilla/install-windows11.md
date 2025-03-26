@@ -222,6 +222,6 @@ Select “Custom: Install Windows only (advanced)".
     <img src="../almost-ready.png" width="320" height="180"/>
 
 === "Step9"
-    Installation done!
+    Installation done! Do a "safe remove" of the Windows USB flash drive.
 
     <img src="../done.png" width="320" height="180"/>
