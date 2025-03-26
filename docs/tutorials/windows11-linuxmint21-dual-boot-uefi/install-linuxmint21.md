@@ -55,7 +55,7 @@
     <img src="../swap-partition.png" width="706"/>
 
 === "Step4"
-    Again, select the "free space" at the bottom and click on the + sign. Create a "root partition" with the remaining disk space.
+    Again, select the "free space" at the bottom and click on the + sign. Create a "root partition" with the remaining disk space. In my case that is 431303 MB. The remaining disk space can be different on your system!
 
     <img src="../freespace2.png" width="706"/>
 
