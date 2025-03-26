@@ -1010,7 +1010,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="configure-biosuefi">Configure BIOS/UEFI</h1>
 <h2 id="turn-on-the-computer">Turn on the computer</h2>
-<p>Turn on or restart your computer and watch for a message during the POST about a particular key, usually <span class="keys"><kbd class="key-delete">Del</kbd></span> or a function key like <span class="keys"><kbd class="key-f10">F10</kbd></span> (e.g. HP Z2 PC) that you'll need to press to access the BIOS/UEFI setup utility. It's possible, you won't see such message at all, but a vendor splash screen instead.</p>
+<p>Turn on or restart your computer and watch for a message during the POST about a particular key, usually <span class="keys"><kbd class="key-delete">Del</kbd></span> or a function key like <span class="keys"><kbd class="key-f10">F10</kbd></span> (e.g. HP Z4 PC) that you'll need to press to access the BIOS/UEFI setup utility. It's possible, you won't see such message at all, but a vendor splash screen instead.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../vendor-splash.png"><img src="../vendor-splash.png" width="706"/></a></p>
 <h2 id="enter-the-biosuefi-setup-utility">Enter the BIOS/UEFI Setup Utility</h2>
 <p>After pressing the correct keyboard command, you'll enter the BIOS/UEFI Setup Utility.</p>
@@ -1044,7 +1044,7 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../secure-erase-confirm2.png"><img src="../secure-erase-confirm2.png" width="706"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>The wipe completes successfully.</p>
+<p>The wipe completes successfully. Press <span class="keys"><kbd class="key-escape">Esc</kbd></span>.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../secure-erase-done.png"><img src="../secure-erase-done.png" width="706"/></a></p>
 </div>
 </div>
@@ -1057,16 +1057,16 @@
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../secure-boot-configuration.png"><img src="../secure-boot-configuration.png" width="706"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>Choose "Legacy Support Disable, Secure Boot Disable".</p>
+<p>Make sure "Legacy Support Disable, Secure Boot Disable" is selected.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../legacy-disable-secureboot-disable.png"><img src="../legacy-disable-secureboot-disable.png" width="706"/></a></p>
 </div>
 </div>
 </input></input></div>
 <h2 id="saveconfirm-your-changes-and-exit">Save/confirm your changes and exit</h2>
-<p>Exit the utility using <span class="keys"><kbd class="key-escape">Esc</kbd></span> and save changes.</p>
+<p>Exit the utility using <span class="keys"><kbd class="key-escape">Esc</kbd></span> and save changes - if any.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../exit-save-changes.png"><img src="../exit-save-changes.png" width="706"/></a></p>
 <h2 id="shutdown">Shutdown</h2>
-<p>If you could wipe the harddisk, the sytem tries to PXE boot. If you could not, it may or may not boot. Nevermind. We will eventually erase possible partitions in the next steps. Shutdown the PC by pressing the "power button" long enough.</p>
+<p>If you could wipe the harddisk, the sytem tries to PXE boot (and it will fail, that's expected). If you could not wipe the harddisk, it may or may not boot (depending on whether an OS is present or not). Nevermind. We will eventually erase possible partitions in the next steps. Shutdown the PC by pressing the "power button" long enough.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../pxe-boot.png"><img src="../pxe-boot.png" width="706"/></a></p>
 </article>
 </div>
