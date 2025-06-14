@@ -2,4 +2,4 @@
 git add .
 git commit -m "changes"
 git push
-mkdocs gh-deploy
+mkdocs gh-deploy --force

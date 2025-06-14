@@ -219,7 +219,7 @@ markdown_extensions:
     #   ## Python Markdown Extensions uses the pymdownx namespace, but in order to support the inlining of icons,
     #   ## the materialx namespace must be used, as it extends the functionality of pymdown
         emoji_index: !!python/name:material.extensions.emoji.twemoji
-        emoji_generator: !!python/name:materialx.emoji.to_svg
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 
     ## allows the usage of content tabs, a simple way to group related content and code blocks under accessible tabs
