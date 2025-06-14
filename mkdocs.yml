@@ -82,11 +82,11 @@ theme:
   font:
     ## the "regular font", used for all body copy, headlines
     ## and essentially everything that does not need to be monospaced
-    text: ubuntu
+    text: Ubuntu
 
     ## the "monospaced font" is used for code blocks and can be configured separately
     ## will be loaded in 400
-    code: ubuntu mono
+    code: Ubuntu Mono
   
   palette: 
     - scheme: default
@@ -186,8 +186,7 @@ markdown_extensions:
     ##   - navigation
     ##   - toc
     ## ---
-    - meta
-    
+      
     ## adds the ability to create tables in Markdown by using a simple syntax
     - tables
 
