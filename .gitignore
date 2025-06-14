@@ -1,2 +1,4 @@
 site/
 templates/
+#Python virtual environment
+venv/
