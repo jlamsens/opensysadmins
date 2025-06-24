@@ -2,7 +2,7 @@
 
 ## Boot from USB
 === "Step1"
-    Insert the [Linux Mint 21 USB flash drive](../../howtos/linuxmint21-bootable-usb-flash-drive/index.md){:target="_blank"}. Make sure both monitors are "on". Start the PC. In this case (HP Z4 PC), press ++f9++ once at the "HP splash screen" and wait. Specifics vary from computer to computer. Consult your hardware manual.
+    Insert the [Linux Mint 21 USB flash drive](../../howtos/linuxmint21-bootable-usb-flash-drive/index.md){:target="_blank"}. Make sure both monitors are "on". Start the PC. In this case (HP Z2 PC), press ++f9++ once at the "HP splash screen" and wait. Specifics vary from computer to computer. Consult your hardware manual.
 
     <img src="../insert-usb.png" width="706"/>
 
@@ -18,6 +18,9 @@
 
 === "Step4"
     You're in the live-environment. In this case, both monitors are active. Possibly not configured correctly. This is for later.
+
+    !!! danger "Note VDAB students"
+        For easier navigation, you could follow these instructions using Firefox in this live-environment, instead of on your smartphone.
 
     <img src="../live-environment.png" width="706"/>
 

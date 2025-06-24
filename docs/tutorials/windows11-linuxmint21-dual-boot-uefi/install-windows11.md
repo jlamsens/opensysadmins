@@ -2,7 +2,7 @@
 
 ## Boot from USB
 === "Step1"
-    Insert the [Windows 11 USB flash drive](../../howtos/windows11-bootable-usb-flash-drive/index.md){:target="_blank"}. Make sure both monitors are "on". Start the PC. In this case (HP Z4 PC), press ++f9++ once at the "HP splash screen" and wait. Specifics vary from computer to computer. Consult your hardware manual.
+    Insert the [Windows 11 USB flash drive](../../howtos/windows11-bootable-usb-flash-drive/index.md){:target="_blank"}. Make sure both monitors are "on". Start the PC. In this case (HP Z2 PC), press ++f9++ once at the "HP splash screen" and wait. Specifics vary from computer to computer. Consult your hardware manual.
 
     <img src="../insert-usb.png" width="706"/>
 
