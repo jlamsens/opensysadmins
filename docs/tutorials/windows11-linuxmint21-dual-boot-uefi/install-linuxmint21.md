@@ -21,6 +21,7 @@
 
     !!! danger "Note VDAB students"
         For easier navigation, you could follow further instructions using Firefox in this live-environment, instead of on your smartphone.
+        Just navigate to opensysadmins.com -> Tutorials -> Install a Windows 11 and Linux Mint 21 dual boot PC (UEFI) -> Install Linux Mint 21.
 
     <img src="../live-environment.png" width="706"/>
 
