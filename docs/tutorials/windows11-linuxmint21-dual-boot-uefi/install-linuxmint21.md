@@ -20,7 +20,7 @@
     You're in the live-environment. In this case, both monitors are active. Possibly not configured correctly. This is for later.
 
     !!! danger "Note VDAB students"
-        For easier navigation, you could follow these instructions using Firefox in this live-environment, instead of on your smartphone.
+        For easier navigation, you could follow further instructions using Firefox in this live-environment, instead of on your smartphone.
 
     <img src="../live-environment.png" width="706"/>
 
