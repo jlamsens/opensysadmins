@@ -4,13 +4,16 @@
 - a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/index.md){:target="_blank"}/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/index.md){:target="_blank"}) running Linux Mint 21
 
 ## Download
+
+!!! danger "Note VDAB students"
+    Use the "Download" folder in Google Classroom to download "CiscoPacketTracer822_amd64_signed.deb" and skip this step.
+
 Download PacketTracer from an official Cisco location (e.g Netacad.com, Skillsforall.com) and save it to disk.
-**(VDAB students: download from your Google Drive!)**
 
 <img src="netacad-packettracer.png"/>
 
 ## Open Terminal
-Right-click on an empty space in the "Nemo" file manager and select "Open in Terminal".
+Right-click *on an empty space* in the "Nemo" file manager and select "Open in Terminal".
 
 <img src="downloads.png"/>
 
@@ -68,7 +71,7 @@ guru@vm26:~/Downloads$
 ```
 
 ## Activation link
-Member of Cisco Network Academy? You should have received an activation link on your private e-mail. Activate your account.
+Member of Cisco Network Academy? You should have received an activation link on your private e-mail. Activate your account. It is possible you have already done this in the past. Skip this step then.
 
 <img src="activation-link.png"/>
 
