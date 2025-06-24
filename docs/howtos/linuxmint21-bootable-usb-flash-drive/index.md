@@ -6,9 +6,12 @@
 - internet connection
 
 ## Download ISO
+
+!!! danger "Note VDAB students"
+    The Linux Mint .ISO file is already in the local "Downloads" folder of your Windows lab PC, so skip these steps!
+
 === "Step1"
     Use your favorite search engine to search for the Linux Mint 21 iso and choose the official Linux Mint website. At the time of writing, Linux Mint 21.1 is the most recent version. It it possible a more recent version is already out, when you read this. This howto still uses the [Linux mint 21 Cinnamon edition](https://linuxmint.com/edition.php?id=311){:target="_blank"}
-    **(VDAB users: download from your Google Drive!)**
 
     <img src="linuxmint21-search-iso.png" width="320" height="180"/>
 
@@ -25,6 +28,10 @@
 ## On Windows 11
 ### With Rufus
 #### Download and install Rufus
+
+!!! danger "Note VDAB students"
+    Rufus is already installed on your Windows lab PC, so skip these steps!
+
 === "Step1"
     Use your favorite search engine to search for Rufus and choose the official website.
 
@@ -51,6 +58,10 @@
     <img src="rufus-run.png" width="320" height="180"/>
 
 #### For BIOS (or UEFI-CSM)
+
+!!! danger "Note VDAB students"
+    The PC that you will install is an UEFI system, so don't use these steps!
+
 === "Step1"
     
     <img src="rufus-main-screen-options-bios.png" width="320" height="180"/>

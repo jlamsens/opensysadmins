@@ -1,7 +1,7 @@
 # Configure BIOS/UEFI
 
 ## Turn on the computer
-Turn on or restart your computer and watch for a message during the POST about a particular key, usually ++delete++ or a function key like ++f10++ (e.g. HP Z4 PC) that you'll need to press to access the BIOS/UEFI setup utility. It's possible, you won't see such message at all, but a vendor splash screen instead.
+Turn on or restart your computer and watch for a message during the POST about a particular key, usually ++delete++ or a function key like ++f10++ (e.g. HP Z4 PC) that you'll need to press to access the BIOS/UEFI setup utility. It's possible, you won't see such message at all, but a vendor splash screen instead (e.g. HP)
 
 <img src="../vendor-splash.png" width="706"/>
 
