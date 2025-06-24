@@ -69,6 +69,9 @@ theme:
     ## the header is automatically hidden when the user scrolls past a certain threshold, leaving more space for content
     - header.autohide
 
+    ## code blocks can automatically render a button on the right side to allow the user to copy a code block's contents to the clipboard
+    - content.code.copy
+
   ## while the default repository icon is a generic git icon, it can be set to any icon bundled with the theme by referencing a valid icon path
   icon:
     repo: fontawesome/brands/github
