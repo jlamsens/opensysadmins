@@ -3,11 +3,7 @@
 ## Turn on the computer
 Start the PC. In this case (HP Z2 PC), press ++f10++ once at the "HP splash screen" and wait. Specifics vary from computer to computer. Consult your hardware manual.
 
-<div class="video-container">
-  <iframe src="https://www.youtube.com/embed/dODhZQgqKIo?si=eVwPfpX-AbpGfPl8" title="Test video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-<!--- <img src="../vendor-splash.png" width="706"/> -->
+<img src="../vendor-splash.png" width="706"/>
 
 ## Enter the BIOS/UEFI Setup Utility
 After pressing the correct keyboard command, you'll enter the BIOS/UEFI Setup Utility.
