@@ -329,6 +329,10 @@ copyright: Copyright &copy; 2022 Jurgen Lamsens
 extra_css:
   - stylesheets/extra.css
 
+exclude_docs: |
+  howtos/template/index.md
+  howtos/todo/index.md
+
 nav:
   - Home: index.md
 
@@ -379,6 +383,16 @@ nav:
       - 06 Install Linux Mint 21: tutorials/windows11-linuxmint21-dual-boot-uefi/install-linuxmint21.md
       - 07 Configure Linux Mint 21: tutorials/windows11-linuxmint21-dual-boot-uefi/configure-linuxmint21.md
       - 08 Final result: tutorials/windows11-linuxmint21-dual-boot-uefi/final-result.md
+
+    - Setup van een Windows 11 en Linux Mint 22 dual boot PC (UEFI):
+      - tutorials/windows11-linuxmint22-dual-boot-uefi/index.md # overview/landing page
+      - 01 Vereisten: tutorials/windows11-linuxmint22-dual-boot-uefi/01-vereisten.md
+      - 02 Installatiemedia: tutorials/windows11-linuxmint22-dual-boot-uefi/02-installatiemedia.md
+      - 03 Voorbereiding: tutorials/windows11-linuxmint22-dual-boot-uefi/03-voorbereiding.md
+      - 04 Setup Windows 11: tutorials/windows11-linuxmint22-dual-boot-uefi/04-setup-windows11.md
+      - 05 Setup Linux Mint 22: tutorials/windows11-linuxmint22-dual-boot-uefi/05-setup-linuxmint22.md
+      - 06 Controle en eindresultaat: tutorials/windows11-linuxmint22-dual-boot-uefi/06-controle-eindresultaat.md
+      - 07 Conclusie: tutorials/windows11-linuxmint22-dual-boot-uefi/07-conclusie.md
 
     - Install Windows 11 in VirtualBox 6.1.50:
       - tutorials/windows11-virtualbox/index.md # overview/landing page

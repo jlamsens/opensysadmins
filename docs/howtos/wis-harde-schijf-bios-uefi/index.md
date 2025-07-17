@@ -1,0 +1,5 @@
+# Wis de harde schijf via de BIOS/UEFI Setup Utility
+
+Veel moderne UEFI-firmware (vooral op laptops en desktops van fabrikanten zoals HP, Dell, Lenovo, en bij sommige moederbordfabrikanten) bevat een functie genaamd "Secure Erase" of een vergelijkbare term. Deze functie is specifiek ontworpen voor Solid State Drives (SSD's) en gebruikt ATA Secure Erase-commando's om alle gegevens op de SSD veilig en permanent te wissen, zodat ze onherstelbaar zijn. Dit is de meest effectieve manier om een SSD "schoon" te maken.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
