@@ -247,7 +247,8 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <br>
     <br>
 
-    <!--- HOWTO XMIND-8 --->
+<!---
+    
     <img src="howtos/install-xmind-linux-mint/home.png" width="320" height="180" align=left />
     >*September 26, 2022 - in [Howtos](howtos/index.md) - 7 min guide*
 
@@ -258,3 +259,5 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     [Continue reading](howtos/install-xmind-linux-mint/index.md)
     <br>
     <br>
+
+--->

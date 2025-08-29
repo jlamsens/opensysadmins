@@ -440,7 +440,6 @@ nav:
   #  - Howto_template: howtos/howto_template/index.md
   #  - Howto_template: howtos/howto_template/index.md
 
-    - Install Xmind 8 on Linux Mint 21: howtos/install-xmind-linux-mint/index.md
     - Create a Windows 11 bootable USB flash drive: howtos/windows11-bootable-usb-flash-drive/index.md
     - Create a Linux Mint 21 bootable USB flash drive: howtos/linuxmint21-bootable-usb-flash-drive/index.md
     - Install PacketTracer 8.2.2 on Linux Mint 21: howtos/install-packettracer-linux-mint/index.md

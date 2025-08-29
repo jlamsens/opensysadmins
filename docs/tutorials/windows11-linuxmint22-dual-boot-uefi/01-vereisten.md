@@ -11,7 +11,7 @@ Voordat je met de installatie begint, zorg je ervoor dat je de volgende middelen
     - reeds voorzien van een werkend **Windows**- of **Linux**-besturingssysteem (of beide in dual boot)
     - internettoegang om (eventueel) de benodigde installatiebestanden te downloaden
 
-- **Stap 2.1: LES PC (de computer waar je het dual boot systeem op installeert)**
+- **Stap 1.2: LES PC (de computer waar je het dual boot systeem op installeert)**
     - een computer met **UEFI** (dit is essentieel voor deze installatiemethode)
     - geschikt voor de installatie van Windows 11 en Linux Mint 22 in dual boot (voldoende RAM, opslagruimte en CPU)
     - (2) monitor(s), een toetsenbord en een muis
