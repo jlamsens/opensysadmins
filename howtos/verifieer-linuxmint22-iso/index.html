@@ -783,13 +783,6 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-xmind-linux-mint/">
-<span class="md-ellipsis">
-    Install Xmind 8 on Linux Mint 21
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../windows11-bootable-usb-flash-drive/">
 <span class="md-ellipsis">
     Create a Windows 11 bootable USB flash drive
@@ -972,9 +965,16 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#vereisen">
+<a class="md-nav__link" href="#vereisten">
 <span class="md-ellipsis">
-      Vereisen
+      Vereisten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo">
+<span class="md-ellipsis">
+      Demo
     </span>
 </a>
 </li>
@@ -987,16 +987,30 @@
 <nav aria-label="Vanaf Windows" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#integriteitscontrole">
+<a class="md-nav__link" href="#open-powershell-als-administrator">
 <span class="md-ellipsis">
-      Integriteitscontrole
+      Open PowerShell als administrator
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#authenticiteitscontrole-gpg-handtekening">
+<a class="md-nav__link" href="#navigeer-naar-de-map-waar-het-iso-bestand-is-opgeslagen">
 <span class="md-ellipsis">
-      Authenticiteitscontrole (GPG Handtekening)
+      Navigeer naar de map waar het ISO-bestand is opgeslagen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bereken-de-sha256-hashwaarde-van-het-iso-bestand">
+<span class="md-ellipsis">
+      Bereken de SHA256-hashwaarde van het ISO-bestand
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vergelijk-de-berekende-hashwaarde-met-de-officiele-waarde-van-microsoft">
+<span class="md-ellipsis">
+      Vergelijk de berekende hashwaarde met de officiële waarde van Microsoft
     </span>
 </a>
 </li>
@@ -1012,23 +1026,30 @@
 <nav aria-label="Vanaf Linux Mint" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#integriteits-en-authenticiteitscontrole-geautomatiseerd">
+<a class="md-nav__link" href="#open-de-terminal">
 <span class="md-ellipsis">
-      Integriteits- en Authenticiteitscontrole (Geautomatiseerd)
+      Open de Terminal
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#integriteitscontrole-handmatig-via-terminal">
+<a class="md-nav__link" href="#navigeer-naar-de-map-waar-het-iso-bestand-is-opgeslagen_1">
 <span class="md-ellipsis">
-      Integriteitscontrole (Handmatig via Terminal)
+      Navigeer naar de map waar het ISO-bestand is opgeslagen
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#authenticiteitscontrole-handmatig-via-terminal">
+<a class="md-nav__link" href="#bereken-de-sha256-hashwaarde-van-het-iso-bestand_1">
 <span class="md-ellipsis">
-      Authenticiteitscontrole (Handmatig via Terminal)
+      Bereken de SHA256-hashwaarde van het ISO-bestand
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vergelijk-de-berekende-hashwaarde-met-de-officiele-waarde-van-microsoft_1">
+<span class="md-ellipsis">
+      Vergelijk de berekende hashwaarde met de officiële waarde van Microsoft
     </span>
 </a>
 </li>
@@ -1050,230 +1071,123 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="verifieer-de-authenticiteit-en-integriteit-van-een-linux-mint-iso-bestand">Verifieer de authenticiteit en integriteit van een Linux Mint ISO-bestand</h1>
-<p>Een gedownload Linux Mint 22 ISO-bestand verifiëren op authenticiteit en integriteit is cruciaal om er zeker van te zijn dat het bestand niet is gewijzigd of beschadigd. Dit doe je door de hashwaarde van het gedownloade bestand te vergelijken met de officiële hashwaarde die door Linux Mint wordt verstrekt. Hieronder vind je een stappenplan voor zowel Windows als Linux Mint.</p>
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&amp;loop=0&amp;mute=0" title="YouTube video player" width="560"></iframe>
-<h2 id="vereisen">Vereisen</h2>
+<p>Een <a href="../download-linuxmint22-iso/" target="_blank">gedownload Linux Mint 22 ISO-bestand</a> verifiëren op authenticiteit en integriteit is cruciaal om er zeker van te zijn dat het bestand niet is gewijzigd of beschadigd. Dit doe je door de hashwaarde van het gedownloade bestand te vergelijken met de officiële hashwaarde die door Linux Mint wordt verstrekt. Hieronder vind je een stappenplan voor zowel Windows als Linux Mint.</p>
+<h2 id="vereisten">Vereisten</h2>
 <ul>
-<li>Het <a href="../download-linuxmint22-iso/">Linux Mint 22 ISO-bestand</a></li>
-<li>Download de verificatiebestanden; op dezelfde downloadpagina waar je het ISO-bestand vindt, zoek je naar links om <code>sha256sum.txt</code> en <code>sha256sum.txt.gpg</code> te downloaden. Zorg ervoor dat je deze bestanden via "Opslaan als..." opslaat en niet alleen de inhoud kopieert. Bewaar alle drie de bestanden (ISO, .txt, en .gpg) in dezelfde map, bv. <code>Downloads</code></li>
-<li>Op Windows 11 heb je extra software nodig om de GPG (GNU Privacy Guard) handtekening te verifiëren. Download en installeer <a href="https://www.gpg4win.org/download.html" target="_blank">Gpg4win</a>. Kies de "Kleopatra" optie tijdens de installatie, dit maakt het verifiëren makkelijker.</li>
+<li>een <a href="../../tutorials/windows11-linuxmint22-dual-boot-uefi/" target="_blank">PC met Windows of Linux</a></li>
+<li>internet verbinding</li>
+<li>het <a href="../download-linuxmint22-iso/" target="_blank">Linux Mint 22 ISO-bestand</a></li>
+<li>de Linux Mint verificatiebestanden; op dezelfde downloadpagina waar je het ISO-bestand vindt, zoek je naar links om <code>sha256sum.txt</code> en <code>sha256sum.txt.gpg</code> te downloaden. Zorg ervoor dat je deze bestanden via "Opslaan als..." opslaat en niet alleen de inhoud kopieert. Bewaar alle drie de bestanden (ISO, .txt, en .gpg) in dezelfde map, bv. <code>Downloads</code></li>
+<li><a href="../setup-gnupg-windows11/" target="_blank">GNU Privacy Guard voor Windows</a></li>
 </ul>
+<h2 id="demo">Demo</h2>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/3_YsCaXRi4c?autoplay=0&amp;loop=0&amp;mute=0" title="YouTube video player" width="560"></iframe>
 <h2 id="vanaf-windows">Vanaf Windows</h2>
-<h3 id="integriteitscontrole">Integriteitscontrole</h3>
-<ol>
-<li>
-<p>Open PowerShell</p>
-<ol>
+<h3 id="open-powershell-als-administrator">Open PowerShell als administrator</h3>
+<ul>
 <li>Klik met de rechtermuisknop op de Startknop (of druk op Windows-toets + X).</li>
-<li>Kies "Terminal"</li>
-</ol>
-</li>
-<li>
-<p>Navigeer naar de map waar het ISO-bestand is opgeslagen.</p>
-<ol>
-<li>Gebruik het <code>cd</code> commando. Bijvoorbeeld, als je ISO in de map "Downloads" staat</li>
-</ol>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">PS C:\Users\guru&gt;_</label><label for="__tabbed_1_2">output</label></div>
+<li>Kies "Terminal (Admin)".</li>
+</ul>
+<h3 id="navigeer-naar-de-map-waar-het-iso-bestand-is-opgeslagen">Navigeer naar de map waar het ISO-bestand is opgeslagen</h3>
+<p>Gebruik het <code>cd</code> commando. Bijvoorbeeld, als je ISO in de map "Downloads" staat</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">PS C:\Users\guru06&gt;_</label><label for="__tabbed_1_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Vervang <code>guru</code> door je daadwerkelijke gebruikersnaam.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>cd C:\Users\guru\Downloads
+<p>In dit voorbeeld ben ik ingelogd met gebruiker <code>guru06</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>cd Downloads
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>PS C:\Users\guru&gt; cd C:\Users\guru\Downloads
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>PS C:\Users\guru\Downloads&gt;
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>PS C:\Users\guru06&gt; cd Downloads
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>PS C:\Users\guru06\Downloads&gt;
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
-</li>
-<li>
-<p>Bereken de SHA256-hashwaarde van het ISO-bestand</p>
-<ol>
-<li>Gebruik het <code>Get-FileHash</code> commando.</li>
-</ol>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">PS C:\Users\guru&gt;_</label><label for="__tabbed_2_2">output</label></div>
+<h3 id="bereken-de-sha256-hashwaarde-van-het-iso-bestand">Bereken de SHA256-hashwaarde van het ISO-bestand</h3>
+<p>Gebruik het <code>Get-FileHash</code> commando.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">PS C:\Users\guru06\Downloads&gt;_</label><label for="__tabbed_2_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Vervang <code>linuxmint-22-cinnamon-64bit.iso</code> door de exacte naam van je gedownloade ISO-bestand.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>Get-FileHash -Algorithm SHA256 .\linuxmint-22-cinnamon-64bit.iso | Select-Object -ExpandProperty Hash
+<p>Vervang <code>Win11_24H2_English_x64.iso</code> door de exacte naam van je gedownloade ISO-bestand.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>Get-FileHash -Algorithm SHA256 .\Win11_24H2_English_x64.iso
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>PS C:\Users\guru\Downloads&gt; Get-FileHash -Algorithm SHA256 .\linuxmint-22-cinnamon-64bit.iso | Select-Object -ExpandProperty Hash
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>CCF482436DF954C0AD6D41123A49FDE79352CA71F7A684A97D5E0A0C39D7F39F
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>PS C:\Users\guru\Downloads&gt;
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>PS C:\Users\guru06\Downloads&gt; Get-FileHash -Algorithm SHA256 .\Win11_24H2_English_x64.iso
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>Algorithm       Hash                                                                   Path
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>---------       ----                                                                   ----
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>SHA256          B56B911BF18A2CEAEB3904D87E7C770BDF92D3099599D61AC2497B91BF190B11       C:\Users\guru06\Downloads\Win...
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>PS C:\Users\guru06\Downloads&gt;
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
-</li>
-<li>
-<p>Vergelijk de berekende hashwaarde met de officiële waarde van Linux Mint</p>
-<ol>
-<li>Open het sha256sum.txt bestand met Kladblok. Zoek de SHA256-hash die overeenkomt met jouw ISO-bestandsnaam.</li>
+<h3 id="vergelijk-de-berekende-hashwaarde-met-de-officiele-waarde-van-microsoft">Vergelijk de berekende hashwaarde met de officiële waarde van Microsoft</h3>
+<ul>
+<li>Ga naar de officiële Microsoft-website en zoek de SHA256-hashwaarde voor de specifieke Windows 11 ISO-versie die je hebt gedownload.</li>
 <li>Vergelijk de waarde die je in stap 3 bij tabblad "output" hebt staan, teken voor teken, met de officiële waarde.</li>
-</ol>
-</li>
-</ol>
-<h3 id="authenticiteitscontrole-gpg-handtekening">Authenticiteitscontrole (GPG Handtekening)</h3>
-<ol>
-<li>
-<p>Importeer de Linux Mint publieke sleutel</p>
-<ol>
-<li>Start <code>Kleopatra</code> (onderdeel van Gpg4win)</li>
-<li>Klik op <code>Import</code></li>
-<li>De officiële Linux Mint signing key is <code>27DEB15644C6B3CF3BD7D291300F846BA25BAE09</code>. Zoek op deze ID (of de volledige vingerafdruk: <code>27DE B156 44C6 B3CF 3BD7 D291 300F 846B A25B AE09</code>) op een betrouwbare sleutelserver (bijv. keyserver.ubuntu.com). Klik met de rechtermuisknop op de gevonden sleutel en kies "Import". Bevestig de import.</li>
-<li>Belangrijk: Markeer deze sleutel als "vertrouwd" (Certify in Kleopatra) nadat je hebt geverifieerd dat het de juiste sleutel is (bijv. door de vingerafdruk te vergelijken met de officiële Linux Mint documentatie).</li>
-</ol>
-</li>
-<li>
-<p>Verifieer de sha256sum.txt.gpg handtekening</p>
-<ol>
-<li>In Kleopatra, klik op Decrypt/Verify.</li>
-<li>Navigeer naar de map waar je sha256sum.txt en sha256sum.txt.gpg hebt opgeslagen. Selecteer sha256sum.txt.gpg.</li>
-<li>Kleopatra zal nu de handtekening van sha256sum.txt verifiëren met de geïmporteerde publieke sleutel.</li>
-<li>Output: Je zou een bericht moeten zien dat de handtekening "Good Signature" is en dat deze afkomstig is van "Linux Mint" (met de sleutel ID die je hebt geïmporteerd).</li>
-</ol>
-</li>
-</ol>
+</ul>
 <h2 id="vanaf-linux-mint">Vanaf Linux Mint</h2>
-<p>Linux Mint heeft ingebouwde tools om dit proces te vereenvoudigen.</p>
-<h3 id="integriteits-en-authenticiteitscontrole-geautomatiseerd">Integriteits- en Authenticiteitscontrole (Geautomatiseerd)</h3>
-<ol>
-<li>Ingebouwde verificatie: Open de bestandsbeheerder (Nemo).</li>
-<li>Navigeer naar de map waar je het ISO-bestand hebt gedownload.</li>
-<li>Rechtsklik op het ISO-bestand zelf.</li>
-<li>Kies in het contextmenu de optie "Verifieer" of "Verify integrity and authenticity".</li>
-<li>Linux Mint zal nu automatisch de SHA256-hash berekenen, de GPG-handtekening verifiëren en de resultaten presenteren. Het kan even duren.</li>
-<li>Output: Een pop-up venster zal verschijnen met de resultaten. Je zou berichten moeten zien zoals "Integrity check: OK" en "Authenticity check: Good signature from 'Linux Mint'".</li>
-</ol>
-<h3 id="integriteitscontrole-handmatig-via-terminal">Integriteitscontrole (Handmatig via Terminal)</h3>
-<ol>
-<li>
-<p>Open de Terminal</p>
-<ol>
-<li>Je kunt dit doen via het toepassingenmenu (meestal onder <code>Systeemhulpprogramma's</code> of door te zoeken naar <code>Terminal</code>).</li>
+<h3 id="open-de-terminal">Open de Terminal</h3>
+<ul>
+<li>Je kunt dit doen via het toepassingenmenu (meestal onder "Systeemhulpprogramma's" of door te zoeken naar "Terminal").</li>
 <li>Of gebruik de sneltoets Ctrl + Alt + T.</li>
-</ol>
-</li>
-<li>
-<p>Navigeer naar de map waar het ISO-bestand is opgeslagen</p>
-<ol>
-<li>Gebruik het <code>cd</code> commando. Bijvoorbeeld, als alle drie de bestanden (ISO, .txt, en .gpg) in de map "Downloads" staan</li>
-</ol>
+</ul>
+<h3 id="navigeer-naar-de-map-waar-het-iso-bestand-is-opgeslagen_1">Navigeer naar de map waar het ISO-bestand is opgeslagen</h3>
+<p>Gebruik het <code>cd</code> commando. Bijvoorbeeld, als je ISO in de map "Downloads" staat</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">guru@hp:~$_</label><label for="__tabbed_3_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>De <code>~</code> staat voor je home-directory.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>cd ~/Downloads 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>cd Downloads 
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>guru@hp:~$ cd ~/Downloads
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>guru@hp:~$ cd Downloads
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>guru@hp:~/Downloads$
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
-</li>
-<li>
-<p>Bereken de SHA256-hashwaarde van het ISO-bestand</p>
-<ol>
-<li>Gebruik het <code>sha256sum</code> commando.</li>
-</ol>
+<h3 id="bereken-de-sha256-hashwaarde-van-het-iso-bestand_1">Bereken de SHA256-hashwaarde van het ISO-bestand</h3>
+<p>Gebruik het <code>sha256sum</code> commando.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">guru@hp:~/Downloads$_</label><label for="__tabbed_4_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Vervang <code>linuxmint-22-cinnamon-64bit.iso</code> door de exacte naam van je gedownloade ISO-bestand.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>sha256sum linuxmint-22-cinnamon-64bit.iso
+<p>Vervang <code>Win11_24H2_English_x64.iso</code> door de exacte naam van je gedownloade ISO-bestand.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>sha256sum Win11_24H2_English_x64.iso
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
-<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>guru@hp:~/Downloads$ sha256sum linuxmint-22-cinnamon-64bit.iso
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>ccf482436df954c0ad6d41123a49fde79352ca71f7a684a97d5e0a0c39d7f39f  linuxmint-22-cinnamon-64bit.iso
+<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>guru@hp:~/Downloads$ sha256sum Win11_24H2_English_x64.iso
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>b56b911bf18a2ceaeb3904d87e7c770bdf92d3099599d61ac2497b91bf190b11  Win11_24H2_English_x64.iso
 <a id="__codelineno-7-3" name="__codelineno-7-3"></a>guru@hp:~/Downloads$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
-</li>
-<li>
-<p>Vergelijk de berekende hashwaarde met de officiële waarde</p>
-<ol>
-<li>Open het sha256sum.txt bestand met een teksteditor (bijv. Xed)</li>
-<li>Vergelijk de output van sha256sum met de hashwaarde in het .txt bestand die overeenkomt met je ISO. Ze moeten exact overeenkomen.</li>
-</ol>
-</li>
-</ol>
-<h3 id="authenticiteitscontrole-handmatig-via-terminal">Authenticiteitscontrole (Handmatig via Terminal)</h3>
-<ol>
-<li>
-<p>Importeer de Linux Mint publieke sleutel</p>
-<ol>
-<li>Gebruik het <code>gpg</code> commando.</li>
-</ol>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">guru@hp:~/Downloads$</label><label for="__tabbed_5_2">output</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Deze opdracht haalt de sleutel op van een sleutelserver. De sleutel-ID "27DEB15644C6B3CF3BD7D291300F846BA25BAE09" is de officiële Linux Mint signing key.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>gpg --keyserver hkps://keys.openpgp.org --recv-key "27DEB15644C6B3CF3BD7D291300F846BA25BAE09"
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
-<span class="normal"><a href="#__codelineno-9-2">2</a></span>
-<span class="normal"><a href="#__codelineno-9-3">3</a></span>
-<span class="normal"><a href="#__codelineno-9-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>guru@hp:~/Downloads$ gpg --keyserver hkps://keys.openpgp.org --recv-key "27DEB15644C6B3CF3BD7D291300F846BA25BAE09"
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a>gpg: key 300F846BA25BAE09: public key "Linux Mint ISO Signing Key &lt;root@linuxmint.com&gt;" imported
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a>gpg: Total number processed: 1
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a>gpg:               imported: 1
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
-</input></input></div>
-</li>
-<li>
-<p>Verifieer de <code>sha256sum.txt.gpg</code> handtekening</p>
-<ol>
-<li>Gebruik het <code>gpg</code> commando.</li>
-</ol>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">guru@hp:~/Downloads$</label><label for="__tabbed_6_2">output</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>gpg --verify sha256sum.txt.gpg sha256sum.txt
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>De term "Good signature" is cruciaal. [unknown] kan voorkomen als je de sleutel nog niet als "vertrouwd" hebt gemarkeerd, maar de "Good signature" bevestigt de authenticiteit.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span>
-<span class="normal"><a href="#__codelineno-11-3">3</a></span>
-<span class="normal"><a href="#__codelineno-11-4">4</a></span>
-<span class="normal"><a href="#__codelineno-11-5">5</a></span>
-<span class="normal"><a href="#__codelineno-11-6">6</a></span>
-<span class="normal"><a href="#__codelineno-11-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>guru@hp:~/Downloads$ gpg --keyserver hkps://keys.openpgp.org --recv-key "27DEB15644C6B3CF3BD7D291300F846BA25BAE09"
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a>gpg: Signature made di 14 jan 2025 12:35:18 CET
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a>gpg:                using RSA key 27DEB15644C6B3CF3BD7D291300F846BA25BAE09
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a>gpg: Good signature from "Linux Mint ISO Signing Key &lt;root@linuxmint.com&gt;" [unknown]
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a>gpg: WARNING: This key is not certified with a trusted signature!
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a>gpg:          There is no indication that the signature belongs to the owner.
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a>Primary key fingerprint: 27DE B156 44C6 B3CF 3BD7  D291 300F 846B A25B AE09
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
-</input></input></div>
-</li>
-</ol>
+<h3 id="vergelijk-de-berekende-hashwaarde-met-de-officiele-waarde-van-microsoft_1">Vergelijk de berekende hashwaarde met de officiële waarde van Microsoft</h3>
+<ul>
+<li>Ga naar de officiële Microsoft-website en zoek de SHA256-hashwaarde voor de specifieke Windows 11 ISO-versie die je hebt gedownload.</li>
+<li>Vergelijk de waarde die je in stap 3 bij tabblad "output" hebt staan, teken voor teken, met de officiële waarde.</li>
+</ul>
 <h2 id="conclusie">Conclusie</h2>
-<p>Door deze uitgebreide stappen te volgen, weet je zeker dat jouw Linux Mint 22 ISO-bestand zowel intact als afkomstig van de officiële bron is, wat cruciaal is voor een veilige en succesvolle installatie.</p>
+<p>Als de hashwaarden exact overeenkomen, is het ISO-bestand authentiek en integer. Je kunt erop vertrouwen dat het niet is gewijzigd of beschadigd.</p>
+<p>Als de hashwaarden niet overeenkomen, is het ISO-bestand waarschijnlijk beschadigd tijdens het downloaden, of, in zeldzame gevallen, gemanipuleerd. <a href="../download-linuxmint22-iso/">Download het bestand</a> opnieuw en herhaal het verificatieproces.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

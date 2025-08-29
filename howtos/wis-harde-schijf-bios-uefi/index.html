@@ -783,13 +783,6 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-xmind-linux-mint/">
-<span class="md-ellipsis">
-    Install Xmind 8 on Linux Mint 21
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../windows11-bootable-usb-flash-drive/">
 <span class="md-ellipsis">
     Create a Windows 11 bootable USB flash drive
@@ -966,6 +959,33 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vereisten">
+<span class="md-ellipsis">
+      Vereisten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo">
+<span class="md-ellipsis">
+      Demo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#harde-schijf-wissen">
+<span class="md-ellipsis">
+      Harde schijf wissen
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -973,8 +993,34 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="wis-de-harde-schijf-via-de-biosuefi-setup-utility">Wis de harde schijf via de BIOS/UEFI Setup Utility</h1>
-<p>Veel moderne UEFI-firmware (vooral op laptops en desktops van fabrikanten zoals HP, Dell, Lenovo, en bij sommige moederbordfabrikanten) bevat een functie genaamd "Secure Erase" of een vergelijkbare term. Deze functie is specifiek ontworpen voor Solid State Drives (SSD's) en gebruikt ATA Secure Erase-commando's om alle gegevens op de SSD veilig en permanent te wissen, zodat ze onherstelbaar zijn. Dit is de meest effectieve manier om een SSD "schoon" te maken.</p>
+<p>Veel moderne UEFI-firmware (vooral op laptops en desktops van fabrikanten zoals HP, Dell, Lenovo, en bij sommige moederbordfabrikanten) bevat een functie genaamd <code>Secure Erase</code> of een vergelijkbare term. Deze functie is specifiek ontworpen voor Solid State Drives (SSD's) en gebruikt ATA Secure Erase-commando's om alle gegevens op de SSD veilig en permanent te wissen, zodat ze onherstelbaar zijn. Dit is de meest effectieve manier om een SSD "schoon" te maken.</p>
+<h2 id="vereisten">Vereisten</h2>
+<ul>
+<li>een computer met een <strong>BIOS of UEFI</strong> (moderne computers hebben meestal UEFI)</li>
+<li>toegang tot de <a href="../open-bios-uefi-setup-utility/" target="_blank">BIOS of UEFI</a></li>
+</ul>
+<h2 id="demo">Demo</h2>
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&amp;loop=0&amp;mute=0" title="YouTube video player" width="560"></iframe>
+<h2 id="harde-schijf-wissen">Harde schijf wissen</h2>
+<p>Sommige systemen, zoals de <code>HP Z2 PC</code>, bieden de mogelijkheid om de harde schijf direct vanuit de BIOS/UEFI te wissen. </p>
+<ul>
+<li>Ga naar het tabblad <code>Security</code> en selecteer <code>Hard Drive Utilities</code>.</li>
+<li>Kies <code>Secure Erase</code>.</li>
+<li>Bevestig de schijf die je wilt wissen.</li>
+<li>Lees de getoonde waarschuwing zorgvuldig door. Selecteer vervolgens <code>Secure Erase (Format NVM) Clear</code>.</li>
+<li>Bevestig je keuze.</li>
+<li>Bevestig nogmaals.</li>
+<li>Zodra het wissen is voltooid, druk je op <span class="keys"><kbd class="key-escape">Esc</kbd></span>.</li>
+<li>Als er nog wijzigingen nodig zijn in de BIOS/UEFI, blijf je in de BIOS/UEFI. Ben je klaar met alle instellingen, kun je de BIOS verlaten. Meestal doe je dit door op <span class="keys"><kbd class="key-escape">Esc</kbd></span> te drukken en vervolgens de optie <code>Save and Exit</code> te kiezen, of door direct de <code>Save and Exit</code> optie te selecteren (vaak aangeduid met een functietoets zoals <span class="keys"><kbd class="key-f10">F10</kbd></span>).</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Als het wissen van de harde schijf is gelukt, zal het systeem proberen om via PXE op te starten, wat zal mislukken. Dit is verwacht en geen probleem.
+Als het wissen niet mogelijk was, kan het zijn dat het systeem wel of niet opstart (afhankelijk van de aan/afwezigheid van een besturingssysteem). Maak je hier geen zorgen over. Eventuele partities kunnen worden gewist, tijdens <a href="../../tutorials/windows11-linuxmint22-dual-boot-uefi/" target="_blank">installatie van een besturingssysteem</a></p>
+</div>
+<ul>
+<li>Schakel de pc uit door de aan/uit-knop lang genoeg ingedrukt te houden.</li>
+</ul>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

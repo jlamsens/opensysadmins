@@ -783,13 +783,6 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-xmind-linux-mint/">
-<span class="md-ellipsis">
-    Install Xmind 8 on Linux Mint 21
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../windows11-bootable-usb-flash-drive/">
 <span class="md-ellipsis">
     Create a Windows 11 bootable USB flash drive
@@ -966,6 +959,33 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vereisten">
+<span class="md-ellipsis">
+      Vereisten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo">
+<span class="md-ellipsis">
+      Demo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#biosuefi-utility">
+<span class="md-ellipsis">
+      BIOS/UEFI utility
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -974,7 +994,20 @@
 <article class="md-content__inner md-typeset">
 <h1 id="open-de-biosuefi-setup-utility">Open de BIOS/UEFI Setup Utility</h1>
 <p>Binnen een BIOS/UEFI utility, dat toegankelijk is tijdens het opstarten van de computer, kun je essentiële hardware-instellingen configureren en beheren voordat het besturingssysteem laadt.</p>
+<h2 id="vereisten">Vereisten</h2>
+<ul>
+<li>een computer met een <strong>BIOS of UEFI</strong> (moderne computers hebben meestal UEFI)</li>
+</ul>
+<h2 id="demo">Demo</h2>
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&amp;loop=0&amp;mute=0" title="YouTube video player" width="560"></iframe>
+<h2 id="biosuefi-utility">BIOS/UEFI utility</h2>
+<p>Deze instructies zijn gebaseerd op een HP Z2 pc. Raadpleeg altijd de handleiding van jouw eigen hardware, want de stappen kunnen verschillen.</p>
+<ul>
+<li>Start je pc op.</li>
+<li>Zodra het <code>HP logo</code> verschijnt, druk je één keer op de <span class="keys"><kbd class="key-f10">F10</kbd></span> toets.</li>
+<li>Wacht even. De BIOS/UEFI-instellingen zullen op je scherm verschijnen.</li>
+<li>Nadat je eventuele wijzigingen hebt aangebracht, verlaat je de BIOS/UEFI en bewaar je de instellingen. Meestal doe je dit door op <span class="keys"><kbd class="key-escape">Esc</kbd></span> te drukken en vervolgens de optie <code>Save and Exit</code> te kiezen, of door direct de <code>Save and Exit</code> optie te selecteren (vaak aangeduid met een functietoets zoals <span class="keys"><kbd class="key-f10">F10</kbd></span>). </li>
+</ul>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

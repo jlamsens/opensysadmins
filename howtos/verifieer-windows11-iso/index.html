@@ -783,13 +783,6 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-xmind-linux-mint/">
-<span class="md-ellipsis">
-    Install Xmind 8 on Linux Mint 21
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../windows11-bootable-usb-flash-drive/">
 <span class="md-ellipsis">
     Create a Windows 11 bootable USB flash drive
@@ -972,11 +965,57 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#vereisten">
+<span class="md-ellipsis">
+      Vereisten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo">
+<span class="md-ellipsis">
+      Demo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#vanaf-windows">
 <span class="md-ellipsis">
       Vanaf Windows
     </span>
 </a>
+<nav aria-label="Vanaf Windows" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#open-powershell-als-administrator">
+<span class="md-ellipsis">
+      Open PowerShell als administrator
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#navigeer-naar-de-map-waar-het-iso-bestand-is-opgeslagen">
+<span class="md-ellipsis">
+      Navigeer naar de map waar het ISO-bestand is opgeslagen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bereken-de-sha256-hashwaarde-van-het-iso-bestand">
+<span class="md-ellipsis">
+      Bereken de SHA256-hashwaarde van het ISO-bestand
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vergelijk-de-berekende-hashwaarde-met-de-officiele-waarde-van-microsoft">
+<span class="md-ellipsis">
+      Vergelijk de berekende hashwaarde met de officiële waarde van Microsoft
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#vanaf-linux-mint">
@@ -984,6 +1023,38 @@
       Vanaf Linux Mint
     </span>
 </a>
+<nav aria-label="Vanaf Linux Mint" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#open-de-terminal">
+<span class="md-ellipsis">
+      Open de Terminal
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#navigeer-naar-de-map-waar-het-iso-bestand-is-opgeslagen_1">
+<span class="md-ellipsis">
+      Navigeer naar de map waar het ISO-bestand is opgeslagen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bereken-de-sha256-hashwaarde-van-het-iso-bestand_1">
+<span class="md-ellipsis">
+      Bereken de SHA256-hashwaarde van het ISO-bestand
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vergelijk-de-berekende-hashwaarde-met-de-officiele-waarde-van-microsoft_1">
+<span class="md-ellipsis">
+      Vergelijk de berekende hashwaarde met de officiële waarde van Microsoft
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#conclusie">
@@ -1000,44 +1071,42 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="verifieer-de-authenticiteit-en-integriteit-van-een-windows-11-iso-bestand">Verifieer de authenticiteit en integriteit van een Windows 11 ISO bestand</h1>
-<p>Een gedownload Windows 11 ISO-bestand verifiëren op authenticiteit en integriteit is cruciaal om er zeker van te zijn dat het bestand niet is gewijzigd of beschadigd. Dit doe je door de hashwaarde van het gedownloade bestand te vergelijken met de officiële hashwaarde die door Microsoft wordt verstrekt. Hieronder vind je een stappenplan voor zowel Windows als Linux Mint.</p>
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&amp;loop=0&amp;mute=0" title="YouTube video player" width="560"></iframe>
+<p>Een <a href="../download-windows11-iso/" target="_blank">gedownload Windows 11 ISO-bestand</a> verifiëren op authenticiteit en integriteit is cruciaal om er zeker van te zijn dat het bestand niet is gewijzigd of beschadigd. Dit doe je door de hashwaarde van het gedownloade bestand te vergelijken met de officiële hashwaarde die door Microsoft wordt verstrekt. Hieronder vind je een stappenplan voor zowel Windows als Linux Mint.</p>
+<h2 id="vereisten">Vereisten</h2>
+<ul>
+<li>een <a href="../../tutorials/windows11-linuxmint22-dual-boot-uefi/" target="_blank">PC met Windows of Linux</a></li>
+<li>internet verbinding</li>
+<li>een <a href="../download-windows11-iso/" target="_blank">Windows 11 ISO</a> installatie bestand</li>
+<li>de SHA256-hashwaarde voor de specifieke Windows 11 ISO-versie die je hebt gedownload (Microsoft website)</li>
+</ul>
+<h2 id="demo">Demo</h2>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_VsDvEMNRjo?autoplay=0&amp;loop=0&amp;mute=0" title="YouTube video player" width="560"></iframe>
 <h2 id="vanaf-windows">Vanaf Windows</h2>
-<ol>
-<li>
-<p>Open PowerShell als administrator.</p>
-<ol>
+<h3 id="open-powershell-als-administrator">Open PowerShell als administrator</h3>
+<ul>
 <li>Klik met de rechtermuisknop op de Startknop (of druk op Windows-toets + X).</li>
 <li>Kies "Terminal (Admin)".</li>
-</ol>
-</li>
-<li>
-<p>Navigeer naar de map waar het ISO-bestand is opgeslagen.</p>
-<ol>
-<li>Gebruik het <code>cd</code> commando. Bijvoorbeeld, als je ISO in de map "Downloads" staat</li>
-</ol>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">PS C:\Users\admin&gt;_</label><label for="__tabbed_1_2">output</label></div>
+</ul>
+<h3 id="navigeer-naar-de-map-waar-het-iso-bestand-is-opgeslagen">Navigeer naar de map waar het ISO-bestand is opgeslagen</h3>
+<p>Gebruik het <code>cd</code> commando. Bijvoorbeeld, als je ISO in de map "Downloads" staat</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">PS C:\Users\guru06&gt;_</label><label for="__tabbed_1_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Vervang <code>guru</code> door je daadwerkelijke gebruikersnaam.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>cd C:\Users\guru\Downloads
+<p>In dit voorbeeld ben ik ingelogd met gebruiker <code>guru06</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>cd Downloads
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>PS C:\Users\admin&gt; cd C:\Users\guru\Downloads
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>PS C:\Users\guru\Downloads&gt;
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>PS C:\Users\guru06&gt; cd Downloads
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>PS C:\Users\guru06\Downloads&gt;
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
-</li>
-<li>
-<p>Bereken de SHA256-hashwaarde van het ISO-bestand</p>
-<ol>
-<li>Gebruik het <code>Get-FileHash</code> commando.</li>
-</ol>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">PS C:\Users\admin&gt;_</label><label for="__tabbed_2_2">output</label></div>
+<h3 id="bereken-de-sha256-hashwaarde-van-het-iso-bestand">Bereken de SHA256-hashwaarde van het ISO-bestand</h3>
+<p>Gebruik het <code>Get-FileHash</code> commando.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">PS C:\Users\guru06\Downloads&gt;_</label><label for="__tabbed_2_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Vervang <code>Win11_24H2_English_x64.iso</code> door de exacte naam van je gedownloade ISO-bestand.</p>
@@ -1049,60 +1118,51 @@
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
 <span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>PS C:\Users\guru\Downloads&gt; Get-FileHash -Algorithm SHA256 .\Win11_24H2_English_x64.iso
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>PS C:\Users\guru06\Downloads&gt; Get-FileHash -Algorithm SHA256 .\Win11_24H2_English_x64.iso
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>Algorithm       Hash                                                                   Path
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a>---------       ----                                                                   ----
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>SHA256          C8DBC96B61D04C8B01FAF6CE0794FDF33965C7B350EAA3EB1E6697019902945C       C:\Users\guru\Downloads\Win11_24H2_...
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>SHA256          B56B911BF18A2CEAEB3904D87E7C770BDF92D3099599D61AC2497B91BF190B11       C:\Users\guru06\Downloads\Win...
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>PS C:\Users\guru06\Downloads&gt;
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
-</li>
-<li>
-<p>Vergelijk de berekende hashwaarde met de officiële waarde van Microsoft</p>
-<ol>
+<h3 id="vergelijk-de-berekende-hashwaarde-met-de-officiele-waarde-van-microsoft">Vergelijk de berekende hashwaarde met de officiële waarde van Microsoft</h3>
+<ul>
 <li>Ga naar de officiële Microsoft-website en zoek de SHA256-hashwaarde voor de specifieke Windows 11 ISO-versie die je hebt gedownload.</li>
 <li>Vergelijk de waarde die je in stap 3 bij tabblad "output" hebt staan, teken voor teken, met de officiële waarde.</li>
-</ol>
-</li>
-</ol>
+</ul>
 <h2 id="vanaf-linux-mint">Vanaf Linux Mint</h2>
-<ol>
-<li>
-<p>Open de Terminal</p>
-<ol>
+<h3 id="open-de-terminal">Open de Terminal</h3>
+<ul>
 <li>Je kunt dit doen via het toepassingenmenu (meestal onder "Systeemhulpprogramma's" of door te zoeken naar "Terminal").</li>
 <li>Of gebruik de sneltoets Ctrl + Alt + T.</li>
-</ol>
-</li>
-<li>
-<p>Navigeer naar de map waar het ISO-bestand is opgeslagen</p>
-<ol>
-<li>Gebruik het <code>cd</code> commando. Bijvoorbeeld, als je ISO in de map "Downloads" staat</li>
-</ol>
+</ul>
+<h3 id="navigeer-naar-de-map-waar-het-iso-bestand-is-opgeslagen_1">Navigeer naar de map waar het ISO-bestand is opgeslagen</h3>
+<p>Gebruik het <code>cd</code> commando. Bijvoorbeeld, als je ISO in de map "Downloads" staat</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">guru@hp:~$_</label><label for="__tabbed_3_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>De <code>~</code> staat voor je home-directory.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>cd ~/Downloads 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>cd Downloads 
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>guru@hp:~$ cd ~/Downloads
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>guru@hp:~$ cd Downloads
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>guru@hp:~/Downloads$
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
-</li>
-<li>
-<p>Bereken de SHA256-hashwaarde van het ISO-bestand</p>
-<ol>
-<li>Gebruik het <code>sha256sum</code> commando.</li>
-</ol>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">guru@hp:~$_</label><label for="__tabbed_4_2">output</label></div>
+<h3 id="bereken-de-sha256-hashwaarde-van-het-iso-bestand_1">Bereken de SHA256-hashwaarde van het ISO-bestand</h3>
+<p>Gebruik het <code>sha256sum</code> commando.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">guru@hp:~/Downloads$_</label><label for="__tabbed_4_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Vervang <code>Win11_24H2_English_x64.iso</code> door de exacte naam van je gedownloade ISO-bestand.</p>
@@ -1113,21 +1173,17 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>guru@hp:~/Downloads$ sha256sum Win11_24H2_English_x64.iso
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>c8dbc96b61d04c8b01faf6ce0794fdf33965c7b350eaa3eb1e6697019902945c  Win11_24H2_English_x64.iso
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>b56b911bf18a2ceaeb3904d87e7c770bdf92d3099599d61ac2497b91bf190b11  Win11_24H2_English_x64.iso
 <a id="__codelineno-7-3" name="__codelineno-7-3"></a>guru@hp:~/Downloads$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
-</li>
-<li>
-<p>Vergelijk de berekende hashwaarde met de officiële waarde van Microsoft</p>
-<ol>
+<h3 id="vergelijk-de-berekende-hashwaarde-met-de-officiele-waarde-van-microsoft_1">Vergelijk de berekende hashwaarde met de officiële waarde van Microsoft</h3>
+<ul>
 <li>Ga naar de officiële Microsoft-website en zoek de SHA256-hashwaarde voor de specifieke Windows 11 ISO-versie die je hebt gedownload.</li>
 <li>Vergelijk de waarde die je in stap 3 bij tabblad "output" hebt staan, teken voor teken, met de officiële waarde.</li>
-</ol>
-</li>
-</ol>
+</ul>
 <h2 id="conclusie">Conclusie</h2>
 <p>Als de hashwaarden exact overeenkomen, is het ISO-bestand authentiek en integer. Je kunt erop vertrouwen dat het niet is gewijzigd of beschadigd.</p>
 <p>Als de hashwaarden niet overeenkomen, is het ISO-bestand waarschijnlijk beschadigd tijdens het downloaden, of, in zeldzame gevallen, gemanipuleerd. <a href="../download-windows11-iso/">Download het bestand</a> opnieuw en herhaal het verificatieproces.</p>
