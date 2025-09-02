@@ -1014,9 +1014,16 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#reboot-en-start-virtualbox">
+<a class="md-nav__link" href="#reboot">
 <span class="md-ellipsis">
-      Reboot en start VirtualBox
+      Reboot
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#start-virtualbox">
+<span class="md-ellipsis">
+      Start VirtualBox
     </span>
 </a>
 </li>
@@ -1028,7 +1035,7 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="setup-virtualbox-7-op-linux-mint-22-distributie-repository">Setup VirtualBox 7 op Linux Mint 22 (distributie repository)</h1>
-<p>VirtualBox stelt je in staat om andere besturingssystemen (zoals Windows of een andere Linux-distributie) te draaien als virtuele machines binnen je bestaande Linux Mint 22-omgeving. Dit gebeurt in een geïsoleerde en veilige virtuele omgeving, waardoor je software kunt testen of applicaties kunt gebruiken die niet native op Linux Mint draaien, zonder je hoofdinstallatie te beïnvloeden.</p>
+<p>VirtualBox stelt je in staat om andere besturingssystemen (zoals Windows of een andere Linux-distributie) te draaien als virtuele machines binnen bv. een bestaande Linux Mint 22-omgeving. Dit gebeurt in een geïsoleerde en veilige virtuele omgeving, waardoor je software kunt testen of applicaties kunt gebruiken die niet native op Linux Mint draaien, zonder je hoofdinstallatie te beïnvloeden.</p>
 <h2 id="vereisten">Vereisten</h2>
 <ul>
 <li>een <a href="../../tutorials/windows11-linuxmint22-dual-boot-uefi/" target="_blank">PC met Linux Mint 22</a></li>
@@ -1059,17 +1066,17 @@
 <span class="normal"><a href="#__codelineno-1-13">13</a></span>
 <span class="normal"><a href="#__codelineno-1-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>guru@hp:~$ sudo apt update
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>[sudo] password for guru:     
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>Ign:2 https://linuxmint-packages.mirror.liteserver.nl xia InRelease            
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>Hit:3 https://ppa.launchpadcontent.net/obsproject/obs-studio/ubuntu noble InRelease
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>Hit:4 http://archive.ubuntu.com/ubuntu noble InRelease
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>Hit:5 https://linuxmint-packages.mirror.liteserver.nl xia Release
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>Hit:6 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Ign:1 http://linux-mint.froonix.org xia InRelease
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>Hit:2 http://linux-mint.froonix.org xia Release                                                                                                  
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>Hit:3 http://security.ubuntu.com/ubuntu noble-security InRelease                                                                                 
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>Hit:4 http://archive.ubuntu.com/ubuntu noble InRelease                                                                                           
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>Hit:5 https://download.virtualbox.org/virtualbox/debian noble InRelease
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>Hit:7 http://archive.ubuntu.com/ubuntu noble-updates InRelease
 <a id="__codelineno-1-9" name="__codelineno-1-9"></a>Hit:8 http://archive.ubuntu.com/ubuntu noble-backports InRelease
 <a id="__codelineno-1-10" name="__codelineno-1-10"></a>Reading package lists... Done
 <a id="__codelineno-1-11" name="__codelineno-1-11"></a>Building dependency tree... Done
 <a id="__codelineno-1-12" name="__codelineno-1-12"></a>Reading state information... Done
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>3 packages can be upgraded. Run 'apt list --upgradable' to see them.
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>All packages are up to date.
 <a id="__codelineno-1-14" name="__codelineno-1-14"></a>guru@hp:~$ 
 </code></pre></div></td></tr></table></div>
 </div>
@@ -1426,7 +1433,7 @@
 </div>
 </input></input></div>
 <h2 id="installeer-extension-pack-optioneel">Installeer Extension Pack (optioneel)</h2>
-<p>Het installeren van het <a href="../../explanations/todo/">Extension Pack</a> is nodig om extra functionaliteit zoals USB 2.0/3.0-ondersteuning, RDP-server, disk-encryptie en PXE boot toe te voegen aan VirtualBox.</p>
+<p>Installeren van het <a href="../../explanations/todo/" target="_blank">Extension Pack</a> is nodig om extra functionaliteit zoals USB 2.0/3.0-ondersteuning, RDP-server, disk-encryptie en PXE boot toe te voegen aan VirtualBox.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">guru@hp:~$_</label><label for="__tabbed_4_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1553,7 +1560,22 @@
 </div>
 </div>
 </input></input></div>
-<h2 id="reboot-en-start-virtualbox">Reboot en start VirtualBox</h2>
+<h2 id="reboot">Reboot</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">guru@hp:~$_</label><label for="__tabbed_7_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>sudo reboot
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>guru@hp:~$ sudo reboot
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="start-virtualbox">Start VirtualBox</h2>
+<p>Klik op <code>Help -&gt; About VirtualBox</code> en controleer de versie.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="check-version.png"><img src="check-version.png"/></a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

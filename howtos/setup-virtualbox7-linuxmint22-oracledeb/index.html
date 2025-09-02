@@ -10,7 +10,7 @@
 <link href="https://www.opensysadmins.com/howtos/setup-virtualbox7-linuxmint22-oracledeb/" rel="canonical"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.44" name="generator"/>
-<title>... - OpenSysAdmins</title>
+<title>Setup VirtualBox 7 op Linux Mint 22 (.deb pakket) - OpenSysAdmins</title>
 <link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#setup-virtualbox-7-op-linux-mint-22-deb-pakket">
           Skip to content
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              ...
+              Setup VirtualBox 7 op Linux Mint 22 (.deb pakket)
             
           </span>
 </div>
@@ -965,11 +965,29 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#uitleg-verschil-tussen-apt-key-en-gpg-dearmor">
+<a class="md-nav__link" href="#vereisten">
 <span class="md-ellipsis">
-      🔐 Uitleg: verschil tussen apt-key en gpg --dearmor
+      Vereisten
     </span>
 </a>
+<nav aria-label="Vereisten" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#download-pakket">
+<span class="md-ellipsis">
+      Download pakket
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installeer-het-pakket">
+<span class="md-ellipsis">
+      Installeer het pakket
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -978,54 +996,460 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="_1">...</h1>
-<h4 id="installatie-via-oracle-website-deb-pakket">Installatie via Oracle-website (.deb-pakket)</h4>
+<h1 id="setup-virtualbox-7-op-linux-mint-22-deb-pakket">Setup VirtualBox 7 op Linux Mint 22 (.deb pakket)</h1>
+<p>VirtualBox stelt je in staat om andere besturingssystemen (zoals Windows of een andere Linux-distributie) te draaien als virtuele machines binnen bv. een bestaande Linux Mint 22-omgeving. Dit gebeurt in een geïsoleerde en veilige virtuele omgeving, waardoor je software kunt testen of applicaties kunt gebruiken die niet native op Linux Mint draaien, zonder je hoofdinstallatie te beïnvloeden.</p>
+<p>Voordelen van de installatie via een .deb pakket t.o.v. installatie <a href="../setup-virtualbox7-linuxmint22-distributierepo/" target="_blank">methode1</a> of <a href="../setup-virtualbox7-linuxmint22-oraclerepo/" target="_blank">methode2</a>:</p>
 <ul>
-<li><strong>Flexibel</strong>: kies manueel een specifieke versie  </li>
-<li><strong>Voordeel</strong>: geen afhankelijkheid van repo's  </li>
-<li>
-<p><strong>Nadeel</strong>: geen automatische updates via APT</p>
-</li>
-<li>
-<p>Download het <code>.deb</code>-pakket van de gewenste versie vanaf <a href="https://www.virtualbox.org/wiki/Download_Old_Builds">https://www.virtualbox.org/wiki/Download_Old_Builds</a></p>
-</li>
-<li>Installeer het pakket:</li>
+<li>kies manueel een specifieke versie  </li>
+<li>geen afhankelijkheid van repo's</li>
+<li>vaste versie; geen automatische updates via APT</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>virtualbox-&lt;versie&gt;.deb
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>-f<span class="w"> </span>install
+<h2 id="vereisten">Vereisten</h2>
+<ul>
+<li>een <a href="../../tutorials/windows11-linuxmint22-dual-boot-uefi/" target="_blank">PC met Linux Mint 22</a></li>
+<li>internet verbinding</li>
+</ul>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&amp;loop=0&amp;mute=0" title="YouTube video player" width="560"></iframe>
+<h3 id="download-pakket">Download pakket</h3>
+<p>Download het <code>.deb</code>-pakket van de gewenste versie vanaf <a href="https://www.virtualbox.org/wiki/Download_Old_Builds">https://www.virtualbox.org/wiki/Download_Old_Builds</a></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">guru@hp:~/Downloads$_</label><label for="__tabbed_1_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Voorbeeld: versie 7.1.10</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>wget https://download.virtualbox.org/virtualbox/7.1.10/virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb
 </code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>(Optional) step explanation.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>guru@hp:~/Downloads$ wget https://download.virtualbox.org/virtualbox/7.1.10/virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>--2025-09-02 16:06:22--  https://download.virtualbox.org/virtualbox/7.1.10/virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Resolving download.virtualbox.org (download.virtualbox.org)... 23.12.148.117
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>Connecting to download.virtualbox.org (download.virtualbox.org)|23.12.148.117|:443... connected.
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>HTTP request sent, awaiting response... 200 OK
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>Length: 109183888 (104M) [text/plain]
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>Saving to: ‘virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb’
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb         100%[=========================================================================================================================================&gt;] 104,12M  38,6MB/s    in 2,7s    
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>2025-09-02 16:06:25 (38,6 MB/s) - ‘virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb’ saved [109183888/109183888]
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>guru@hp:~/Downloads$
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h3 id="installeer-het-pakket">Installeer het pakket</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">guru@hp:~$_</label><label for="__tabbed_2_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(Optional) step explanation.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo apt install ./virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>(Optional) step explanation.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">  1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">  2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">  3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">  4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">  5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">  6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">  7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">  8</a></span>
+<span class="normal"><a href="#__codelineno-3-9">  9</a></span>
+<span class="normal"><a href="#__codelineno-3-10"> 10</a></span>
+<span class="normal"><a href="#__codelineno-3-11"> 11</a></span>
+<span class="normal"><a href="#__codelineno-3-12"> 12</a></span>
+<span class="normal"><a href="#__codelineno-3-13"> 13</a></span>
+<span class="normal"><a href="#__codelineno-3-14"> 14</a></span>
+<span class="normal"><a href="#__codelineno-3-15"> 15</a></span>
+<span class="normal"><a href="#__codelineno-3-16"> 16</a></span>
+<span class="normal"><a href="#__codelineno-3-17"> 17</a></span>
+<span class="normal"><a href="#__codelineno-3-18"> 18</a></span>
+<span class="normal"><a href="#__codelineno-3-19"> 19</a></span>
+<span class="normal"><a href="#__codelineno-3-20"> 20</a></span>
+<span class="normal"><a href="#__codelineno-3-21"> 21</a></span>
+<span class="normal"><a href="#__codelineno-3-22"> 22</a></span>
+<span class="normal"><a href="#__codelineno-3-23"> 23</a></span>
+<span class="normal"><a href="#__codelineno-3-24"> 24</a></span>
+<span class="normal"><a href="#__codelineno-3-25"> 25</a></span>
+<span class="normal"><a href="#__codelineno-3-26"> 26</a></span>
+<span class="normal"><a href="#__codelineno-3-27"> 27</a></span>
+<span class="normal"><a href="#__codelineno-3-28"> 28</a></span>
+<span class="normal"><a href="#__codelineno-3-29"> 29</a></span>
+<span class="normal"><a href="#__codelineno-3-30"> 30</a></span>
+<span class="normal"><a href="#__codelineno-3-31"> 31</a></span>
+<span class="normal"><a href="#__codelineno-3-32"> 32</a></span>
+<span class="normal"><a href="#__codelineno-3-33"> 33</a></span>
+<span class="normal"><a href="#__codelineno-3-34"> 34</a></span>
+<span class="normal"><a href="#__codelineno-3-35"> 35</a></span>
+<span class="normal"><a href="#__codelineno-3-36"> 36</a></span>
+<span class="normal"><a href="#__codelineno-3-37"> 37</a></span>
+<span class="normal"><a href="#__codelineno-3-38"> 38</a></span>
+<span class="normal"><a href="#__codelineno-3-39"> 39</a></span>
+<span class="normal"><a href="#__codelineno-3-40"> 40</a></span>
+<span class="normal"><a href="#__codelineno-3-41"> 41</a></span>
+<span class="normal"><a href="#__codelineno-3-42"> 42</a></span>
+<span class="normal"><a href="#__codelineno-3-43"> 43</a></span>
+<span class="normal"><a href="#__codelineno-3-44"> 44</a></span>
+<span class="normal"><a href="#__codelineno-3-45"> 45</a></span>
+<span class="normal"><a href="#__codelineno-3-46"> 46</a></span>
+<span class="normal"><a href="#__codelineno-3-47"> 47</a></span>
+<span class="normal"><a href="#__codelineno-3-48"> 48</a></span>
+<span class="normal"><a href="#__codelineno-3-49"> 49</a></span>
+<span class="normal"><a href="#__codelineno-3-50"> 50</a></span>
+<span class="normal"><a href="#__codelineno-3-51"> 51</a></span>
+<span class="normal"><a href="#__codelineno-3-52"> 52</a></span>
+<span class="normal"><a href="#__codelineno-3-53"> 53</a></span>
+<span class="normal"><a href="#__codelineno-3-54"> 54</a></span>
+<span class="normal"><a href="#__codelineno-3-55"> 55</a></span>
+<span class="normal"><a href="#__codelineno-3-56"> 56</a></span>
+<span class="normal"><a href="#__codelineno-3-57"> 57</a></span>
+<span class="normal"><a href="#__codelineno-3-58"> 58</a></span>
+<span class="normal"><a href="#__codelineno-3-59"> 59</a></span>
+<span class="normal"><a href="#__codelineno-3-60"> 60</a></span>
+<span class="normal"><a href="#__codelineno-3-61"> 61</a></span>
+<span class="normal"><a href="#__codelineno-3-62"> 62</a></span>
+<span class="normal"><a href="#__codelineno-3-63"> 63</a></span>
+<span class="normal"><a href="#__codelineno-3-64"> 64</a></span>
+<span class="normal"><a href="#__codelineno-3-65"> 65</a></span>
+<span class="normal"><a href="#__codelineno-3-66"> 66</a></span>
+<span class="normal"><a href="#__codelineno-3-67"> 67</a></span>
+<span class="normal"><a href="#__codelineno-3-68"> 68</a></span>
+<span class="normal"><a href="#__codelineno-3-69"> 69</a></span>
+<span class="normal"><a href="#__codelineno-3-70"> 70</a></span>
+<span class="normal"><a href="#__codelineno-3-71"> 71</a></span>
+<span class="normal"><a href="#__codelineno-3-72"> 72</a></span>
+<span class="normal"><a href="#__codelineno-3-73"> 73</a></span>
+<span class="normal"><a href="#__codelineno-3-74"> 74</a></span>
+<span class="normal"><a href="#__codelineno-3-75"> 75</a></span>
+<span class="normal"><a href="#__codelineno-3-76"> 76</a></span>
+<span class="normal"><a href="#__codelineno-3-77"> 77</a></span>
+<span class="normal"><a href="#__codelineno-3-78"> 78</a></span>
+<span class="normal"><a href="#__codelineno-3-79"> 79</a></span>
+<span class="normal"><a href="#__codelineno-3-80"> 80</a></span>
+<span class="normal"><a href="#__codelineno-3-81"> 81</a></span>
+<span class="normal"><a href="#__codelineno-3-82"> 82</a></span>
+<span class="normal"><a href="#__codelineno-3-83"> 83</a></span>
+<span class="normal"><a href="#__codelineno-3-84"> 84</a></span>
+<span class="normal"><a href="#__codelineno-3-85"> 85</a></span>
+<span class="normal"><a href="#__codelineno-3-86"> 86</a></span>
+<span class="normal"><a href="#__codelineno-3-87"> 87</a></span>
+<span class="normal"><a href="#__codelineno-3-88"> 88</a></span>
+<span class="normal"><a href="#__codelineno-3-89"> 89</a></span>
+<span class="normal"><a href="#__codelineno-3-90"> 90</a></span>
+<span class="normal"><a href="#__codelineno-3-91"> 91</a></span>
+<span class="normal"><a href="#__codelineno-3-92"> 92</a></span>
+<span class="normal"><a href="#__codelineno-3-93"> 93</a></span>
+<span class="normal"><a href="#__codelineno-3-94"> 94</a></span>
+<span class="normal"><a href="#__codelineno-3-95"> 95</a></span>
+<span class="normal"><a href="#__codelineno-3-96"> 96</a></span>
+<span class="normal"><a href="#__codelineno-3-97"> 97</a></span>
+<span class="normal"><a href="#__codelineno-3-98"> 98</a></span>
+<span class="normal"><a href="#__codelineno-3-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-3-100">100</a></span>
+<span class="normal"><a href="#__codelineno-3-101">101</a></span>
+<span class="normal"><a href="#__codelineno-3-102">102</a></span>
+<span class="normal"><a href="#__codelineno-3-103">103</a></span>
+<span class="normal"><a href="#__codelineno-3-104">104</a></span>
+<span class="normal"><a href="#__codelineno-3-105">105</a></span>
+<span class="normal"><a href="#__codelineno-3-106">106</a></span>
+<span class="normal"><a href="#__codelineno-3-107">107</a></span>
+<span class="normal"><a href="#__codelineno-3-108">108</a></span>
+<span class="normal"><a href="#__codelineno-3-109">109</a></span>
+<span class="normal"><a href="#__codelineno-3-110">110</a></span>
+<span class="normal"><a href="#__codelineno-3-111">111</a></span>
+<span class="normal"><a href="#__codelineno-3-112">112</a></span>
+<span class="normal"><a href="#__codelineno-3-113">113</a></span>
+<span class="normal"><a href="#__codelineno-3-114">114</a></span>
+<span class="normal"><a href="#__codelineno-3-115">115</a></span>
+<span class="normal"><a href="#__codelineno-3-116">116</a></span>
+<span class="normal"><a href="#__codelineno-3-117">117</a></span>
+<span class="normal"><a href="#__codelineno-3-118">118</a></span>
+<span class="normal"><a href="#__codelineno-3-119">119</a></span>
+<span class="normal"><a href="#__codelineno-3-120">120</a></span>
+<span class="normal"><a href="#__codelineno-3-121">121</a></span>
+<span class="normal"><a href="#__codelineno-3-122">122</a></span>
+<span class="normal"><a href="#__codelineno-3-123">123</a></span>
+<span class="normal"><a href="#__codelineno-3-124">124</a></span>
+<span class="normal"><a href="#__codelineno-3-125">125</a></span>
+<span class="normal"><a href="#__codelineno-3-126">126</a></span>
+<span class="normal"><a href="#__codelineno-3-127">127</a></span>
+<span class="normal"><a href="#__codelineno-3-128">128</a></span>
+<span class="normal"><a href="#__codelineno-3-129">129</a></span>
+<span class="normal"><a href="#__codelineno-3-130">130</a></span>
+<span class="normal"><a href="#__codelineno-3-131">131</a></span>
+<span class="normal"><a href="#__codelineno-3-132">132</a></span>
+<span class="normal"><a href="#__codelineno-3-133">133</a></span>
+<span class="normal"><a href="#__codelineno-3-134">134</a></span>
+<span class="normal"><a href="#__codelineno-3-135">135</a></span>
+<span class="normal"><a href="#__codelineno-3-136">136</a></span>
+<span class="normal"><a href="#__codelineno-3-137">137</a></span>
+<span class="normal"><a href="#__codelineno-3-138">138</a></span>
+<span class="normal"><a href="#__codelineno-3-139">139</a></span>
+<span class="normal"><a href="#__codelineno-3-140">140</a></span>
+<span class="normal"><a href="#__codelineno-3-141">141</a></span>
+<span class="normal"><a href="#__codelineno-3-142">142</a></span>
+<span class="normal"><a href="#__codelineno-3-143">143</a></span>
+<span class="normal"><a href="#__codelineno-3-144">144</a></span>
+<span class="normal"><a href="#__codelineno-3-145">145</a></span>
+<span class="normal"><a href="#__codelineno-3-146">146</a></span>
+<span class="normal"><a href="#__codelineno-3-147">147</a></span>
+<span class="normal"><a href="#__codelineno-3-148">148</a></span>
+<span class="normal"><a href="#__codelineno-3-149">149</a></span>
+<span class="normal"><a href="#__codelineno-3-150">150</a></span>
+<span class="normal"><a href="#__codelineno-3-151">151</a></span>
+<span class="normal"><a href="#__codelineno-3-152">152</a></span>
+<span class="normal"><a href="#__codelineno-3-153">153</a></span>
+<span class="normal"><a href="#__codelineno-3-154">154</a></span>
+<span class="normal"><a href="#__codelineno-3-155">155</a></span>
+<span class="normal"><a href="#__codelineno-3-156">156</a></span>
+<span class="normal"><a href="#__codelineno-3-157">157</a></span>
+<span class="normal"><a href="#__codelineno-3-158">158</a></span>
+<span class="normal"><a href="#__codelineno-3-159">159</a></span>
+<span class="normal"><a href="#__codelineno-3-160">160</a></span>
+<span class="normal"><a href="#__codelineno-3-161">161</a></span>
+<span class="normal"><a href="#__codelineno-3-162">162</a></span>
+<span class="normal"><a href="#__codelineno-3-163">163</a></span>
+<span class="normal"><a href="#__codelineno-3-164">164</a></span>
+<span class="normal"><a href="#__codelineno-3-165">165</a></span>
+<span class="normal"><a href="#__codelineno-3-166">166</a></span>
+<span class="normal"><a href="#__codelineno-3-167">167</a></span>
+<span class="normal"><a href="#__codelineno-3-168">168</a></span>
+<span class="normal"><a href="#__codelineno-3-169">169</a></span>
+<span class="normal"><a href="#__codelineno-3-170">170</a></span>
+<span class="normal"><a href="#__codelineno-3-171">171</a></span>
+<span class="normal"><a href="#__codelineno-3-172">172</a></span>
+<span class="normal"><a href="#__codelineno-3-173">173</a></span>
+<span class="normal"><a href="#__codelineno-3-174">174</a></span>
+<span class="normal"><a href="#__codelineno-3-175">175</a></span>
+<span class="normal"><a href="#__codelineno-3-176">176</a></span>
+<span class="normal"><a href="#__codelineno-3-177">177</a></span>
+<span class="normal"><a href="#__codelineno-3-178">178</a></span>
+<span class="normal"><a href="#__codelineno-3-179">179</a></span>
+<span class="normal"><a href="#__codelineno-3-180">180</a></span>
+<span class="normal"><a href="#__codelineno-3-181">181</a></span>
+<span class="normal"><a href="#__codelineno-3-182">182</a></span>
+<span class="normal"><a href="#__codelineno-3-183">183</a></span>
+<span class="normal"><a href="#__codelineno-3-184">184</a></span>
+<span class="normal"><a href="#__codelineno-3-185">185</a></span>
+<span class="normal"><a href="#__codelineno-3-186">186</a></span>
+<span class="normal"><a href="#__codelineno-3-187">187</a></span>
+<span class="normal"><a href="#__codelineno-3-188">188</a></span>
+<span class="normal"><a href="#__codelineno-3-189">189</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>guru@hp:~/Downloads$ sudo apt install ./virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb -y
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>Reading package lists... Done
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>Building dependency tree... Done
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>Reading state information... Done
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>Note, selecting 'virtualbox-7.1' instead of './virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb'
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>The following additional packages will be installed:
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>  libb2-1 liblzf1 libqt6core6t64 libqt6dbus6t64 libqt6gui6t64 libqt6help6 libqt6network6t64 libqt6opengl6t64 libqt6printsupport6t64 libqt6qml6 libqt6qmlmodels6 libqt6quick6 libqt6sql6-sqlite libqt6sql6t64 libqt6statemachine6
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>  libqt6waylandclient6 libqt6waylandcompositor6 libqt6waylandeglclienthwintegration6 libqt6waylandeglcompositorhwintegration6 libqt6widgets6t64 libqt6wlshellintegration6 libqt6xml6t64 libsdl-ttf2.0-0 libsdl1.2debian libtpms0 libts0t64
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>  qt6-gtk-platformtheme qt6-qpa-plugins qt6-translations-l10n qt6-wayland
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>Suggested packages:
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>  qt6-qmltooling-plugins
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>The following NEW packages will be installed:
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>  libb2-1 liblzf1 libqt6core6t64 libqt6dbus6t64 libqt6gui6t64 libqt6help6 libqt6network6t64 libqt6opengl6t64 libqt6printsupport6t64 libqt6qml6 libqt6qmlmodels6 libqt6quick6 libqt6sql6-sqlite libqt6sql6t64 libqt6statemachine6
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>  libqt6waylandclient6 libqt6waylandcompositor6 libqt6waylandeglclienthwintegration6 libqt6waylandeglcompositorhwintegration6 libqt6widgets6t64 libqt6wlshellintegration6 libqt6xml6t64 libsdl-ttf2.0-0 libsdl1.2debian libtpms0 libts0t64
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>  qt6-gtk-platformtheme qt6-qpa-plugins qt6-translations-l10n qt6-wayland virtualbox-7.1
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a>0 upgraded, 31 newly installed, 0 to remove and 0 not upgraded.
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a>Need to get 17,1 MB/126 MB of archives.
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a>After this operation, 313 MB of additional disk space will be used.
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a>Get:1 http://archive.ubuntu.com/ubuntu noble/universe amd64 liblzf1 amd64 3.6-4 [7.624 B]
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a>Get:2 http://archive.ubuntu.com/ubuntu noble/universe amd64 libb2-1 amd64 0.98.1-1.1build1 [45,0 kB]
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a>Get:3 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6core6t64 amd64 6.4.2+dfsg-21.1build5 [1.789 kB]
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a>Get:4 /home/guru/Downloads/virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb virtualbox-7.1 amd64 7.1.10-169112~Ubuntu~noble [109 MB]
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a>Get:5 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6dbus6t64 amd64 6.4.2+dfsg-21.1build5 [267 kB]
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a>Get:6 http://archive.ubuntu.com/ubuntu noble/universe amd64 libts0t64 amd64 1.22-1.1build1 [63,8 kB]
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a>Get:7 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6gui6t64 amd64 6.4.2+dfsg-21.1build5 [3.119 kB]
+<a id="__codelineno-3-26" name="__codelineno-3-26"></a>Get:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6sql6t64 amd64 6.4.2+dfsg-21.1build5 [141 kB]
+<a id="__codelineno-3-27" name="__codelineno-3-27"></a>Get:9 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6widgets6t64 amd64 6.4.2+dfsg-21.1build5 [2.648 kB]
+<a id="__codelineno-3-28" name="__codelineno-3-28"></a>Get:10 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6help6 amd64 6.4.2-3build3 [189 kB]
+<a id="__codelineno-3-29" name="__codelineno-3-29"></a>Get:11 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6printsupport6t64 amd64 6.4.2+dfsg-21.1build5 [222 kB]
+<a id="__codelineno-3-30" name="__codelineno-3-30"></a>Get:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6statemachine6 amd64 6.4.2-4build2 [128 kB]
+<a id="__codelineno-3-31" name="__codelineno-3-31"></a>Get:13 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6xml6t64 amd64 6.4.2+dfsg-21.1build5 [75,9 kB]
+<a id="__codelineno-3-32" name="__codelineno-3-32"></a>Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libtpms0 amd64 0.9.3-0ubuntu4.24.04.1 [373 kB]
+<a id="__codelineno-3-33" name="__codelineno-3-33"></a>Get:15 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6network6t64 amd64 6.4.2+dfsg-21.1build5 [740 kB]
+<a id="__codelineno-3-34" name="__codelineno-3-34"></a>Get:16 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6opengl6t64 amd64 6.4.2+dfsg-21.1build5 [420 kB]
+<a id="__codelineno-3-35" name="__codelineno-3-35"></a>Get:17 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6qml6 amd64 6.4.2+dfsg-4build3 [1.619 kB]
+<a id="__codelineno-3-36" name="__codelineno-3-36"></a>Get:18 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6qmlmodels6 amd64 6.4.2+dfsg-4build3 [267 kB]
+<a id="__codelineno-3-37" name="__codelineno-3-37"></a>Get:19 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6quick6 amd64 6.4.2+dfsg-4build3 [2.001 kB]
+<a id="__codelineno-3-38" name="__codelineno-3-38"></a>Get:20 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6sql6-sqlite amd64 6.4.2+dfsg-21.1build5 [57,8 kB]
+<a id="__codelineno-3-39" name="__codelineno-3-39"></a>Get:21 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6waylandclient6 amd64 6.4.2-5build3 [251 kB]
+<a id="__codelineno-3-40" name="__codelineno-3-40"></a>Get:22 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6waylandcompositor6 amd64 6.4.2-5build3 [427 kB]
+<a id="__codelineno-3-41" name="__codelineno-3-41"></a>Get:23 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6waylandeglclienthwintegration6 amd64 6.4.2-5build3 [19,5 kB]
+<a id="__codelineno-3-42" name="__codelineno-3-42"></a>Get:24 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6waylandeglcompositorhwintegration6 amd64 6.4.2-5build3 [15,2 kB]
+<a id="__codelineno-3-43" name="__codelineno-3-43"></a>Get:25 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6wlshellintegration6 amd64 6.4.2-5build3 [38,0 kB]
+<a id="__codelineno-3-44" name="__codelineno-3-44"></a>Get:26 http://archive.ubuntu.com/ubuntu noble/universe amd64 libsdl1.2debian amd64 1.2.68-2 [101 kB]
+<a id="__codelineno-3-45" name="__codelineno-3-45"></a>Get:27 http://archive.ubuntu.com/ubuntu noble/universe amd64 libsdl-ttf2.0-0 amd64 2.0.11-6 [15,1 kB]
+<a id="__codelineno-3-46" name="__codelineno-3-46"></a>Get:28 http://archive.ubuntu.com/ubuntu noble/universe amd64 qt6-gtk-platformtheme amd64 6.4.2+dfsg-21.1build5 [55,1 kB]
+<a id="__codelineno-3-47" name="__codelineno-3-47"></a>Get:29 http://archive.ubuntu.com/ubuntu noble/universe amd64 qt6-qpa-plugins amd64 6.4.2+dfsg-21.1build5 [89,3 kB]
+<a id="__codelineno-3-48" name="__codelineno-3-48"></a>Get:30 http://archive.ubuntu.com/ubuntu noble/universe amd64 qt6-translations-l10n all 6.4.2-1 [1.761 kB]
+<a id="__codelineno-3-49" name="__codelineno-3-49"></a>Get:31 http://archive.ubuntu.com/ubuntu noble/universe amd64 qt6-wayland amd64 6.4.2-5build3 [127 kB]
+<a id="__codelineno-3-50" name="__codelineno-3-50"></a>Fetched 17,1 MB in 3s (5.906 kB/s)     
+<a id="__codelineno-3-51" name="__codelineno-3-51"></a>Extracting templates from packages: 100%
+<a id="__codelineno-3-52" name="__codelineno-3-52"></a>Preconfiguring packages ...
+<a id="__codelineno-3-53" name="__codelineno-3-53"></a>Selecting previously unselected package liblzf1:amd64.
+<a id="__codelineno-3-54" name="__codelineno-3-54"></a>(Reading database ... 530479 files and directories currently installed.)
+<a id="__codelineno-3-55" name="__codelineno-3-55"></a>Preparing to unpack .../00-liblzf1_3.6-4_amd64.deb ...
+<a id="__codelineno-3-56" name="__codelineno-3-56"></a>Unpacking liblzf1:amd64 (3.6-4) ...
+<a id="__codelineno-3-57" name="__codelineno-3-57"></a>Selecting previously unselected package libb2-1:amd64.
+<a id="__codelineno-3-58" name="__codelineno-3-58"></a>Preparing to unpack .../01-libb2-1_0.98.1-1.1build1_amd64.deb ...
+<a id="__codelineno-3-59" name="__codelineno-3-59"></a>Unpacking libb2-1:amd64 (0.98.1-1.1build1) ...
+<a id="__codelineno-3-60" name="__codelineno-3-60"></a>Selecting previously unselected package libqt6core6t64:amd64.
+<a id="__codelineno-3-61" name="__codelineno-3-61"></a>Preparing to unpack .../02-libqt6core6t64_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-3-62" name="__codelineno-3-62"></a>Unpacking libqt6core6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-63" name="__codelineno-3-63"></a>Selecting previously unselected package libqt6dbus6t64:amd64.
+<a id="__codelineno-3-64" name="__codelineno-3-64"></a>Preparing to unpack .../03-libqt6dbus6t64_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-3-65" name="__codelineno-3-65"></a>Unpacking libqt6dbus6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-66" name="__codelineno-3-66"></a>Selecting previously unselected package libts0t64:amd64.
+<a id="__codelineno-3-67" name="__codelineno-3-67"></a>Preparing to unpack .../04-libts0t64_1.22-1.1build1_amd64.deb ...
+<a id="__codelineno-3-68" name="__codelineno-3-68"></a>Unpacking libts0t64:amd64 (1.22-1.1build1) ...
+<a id="__codelineno-3-69" name="__codelineno-3-69"></a>Selecting previously unselected package libqt6gui6t64:amd64.
+<a id="__codelineno-3-70" name="__codelineno-3-70"></a>Preparing to unpack .../05-libqt6gui6t64_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-3-71" name="__codelineno-3-71"></a>Unpacking libqt6gui6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-72" name="__codelineno-3-72"></a>Selecting previously unselected package libqt6sql6t64:amd64.
+<a id="__codelineno-3-73" name="__codelineno-3-73"></a>Preparing to unpack .../06-libqt6sql6t64_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-3-74" name="__codelineno-3-74"></a>Unpacking libqt6sql6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-75" name="__codelineno-3-75"></a>Selecting previously unselected package libqt6widgets6t64:amd64.
+<a id="__codelineno-3-76" name="__codelineno-3-76"></a>Preparing to unpack .../07-libqt6widgets6t64_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-3-77" name="__codelineno-3-77"></a>Unpacking libqt6widgets6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-78" name="__codelineno-3-78"></a>Selecting previously unselected package libqt6help6:amd64.
+<a id="__codelineno-3-79" name="__codelineno-3-79"></a>Preparing to unpack .../08-libqt6help6_6.4.2-3build3_amd64.deb ...
+<a id="__codelineno-3-80" name="__codelineno-3-80"></a>Unpacking libqt6help6:amd64 (6.4.2-3build3) ...
+<a id="__codelineno-3-81" name="__codelineno-3-81"></a>Selecting previously unselected package libqt6printsupport6t64:amd64.
+<a id="__codelineno-3-82" name="__codelineno-3-82"></a>Preparing to unpack .../09-libqt6printsupport6t64_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-3-83" name="__codelineno-3-83"></a>Unpacking libqt6printsupport6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-84" name="__codelineno-3-84"></a>Selecting previously unselected package libqt6statemachine6:amd64.
+<a id="__codelineno-3-85" name="__codelineno-3-85"></a>Preparing to unpack .../10-libqt6statemachine6_6.4.2-4build2_amd64.deb ...
+<a id="__codelineno-3-86" name="__codelineno-3-86"></a>Unpacking libqt6statemachine6:amd64 (6.4.2-4build2) ...
+<a id="__codelineno-3-87" name="__codelineno-3-87"></a>Selecting previously unselected package libqt6xml6t64:amd64.
+<a id="__codelineno-3-88" name="__codelineno-3-88"></a>Preparing to unpack .../11-libqt6xml6t64_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-3-89" name="__codelineno-3-89"></a>Unpacking libqt6xml6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-90" name="__codelineno-3-90"></a>Selecting previously unselected package libtpms0:amd64.
+<a id="__codelineno-3-91" name="__codelineno-3-91"></a>Preparing to unpack .../12-libtpms0_0.9.3-0ubuntu4.24.04.1_amd64.deb ...
+<a id="__codelineno-3-92" name="__codelineno-3-92"></a>Unpacking libtpms0:amd64 (0.9.3-0ubuntu4.24.04.1) ...
+<a id="__codelineno-3-93" name="__codelineno-3-93"></a>Selecting previously unselected package virtualbox-7.1.
+<a id="__codelineno-3-94" name="__codelineno-3-94"></a>Preparing to unpack .../13-virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb ...
+<a id="__codelineno-3-95" name="__codelineno-3-95"></a>Unpacking virtualbox-7.1 (7.1.10-169112~Ubuntu~noble) ...
+<a id="__codelineno-3-96" name="__codelineno-3-96"></a>Selecting previously unselected package libqt6network6t64:amd64.
+<a id="__codelineno-3-97" name="__codelineno-3-97"></a>Preparing to unpack .../14-libqt6network6t64_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-3-98" name="__codelineno-3-98"></a>Unpacking libqt6network6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-99" name="__codelineno-3-99"></a>Selecting previously unselected package libqt6opengl6t64:amd64.
+<a id="__codelineno-3-100" name="__codelineno-3-100"></a>Preparing to unpack .../15-libqt6opengl6t64_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-3-101" name="__codelineno-3-101"></a>Unpacking libqt6opengl6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-102" name="__codelineno-3-102"></a>Selecting previously unselected package libqt6qml6:amd64.
+<a id="__codelineno-3-103" name="__codelineno-3-103"></a>Preparing to unpack .../16-libqt6qml6_6.4.2+dfsg-4build3_amd64.deb ...
+<a id="__codelineno-3-104" name="__codelineno-3-104"></a>Unpacking libqt6qml6:amd64 (6.4.2+dfsg-4build3) ...
+<a id="__codelineno-3-105" name="__codelineno-3-105"></a>Selecting previously unselected package libqt6qmlmodels6:amd64.
+<a id="__codelineno-3-106" name="__codelineno-3-106"></a>Preparing to unpack .../17-libqt6qmlmodels6_6.4.2+dfsg-4build3_amd64.deb ...
+<a id="__codelineno-3-107" name="__codelineno-3-107"></a>Unpacking libqt6qmlmodels6:amd64 (6.4.2+dfsg-4build3) ...
+<a id="__codelineno-3-108" name="__codelineno-3-108"></a>Selecting previously unselected package libqt6quick6:amd64.
+<a id="__codelineno-3-109" name="__codelineno-3-109"></a>Preparing to unpack .../18-libqt6quick6_6.4.2+dfsg-4build3_amd64.deb ...
+<a id="__codelineno-3-110" name="__codelineno-3-110"></a>Unpacking libqt6quick6:amd64 (6.4.2+dfsg-4build3) ...
+<a id="__codelineno-3-111" name="__codelineno-3-111"></a>Selecting previously unselected package libqt6sql6-sqlite:amd64.
+<a id="__codelineno-3-112" name="__codelineno-3-112"></a>Preparing to unpack .../19-libqt6sql6-sqlite_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-3-113" name="__codelineno-3-113"></a>Unpacking libqt6sql6-sqlite:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-114" name="__codelineno-3-114"></a>Selecting previously unselected package libqt6waylandclient6:amd64.
+<a id="__codelineno-3-115" name="__codelineno-3-115"></a>Preparing to unpack .../20-libqt6waylandclient6_6.4.2-5build3_amd64.deb ...
+<a id="__codelineno-3-116" name="__codelineno-3-116"></a>Unpacking libqt6waylandclient6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-3-117" name="__codelineno-3-117"></a>Selecting previously unselected package libqt6waylandcompositor6:amd64.
+<a id="__codelineno-3-118" name="__codelineno-3-118"></a>Preparing to unpack .../21-libqt6waylandcompositor6_6.4.2-5build3_amd64.deb ...
+<a id="__codelineno-3-119" name="__codelineno-3-119"></a>Unpacking libqt6waylandcompositor6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-3-120" name="__codelineno-3-120"></a>Selecting previously unselected package libqt6waylandeglclienthwintegration6:amd64.
+<a id="__codelineno-3-121" name="__codelineno-3-121"></a>Preparing to unpack .../22-libqt6waylandeglclienthwintegration6_6.4.2-5build3_amd64.deb ...
+<a id="__codelineno-3-122" name="__codelineno-3-122"></a>Unpacking libqt6waylandeglclienthwintegration6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-3-123" name="__codelineno-3-123"></a>Selecting previously unselected package libqt6waylandeglcompositorhwintegration6:amd64.
+<a id="__codelineno-3-124" name="__codelineno-3-124"></a>Preparing to unpack .../23-libqt6waylandeglcompositorhwintegration6_6.4.2-5build3_amd64.deb ...
+<a id="__codelineno-3-125" name="__codelineno-3-125"></a>Unpacking libqt6waylandeglcompositorhwintegration6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-3-126" name="__codelineno-3-126"></a>Selecting previously unselected package libqt6wlshellintegration6:amd64.
+<a id="__codelineno-3-127" name="__codelineno-3-127"></a>Preparing to unpack .../24-libqt6wlshellintegration6_6.4.2-5build3_amd64.deb ...
+<a id="__codelineno-3-128" name="__codelineno-3-128"></a>Unpacking libqt6wlshellintegration6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-3-129" name="__codelineno-3-129"></a>Selecting previously unselected package libsdl1.2debian:amd64.
+<a id="__codelineno-3-130" name="__codelineno-3-130"></a>Preparing to unpack .../25-libsdl1.2debian_1.2.68-2_amd64.deb ...
+<a id="__codelineno-3-131" name="__codelineno-3-131"></a>Unpacking libsdl1.2debian:amd64 (1.2.68-2) ...
+<a id="__codelineno-3-132" name="__codelineno-3-132"></a>Selecting previously unselected package libsdl-ttf2.0-0:amd64.
+<a id="__codelineno-3-133" name="__codelineno-3-133"></a>Preparing to unpack .../26-libsdl-ttf2.0-0_2.0.11-6_amd64.deb ...
+<a id="__codelineno-3-134" name="__codelineno-3-134"></a>Unpacking libsdl-ttf2.0-0:amd64 (2.0.11-6) ...
+<a id="__codelineno-3-135" name="__codelineno-3-135"></a>Selecting previously unselected package qt6-gtk-platformtheme:amd64.
+<a id="__codelineno-3-136" name="__codelineno-3-136"></a>Preparing to unpack .../27-qt6-gtk-platformtheme_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-3-137" name="__codelineno-3-137"></a>Unpacking qt6-gtk-platformtheme:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-138" name="__codelineno-3-138"></a>Selecting previously unselected package qt6-qpa-plugins:amd64.
+<a id="__codelineno-3-139" name="__codelineno-3-139"></a>Preparing to unpack .../28-qt6-qpa-plugins_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-3-140" name="__codelineno-3-140"></a>Unpacking qt6-qpa-plugins:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-141" name="__codelineno-3-141"></a>Selecting previously unselected package qt6-translations-l10n.
+<a id="__codelineno-3-142" name="__codelineno-3-142"></a>Preparing to unpack .../29-qt6-translations-l10n_6.4.2-1_all.deb ...
+<a id="__codelineno-3-143" name="__codelineno-3-143"></a>Unpacking qt6-translations-l10n (6.4.2-1) ...
+<a id="__codelineno-3-144" name="__codelineno-3-144"></a>Selecting previously unselected package qt6-wayland:amd64.
+<a id="__codelineno-3-145" name="__codelineno-3-145"></a>Preparing to unpack .../30-qt6-wayland_6.4.2-5build3_amd64.deb ...
+<a id="__codelineno-3-146" name="__codelineno-3-146"></a>Unpacking qt6-wayland:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-3-147" name="__codelineno-3-147"></a>Setting up libb2-1:amd64 (0.98.1-1.1build1) ...
+<a id="__codelineno-3-148" name="__codelineno-3-148"></a>Setting up libqt6core6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-149" name="__codelineno-3-149"></a>Setting up libts0t64:amd64 (1.22-1.1build1) ...
+<a id="__codelineno-3-150" name="__codelineno-3-150"></a>Setting up libqt6sql6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-151" name="__codelineno-3-151"></a>Setting up libqt6dbus6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-152" name="__codelineno-3-152"></a>Setting up libqt6xml6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-153" name="__codelineno-3-153"></a>Setting up qt6-translations-l10n (6.4.2-1) ...
+<a id="__codelineno-3-154" name="__codelineno-3-154"></a>Setting up libqt6sql6-sqlite:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-155" name="__codelineno-3-155"></a>Setting up liblzf1:amd64 (3.6-4) ...
+<a id="__codelineno-3-156" name="__codelineno-3-156"></a>Setting up libsdl1.2debian:amd64 (1.2.68-2) ...
+<a id="__codelineno-3-157" name="__codelineno-3-157"></a>Setting up libqt6gui6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-158" name="__codelineno-3-158"></a>Setting up libqt6statemachine6:amd64 (6.4.2-4build2) ...
+<a id="__codelineno-3-159" name="__codelineno-3-159"></a>Setting up libqt6network6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-160" name="__codelineno-3-160"></a>Setting up libtpms0:amd64 (0.9.3-0ubuntu4.24.04.1) ...
+<a id="__codelineno-3-161" name="__codelineno-3-161"></a>Setting up libsdl-ttf2.0-0:amd64 (2.0.11-6) ...
+<a id="__codelineno-3-162" name="__codelineno-3-162"></a>Setting up libqt6widgets6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-163" name="__codelineno-3-163"></a>Setting up qt6-qpa-plugins:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-164" name="__codelineno-3-164"></a>Setting up libqt6help6:amd64 (6.4.2-3build3) ...
+<a id="__codelineno-3-165" name="__codelineno-3-165"></a>Setting up libqt6qml6:amd64 (6.4.2+dfsg-4build3) ...
+<a id="__codelineno-3-166" name="__codelineno-3-166"></a>Setting up libqt6opengl6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-167" name="__codelineno-3-167"></a>Setting up libqt6qmlmodels6:amd64 (6.4.2+dfsg-4build3) ...
+<a id="__codelineno-3-168" name="__codelineno-3-168"></a>Setting up libqt6waylandclient6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-3-169" name="__codelineno-3-169"></a>Setting up qt6-gtk-platformtheme:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-170" name="__codelineno-3-170"></a>Setting up libqt6printsupport6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-3-171" name="__codelineno-3-171"></a>Setting up libqt6quick6:amd64 (6.4.2+dfsg-4build3) ...
+<a id="__codelineno-3-172" name="__codelineno-3-172"></a>Setting up virtualbox-7.1 (7.1.10-169112~Ubuntu~noble) ...
+<a id="__codelineno-3-173" name="__codelineno-3-173"></a>info: Selecting GID from range 100 to 999 ...
+<a id="__codelineno-3-174" name="__codelineno-3-174"></a>info: Adding group `vboxusers' (GID 127) ...
+<a id="__codelineno-3-175" name="__codelineno-3-175"></a>Setting up libqt6wlshellintegration6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-3-176" name="__codelineno-3-176"></a>Setting up libqt6waylandcompositor6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-3-177" name="__codelineno-3-177"></a>Setting up libqt6waylandeglcompositorhwintegration6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-3-178" name="__codelineno-3-178"></a>Setting up libqt6waylandeglclienthwintegration6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-3-179" name="__codelineno-3-179"></a>Setting up qt6-wayland:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-3-180" name="__codelineno-3-180"></a>Processing triggers for hicolor-icon-theme (0.17-2) ...
+<a id="__codelineno-3-181" name="__codelineno-3-181"></a>Processing triggers for gnome-menus (3.36.0-1.1ubuntu3) ...
+<a id="__codelineno-3-182" name="__codelineno-3-182"></a>Processing triggers for mate-menus (1.26.1+mint1) ...
+<a id="__codelineno-3-183" name="__codelineno-3-183"></a>Processing triggers for libc-bin (2.39-0ubuntu8.5) ...
+<a id="__codelineno-3-184" name="__codelineno-3-184"></a>Processing triggers for man-db (2.12.0-4build2) ...
+<a id="__codelineno-3-185" name="__codelineno-3-185"></a>Processing triggers for shared-mime-info (2.4-4) ...
+<a id="__codelineno-3-186" name="__codelineno-3-186"></a>Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+<a id="__codelineno-3-187" name="__codelineno-3-187"></a>Processing triggers for desktop-file-utils (0.27-2build1) ...
+<a id="__codelineno-3-188" name="__codelineno-3-188"></a>N: Download is performed unsandboxed as root as file '/home/guru/Downloads/virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+<a id="__codelineno-3-189" name="__codelineno-3-189"></a>guru@hp:~/Downloads$
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
 <ol>
 <li>Vergrendel de versie ("hold") zodat die niet automatisch wordt geüpdatet</li>
 </ol>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>sudo<span class="w"> </span>apt-mark<span class="w"> </span>hold<span class="w"> </span>virtualbox
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo<span class="w"> </span>apt-mark<span class="w"> </span>hold<span class="w"> </span>virtualbox
 </code></pre></div></td></tr></table></div>
 <p>Wil je later toch upgraden, hef dan de hold op:
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo<span class="w"> </span>apt-mark<span class="w"> </span>unhold<span class="w"> </span>virtualbox
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>sudo<span class="w"> </span>apt-mark<span class="w"> </span>unhold<span class="w"> </span>virtualbox
 </code></pre></div></td></tr></table></div></p>
-<h2 id="uitleg-verschil-tussen-apt-key-en-gpg-dearmor">🔐 Uitleg: verschil tussen <code>apt-key</code> en <code>gpg --dearmor</code></h2>
-<table>
-<thead>
-<tr>
-<th>Methode</th>
-<th>Beschrijving</th>
-<th>Aanbevolen?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>apt-key add</code></td>
-<td>Verouderde methode. Sleutel komt in de globale keyring (<code>/etc/apt/trusted.gpg</code>)</td>
-<td>❌ Nee</td>
-</tr>
-<tr>
-<td><code>gpg --dearmor</code> + keyring</td>
-<td>Moderne, veilige methode. Sleutel wordt repo-specifiek gebruikt via keyring-bestand</td>
-<td>✅ Ja</td>
-</tr>
-</tbody>
-</table>
-<p>Oracle biedt dezelfde <code>.asc</code>-sleutel aan via beide methoden. De moderne aanpak is veiliger, gescheiden per repository en toekomstbestendig.</p>
+<h1 id="_1"></h1>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

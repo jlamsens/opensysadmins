@@ -1103,9 +1103,16 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#reboot-en-start-virtualbox">
+<a class="md-nav__link" href="#reboot">
 <span class="md-ellipsis">
-      Reboot en start VirtualBox
+      Reboot
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#start-virtualbox">
+<span class="md-ellipsis">
+      Start VirtualBox
     </span>
 </a>
 </li>
@@ -1117,7 +1124,7 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="setup-virtualbox-7-op-linux-mint-22-oracle-repository">Setup VirtualBox 7 op Linux Mint 22 (Oracle repository)</h1>
-<p>VirtualBox stelt je in staat om andere besturingssystemen (zoals Windows of een andere Linux-distributie) te draaien als virtuele machines binnen je bestaande Linux Mint 22-omgeving. Dit gebeurt in een geïsoleerde en veilige virtuele omgeving, waardoor je software kunt testen of applicaties kunt gebruiken die niet native op Linux Mint draaien, zonder je hoofdinstallatie te beïnvloeden.</p>
+<p>VirtualBox stelt je in staat om andere besturingssystemen (zoals Windows of een andere Linux-distributie) te draaien als virtuele machines binnen bv. een bestaande Linux Mint 22-omgeving. Dit gebeurt in een geïsoleerde en veilige virtuele omgeving, waardoor je software kunt testen of applicaties kunt gebruiken die niet native op Linux Mint draaien, zonder je hoofdinstallatie te beïnvloeden.</p>
 <h2 id="vereisten">Vereisten</h2>
 <ul>
 <li>een <a href="../../tutorials/windows11-linuxmint22-dual-boot-uefi/" target="_blank">PC met Linux Mint 22</a></li>
@@ -1127,6 +1134,7 @@
 <p>Je kan kiezen tussen VirtualBox 7.0 (laatste stabiele maintenance release) of VirtualBox 7.1 (actief onderhouden).</p>
 <h2 id="virtualbox-70x">VirtualBox 7.0.X</h2>
 <h3 id="voeg-oracle-gpg-sleutel-toe">Voeg Oracle GPG-sleutel toe</h3>
+<p>Opgelet: deze <a href="../../explanations/apt-key-vs-gpg/" target="_blank">apt-key methode</a> is verouderd.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">guru@hp:~$_</label><label for="__tabbed_1_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1137,10 +1145,12 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>guru@hp:~$ wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>OK
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>guru@hp:~$ 
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>guru@hp:~$ wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>[sudo] password for guru:     
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>OK
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>guru@hp:~$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -1171,16 +1181,46 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>guru@hp:~$ sudo apt update
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>Ign:1 http://linux-mint.froonix.org xia InRelease
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>Hit:2 http://linux-mint.froonix.org xia Release                                         
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>Hit:3 http://security.ubuntu.com/ubuntu noble-security InRelease                                                                                 
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>Get:5 https://download.virtualbox.org/virtualbox/debian noble InRelease [4.442 B]                                                                
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>Hit:6 http://archive.ubuntu.com/ubuntu noble InRelease                          
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>Hit:7 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>Hit:8 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a>Get:9 https://download.virtualbox.org/virtualbox/debian noble/contrib amd64 Packages [2.024 B]
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>Fetched 6.466 B in 1s (6.094 B/s)     
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>Reading package lists... Done
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a>Building dependency tree... Done
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a>Reading state information... Done
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a>All packages are up to date.
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="hll">W: https://download.virtualbox.org/virtualbox/debian/dists/noble/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+</span><a id="__codelineno-5-16" name="__codelineno-5-16"></a>guru@hp:~$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
 <h3 id="verifieer-versie-in-repository">Verifieer versie in repository</h3>
-<p>Bekijk welke versies van het pakket virtualbox beschikbaar zijn en uit welke software repository elke versie afkomstig is.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">guru@hp:~$_</label><label for="__tabbed_4_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<p>Opgelet: kies niet zoals <a href="../setup-virtualbox7-linuxmint22-distributierepo/#verifieer-versie-in-repository" target="_blank">hier</a> voor het pakket <code>virtualbox</code> maar kies expliciet <code>virtualbox-7.0</code></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>apt-cache policy virtualbox-7.0
 </code></pre></div></td></tr></table></div>
 </div>
@@ -1213,7 +1253,173 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span>
+<span class="normal"><a href="#__codelineno-9-19">19</a></span>
+<span class="normal"><a href="#__codelineno-9-20">20</a></span>
+<span class="normal"><a href="#__codelineno-9-21">21</a></span>
+<span class="normal"><a href="#__codelineno-9-22">22</a></span>
+<span class="normal"><a href="#__codelineno-9-23">23</a></span>
+<span class="normal"><a href="#__codelineno-9-24">24</a></span>
+<span class="normal"><a href="#__codelineno-9-25">25</a></span>
+<span class="normal"><a href="#__codelineno-9-26">26</a></span>
+<span class="normal"><a href="#__codelineno-9-27">27</a></span>
+<span class="normal"><a href="#__codelineno-9-28">28</a></span>
+<span class="normal"><a href="#__codelineno-9-29">29</a></span>
+<span class="normal"><a href="#__codelineno-9-30">30</a></span>
+<span class="normal"><a href="#__codelineno-9-31">31</a></span>
+<span class="normal"><a href="#__codelineno-9-32">32</a></span>
+<span class="normal"><a href="#__codelineno-9-33">33</a></span>
+<span class="normal"><a href="#__codelineno-9-34">34</a></span>
+<span class="normal"><a href="#__codelineno-9-35">35</a></span>
+<span class="normal"><a href="#__codelineno-9-36">36</a></span>
+<span class="normal"><a href="#__codelineno-9-37">37</a></span>
+<span class="normal"><a href="#__codelineno-9-38">38</a></span>
+<span class="normal"><a href="#__codelineno-9-39">39</a></span>
+<span class="normal"><a href="#__codelineno-9-40">40</a></span>
+<span class="normal"><a href="#__codelineno-9-41">41</a></span>
+<span class="normal"><a href="#__codelineno-9-42">42</a></span>
+<span class="normal"><a href="#__codelineno-9-43">43</a></span>
+<span class="normal"><a href="#__codelineno-9-44">44</a></span>
+<span class="normal"><a href="#__codelineno-9-45">45</a></span>
+<span class="normal"><a href="#__codelineno-9-46">46</a></span>
+<span class="normal"><a href="#__codelineno-9-47">47</a></span>
+<span class="normal"><a href="#__codelineno-9-48">48</a></span>
+<span class="normal"><a href="#__codelineno-9-49">49</a></span>
+<span class="normal"><a href="#__codelineno-9-50">50</a></span>
+<span class="normal"><a href="#__codelineno-9-51">51</a></span>
+<span class="normal"><a href="#__codelineno-9-52">52</a></span>
+<span class="normal"><a href="#__codelineno-9-53">53</a></span>
+<span class="normal"><a href="#__codelineno-9-54">54</a></span>
+<span class="normal"><a href="#__codelineno-9-55">55</a></span>
+<span class="normal"><a href="#__codelineno-9-56">56</a></span>
+<span class="normal"><a href="#__codelineno-9-57">57</a></span>
+<span class="normal"><a href="#__codelineno-9-58">58</a></span>
+<span class="normal"><a href="#__codelineno-9-59">59</a></span>
+<span class="normal"><a href="#__codelineno-9-60">60</a></span>
+<span class="normal"><a href="#__codelineno-9-61">61</a></span>
+<span class="normal"><a href="#__codelineno-9-62">62</a></span>
+<span class="normal"><a href="#__codelineno-9-63">63</a></span>
+<span class="normal"><a href="#__codelineno-9-64">64</a></span>
+<span class="normal"><a href="#__codelineno-9-65">65</a></span>
+<span class="normal"><a href="#__codelineno-9-66">66</a></span>
+<span class="normal"><a href="#__codelineno-9-67">67</a></span>
+<span class="normal"><a href="#__codelineno-9-68">68</a></span>
+<span class="normal"><a href="#__codelineno-9-69">69</a></span>
+<span class="normal"><a href="#__codelineno-9-70">70</a></span>
+<span class="normal"><a href="#__codelineno-9-71">71</a></span>
+<span class="normal"><a href="#__codelineno-9-72">72</a></span>
+<span class="normal"><a href="#__codelineno-9-73">73</a></span>
+<span class="normal"><a href="#__codelineno-9-74">74</a></span>
+<span class="normal"><a href="#__codelineno-9-75">75</a></span>
+<span class="normal"><a href="#__codelineno-9-76">76</a></span>
+<span class="normal"><a href="#__codelineno-9-77">77</a></span>
+<span class="normal"><a href="#__codelineno-9-78">78</a></span>
+<span class="normal"><a href="#__codelineno-9-79">79</a></span>
+<span class="normal"><a href="#__codelineno-9-80">80</a></span>
+<span class="normal"><a href="#__codelineno-9-81">81</a></span>
+<span class="normal"><a href="#__codelineno-9-82">82</a></span>
+<span class="normal"><a href="#__codelineno-9-83">83</a></span>
+<span class="normal"><a href="#__codelineno-9-84">84</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>guru@hp:~$ sudo apt install virtualbox-7.0 -y
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>Reading package lists... Done
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>Building dependency tree... Done
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>Reading state information... Done
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>The following additional packages will be installed:
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>liblzf1 libqt5help5 libqt5opengl5t64 libqt5printsupport5t64 libqt5sql5-sqlite libqt5sql5t64 libqt5x11extras5 libqt5xml5t64 libsdl-ttf2.0-0 libsdl1.2debian libtpms0
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>The following NEW packages will be installed:
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>liblzf1 libqt5help5 libqt5opengl5t64 libqt5printsupport5t64 libqt5sql5-sqlite libqt5sql5t64 libqt5x11extras5 libqt5xml5t64 libsdl-ttf2.0-0 libsdl1.2debian libtpms0 virtualbox-7.0
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>0 upgraded, 12 newly installed, 0 to remove and 0 not upgraded.
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a>Need to get 95,0 MB of archives.
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a>After this operation, 226 MB of additional disk space will be used.
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>Get:1 http://archive.ubuntu.com/ubuntu noble/universe amd64 liblzf1 amd64 3.6-4 [7.624 B]
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a>Get:2 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt5sql5t64 amd64 5.15.13+dfsg-1ubuntu1 [122 kB]
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a>Get:3 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt5help5 amd64 5.15.13-1 [161 kB]
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a>Get:4 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt5opengl5t64 amd64 5.15.13+dfsg-1ubuntu1 [150 kB]
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a>Get:5 https://download.virtualbox.org/virtualbox/debian noble/contrib amd64 virtualbox-7.0 amd64 7.0.26-168464~Ubuntu~noble [93,7 MB]
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a>Get:6 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt5printsupport5t64 amd64 5.15.13+dfsg-1ubuntu1 [208 kB]
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a>Get:7 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt5x11extras5 amd64 5.15.13-1 [10,9 kB]
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a>Get:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt5xml5t64 amd64 5.15.13+dfsg-1ubuntu1 [124 kB]
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a>Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libtpms0 amd64 0.9.3-0ubuntu4.24.04.1 [373 kB]
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a>Get:10 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt5sql5-sqlite amd64 5.15.13+dfsg-1ubuntu1 [51,5 kB]
+<a id="__codelineno-9-22" name="__codelineno-9-22"></a>Get:11 http://archive.ubuntu.com/ubuntu noble/universe amd64 libsdl1.2debian amd64 1.2.68-2 [101 kB]
+<a id="__codelineno-9-23" name="__codelineno-9-23"></a>Get:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 libsdl-ttf2.0-0 amd64 2.0.11-6 [15,1 kB]
+<a id="__codelineno-9-24" name="__codelineno-9-24"></a>Fetched 95,0 MB in 2s (46,8 MB/s)                                                  
+<a id="__codelineno-9-25" name="__codelineno-9-25"></a>Preconfiguring packages ...
+<a id="__codelineno-9-26" name="__codelineno-9-26"></a>Selecting previously unselected package liblzf1:amd64.
+<a id="__codelineno-9-27" name="__codelineno-9-27"></a>(Reading database ... 530479 files and directories currently installed.)
+<a id="__codelineno-9-28" name="__codelineno-9-28"></a>Preparing to unpack .../00-liblzf1_3.6-4_amd64.deb ...
+<a id="__codelineno-9-29" name="__codelineno-9-29"></a>Unpacking liblzf1:amd64 (3.6-4) ...
+<a id="__codelineno-9-30" name="__codelineno-9-30"></a>Selecting previously unselected package libqt5sql5t64:amd64.
+<a id="__codelineno-9-31" name="__codelineno-9-31"></a>Preparing to unpack .../01-libqt5sql5t64_5.15.13+dfsg-1ubuntu1_amd64.deb ...
+<a id="__codelineno-9-32" name="__codelineno-9-32"></a>Unpacking libqt5sql5t64:amd64 (5.15.13+dfsg-1ubuntu1) ...
+<a id="__codelineno-9-33" name="__codelineno-9-33"></a>Selecting previously unselected package libqt5help5:amd64.
+<a id="__codelineno-9-34" name="__codelineno-9-34"></a>Preparing to unpack .../02-libqt5help5_5.15.13-1_amd64.deb ...
+<a id="__codelineno-9-35" name="__codelineno-9-35"></a>Unpacking libqt5help5:amd64 (5.15.13-1) ...
+<a id="__codelineno-9-36" name="__codelineno-9-36"></a>Selecting previously unselected package libqt5opengl5t64:amd64.
+<a id="__codelineno-9-37" name="__codelineno-9-37"></a>Preparing to unpack .../03-libqt5opengl5t64_5.15.13+dfsg-1ubuntu1_amd64.deb ...
+<a id="__codelineno-9-38" name="__codelineno-9-38"></a>Unpacking libqt5opengl5t64:amd64 (5.15.13+dfsg-1ubuntu1) ...
+<a id="__codelineno-9-39" name="__codelineno-9-39"></a>Selecting previously unselected package libqt5printsupport5t64:amd64.
+<a id="__codelineno-9-40" name="__codelineno-9-40"></a>Preparing to unpack .../04-libqt5printsupport5t64_5.15.13+dfsg-1ubuntu1_amd64.deb ...
+<a id="__codelineno-9-41" name="__codelineno-9-41"></a>Unpacking libqt5printsupport5t64:amd64 (5.15.13+dfsg-1ubuntu1) ...
+<a id="__codelineno-9-42" name="__codelineno-9-42"></a>Selecting previously unselected package libqt5x11extras5:amd64.
+<a id="__codelineno-9-43" name="__codelineno-9-43"></a>Preparing to unpack .../05-libqt5x11extras5_5.15.13-1_amd64.deb ...
+<a id="__codelineno-9-44" name="__codelineno-9-44"></a>Unpacking libqt5x11extras5:amd64 (5.15.13-1) ...
+<a id="__codelineno-9-45" name="__codelineno-9-45"></a>Selecting previously unselected package libqt5xml5t64:amd64.
+<a id="__codelineno-9-46" name="__codelineno-9-46"></a>Preparing to unpack .../06-libqt5xml5t64_5.15.13+dfsg-1ubuntu1_amd64.deb ...
+<a id="__codelineno-9-47" name="__codelineno-9-47"></a>Unpacking libqt5xml5t64:amd64 (5.15.13+dfsg-1ubuntu1) ...
+<a id="__codelineno-9-48" name="__codelineno-9-48"></a>Selecting previously unselected package libtpms0:amd64.
+<a id="__codelineno-9-49" name="__codelineno-9-49"></a>Preparing to unpack .../07-libtpms0_0.9.3-0ubuntu4.24.04.1_amd64.deb ...
+<a id="__codelineno-9-50" name="__codelineno-9-50"></a>Unpacking libtpms0:amd64 (0.9.3-0ubuntu4.24.04.1) ...
+<a id="__codelineno-9-51" name="__codelineno-9-51"></a>Selecting previously unselected package virtualbox-7.0.
+<a id="__codelineno-9-52" name="__codelineno-9-52"></a>Preparing to unpack .../08-virtualbox-7.0_7.0.26-168464~Ubuntu~noble_amd64.deb ...
+<a id="__codelineno-9-53" name="__codelineno-9-53"></a>Unpacking virtualbox-7.0 (7.0.26-168464~Ubuntu~noble) ...
+<a id="__codelineno-9-54" name="__codelineno-9-54"></a>Selecting previously unselected package libqt5sql5-sqlite:amd64.
+<a id="__codelineno-9-55" name="__codelineno-9-55"></a>Preparing to unpack .../09-libqt5sql5-sqlite_5.15.13+dfsg-1ubuntu1_amd64.deb ...
+<a id="__codelineno-9-56" name="__codelineno-9-56"></a>Unpacking libqt5sql5-sqlite:amd64 (5.15.13+dfsg-1ubuntu1) ...
+<a id="__codelineno-9-57" name="__codelineno-9-57"></a>Selecting previously unselected package libsdl1.2debian:amd64.
+<a id="__codelineno-9-58" name="__codelineno-9-58"></a>Preparing to unpack .../10-libsdl1.2debian_1.2.68-2_amd64.deb ...
+<a id="__codelineno-9-59" name="__codelineno-9-59"></a>Unpacking libsdl1.2debian:amd64 (1.2.68-2) ...
+<a id="__codelineno-9-60" name="__codelineno-9-60"></a>Selecting previously unselected package libsdl-ttf2.0-0:amd64.
+<a id="__codelineno-9-61" name="__codelineno-9-61"></a>Preparing to unpack .../11-libsdl-ttf2.0-0_2.0.11-6_amd64.deb ...
+<a id="__codelineno-9-62" name="__codelineno-9-62"></a>Unpacking libsdl-ttf2.0-0:amd64 (2.0.11-6) ...
+<a id="__codelineno-9-63" name="__codelineno-9-63"></a>Setting up libqt5x11extras5:amd64 (5.15.13-1) ...
+<a id="__codelineno-9-64" name="__codelineno-9-64"></a>Setting up libqt5xml5t64:amd64 (5.15.13+dfsg-1ubuntu1) ...
+<a id="__codelineno-9-65" name="__codelineno-9-65"></a>Setting up liblzf1:amd64 (3.6-4) ...
+<a id="__codelineno-9-66" name="__codelineno-9-66"></a>Setting up libsdl1.2debian:amd64 (1.2.68-2) ...
+<a id="__codelineno-9-67" name="__codelineno-9-67"></a>Setting up libqt5sql5t64:amd64 (5.15.13+dfsg-1ubuntu1) ...
+<a id="__codelineno-9-68" name="__codelineno-9-68"></a>Setting up libqt5opengl5t64:amd64 (5.15.13+dfsg-1ubuntu1) ...
+<a id="__codelineno-9-69" name="__codelineno-9-69"></a>Setting up libtpms0:amd64 (0.9.3-0ubuntu4.24.04.1) ...
+<a id="__codelineno-9-70" name="__codelineno-9-70"></a>Setting up libsdl-ttf2.0-0:amd64 (2.0.11-6) ...
+<a id="__codelineno-9-71" name="__codelineno-9-71"></a>Setting up libqt5printsupport5t64:amd64 (5.15.13+dfsg-1ubuntu1) ...
+<a id="__codelineno-9-72" name="__codelineno-9-72"></a>Setting up libqt5sql5-sqlite:amd64 (5.15.13+dfsg-1ubuntu1) ...
+<a id="__codelineno-9-73" name="__codelineno-9-73"></a>Setting up libqt5help5:amd64 (5.15.13-1) ...
+<a id="__codelineno-9-74" name="__codelineno-9-74"></a>Setting up virtualbox-7.0 (7.0.26-168464~Ubuntu~noble) ...
+<a id="__codelineno-9-75" name="__codelineno-9-75"></a>info: Selecting GID from range 100 to 999 ...
+<a id="__codelineno-9-76" name="__codelineno-9-76"></a>info: Adding group `vboxusers' (GID 127) ...
+<a id="__codelineno-9-77" name="__codelineno-9-77"></a>Processing triggers for desktop-file-utils (0.27-2build1) ...
+<a id="__codelineno-9-78" name="__codelineno-9-78"></a>Processing triggers for hicolor-icon-theme (0.17-2) ...
+<a id="__codelineno-9-79" name="__codelineno-9-79"></a>Processing triggers for gnome-menus (3.36.0-1.1ubuntu3) ...
+<a id="__codelineno-9-80" name="__codelineno-9-80"></a>Processing triggers for mate-menus (1.26.1+mint1) ...
+<a id="__codelineno-9-81" name="__codelineno-9-81"></a>Processing triggers for libc-bin (2.39-0ubuntu8.5) ...
+<a id="__codelineno-9-82" name="__codelineno-9-82"></a>Processing triggers for shared-mime-info (2.4-4) ...
+<a id="__codelineno-9-83" name="__codelineno-9-83"></a>Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+<a id="__codelineno-9-84" name="__codelineno-9-84"></a>guru@hp:~$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -1223,11 +1429,42 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">guru@hp:~$_</label><label for="__tabbed_6_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<p>Deze <a href="../../explanations/apt-key-vs-gpg/" target="_blank">gpg --dearmor</a> methode is moderner en veiliger dan de verouderde <a href="../../explanations/apt-key-vs-gpg/" target="_blank">apt-key methode</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg --dearmor
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>guru@hp:~$ wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg --dearmor
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>--2025-09-02 15:07:32--  https://www.virtualbox.org/download/oracle_vbox_2016.asc
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>[sudo] password for guru: Resolving www.virtualbox.org (www.virtualbox.org)... 23.219.242.198, 2a02:26f0:3900:48b::37b7, 2a02:26f0:3900:487::37b7
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>Connecting to www.virtualbox.org (www.virtualbox.org)|23.219.242.198|:443... connected.
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>HTTP request sent, awaiting response... 200 OK
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>Length: 3157 (3,1K) [application/pgp-signature]
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>Saving to: ‘STDOUT’
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a>-                                                           100%[=========================================================================================================================================&gt;]   3,08K  --.-KB/s    in 0s      
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a>2025-09-02 15:07:33 (27,3 MB/s) - written to stdout [3157/3157]
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a>Sorry, try again.
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a>[sudo] password for guru:     
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a>guru@hp:~$     
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -1240,7 +1477,11 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>guru@hp:~$ sudo &lt;execute some command&gt;
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>guru@hp:~$ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle-virtualbox-2016.gpg] https://download.virtualbox.org/virtualbox/debian noble contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>deb [arch=amd64 signed-by=/usr/share/keyrings/oracle-virtualbox-2016.gpg] https://download.virtualbox.org/virtualbox/debian noble contrib
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>guru@hp:~$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -1254,21 +1495,65 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span>
+<span class="normal"><a href="#__codelineno-15-12">12</a></span>
+<span class="normal"><a href="#__codelineno-15-13">13</a></span>
+<span class="normal"><a href="#__codelineno-15-14">14</a></span>
+<span class="normal"><a href="#__codelineno-15-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>guru@hp:~$ sudo apt update
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>Ign:1 http://linux-mint.froonix.org xia InRelease
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>Hit:2 http://linux-mint.froonix.org xia Release                                                                                   
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a>Hit:3 http://archive.ubuntu.com/ubuntu noble InRelease                                                                            
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a>Hit:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease                                                       
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a>Hit:5 http://security.ubuntu.com/ubuntu noble-security InRelease                      
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a>Hit:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease                      
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="hll">Get:7 https://download.virtualbox.org/virtualbox/debian noble InRelease [4.442 B]
+</span><a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="hll">Get:9 https://download.virtualbox.org/virtualbox/debian noble/contrib amd64 Packages [2.024 B]
+</span><a id="__codelineno-15-10" name="__codelineno-15-10"></a>Fetched 6.466 B in 1s (10,5 kB/s)
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a>Reading package lists... Done
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a>Building dependency tree... Done
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a>Reading state information... Done
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a>All packages are up to date.
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a>guru@hp:~$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
 <h3 id="verifieer-versie-in-repository_1">Verifieer versie in repository</h3>
-<p>Bekijk welke versies van het pakket virtualbox beschikbaar zijn en uit welke software repository elke versie afkomstig is.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"><input id="__tabbed_9_2" name="__tabbed_9" type="radio"><div class="tabbed-labels"><label for="__tabbed_9_1">guru@hp:~$_</label><label for="__tabbed_9_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<p>Opgelet: kies niet zoals <a href="../setup-virtualbox7-linuxmint22-distributierepo/#verifieer-versie-in-repository" target="_blank">hier</a> voor het pakket <code>virtualbox</code> maar kies expliciet <code>virtualbox-7.1</code></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>apt-cache policy virtualbox-7.1
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span>
+<span class="normal"><a href="#__codelineno-17-4">4</a></span>
+<span class="normal"><a href="#__codelineno-17-5">5</a></span>
+<span class="normal"><a href="#__codelineno-17-6">6</a></span>
+<span class="normal"><a href="#__codelineno-17-7">7</a></span>
+<span class="normal"><a href="#__codelineno-17-8">8</a></span>
+<span class="normal"><a href="#__codelineno-17-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>guru@hp:~$ apt-cache policy virtualbox-7.1
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>virtualbox-7.1:
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a>  Installed: 7.1.12-169651~Ubuntu~noble
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>  Candidate: 7.1.12-169651~Ubuntu~noble
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>  Version table:
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a> *** 7.1.12-169651~Ubuntu~noble 500
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a>        500 https://download.virtualbox.org/virtualbox/debian noble/contrib amd64 Packages
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a>        100 /var/lib/dpkg/status
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a>guru@hp:~$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -1282,14 +1567,386 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">  1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">  2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">  3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">  4</a></span>
+<span class="normal"><a href="#__codelineno-19-5">  5</a></span>
+<span class="normal"><a href="#__codelineno-19-6">  6</a></span>
+<span class="normal"><a href="#__codelineno-19-7">  7</a></span>
+<span class="normal"><a href="#__codelineno-19-8">  8</a></span>
+<span class="normal"><a href="#__codelineno-19-9">  9</a></span>
+<span class="normal"><a href="#__codelineno-19-10"> 10</a></span>
+<span class="normal"><a href="#__codelineno-19-11"> 11</a></span>
+<span class="normal"><a href="#__codelineno-19-12"> 12</a></span>
+<span class="normal"><a href="#__codelineno-19-13"> 13</a></span>
+<span class="normal"><a href="#__codelineno-19-14"> 14</a></span>
+<span class="normal"><a href="#__codelineno-19-15"> 15</a></span>
+<span class="normal"><a href="#__codelineno-19-16"> 16</a></span>
+<span class="normal"><a href="#__codelineno-19-17"> 17</a></span>
+<span class="normal"><a href="#__codelineno-19-18"> 18</a></span>
+<span class="normal"><a href="#__codelineno-19-19"> 19</a></span>
+<span class="normal"><a href="#__codelineno-19-20"> 20</a></span>
+<span class="normal"><a href="#__codelineno-19-21"> 21</a></span>
+<span class="normal"><a href="#__codelineno-19-22"> 22</a></span>
+<span class="normal"><a href="#__codelineno-19-23"> 23</a></span>
+<span class="normal"><a href="#__codelineno-19-24"> 24</a></span>
+<span class="normal"><a href="#__codelineno-19-25"> 25</a></span>
+<span class="normal"><a href="#__codelineno-19-26"> 26</a></span>
+<span class="normal"><a href="#__codelineno-19-27"> 27</a></span>
+<span class="normal"><a href="#__codelineno-19-28"> 28</a></span>
+<span class="normal"><a href="#__codelineno-19-29"> 29</a></span>
+<span class="normal"><a href="#__codelineno-19-30"> 30</a></span>
+<span class="normal"><a href="#__codelineno-19-31"> 31</a></span>
+<span class="normal"><a href="#__codelineno-19-32"> 32</a></span>
+<span class="normal"><a href="#__codelineno-19-33"> 33</a></span>
+<span class="normal"><a href="#__codelineno-19-34"> 34</a></span>
+<span class="normal"><a href="#__codelineno-19-35"> 35</a></span>
+<span class="normal"><a href="#__codelineno-19-36"> 36</a></span>
+<span class="normal"><a href="#__codelineno-19-37"> 37</a></span>
+<span class="normal"><a href="#__codelineno-19-38"> 38</a></span>
+<span class="normal"><a href="#__codelineno-19-39"> 39</a></span>
+<span class="normal"><a href="#__codelineno-19-40"> 40</a></span>
+<span class="normal"><a href="#__codelineno-19-41"> 41</a></span>
+<span class="normal"><a href="#__codelineno-19-42"> 42</a></span>
+<span class="normal"><a href="#__codelineno-19-43"> 43</a></span>
+<span class="normal"><a href="#__codelineno-19-44"> 44</a></span>
+<span class="normal"><a href="#__codelineno-19-45"> 45</a></span>
+<span class="normal"><a href="#__codelineno-19-46"> 46</a></span>
+<span class="normal"><a href="#__codelineno-19-47"> 47</a></span>
+<span class="normal"><a href="#__codelineno-19-48"> 48</a></span>
+<span class="normal"><a href="#__codelineno-19-49"> 49</a></span>
+<span class="normal"><a href="#__codelineno-19-50"> 50</a></span>
+<span class="normal"><a href="#__codelineno-19-51"> 51</a></span>
+<span class="normal"><a href="#__codelineno-19-52"> 52</a></span>
+<span class="normal"><a href="#__codelineno-19-53"> 53</a></span>
+<span class="normal"><a href="#__codelineno-19-54"> 54</a></span>
+<span class="normal"><a href="#__codelineno-19-55"> 55</a></span>
+<span class="normal"><a href="#__codelineno-19-56"> 56</a></span>
+<span class="normal"><a href="#__codelineno-19-57"> 57</a></span>
+<span class="normal"><a href="#__codelineno-19-58"> 58</a></span>
+<span class="normal"><a href="#__codelineno-19-59"> 59</a></span>
+<span class="normal"><a href="#__codelineno-19-60"> 60</a></span>
+<span class="normal"><a href="#__codelineno-19-61"> 61</a></span>
+<span class="normal"><a href="#__codelineno-19-62"> 62</a></span>
+<span class="normal"><a href="#__codelineno-19-63"> 63</a></span>
+<span class="normal"><a href="#__codelineno-19-64"> 64</a></span>
+<span class="normal"><a href="#__codelineno-19-65"> 65</a></span>
+<span class="normal"><a href="#__codelineno-19-66"> 66</a></span>
+<span class="normal"><a href="#__codelineno-19-67"> 67</a></span>
+<span class="normal"><a href="#__codelineno-19-68"> 68</a></span>
+<span class="normal"><a href="#__codelineno-19-69"> 69</a></span>
+<span class="normal"><a href="#__codelineno-19-70"> 70</a></span>
+<span class="normal"><a href="#__codelineno-19-71"> 71</a></span>
+<span class="normal"><a href="#__codelineno-19-72"> 72</a></span>
+<span class="normal"><a href="#__codelineno-19-73"> 73</a></span>
+<span class="normal"><a href="#__codelineno-19-74"> 74</a></span>
+<span class="normal"><a href="#__codelineno-19-75"> 75</a></span>
+<span class="normal"><a href="#__codelineno-19-76"> 76</a></span>
+<span class="normal"><a href="#__codelineno-19-77"> 77</a></span>
+<span class="normal"><a href="#__codelineno-19-78"> 78</a></span>
+<span class="normal"><a href="#__codelineno-19-79"> 79</a></span>
+<span class="normal"><a href="#__codelineno-19-80"> 80</a></span>
+<span class="normal"><a href="#__codelineno-19-81"> 81</a></span>
+<span class="normal"><a href="#__codelineno-19-82"> 82</a></span>
+<span class="normal"><a href="#__codelineno-19-83"> 83</a></span>
+<span class="normal"><a href="#__codelineno-19-84"> 84</a></span>
+<span class="normal"><a href="#__codelineno-19-85"> 85</a></span>
+<span class="normal"><a href="#__codelineno-19-86"> 86</a></span>
+<span class="normal"><a href="#__codelineno-19-87"> 87</a></span>
+<span class="normal"><a href="#__codelineno-19-88"> 88</a></span>
+<span class="normal"><a href="#__codelineno-19-89"> 89</a></span>
+<span class="normal"><a href="#__codelineno-19-90"> 90</a></span>
+<span class="normal"><a href="#__codelineno-19-91"> 91</a></span>
+<span class="normal"><a href="#__codelineno-19-92"> 92</a></span>
+<span class="normal"><a href="#__codelineno-19-93"> 93</a></span>
+<span class="normal"><a href="#__codelineno-19-94"> 94</a></span>
+<span class="normal"><a href="#__codelineno-19-95"> 95</a></span>
+<span class="normal"><a href="#__codelineno-19-96"> 96</a></span>
+<span class="normal"><a href="#__codelineno-19-97"> 97</a></span>
+<span class="normal"><a href="#__codelineno-19-98"> 98</a></span>
+<span class="normal"><a href="#__codelineno-19-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-19-100">100</a></span>
+<span class="normal"><a href="#__codelineno-19-101">101</a></span>
+<span class="normal"><a href="#__codelineno-19-102">102</a></span>
+<span class="normal"><a href="#__codelineno-19-103">103</a></span>
+<span class="normal"><a href="#__codelineno-19-104">104</a></span>
+<span class="normal"><a href="#__codelineno-19-105">105</a></span>
+<span class="normal"><a href="#__codelineno-19-106">106</a></span>
+<span class="normal"><a href="#__codelineno-19-107">107</a></span>
+<span class="normal"><a href="#__codelineno-19-108">108</a></span>
+<span class="normal"><a href="#__codelineno-19-109">109</a></span>
+<span class="normal"><a href="#__codelineno-19-110">110</a></span>
+<span class="normal"><a href="#__codelineno-19-111">111</a></span>
+<span class="normal"><a href="#__codelineno-19-112">112</a></span>
+<span class="normal"><a href="#__codelineno-19-113">113</a></span>
+<span class="normal"><a href="#__codelineno-19-114">114</a></span>
+<span class="normal"><a href="#__codelineno-19-115">115</a></span>
+<span class="normal"><a href="#__codelineno-19-116">116</a></span>
+<span class="normal"><a href="#__codelineno-19-117">117</a></span>
+<span class="normal"><a href="#__codelineno-19-118">118</a></span>
+<span class="normal"><a href="#__codelineno-19-119">119</a></span>
+<span class="normal"><a href="#__codelineno-19-120">120</a></span>
+<span class="normal"><a href="#__codelineno-19-121">121</a></span>
+<span class="normal"><a href="#__codelineno-19-122">122</a></span>
+<span class="normal"><a href="#__codelineno-19-123">123</a></span>
+<span class="normal"><a href="#__codelineno-19-124">124</a></span>
+<span class="normal"><a href="#__codelineno-19-125">125</a></span>
+<span class="normal"><a href="#__codelineno-19-126">126</a></span>
+<span class="normal"><a href="#__codelineno-19-127">127</a></span>
+<span class="normal"><a href="#__codelineno-19-128">128</a></span>
+<span class="normal"><a href="#__codelineno-19-129">129</a></span>
+<span class="normal"><a href="#__codelineno-19-130">130</a></span>
+<span class="normal"><a href="#__codelineno-19-131">131</a></span>
+<span class="normal"><a href="#__codelineno-19-132">132</a></span>
+<span class="normal"><a href="#__codelineno-19-133">133</a></span>
+<span class="normal"><a href="#__codelineno-19-134">134</a></span>
+<span class="normal"><a href="#__codelineno-19-135">135</a></span>
+<span class="normal"><a href="#__codelineno-19-136">136</a></span>
+<span class="normal"><a href="#__codelineno-19-137">137</a></span>
+<span class="normal"><a href="#__codelineno-19-138">138</a></span>
+<span class="normal"><a href="#__codelineno-19-139">139</a></span>
+<span class="normal"><a href="#__codelineno-19-140">140</a></span>
+<span class="normal"><a href="#__codelineno-19-141">141</a></span>
+<span class="normal"><a href="#__codelineno-19-142">142</a></span>
+<span class="normal"><a href="#__codelineno-19-143">143</a></span>
+<span class="normal"><a href="#__codelineno-19-144">144</a></span>
+<span class="normal"><a href="#__codelineno-19-145">145</a></span>
+<span class="normal"><a href="#__codelineno-19-146">146</a></span>
+<span class="normal"><a href="#__codelineno-19-147">147</a></span>
+<span class="normal"><a href="#__codelineno-19-148">148</a></span>
+<span class="normal"><a href="#__codelineno-19-149">149</a></span>
+<span class="normal"><a href="#__codelineno-19-150">150</a></span>
+<span class="normal"><a href="#__codelineno-19-151">151</a></span>
+<span class="normal"><a href="#__codelineno-19-152">152</a></span>
+<span class="normal"><a href="#__codelineno-19-153">153</a></span>
+<span class="normal"><a href="#__codelineno-19-154">154</a></span>
+<span class="normal"><a href="#__codelineno-19-155">155</a></span>
+<span class="normal"><a href="#__codelineno-19-156">156</a></span>
+<span class="normal"><a href="#__codelineno-19-157">157</a></span>
+<span class="normal"><a href="#__codelineno-19-158">158</a></span>
+<span class="normal"><a href="#__codelineno-19-159">159</a></span>
+<span class="normal"><a href="#__codelineno-19-160">160</a></span>
+<span class="normal"><a href="#__codelineno-19-161">161</a></span>
+<span class="normal"><a href="#__codelineno-19-162">162</a></span>
+<span class="normal"><a href="#__codelineno-19-163">163</a></span>
+<span class="normal"><a href="#__codelineno-19-164">164</a></span>
+<span class="normal"><a href="#__codelineno-19-165">165</a></span>
+<span class="normal"><a href="#__codelineno-19-166">166</a></span>
+<span class="normal"><a href="#__codelineno-19-167">167</a></span>
+<span class="normal"><a href="#__codelineno-19-168">168</a></span>
+<span class="normal"><a href="#__codelineno-19-169">169</a></span>
+<span class="normal"><a href="#__codelineno-19-170">170</a></span>
+<span class="normal"><a href="#__codelineno-19-171">171</a></span>
+<span class="normal"><a href="#__codelineno-19-172">172</a></span>
+<span class="normal"><a href="#__codelineno-19-173">173</a></span>
+<span class="normal"><a href="#__codelineno-19-174">174</a></span>
+<span class="normal"><a href="#__codelineno-19-175">175</a></span>
+<span class="normal"><a href="#__codelineno-19-176">176</a></span>
+<span class="normal"><a href="#__codelineno-19-177">177</a></span>
+<span class="normal"><a href="#__codelineno-19-178">178</a></span>
+<span class="normal"><a href="#__codelineno-19-179">179</a></span>
+<span class="normal"><a href="#__codelineno-19-180">180</a></span>
+<span class="normal"><a href="#__codelineno-19-181">181</a></span>
+<span class="normal"><a href="#__codelineno-19-182">182</a></span>
+<span class="normal"><a href="#__codelineno-19-183">183</a></span>
+<span class="normal"><a href="#__codelineno-19-184">184</a></span>
+<span class="normal"><a href="#__codelineno-19-185">185</a></span>
+<span class="normal"><a href="#__codelineno-19-186">186</a></span>
+<span class="normal"><a href="#__codelineno-19-187">187</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>guru@hp:~$ sudo apt install virtualbox-7.1 -y
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>Reading package lists... Done
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a>Building dependency tree... Done
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a>Reading state information... Done
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a>The following additional packages will be installed:
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a>libb2-1 liblzf1 libqt6core6t64 libqt6dbus6t64 libqt6gui6t64 libqt6help6 libqt6network6t64 libqt6opengl6t64 libqt6printsupport6t64 libqt6qml6 libqt6qmlmodels6 libqt6quick6 libqt6sql6-sqlite libqt6sql6t64 libqt6statemachine6
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a>libqt6waylandclient6 libqt6waylandcompositor6 libqt6waylandeglclienthwintegration6 libqt6waylandeglcompositorhwintegration6 libqt6widgets6t64 libqt6wlshellintegration6 libqt6xml6t64 libsdl-ttf2.0-0 libsdl1.2debian libtpms0 libts0t64
+<a id="__codelineno-19-8" name="__codelineno-19-8"></a>qt6-gtk-platformtheme qt6-qpa-plugins qt6-translations-l10n qt6-wayland
+<a id="__codelineno-19-9" name="__codelineno-19-9"></a>Suggested packages:
+<a id="__codelineno-19-10" name="__codelineno-19-10"></a>qt6-qmltooling-plugins
+<a id="__codelineno-19-11" name="__codelineno-19-11"></a>The following NEW packages will be installed:
+<a id="__codelineno-19-12" name="__codelineno-19-12"></a>libb2-1 liblzf1 libqt6core6t64 libqt6dbus6t64 libqt6gui6t64 libqt6help6 libqt6network6t64 libqt6opengl6t64 libqt6printsupport6t64 libqt6qml6 libqt6qmlmodels6 libqt6quick6 libqt6sql6-sqlite libqt6sql6t64 libqt6statemachine6
+<a id="__codelineno-19-13" name="__codelineno-19-13"></a>libqt6waylandclient6 libqt6waylandcompositor6 libqt6waylandeglclienthwintegration6 libqt6waylandeglcompositorhwintegration6 libqt6widgets6t64 libqt6wlshellintegration6 libqt6xml6t64 libsdl-ttf2.0-0 libsdl1.2debian libtpms0 libts0t64
+<a id="__codelineno-19-14" name="__codelineno-19-14"></a>qt6-gtk-platformtheme qt6-qpa-plugins qt6-translations-l10n qt6-wayland virtualbox-7.1
+<a id="__codelineno-19-15" name="__codelineno-19-15"></a>0 upgraded, 31 newly installed, 0 to remove and 0 not upgraded.
+<a id="__codelineno-19-16" name="__codelineno-19-16"></a>Need to get 126 MB of archives.
+<a id="__codelineno-19-17" name="__codelineno-19-17"></a>After this operation, 312 MB of additional disk space will be used.
+<a id="__codelineno-19-18" name="__codelineno-19-18"></a>Get:1 http://archive.ubuntu.com/ubuntu noble/universe amd64 liblzf1 amd64 3.6-4 [7.624 B]
+<a id="__codelineno-19-19" name="__codelineno-19-19"></a>Get:2 http://archive.ubuntu.com/ubuntu noble/universe amd64 libb2-1 amd64 0.98.1-1.1build1 [45,0 kB]
+<a id="__codelineno-19-20" name="__codelineno-19-20"></a>Get:3 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6core6t64 amd64 6.4.2+dfsg-21.1build5 [1.789 kB]
+<a id="__codelineno-19-21" name="__codelineno-19-21"></a>Get:4 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6dbus6t64 amd64 6.4.2+dfsg-21.1build5 [267 kB]
+<a id="__codelineno-19-22" name="__codelineno-19-22"></a>Get:5 http://archive.ubuntu.com/ubuntu noble/universe amd64 libts0t64 amd64 1.22-1.1build1 [63,8 kB]
+<a id="__codelineno-19-23" name="__codelineno-19-23"></a>Get:6 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6gui6t64 amd64 6.4.2+dfsg-21.1build5 [3.119 kB]
+<a id="__codelineno-19-24" name="__codelineno-19-24"></a>Get:7 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6sql6t64 amd64 6.4.2+dfsg-21.1build5 [141 kB]
+<a id="__codelineno-19-25" name="__codelineno-19-25"></a>Get:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6widgets6t64 amd64 6.4.2+dfsg-21.1build5 [2.648 kB]
+<a id="__codelineno-19-26" name="__codelineno-19-26"></a>Get:9 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6help6 amd64 6.4.2-3build3 [189 kB]
+<a id="__codelineno-19-27" name="__codelineno-19-27"></a>Get:10 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6printsupport6t64 amd64 6.4.2+dfsg-21.1build5 [222 kB]
+<a id="__codelineno-19-28" name="__codelineno-19-28"></a>Get:11 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6statemachine6 amd64 6.4.2-4build2 [128 kB]
+<a id="__codelineno-19-29" name="__codelineno-19-29"></a>Get:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6xml6t64 amd64 6.4.2+dfsg-21.1build5 [75,9 kB]
+<a id="__codelineno-19-30" name="__codelineno-19-30"></a>Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libtpms0 amd64 0.9.3-0ubuntu4.24.04.1 [373 kB]
+<a id="__codelineno-19-31" name="__codelineno-19-31"></a>Get:14 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6network6t64 amd64 6.4.2+dfsg-21.1build5 [740 kB]
+<a id="__codelineno-19-32" name="__codelineno-19-32"></a>Get:15 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6opengl6t64 amd64 6.4.2+dfsg-21.1build5 [420 kB]
+<a id="__codelineno-19-33" name="__codelineno-19-33"></a>Get:16 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6qml6 amd64 6.4.2+dfsg-4build3 [1.619 kB]
+<a id="__codelineno-19-34" name="__codelineno-19-34"></a>Get:17 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6qmlmodels6 amd64 6.4.2+dfsg-4build3 [267 kB]
+<a id="__codelineno-19-35" name="__codelineno-19-35"></a>Get:18 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6quick6 amd64 6.4.2+dfsg-4build3 [2.001 kB]
+<a id="__codelineno-19-36" name="__codelineno-19-36"></a>Get:19 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6sql6-sqlite amd64 6.4.2+dfsg-21.1build5 [57,8 kB]
+<a id="__codelineno-19-37" name="__codelineno-19-37"></a>Get:20 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6waylandclient6 amd64 6.4.2-5build3 [251 kB]
+<a id="__codelineno-19-38" name="__codelineno-19-38"></a>Get:21 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6waylandcompositor6 amd64 6.4.2-5build3 [427 kB]
+<a id="__codelineno-19-39" name="__codelineno-19-39"></a>Get:22 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6waylandeglclienthwintegration6 amd64 6.4.2-5build3 [19,5 kB]
+<a id="__codelineno-19-40" name="__codelineno-19-40"></a>Get:23 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6waylandeglcompositorhwintegration6 amd64 6.4.2-5build3 [15,2 kB]
+<a id="__codelineno-19-41" name="__codelineno-19-41"></a>Get:24 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6wlshellintegration6 amd64 6.4.2-5build3 [38,0 kB]
+<a id="__codelineno-19-42" name="__codelineno-19-42"></a>Get:25 http://archive.ubuntu.com/ubuntu noble/universe amd64 libsdl1.2debian amd64 1.2.68-2 [101 kB]
+<a id="__codelineno-19-43" name="__codelineno-19-43"></a>Get:26 http://archive.ubuntu.com/ubuntu noble/universe amd64 libsdl-ttf2.0-0 amd64 2.0.11-6 [15,1 kB]
+<a id="__codelineno-19-44" name="__codelineno-19-44"></a>Get:27 http://archive.ubuntu.com/ubuntu noble/universe amd64 qt6-gtk-platformtheme amd64 6.4.2+dfsg-21.1build5 [55,1 kB]
+<a id="__codelineno-19-45" name="__codelineno-19-45"></a>Get:28 http://archive.ubuntu.com/ubuntu noble/universe amd64 qt6-qpa-plugins amd64 6.4.2+dfsg-21.1build5 [89,3 kB]
+<a id="__codelineno-19-46" name="__codelineno-19-46"></a>Get:29 http://archive.ubuntu.com/ubuntu noble/universe amd64 qt6-translations-l10n all 6.4.2-1 [1.761 kB]
+<a id="__codelineno-19-47" name="__codelineno-19-47"></a>Get:30 http://archive.ubuntu.com/ubuntu noble/universe amd64 qt6-wayland amd64 6.4.2-5build3 [127 kB]
+<a id="__codelineno-19-48" name="__codelineno-19-48"></a>Get:31 https://download.virtualbox.org/virtualbox/debian noble/contrib amd64 virtualbox-7.1 amd64 7.1.12-169651~Ubuntu~noble [109 MB]
+<a id="__codelineno-19-49" name="__codelineno-19-49"></a>Fetched 126 MB in 2s (57,7 MB/s)          
+<a id="__codelineno-19-50" name="__codelineno-19-50"></a>Extracting templates from packages: 100%
+<a id="__codelineno-19-51" name="__codelineno-19-51"></a>Preconfiguring packages ...
+<a id="__codelineno-19-52" name="__codelineno-19-52"></a>Selecting previously unselected package liblzf1:amd64.
+<a id="__codelineno-19-53" name="__codelineno-19-53"></a>(Reading database ... 530479 files and directories currently installed.)
+<a id="__codelineno-19-54" name="__codelineno-19-54"></a>Preparing to unpack .../00-liblzf1_3.6-4_amd64.deb ...
+<a id="__codelineno-19-55" name="__codelineno-19-55"></a>Unpacking liblzf1:amd64 (3.6-4) ...
+<a id="__codelineno-19-56" name="__codelineno-19-56"></a>Selecting previously unselected package libb2-1:amd64.
+<a id="__codelineno-19-57" name="__codelineno-19-57"></a>Preparing to unpack .../01-libb2-1_0.98.1-1.1build1_amd64.deb ...
+<a id="__codelineno-19-58" name="__codelineno-19-58"></a>Unpacking libb2-1:amd64 (0.98.1-1.1build1) ...
+<a id="__codelineno-19-59" name="__codelineno-19-59"></a>Selecting previously unselected package libqt6core6t64:amd64.
+<a id="__codelineno-19-60" name="__codelineno-19-60"></a>Preparing to unpack .../02-libqt6core6t64_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-19-61" name="__codelineno-19-61"></a>Unpacking libqt6core6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-62" name="__codelineno-19-62"></a>Selecting previously unselected package libqt6dbus6t64:amd64.
+<a id="__codelineno-19-63" name="__codelineno-19-63"></a>Preparing to unpack .../03-libqt6dbus6t64_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-19-64" name="__codelineno-19-64"></a>Unpacking libqt6dbus6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-65" name="__codelineno-19-65"></a>Selecting previously unselected package libts0t64:amd64.
+<a id="__codelineno-19-66" name="__codelineno-19-66"></a>Preparing to unpack .../04-libts0t64_1.22-1.1build1_amd64.deb ...
+<a id="__codelineno-19-67" name="__codelineno-19-67"></a>Unpacking libts0t64:amd64 (1.22-1.1build1) ...
+<a id="__codelineno-19-68" name="__codelineno-19-68"></a>Selecting previously unselected package libqt6gui6t64:amd64.
+<a id="__codelineno-19-69" name="__codelineno-19-69"></a>Preparing to unpack .../05-libqt6gui6t64_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-19-70" name="__codelineno-19-70"></a>Unpacking libqt6gui6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-71" name="__codelineno-19-71"></a>Selecting previously unselected package libqt6sql6t64:amd64.
+<a id="__codelineno-19-72" name="__codelineno-19-72"></a>Preparing to unpack .../06-libqt6sql6t64_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-19-73" name="__codelineno-19-73"></a>Unpacking libqt6sql6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-74" name="__codelineno-19-74"></a>Selecting previously unselected package libqt6widgets6t64:amd64.
+<a id="__codelineno-19-75" name="__codelineno-19-75"></a>Preparing to unpack .../07-libqt6widgets6t64_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-19-76" name="__codelineno-19-76"></a>Unpacking libqt6widgets6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-77" name="__codelineno-19-77"></a>Selecting previously unselected package libqt6help6:amd64.
+<a id="__codelineno-19-78" name="__codelineno-19-78"></a>Preparing to unpack .../08-libqt6help6_6.4.2-3build3_amd64.deb ...
+<a id="__codelineno-19-79" name="__codelineno-19-79"></a>Unpacking libqt6help6:amd64 (6.4.2-3build3) ...
+<a id="__codelineno-19-80" name="__codelineno-19-80"></a>Selecting previously unselected package libqt6printsupport6t64:amd64.
+<a id="__codelineno-19-81" name="__codelineno-19-81"></a>Preparing to unpack .../09-libqt6printsupport6t64_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-19-82" name="__codelineno-19-82"></a>Unpacking libqt6printsupport6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-83" name="__codelineno-19-83"></a>Selecting previously unselected package libqt6statemachine6:amd64.
+<a id="__codelineno-19-84" name="__codelineno-19-84"></a>Preparing to unpack .../10-libqt6statemachine6_6.4.2-4build2_amd64.deb ...
+<a id="__codelineno-19-85" name="__codelineno-19-85"></a>Unpacking libqt6statemachine6:amd64 (6.4.2-4build2) ...
+<a id="__codelineno-19-86" name="__codelineno-19-86"></a>Selecting previously unselected package libqt6xml6t64:amd64.
+<a id="__codelineno-19-87" name="__codelineno-19-87"></a>Preparing to unpack .../11-libqt6xml6t64_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-19-88" name="__codelineno-19-88"></a>Unpacking libqt6xml6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-89" name="__codelineno-19-89"></a>Selecting previously unselected package libtpms0:amd64.
+<a id="__codelineno-19-90" name="__codelineno-19-90"></a>Preparing to unpack .../12-libtpms0_0.9.3-0ubuntu4.24.04.1_amd64.deb ...
+<a id="__codelineno-19-91" name="__codelineno-19-91"></a>Unpacking libtpms0:amd64 (0.9.3-0ubuntu4.24.04.1) ...
+<a id="__codelineno-19-92" name="__codelineno-19-92"></a>Selecting previously unselected package virtualbox-7.1.
+<a id="__codelineno-19-93" name="__codelineno-19-93"></a>Preparing to unpack .../13-virtualbox-7.1_7.1.12-169651~Ubuntu~noble_amd64.deb ...
+<a id="__codelineno-19-94" name="__codelineno-19-94"></a>Unpacking virtualbox-7.1 (7.1.12-169651~Ubuntu~noble) ...
+<a id="__codelineno-19-95" name="__codelineno-19-95"></a>Selecting previously unselected package libqt6network6t64:amd64.
+<a id="__codelineno-19-96" name="__codelineno-19-96"></a>Preparing to unpack .../14-libqt6network6t64_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-19-97" name="__codelineno-19-97"></a>Unpacking libqt6network6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-98" name="__codelineno-19-98"></a>Selecting previously unselected package libqt6opengl6t64:amd64.
+<a id="__codelineno-19-99" name="__codelineno-19-99"></a>Preparing to unpack .../15-libqt6opengl6t64_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-19-100" name="__codelineno-19-100"></a>Unpacking libqt6opengl6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-101" name="__codelineno-19-101"></a>Selecting previously unselected package libqt6qml6:amd64.
+<a id="__codelineno-19-102" name="__codelineno-19-102"></a>Preparing to unpack .../16-libqt6qml6_6.4.2+dfsg-4build3_amd64.deb ...
+<a id="__codelineno-19-103" name="__codelineno-19-103"></a>Unpacking libqt6qml6:amd64 (6.4.2+dfsg-4build3) ...
+<a id="__codelineno-19-104" name="__codelineno-19-104"></a>Selecting previously unselected package libqt6qmlmodels6:amd64.
+<a id="__codelineno-19-105" name="__codelineno-19-105"></a>Preparing to unpack .../17-libqt6qmlmodels6_6.4.2+dfsg-4build3_amd64.deb ...
+<a id="__codelineno-19-106" name="__codelineno-19-106"></a>Unpacking libqt6qmlmodels6:amd64 (6.4.2+dfsg-4build3) ...
+<a id="__codelineno-19-107" name="__codelineno-19-107"></a>Selecting previously unselected package libqt6quick6:amd64.
+<a id="__codelineno-19-108" name="__codelineno-19-108"></a>Preparing to unpack .../18-libqt6quick6_6.4.2+dfsg-4build3_amd64.deb ...
+<a id="__codelineno-19-109" name="__codelineno-19-109"></a>Unpacking libqt6quick6:amd64 (6.4.2+dfsg-4build3) ...
+<a id="__codelineno-19-110" name="__codelineno-19-110"></a>Selecting previously unselected package libqt6sql6-sqlite:amd64.
+<a id="__codelineno-19-111" name="__codelineno-19-111"></a>Preparing to unpack .../19-libqt6sql6-sqlite_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-19-112" name="__codelineno-19-112"></a>Unpacking libqt6sql6-sqlite:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-113" name="__codelineno-19-113"></a>Selecting previously unselected package libqt6waylandclient6:amd64.
+<a id="__codelineno-19-114" name="__codelineno-19-114"></a>Preparing to unpack .../20-libqt6waylandclient6_6.4.2-5build3_amd64.deb ...
+<a id="__codelineno-19-115" name="__codelineno-19-115"></a>Unpacking libqt6waylandclient6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-19-116" name="__codelineno-19-116"></a>Selecting previously unselected package libqt6waylandcompositor6:amd64.
+<a id="__codelineno-19-117" name="__codelineno-19-117"></a>Preparing to unpack .../21-libqt6waylandcompositor6_6.4.2-5build3_amd64.deb ...
+<a id="__codelineno-19-118" name="__codelineno-19-118"></a>Unpacking libqt6waylandcompositor6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-19-119" name="__codelineno-19-119"></a>Selecting previously unselected package libqt6waylandeglclienthwintegration6:amd64.
+<a id="__codelineno-19-120" name="__codelineno-19-120"></a>Preparing to unpack .../22-libqt6waylandeglclienthwintegration6_6.4.2-5build3_amd64.deb ...
+<a id="__codelineno-19-121" name="__codelineno-19-121"></a>Unpacking libqt6waylandeglclienthwintegration6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-19-122" name="__codelineno-19-122"></a>Selecting previously unselected package libqt6waylandeglcompositorhwintegration6:amd64.
+<a id="__codelineno-19-123" name="__codelineno-19-123"></a>Preparing to unpack .../23-libqt6waylandeglcompositorhwintegration6_6.4.2-5build3_amd64.deb ...
+<a id="__codelineno-19-124" name="__codelineno-19-124"></a>Unpacking libqt6waylandeglcompositorhwintegration6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-19-125" name="__codelineno-19-125"></a>Selecting previously unselected package libqt6wlshellintegration6:amd64.
+<a id="__codelineno-19-126" name="__codelineno-19-126"></a>Preparing to unpack .../24-libqt6wlshellintegration6_6.4.2-5build3_amd64.deb ...
+<a id="__codelineno-19-127" name="__codelineno-19-127"></a>Unpacking libqt6wlshellintegration6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-19-128" name="__codelineno-19-128"></a>Selecting previously unselected package libsdl1.2debian:amd64.
+<a id="__codelineno-19-129" name="__codelineno-19-129"></a>Preparing to unpack .../25-libsdl1.2debian_1.2.68-2_amd64.deb ...
+<a id="__codelineno-19-130" name="__codelineno-19-130"></a>Unpacking libsdl1.2debian:amd64 (1.2.68-2) ...
+<a id="__codelineno-19-131" name="__codelineno-19-131"></a>Selecting previously unselected package libsdl-ttf2.0-0:amd64.
+<a id="__codelineno-19-132" name="__codelineno-19-132"></a>Preparing to unpack .../26-libsdl-ttf2.0-0_2.0.11-6_amd64.deb ...
+<a id="__codelineno-19-133" name="__codelineno-19-133"></a>Unpacking libsdl-ttf2.0-0:amd64 (2.0.11-6) ...
+<a id="__codelineno-19-134" name="__codelineno-19-134"></a>Selecting previously unselected package qt6-gtk-platformtheme:amd64.
+<a id="__codelineno-19-135" name="__codelineno-19-135"></a>Preparing to unpack .../27-qt6-gtk-platformtheme_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-19-136" name="__codelineno-19-136"></a>Unpacking qt6-gtk-platformtheme:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-137" name="__codelineno-19-137"></a>Selecting previously unselected package qt6-qpa-plugins:amd64.
+<a id="__codelineno-19-138" name="__codelineno-19-138"></a>Preparing to unpack .../28-qt6-qpa-plugins_6.4.2+dfsg-21.1build5_amd64.deb ...
+<a id="__codelineno-19-139" name="__codelineno-19-139"></a>Unpacking qt6-qpa-plugins:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-140" name="__codelineno-19-140"></a>Selecting previously unselected package qt6-translations-l10n.
+<a id="__codelineno-19-141" name="__codelineno-19-141"></a>Preparing to unpack .../29-qt6-translations-l10n_6.4.2-1_all.deb ...
+<a id="__codelineno-19-142" name="__codelineno-19-142"></a>Unpacking qt6-translations-l10n (6.4.2-1) ...
+<a id="__codelineno-19-143" name="__codelineno-19-143"></a>Selecting previously unselected package qt6-wayland:amd64.
+<a id="__codelineno-19-144" name="__codelineno-19-144"></a>Preparing to unpack .../30-qt6-wayland_6.4.2-5build3_amd64.deb ...
+<a id="__codelineno-19-145" name="__codelineno-19-145"></a>Unpacking qt6-wayland:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-19-146" name="__codelineno-19-146"></a>Setting up libb2-1:amd64 (0.98.1-1.1build1) ...
+<a id="__codelineno-19-147" name="__codelineno-19-147"></a>Setting up libqt6core6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-148" name="__codelineno-19-148"></a>Setting up libts0t64:amd64 (1.22-1.1build1) ...
+<a id="__codelineno-19-149" name="__codelineno-19-149"></a>Setting up libqt6sql6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-150" name="__codelineno-19-150"></a>Setting up libqt6dbus6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-151" name="__codelineno-19-151"></a>Setting up libqt6xml6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-152" name="__codelineno-19-152"></a>Setting up qt6-translations-l10n (6.4.2-1) ...
+<a id="__codelineno-19-153" name="__codelineno-19-153"></a>Setting up libqt6sql6-sqlite:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-154" name="__codelineno-19-154"></a>Setting up liblzf1:amd64 (3.6-4) ...
+<a id="__codelineno-19-155" name="__codelineno-19-155"></a>Setting up libsdl1.2debian:amd64 (1.2.68-2) ...
+<a id="__codelineno-19-156" name="__codelineno-19-156"></a>Setting up libqt6gui6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-157" name="__codelineno-19-157"></a>Setting up libqt6statemachine6:amd64 (6.4.2-4build2) ...
+<a id="__codelineno-19-158" name="__codelineno-19-158"></a>Setting up libqt6network6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-159" name="__codelineno-19-159"></a>Setting up libtpms0:amd64 (0.9.3-0ubuntu4.24.04.1) ...
+<a id="__codelineno-19-160" name="__codelineno-19-160"></a>Setting up libsdl-ttf2.0-0:amd64 (2.0.11-6) ...
+<a id="__codelineno-19-161" name="__codelineno-19-161"></a>Setting up libqt6widgets6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-162" name="__codelineno-19-162"></a>Setting up qt6-qpa-plugins:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-163" name="__codelineno-19-163"></a>Setting up libqt6help6:amd64 (6.4.2-3build3) ...
+<a id="__codelineno-19-164" name="__codelineno-19-164"></a>Setting up libqt6qml6:amd64 (6.4.2+dfsg-4build3) ...
+<a id="__codelineno-19-165" name="__codelineno-19-165"></a>Setting up libqt6opengl6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-166" name="__codelineno-19-166"></a>Setting up libqt6qmlmodels6:amd64 (6.4.2+dfsg-4build3) ...
+<a id="__codelineno-19-167" name="__codelineno-19-167"></a>Setting up libqt6waylandclient6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-19-168" name="__codelineno-19-168"></a>Setting up qt6-gtk-platformtheme:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-169" name="__codelineno-19-169"></a>Setting up libqt6printsupport6t64:amd64 (6.4.2+dfsg-21.1build5) ...
+<a id="__codelineno-19-170" name="__codelineno-19-170"></a>Setting up libqt6quick6:amd64 (6.4.2+dfsg-4build3) ...
+<a id="__codelineno-19-171" name="__codelineno-19-171"></a>Setting up virtualbox-7.1 (7.1.12-169651~Ubuntu~noble) ...
+<a id="__codelineno-19-172" name="__codelineno-19-172"></a>info: Selecting GID from range 100 to 999 ...
+<a id="__codelineno-19-173" name="__codelineno-19-173"></a>info: Adding group `vboxusers' (GID 127) ...
+<a id="__codelineno-19-174" name="__codelineno-19-174"></a>Setting up libqt6wlshellintegration6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-19-175" name="__codelineno-19-175"></a>Setting up libqt6waylandcompositor6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-19-176" name="__codelineno-19-176"></a>Setting up libqt6waylandeglcompositorhwintegration6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-19-177" name="__codelineno-19-177"></a>Setting up libqt6waylandeglclienthwintegration6:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-19-178" name="__codelineno-19-178"></a>Setting up qt6-wayland:amd64 (6.4.2-5build3) ...
+<a id="__codelineno-19-179" name="__codelineno-19-179"></a>Processing triggers for hicolor-icon-theme (0.17-2) ...
+<a id="__codelineno-19-180" name="__codelineno-19-180"></a>Processing triggers for gnome-menus (3.36.0-1.1ubuntu3) ...
+<a id="__codelineno-19-181" name="__codelineno-19-181"></a>Processing triggers for mate-menus (1.26.1+mint1) ...
+<a id="__codelineno-19-182" name="__codelineno-19-182"></a>Processing triggers for libc-bin (2.39-0ubuntu8.5) ...
+<a id="__codelineno-19-183" name="__codelineno-19-183"></a>Processing triggers for man-db (2.12.0-4build2) ...
+<a id="__codelineno-19-184" name="__codelineno-19-184"></a>Processing triggers for shared-mime-info (2.4-4) ...
+<a id="__codelineno-19-185" name="__codelineno-19-185"></a>Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+<a id="__codelineno-19-186" name="__codelineno-19-186"></a>Processing triggers for desktop-file-utils (0.27-2build1) ...
+<a id="__codelineno-19-187" name="__codelineno-19-187"></a>guru@hp:~$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
 <h2 id="setup-extension-pack-optioneel">Setup Extension Pack (optioneel)</h2>
 <h3 id="installeer">Installeer</h3>
-<p>Het installeren van het <a href="../../explanations/todo/">Extension Pack</a> is nodig om extra functionaliteit zoals USB 2.0/3.0-ondersteuning, RDP-server, disk-encryptie en PXE boot toe te voegen aan VirtualBox.</p>
+<p>Installeren van het <a href="../../explanations/todo/">Extension Pack</a> is nodig om extra functionaliteit zoals USB 2.0/3.0-ondersteuning, RDP-server, disk-encryptie en PXE boot toe te voegen aan VirtualBox.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio"/><input id="__tabbed_11_2" name="__tabbed_11" type="radio"/><div class="tabbed-labels"><label for="__tabbed_11_1">guru@hp:~$_</label><label for="__tabbed_11_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1327,7 +1984,77 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-21-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-21-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-21-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-21-10">10</a></span>
+<span class="normal"><a href="#__codelineno-21-11">11</a></span>
+<span class="normal"><a href="#__codelineno-21-12">12</a></span>
+<span class="normal"><a href="#__codelineno-21-13">13</a></span>
+<span class="normal"><a href="#__codelineno-21-14">14</a></span>
+<span class="normal"><a href="#__codelineno-21-15">15</a></span>
+<span class="normal"><a href="#__codelineno-21-16">16</a></span>
+<span class="normal"><a href="#__codelineno-21-17">17</a></span>
+<span class="normal"><a href="#__codelineno-21-18">18</a></span>
+<span class="normal"><a href="#__codelineno-21-19">19</a></span>
+<span class="normal"><a href="#__codelineno-21-20">20</a></span>
+<span class="normal"><a href="#__codelineno-21-21">21</a></span>
+<span class="normal"><a href="#__codelineno-21-22">22</a></span>
+<span class="normal"><a href="#__codelineno-21-23">23</a></span>
+<span class="normal"><a href="#__codelineno-21-24">24</a></span>
+<span class="normal"><a href="#__codelineno-21-25">25</a></span>
+<span class="normal"><a href="#__codelineno-21-26">26</a></span>
+<span class="normal"><a href="#__codelineno-21-27">27</a></span>
+<span class="normal"><a href="#__codelineno-21-28">28</a></span>
+<span class="normal"><a href="#__codelineno-21-29">29</a></span>
+<span class="normal"><a href="#__codelineno-21-30">30</a></span>
+<span class="normal"><a href="#__codelineno-21-31">31</a></span>
+<span class="normal"><a href="#__codelineno-21-32">32</a></span>
+<span class="normal"><a href="#__codelineno-21-33">33</a></span>
+<span class="normal"><a href="#__codelineno-21-34">34</a></span>
+<span class="normal"><a href="#__codelineno-21-35">35</a></span>
+<span class="normal"><a href="#__codelineno-21-36">36</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>guru@hp:~$ VERSION=$(VBoxManage --version | sed -E 's/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/')
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a># Bepaal correcte bestandsnaam afhankelijk van major.minor versie
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>BASE=$(echo "$VERSION" | cut -d. -f1-2)
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a>if [ "$BASE" = "7.0" ]; then
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a>    FILENAME="Oracle_VM_VirtualBox_Extension_Pack-${VERSION}.vbox-extpack"
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a>else
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a>    FILENAME="Oracle_VirtualBox_Extension_Pack-${VERSION}.vbox-extpack"
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a>fi
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a>
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a>URL="https://download.virtualbox.org/virtualbox/${VERSION}/${FILENAME}"
+<a id="__codelineno-21-12" name="__codelineno-21-12"></a>
+<a id="__codelineno-21-13" name="__codelineno-21-13"></a># Download, installeer en verwijder
+<a id="__codelineno-21-14" name="__codelineno-21-14"></a>wget -q "$URL" -O "/tmp/${FILENAME}" &amp;&amp; \
+<a id="__codelineno-21-15" name="__codelineno-21-15"></a>sudo VBoxManage extpack install --replace "/tmp/${FILENAME}" &amp;&amp; \
+<a id="__codelineno-21-16" name="__codelineno-21-16"></a>rm "/tmp/${FILENAME}"
+<a id="__codelineno-21-17" name="__codelineno-21-17"></a>VirtualBox Extension Pack Personal Use and Educational License (PUEL)
+<a id="__codelineno-21-18" name="__codelineno-21-18"></a>
+<a id="__codelineno-21-19" name="__codelineno-21-19"></a>License version 12, 22 July 2024
+<a id="__codelineno-21-20" name="__codelineno-21-20"></a>
+<a id="__codelineno-21-21" name="__codelineno-21-21"></a>PLEASE READ THE FOLLOWING ORACLE VIRTUALBOX EXTENSION PACK PERSONAL USE
+<a id="__codelineno-21-22" name="__codelineno-21-22"></a>AND EDUCATIONAL LICENSE CAREFULLY BEFORE DOWNLOADING OR USING THE ORACLE
+<a id="__codelineno-21-23" name="__codelineno-21-23"></a>SOFTWARE. THESE TERMS AND CONDITIONS CONSTITUTE A LEGAL AGREEMENT BETWEEN
+<a id="__codelineno-21-24" name="__codelineno-21-24"></a>YOU AND ORACLE.
+<a id="__codelineno-21-25" name="__codelineno-21-25"></a>
+<a id="__codelineno-21-26" name="__codelineno-21-26"></a>&lt;snip&gt;
+<a id="__codelineno-21-27" name="__codelineno-21-27"></a>
+<a id="__codelineno-21-28" name="__codelineno-21-28"></a>Do you agree to these license terms and conditions (y/n)? y
+<a id="__codelineno-21-29" name="__codelineno-21-29"></a>
+<a id="__codelineno-21-30" name="__codelineno-21-30"></a>License accepted. For batch installation add
+<a id="__codelineno-21-31" name="__codelineno-21-31"></a>--accept-license=eb31505e56e9b4d0fbca139104da41ac6f6b98f8e78968bdf01b1f3da3c4f9ae
+<a id="__codelineno-21-32" name="__codelineno-21-32"></a>to the VBoxManage command line.
+<a id="__codelineno-21-33" name="__codelineno-21-33"></a>
+<a id="__codelineno-21-34" name="__codelineno-21-34"></a>0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+<a id="__codelineno-21-35" name="__codelineno-21-35"></a>Successfully installed "Oracle VirtualBox Extension Pack".
+<a id="__codelineno-21-36" name="__codelineno-21-36"></a>guru@hp:~$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -1340,7 +2067,29 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>guru@hp:~$ VBoxManage list extpacks
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-23-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-23-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-23-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-23-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-23-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-23-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-23-10">10</a></span>
+<span class="normal"><a href="#__codelineno-23-11">11</a></span>
+<span class="normal"><a href="#__codelineno-23-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>guru@hp:~$ VBoxManage list extpacks
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>Extension Packs: 1
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a>Pack no. 0:   Oracle VM VirtualBox Extension Pack
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="hll">Version:        7.0.26
+</span><a id="__codelineno-23-5" name="__codelineno-23-5"></a>Revision:       168464
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a>Edition:        
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a>Description:    Oracle Cloud Infrastructure integration, Host Webcam, VirtualBox RDP, PXE ROM, Disk Encryption, NVMe, full VM encryption.
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a>VRDE Module:    VBoxVRDP
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a>Crypto Module:  VBoxPuelCrypto
+<a id="__codelineno-23-10" name="__codelineno-23-10"></a>Usable:         true
+<a id="__codelineno-23-11" name="__codelineno-23-11"></a>Why unusable:   
+<a id="__codelineno-23-12" name="__codelineno-23-12"></a>guru@hp:~$ 
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -1358,8 +2107,8 @@
 <span class="normal"><a href="#__codelineno-24-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a>guru@hp:~$ VBoxManage list extpacks
 <a id="__codelineno-24-2" name="__codelineno-24-2"></a>Extension Packs: 1
 <a id="__codelineno-24-3" name="__codelineno-24-3"></a>Pack no. 0:   Oracle VirtualBox Extension Pack
-<a id="__codelineno-24-4" name="__codelineno-24-4"></a>Version:        7.1.12
-<a id="__codelineno-24-5" name="__codelineno-24-5"></a>Revision:       169651
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="hll">Version:        7.1.12
+</span><a id="__codelineno-24-5" name="__codelineno-24-5"></a>Revision:       169651
 <a id="__codelineno-24-6" name="__codelineno-24-6"></a>Edition:        
 <a id="__codelineno-24-7" name="__codelineno-24-7"></a>Description:    Oracle Cloud Infrastructure integration, Host Webcam, VirtualBox RDP, PXE ROM, Disk Encryption, NVMe, full VM encryption.
 <a id="__codelineno-24-8" name="__codelineno-24-8"></a>VRDE Module:    VBoxVRDP
@@ -1373,7 +2122,7 @@
 </div>
 <h2 id="maak-de-guest-additions-iso-beschikbaar-optioneel">Maak de Guest Additions ISO beschikbaar (optioneel)</h2>
 <p>Het voorzien van de <a href="../../explanations/todo/">Guest Additions</a> in een virtuele machine zorgt voor betere integratie tussen host en gast, zoals naadloze muisaanwijzer, gedeelde klemborden, schermresolutie-aanpassing en gedeelde mappen.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio"/><input id="__tabbed_13_2" name="__tabbed_13" type="radio"/><div class="tabbed-labels"><label for="__tabbed_13_1">guru@hp:~$_</label><label for="__tabbed_13_2">output</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:3"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio"/><input id="__tabbed_13_2" name="__tabbed_13" type="radio"/><input id="__tabbed_13_3" name="__tabbed_13" type="radio"/><div class="tabbed-labels"><label for="__tabbed_13_1">guru@hp:~$_</label><label for="__tabbed_13_2">output VirtualBox 7.0</label><label for="__tabbed_13_3">output VirtualBox 7.1</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
@@ -1402,7 +2151,63 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-26-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-26-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-26-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-26-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-26-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-26-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-26-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-26-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-26-10">10</a></span>
+<span class="normal"><a href="#__codelineno-26-11">11</a></span>
+<span class="normal"><a href="#__codelineno-26-12">12</a></span>
+<span class="normal"><a href="#__codelineno-26-13">13</a></span>
+<span class="normal"><a href="#__codelineno-26-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a>guru@hp:~$ VERSION=$(VBoxManage --version | sed -E 's/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/')
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a>ISO_URL="https://download.virtualbox.org/virtualbox/$VERSION/VBoxGuestAdditions_${VERSION}.iso"
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a>ISO_TMP="/tmp/VBoxGuestAdditions_${VERSION}.iso"
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a>ISO_DEST="/usr/share/virtualbox/VBoxGuestAdditions.iso"
+<a id="__codelineno-26-5" name="__codelineno-26-5"></a>
+<a id="__codelineno-26-6" name="__codelineno-26-6"></a>wget -q -O "$ISO_TMP" "$ISO_URL" &amp;&amp; \
+<a id="__codelineno-26-7" name="__codelineno-26-7"></a>sudo mkdir -p /usr/share/virtualbox &amp;&amp; \
+<a id="__codelineno-26-8" name="__codelineno-26-8"></a>if [ -f "$ISO_DEST" ]; then
+<a id="__codelineno-26-9" name="__codelineno-26-9"></a>sudo mv "$ISO_DEST" "${ISO_DEST}.bak.$(date +%s)"
+<a id="__codelineno-26-10" name="__codelineno-26-10"></a>fi &amp;&amp; \
+<a id="__codelineno-26-11" name="__codelineno-26-11"></a>sudo install -m 644 "$ISO_TMP" "$ISO_DEST" &amp;&amp; \
+<a id="__codelineno-26-12" name="__codelineno-26-12"></a>echo "VBoxGuestAdditions $VERSION geïnstalleerd in $ISO_DEST"
+<a id="__codelineno-26-13" name="__codelineno-26-13"></a><span class="hll">VBoxGuestAdditions 7.0.26 geïnstalleerd in /usr/share/virtualbox/VBoxGuestAdditions.iso
+</span><a id="__codelineno-26-14" name="__codelineno-26-14"></a>guru@hp:~$ 
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-27-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-27-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-27-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-27-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-27-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-27-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-27-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-27-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-27-10">10</a></span>
+<span class="normal"><a href="#__codelineno-27-11">11</a></span>
+<span class="normal"><a href="#__codelineno-27-12">12</a></span>
+<span class="normal"><a href="#__codelineno-27-13">13</a></span>
+<span class="normal"><a href="#__codelineno-27-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a>guru@hp:~$ VERSION=$(VBoxManage --version | sed -E 's/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/')
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a>ISO_URL="https://download.virtualbox.org/virtualbox/$VERSION/VBoxGuestAdditions_${VERSION}.iso"
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a>ISO_TMP="/tmp/VBoxGuestAdditions_${VERSION}.iso"
+<a id="__codelineno-27-4" name="__codelineno-27-4"></a>ISO_DEST="/usr/share/virtualbox/VBoxGuestAdditions.iso"
+<a id="__codelineno-27-5" name="__codelineno-27-5"></a>
+<a id="__codelineno-27-6" name="__codelineno-27-6"></a>wget -q -O "$ISO_TMP" "$ISO_URL" &amp;&amp; \
+<a id="__codelineno-27-7" name="__codelineno-27-7"></a>sudo mkdir -p /usr/share/virtualbox &amp;&amp; \
+<a id="__codelineno-27-8" name="__codelineno-27-8"></a>if [ -f "$ISO_DEST" ]; then
+<a id="__codelineno-27-9" name="__codelineno-27-9"></a>  sudo mv "$ISO_DEST" "${ISO_DEST}.bak.$(date +%s)"
+<a id="__codelineno-27-10" name="__codelineno-27-10"></a>fi &amp;&amp; \
+<a id="__codelineno-27-11" name="__codelineno-27-11"></a>sudo install -m 644 "$ISO_TMP" "$ISO_DEST" &amp;&amp; \
+<a id="__codelineno-27-12" name="__codelineno-27-12"></a>echo "VBoxGuestAdditions $VERSION geïnstalleerd in $ISO_DEST"
+<a id="__codelineno-27-13" name="__codelineno-27-13"></a><span class="hll">VBoxGuestAdditions 7.1.12 geïnstalleerd in /usr/share/virtualbox/VBoxGuestAdditions.iso
+</span><a id="__codelineno-27-14" name="__codelineno-27-14"></a>guru@hp:~$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -1412,18 +2217,42 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio"/><input id="__tabbed_14_2" name="__tabbed_14" type="radio"/><div class="tabbed-labels"><label for="__tabbed_14_1">guru@hp:~$_</label><label for="__tabbed_14_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a>sudo usermod -aG vboxusers guru
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a>sudo usermod -aG vboxusers guru
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
-<span class="normal"><a href="#__codelineno-28-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a>guru@hp:~$ sudo usermod -aG vboxusers guru
-<a id="__codelineno-28-2" name="__codelineno-28-2"></a>guru@hp:~$ 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
+<span class="normal"><a href="#__codelineno-29-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a>guru@hp:~$ sudo usermod -aG vboxusers guru
+<a id="__codelineno-29-2" name="__codelineno-29-2"></a>guru@hp:~$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
-<h2 id="reboot-en-start-virtualbox">Reboot en start VirtualBox</h2>
+<h2 id="reboot">Reboot</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio"/><input id="__tabbed_15_2" name="__tabbed_15" type="radio"/><div class="tabbed-labels"><label for="__tabbed_15_1">guru@hp:~$_</label><label for="__tabbed_15_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a>sudo reboot
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a>guru@hp:~$ sudo reboot
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<h2 id="start-virtualbox">Start VirtualBox</h2>
+<p>Klik op <code>Help -&gt; About VirtualBox</code> en controleer de versie.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio"/><input id="__tabbed_16_2" name="__tabbed_16" type="radio"/><div class="tabbed-labels"><label for="__tabbed_16_1">output VirtualBox 7.0</label><label for="__tabbed_16_2">output VirtualBox 7.1</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="check-version-70.png"><img src="check-version-70.png"/></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="check-version-71.png"><img src="check-version-71.png"/></a></p>
+</div>
+</div>
+</div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
