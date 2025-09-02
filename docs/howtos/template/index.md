@@ -26,7 +26,7 @@
 === "guru@hp:~$_"
     (Optional) step explanation.
 
-    ``` title=''
+    ``` title='' hl_lines="0"
     sudo <execute some command>
     ```
 

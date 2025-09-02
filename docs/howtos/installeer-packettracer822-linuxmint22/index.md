@@ -19,13 +19,13 @@ Cisco Packet Tracer is een gratis netwerksimulatietool ontwikkeld door Cisco Sys
 <img src="downloads.png"/>
 
 ## Download en installeer manueel een dependency
-Wegens [een bug](https://github.com/PetrusNoleto/Error-in-install-cisco-packet-tracer-in-ubuntu-23.10-Dependency-is-not-satisfiable-libgl1-mesa-glx){:target="_blank"} moet je eerst manueel een pakket installeren, dat niet meer in de Linux Mint 22 (Ubuntu) repository zit.
+Wegens [deze bug](https://github.com/PetrusNoleto/Error-in-install-cisco-packet-tracer-in-ubuntu-23.10-Dependency-is-not-satisfiable-libgl1-mesa-glx){:target="_blank"} moet je eerst manueel een pakket installeren, dat niet meer in de Linux Mint 22 (Ubuntu) repository zit.
 
-=== "guru@hp:~$_"
+=== "guru@hp:~/Downloads$_"
 
     ``` title=''
-    guru@hp:~/Downloads$ wget https://nl.archive.ubuntu.com/ubuntu/pool/universe/m/mesa/libgl1-mesa-glx_23.0.4-0ubuntu1~22.04.1_amd64.deb
-    guru@hp:~/Downloads$ sudo apt install ./libgl1-mesa-glx_23.0.4-0ubuntu1~22.04.1_amd64.deb
+    wget https://nl.archive.ubuntu.com/ubuntu/pool/universe/m/mesa/libgl1-mesa-glx_23.0.4-0ubuntu1~22.04.1_amd64.deb
+    sudo apt install ./libgl1-mesa-glx_23.0.4-0ubuntu1~22.04.1_amd64.deb
     ```
 
 === "output"
@@ -64,18 +64,18 @@ Wegens [een bug](https://github.com/PetrusNoleto/Error-in-install-cisco-packet-t
     ```
 
 ## Installeer Packet Tracer
-Install the .deb package using the "apt install" command with the relative path to the package file. APT will recognize it and install the package along with its dependencies, if any.
+Installeer het .deb-pakket en geef het relatieve pad naar het pakketbestand op. APT herkent en installeert het pakket, inclusief eventuele afhankelijkheden.
 
 === "guru@hp:~/Downloads$_"
 
     ``` title='' hl_lines="0"
-    sudo apt install ./CiscoPacketTracer822_amd64_signed.deb
+    sudo apt install ./CiscoPacketTracer822_amd64_signed.deb -y
     ```
 
 === "output"
 
-    ``` title='' hl_lines="2 18"
-    guru@hp:~/Downloads$ sudo apt install ./CiscoPacketTracer822_amd64_signed.deb
+    ``` title='' hl_lines="62"
+    guru@hp:~/Downloads$ sudo apt install ./CiscoPacketTracer822_amd64_signed.deb -y
     Reading package lists... Done
     Building dependency tree... Done
     Reading state information... Done
@@ -89,7 +89,6 @@ Install the .deb package using the "apt install" command with the relative path 
     0 upgraded, 8 newly installed, 0 to remove and 0 not upgraded.
     Need to get 746 kB/284 MB of archives.
     After this operation, 2.676 kB of additional disk space will be used.
-    Do you want to continue? [Y/n] 
     Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libpthread-stubs0-dev amd64 0.4-1build3 [4.746 B]
     Get:2 http://archive.ubuntu.com/ubuntu noble/main amd64 xorg-sgml-doctools all 1:1.11-1.1 [10,9 kB]
     Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 x11proto-dev all 2023.2-1 [602 kB]
@@ -98,10 +97,10 @@ Install the .deb package using the "apt install" command with the relative path 
     Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb1-dev amd64 1.15-1ubuntu2 [85,8 kB]
     Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-xinerama0-dev amd64 1.15-1ubuntu2 [6.034 B]
     Get:8 /home/guru/Downloads/CiscoPacketTracer822_amd64_signed.deb packettracer amd64 8.2.2 [283 MB]
-    Fetched 746 kB in 2s (457 kB/s)   
+    Fetched 746 kB in 2s (486 kB/s)   
     Preconfiguring packages ...
     Selecting previously unselected package libpthread-stubs0-dev:amd64.
-    (Reading database ... 531902 files and directories currently installed.)
+    (Reading database ... 531784 files and directories currently installed.)
     Preparing to unpack .../0-libpthread-stubs0-dev_0.4-1build3_amd64.deb ...
     Unpacking libpthread-stubs0-dev:amd64 (0.4-1build3) ...
     Selecting previously unselected package xorg-sgml-doctools.
@@ -138,55 +137,52 @@ Install the .deb package using the "apt install" command with the relative path 
     Setting up packettracer (8.2.2) ...
     gtk-update-icon-cache: No theme index file.
     N: Download is performed unsandboxed as root as file '/home/guru/Downloads/CiscoPacketTracer822_amd64_signed.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+    guru@hp:~/Downloads$ 
     ```
 
 ## License agreement
-Read the license agreement :p and select "OK".
-
-<img src="license1.png"/>
+ Lees de `Software License Agreement`en ga akkoord.
 
 ## EULA terms
-Accept the terms.
-
-<img src="license2.png"/>
+Accepteer de EULA voorwaarden.
 
 ## Notice
-Ignore the "Notice" warning at the end of the installation. All went well.
+Negeer de waarschuwing "Notice" aan het einde van de installatie. Alles is goed gegaan.
 
 ``` title='' hl_lines="1"
 N: Download is performed unsandboxed as root as file '/home/guru/Downloads/CiscoPacketTracer822_amd64_signed.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
-guru@vm26:~/Downloads$ 
+guru@hp:~/Downloads$ 
 ```
 
 ## Activation link
-Member of Cisco Network Academy? You should have received an activation link on your private e-mail. Activate your account. It is possible you have already done this in the past. Skip this step then.
+Lid van Cisco Network Academy? Je hebt als het goed is een activeringslink ontvangen in je privé-e-mail. Activeer je account. Mogelijk heb je dit al eerder gedaan. Sla deze stap dan over.
 
 <img src="activation-link.png"/>
 
 ## Mint menu
-Select "Menu" and start typing "pac". Start "PacketTracer 8.2.2".
+Selecteer "Menu" en begin met het typen van "pac". Start "PacketTracer 8.2.2".
 
 <img src="menu-pac.png"/>
 
 ## Multi-user
-Answer "no".
+Antwoord "no".
 
 <img src="multi-user.png"/>
 
 ## Sign-in
-First choose "Keep me logged in (for 3 months) and then select "Skills For All". You cannot use "Network Academy" at this moment. Afther the merge
-of "netacad.com" and "skillsforall.com", the Packet Tracer application is not yet adjusted properly.
+- Kies eerst `Keep me logged in (for 3 months)` 
+- Selecteer vervolgens `Skills For All`. Je kunt de optie `Network Academy` op dit moment niet gebruiken. Na het samenvoegen van 'netacad.com' en 'skillsforall.com' is de Packet Tracer-applicatie nog niet goed ingesteld.
 
 <img src="keep-me-logged-in.png"/>
 
 ## Login
-Type your private e-mailadress. Put a checkmark next to "Remember me" and click "Login". The password field appears. Fill in your password.
+Vul je privé-e-mailadres in. Zet een vinkje bij `Remember me` en klik op `Login`. Het wachtwoordveld verschijnt. Vul je wachtwoord in.
 
 <img src="login.png"/>
 
 ## Font configuration
-Personal preference here. Select "Options -> Preferences -> Font". Increase the fontsize to 12 and click "Apply".
-Then close the window.
+Persoonlijke voorkeur. Selecteer `Options -> Preferences -> Font`. Vergroot de lettergrootte naar 12 en klik op `Apply`.
+Sluit vervolgens het venster.
 
 <img src="font-configuration.png"/>
 

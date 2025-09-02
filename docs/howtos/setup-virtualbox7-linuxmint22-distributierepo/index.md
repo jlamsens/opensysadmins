@@ -1,6 +1,6 @@
 # Setup VirtualBox 7 op Linux Mint 22 (distributie repository)
 
-VirtualBox stelt je in staat om andere besturingssystemen (zoals Windows of een andere Linux-distributie) te draaien als virtuele machines binnen je bestaande Linux Mint 22-omgeving. Dit gebeurt in een geïsoleerde en veilige virtuele omgeving, waardoor je software kunt testen of applicaties kunt gebruiken die niet native op Linux Mint draaien, zonder je hoofdinstallatie te beïnvloeden.
+VirtualBox stelt je in staat om andere besturingssystemen (zoals Windows of een andere Linux-distributie) te draaien als virtuele machines binnen bv. een bestaande Linux Mint 22-omgeving. Dit gebeurt in een geïsoleerde en veilige virtuele omgeving, waardoor je software kunt testen of applicaties kunt gebruiken die niet native op Linux Mint draaien, zonder je hoofdinstallatie te beïnvloeden.
 
 ## Vereisten
 - een [PC met Linux Mint 22](../../tutorials/windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
@@ -23,17 +23,17 @@ Vernieuw de lokale pakketlijst om je systeem op de hoogte te brengen van de nieu
     ``` title='' hl_lines="0"
     guru@hp:~$ sudo apt update
     [sudo] password for guru:     
-    Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
-    Ign:2 https://linuxmint-packages.mirror.liteserver.nl xia InRelease            
-    Hit:3 https://ppa.launchpadcontent.net/obsproject/obs-studio/ubuntu noble InRelease
-    Hit:4 http://archive.ubuntu.com/ubuntu noble InRelease
-    Hit:5 https://linuxmint-packages.mirror.liteserver.nl xia Release
-    Hit:6 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+    Ign:1 http://linux-mint.froonix.org xia InRelease
+    Hit:2 http://linux-mint.froonix.org xia Release                                                                                                  
+    Hit:3 http://security.ubuntu.com/ubuntu noble-security InRelease                                                                                 
+    Hit:4 http://archive.ubuntu.com/ubuntu noble InRelease                                                                                           
+    Hit:5 https://download.virtualbox.org/virtualbox/debian noble InRelease
+    Hit:7 http://archive.ubuntu.com/ubuntu noble-updates InRelease
     Hit:8 http://archive.ubuntu.com/ubuntu noble-backports InRelease
     Reading package lists... Done
     Building dependency tree... Done
     Reading state information... Done
-    3 packages can be upgraded. Run 'apt list --upgradable' to see them.
+    All packages are up to date.
     guru@hp:~$ 
     ```
 
@@ -229,7 +229,7 @@ Installeer VirtualBox uit de gekoppelde software repositories.
     ```
 
 ## Installeer Extension Pack (optioneel)
-Het installeren van het [Extension Pack](../../explanations/todo/index.md) is nodig om extra functionaliteit zoals USB 2.0/3.0-ondersteuning, RDP-server, disk-encryptie en PXE boot toe te voegen aan VirtualBox.
+Installeren van het [Extension Pack](../../explanations/todo/index.md){:target="_blank"} is nodig om extra functionaliteit zoals USB 2.0/3.0-ondersteuning, RDP-server, disk-encryptie en PXE boot toe te voegen aan VirtualBox.
 
 === "guru@hp:~$_"
 
@@ -316,4 +316,21 @@ Voeg je ingelogde gebruiker toe aan de groep `vboxusers`, zodat die toegang krij
     guru@hp:~$ 
     ```
 
-## Reboot en start VirtualBox
+## Reboot
+
+=== "guru@hp:~$_"
+
+    ``` title=''
+    sudo reboot
+    ```
+
+=== "output"
+
+    ``` title='' hl_lines="0"
+    guru@hp:~$ sudo reboot
+    ```
+  
+## Start VirtualBox
+Klik op `Help -> About VirtualBox` en controleer de versie.
+
+<img src="check-version.png"/>
