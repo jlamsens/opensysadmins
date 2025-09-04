@@ -4,7 +4,6 @@ VirtualBox stelt je in staat om andere besturingssystemen (zoals Windows of een 
 
 ## Vereisten
 - een [PC met Linux Mint 22](../../tutorials/windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
-- internet verbinding
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -80,7 +79,7 @@ Vernieuw de lokale pakketlijst om je systeem op de hoogte te brengen van de nieu
 ### Verifieer versie in repository
 
 === "guru@hp:~$_"
-    Opgelet: kies niet zoals [hier](../setup-virtualbox7-linuxmint22-distributierepo/#verifieer-versie-in-repository){:target="_blank"} voor het pakket `virtualbox` maar kies expliciet `virtualbox-7.0`
+    Opgelet: kies niet zoals [hier](../setup-virtualbox7-linuxmint22-distributierepo/index.md#verifieer-versie-in-repository){:target="_blank"} voor het pakket `virtualbox` maar kies expliciet `virtualbox-7.0`
 
     ``` title=''
     apt-cache policy virtualbox-7.0
@@ -277,7 +276,7 @@ Vernieuw de lokale pakketlijst om je systeem op de hoogte te brengen van de nieu
 ### Verifieer versie in repository
 
 === "guru@hp:~$_"
-    Opgelet: kies niet zoals [hier](../setup-virtualbox7-linuxmint22-distributierepo/#verifieer-versie-in-repository){:target="_blank"} voor het pakket `virtualbox` maar kies expliciet `virtualbox-7.1`
+    Opgelet: kies niet zoals [hier](../setup-virtualbox7-linuxmint22-distributierepo/index.md#verifieer-versie-in-repository){:target="_blank"} voor het pakket `virtualbox` maar kies expliciet `virtualbox-7.1`
 
     ``` title=''
     apt-cache policy virtualbox-7.1

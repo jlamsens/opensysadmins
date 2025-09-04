@@ -394,6 +394,15 @@ nav:
       - 06 Controle en eindresultaat: tutorials/windows11-linuxmint22-dual-boot-uefi/06-controle-eindresultaat.md
       - 07 Conclusie: tutorials/windows11-linuxmint22-dual-boot-uefi/07-conclusie.md
 
+    - Setup van een Windows 11 virtuele machine in Oracle VirtualBox:
+      - tutorials/windows11-vm-virtualbox/index.md # overview/landing page
+      - 01 Vereisten: tutorials/windows11-vm-virtualbox/01-vereisten.md
+      - 02 Setup VM: tutorials/windows11-vm-virtualbox/02-setup-vm.md
+      - 03 Setup Windows VM: tutorials/windows11-vm-virtualbox/03-setup-windows-vm.md
+      - 04 Sysprep VM: tutorials/windows11-vm-virtualbox/04-sysprep-vm.md
+      - 05 Controle en eindresultaat: tutorials/windows11-vm-virtualbox/05-controle-eindresultaat.md
+      - 06 Conclusie: tutorials/windows11-vm-virtualbox/06-conclusie.md
+    
     - Install Windows 11 in VirtualBox 6.1.50:
       - tutorials/windows11-virtualbox/index.md # overview/landing page
       - 01 Getting started: tutorials/windows11-virtualbox/getting-started.md

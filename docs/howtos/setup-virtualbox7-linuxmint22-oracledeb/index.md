@@ -10,12 +10,11 @@ Voordelen van de installatie via een .deb pakket t.o.v. installatie [methode1](.
 
 ## Vereisten
 - een [PC met Linux Mint 22](../../tutorials/windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
-- internet verbinding
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-### Download pakket
+## Download pakket
 Download het `.deb`-pakket van de gewenste versie vanaf [https://www.virtualbox.org/wiki/Download_Old_Builds](https://www.virtualbox.org/wiki/Download_Old_Builds)
 
 
@@ -28,7 +27,6 @@ Download het `.deb`-pakket van de gewenste versie vanaf [https://www.virtualbox.
     ```
 
 === "output"
-    (Optional) step explanation.
 
     ``` title='' hl_lines="0"
     guru@hp:~/Downloads$ wget https://download.virtualbox.org/virtualbox/7.1.10/virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb
@@ -46,17 +44,15 @@ Download het `.deb`-pakket van de gewenste versie vanaf [https://www.virtualbox.
     guru@hp:~/Downloads$
     ```
 
-### Installeer het pakket
+## Installeer het pakket
 
-=== "guru@hp:~$_"
-    (Optional) step explanation.
+=== "guru@hp:~/Downloads$_"
 
     ``` title='' hl_lines="0"
-    sudo apt install ./virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb
+    sudo apt install ./virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb -y
     ```
 
 === "output"
-    (Optional) step explanation.
 
     ``` title='' hl_lines="0"
     guru@hp:~/Downloads$ sudo apt install ./virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb -y
@@ -251,16 +247,167 @@ Download het `.deb`-pakket van de gewenste versie vanaf [https://www.virtualbox.
     ```
 
 
-3. Vergrendel de versie ("hold") zodat die niet automatisch wordt geüpdatet
+## Vergrendel de versie ("hold") 
+Voorkom dat het virtualbox pakket automatisch wordt bijgewerkt door de pakketbeheerder APT.
 
-```bash
-sudo apt-mark hold virtualbox
-```
+=== "guru@hp:~$_"
+
+    ``` title='' hl_lines="0"
+    sudo apt-mark hold virtualbox
+    ```
+
+=== "output"
+
+    ``` title='' hl_lines="0"
+    guru@hp:~$ sudo apt-mark hold virtualbox
+    virtualbox set on hold.
+    guru@hp:~$ 
+    ```
 
 Wil je later toch upgraden, hef dan de hold op:
-```bash
-sudo apt-mark unhold virtualbox
-```
 
+=== "guru@hp:~$_"
 
-#
+    ``` title='' hl_lines="0"
+    sudo apt-mark unhold virtualbox
+    ```
+
+=== "output"
+
+    ``` title='' hl_lines="0"
+    guru@hp:~$ sudo apt-mark unhold virtualbox
+    Canceled hold on virtualbox.
+    guru@hp:~$ 
+    ```
+
+## Setup Extension Pack (optioneel)
+### Installeer
+Installeren van het [Extension Pack](../../explanations/todo/index.md) is nodig om extra functionaliteit zoals USB 2.0/3.0-ondersteuning, RDP-server, disk-encryptie en PXE boot toe te voegen aan VirtualBox.
+
+=== "guru@hp:~/Downloads$_"
+    In dit voorbeeld download en installeer je de specifieke versie 7.1.10-169112
+
+    ``` title=''
+    wget -q https://download.virtualbox.org/virtualbox/7.1.10/Oracle_VirtualBox_Extension_Pack-7.1.10-169112.vbox-extpack
+    sudo VBoxManage extpack install ./Oracle_VirtualBox_Extension_Pack-7.1.10-169112.vbox-extpack 
+    ```
+
+=== "output"
+
+    ``` title='' hl_lines="9"
+    guru@hp:~/Downloads$ wget -q https://download.virtualbox.org/virtualbox/7.1.10/Oracle_VirtualBox_Extension_Pack-7.1.10-169112.vbox-extpack
+    guru@hp:~/Downloads$ sudo VBoxManage extpack install ./Oracle_VirtualBox_Extension_Pack-7.1.10-169112.vbox-extpack 
+    VirtualBox Extension Pack Personal Use and Educational License (PUEL)
+
+    License version 12, 22 July 2024
+
+    <snip>
+
+    Do you agree to these license terms and conditions (y/n)? y
+
+    License accepted. For batch installation add
+    --accept-license=eb31505e56e9b4d0fbca139104da41ac6f6b98f8e78968bdf01b1f3da3c4f9ae
+    to the VBoxManage command line.
+
+    0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+    Successfully installed "Oracle VirtualBox Extension Pack".
+    guru@hp:~/Downloads$
+    ```
+
+### Verifieer
+=== "guru@hp:~$_"
+
+    ``` title=''
+    VBoxManage list extpacks
+    ```
+
+=== "output"
+
+    ``` title='' hl_lines="4"
+    guru@hp:~$ VBoxManage list extpacks
+    Extension Packs: 1
+    Pack no. 0:   Oracle VirtualBox Extension Pack
+    Version:        7.1.10
+    Revision:       169112
+    Edition:        
+    Description:    Oracle Cloud Infrastructure integration, Host Webcam, VirtualBox RDP, PXE ROM, Disk Encryption, NVMe, full VM encryption.
+    VRDE Module:    VBoxVRDP
+    Crypto Module:  VBoxPuelCrypto
+    Usable:         true
+    Why unusable:   
+    guru@hp:~$ 
+    ```
+
+## Maak de Guest Additions ISO beschikbaar (optioneel)
+Het voorzien van de [Guest Additions](../../explanations/todo/index.md) in een virtuele machine zorgt voor betere integratie tussen host en gast, zoals naadloze muisaanwijzer, gedeelde klemborden, schermresolutie-aanpassing en gedeelde mappen.
+
+=== "guru@hp:~/Downloads$_"
+
+    ``` title=''
+    VERSION=$(VBoxManage --version | sed -E 's/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/')
+    ISO_URL="https://download.virtualbox.org/virtualbox/$VERSION/VBoxGuestAdditions_${VERSION}.iso"
+    ISO_TMP="/tmp/VBoxGuestAdditions_${VERSION}.iso"
+    ISO_DEST="/usr/share/virtualbox/VBoxGuestAdditions.iso"
+
+    wget -q -O "$ISO_TMP" "$ISO_URL" && \
+    sudo mkdir -p /usr/share/virtualbox && \
+    if [ -f "$ISO_DEST" ]; then
+      sudo mv "$ISO_DEST" "${ISO_DEST}.bak.$(date +%s)"
+    fi && \
+    sudo install -m 644 "$ISO_TMP" "$ISO_DEST" && \
+    echo "VBoxGuestAdditions $VERSION geïnstalleerd in $ISO_DEST"
+    ```
+
+=== "output"
+
+    ``` title='' hl_lines="13"
+    guru@hp:~$ VERSION=$(VBoxManage --version | sed -E 's/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/')
+    ISO_URL="https://download.virtualbox.org/virtualbox/$VERSION/VBoxGuestAdditions_${VERSION}.iso"
+    ISO_TMP="/tmp/VBoxGuestAdditions_${VERSION}.iso"
+    ISO_DEST="/usr/share/virtualbox/VBoxGuestAdditions.iso"
+
+    wget -q -O "$ISO_TMP" "$ISO_URL" && \
+    sudo mkdir -p /usr/share/virtualbox && \
+    if [ -f "$ISO_DEST" ]; then
+      sudo mv "$ISO_DEST" "${ISO_DEST}.bak.$(date +%s)"
+    fi && \
+    sudo install -m 644 "$ISO_TMP" "$ISO_DEST" && \
+    echo "VBoxGuestAdditions $VERSION geïnstalleerd in $ISO_DEST"
+    VBoxGuestAdditions 7.1.10 geïnstalleerd in /usr/share/virtualbox/VBoxGuestAdditions.iso
+    guru@hp:~$ 
+    ```
+
+## Voeg gebruiker toe aan vboxusers groep
+Voeg je ingelogde gebruiker toe aan de groep `vboxusers`, zodat die toegang krijgt tot VirtualBox USB-apparaten en bepaalde virtuele hardwarefunctionaliteiten.
+
+=== "guru@hp:~$_"
+
+    ``` title=''
+    sudo usermod -aG vboxusers guru
+    ```
+
+=== "output"
+
+    ``` title='' hl_lines="0"
+    guru@hp:~$ sudo usermod -aG vboxusers guru
+    guru@hp:~$ 
+    ```
+
+## Reboot
+
+=== "guru@hp:~$_"
+
+    ``` title=''
+    sudo reboot
+    ```
+
+=== "output"
+
+    ``` title='' hl_lines="0"
+    guru@hp:~$ sudo reboot
+    ```
+  
+## Start VirtualBox
+Klik op `Help -> About VirtualBox` en controleer de versie.
+
+<img src="check-version-71.png"/>
