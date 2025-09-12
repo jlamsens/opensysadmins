@@ -4,7 +4,7 @@ Download een Linux Mint ISO-installatiebestand om het besturingssysteem te verkr
 
 
 ## Vereisten
-- een [PC met Windows of Linux](../../tutorials/windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
+- een [PC met Windows of Linux](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
 - internet verbinding
 
 !!! danger "VDAB cursisten"

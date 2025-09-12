@@ -385,23 +385,48 @@ nav:
       - 08 Final result: tutorials/windows11-linuxmint21-dual-boot-uefi/final-result.md
 
     - Setup van een Windows 11 en Linux Mint 22 dual boot PC (UEFI):
-      - tutorials/windows11-linuxmint22-dual-boot-uefi/index.md # overview/landing page
-      - 01 Vereisten: tutorials/windows11-linuxmint22-dual-boot-uefi/01-vereisten.md
-      - 02 Installatiemedia: tutorials/windows11-linuxmint22-dual-boot-uefi/02-installatiemedia.md
-      - 03 Voorbereiding: tutorials/windows11-linuxmint22-dual-boot-uefi/03-voorbereiding.md
-      - 04 Setup Windows 11: tutorials/windows11-linuxmint22-dual-boot-uefi/04-setup-windows11.md
-      - 05 Setup Linux Mint 22: tutorials/windows11-linuxmint22-dual-boot-uefi/05-setup-linuxmint22.md
-      - 06 Controle en eindresultaat: tutorials/windows11-linuxmint22-dual-boot-uefi/06-controle-eindresultaat.md
-      - 07 Conclusie: tutorials/windows11-linuxmint22-dual-boot-uefi/07-conclusie.md
+      - tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md # overview/landing page
+      - 01 Vereisten: tutorials/setup-windows11-linuxmint22-dual-boot-uefi/01-vereisten.md
+      - 02 Installatiemedia: tutorials/setup-windows11-linuxmint22-dual-boot-uefi/02-installatiemedia.md
+      - 03 Voorbereiding: tutorials/setup-windows11-linuxmint22-dual-boot-uefi/03-voorbereiding.md
+      - 04 Setup Windows 11: tutorials/setup-windows11-linuxmint22-dual-boot-uefi/04-setup-windows11.md
+      - 05 Setup Linux Mint 22: tutorials/setup-windows11-linuxmint22-dual-boot-uefi/05-setup-linuxmint22.md
+      - 06 Controle en eindresultaat: tutorials/setup-windows11-linuxmint22-dual-boot-uefi/06-controle-eindresultaat.md
+      - 07 Conclusie: tutorials/setup-windows11-linuxmint22-dual-boot-uefi/07-conclusie.md
 
-    - Setup van een Windows 11 virtuele machine in Oracle VirtualBox:
-      - tutorials/windows11-vm-virtualbox/index.md # overview/landing page
-      - 01 Vereisten: tutorials/windows11-vm-virtualbox/01-vereisten.md
-      - 02 Setup VM: tutorials/windows11-vm-virtualbox/02-setup-vm.md
-      - 03 Setup Windows VM: tutorials/windows11-vm-virtualbox/03-setup-windows-vm.md
-      - 04 Sysprep VM: tutorials/windows11-vm-virtualbox/04-sysprep-vm.md
-      - 05 Controle en eindresultaat: tutorials/windows11-vm-virtualbox/05-controle-eindresultaat.md
-      - 06 Conclusie: tutorials/windows11-vm-virtualbox/06-conclusie.md
+    - Setup van een Windows 11 virtuele machine in VirtualBox:
+      - tutorials/setup-windows11-vm-virtualbox/index.md # overview/landing page
+      - 01 Vereisten: tutorials/setup-windows11-vm-virtualbox/01-vereisten.md
+      - 02 Installatiemedia: tutorials/setup-windows11-vm-virtualbox/02-installatiemedia.md
+      - 02 Voorbereiding: tutorials/setup-windows11-vm-virtualbox/03-voorbereiding.md
+      - 04 Setup Windows 11: tutorials/setup-windows11-vm-virtualbox/04-setup-windows11.md
+      - 05 Sysprep Windows 11: tutorials/setup-windows11-vm-virtualbox/05-sysprep-snapshot-windows11.md
+      - 06 Controle en eindresultaat: tutorials/setup-windows11-vm-virtualbox/06-controle-eindresultaat.md
+      - 07 Conclusie: tutorials/setup-windows11-vm-virtualbox/07-conclusie.md
+  
+    - Setup van een Windows Server 2025 virtuele machine in VirtualBox:
+      - tutorials/setup-windows-server2025-vm-virtualbox/index.md # overview/landing page
+      - 01 Vereisten: tutorials/setup-windows-server2025-vm-virtualbox/01-vereisten.md
+      - 02 Installatiemedia: tutorials/setup-windows-server2025-vm-virtualbox/02-installatiemedia.md
+      - 02 Voorbereiding: tutorials/setup-windows-server2025-vm-virtualbox/03-voorbereiding.md
+      - 04 Setup Windows Server 2025: tutorials/setup-windows-server2025-vm-virtualbox/04-setup-windows-server2025.md
+      - 05 Sysprep Windows Server 2025: tutorials/setup-windows-server2025-vm-virtualbox/05-snapshot-windows-server2025.md
+      - 06 Controle en eindresultaat: tutorials/setup-windows-server2025-vm-virtualbox/06-controle-eindresultaat.md
+      - 07 Conclusie: tutorials/setup-windows-server2025-vm-virtualbox/07-conclusie.md
+
+
+
+
+    - Setup van een testlab in VirtualBox:
+      - tutorials/setup-testlab-virtualbox/index.md # overview/landing page
+      - 01 Vereisten: tutorials/setup-testlab-virtualbox/01-vereisten.md
+      - 02 Kloon VMs: tutorials/setup-testlab-virtualbox/02-kloon-vms.md
+      - 03 Configureer VMs: tutorials/setup-testlab-virtualbox/03-configureer-vms.md
+      - 04 Configureer OS: tutorials/setup-testlab-virtualbox/04-configureer-os.md
+      - 05 Snapshot VMs: tutorials/setup-testlab-virtualbox/05-snapshot-vms.md
+      - 06 Controle eindresultaat: tutorials/setup-testlab-virtualbox/06-controle-eindresultaat.md
+      - 07 Conclusie: tutorials/setup-testlab-virtualbox/07-conclusie.md
+      
     
     - Install Windows 11 in VirtualBox 6.1.50:
       - tutorials/windows11-virtualbox/index.md # overview/landing page

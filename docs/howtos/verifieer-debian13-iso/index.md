@@ -1,0 +1,1 @@
+# Verifieer de authenticiteit en integriteit van een Debian 13 ISO-bestand

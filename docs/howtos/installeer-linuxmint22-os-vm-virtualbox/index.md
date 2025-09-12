@@ -1,0 +1,1 @@
+# Installeer Linux Mint 22 in een VirtualBox virtuele machine

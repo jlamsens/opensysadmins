@@ -5,9 +5,9 @@ Hieronder vind je een stappenplan voor zowel Windows als Linux Mint.
 
 ## Vereisten
 - een USB-stick met voldoende opslagruimte voor de Windows 11 installatiebestanden
-- een [PC met Windows of Linux Mint](../../tutorials/windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
+- een [PC met Windows of Linux Mint](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
 - internet verbinding
-- een [Windows 11 ISO bestand](../download-windows11-iso/index.md){:target="_blank"}
+- een [Windows 11 multi-versie ISO bestand](../download-windows11-multi-versie-iso/index.md){:target="_blank"}
 - een applicatie zoals [Rufus (Windows)](../setup-rufus-windows11/index.md){:target="_blank"} of `USB Image Writer` (Linux Mint)
 
 ## Demo

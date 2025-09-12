@@ -23,6 +23,6 @@ Niet alle systemen bieden namelijk de mogelijkheid om de harde schijf direct van
 
 !!! info 
     Als het wissen van de harde schijf is gelukt, zal het systeem proberen om via PXE op te starten, wat zal mislukken. Dit is verwacht en geen probleem.
-    Als het wissen niet mogelijk was, kan het zijn dat het systeem wel of niet opstart (afhankelijk van de aan/afwezigheid van een besturingssysteem). Maak je hier geen zorgen over. Eventuele partities kunnen worden gewist, tijdens [installatie van een besturingssysteem](../../tutorials/windows11-linuxmint22-dual-boot-uefi/index.md){:target="_blank"}
+    Als het wissen niet mogelijk was, kan het zijn dat het systeem wel of niet opstart (afhankelijk van de aan/afwezigheid van een besturingssysteem). Maak je hier geen zorgen over. Eventuele partities kunnen worden gewist, tijdens [installatie van een besturingssysteem](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md){:target="_blank"}
 
 - Schakel de pc uit door de aan/uit-knop lang genoeg ingedrukt te houden.

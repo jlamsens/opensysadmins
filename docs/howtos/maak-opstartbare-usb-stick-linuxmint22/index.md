@@ -4,7 +4,7 @@ Je hebt een opstartbare USB-stick voor Linux Mint nodig om het besturingssysteem
 
 ## Vereisten
 - een USB-stick met voldoende opslagruimte voor de Linux Mint installatiebestanden
-- een [PC met Windows of Linux](../../tutorials/windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
+- een [PC met Windows of Linux](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
 - internet verbinding
 - een [Linux Mint 22 ISO bestand](../download-linuxmint22-iso/index.md){:target="_blank"}
 - een applicatie zoals [Rufus (Windows)](../setup-rufus-windows11/index.md){:target="_blank"} of `USB Image Writer` (Linux Mint)

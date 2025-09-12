@@ -1,7 +1,7 @@
 # Setup Rufus op Windows 11
 
 ## Vereisten
-- een [PC met Windows](../../tutorials/windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
+- een [PC met Windows](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
 - internet verbinding
 
 ## Demo

@@ -3,7 +3,7 @@
 Een [gedownload Linux Mint 22 ISO-bestand](../download-linuxmint22-iso/index.md){:target="_blank"} verifiëren op authenticiteit en integriteit is cruciaal om er zeker van te zijn dat het bestand niet is gewijzigd of beschadigd. Dit doe je door de hashwaarde van het gedownloade bestand te vergelijken met de officiële hashwaarde die door Linux Mint wordt verstrekt. Hieronder vind je een stappenplan voor zowel Windows als Linux Mint.
 
 ## Vereisten
-- een [PC met Windows of Linux](../../tutorials/windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
+- een [PC met Windows of Linux](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
 - internet verbinding
 - het [Linux Mint 22 ISO-bestand](../download-linuxmint22-iso/index.md){:target="_blank"}
 - de Linux Mint verificatiebestanden; op dezelfde downloadpagina waar je het ISO-bestand vindt, zoek je naar links om `sha256sum.txt` en `sha256sum.txt.gpg` te downloaden. Zorg ervoor dat je deze bestanden via "Opslaan als..." opslaat en niet alleen de inhoud kopieert. Bewaar alle drie de bestanden (ISO, .txt, en .gpg) in dezelfde map, bv. `Downloads`
