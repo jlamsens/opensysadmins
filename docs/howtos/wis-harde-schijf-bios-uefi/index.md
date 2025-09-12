@@ -1,16 +1,16 @@
 # Wis de harde schijf via de BIOS/UEFI Setup Utility
 
-Veel moderne UEFI-firmware (vooral op laptops en desktops van fabrikanten zoals HP, Dell, Lenovo, en bij sommige moederbordfabrikanten) bevat een functie genaamd `Secure Erase` of een vergelijkbare term. Deze functie is specifiek ontworpen voor Solid State Drives (SSD's) en gebruikt ATA Secure Erase-commando's om alle gegevens op de SSD veilig en permanent te wissen, zodat ze onherstelbaar zijn. Dit is de meest effectieve manier om een SSD "schoon" te maken.
+Veel moderne UEFI-firmware (vooral op laptops en desktops van fabrikanten zoals bv. HP, Dell, Lenovo en bij sommige moederbordfabrikanten) bevat een functie genaamd `Secure Erase` of een vergelijkbare term. Deze functie is specifiek ontworpen voor Solid State Drives (SSD's) en gebruikt ATA Secure Erase-commando's om alle gegevens op de SSD veilig en permanent te wissen, zodat ze onherstelbaar zijn. Dit is de meest effectieve manier om een SSD "schoon" te maken.
 
 ## Vereisten
-- een computer met een **BIOS of UEFI** (moderne computers hebben meestal UEFI)
-- toegang tot de [BIOS of UEFI](../open-bios-uefi-setup-utility/index.md){:target="_blank"}
+- een computer met toegang tot de [BIOS of UEFI](../open-bios-uefi-setup-utility/index.md){:target="_blank"} (moderne computers hebben meestal UEFI)
 
 ## Demo
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Harde schijf wissen
-Sommige systemen, zoals de `HP Z2 PC`, bieden de mogelijkheid om de harde schijf direct vanuit de BIOS/UEFI te wissen. 
+## Instructies
+Deze instructies zijn gebaseerd op een `HP Z2 PC`. Raadpleeg altijd de handleiding van jouw eigen hardware, want de stappen kunnen verschillen.
+Niet alle systemen bieden namelijk de mogelijkheid om de harde schijf direct vanuit de BIOS/UEFI te wissen. 
 
 - Ga naar het tabblad `Security` en selecteer `Hard Drive Utilities`.
 - Kies `Secure Erase`.

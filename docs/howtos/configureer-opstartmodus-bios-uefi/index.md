@@ -1,17 +1,14 @@
 # Configureer de opstartmodus in BIOS/UEFI
 
-Binnen de BIOS/UEFI utility kun je cruciale opstartinstellingen beheren, waaronder de Boot Mode, waarbij je kunt schakelen tussen UEFI (Unified Extensible Firmware Interface) voor modernere systemen met ondersteuning voor grotere schijven, snellere opstarttijden en Secure Boot, en Legacy (CSM) modus voor compatibiliteit met oudere besturingssystemen of hardware. 
-
-Tevens biedt de utility opties voor Secure Boot, een beveiligingsfunctie die voorkomt dat ongeautoriseerde besturingssystemen of malware tijdens het opstartproces kunnen laden, door te controleren of de opstartcomponenten digitaal zijn ondertekend en vertrouwd zijn door de fabrikant.
+Binnen de BIOS/UEFI utility kun je belangrijke opstartinstellingen beheren, waaronder de `Boot Mode`, waarbij je kunt schakelen tussen UEFI (Unified Extensible Firmware Interface) voor modernere systemen met ondersteuning voor grotere schijven, snellere opstarttijden, `Secure Boot` en Legacy (CSM) modus voor compatibiliteit met oudere besturingssystemen of hardware. 
 
 ## Vereisten
-- een computer met een **BIOS of UEFI** (moderne computers hebben meestal UEFI)
-- toegang tot de [BIOS of UEFI](../open-bios-uefi-setup-utility/index.md){:target="_blank"}
+- een computer met toegang tot de [BIOS of UEFI](../open-bios-uefi-setup-utility/index.md){:target="_blank"} (moderne computers hebben meestal UEFI)
 
 ## Demo
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Bootmodus configureren
+## Instructies
 Deze instructies zijn gebaseerd op een `HP Z2 pc`. Raadpleeg altijd de handleiding van jouw eigen hardware, want de stappen kunnen verschillen.
 
 - Navigeer naar `Advanced` en selecteer vervolgens `Secure Boot Configuration`.

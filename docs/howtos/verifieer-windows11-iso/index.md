@@ -12,7 +12,7 @@ Een [gedownload Windows 11 ISO-bestand](../download-windows11-iso/index.md){:tar
 ## Demo
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_VsDvEMNRjo?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Vanaf Windows
+## Instructies vanaf Windows
 
 ### Open PowerShell als administrator
 
@@ -63,7 +63,7 @@ Gebruik het `Get-FileHash` commando.
 - Ga naar de officiële Microsoft-website en zoek de SHA256-hashwaarde voor de specifieke Windows 11 ISO-versie die je hebt gedownload.
 - Vergelijk de waarde die je in stap 3 bij tabblad "output" hebt staan, teken voor teken, met de officiële waarde.
 
-## Vanaf Linux Mint
+## Instructies vanaf Linux Mint
 ### Open de Terminal
 - Je kunt dit doen via het toepassingenmenu (meestal onder "Systeemhulpprogramma's" of door te zoeken naar "Terminal").
 - Of gebruik de sneltoets Ctrl + Alt + T.
