@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Standing on the shoulder of giants" name="description"/>
 <meta content="Jurgen Lamsens" name="author"/>
-<link href="https://www.opensysadmins.com/howtos/acquire-valid-ios-image/" rel="canonical"/>
+<link href="https://www.opensysadmins.com/howtos/setup-minicom-linuxmint22/" rel="canonical"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.44" name="generator"/>
-<title>Acquire a valid Cisco IOS image - OpenSysAdmins</title>
+<title>Setup minicom op Linux Mint 22 - OpenSysAdmins</title>
 <link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#acquire-a-valid-cisco-ios-image">
+<a class="md-skip" href="#setup-minicom-op-linux-mint-22">
           Skip to content
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Acquire a valid Cisco IOS image
+              Setup minicom op Linux Mint 22
             
           </span>
 </div>
@@ -635,7 +635,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../tutorials/setup-windows-server2025-vm-virtualbox/05-snapshot-windows-server2025/">
 <span class="md-ellipsis">
-    05 Sysprep Windows Server 2025
+    05 Snapshot Windows Server 2025
   </span>
 </a>
 </li>
@@ -1169,14 +1169,228 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vereisten">
+<span class="md-ellipsis">
+      Vereisten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo">
+<span class="md-ellipsis">
+      Demo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setup">
+<span class="md-ellipsis">
+      Setup
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#update-pakketlijst">
+<span class="md-ellipsis">
+      Update pakketlijst
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installeer-minicom">
+<span class="md-ellipsis">
+      Installeer minicom
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identificeer-de-seriele-poort">
+<span class="md-ellipsis">
+      Identificeer de seriële poort
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configureer-minicom">
+<span class="md-ellipsis">
+      Configureer minicom
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#start-minicom">
+<span class="md-ellipsis">
+      Start minicom
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alternatieve-werkwijze">
+<span class="md-ellipsis">
+      Alternatieve werkwijze
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="acquire-a-valid-cisco-ios-image">Acquire a valid Cisco IOS image</h1>
-<p>todo...</p>
+<h1 id="setup-minicom-op-linux-mint-22">Setup minicom op Linux Mint 22</h1>
+<p>Minicom is een populair terminalprogramma voor Unix-achtige besturingssystemen dat wordt gebruikt om te communiceren met seriële apparaten, zoals modems, routers en embedded systemen.</p>
+<h2 id="vereisten">Vereisten</h2>
+<ul>
+<li>een <a href="../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/" target="_blank">PC met Linux Mint 22</a></li>
+</ul>
+<h2 id="demo">Demo</h2>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&amp;loop=0&amp;mute=0" title="YouTube video player" width="560"></iframe>
+<h2 id="setup">Setup</h2>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="console-access.png"><img src="console-access.png"/></a></p>
+<h2 id="update-pakketlijst">Update pakketlijst</h2>
+<p>Vernieuw de lokale pakketlijst om je systeem op de hoogte te brengen van de nieuwste beschikbare pakketten en updates in de gekoppelde software repositories.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">guru@hp:~$_</label><label for="__tabbed_1_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo apt update
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="installeer-minicom">Installeer minicom</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">guru@hp:~$_</label><label for="__tabbed_2_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo apt install minicom -y
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="identificeer-de-seriele-poort">Identificeer de seriële poort</h2>
+<p>In dit voorbeeld is een Cisco switch met een seriële kabel verbonden met een Linux Mint PC. Voer op die PC de volgende opdracht uit om de beschikbare seriële poorten weer te geven. Noteer de naam van de seriële poort (bv. <code>/dev/ttyUSB0</code>) die bij je apparaat hoort.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">guru@hp:~$_</label><label for="__tabbed_3_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>dmesg | grep tty
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>guru@hp:~$ dmesg | grep tty
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>[    0.206150] printk: console [tty0] enabled
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="hll">[18977.539042] usb 1-4: pl2303 converter now attached to ttyUSB0
+</span><a id="__codelineno-5-4" name="__codelineno-5-4"></a>guru@hp:~$ 
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="configureer-minicom">Configureer minicom</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">guru@hp:~$_</label><label for="__tabbed_4_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>sudo minicom -s
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Gebruik in het configuratiemenu van Minicom de pijltjestoetsen om te navigeren en de instellingen te configureren.</p>
+<ul>
+<li>Selecteer "Serial port setup"</li>
+<li>Stel het seriële apparaat in op het apparaat dat je eerder hebt genoteerd (bv. "/dev/ttyUSB0")</li>
+<li>Stel de baudrate in volgens de specificaties van je apparaat (bijv. "9600")</li>
+<li>Laat de overige instellingen op de standaardwaarden staan, tenzij je specifieke vereisten hebt.</li>
+<li>Klik op "Save setup as dfl" om de configuratie op te slaan.</li>
+<li>Klik op "Exit from Minicom".</li>
+</ul>
+<p>Deze instellingen worden opgeslagen in het bestand <code>/etc/minicom/minirc.dfl</code> voor alle toekomstige uitvoeringen.</p>
+</div>
+</div>
+</input></input></div>
+<h2 id="start-minicom">Start minicom</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">guru@hp:~$_</label><label for="__tabbed_5_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>sudo minicom
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Druk op <span class="keys"><kbd class="key-enter">Enter</kbd></span> om de switch/router-prompt te openen. Om Minicom af te sluiten, druk je op de sneltoets <span class="keys"><kbd class="key-control">Ctrl</kbd></span> <span class="keys"><kbd class="key-a">A</kbd></span> gevolgd door de letter <span class="keys"><kbd class="key-x">X</kbd></span>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>Welcome to minicom 2.8
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>OPTIONS: I18n 
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>Port /dev/ttyUSB0, 14:06:27
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>Press CTRL-A Z for help on special keys
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>&lt;press ENTER&gt;
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>Switch&gt;
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="alternatieve-werkwijze">Alternatieve werkwijze</h2>
+<p>In plaats van eerst de configuratie uit te voeren, kan je ineens de juiste parameters opgeven via de opdrachtregel.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">guru@hp:~$_</label><label for="__tabbed_6_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>sudo minicom -b 9600 -D /dev/ttyUSB0
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Druk op <span class="keys"><kbd class="key-enter">Enter</kbd></span> om de switch/router-prompt te openen. Om Minicom af te sluiten, druk je op de sneltoets <span class="keys"><kbd class="key-control">Ctrl</kbd></span> <span class="keys"><kbd class="key-a">A</kbd></span> gevolgd door de letter <span class="keys"><kbd class="key-x">X</kbd></span>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>Welcome to minicom 2.8
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>OPTIONS: I18n 
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>Port /dev/ttyUSB0, 14:06:27
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>Press CTRL-A Z for help on special keys
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a>&lt;press ENTER&gt;
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a>Switch&gt;
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
