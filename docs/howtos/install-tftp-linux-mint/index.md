@@ -148,7 +148,7 @@
     ```
 
 ## Serve a file
-In this example, a [valid Cisco IOS image](../acquire-valid-ios-image/index.md) is copied to the tFTP directory and
+In this example, a [valid Cisco IOS image](../download-cisco-IOS/index.md){:target="_blank"} is copied to the tFTP directory and
 permissions are set.
 
 === "guru@lab:~$_"

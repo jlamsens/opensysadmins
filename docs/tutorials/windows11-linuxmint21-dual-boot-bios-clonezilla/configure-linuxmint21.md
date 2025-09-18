@@ -94,7 +94,7 @@
 ## Applications (optional)
 - [Install Google Chrome browser](../../howtos/install-chrome-browser-linux-mint/index.md){:target="_blank"}
 - [Install Wireshark](../../howtos/install-wireshark-linux-mint21/index.md){:target="_blank"}
-- [Acquire a valid Cisco IOS image](../../howtos/acquire-valid-ios-image/index.md){:target="_blank"}
+- [Acquire a valid Cisco IOS image](../../howtos/download-cisco-IOS/index.md){:target="_blank"}
 - [Install tFTP](../../howtos/install-tftp-linux-mint/index.md){:target="_blank"}
 - [Install minicom](../../howtos/install-minicom-linux-mint/index.md){:target="_blank"}
 

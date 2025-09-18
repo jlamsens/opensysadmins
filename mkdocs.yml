@@ -410,7 +410,7 @@ nav:
       - 02 Installatiemedia: tutorials/setup-windows-server2025-vm-virtualbox/02-installatiemedia.md
       - 02 Voorbereiding: tutorials/setup-windows-server2025-vm-virtualbox/03-voorbereiding.md
       - 04 Setup Windows Server 2025: tutorials/setup-windows-server2025-vm-virtualbox/04-setup-windows-server2025.md
-      - 05 Sysprep Windows Server 2025: tutorials/setup-windows-server2025-vm-virtualbox/05-snapshot-windows-server2025.md
+      - 05 Snapshot Windows Server 2025: tutorials/setup-windows-server2025-vm-virtualbox/05-snapshot-windows-server2025.md
       - 06 Controle en eindresultaat: tutorials/setup-windows-server2025-vm-virtualbox/06-controle-eindresultaat.md
       - 07 Conclusie: tutorials/setup-windows-server2025-vm-virtualbox/07-conclusie.md
 

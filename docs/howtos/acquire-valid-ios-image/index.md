@@ -1,3 +1,0 @@
-# Acquire a valid Cisco IOS image
-
-todo...

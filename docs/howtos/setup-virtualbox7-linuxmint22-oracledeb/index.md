@@ -20,28 +20,28 @@ Download het `.deb`-pakket van de gewenste versie vanaf [https://www.virtualbox.
 
 === "guru@hp:~/Downloads$_"
 
-    Voorbeeld: versie 7.1.10
+    Voorbeeld: versie 7.1.12
 
     ``` title='' hl_lines="0"
-    wget https://download.virtualbox.org/virtualbox/7.1.10/virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb
+    wget https://download.virtualbox.org/virtualbox/7.1.12/virtualbox-7.1_7.1.12-169651~Ubuntu~noble_amd64.deb
     ```
 
 === "output"
 
     ``` title='' hl_lines="0"
-    guru@hp:~/Downloads$ wget https://download.virtualbox.org/virtualbox/7.1.10/virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb
-    --2025-09-02 16:06:22--  https://download.virtualbox.org/virtualbox/7.1.10/virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb
+    guru@hp:~/Downloads$ wget https://download.virtualbox.org/virtualbox/7.1.12/virtualbox-7.1_7.1.12-169651~Ubuntu~noble_amd64.deb
+    --2025-09-18 14:31:27--  https://download.virtualbox.org/virtualbox/7.1.12/virtualbox-7.1_7.1.12-169651~Ubuntu~noble_amd64.deb
     Resolving download.virtualbox.org (download.virtualbox.org)... 23.12.148.117
     Connecting to download.virtualbox.org (download.virtualbox.org)|23.12.148.117|:443... connected.
     HTTP request sent, awaiting response... 200 OK
-    Length: 109183888 (104M) [text/plain]
-    Saving to: ‘virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb’
+    Length: 109135672 (104M) [text/plain]
+    Saving to: ‘virtualbox-7.1_7.1.12-169651~Ubuntu~noble_amd64.deb’
 
-    virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb         100%[=========================================================================================================================================>] 104,12M  38,6MB/s    in 2,7s    
+    virtualbox-7.1_7.1.12-169651~Ubuntu~noble_amd64 100%[=====================================================================================================>] 104,08M  21,0MB/s    in 5,1s    
 
-    2025-09-02 16:06:25 (38,6 MB/s) - ‘virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb’ saved [109183888/109183888]
+    2025-09-18 14:31:32 (20,6 MB/s) - ‘virtualbox-7.1_7.1.12-169651~Ubuntu~noble_amd64.deb’ saved [109135672/109135672]
 
-    guru@hp:~/Downloads$
+    guru@hp:~/Downloads$ 
     ```
 
 ## Installeer het pakket
@@ -49,34 +49,35 @@ Download het `.deb`-pakket van de gewenste versie vanaf [https://www.virtualbox.
 === "guru@hp:~/Downloads$_"
 
     ``` title='' hl_lines="0"
-    sudo apt install ./virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb -y
+    sudo apt install ./virtualbox-7.1_7.1.12-169651~Ubuntu~noble_amd64.deb
     ```
 
 === "output"
 
     ``` title='' hl_lines="0"
-    guru@hp:~/Downloads$ sudo apt install ./virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb -y
+    guru@hp:~/Downloads$ sudo apt install ./virtualbox-7.1_7.1.12-169651~Ubuntu~noble_amd64.deb -y
     Reading package lists... Done
     Building dependency tree... Done
     Reading state information... Done
-    Note, selecting 'virtualbox-7.1' instead of './virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb'
+    Note, selecting 'virtualbox-7.1' instead of './virtualbox-7.1_7.1.12-169651~Ubuntu~noble_amd64.deb'
     The following additional packages will be installed:
-      libb2-1 liblzf1 libqt6core6t64 libqt6dbus6t64 libqt6gui6t64 libqt6help6 libqt6network6t64 libqt6opengl6t64 libqt6printsupport6t64 libqt6qml6 libqt6qmlmodels6 libqt6quick6 libqt6sql6-sqlite libqt6sql6t64 libqt6statemachine6
-      libqt6waylandclient6 libqt6waylandcompositor6 libqt6waylandeglclienthwintegration6 libqt6waylandeglcompositorhwintegration6 libqt6widgets6t64 libqt6wlshellintegration6 libqt6xml6t64 libsdl-ttf2.0-0 libsdl1.2debian libtpms0 libts0t64
-      qt6-gtk-platformtheme qt6-qpa-plugins qt6-translations-l10n qt6-wayland
+      libb2-1 liblzf1 libqt6core6t64 libqt6dbus6t64 libqt6gui6t64 libqt6help6 libqt6network6t64 libqt6opengl6t64 libqt6printsupport6t64 libqt6qml6 libqt6qmlmodels6 libqt6quick6
+      libqt6sql6-sqlite libqt6sql6t64 libqt6statemachine6 libqt6waylandclient6 libqt6waylandcompositor6 libqt6waylandeglclienthwintegration6 libqt6waylandeglcompositorhwintegration6
+      libqt6widgets6t64 libqt6wlshellintegration6 libqt6xml6t64 libsdl-ttf2.0-0 libsdl1.2debian libtpms0 libts0t64 qt6-gtk-platformtheme qt6-qpa-plugins qt6-translations-l10n qt6-wayland
     Suggested packages:
       qt6-qmltooling-plugins
     The following NEW packages will be installed:
-      libb2-1 liblzf1 libqt6core6t64 libqt6dbus6t64 libqt6gui6t64 libqt6help6 libqt6network6t64 libqt6opengl6t64 libqt6printsupport6t64 libqt6qml6 libqt6qmlmodels6 libqt6quick6 libqt6sql6-sqlite libqt6sql6t64 libqt6statemachine6
-      libqt6waylandclient6 libqt6waylandcompositor6 libqt6waylandeglclienthwintegration6 libqt6waylandeglcompositorhwintegration6 libqt6widgets6t64 libqt6wlshellintegration6 libqt6xml6t64 libsdl-ttf2.0-0 libsdl1.2debian libtpms0 libts0t64
-      qt6-gtk-platformtheme qt6-qpa-plugins qt6-translations-l10n qt6-wayland virtualbox-7.1
+      libb2-1 liblzf1 libqt6core6t64 libqt6dbus6t64 libqt6gui6t64 libqt6help6 libqt6network6t64 libqt6opengl6t64 libqt6printsupport6t64 libqt6qml6 libqt6qmlmodels6 libqt6quick6
+      libqt6sql6-sqlite libqt6sql6t64 libqt6statemachine6 libqt6waylandclient6 libqt6waylandcompositor6 libqt6waylandeglclienthwintegration6 libqt6waylandeglcompositorhwintegration6
+      libqt6widgets6t64 libqt6wlshellintegration6 libqt6xml6t64 libsdl-ttf2.0-0 libsdl1.2debian libtpms0 libts0t64 qt6-gtk-platformtheme qt6-qpa-plugins qt6-translations-l10n qt6-wayland
+      virtualbox-7.1
     0 upgraded, 31 newly installed, 0 to remove and 0 not upgraded.
     Need to get 17,1 MB/126 MB of archives.
-    After this operation, 313 MB of additional disk space will be used.
+    After this operation, 312 MB of additional disk space will be used.
     Get:1 http://archive.ubuntu.com/ubuntu noble/universe amd64 liblzf1 amd64 3.6-4 [7.624 B]
-    Get:2 http://archive.ubuntu.com/ubuntu noble/universe amd64 libb2-1 amd64 0.98.1-1.1build1 [45,0 kB]
-    Get:3 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6core6t64 amd64 6.4.2+dfsg-21.1build5 [1.789 kB]
-    Get:4 /home/guru/Downloads/virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb virtualbox-7.1 amd64 7.1.10-169112~Ubuntu~noble [109 MB]
+    Get:2 /home/guru/Downloads/virtualbox-7.1_7.1.12-169651~Ubuntu~noble_amd64.deb virtualbox-7.1 amd64 7.1.12-169651~Ubuntu~noble [109 MB]
+    Get:3 http://archive.ubuntu.com/ubuntu noble/universe amd64 libb2-1 amd64 0.98.1-1.1build1 [45,0 kB]
+    Get:4 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6core6t64 amd64 6.4.2+dfsg-21.1build5 [1.789 kB]
     Get:5 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6dbus6t64 amd64 6.4.2+dfsg-21.1build5 [267 kB]
     Get:6 http://archive.ubuntu.com/ubuntu noble/universe amd64 libts0t64 amd64 1.22-1.1build1 [63,8 kB]
     Get:7 http://archive.ubuntu.com/ubuntu noble/universe amd64 libqt6gui6t64 amd64 6.4.2+dfsg-21.1build5 [3.119 kB]
@@ -104,7 +105,7 @@ Download het `.deb`-pakket van de gewenste versie vanaf [https://www.virtualbox.
     Get:29 http://archive.ubuntu.com/ubuntu noble/universe amd64 qt6-qpa-plugins amd64 6.4.2+dfsg-21.1build5 [89,3 kB]
     Get:30 http://archive.ubuntu.com/ubuntu noble/universe amd64 qt6-translations-l10n all 6.4.2-1 [1.761 kB]
     Get:31 http://archive.ubuntu.com/ubuntu noble/universe amd64 qt6-wayland amd64 6.4.2-5build3 [127 kB]
-    Fetched 17,1 MB in 3s (5.906 kB/s)     
+    Fetched 17,1 MB in 3s (5.577 kB/s)
     Extracting templates from packages: 100%
     Preconfiguring packages ...
     Selecting previously unselected package liblzf1:amd64.
@@ -148,8 +149,8 @@ Download het `.deb`-pakket van de gewenste versie vanaf [https://www.virtualbox.
     Preparing to unpack .../12-libtpms0_0.9.3-0ubuntu4.24.04.1_amd64.deb ...
     Unpacking libtpms0:amd64 (0.9.3-0ubuntu4.24.04.1) ...
     Selecting previously unselected package virtualbox-7.1.
-    Preparing to unpack .../13-virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb ...
-    Unpacking virtualbox-7.1 (7.1.10-169112~Ubuntu~noble) ...
+    Preparing to unpack .../13-virtualbox-7.1_7.1.12-169651~Ubuntu~noble_amd64.deb ...
+    Unpacking virtualbox-7.1 (7.1.12-169651~Ubuntu~noble) ...
     Selecting previously unselected package libqt6network6t64:amd64.
     Preparing to unpack .../14-libqt6network6t64_6.4.2+dfsg-21.1build5_amd64.deb ...
     Unpacking libqt6network6t64:amd64 (6.4.2+dfsg-21.1build5) ...
@@ -226,7 +227,7 @@ Download het `.deb`-pakket van de gewenste versie vanaf [https://www.virtualbox.
     Setting up qt6-gtk-platformtheme:amd64 (6.4.2+dfsg-21.1build5) ...
     Setting up libqt6printsupport6t64:amd64 (6.4.2+dfsg-21.1build5) ...
     Setting up libqt6quick6:amd64 (6.4.2+dfsg-4build3) ...
-    Setting up virtualbox-7.1 (7.1.10-169112~Ubuntu~noble) ...
+    Setting up virtualbox-7.1 (7.1.12-169651~Ubuntu~noble) ...
     info: Selecting GID from range 100 to 999 ...
     info: Adding group `vboxusers' (GID 127) ...
     Setting up libqt6wlshellintegration6:amd64 (6.4.2-5build3) ...
@@ -242,10 +243,9 @@ Download het `.deb`-pakket van de gewenste versie vanaf [https://www.virtualbox.
     Processing triggers for shared-mime-info (2.4-4) ...
     Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
     Processing triggers for desktop-file-utils (0.27-2build1) ...
-    N: Download is performed unsandboxed as root as file '/home/guru/Downloads/virtualbox-7.1_7.1.10-169112~Ubuntu~noble_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
-    guru@hp:~/Downloads$
+    N: Download is performed unsandboxed as root as file '/home/guru/Downloads/virtualbox-7.1_7.1.12-169651~Ubuntu~noble_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+    guru@hp:~/Downloads$ 
     ```
-
 
 ## Vergrendel de versie ("hold") 
 Voorkom dat het virtualbox pakket automatisch wordt bijgewerkt door de pakketbeheerder APT.
@@ -285,18 +285,19 @@ Wil je later toch upgraden, hef dan de hold op:
 Installeren van het [Extension Pack](../../explanations/todo/index.md) is nodig om extra functionaliteit zoals USB 2.0/3.0-ondersteuning, RDP-server, disk-encryptie en PXE boot toe te voegen aan VirtualBox.
 
 === "guru@hp:~/Downloads$_"
-    In dit voorbeeld download en installeer je de specifieke versie 7.1.10-169112
+    In dit voorbeeld download en installeer je de specifieke versie 7.1.12
 
     ``` title=''
-    wget -q https://download.virtualbox.org/virtualbox/7.1.10/Oracle_VirtualBox_Extension_Pack-7.1.10-169112.vbox-extpack
-    sudo VBoxManage extpack install ./Oracle_VirtualBox_Extension_Pack-7.1.10-169112.vbox-extpack 
+    wget -q https://download.virtualbox.org/virtualbox/7.1.12/Oracle_VirtualBox_Extension_Pack-7.1.12.vbox-extpack
+    sudo VBoxManage extpack install ./Oracle_VirtualBox_Extension_Pack-7.1.12.vbox-extpack
     ```
 
 === "output"
 
     ``` title='' hl_lines="9"
-    guru@hp:~/Downloads$ wget -q https://download.virtualbox.org/virtualbox/7.1.10/Oracle_VirtualBox_Extension_Pack-7.1.10-169112.vbox-extpack
-    guru@hp:~/Downloads$ sudo VBoxManage extpack install ./Oracle_VirtualBox_Extension_Pack-7.1.10-169112.vbox-extpack 
+    guru@hp:~/Downloads$ wget -q https://download.virtualbox.org/virtualbox/7.1.12/Oracle_VirtualBox_Extension_Pack-7.1.12.vbox-extpack
+
+    guru@hp:~/Downloads$ sudo VBoxManage extpack install ./Oracle_VirtualBox_Extension_Pack-7.1.12.vbox-extpack
     VirtualBox Extension Pack Personal Use and Educational License (PUEL)
 
     License version 12, 22 July 2024
@@ -311,7 +312,7 @@ Installeren van het [Extension Pack](../../explanations/todo/index.md) is nodig 
 
     0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
     Successfully installed "Oracle VirtualBox Extension Pack".
-    guru@hp:~/Downloads$
+    guru@hp:~/Downloads$ 
     ```
 
 ### Verifieer
@@ -324,18 +325,18 @@ Installeren van het [Extension Pack](../../explanations/todo/index.md) is nodig 
 === "output"
 
     ``` title='' hl_lines="4"
-    guru@hp:~$ VBoxManage list extpacks
+    guru@hp:~/Downloads$ VBoxManage list extpacks
     Extension Packs: 1
     Pack no. 0:   Oracle VirtualBox Extension Pack
-    Version:        7.1.10
-    Revision:       169112
+    Version:        7.1.12
+    Revision:       169651
     Edition:        
     Description:    Oracle Cloud Infrastructure integration, Host Webcam, VirtualBox RDP, PXE ROM, Disk Encryption, NVMe, full VM encryption.
     VRDE Module:    VBoxVRDP
     Crypto Module:  VBoxPuelCrypto
     Usable:         true
     Why unusable:   
-    guru@hp:~$ 
+    guru@hp:~/Downloads$ 
     ```
 
 ## Maak de Guest Additions ISO beschikbaar (optioneel)
@@ -361,7 +362,7 @@ Het voorzien van de [Guest Additions](../../explanations/todo/index.md) in een v
 === "output"
 
     ``` title='' hl_lines="13"
-    guru@hp:~$ VERSION=$(VBoxManage --version | sed -E 's/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/')
+    guru@hp:~/Downloads$ VERSION=$(VBoxManage --version | sed -E 's/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/')
     ISO_URL="https://download.virtualbox.org/virtualbox/$VERSION/VBoxGuestAdditions_${VERSION}.iso"
     ISO_TMP="/tmp/VBoxGuestAdditions_${VERSION}.iso"
     ISO_DEST="/usr/share/virtualbox/VBoxGuestAdditions.iso"
@@ -373,8 +374,8 @@ Het voorzien van de [Guest Additions](../../explanations/todo/index.md) in een v
     fi && \
     sudo install -m 644 "$ISO_TMP" "$ISO_DEST" && \
     echo "VBoxGuestAdditions $VERSION geïnstalleerd in $ISO_DEST"
-    VBoxGuestAdditions 7.1.10 geïnstalleerd in /usr/share/virtualbox/VBoxGuestAdditions.iso
-    guru@hp:~$ 
+    VBoxGuestAdditions 7.1.12 geïnstalleerd in /usr/share/virtualbox/VBoxGuestAdditions.iso
+    guru@hp:~/Downloads$ 
     ```
 
 ## Voeg gebruiker toe aan vboxusers groep

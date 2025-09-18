@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# 04 Sysprep
+# 05 Snapshot Windows Server 2025
 
 Volg onderstaande instructie stap voor stap:
 

@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# 04 Sysprep
+# 05 Sysprep en snapshot Windows 11
 
 Volg onderstaande instructies stap voor stap:
 

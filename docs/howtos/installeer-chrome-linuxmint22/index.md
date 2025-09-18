@@ -3,8 +3,10 @@
 Google Chrome is een snelle, gebruiksvriendelijke en gratis webbrowser ontwikkeld door Google. Hij werd in 2008 gelanceerd en is sindsdien uitgegroeid tot de meest gebruikte browser ter wereld.
 
 ## Vereisten
-- een [PC met Linux](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
-- internet verbinding
+- een [PC met Linux Mint 22](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
+
+## Demo
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Download and importeer Google's signed key
 Ondertekeningssleutels worden gebruikt om de authenticiteit en integriteit van pakketten uit repositories te verifiëren. Download die van Google en importeer ze direct.
