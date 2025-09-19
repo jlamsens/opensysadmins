@@ -7,4 +7,5 @@ Een schone installatie van Windows 11 is de meest grondige manier om het besturi
 - een [opstartbare USB-stick voor Windows 11](../../howtos/maak-opstartbare-usb-stick-windows11/index.md){:target="_blank"}
 - internet verbinding
 
+## Demo
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lEnpfR2r1QE?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

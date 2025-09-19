@@ -4,7 +4,7 @@ hide:
 ---
 
 # 02 Voorbereiding van de installatiemedia
-Voordat we beginnen met de installatie in een virtuele machine, moeten we de benodigde installatiemedia voorbereiden op de LES PC. Klik op onderstaande links en volg elke instructie stap voor stap.
+Voordat we beginnen met de installatie in een virtuele machine, moeten we de benodigde installatiemedia voorbereiden op de computer. Klik op onderstaande links en volg elke instructie stap voor stap.
 
 - [Stap 2.1: Download de Windows 11 Enterprise evaluation ISO.](../../howtos/download-windows11-evaluation-iso/index.md){:target="_blank"} 
 Zorg ervoor dat je beschikt over het officiële installatiebestand voor Windows 11 Evaluation Enterprise. Dit vormt de basis voor je installatie, of je het nu downloadt van de Microsoft-website of verkrijgt via een lokale bron.

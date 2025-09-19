@@ -1,2 +1,2 @@
-# Configureer het Linux Mint 22 OS in een VirtualBox virtuele machine
+# Configureer Linux Mint 22 basisinstellingen in een virtuele machine in VirtualBox
 todo

@@ -1,4 +1,4 @@
-# Download een Linux Mint ISO installatiebestand
+# Download een Linux Mint ISO bestand
 
 Download een Linux Mint ISO-installatiebestand om het besturingssysteem te verkrijgen in een handig, zelfstandig bestand, essentieel voor het maken van opstartbare USB-sticks of DVD's. Dit is de basis voor een nieuwe installatie, een herstel van je systeem, of om Linux Mint uit te proberen in een live-omgeving zonder het direct te installeren.
 
