@@ -11,4 +11,4 @@ Nu het installatiemedium beschikbaar is, moeten we de nodige voorbereiding doen 
 Deze lege, `virtuele computer` vormt de basis waarin je straks Windows 11 zult installeren.
 
 - [Stap 3.2: Configureer de Windows 11 virtuele machine.](../../howtos/configureer-windows11-vm-virtualbox/index.md){:target="_blank"}
-Om je virtuele machine klaar te maken voor de installatie van Windows 11, moet je de hardware en instellingen correct configureren. Dit omvat o.a. het toewijzen van voldoende RAM-geheugen, het selecteren van het juiste besturingssysteemtype en het aanmaken van een virtuele harde schijf.
+Na het initiële aanmaken van de virtuele machine (VM) kun je, vóór de eerste opstart, de VM-instellingen raadplegen en fijnafstemmen om de werking te optimaliseren en aan specifieke behoeften aan te passen. 
