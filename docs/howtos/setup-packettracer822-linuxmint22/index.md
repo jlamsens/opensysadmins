@@ -1,4 +1,4 @@
-# Installeer Packet Tracer 8.2.2 op Linux Mint 22
+# Setup Packet Tracer 8.2.2 op Linux Mint 22
 
 Cisco Packet Tracer is een gratis netwerksimulatietool ontwikkeld door Cisco Systems, waarmee je virtuele netwerktopologieën kunnen ontwerpen, bouwen, configureren en testen in een risicovrije omgeving. Het je in staat om met diverse netwerkapparaten zoals routers en switches te experimenteren, netwerkprotocollen te simuleren en problemen op te lossen, zonder de noodzaak van dure fysieke hardware.
 
@@ -9,7 +9,8 @@ Cisco Packet Tracer is een gratis netwerksimulatietool ontwikkeld door Cisco Sys
 !!! danger "VDAB cursisten"
     Gebruik het Packet Tracer installatie-bestand `CiscoPacketTracer822_amd64_signed.deb` van in de `Download` folder in Google Classroom.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Demo
+<iframe width="854" height="480" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Open Terminal
 - Start de bestandsbeheerder `Nemo`

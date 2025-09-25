@@ -7,4 +7,4 @@ GNU Privacy Guard (GnuPG) voor Windows dient als een gratis en open-source imple
 - internet verbinding
 
 ## Demo
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UbcAhyEt_wo?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="854" height="480" src="https://www.youtube.com/embed/UbcAhyEt_wo?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

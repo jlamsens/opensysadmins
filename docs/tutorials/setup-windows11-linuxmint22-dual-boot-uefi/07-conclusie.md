@@ -8,4 +8,4 @@ Gefeliciteerd! Je hebt nu succesvol een dual boot LES PC geïnstalleerd met zowe
 
 Je hebt nu de flexibiliteit om bij elke opstart te kiezen welk besturingssysteem je wilt gebruiken, afhankelijk van je behoeften. Dit is een waardevolle vaardigheid die je verder kunt uitbreiden en aanpassen.
 
-En het beste is: je beschikt nu over een krachtig platform om de verschillende [howto's](../../howtos/index.md) en instructies die we verder gaan behandelen, direct in de praktijk te brengen!
+En het beste is: je beschikt nu over een krachtig platform om de verschillende [howto's](../../howtos/index.md){:target="_blank"} en [instructies](../../tutorials/index.md){:target="_blank"} die we verder gaan behandelen, direct in de praktijk te brengen!

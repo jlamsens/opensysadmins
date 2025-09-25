@@ -414,9 +414,6 @@ nav:
       - 06 Controle en eindresultaat: tutorials/setup-windows-server2025-vm-virtualbox/06-controle-eindresultaat.md
       - 07 Conclusie: tutorials/setup-windows-server2025-vm-virtualbox/07-conclusie.md
 
-
-
-
     - Setup van een testlab in VirtualBox:
       - tutorials/setup-testlab-virtualbox/index.md # overview/landing page
       - 01 Vereisten: tutorials/setup-testlab-virtualbox/01-vereisten.md
@@ -474,11 +471,8 @@ nav:
   #  - Howto_template: howtos/howto_template/index.md
   #  - Howto_template: howtos/howto_template/index.md
 
-    - Create a Windows 11 bootable USB flash drive: howtos/windows11-bootable-usb-flash-drive/index.md
-    - Create a Linux Mint 21 bootable USB flash drive: howtos/linuxmint21-bootable-usb-flash-drive/index.md
-    - Install PacketTracer 8.2.2 on Linux Mint 21: howtos/install-packettracer-linux-mint/index.md
-    - Install VirtualBox 6.1.50 on Linux Mint 21: howtos/install-virtualbox-linux-mint/index.md
-    - Install Google Chrome browser on Linux Mint 21: howtos/install-chrome-browser-linux-mint/index.md
+    - Setup Google Chrome browser op Linux Mint 22: howtos/setup-chrome-linuxmint22/index.md
+    - Setup Packet Tracer 8.2.2 op Linux Mint 22: howtos/setup-packettracer822-linuxmint22/index.md
     - Use minicom on Linux Mint 21: howtos/use-minicom-linux-mint/index.md
     - (Re)install an IOS operating system on a Cisco 2960 switch: howtos/reinstall-ios-cisco2960/index.md
     - (Re)install an IOS operating system on a Cisco 1941 router: howtos/reinstall-ios-cisco1941/index.md
@@ -486,8 +480,6 @@ nav:
     - Password recovery on a Cisco 1941 router: howtos/password-recovery-cisco1941/index.md
     - Factory reset a Cisco 2960 switch: howtos/factory-reset-cisco2960/index.md
     - Access a Cisco device ROMMON: howtos/access-cisco-device-rommon/index.md
-    - Install VirtualBox 7 on Linux Mint 21: howtos/install-virtualbox7-linux-mint21/index.md
-    - Install Ansible on Linux Mint 21: howtos/install-ansible-linux-mint21/index.md
       
 ####################################################################################
 

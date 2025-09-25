@@ -7,4 +7,4 @@ Na het initiële aanmaken van de virtuele machine (VM) kun je, vóór de eerste 
 - een werkende installatie van [VirtualBox](../setup-virtualbox7-linuxmint22-oracledeb/index.md){:target="_blank"}
 
 ## Demo
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RfpwDt7kf84?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="854" height="480" src="https://www.youtube.com/embed/RfpwDt7kf84?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
