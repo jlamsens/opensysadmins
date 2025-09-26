@@ -6,6 +6,7 @@ Nadat de virtuele machine (VM) is aangemaakt en geconfigureerd, start je deze vo
 - een [PC met Linux Mint 22](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
 - een werkende installatie van [VirtualBox](../setup-virtualbox7-linuxmint22-oracledeb/index.md){:target="_blank"}
 - een lege [virtuele machine voor Windows 11](../maak-windows11-vm-virtualbox/index.md){:target="_blank"}
+- een geconfigureerde [virtuele machine voor Windows 11](../configureer-windows11-vm-virtualbox/index.md){:target="_blank"}
 
 ## Demo
 <iframe width="854" height="480" src="https://www.youtube.com/embed/0VMyXPaN23o?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

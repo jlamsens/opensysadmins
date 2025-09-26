@@ -1,1 +1,0 @@
-# Test een Windows 11 virtuele machine in VirtualBox
