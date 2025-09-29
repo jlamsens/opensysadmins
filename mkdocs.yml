@@ -402,14 +402,14 @@ nav:
       - 05 Sysprep en snapshots: tutorials/setup-windows11-vm-virtualbox/05-sysprep-snapshot-windows11.md
       - 06 Conclusie: tutorials/setup-windows11-vm-virtualbox/06-conclusie.md
   
- #   - Setup van een Windows Server 2025 virtuele machine in VirtualBox:
- #    - tutorials/setup-windows-server2025-vm-virtualbox/index.md # overview/landing page
- #    - 01 Vereisten: tutorials/setup-windows-server2025-vm-virtualbox/01-vereisten.md
- #    - 02 Installatiemedia: tutorials/setup-windows-server2025-vm-virtualbox/02-installatiemedia.md
- #    - 03 Voorbereiding: tutorials/setup-windows-server2025-vm-virtualbox/03-voorbereiding.md
- #    - 04 Setup Windows Server 2025: tutorials/setup-windows-server2025-vm-virtualbox/04-setup-windows-server2025.md
- #    - 05 Snapshot: tutorials/setup-windows-server2025-vm-virtualbox/05-snapshot-windows-server2025.md
- #    - 06 Conclusie: tutorials/setup-windows-server2025-vm-virtualbox/06-conclusie.md
+    - Setup van een Windows Server 2025 virtuele machine in VirtualBox:
+      - tutorials/setup-windows-server2025-vm-virtualbox/index.md # overview/landing page
+      - 01 Vereisten: tutorials/setup-windows-server2025-vm-virtualbox/01-vereisten.md
+      - 02 Installatiemedia: tutorials/setup-windows-server2025-vm-virtualbox/02-installatiemedia.md
+      - 03 Voorbereiding: tutorials/setup-windows-server2025-vm-virtualbox/03-voorbereiding.md
+      - 04 Setup Windows Server 2025: tutorials/setup-windows-server2025-vm-virtualbox/04-setup-windows-server2025.md
+      - 05 Snapshot: tutorials/setup-windows-server2025-vm-virtualbox/05-snapshot-windows-server2025.md
+      - 06 Conclusie: tutorials/setup-windows-server2025-vm-virtualbox/06-conclusie.md
 
  #   - Setup van een testlab in VirtualBox:
  #    - tutorials/setup-testlab-virtualbox/index.md # overview/landing page
