@@ -16,95 +16,154 @@ Een [gedownload Linux Mint 22 ISO-bestand](../download-linuxmint22-iso/index.md)
 
 ### Open PowerShell als administrator
 
-- Klik met de rechtermuisknop op de Startknop (of druk op Windows-toets + X).
-- Kies "Terminal (Admin)".
+- Ga naar de Windows Verkenner en klik links op de `Downloads` map.
+- Hou ++shift++ ingedrukt en rechtermuisklik op een leeg vlak
+- Selecteer `Open in Terminal`
 
-### Navigeer naar de map waar het ISO-bestand is opgeslagen
-Gebruik het `cd` commando. Bijvoorbeeld, als je ISO in de map "Downloads" staat
+### Haal een specifieke GPG-sleutel op
+Gebruik het `gpg` commando. Hiermee download je de `publieke sleutel` (geïdentificeerd door de lange reeks tekens, de key ID) van een betrouwbare sleutelserver (keyserver). Deze sleutel met de naam "Linux Mint ISO Signing Key" wordt in jouw lokale GPG-sleutelring opgeslagen.
 
-=== "PS C:\Users\guru06>_"
-    In dit voorbeeld ben ik ingelogd met gebruiker `guru06`.
-
+=== "PS C:\Users\guru06\Downloads>_"
+    
     ``` title=''
-    cd Downloads
+    gpg --keyserver hkps://keyserver.ubuntu.com:443 --recv-key 27DEB15644C6B3CF3BD7D291300F846BA25BAE09
     ```
 
 === "output"
 
     ``` title='' hl_lines="0"
-    PS C:\Users\guru06> cd Downloads
+    PS C:\Users\guru06\Downloads> gpg --keyserver hkps://keyserver.ubuntu.com:443 --recv-key 27DEB15644C6B3CF3BD7D291300F846BA25BAE09
+    gpg: C:\\Users\\guru06\\AppData\\Roaming\\gnupg\\trustdb.gpg: trustdb created
+    gpg: key 300F846BA25BAE09: public key "Linux Mint ISO Signing Key <root@linuxmint.com>" imported
+    gpg: Total number processed: 1
+    gpg:               imported: 1
     PS C:\Users\guru06\Downloads>
     ```
 
-### Bereken de SHA256-hashwaarde van het ISO-bestand
-Gebruik het `Get-FileHash` commando.
+### Verifieer digitale handtekening
+GPG vergelijkt de digitale handtekening in sha256sum.txt.gpg met de inhoud van sha256sum.txt met behulp van de geïmporteerde publieke sleutel. Dit is om te controleren of het bestand sha256sum.txt daadwerkelijk door Linux Mint (de eigenaar van de sleutel) is ondertekend en of de inhoud ongewijzigd is sinds de ondertekening.
 
 === "PS C:\Users\guru06\Downloads>_"
-    Vervang `Win11_24H2_English_x64.iso` door de exacte naam van je gedownloade ISO-bestand.
 
     ``` title=''
-    Get-FileHash -Algorithm SHA256 .\Win11_24H2_English_x64.iso
+    gpg --verify sha256sum.txt.gpg sha256sum.txt    
     ```
 
 === "output"
+    "Good signature..." betekent dat de handtekening geldig is en van de verwachte bron komt. De WARNING over de sleutel die niet is gecertificeerd, betekent dat je (of jouw Web of Trust) de sleutel niet expliciet hebt gemarkeerd als volledig vertrouwd, maar de handtekening zelf is technisch gezien wel correct en geldig.
 
-    ``` title='' hl_lines="0"
-    PS C:\Users\guru06\Downloads> Get-FileHash -Algorithm SHA256 .\Win11_24H2_English_x64.iso
-
-    Algorithm       Hash                                                                   Path
-    ---------       ----                                                                   ----
-    SHA256          B56B911BF18A2CEAEB3904D87E7C770BDF92D3099599D61AC2497B91BF190B11       C:\Users\guru06\Downloads\Win...
-
-
+    ``` title='' hl_lines="4 5"
+    PS C:\Users\guru06\Downloads> gpg --verify sha256sum.txt.gpg sha256sum.txt
+    gpg: Signature made 01/14/25 12:35:18 Romance Standard Time
+    gpg:                using RSA key 27DEB15644C6B3CF3BD7D291300F846BA25BAE09
+    gpg: Good signature from "Linux Mint ISO Signing Key <root@linuxmint.com>" [unknown]
+    gpg: WARNING: This key is not certified with a trusted signature!
+    gpg:          There is no indication that the signature belongs to the owner.
+    Primary key fingerprint: 27DE B156 44C6 B3CF 3BD7  D291 300F 846B A25B AE09
     PS C:\Users\guru06\Downloads>
     ```    
 
-### Vergelijk de berekende hashwaarde met de officiële waarde van Microsoft
-- Ga naar de officiële Microsoft-website en zoek de SHA256-hashwaarde voor de specifieke Windows 11 ISO-versie die je hebt gedownload.
-- Vergelijk de waarde die je in stap 3 bij tabblad "output" hebt staan, teken voor teken, met de officiële waarde.
+### Bereken de SHA256-hashwaarde van het ISO-bestand
+Gebruik het `Get-FileHash` commando. Dit commando berekent een unieke code van het gedownloade ISO-bestand, wat de uiteindelijke integriteitscheck is.
+
+=== "PS C:\Users\guru06\Downloads>_"
+    Vervang `linuxmint-22.1-cinnamon-64bit.iso` door de exacte naam van je gedownloade ISO-bestand.
+
+    ``` title=''
+    Get-FileHash -Algorithm SHA256 .\linuxmint-22.1-cinnamon-64bit.iso
+    ```
+
+=== "output"
+
+    ``` title='' hl_lines="5"
+    PS C:\Users\guru06\Downloads> Get-FileHash -Algorithm SHA256 .\linuxmint-22.1-cinnamon-64bit.iso
+
+    Algorithm       Hash                                                                   Path
+    ---------       ----                                                                   ----
+    SHA256          CCF482436DF954C0AD6D41123A49FDE79352CA71F7A684A97D5E0A0C39D7F39F       C:\Users\guru06\Downloads\lin...
+
+
+    PS C:\Users\guru06\Downloads>
+    ```
+
+### Vergelijk de berekende hashwaarde met de officiële waarde van Linux Mint
+- Open bestand `sha256sum.txt` met kladblok.
+- Vergelijk de waarde die je in de vorige stap bij tabblad "output" hebt staan, teken voor teken, met de officiële waarde.
 
 ## Instructies vanaf Linux Mint
+
 ### Open de Terminal
 - Je kunt dit doen via het toepassingenmenu (meestal onder "Systeemhulpprogramma's" of door te zoeken naar "Terminal").
 - Of gebruik de sneltoets Ctrl + Alt + T.
 
-### Navigeer naar de map waar het ISO-bestand is opgeslagen
-Gebruik het `cd` commando. Bijvoorbeeld, als je ISO in de map "Downloads" staat
-    
+### Haal een specifieke GPG-sleutel op
+Gebruik het `gpg` commando. Hiermee download je de `publieke sleutel` (geïdentificeerd door de lange reeks tekens, de key ID) van een betrouwbare sleutelserver (keyserver). Deze sleutel met de naam "Linux Mint ISO Signing Key" wordt in jouw lokale GPG-sleutelring opgeslagen.
+
 === "guru@hp:~$_"
 
     ``` title=''
-    cd Downloads 
+    gpg --keyserver hkps://keyserver.ubuntu.com:443 --recv-key 27DEB15644C6B3CF3BD7D291300F846BA25BAE09
     ```
 
 === "output"
 
     ``` title='' hl_lines="0"
+    guru@hp:~$ gpg --keyserver hkps://keyserver.ubuntu.com:443 --recv-key 27DEB15644C6B3CF3BD7D291300F846BA25BAE09
+    gpg: directory '/home/guru/.gnupg' created
+    gpg: keybox '/home/guru/.gnupg/pubring.kbx' created
+    gpg: key 300F846BA25BAE09: 1 duplicate signature removed
+    gpg: /home/guru/.gnupg/trustdb.gpg: trustdb created
+    gpg: key 300F846BA25BAE09: public key "Linux Mint ISO Signing Key <root@linuxmint.com>" imported
+    gpg: Total number processed: 1
+    gpg:               imported: 1
+    guru@hp:~$ 
+    ```
+
+### Verifieer digitale handtekening
+GPG vergelijkt de digitale handtekening in sha256sum.txt.gpg met de inhoud van sha256sum.txt met behulp van de geïmporteerde publieke sleutel. Dit is om te controleren of het bestand sha256sum.txt daadwerkelijk door Linux Mint (de eigenaar van de sleutel) is ondertekend en of de inhoud ongewijzigd is sinds de ondertekening.
+
+=== "guru@hp:~$_"
+
+    ``` title=''
+    cd Downloads
+    gpg --verify sha256sum.txt.gpg sha256sum.txt
+    ```
+
+=== "output"
+
+    ``` title='' hl_lines="5 6"
     guru@hp:~$ cd Downloads
-    guru@hp:~/Downloads$
+    guru@hp:~/Downloads$ gpg --verify sha256sum.txt.gpg sha256sum.txt
+    gpg: Signature made Tue 14 Jan 2025 12:35:18 PM CET
+    gpg:                using RSA key 27DEB15644C6B3CF3BD7D291300F846BA25BAE09
+    gpg: Good signature from "Linux Mint ISO Signing Key <root@linuxmint.com>" [unknown]
+    gpg: WARNING: This key is not certified with a trusted signature!
+    gpg:          There is no indication that the signature belongs to the owner.
+    Primary key fingerprint: 27DE B156 44C6 B3CF 3BD7  D291 300F 846B A25B AE09
+    guru@hp:~/Downloads$ 
     ```
 
 ### Bereken de SHA256-hashwaarde van het ISO-bestand
-Gebruik het `sha256sum` commando.
+Gebruik het `sha256sum` commando. Dit commando berekent een unieke code van het gedownloade ISO-bestand, wat de uiteindelijke integriteitscheck is.
 
 === "guru@hp:~/Downloads$_"
-    Vervang `Win11_24H2_English_x64.iso` door de exacte naam van je gedownloade ISO-bestand.
+    Vervang `linuxmint-22.1-cinnamon-64bit.iso` door de exacte naam van je gedownloade ISO-bestand.
 
     ``` title=''
-    sha256sum Win11_24H2_English_x64.iso
+    sha256sum linuxmint-22.1-cinnamon-64bit.iso
     ```
 
 === "output"
 
     ``` title='' hl_lines="0"
-    guru@hp:~/Downloads$ sha256sum Win11_24H2_English_x64.iso
-    b56b911bf18a2ceaeb3904d87e7c770bdf92d3099599d61ac2497b91bf190b11  Win11_24H2_English_x64.iso
+    guru@hp:~/Downloads$ sha256sum linuxmint-22.1-cinnamon-64bit.iso
+    ccf482436df954c0ad6d41123a49fde79352ca71f7a684a97d5e0a0c39d7f39f  linuxmint-22.1-cinnamon-64bit.iso
     guru@hp:~/Downloads$ 
-    ```    
+    ```
 
-### Vergelijk de berekende hashwaarde met de officiële waarde van Microsoft
-- Ga naar de officiële Microsoft-website en zoek de SHA256-hashwaarde voor de specifieke Windows 11 ISO-versie die je hebt gedownload.
-- Vergelijk de waarde die je in stap 3 bij tabblad "output" hebt staan, teken voor teken, met de officiële waarde.
+### Vergelijk de berekende hashwaarde met de officiële waarde van Linux Mint
+- Open bestand `sha256sum.txt` met een tekstverwerker.
+- Vergelijk de waarde die je in de vorige stap bij tabblad "output" hebt staan, teken voor teken, met de officiële waarde.
 
 ## Conclusie
 Als de hashwaarden exact overeenkomen, is het ISO-bestand authentiek en integer. Je kunt erop vertrouwen dat het niet is gewijzigd of beschadigd.
