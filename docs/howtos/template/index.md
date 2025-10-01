@@ -40,6 +40,25 @@
     ...
     ```
 
+## Een Windows Powershell commando
+(Optional) task explanation.
+
+=== ""PS C:\Users\guru06\Downloads>_"
+    (Optional) step explanation.
+
+    ``` title='' hl_lines="0"
+    <execute some command>
+    ```
+
+=== "output"
+    (Optional) step explanation.
+
+    ``` title='' hl_lines="0"
+    "PS C:\Users\guru06\Downloads>_ <execute some command>
+    ...
+    ...
+    ```
+
 ## Changing contents of a file shows the command and the contents of that file in tabs.
 (Optional) task explanation.
 

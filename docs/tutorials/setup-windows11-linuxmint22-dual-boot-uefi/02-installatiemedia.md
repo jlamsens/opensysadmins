@@ -11,7 +11,6 @@ Zorg ervoor dat je beschikt over het officiële installatiebestand voor Windows 
 
 - [Stap 2.2: Verifieer de authenticiteit en integriteit van het Windows ISO-bestand.](../../howtos/verifieer-windows-iso/index.md){:target="_blank"}
 Controleer of het gedownloade Windows ISO-bestand correct en ongewijzigd is.
-    
 
 - [Stap 2.3: Maak een opstartbare USB-stick voor Windows 11.](../../howtos/maak-opstartbare-usb-stick-windows11/index.md){:target="_blank"}
 Gebruik `Rufus` op Windows, of `USB Image Writer` op Linux Mint om je Windows 11 installatiemedium te maken.
