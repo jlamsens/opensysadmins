@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# Welcome!
+# Welkom!
 
 <!---
 // inline CSS to not display section title
@@ -57,7 +57,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
 
 === "1"
 
-<img src="tutorials/setup-windows-server2025-vm-virtualbox/home.png" width="320" height="180" align=left />
+<img src="tutorials/setup-windows-server2025-vm-virtualbox/home.png" width="320" height="180" align=right />
 > *30 Augustus 2025 - in [Tutorials](tutorials/index.md) - 60 min handleiding*
 
 
@@ -69,7 +69,7 @@ Deze handleiding begeleidt je stap voor stap bij het opzetten van een virtuele m
 
 <!--- ---------------------------------------------------------------------------------------------------------------- --->
 
-<img src="tutorials/setup-windows11-vm-virtualbox/home.png" width="320" height="180" align=left />
+<img src="tutorials/setup-windows11-vm-virtualbox/home.png" width="320" height="180" align=right />
 > *13 Juli 2025 - in [Tutorials](tutorials/index.md) - 60 min handleiding*
 
 
@@ -81,7 +81,7 @@ Deze handleiding begeleidt je stap voor stap bij het opzetten van een virtuele m
 
 <!--- ---------------------------------------------------------------------------------------------------------------- --->
 
-<img src="tutorials/setup-windows11-linuxmint22-dual-boot-uefi/home.png" width="320" height="180" align=left />
+<img src="tutorials/setup-windows11-linuxmint22-dual-boot-uefi/home.png" width="320" height="180" align=right />
 > *15 Juni 2025 - in [Tutorials](tutorials/index.md) - 120 min handleiding*
 
 

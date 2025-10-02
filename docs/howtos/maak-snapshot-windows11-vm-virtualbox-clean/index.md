@@ -5,9 +5,9 @@ Het doel van een snapshot van een virtuele machine (VM) in VirtualBox is het vas
 ## Vereisten
 - een [PC met Linux Mint 22](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
 - een werkende installatie van [VirtualBox](../setup-virtualbox7-linuxmint22-oracledeb/index.md){:target="_blank"}
-- een geïnstalleerde [virtuele machine voor Windows 11](../installeer-windows11-os-vm-virtualbox/index.md){:target="_blank"}
+- een lege [virtuele machine voor Windows 11](../maak-windows11-vm-virtualbox/index.md){:target="_blank"}
 - een geconfigureerde [virtuele machine voor Windows 11](../configureer-windows11-vm-virtualbox/index.md){:target="_blank"}
-- een geïnstalleerde [Windows 11 virtuele machine](../installeer-windows11-os-vm-virtualbox/index.md){:target="_blank"}
+- een geïnstalleerde [virtuele machine voor Windows 11](../installeer-windows11-os-vm-virtualbox/index.md){:target="_blank"}
 - geïnstalleerde [Guest Additions](../installeer-guest-additions-windows11-vm-virtualbox/index.md){:target="_blank"}
 - geconfigureerde [Windows 11 basisinstellingen](../configureer-windows11-basisinstellingen-vm-virtualbox/index.md){:target="_blank"}
 

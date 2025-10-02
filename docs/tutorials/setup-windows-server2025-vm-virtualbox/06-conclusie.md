@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# 07 Conclusie
+# 06 Conclusie
 
 Gefeliciteerd! Je hebt nu succesvol een virtuele machine opgezet met een geconfigureerde Windows Server 2025 installatie. Je bent begonnen bij de basis, van het aanmaken van de VM en de installatie van het besturingssysteem tot het cruciale proces van Sysprep en het maken van de benodigde snapshots.
 
