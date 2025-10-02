@@ -1,43 +1,42 @@
-# Howtos overview
+# Overzicht van Instructies ("How-to's")
 
-## What?
-How-to guides are directions that take you, the reader, through the steps required to solve a real-world problem. They are goal-oriented.
+## Wat?
+Instructies leiden jou, de lezer, door de stappen die nodig zijn om een **praktisch probleem** op te lossen. Ze zijn **doelgericht**.
 
-## Say what?
-You need to be able to accomplish things. Done well, they are the most-read sections of your documentation.
+## Zeg wat?
+Je moet in staat zijn om dingen te bereiken. Als ze "goed zijn gemaakt", zijn dit de meest gelezen onderdelen van je documentatie.
 
-## What they do
-They guide. They demonstrate.
+## Wat ze doen
+Ze **begeleiden**. Ze **demonstreren**.
 
-## Answers the question
-"How do I...?"
+## Beantwoorden de vraag
+"Hoe doe ik...?"
 
-## Oriented to
-Goals. Tasks. They serve the need of the user @work. They put the skill to work, help the user accomplish a task.
+## Gericht op
+**Doelen**. **Taken**. Ze dienen de behoefte van de gebruiker om te **werken**. Ze zetten de vaardigheid aan het werk en helpen de gebruiker een taak te volbrengen.
 
-## Purpose
-- to show how to solve a specific problem/question
-- to help the already-competent user perform a particular task correctly
+## Doel
+- om te tonen hoe een specifiek probleem/vraag op te lossen
+- om de reeds competente gebruiker te helpen een bepaalde taak correct uit te voeren
 
-## Form
-A series of steps.
+## Vorm
+Een reeks stappen.
 
-## Analogy
-*Not* teaching someone how to cook, but follow a *recipe* in a cookery book.
+## Analogie
+*Niet* iemand leren koken, maar een **recept** in een kookboek volgen.
 
-## My responsability
-Stick to the practical goal.
+## Mijn verantwoordelijkheid
+Blijf bij het **praktische doel**.
 
-## Approach
-- I won’t explain concepts/things, but refer to a reference guide for a full list of options
-- I'll provide a starting-point that you know how to reach; most likely, you will also be in the middle of something
-- the path can’t be managed: it’s the real world!
-- I'll assume familiarity
-- howtos apply to the real world: you will have to deal with what I'll throw at you
-- you must prepare for the unexpected
-- you wil have to rely on implicit knowledge
-- and complete a particular task
-- howtos are reliable, but not the cast-iron repeatability of a tutorial, they cannot promise safety
-- I'll use conditional imperatives
-- and general approaches
-- howtos will typically fork and branch, describing different routes to the same destination
+## Aanpak
+- Ik zal geen concepten/zaken uitleggen, maar verwijs naar een [referentiegids](../references/index.md){:target="_blank"} voor een volledige lijst van opties
+- Ik zal een startpunt bieden dat je weet te bereiken; hoogstwaarschijnlijk ben je ook al midden in iets bezig
+- het pad kan **niet** beheerd worden: het is de **echte wereld**!
+- Ik ga uit van **vertrouwdheid**
+- instructies zijn van toepassing op de echte wereld: je zult moeten omgaan met wat ik je voorschotel
+- je moet je voorbereiden op het **onverwachte**
+- je zult moeten vertrouwen op **impliciete kennis**
+- en een specifieke taak voltooien
+- instructies zijn betrouwbaar, maar niet met de ijzersterke herhaalbaarheid van een tutorial; ze kunnen **geen veiligheid** beloven
+- Ik zal **conditionele** imperatieven gebruiken
+- en **algemene** benaderingen

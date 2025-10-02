@@ -1,67 +1,67 @@
-# Tutorials overview
+# Overzicht van Tutorials
 
-## What?
-Tutorials are lessons that take you, the reader, by the hand through a series of steps to complete a project of some kind. They are learning-oriented.
+## Wat?
+Tutorials zijn lessen die jou, de lezer, bij de hand nemen door een reeks stappen om een project van een of andere aard te voltooien. Ze zijn **leergericht**.
 
-## Say what?
-They are a matter of craft. Skill. It’s knowledge, but it’s practical knowledge, not theoretical. Complex or advanced, basic or well known.
+## Zeg wat?
+Ze zijn een kwestie van **ambacht**. **Vaardigheid**. Het is kennis, maar het is **praktische** kennis, geen theoretische. Complex of gevorderd, basis of algemeen bekend.
 
-## What they do
-They introduce. They educate. They learn.
+## Wat ze doen
+Ze **introduceren**. Ze **onderwijzen**. Ze **leren**.
 
-## Answers the question
-"Can you teach me to...?"
+## Beantwoorden de vraag
+"Kun je me **leren** om...?"
 
-## Oriented to
-Learning. Let's begin. Let's dive in. With teacher guidance. They serve the need of the user @study. They provide an enjoyable, successful learning experience.
+## Gericht op
+**Leren**. Laten we beginnen. Laten we erin duiken. Met **begeleiding** van de leraar. Ze dienen de behoefte van de gebruiker om te **studeren**. Ze zorgen voor een plezierige, succesvolle leerervaring.
 
-## Purpose
-- to allow you, the newcomer, to get started
-- to help you, a beginner, achieve basic competence
-- to show you, the learner, that you can be successful
-- to turn you, new *learner*, into a *user*
+## Doel
+- om jou, de **nieuwkomer**, de kans te geven om te starten
+- om jou, een **beginner**, te helpen basiscompetentie te bereiken
+- om jou, de **leerling**, te tonen dat je succesvol kunt zijn
+- om jou, nieuwe leerling, om te vormen tot een **gebruiker**
 
-## Form
-A lesson, *learning how* rather than *learning that*. By providing exercises that are:
+## Vorm
+Een les, *hoe* te leren in plaats van *dat* te leren. Door oefeningen aan te bieden die:
 
-- meaningful
-- successful
-- logical
-- usefully complete
+- **zinvol** zijn
+- **succesvol** zijn
+- **logisch** zijn
+- nuttig **compleet** zijn
 
-## Analogy
-Teaching someone how to cook. Enjoy. Gain confidence. Repeat.
+## Analogie
+Iemand leren **koken**. Genieten. Zelfvertrouwen winnen. Herhalen.
 
-## My responsability
-It’s not easy being a teacher. I'm responsable for...
+## Mijn verantwoordelijkheid
+Het is niet makkelijk om een leraar te zijn. Ik ben verantwoordelijk voor...
 
-- *what* you are to learn
-- *what* you will *do* in order to learn it
-- your success
+- *wat* je moet leren
+- *wat* je zult *doen* om het te leren
+- jouw **succes**
 
-## Your responsability
-- there is *no* responsibility on you to learn, understand or remember
-- *only* follow the instructions as closely as you can
-- and be attentive
+## Jouw verantwoordelijkheid
+- er is *geen* verantwoordelijkheid om te leren, te begrijpen of te onthouden
+- *alleen* de instructies zo nauwkeurig mogelijk volgen
+- en **oplettend** zijn
 
-## Approach
-- I'll try not to *teach*
-- I'll get you started
-- I'll follow a carefully-managed path, starting at a given point and working to a conclusion
-- I'll familiarize
-- in a contrived setting
-- I'll eliminate the unexpected
-- and be explicit about basic things
-- I'll teach general skills and principles
-- by providing the big picture and setting expectations
-- and by ensuring results
-- I'll make the tutorials repeatable and safe
-- describe concrete steps, not abstract steps
-- offer minimum explanation
-- and ignore options and alternatives
+## Aanpak
+- ik zal proberen om *niet* te *onderwijzen*
+- ik zal je op weg helpen
+- ik zal een zorgvuldig beheerd pad volgen, beginnend bij een gegeven punt en werkend naar een conclusie
+- ik zal **vertrouwd** maken
+- in een **gefabriceerde** omgeving
+- Ik zal het **onverwachte elimineren**
+- en **expliciet** zijn over basiszaken
+- ik zal algemene vaardigheden en principes aanleren
+- door het **grotere plaatje** te bieden en **verwachtingen** te scheppen
+- en door **resultaten** te garanderen
+- ik zal de tutorials **herhaalbaar** en **veilig** maken
+- **concrete** stappen beschrijven, niet abstracte stappen
+- minimale uitleg geven
+- en opties en alternatieven negeren
 
-## The problem.
-- tutorials are difficult to do well
-- and time consuming
-- with lots of revisions
-- and I, the teacher, am not present
+## Het probleem.
+- tutorials zijn moeilijk om goed te maken
+- en **tijdrovend**
+- met veel **herzieningen**
+- en ik, de leraar, ben **niet aanwezig**
