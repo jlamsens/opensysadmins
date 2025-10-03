@@ -1,1 +1,1 @@
-# Blogs landing page
+# Overzicht van Blogs

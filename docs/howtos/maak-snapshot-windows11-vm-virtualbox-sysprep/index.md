@@ -1,5 +1,7 @@
 # Maak een snapshot van een Windows 11 virtuele machine in VirtualBox (na sysprep)
 
+Het doel van een snapshot van een virtuele machine (VM) in VirtualBox is het vastleggen van de exacte toestand van de VM op een specifiek moment, inclusief alle bestanden en instellingen. Dit gecreëerde herstelpunt stelt je in staat om op elk later tijdstip terug te keren naar die eerder opgeslagen configuratie, bijvoorbeeld om een stabiele of 'schone' installatie te herstellen na experimenten, software-installaties, of onbedoelde fouten in het systeem.
+
 ## Vereisten
 - een [PC met Linux Mint 22](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
 - een werkende installatie van [VirtualBox](../setup-virtualbox7-linuxmint22-oracledeb/index.md){:target="_blank"}

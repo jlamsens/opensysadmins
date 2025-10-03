@@ -1,6 +1,6 @@
 # Configureer Linux Mint 22 basisinstellingen in een virtuele machine in VirtualBox
 
-Na de installatie van Windows 11 configureer je de basisinstellingen door eerst de Windows Updates te controleren en te installeren om zeker te zijn van de nieuwste beveiligingspatches en functionaliteiten. Vervolgens ga je naar Instellingen om persoonlijke voorkeuren aan te passen, zoals privacy-instellingen, meldingen, de taakbalk en het startmenu, en om stuurprogramma's (drivers) te updaten voor optimale hardwareprestaties en compatibiliteit. Zorg ten slotte voor de installatie van essentiële applicaties en eventuele aanvullende beveiligingssoftware
+Na de installatie van Linux Mint 22 configureer je de basisinstellingen door eerst de Mint Updates te controleren en te installeren om zeker te zijn van de nieuwste beveiligingspatches en functionaliteiten. Vervolgens kan je indien gewenst nog persoonlijke voorkeuren aan passen, zoals privacy-instellingen, meldingen, de taakbalk en het startmenu en stuurprogramma's (drivers) te updaten voor optimale hardwareprestaties en compatibiliteit. Zorg ten slotte voor de installatie van essentiële applicaties en eventuele aanvullende beveiligingssoftware.
 
 ## Vereisten
 - een [PC met Linux Mint 22](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}

@@ -1,7 +1,11 @@
 # Configureer een Windows Server 2025 virtuele machine in VirtualBox
-todo
+
+Na het initiële aanmaken van de virtuele machine (VM) kun je, vóór de eerste opstart, de VM-instellingen raadplegen en fijnafstemmen om de werking te optimaliseren en aan specifieke behoeften aan te passen. Dit omvat het wijzigen van de toegewezen hardware zoals de hoeveelheid RAM of het aantal CPU-kernen die je eerder instelde. Belangrijke configuraties kunnen zijn het instellen van de opstartvolgorde (bijvoorbeeld van de ISO-installatiemedia naar de virtuele harde schijf), het inschakelen van integratiefuncties zoals gedeeld klembord (copy/paste tussen de host en de gast), en het bepalen van de netwerkmodus (zoals NAT of Bridged). Daarnaast kun je randapparatuur en services aanpassen, bijvoorbeeld door de virtuele audio-adapter uit te schakelen als geluid niet nodig is, of door USB-controllers te configureren, zodat de Windows Server 2025 gastomgeving precies de gewenste functionaliteit en isolatie van de hostcomputer heeft.
 
 ## Vereisten
+- een [PC met Linux Mint 22](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
+- een werkende installatie van [VirtualBox](../setup-virtualbox7-linuxmint22-oracledeb/index.md){:target="_blank"}
+- een lege [Windows Server 2025 virtuele machine](../maak-windows-server2025-vm-virtualbox/index.md){:target="_blank"}
 
 
 ## Demo
