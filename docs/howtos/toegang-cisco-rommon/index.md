@@ -1,21 +1,26 @@
-# Access a Cisco device in ROMMON-mode
+# Toegang krijgen tot een Cisco-apparaat in ROMMON-modus.
 
-## Prereqs
-* a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/index.md){:target="_blank"}/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/index.md){:target="_blank"}) running Linux Mint 21
-    * [minicom](../use-minicom-linux-mint/index.md){:target="_blank"} terminal emulation software
-* a console cable
-* a Cisco 2960 24TT-L or 24TC-L Plus switch
-* a Cisco 1941 router
+De ROMMON-modus (ROM Monitor) is essentieel omdat het fungeert als een noodhulpprogramma voor Cisco-apparaten. Je hebt het nodig wanneer het apparaat niet normaal kan opstarten, bijvoorbeeld door een corrupt of ontbrekend IOS-besturingssysteem of een verkeerde boot-configuratie. Vanuit deze low-level modus kun je cruciale herstelacties uitvoeren, zoals een nieuw IOS-image inladen, boot-parameters aanpassen, of een vergeten beheerderswachtwoord resetten, om zo het netwerkapparaat weer volledig operationeel te krijgen.
+
+## Vereisten
+- een [PC met Linux Mint 22](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
+- [minicom](../setup-minicom-linuxmint22/index.md){:target="_blank"} terminal emulation software
+* een console cable
+* een Cisco 2960 24TT-L of 24TC-L Plus switch
+* een Cisco 1941 router
+
+## Demo
+<iframe width="854" height="480" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Cisco 2960 switch
 ### Setup
 
 <img src="console-access-switch.png"/>
 
-### From IOS
+### Vanuit IOS
 
-=== "Step1"
-    By default, the switch will boot the configured boot image automatically, without waiting for user input.
+=== "Stap1"
+    Standaard start de switch automatisch het geconfigureerde opstartimage op, zonder te wachten op invoer van de gebruiker.
 
     ``` title='' hl_lines="2 6"
     Switch#show boot
@@ -27,8 +32,8 @@
     ...
     ```
 
-=== "Step2"
-    Bypass the normal boot process and enter ROMMON mode directly upon the next reboot.
+=== "Stap2"
+    Sla het normale opstartproces over en ga direct bij het opnieuw opstarten naar de ROMMON-modus.
 
     ``` title='' hl_lines="3 11"
     Switch#configure terminal
@@ -46,15 +51,15 @@
 
     Switch#reload
 
-    System configuration has been modified. Save? [yes/no]: no      <----- if asked
-    Proceed with reload? [confirm]                                  <----- press <Enter>
+    System configuration has been modified. Save? [yes/no]: no      <----- indien gevraagd
+    Proceed with reload? [confirm]                                  <----- druk <Enter>
 
     *Mar  1 16:21:22.615: %SYS-5-RELOAD: Reload requested by console. Reload Reason: Reload command.
     ...
     ```
 
-=== "Step3"
-    We're in ROMMON-mode.
+=== "Stap3"
+    We zijn in de ROMMON-modus. Dat zie je ook aan de prompt `switch:`.
 
     ``` title='' hl_lines="22"
     Boot Sector Filesystem (bs) installed, fsid: 2
@@ -80,14 +85,14 @@
 
     switch: 
     ```
-=== "(Step4)"
-    To "undo" the manual boot and return to IOS, you have 2 options. Either
+=== "(Stap4)"
+    Om het handmatig opstarten ongedaan te maken en terug te keren naar iOS, heb je twee opties:
 
-    - first unset the variable from within ROMMON and boot into IOS
-    - boot into IOS and unset the boot variable from within IOS
+    - verwijder eerst de variabele vanuit ROMMON en start op in IOS
+    - start op in IOS en verwijder de opstartvariabele vanuit IOS
 
     ``` title='' hl_lines="1 13"
-    # option1
+    # optie1
     switch: set
     !=-
     ...
@@ -99,7 +104,7 @@
     ...
     Switch#
 
-    # option2
+    # optie2
     switch: boot
     Loading "flash:c2960-lanbasek9-mz.150-2.SE11.bin"...@@@@@@@@
     ...
@@ -111,10 +116,10 @@
     ```
 
 
-### Missing or corrupt IOS
+### Ontbrekende of corrupte iOS
 
-=== "Step1"
-    Let's simulate a non-working IOS by "accidently" erasing the "flash" filesystem. Restart the switch afterwards.
+=== "Stap1"
+    Laten we een niet-werkend IOS simuleren door "per ongeluk" het flash-bestandssysteem te wissen. Herstart daarna de switch.
 
     ``` title='' hl_lines="1 14"
     Switch#erase flash:
@@ -136,15 +141,15 @@
 
     Switch#reload
 
-    System configuration has been modified. Save? [yes/no]: no          <----- if asked
-    Proceed with reload? [confirm]                                      <----- press <Enter>
+    System configuration has been modified. Save? [yes/no]: no          <----- indien gevraagd
+    Proceed with reload? [confirm]                                      <----- druk <Enter>
 
     *Mar  1 00:28:22.946: %SYS-5-RELOAD: Reload requested by console. Reload Reason: Reload command.
     ...
     ```
 
-=== "Step2"
-    The BOOT environment variable is still set to boot c2960-lanbasek9-mz.150-2.SE11.bin but it's not there. The switch will not be able to boot and will enter ROMMON-mode automatically.
+=== "Stap2"
+    De BOOT-omgevingsvariabele is nog steeds ingesteld om `c2960-lanbasek9-mz.150-2.SE11.bin` op te starten, maar deze is niet aanwezig. De switch kan niet opstarten en schakelt automatisch over naar de ROMMON-modus.
 
     ``` title='' hl_lines="24 34"
     Welcome to minicom 2.8
@@ -184,17 +189,16 @@
 
     ```
 
-=== "(Step3)"
-    To be able to boot again, you have to [reinstall IOS](../reinstall-ios-cisco2960/index.md).
+=== "(Stap3)"
+    Om opnieuw te kunnen opstarten, moet je [IOS opnieuw installeren](../setup-ios-cisco2960/index.md){:target="_blank"}
 
 ### Break sequence
 
-=== "Step1"
-    - If you have access to a working IOS, verify if the break sequence mechanism is enabled or not. If not, enable it.
-    - If you do not have access to a working IOS, you can only "try" if the break sequence works. If not, you have to use the "cold start" method.
+=== "Stap1"
+    - Als je toegang hebt tot een werkend IOS, controleer dan of het `break sequence` mechanisme is ingeschakeld. Zo niet, schakel het dan in.
+    - Als je geen toegang hebt tot een werkend IOS, kun je alleen "proberen" of of het `break sequence` mechanisme werkt. Zo niet, dan moet je de [cold start-methode](../toegang-cisco-rommon/index.md#cold-start) gebruiken.
     
-
-    ``` title='' hl_lines="1 6"
+    ``` title='' hl_lines="1 6 9"
     Switch#show boot | include Break
     Enable Break        : no
     
@@ -208,8 +212,8 @@
     ```
 
 
-=== "Step2"
-    Power cycle the switch or "reload" from within a running IOS. Immediately after the switch starts booting (within the first X seconds), send the [break sequence](../../explanations/break-sequence-mechanism/index.md) from your terminal emulator. For Minicom, press ++ctrl++ + ++a++ then ++f++. The switch should respond by stopping the boot process and entering ROMMON mode, indicated by the switch: prompt.
+=== "Stap2"
+    Schakel de switch uit en weer in of herlaad hem vanuit een draaiend IOS. Direct nadat de switch is opgestart (binnen de eerste X seconden), verstuur je de [break-sequence](../../explanations/break-sequence-mechanism/index.md){:target="_blank"} vanuit je terminalemulator. Voor Minicom druk je op ++ctrl++ + ++a++ en vervolgens op ++f++. De switch zou moeten reageren door het opstartproces te stoppen en de ROMMON-modus te activeren, zoals aangegeven door de prompt `switch:`
 
     ``` title='' hl_lines="1 8"
     Switch#reload
@@ -219,7 +223,7 @@
     Boot Sector Filesystem (bs) installed, fsid: 2
     Base ethernet MAC Address: b0:c5:3c:26:a0:80
     Xmodem file system is available.
-    ### I sent the break signal about here ###
+    ################# Ik heb het break-signaal hier gestuurd #################
     The password-recovery mechanism is enabled.
     Initializing Flash...
     flashfs[0]: filesystem check interrupted!
@@ -237,8 +241,8 @@
     switch: 
     ```
 
-=== "Step3"
-    Flash did not get initialized. You have to do that manually.
+=== "Stap3"
+    Flash is niet geïnitialiseerd. Je moet dat handmatig doen.
 
     ``` title='' hl_lines="1"
     switch: flash_init
@@ -254,8 +258,8 @@
     switch: 
     ```
 
-=== "(Step4)"
-    To return to IOS, just boot the switch.
+=== "(Stap4)"
+    Om terug te keren naar IOS, start je de switch gewoon op.
 
     ``` title='' hl_lines="1"
     switch: boot
@@ -266,8 +270,8 @@
 
 ### Cold start
 
-=== "Step1"
-    First disconnect the power cable from the switch. Minicom gives no output yet.
+=== "Stap1"
+    Koppel eerst de stroomkabel los van de switch. Minicom geeft nog geen output.
 
     ``` title='' hl_lines="0"
     Welcome to minicom 2.8
@@ -280,14 +284,14 @@
     <blinking_cursor>
     ```
 
-=== "Step2"
-    Now reconnect the power cable. The switch boots and while doing the POST, the SYST LED blinks green.
-    This takes about X seconds. After POST, the blinking LED changes pattern. Press the Mode button once.
+=== "Stap2"
+    Sluit nu de stroomkabel weer aan. De switch start op en tijdens de POST knippert de SYST-led groen.
+    Dit duurt ongeveer X seconden. Na de POST verandert het knipperende ledpatroon. Druk éénmaal op de `Mode-knop`.
 
     <img src="mode-button.png"/>
 
-=== "Step3a"
-    If the password recovery mechanism is enabled, you have to manually initialize flash.
+=== "Stap3a"
+    Als het wachtwoordherstelmechanisme is ingeschakeld, moet je de Flash handmatig initialiseren.
 
     ``` title='' hl_lines="12 28"
     Welcome to minicom 2.8
@@ -330,8 +334,8 @@
     switch: 
     ```
 
-=== "Step3b"
-    If the password recovery mechanism is disabled, you will lose all the configuration. Flash is initialised for you. Choose "y" at the prompt.
+=== "Stap3b"
+    Als het wachtwoordherstelmechanisme is uitgeschakeld, verlies je alle configuratie! Flash wordt voor jou geïnitialiseerd. Kies "y" bij de prompt.
 
     ``` title='' hl_lines="12 31"
     Welcome to minicom 2.8
@@ -375,8 +379,8 @@
 
     switch: 
     ```
-=== "(Step4)"
-    To return to IOS, just boot the switch.
+=== "(Stap4)"
+    Om terug te keren naar IOS, start je de switch gewoon op.
 
     ``` title='' hl_lines="1"
     switch: boot
@@ -391,18 +395,18 @@
 
 <img src="console-access-router.png"/>
 
-### From IOS
+### Vanuit IOS
 
-=== "Step1"
-    The "show boot" command is not available on a Cisco 1941 router, like it is for a Cisco 2960 switch. You can still display the boot system commands in the running configuration, if any.
+=== "Stap1"
+    De opdracht `show boot` is niet beschikbaar op een Cisco 1941-router, zoals wel het geval is voor een Cisco 2960-switch. Je kan de opstartsysteemopdrachten nog steeds weergeven in de actieve configuratie, indien aanwezig.
 
     ``` title='' hl_lines="1 6"
-    # if no boot statement is present, an IOS will be searched on flash
+    # als er geen boot statement aanwezig is, zal er op flash naar een IOS gezocht worden
     Router#show running-config | include boot
     boot-start-marker
     boot-end-marker
 
-    # if a boot statement is present, that IOS will be booted
+    # als er wél een boot-instructie aanwezig is, zal dat IOS worden opgestart
     Router#configure terminal
     Enter configuration commands, one per line.  End with CNTL/Z.
     Router(config)#boot system flash:c1900-universalk9-mz.SPA.157-3.M8.bin
@@ -415,8 +419,8 @@
     Router#
     ```
 
-=== "Step2"
-    There is also no "boot manual" command; you have to change the configuration register from within IOS to boot into ROMMON.
+=== "Stap2"
+    Er is ook geen `boot manual`-opdracht; je moet het configuratie-register in IOS wijzigen om in ROMMON op te starten.
 
     ``` title='' hl_lines="1 6 10"
     Router#show version | include Configuration register
@@ -432,12 +436,12 @@
 
     Router#reload
 
-    System configuration has been modified. Save? [yes/no]: no          <--- I won't save the "boot system" command for now
-    Proceed with reload? [confirm]                                      <--- press <Enter>
+    System configuration has been modified. Save? [yes/no]: no          <--- Ik zal de opdracht "boot system" voorlopig niet opslaan
+    Proceed with reload? [confirm]                                      <--- druk <Enter>
     ```
 
-=== "Step3"
-    We're in ROMMON-mode.
+=== "Stap3"
+    We zijn in de ROMMON-modus. Dat zie je ook aan de prompt `rommon 1 >`
 
     ``` title='' hl_lines="11"
     System Bootstrap, Version 15.0(1r)M16, RELEASE SOFTWARE (fc1)
@@ -453,14 +457,14 @@
     rommon 1 > 
     ```
 
-=== "(Step4)"
-    To return to IOS, you have 2 options. Either
+=== "(Stap4)"
+    Om terug te keren naar IOS heb je twee opties. Of:
 
-    - first set the configuration register back to its initial value from within ROMMON and then boot into IOS (fastest)
-    - boot into IOS, set the configuration register back to its initial value from within IOS and reload again (slowest)
+    - zet eerst het configuratieregister terug naar de beginwaarde vanuit ROMMON en start vervolgens op in IOS (snelst).
+    - start op in IOS, zet het configuratieregister terug naar de beginwaarde vanuit IOS en laad het opnieuw (langzaamst).
 
     ``` title='' hl_lines="1 10"
-    # option1
+    # optie1
     rommon 1 > confreg 0x2102
 
     You must reset or power cycle for new config to take effect
@@ -469,7 +473,7 @@
     ...
     Router#
 
-    # option2
+    # optie2
     rommon 1 > boot
     program load complete, entry point: 0x80803000, size: 0x1b340
     program load complete, entry point: 0x80803000, size: 0x1b340
@@ -491,10 +495,10 @@
     ```
 
 
-### Missing or corrupt IOS
+### Ontbrekend of corrupt IOS
 
-=== "Step1"
-    Let's simulate a non-working IOS by "accidently" erasing the "flash" filesystem. You cannot use the "erase (/all) flash:" command like with a Cisco 2960 switch. You have to "format" it. Restart the router afterwards.
+=== "Stap1"
+    Laten we een niet-werkend IOS simuleren door "per ongeluk" het "flash"-bestandssysteem te wissen. Je kunt de opdracht `erase (/all) flash:` niet gebruiken zoals bij een Cisco 2960-switch. Je moet hem "formatteren". Start de router daarna opnieuw op.
 
     ``` title='' hl_lines="1 15 22"
     Router#format flash:
@@ -522,8 +526,8 @@
     ...
     ```
 
-=== "Step2"
-    The router will not be able to boot and will enter ROMMON-mode automatically.
+=== "Stap2"
+    De router kan niet opstarten en gaat automatisch in de ROMMON-modus.
 
     ``` title='' hl_lines="12 15"
     System Bootstrap, Version 15.0(1r)M16, RELEASE SOFTWARE (fc1)
@@ -545,8 +549,8 @@
 
 ### Break sequence
 
-=== "Step1"
-    To my knowledge, there is no break sequence mechanism on a Cisco 1941 router like there is on a Cisco 2960 switch. There is no such thing as "boot enable-break" to en/disable the break sequence behavior. Just poower cycle the router or "reload" from within a running IOS.
+=== "Stap1"
+    Voor zover ik weet, is er geen mechanisme voor de break-sequence op een Cisco 1941-router zoals op een Cisco 2960-switch. Er bestaat niet zoiets als `boot enable-break` om het break-sequence gedrag in of uit te schakelen. Je kunt de router gewoon uitzetten of "opnieuw laden" vanuit een draaiend IOS.
 
     ``` title='' hl_lines="0"
     Router#reload
@@ -555,8 +559,8 @@
     *Mar 16 14:04:39.603: %SYS-5-RELOAD: Reload requested by console. Reload Reason: Reload Command.
     ```
 
-=== "Step2"
-    Immediately after the router starts booting (within the first X seconds), send the [break sequence](../../explanations/break-sequence-mechanism/index.md) from your terminal emulator. For Minicom, press ++ctrl++ + ++a++ then ++f++. The router should respond by stopping the boot process and entering ROMMON mode, indicated by the rommon X> prompt.
+=== "Stap2"
+    Direct nadat de router is opgestart (binnen de eerste X seconden), verstuur je de [break sequence](../../explanations/break-sequence-mechanism/index.md){:target="_blank"} vanuit je terminalemulator. Voor Minicom druk je op ++ctrl++ + ++a++ en vervolgens op ++f++ De router zou moeten reageren door het opstarten te stoppen en de ROMMON-modus te activeren, wat wordt aangegeven door de `rommon 1>`-prompt.
 
     ``` title='' hl_lines="6"
     System Bootstrap, Version 15.0(1r)M16, RELEASE SOFTWARE (fc1)
@@ -575,4 +579,4 @@
 
 
 ### Cold start
-There is no "MODE button" like with a Cisco 2960 switch to interrupt the boot sequence with.
+Er is geen "MODE-knop" zoals bij een Cisco 2960-switch waarmee de opstartvolgorde kan worden onderbroken.

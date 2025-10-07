@@ -471,4 +471,26 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <br>
     <br>
 
-  
+    <!--- ---------------------------------------------------------------------------------------------------------------- --->
+
+    <img src="howtos/setup-minicom-linuxmint22/home.png" width="320" height="180" align=right />
+    > *07 Augustus 2025 - in [Howtos](howtos/index.md) - 2 min instructie*
+
+
+    Minicom is een populair terminalprogramma voor Unix-achtige besturingssystemen dat wordt gebruikt om te communiceren met seriële apparaten, zoals routers, ...
+
+    [Lees verder](howtos/setup-minicom-linuxmint22/index.md){:target="_blank"}
+    <br>
+    <br>
+
+    <!--- ---------------------------------------------------------------------------------------------------------------- --->
+
+    <img src="howtos/toegang-cisco-rommon/home.png" width="320" height="180" align=right />
+    > *11 Augustus 2025 - in [Howtos](howtos/index.md) - 2 min instructie*
+
+
+    De ROMMON-modus (ROM Monitor) is essentieel omdat het fungeert als een noodhulpprogramma voor Cisco-apparaten. Je hebt het nodig wanneer het apparaat niet normaal kan opstarten...
+
+    [Lees verder](howtos/toegang-cisco-rommon/index.md){:target="_blank"}
+    <br>
+    <br>
