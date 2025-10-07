@@ -817,6 +817,20 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../setup-minicom-linuxmint22/">
+<span class="md-ellipsis">
+    Setup minicom op Linux Mint 22
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../toegang-cisco-rommon/">
+<span class="md-ellipsis">
+    Toegang krijgen tot een Cisco-apparaat in ROMMON-modus
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -896,6 +910,97 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vereisten">
+<span class="md-ellipsis">
+      Vereisten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo">
+<span class="md-ellipsis">
+      Demo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#open-terminal">
+<span class="md-ellipsis">
+      Open Terminal
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#authenticiteit-controleren">
+<span class="md-ellipsis">
+      Authenticiteit controleren
+    </span>
+</a>
+<nav aria-label="Authenticiteit controleren" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zoek-publieke-sleutel">
+<span class="md-ellipsis">
+      Zoek publieke sleutel
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importeer-publieke-sleutel">
+<span class="md-ellipsis">
+      Importeer publieke sleutel
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#de-digitale-handtekening-verifieren">
+<span class="md-ellipsis">
+      De digitale handtekening verifiëren
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integriteit-controleren">
+<span class="md-ellipsis">
+      Integriteit controleren
+    </span>
+</a>
+<nav aria-label="Integriteit controleren" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bereken-de-sha256-hashwaarde-van-het-iso-bestand">
+<span class="md-ellipsis">
+      Bereken de SHA256-hashwaarde van het ISO-bestand
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vergelijk-de-berekende-hashwaarde-met-de-officiele-waarde-van-debian">
+<span class="md-ellipsis">
+      Vergelijk de berekende hashwaarde met de officiële waarde van Debian
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusie">
+<span class="md-ellipsis">
+      Conclusie
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -903,6 +1008,201 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="verifieer-de-authenticiteit-en-integriteit-van-een-debian-13-iso-bestand">Verifieer de authenticiteit en integriteit van een Debian 13 ISO-bestand</h1>
+<p>Een <a href="../download-debian13-iso/" target="_blank">gedownload Debian ISO-bestand</a> kan je best verifiëren op <a href="../../explanations/authenticiteit-integriteit/" target="_blank">authenticiteit en integriteit</a>. Deze stappen maken gebruik van cryptografische sleutels en hashes om zeker te zijn dat het bestand van de juiste bron komt (authenticiteit, via de digitale handtekening) en onderweg niet gewijzigd is (integriteit, via de hash-waarde). Hieronder vind je een stappenplan voor zowel Windows als Linux Mint.</p>
+<h2 id="vereisten">Vereisten</h2>
+<ul>
+<li>een <a href="../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/" target="_blank">PC met Windows of Linux</a></li>
+<li>internet verbinding</li>
+<li>het <a href="../download-debian13-iso/" target="_blank">Debian ISO-bestand</a></li>
+<li>de Debian verificatiebestanden; op dezelfde downloadpagina waar je het ISO-bestand vindt, zoek je naar links om <code>SHA256SUMS</code> en <code>SHA256SUMS.sign</code> te downloaden. Zorg ervoor dat je deze bestanden via "Opslaan als..." opslaat en niet alleen de inhoud kopieert. Bewaar alle drie de bestanden (ISO, SHA256SUMS.txt en SHA256SUMS.sign) in dezelfde map, bv. <code>Downloads</code></li>
+<li>indien op Windows: <a href="../setup-gnupg-windows11/" target="_blank">GNU Privacy Guard voor Windows</a></li>
+</ul>
+<h2 id="demo">Demo</h2>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="480" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/iVh_-AbC2GY?autoplay=0&amp;loop=0&amp;mute=0" title="YouTube video player" width="854"></iframe>
+<h2 id="open-terminal">Open Terminal</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Op Windows maken we gebruik van Powershell en niet van de traditionele opdrachtprompt.</p>
+<ul>
+<li>Ga naar de Windows Verkenner en klik links op de <code>Downloads</code> map.</li>
+<li>Hou <span class="keys"><kbd class="key-shift">Shift</kbd></span> ingedrukt en rechtermuisklik op een leeg vlak</li>
+<li>Selecteer <code>Open in Terminal</code></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Op Linux maken we gebruik van de shell.</p>
+<ul>
+<li>Ga naar de Nemo file manager en klik links op de <code>Downloads</code> map.</li>
+<li>Rechtermuisklik op een leeg vlak</li>
+<li>Selecteer <code>Open in Terminal</code></li>
+</ul>
+</div>
+</div>
+</input></input></div>
+<h2 id="authenticiteit-controleren">Authenticiteit controleren</h2>
+<h3 id="zoek-publieke-sleutel">Zoek publieke sleutel</h3>
+<p>De sleutels die Debian gebruikt om de ISO-checksums (SHA5512SUMS) te ondertekenen, kunnen in de loop der tijd veranderen. Je vindt de meest actuele sleutels altijd op de <a href="https://www.debian.org/CD/verify" target="_blank">officiële Debian website</a> voor verificatie. </p>
+<p>Het gpg commando moet eerst de handtekening lezen om te weten welke sleutel het moet zoeken.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label><label for="__tabbed_2_2">Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>PS C:\Users\guru06\Downloads&gt; gpg --list-packets .\SHA256SUMS.sign
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a># off=0 ctb=89 tag=2 hlen=3 plen=563
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="hll">:signature packet: algo 1, keyid DA87E80D6294BE9B
+</span><a id="__codelineno-0-4" name="__codelineno-0-4"></a>        version 4, created 1757195668, md5len 0, sigclass 0x00
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>        digest algo 8, begin of digest 9a 6e
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="hll">        hashed subpkt 33 len 21 (issuer fpr v4 DF9B9C49EAA9298432589D76DA87E80D6294BE9B)
+</span><a id="__codelineno-0-7" name="__codelineno-0-7"></a>        hashed subpkt 2 len 4 (sig created 2025-09-06)
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="hll">        subpkt 16 len 8 (issuer key ID DA87E80D6294BE9B)
+</span><a id="__codelineno-0-9" name="__codelineno-0-9"></a>        data: [4096 bits]
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>PS C:\Users\guru06\Downloads&gt;
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>guru@hp:~/Downloads$ gpg --list-packets SHA256SUMS.sign 
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a># off=0 ctb=89 tag=2 hlen=3 plen=563
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="hll">:signature packet: algo 1, keyid DA87E80D6294BE9B
+</span><a id="__codelineno-1-4" name="__codelineno-1-4"></a>    version 4, created 1757195668, md5len 0, sigclass 0x00
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>    digest algo 8, begin of digest 9a 6e
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="hll">    hashed subpkt 33 len 21 (issuer fpr v4 DF9B9C49EAA9298432589D76DA87E80D6294BE9B)
+</span><a id="__codelineno-1-7" name="__codelineno-1-7"></a>    hashed subpkt 2 len 4 (sig created 2025-09-06)
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="hll">    subpkt 16 len 8 (issuer key ID DA87E80D6294BE9B)
+</span><a id="__codelineno-1-9" name="__codelineno-1-9"></a>    data: [4096 bits]
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>guru@hp:~/Downloads$ 
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h3 id="importeer-publieke-sleutel">Importeer publieke sleutel</h3>
+<p>Je downloadt de Debian publieke sleutel (geïdentificeerd door de lange reeks tekens, de key ID) van de Debian sleutelserver (keyserver). Deze sleutel met de naam "Debian CD signing key" wordt in jouw lokale GPG-sleutelring opgeslagen.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Windows</label><label for="__tabbed_3_2">Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>PS C:\Users\guru06\Downloads&gt; gpg --keyserver hkps://keyring.debian.org:443 --recv-keys DA87E80D6294BE9B
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>gpg: key DA87E80D6294BE9B: public key "Debian CD signing key &lt;debian-cd@lists.debian.org&gt;" imported
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>gpg: Total number processed: 1
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>gpg:               imported: 1
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>PS C:\Users\guru06\Downloads&gt;
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>guru@hp:~/Downloads$ gpg --keyserver hkps://keyring.debian.org:443 --recv-keys DA87E80D6294BE9B
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>gpg: key DA87E80D6294BE9B: public key "Debian CD signing key &lt;debian-cd@lists.debian.org&gt;" imported
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>gpg: Total number processed: 1
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>gpg:               imported: 1
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>guru@hp:~/Downloads$ 
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h3 id="de-digitale-handtekening-verifieren">De digitale handtekening verifiëren</h3>
+<p>GPG vergelijkt de digitale handtekening in SHA256SUM.sign met de inhoud van SHA256SUM.txt met behulp van de geïmporteerde publieke sleutel. "Good signature..." betekent dat de handtekening geldig is en van de verwachte bron komt. De WARNING over de sleutel die niet is gecertificeerd, betekent dat je (of jouw Web of Trust) de sleutel niet expliciet hebt gemarkeerd als volledig vertrouwd, maar de handtekening zelf is technisch gezien wel correct en geldig.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Windows</label><label for="__tabbed_4_2">Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>PS C:\Users\guru06\Downloads&gt; gpg --verify .\SHA256SUMS.sign .\SHA256SUMS.txt
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>gpg: Signature made 09/06/25 23:54:28 Romance Daylight Time
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>gpg:                using RSA key DF9B9C49EAA9298432589D76DA87E80D6294BE9B
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="hll">gpg: Good signature from "Debian CD signing key &lt;debian-cd@lists.debian.org&gt;" [unknown]
+</span><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="hll">gpg: WARNING: This key is not certified with a trusted signature!
+</span><a id="__codelineno-4-6" name="__codelineno-4-6"></a>gpg:          There is no indication that the signature belongs to the owner.
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>Primary key fingerprint: DF9B 9C49 EAA9 2984 3258  9D76 DA87 E80D 6294 BE9B
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>PS C:\Users\guru06\Downloads&gt;
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>guru@hp:~/Downloads$ gpg --verify SHA256SUMS.sign SHA256SUMS.txt
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>gpg: Signature made Sat 06 Sep 2025 11:54:28 PM CEST
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>gpg:                using RSA key DF9B9C49EAA9298432589D76DA87E80D6294BE9B
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="hll">gpg: Good signature from "Debian CD signing key &lt;debian-cd@lists.debian.org&gt;" [unknown]
+</span><a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="hll">gpg: WARNING: This key is not certified with a trusted signature!
+</span><a id="__codelineno-5-6" name="__codelineno-5-6"></a>gpg:          There is no indication that the signature belongs to the owner.
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>Primary key fingerprint: DF9B 9C49 EAA9 2984 3258  9D76 DA87 E80D 6294 BE9B
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="integriteit-controleren">Integriteit controleren</h2>
+<h3 id="bereken-de-sha256-hashwaarde-van-het-iso-bestand">Bereken de SHA256-hashwaarde van het ISO-bestand</h3>
+<p>Dit commando berekent een unieke code van het gedownloade ISO-bestand, wat de uiteindelijke integriteitscheck is. Vervang <code>debian-13.1.0-amd64-netinst.iso</code> door de exacte naam van je gedownloade ISO-bestand.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">Windows</label><label for="__tabbed_5_2">Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span>
+<span class="normal"><a href="#__codelineno-6-7">7</a></span>
+<span class="normal"><a href="#__codelineno-6-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>PS C:\Users\guru06\Downloads&gt; Get-FileHash -Algorithm SHA256 .\debian-13.1.0-amd64-netinst.iso
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>Algorithm       Hash                                                                   Path
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>---------       ----                                                                   ----
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="hll">SHA256          658B28E209B578FE788EC5867DEEBAE57B6AAC5FCE3692BBB116BAB9C65568B3       C:\Users\guru06\Downloads\debian-13.1.0-amd64-netinst.iso
+</span><a id="__codelineno-6-6" name="__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>PS C:\Users\guru06\Downloads&gt;
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>guru@hp:~/Downloads$ sha256sum debian-13.1.0-amd64-netinst.iso 
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="hll">658b28e209b578fe788ec5867deebae57b6aac5fce3692bbb116bab9c65568b3  debian-13.1.0-amd64-netinst.iso
+</span><a id="__codelineno-7-3" name="__codelineno-7-3"></a>guru@hp:~/Downloads$ 
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h3 id="vergelijk-de-berekende-hashwaarde-met-de-officiele-waarde-van-debian">Vergelijk de berekende hashwaarde met de officiële waarde van Debian</h3>
+<ul>
+<li>Open bestand <code>SHA256SUM.txt</code> met een tekstverwerker.</li>
+<li>Vergelijk deze berekende hash (658B28E209B578FE788EC5867DEEBAE57B6AAC5FCE3692BBB116BAB9C65568B3) met de hash-waarde die in het geverifieerde bestand <code>SHA256SUM.txt</code> staat. Als ze exact overeenkomen, is het ISO-bestand 100% zeker zowel authentiek als ongewijzigd.</li>
+</ul>
+<h2 id="conclusie">Conclusie</h2>
+<p>Als de hashwaarden exact overeenkomen, is het ISO-bestand authentiek en integer. Je kunt erop vertrouwen dat het niet is gewijzigd of beschadigd.</p>
+<p>Als de hashwaarden niet overeenkomen, is het ISO-bestand waarschijnlijk beschadigd tijdens het downloaden, of, in zeldzame gevallen, gemanipuleerd. <a href="../download-debian13-iso/">Download het bestand</a> opnieuw en herhaal het verificatieproces.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
