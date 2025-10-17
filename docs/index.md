@@ -4,6 +4,7 @@ hide:
 ---
 
 # Welkom!
+Van *kernel* tot *kabel*; tutorials en howto's over Linux en Cisco computernetwerken. Gebruik de "Search" rechtsboven.
 
 <!---
 // inline CSS to not display section title
@@ -328,7 +329,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <!--- ---------------------------------------------------------------------------------------------------------------- --->
 
     <img src="howtos/configureer-windows11-basisinstellingen-vm-virtualbox/home.png" width="320" height="180" align=right />
-    > *14 Juli 2025 - in [Howtos](howtos/index.md) - X min instructie*
+    > *14 Juli 2025 - in [Howtos](howtos/index.md) - 1 min instructie*
 
 
     Na de installatie van Windows 11 configureer je de basisinstellingen door eerst de Windows Updates te controleren en te installeren om zeker te zijn...
@@ -340,7 +341,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <!--- ---------------------------------------------------------------------------------------------------------------- --->
 
     <img src="howtos/maak-snapshot-windows11-vm-virtualbox-clean/home.png" width="320" height="180" align=right />
-    > *14 Juli 2025 - in [Howtos](howtos/index.md) - X min instructie*
+    > *14 Juli 2025 - in [Howtos](howtos/index.md) - 2 min instructie*
 
 
     Het doel van een snapshot van een virtuele machine (VM) in VirtualBox is het vastleggen van de exacte toestand van de VM op een specifiek moment, inclusief...
@@ -352,7 +353,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <!--- ---------------------------------------------------------------------------------------------------------------- --->
 
     <img src="howtos/sysprep-windows11-vm-virtualbox/home.png" width="320" height="180" align=right />
-    > *20 Juli 2025 - in [Howtos](howtos/index.md) - X min instructie*
+    > *20 Juli 2025 - in [Howtos](howtos/index.md) - 4 min instructie*
 
 
     Sysprep verwijdert specifieke systeeminformatie, zoals de computer-SID, waardoor elke nieuwe virtuele machine die je aanmaakt een unieke identiteit heeft...
@@ -364,7 +365,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <!--- ---------------------------------------------------------------------------------------------------------------- --->
 
     <img src="howtos/maak-snapshot-windows11-vm-virtualbox-sysprep/home.png" width="320" height="180" align=right />
-    > *22 Juli 2025 - in [Howtos](howtos/index.md) - X min instructie*
+    > *22 Juli 2025 - in [Howtos](howtos/index.md) - 1 min instructie*
 
 
     Het doel van een snapshot van een virtuele machine (VM) in VirtualBox is het vastleggen van de exacte toestand van de VM op een specifiek moment, inclusief...
@@ -388,7 +389,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <!--- ---------------------------------------------------------------------------------------------------------------- --->
 
     <img src="howtos/download-windows-server2025-evaluation-iso/home.png" width="320" height="180" align=right />
-    > *23 Juli 2025 - in [Howtos](howtos/index.md) - X min instructie*
+    > *23 Juli 2025 - in [Howtos](howtos/index.md) - 1 min instructie*
 
 
     Een Windows Server 2025 ISO-bestand is een speciale installatieversie van Windows Server die Microsoft aanbiedt voor proef- en evaluatiedoeleinden (180 dagen). Het is specifiek bedoeld voor...
@@ -400,7 +401,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <!--- ---------------------------------------------------------------------------------------------------------------- --->
 
     <img src="howtos/maak-windows-server2025-vm-virtualbox/home.png" width="320" height="180" align=right />
-    > *26 Juli 2025 - in [Howtos](howtos/index.md) - X min instructie*
+    > *26 Juli 2025 - in [Howtos](howtos/index.md) - 1 min instructie*
 
 
     Het aanmaken van een lege virtuele machine (VM) voor Windows Server 2025 omvat het reserveren van virtuele hardware binnen de hypervisor VirtualBox.
@@ -412,7 +413,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <!--- ---------------------------------------------------------------------------------------------------------------- --->
 
     <img src="howtos/configureer-windows-server2025-vm-virtualbox/home.png" width="320" height="180" align=right />
-    > *27 Juli 2025 - in [Howtos](howtos/index.md) - X min instructie*
+    > *27 Juli 2025 - in [Howtos](howtos/index.md) - 2 min instructie*
 
 
     Na het initiële aanmaken van de virtuele machine (VM) kun je, vóór de eerste opstart, de VM-instellingen raadplegen en fijnafstemmen om de werking te optimaliseren en aan specifieke behoeften aan te passen.
@@ -426,7 +427,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <!--- ---------------------------------------------------------------------------------------------------------------- --->
 
     <img src="howtos/installeer-windows-server2025-os-vm-virtualbox/home.png" width="320" height="180" align=right />
-    > *29 Juli 2025 - in [Howtos](howtos/index.md) - X min instructie*
+    > *29 Juli 2025 - in [Howtos](howtos/index.md) - 3 min instructie*
 
 
     Nadat de virtuele machine (VM) is aangemaakt en geconfigureerd, start je deze voor de eerste keer op, waarbij de opstartvolgorde ervoor zorgt dat de VM vanaf de gekoppelde Windows Server 2025 installatie-ISO opstart. 
@@ -438,7 +439,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <!--- ---------------------------------------------------------------------------------------------------------------- --->
 
     <img src="howtos/installeer-guest-additions-windows-server2025-vm-virtualbox/home.png" width="320" height="180" align=right />
-    > *31 Juli 2025 - in [Howtos](howtos/index.md) - X min instructie*
+    > *31 Juli 2025 - in [Howtos](howtos/index.md) - 2 min instructie*
 
 
     Na de installatie van Windows Server 2025 voorzie je de Guest Additions. Deze zorgen voor de installatie van speciale stuurprogramma's voor de virtuele hardware, waardoor cruciale functies zoals...
@@ -450,7 +451,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <!--- ---------------------------------------------------------------------------------------------------------------- --->
 
     <img src="howtos/configureer-windows-server2025-basisinstellingen-vm-virtualbox/home.png" width="320" height="180" align=right />
-    > *02 Augustus 2025 - in [Howtos](howtos/index.md) - X min instructie*
+    > *02 Augustus 2025 - in [Howtos](howtos/index.md) - 2 min instructie*
 
 
     Na de installatie van Windows Server 2025 configureer je de basisinstellingen door eerst de Windows Updates te controleren en te installeren om zeker te zijn van de nieuwste beveiligingspatches en functionaliteiten.
@@ -462,7 +463,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <!--- ---------------------------------------------------------------------------------------------------------------- --->
 
     <img src="howtos/maak-snapshot-windows-server2025-vm-virtualbox-clean/home.png" width="320" height="180" align=right />
-    > *02 Augustus 2025 - in [Howtos](howtos/index.md) - X min instructie*
+    > *02 Augustus 2025 - in [Howtos](howtos/index.md) - 2 min instructie*
 
 
     Het doel van een snapshot van een virtuele machine (VM) in VirtualBox is het vastleggen van de exacte toestand van de VM op een specifiek moment, inclusief alle bestanden en instellingen.

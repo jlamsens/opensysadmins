@@ -5,9 +5,9 @@ De ROMMON-modus (ROM Monitor) is essentieel omdat het fungeert als een noodhulpp
 ## Vereisten
 - een [PC met Linux Mint 22](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
 - [minicom](../setup-minicom-linuxmint22/index.md){:target="_blank"} terminal emulation software
-* een console cable
-* een Cisco 2960 24TT-L of 24TC-L Plus switch
-* een Cisco 1941 router
+- een console cable
+- een Cisco 2960 24TT-L of 24TC-L Plus switch
+- een Cisco 1941 router
 
 ## Demo
 <iframe width="854" height="480" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
