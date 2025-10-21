@@ -1099,17 +1099,29 @@
 <span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="hll">Switch#dir nvram:
-</span><a id="__codelineno-1-2" name="__codelineno-1-2"></a>Directory of nvram:/
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>   62  -rw-           0                    &lt;no date&gt;  startup-config
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>   63  ----           0                    &lt;no date&gt;  private-config
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>    1  ----          36                    &lt;no date&gt;  persistent-data
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="hll">    2  -rw-           0                    &lt;no date&gt;  ifIndex-table
-</span><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="hll">    3  -rw-        4864                    &lt;no date&gt;  test1.txt
-</span><a id="__codelineno-1-9" name="__codelineno-1-9"></a>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a>65536 bytes total (58316 bytes free)
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a>Switch#
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="hll">Switch#erase startup-config 
+</span><a id="__codelineno-1-2" name="__codelineno-1-2"></a>Erasing the nvram filesystem will remove all configuration files! Continue? [confirm]
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>[OK]
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>Erase of nvram: complete
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>%SYS-7-NV_BLOCK_INIT: Initialized the geometry of nvram
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>Switch#dir nvram:
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>Directory of nvram:/
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="hll">   62  -rw-           0                    &lt;no date&gt;  startup-config
+</span><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="hll">   63  ----           0                    &lt;no date&gt;  private-config
+</span><a id="__codelineno-1-12" name="__codelineno-1-12"></a>    1  ----          36                    &lt;no date&gt;  persistent-data
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>    2  -rw-           0                    &lt;no date&gt;  ifIndex-table
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>    3  -rw-        4864                    &lt;no date&gt;  test1.txt
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>65536 bytes total (58316 bytes free)
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>Switch#
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -1145,7 +1157,7 @@
 </input></input></div>
 <h2 id="flash">FLASH</h2>
 <h3 id="wis-vlandat">Wis vlan.dat</h3>
-<p>De VLAN ID's en namen (VLAN 2-1001) worden opgeslagen in vlan.dat wanneer de switch in de VTP Server of VTP Client modus staat. Wis het bestand indien aanwezig.</p>
+<p>De VLAN ID's en namen (VLAN 2-1001) worden opgeslagen in vlan.dat wanneer de switch in de <code>VTP Server</code> of <code>VTP Client</code> modus staat. Wis het bestand indien aanwezig.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -1155,7 +1167,7 @@
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a>Switch#
 </code></pre></div></td></tr></table></div>
 <h3 id="wis-overige-bestanden">Wis overige bestanden</h3>
-<p>Het <code>multiple-fs-bestand</code> is een intern systeembestand. De switch zal bij de volgende herstart (of wanneer het IOS dit bestand nodig heeft) de interne structuur van het Flash-geheugen controleren en multiple-fs automatisch opnieuw aanmaken.</p>
+<p>Het <code>multiple-fs-bestand</code> is een intern systeembestand. De switch zal bij de volgende herstart (of wanneer het IOS dit bestand nodig heeft) de interne structuur van het Flash-geheugen controleren en het bestand automatisch opnieuw aanmaken.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
@@ -1164,7 +1176,7 @@
 <a id="__codelineno-4-3" name="__codelineno-4-3"></a>Delete flash:/multiple-fs? [confirm]
 <a id="__codelineno-4-4" name="__codelineno-4-4"></a>Switch#
 </code></pre></div></td></tr></table></div>
-<p>Zorg ervoor dat enkel het Cisco IOS nog aanwezig is. Wis alle overige bestanden.
+<p>Zorg ervoor dat enkel het Cisco IOS nog aanwezig is. Heb je per vergissing IOS gewist? Dan moet je die <a href="../setup-ios-cisco2960/" target="_blank">opnieuw installeren</a>. Wis alle overige bestanden.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
@@ -1493,8 +1505,8 @@
 <a id="__codelineno-17-8" name="__codelineno-17-8"></a>please set an enable secret using the following CLI in configuration mode-
 <a id="__codelineno-17-9" name="__codelineno-17-9"></a>enable secret 0 &lt;cleartext password&gt;
 <a id="__codelineno-17-10" name="__codelineno-17-10"></a>----------------------------------
-<a id="__codelineno-17-11" name="__codelineno-17-11"></a>Would you like to enter the initial configuration dialog? [yes/no]:     -----&gt; antwoord "nee"
-<a id="__codelineno-17-12" name="__codelineno-17-12"></a>Switch&gt;enable
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a><span class="hll">Would you like to enter the initial configuration dialog? [yes/no]:     -----&gt; antwoord "no"
+</span><a id="__codelineno-17-12" name="__codelineno-17-12"></a>Switch&gt;enable
 <a id="__codelineno-17-13" name="__codelineno-17-13"></a>Switch#
 </code></pre></div></td></tr></table></div>
 </article>
