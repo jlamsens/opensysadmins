@@ -430,7 +430,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     > *29 Juli 2025 - in [Howtos](howtos/index.md) - 3 min instructie*
 
 
-    Nadat de virtuele machine (VM) is aangemaakt en geconfigureerd, start je deze voor de eerste keer op, waarbij de opstartvolgorde ervoor zorgt dat de VM vanaf de gekoppelde Windows Server 2025 installatie-ISO opstart. 
+    Nadat de virtuele machine (VM) is aangemaakt en geconfigureerd, start je deze voor de eerste keer op, waarbij de opstartvolgorde ervoor zorgt dat...
 
     [Lees verder](howtos/installeer-windows-server2025-os-vm-virtualbox/index.md){:target="_blank"}
     <br>
@@ -442,7 +442,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     > *31 Juli 2025 - in [Howtos](howtos/index.md) - 2 min instructie*
 
 
-    Na de installatie van Windows Server 2025 voorzie je de Guest Additions. Deze zorgen voor de installatie van speciale stuurprogramma's voor de virtuele hardware, waardoor cruciale functies zoals...
+    Na de installatie van Windows Server 2025 voorzie je de Guest Additions. Deze zorgen voor de installatie van speciale stuurprogramma's voor de virtuele hardware...
 
     [Lees verder](howtos/installeer-guest-additions-windows-server2025-vm-virtualbox/index.md){:target="_blank"}
     <br>
@@ -454,7 +454,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     > *02 Augustus 2025 - in [Howtos](howtos/index.md) - 2 min instructie*
 
 
-    Na de installatie van Windows Server 2025 configureer je de basisinstellingen door eerst de Windows Updates te controleren en te installeren om zeker te zijn van de nieuwste beveiligingspatches en functionaliteiten.
+    Na de installatie van Windows Server 2025 configureer je de basisinstellingen door eerst de Windows Updates te controleren en te installeren om...
 
     [Lees verder](howtos/configureer-windows-server2025-basisinstellingen-vm-virtualbox/index.md){:target="_blank"}
     <br>
@@ -466,7 +466,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     > *02 Augustus 2025 - in [Howtos](howtos/index.md) - 2 min instructie*
 
 
-    Het doel van een snapshot van een virtuele machine (VM) in VirtualBox is het vastleggen van de exacte toestand van de VM op een specifiek moment, inclusief alle bestanden en instellingen.
+    Het doel van een snapshot van een virtuele machine (VM) in VirtualBox is het vastleggen van de exacte toestand van de VM op een specifiek moment, inclusief...
 
     [Lees verder](howtos/maak-snapshot-windows-server2025-vm-virtualbox-clean/index.md){:target="_blank"}
     <br>
@@ -490,8 +490,20 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     > *11 Augustus 2025 - in [Howtos](howtos/index.md) - 2 min instructie*
 
 
-    De ROMMON-modus (ROM Monitor) is essentieel omdat het fungeert als een noodhulpprogramma voor Cisco-apparaten. Je hebt het nodig wanneer het apparaat niet normaal kan opstarten...
+    De ROMMON-modus (ROM Monitor) is essentieel omdat het fungeert als een noodhulpprogramma voor Cisco-apparaten. Je hebt het nodig wanneer het apparaat niet...
 
     [Lees verder](howtos/toegang-cisco-rommon/index.md){:target="_blank"}
+    <br>
+    <br>
+
+    <!--- ---------------------------------------------------------------------------------------------------------------- --->
+
+    <img src="howtos/fabrieksinstellingen-herstellen-cisco2960/home.png" width="320" height="180" align=right />
+    > *11 Augustus 2025 - in [Howtos](howtos/index.md) - X min instructie*
+
+
+    Het herstellen van de fabrieksinstellingen op een Cisco Catalyst 2960-switch zorgt ervoor dat alle aangepaste instellingen zoals IP-adressen, ...
+
+    [Lees verder](howtos/fabrieksinstellingen-herstellen-cisco2960/index.md){:target="_blank"}
     <br>
     <br>

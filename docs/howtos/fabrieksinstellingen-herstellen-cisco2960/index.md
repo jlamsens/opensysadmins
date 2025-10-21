@@ -50,7 +50,13 @@ Geef de inhoud weer van beide bestandssystemen.
 === "Stap1"
     Als je *enkel alle configuratiebestanden* wil wissen, gebruik je ofwel `erase startup-config`, `erase nvram:` of `write erase`.
 
-    ``` title='' hl_lines="1 7 8"
+    ``` title='' hl_lines="1 10 11"
+    Switch#erase startup-config 
+    Erasing the nvram filesystem will remove all configuration files! Continue? [confirm]
+    [OK]
+    Erase of nvram: complete
+    %SYS-7-NV_BLOCK_INIT: Initialized the geometry of nvram
+    
     Switch#dir nvram:
     Directory of nvram:/
 
@@ -86,7 +92,7 @@ Geef de inhoud weer van beide bestandssystemen.
 ## FLASH
 
 ### Wis vlan.dat
-De VLAN ID's en namen (VLAN 2-1001) worden opgeslagen in vlan.dat wanneer de switch in de VTP Server of VTP Client modus staat. Wis het bestand indien aanwezig.
+De VLAN ID's en namen (VLAN 2-1001) worden opgeslagen in vlan.dat wanneer de switch in de `VTP Server` of `VTP Client` modus staat. Wis het bestand indien aanwezig.
 
 ``` title='' hl_lines="1"
 Switch#delete vlan.dat
@@ -96,7 +102,7 @@ Switch#
 ```
 
 ### Wis overige bestanden
-Het `multiple-fs-bestand` is een intern systeembestand. De switch zal bij de volgende herstart (of wanneer het IOS dit bestand nodig heeft) de interne structuur van het Flash-geheugen controleren en multiple-fs automatisch opnieuw aanmaken.
+Het `multiple-fs-bestand` is een intern systeembestand. De switch zal bij de volgende herstart (of wanneer het IOS dit bestand nodig heeft) de interne structuur van het Flash-geheugen controleren en het bestand automatisch opnieuw aanmaken.
 
 ``` title='' hl_lines="1"
 Switch#delete flash:multiple-fs
@@ -105,7 +111,7 @@ Delete flash:/multiple-fs? [confirm]
 Switch#
 ```
 
-Zorg ervoor dat enkel het Cisco IOS nog aanwezig is. Wis alle overige bestanden.
+Zorg ervoor dat enkel het Cisco IOS nog aanwezig is. Heb je per vergissing IOS gewist? Dan moet je die [opnieuw installeren](../setup-ios-cisco2960/index.md){:target="_blank"}. Wis alle overige bestanden.
 ``` title='' hl_lines="1"
 Switch#dir flash:
 Directory of flash:/
@@ -312,7 +318,7 @@ switch:reset
 ## Clean switch
 Je krijgt de `initial configuration dialog`-wizard. Antwoord "nee" bij de prompt. Trek nu gewoon de stekker uit het stopcontact om de switch uit te schakelen, aangezien er geen aan/uit-schakelaar is zoals op bv. een Cisco 1941-router.
 
-``` title='' hl_lines="0"
+``` title='' hl_lines="11"
         --- System Configuration Dialog ---
 
 Enable secret warning
@@ -323,7 +329,7 @@ If you choose not to enter the intial configuration dialog, or if you exit setup
 please set an enable secret using the following CLI in configuration mode-
 enable secret 0 <cleartext password>
 ----------------------------------
-Would you like to enter the initial configuration dialog? [yes/no]:     -----> antwoord "nee"
+Would you like to enter the initial configuration dialog? [yes/no]:     -----> antwoord "no"
 Switch>enable
 Switch#
 ```
