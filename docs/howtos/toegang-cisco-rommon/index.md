@@ -1,6 +1,6 @@
 # Toegang krijgen tot een Cisco-apparaat in ROMMON-modus.
 
-De ROMMON-modus (ROM Monitor) is essentieel omdat het fungeert als een noodhulpprogramma voor Cisco-apparaten. Je hebt het nodig wanneer het apparaat niet normaal kan opstarten, bijvoorbeeld door een corrupt of ontbrekend IOS-besturingssysteem of een verkeerde boot-configuratie. Vanuit deze low-level modus kun je cruciale herstelacties uitvoeren, zoals een nieuw IOS-image inladen, boot-parameters aanpassen, of een vergeten beheerderswachtwoord resetten, om zo het netwerkapparaat weer volledig operationeel te krijgen.
+De ROMMON-modus (ROM Monitor) is essentieel omdat het fungeert als een noodhulpprogramma voor Cisco-apparaten. Je hebt het nodig wanneer je een wachtwoord bent vergeten of het apparaat niet normaal kan opstarten, bijvoorbeeld door een corrupt of ontbrekend IOS-besturingssysteem of een verkeerde boot-configuratie. Vanuit deze low-level modus kun je cruciale herstelacties uitvoeren, zoals een nieuw IOS-image inladen, boot-parameters aanpassen, of een vergeten beheerderswachtwoord resetten, om zo het netwerkapparaat weer volledig operationeel te krijgen.
 
 ## Vereisten
 - een [PC met Linux Mint 22](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
@@ -291,9 +291,9 @@ De ROMMON-modus (ROM Monitor) is essentieel omdat het fungeert als een noodhulpp
     <img src="mode-button.png"/>
 
 === "Stap3a"
-    Als het wachtwoordherstelmechanisme is ingeschakeld, moet je de Flash handmatig initialiseren.
+    Als het [mechanisme voor wachtwoordherstel](../fabrieksinstellingen-herstellen-cisco2960/index.md#wachtwoordherstelmechanisme-inschakelen){:target="_blank"} is *ingeschakeld*, wordt Flash niet automatisch geïnitialiseerd; dat moet je handmatig doen. Je kan er op dit moment voor kiezen, om het [mechanisme voor wachtwoordherstel](../fabrieksinstellingen-herstellen-cisco2960/index.md#wachtwoordherstelmechanisme-inschakelen){:target="_blank"} *uit te schakelen*.
 
-    ``` title='' hl_lines="12 28"
+    ``` title='' hl_lines="12 14 28"
     Welcome to minicom 2.8
 
     OPTIONS: I18n 
@@ -335,7 +335,7 @@ De ROMMON-modus (ROM Monitor) is essentieel omdat het fungeert als een noodhulpp
     ```
 
 === "Stap3b"
-    Als het wachtwoordherstelmechanisme is uitgeschakeld, verlies je alle configuratie! Flash wordt voor jou geïnitialiseerd. Kies "y" bij de prompt.
+    Als het [mechanisme voor wachtwoordherstel](../fabrieksinstellingen-herstellen-cisco2960/index.md#wachtwoordherstelmechanisme-inschakelen){:target="_blank"} is *uitgeschakeld*, verlies je alles uit de startup configuratie! (switch naam, IP adres VLAN, wachtwoorden, ...) Flash wordt voor jou geïnitialiseerd. Kies "y" bij de prompt. Je kan er op dit moment voor kiezen, om het [mechanisme voor wachtwoordherstel](../fabrieksinstellingen-herstellen-cisco2960/index.md#wachtwoordherstelmechanisme-inschakelen){:target="_blank"} *in te schakelen*.
 
     ``` title='' hl_lines="12 31"
     Welcome to minicom 2.8
@@ -379,6 +379,7 @@ De ROMMON-modus (ROM Monitor) is essentieel omdat het fungeert als een noodhulpp
 
     switch: 
     ```
+
 === "(Stap4)"
     Om terug te keren naar IOS, start je de switch gewoon op.
 
@@ -527,7 +528,7 @@ De ROMMON-modus (ROM Monitor) is essentieel omdat het fungeert als een noodhulpp
     ```
 
 === "Stap2"
-    De router kan niet opstarten en gaat automatisch in de ROMMON-modus.
+    De router kan niet opstarten en gaat automatisch in de ROMMON-modus. 
 
     ``` title='' hl_lines="12 15"
     System Bootstrap, Version 15.0(1r)M16, RELEASE SOFTWARE (fc1)
@@ -547,6 +548,10 @@ De ROMMON-modus (ROM Monitor) is essentieel omdat het fungeert als een noodhulpp
     rommon 1 >
     ```
 
+=== "(Stap3)"
+    Je kan enkel terug naar een werkende IOS door deze [opnieuw te installeren](../todo/index.md).
+
+
 ### Break sequence
 
 === "Stap1"
@@ -562,19 +567,43 @@ De ROMMON-modus (ROM Monitor) is essentieel omdat het fungeert als een noodhulpp
 === "Stap2"
     Direct nadat de router is opgestart (binnen de eerste X seconden), verstuur je de [break sequence](../../explanations/break-sequence-mechanism/index.md){:target="_blank"} vanuit je terminalemulator. Voor Minicom druk je op ++ctrl++ + ++a++ en vervolgens op ++f++ De router zou moeten reageren door het opstarten te stoppen en de ROMMON-modus te activeren, wat wordt aangegeven door de `rommon 1>`-prompt.
 
-    ``` title='' hl_lines="6"
+    ``` title='' hl_lines="5"
     System Bootstrap, Version 15.0(1r)M16, RELEASE SOFTWARE (fc1)
     Technical Support: http://www.cisco.com/techsupport
     Copyright (c) 2012 by cisco Systems, Inc.
 
+    ### ik stuurde de break-sequence hier ergens ###
+
     Total memory size = 512 MB - On-board = 512 MB, DIMM0 = 0 MB
-    ### I sent the break signal about here ###
     CISCO1941/K9 platform with 524288 Kbytes of main memory
     Main memory is configured to 64/-1(On-board/DIMM0) bit mode with ECC disabled
 
 
     Readonly ROMMON initialized
+    program load complete, entry point: 0x80803000, size: 0x1b340
+    program load complete, entry point: 0x80803000, size: 0x1b340
+
+
+    monitor: command "boot" aborted due to user interrupt
     rommon 1 > 
+
+    ```
+
+=== "(Stap3)"
+    Om terug te keren naar IOS, start je IOS via `boot`.
+
+    ``` title='' hl_lines="1"
+    rommon 1 > boot
+    program load complete, entry point: 0x80803000, size: 0x1b340
+    program load complete, entry point: 0x80803000, size: 0x1b340
+
+
+    IOS Image Load Test 
+    ___________________ 
+    Digitally Signed Release Software 
+    program load complete, entry point: 0x81000000, size: 0x511cb54
+    ...
+
     ```
 
 

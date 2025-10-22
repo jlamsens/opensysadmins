@@ -5,12 +5,16 @@ Het herstellen van de fabrieksinstellingen op een Cisco Catalyst 2960-switch zor
 ## Vereisten
 - een [PC met Linux Mint 22](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
 - [minicom](../setup-minicom-linuxmint22/index.md){:target="_blank"} terminal emulation software
-- [toegang hebben](../todo/index.md){:target="_blank"} tot een [werkend IOS](../setup-ios-cisco2960/index.md){:target="_blank"}
+- [toegang hebben](../wachtwoordherstel-cisco2960/index.md){:target="_blank"} tot een [werkend IOS](../setup-ios-cisco2960/index.md){:target="_blank"}
 - een console cable
 - een Cisco 2960 24TT-L of 24TC-L Plus switch
 
 ## Demo
 <iframe width="854" height="480" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Setup
+
+<img src="console-access.png"/>
 
 ## NVRAM en FLASH
 Geef de inhoud weer van beide bestandssystemen.
@@ -125,7 +129,7 @@ Switch#
 ## Wachtwoordherstelmechanisme inschakelen
 
 === "Stap1"
-    Controleer of het wachtwoordherstelmechanisme is ingeschakeld of uitgeschakeld. In dit voorbeeld is het uitgeschakeld.
+    Controleer of het wachtwoordherstelmechanisme is ingeschakeld of uitgeschakeld. In dit voorbeeld is het uitgeschakeld. Je kan de instelling controleren vanuit een werkend IOS of vanuit [ROMMON](../toegang-cisco-rommon/index.md){:target="_blank"}.
 
     ``` title='' hl_lines="1 7"
     --- Vanuit IOS ---
@@ -143,7 +147,7 @@ Switch#
     ```
 
 === "Stap2"
-    Indien nodig, schakel deze optie in..
+    Indien nodig, schakel deze optie in, zoals in dit voorbeeld.
 
     ``` title='' hl_lines="1 9"
     --- Vanuit IOS ---
@@ -161,7 +165,7 @@ Switch#
     ```
 
 === "Stap3"
-    Controleer vóór de herstart.
+    Wacht nog met herstarten; controleer eerst.
 
     ``` title='' hl_lines="1 7"
     --- Vanuit IOS ---
@@ -224,7 +228,7 @@ Switch#
     ```
 
 === "Stap3"
-    Controleer vóór de herstart.
+    Wacht nog met herstarten; controleer eerst.
 
     ``` title='' hl_lines="1 9"
     --- Vanuit IOS ---

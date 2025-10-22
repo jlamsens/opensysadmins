@@ -507,3 +507,15 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     [Lees verder](howtos/fabrieksinstellingen-herstellen-cisco2960/index.md){:target="_blank"}
     <br>
     <br>
+
+    <!--- ---------------------------------------------------------------------------------------------------------------- --->
+
+    <img src="howtos/wachtwoordherstel-cisco2960/home.png" width="320" height="180" align=right />
+    > *11 Augustus 2025 - in [Howtos](howtos/index.md) - X min instructie*
+
+
+    Je doet een wachtwoordherstel op een Cisco Catalyst 2960 switch, wanneer het console-wachtwoord of het enable exec-mode wachtwoord (of beide) verloren of vergeten zijn.
+
+    [Lees verder](howtos/wachtwoordherstel-cisco2960/index.md){:target="_blank"}
+    <br>
+    <br>
