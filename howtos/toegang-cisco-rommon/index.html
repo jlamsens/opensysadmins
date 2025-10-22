@@ -9,7 +9,7 @@
 <meta content="Jurgen Lamsens" name="author"/>
 <link href="https://www.opensysadmins.com/howtos/toegang-cisco-rommon/" rel="canonical"/>
 <link href="../setup-minicom-linuxmint22/" rel="prev"/>
-<link href="../../references/" rel="next"/>
+<link href="../fabrieksinstellingen-herstellen-cisco2960/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.44" name="generator"/>
 <title>Toegang krijgen tot een Cisco-apparaat in ROMMON-modus - OpenSysAdmins</title>
@@ -954,6 +954,20 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fabrieksinstellingen-herstellen-cisco2960/">
+<span class="md-ellipsis">
+    Fabrieksinstellingen herstellen van een Cisco 2960-switch
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../wachtwoordherstel-cisco2960/">
+<span class="md-ellipsis">
+    Wachtwoordherstel op een Cisco 2960-switch
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1152,7 +1166,7 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="toegang-krijgen-tot-een-cisco-apparaat-in-rommon-modus">Toegang krijgen tot een Cisco-apparaat in ROMMON-modus.</h1>
-<p>De ROMMON-modus (ROM Monitor) is essentieel omdat het fungeert als een noodhulpprogramma voor Cisco-apparaten. Je hebt het nodig wanneer het apparaat niet normaal kan opstarten, bijvoorbeeld door een corrupt of ontbrekend IOS-besturingssysteem of een verkeerde boot-configuratie. Vanuit deze low-level modus kun je cruciale herstelacties uitvoeren, zoals een nieuw IOS-image inladen, boot-parameters aanpassen, of een vergeten beheerderswachtwoord resetten, om zo het netwerkapparaat weer volledig operationeel te krijgen.</p>
+<p>De ROMMON-modus (ROM Monitor) is essentieel omdat het fungeert als een noodhulpprogramma voor Cisco-apparaten. Je hebt het nodig wanneer je een wachtwoord bent vergeten of het apparaat niet normaal kan opstarten, bijvoorbeeld door een corrupt of ontbrekend IOS-besturingssysteem of een verkeerde boot-configuratie. Vanuit deze low-level modus kun je cruciale herstelacties uitvoeren, zoals een nieuw IOS-image inladen, boot-parameters aanpassen, of een vergeten beheerderswachtwoord resetten, om zo het netwerkapparaat weer volledig operationeel te krijgen.</p>
 <h2 id="vereisten">Vereisten</h2>
 <ul>
 <li>een <a href="../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/" target="_blank">PC met Linux Mint 22</a></li>
@@ -1601,7 +1615,7 @@ Dit duurt ongeveer X seconden. Na de POST verandert het knipperende ledpatroon. 
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="mode-button.png"><img src="mode-button.png"/></a></p>
 </div>
 <div class="tabbed-block">
-<p>Als het wachtwoordherstelmechanisme is ingeschakeld, moet je de Flash handmatig initialiseren.</p>
+<p>Als het <a href="../fabrieksinstellingen-herstellen-cisco2960/#wachtwoordherstelmechanisme-inschakelen" target="_blank">mechanisme voor wachtwoordherstel</a> is <em>ingeschakeld</em>, wordt Flash niet automatisch geïnitialiseerd; dat moet je handmatig doen. Je kan er op dit moment voor kiezen, om het <a href="../fabrieksinstellingen-herstellen-cisco2960/#wachtwoordherstelmechanisme-inschakelen" target="_blank">mechanisme voor wachtwoordherstel</a> <em>uit te schakelen</em>.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
@@ -1652,8 +1666,8 @@ Dit duurt ongeveer X seconden. Na de POST verandert het knipperende ledpatroon. 
 <a id="__codelineno-11-11" name="__codelineno-11-11"></a>Xmodem file system is available.
 <a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="hll">The password-recovery mechanism is enabled.
 </span><a id="__codelineno-11-13" name="__codelineno-11-13"></a>Initializing Flash...
-<a id="__codelineno-11-14" name="__codelineno-11-14"></a>flashfs[0]: filesystem check interrupted!
-<a id="__codelineno-11-15" name="__codelineno-11-15"></a>...done Initializing Flash.
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="hll">flashfs[0]: filesystem check interrupted!
+</span><a id="__codelineno-11-15" name="__codelineno-11-15"></a>...done Initializing Flash.
 <a id="__codelineno-11-16" name="__codelineno-11-16"></a>
 <a id="__codelineno-11-17" name="__codelineno-11-17"></a>The system has been interrupted, or encountered an error
 <a id="__codelineno-11-18" name="__codelineno-11-18"></a>during initialization of the flash filesystem.  The following
@@ -1680,7 +1694,7 @@ Dit duurt ongeveer X seconden. Na de POST verandert het knipperende ledpatroon. 
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>Als het wachtwoordherstelmechanisme is uitgeschakeld, verlies je alle configuratie! Flash wordt voor jou geïnitialiseerd. Kies "y" bij de prompt.</p>
+<p>Als het <a href="../fabrieksinstellingen-herstellen-cisco2960/#wachtwoordherstelmechanisme-inschakelen" target="_blank">mechanisme voor wachtwoordherstel</a> is <em>uitgeschakeld</em>, verlies je alles uit de startup configuratie! (switch naam, IP adres VLAN, wachtwoorden, ...) Flash wordt voor jou geïnitialiseerd. Kies "y" bij de prompt. Je kan er op dit moment voor kiezen, om het <a href="../fabrieksinstellingen-herstellen-cisco2960/#wachtwoordherstelmechanisme-inschakelen" target="_blank">mechanisme voor wachtwoordherstel</a> <em>in te schakelen</em>.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
@@ -1940,7 +1954,7 @@ Dit duurt ongeveer X seconden. Na de POST verandert het knipperende ledpatroon. 
 </div>
 </input></input></div>
 <h3 id="ontbrekend-of-corrupt-ios">Ontbrekend of corrupt IOS</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Stap1</label><label for="__tabbed_6_2">Stap2</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><input id="__tabbed_6_3" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Stap1</label><label for="__tabbed_6_2">Stap2</label><label for="__tabbed_6_3">(Stap3)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Laten we een niet-werkend IOS simuleren door "per ongeluk" het "flash"-bestandssysteem te wissen. Je kunt de opdracht <code>erase (/all) flash:</code> niet gebruiken zoals bij een Cisco 2960-switch. Je moet hem "formatteren". Start de router daarna opnieuw op.</p>
@@ -1992,7 +2006,7 @@ Dit duurt ongeveer X seconden. Na de POST verandert het knipperende ledpatroon. 
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>De router kan niet opstarten en gaat automatisch in de ROMMON-modus.</p>
+<p>De router kan niet opstarten en gaat automatisch in de ROMMON-modus. </p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
@@ -2024,10 +2038,13 @@ Dit duurt ongeveer X seconden. Na de POST verandert het knipperende ledpatroon. 
 <a id="__codelineno-19-15" name="__codelineno-19-15"></a><span class="hll">rommon 1 &gt;
 </span></code></pre></div></td></tr></table></div>
 </div>
+<div class="tabbed-block">
+<p>Je kan enkel terug naar een werkende IOS door deze <a href="../todo/">opnieuw te installeren</a>.</p>
+</div>
 </div>
 </div>
 <h3 id="break-sequence_1">Break sequence</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">Stap1</label><label for="__tabbed_7_2">Stap2</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><input id="__tabbed_7_3" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">Stap1</label><label for="__tabbed_7_2">Stap2</label><label for="__tabbed_7_3">(Stap3)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Voor zover ik weet, is er geen mechanisme voor de break-sequence op een Cisco 1941-router zoals op een Cisco 2960-switch. Er bestaat niet zoiets als <code>boot enable-break</code> om het break-sequence gedrag in of uit te schakelen. Je kunt de router gewoon uitzetten of "opnieuw laden" vanuit een draaiend IOS.</p>
@@ -2053,18 +2070,53 @@ Dit duurt ongeveer X seconden. Na de POST verandert het knipperende ledpatroon. 
 <span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-21-10">10</a></span>
 <span class="normal"><a href="#__codelineno-21-11">11</a></span>
-<span class="normal"><a href="#__codelineno-21-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>System Bootstrap, Version 15.0(1r)M16, RELEASE SOFTWARE (fc1)
+<span class="normal"><a href="#__codelineno-21-12">12</a></span>
+<span class="normal"><a href="#__codelineno-21-13">13</a></span>
+<span class="normal"><a href="#__codelineno-21-14">14</a></span>
+<span class="normal"><a href="#__codelineno-21-15">15</a></span>
+<span class="normal"><a href="#__codelineno-21-16">16</a></span>
+<span class="normal"><a href="#__codelineno-21-17">17</a></span>
+<span class="normal"><a href="#__codelineno-21-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>System Bootstrap, Version 15.0(1r)M16, RELEASE SOFTWARE (fc1)
 <a id="__codelineno-21-2" name="__codelineno-21-2"></a>Technical Support: http://www.cisco.com/techsupport
 <a id="__codelineno-21-3" name="__codelineno-21-3"></a>Copyright (c) 2012 by cisco Systems, Inc.
 <a id="__codelineno-21-4" name="__codelineno-21-4"></a>
-<a id="__codelineno-21-5" name="__codelineno-21-5"></a>Total memory size = 512 MB - On-board = 512 MB, DIMM0 = 0 MB
-<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="hll">### I sent the break signal about here ###
-</span><a id="__codelineno-21-7" name="__codelineno-21-7"></a>CISCO1941/K9 platform with 524288 Kbytes of main memory
-<a id="__codelineno-21-8" name="__codelineno-21-8"></a>Main memory is configured to 64/-1(On-board/DIMM0) bit mode with ECC disabled
-<a id="__codelineno-21-9" name="__codelineno-21-9"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="hll">### ik stuurde de break-sequence hier ergens ###
+</span><a id="__codelineno-21-6" name="__codelineno-21-6"></a>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a>Total memory size = 512 MB - On-board = 512 MB, DIMM0 = 0 MB
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a>CISCO1941/K9 platform with 524288 Kbytes of main memory
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a>Main memory is configured to 64/-1(On-board/DIMM0) bit mode with ECC disabled
 <a id="__codelineno-21-10" name="__codelineno-21-10"></a>
-<a id="__codelineno-21-11" name="__codelineno-21-11"></a>Readonly ROMMON initialized
-<a id="__codelineno-21-12" name="__codelineno-21-12"></a>rommon 1 &gt; 
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a>
+<a id="__codelineno-21-12" name="__codelineno-21-12"></a>Readonly ROMMON initialized
+<a id="__codelineno-21-13" name="__codelineno-21-13"></a>program load complete, entry point: 0x80803000, size: 0x1b340
+<a id="__codelineno-21-14" name="__codelineno-21-14"></a>program load complete, entry point: 0x80803000, size: 0x1b340
+<a id="__codelineno-21-15" name="__codelineno-21-15"></a>
+<a id="__codelineno-21-16" name="__codelineno-21-16"></a>
+<a id="__codelineno-21-17" name="__codelineno-21-17"></a>monitor: command "boot" aborted due to user interrupt
+<a id="__codelineno-21-18" name="__codelineno-21-18"></a>rommon 1 &gt; 
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Om terug te keren naar IOS, start je IOS via <code>boot</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-22-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-22-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-22-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-22-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-22-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-22-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-22-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-22-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-22-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="hll">rommon 1 &gt; boot
+</span><a id="__codelineno-22-2" name="__codelineno-22-2"></a>program load complete, entry point: 0x80803000, size: 0x1b340
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a>program load complete, entry point: 0x80803000, size: 0x1b340
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a>IOS Image Load Test 
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a>___________________ 
+<a id="__codelineno-22-8" name="__codelineno-22-8"></a>Digitally Signed Release Software 
+<a id="__codelineno-22-9" name="__codelineno-22-9"></a>program load complete, entry point: 0x81000000, size: 0x511cb54
+<a id="__codelineno-22-10" name="__codelineno-22-10"></a>...
 </code></pre></div></td></tr></table></div>
 </div>
 </div>

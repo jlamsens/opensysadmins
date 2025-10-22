@@ -7,10 +7,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Standing on the shoulder of giants" name="description"/>
 <meta content="Jurgen Lamsens" name="author"/>
-<link href="https://www.opensysadmins.com/howtos/setup-rufus-windows11/" rel="canonical"/>
+<link href="https://www.opensysadmins.com/howtos/wachtwoordherstel-cisco2960/" rel="canonical"/>
+<link href="../fabrieksinstellingen-herstellen-cisco2960/" rel="prev"/>
+<link href="../../references/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.44" name="generator"/>
-<title>Setup Rufus op Windows 11 - OpenSysAdmins</title>
+<title>Wachtwoordherstel op een Cisco 2960-switch - OpenSysAdmins</title>
 <link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#setup-rufus-op-windows-11">
+<a class="md-skip" href="#wachtwoordherstel-op-een-cisco-2960-switch">
           Skip to content
         </a>
 </div>
@@ -59,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Setup Rufus op Windows 11
+              Wachtwoordherstel op een Cisco 2960-switch
             
           </span>
 </div>
@@ -568,8 +570,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
 <a class="md-nav__link" href="../">
 <span class="md-ellipsis">
@@ -580,7 +582,7 @@
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
             Howtos
@@ -838,12 +840,87 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../wachtwoordherstel-cisco2960/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Wachtwoordherstel op een Cisco 2960-switch
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Wachtwoordherstel op een Cisco 2960-switch
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vereisten">
+<span class="md-ellipsis">
+      Vereisten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo">
+<span class="md-ellipsis">
+      Demo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setup">
+<span class="md-ellipsis">
+      Setup
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#situatie">
+<span class="md-ellipsis">
+      Situatie
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rommon">
+<span class="md-ellipsis">
+      ROMMON
+    </span>
+</a>
+<nav aria-label="ROMMON" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wachtwoord-herstel-mechanisme-ingeschakeld">
+<span class="md-ellipsis">
+      Wachtwoord herstel mechanisme ingeschakeld
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wachtwoord-herstel-mechanisme-uitgeschakeld">
+<span class="md-ellipsis">
+      Wachtwoord herstel mechanisme uitgeschakeld
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ios">
+<span class="md-ellipsis">
+      IOS
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -943,6 +1020,52 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setup">
+<span class="md-ellipsis">
+      Setup
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#situatie">
+<span class="md-ellipsis">
+      Situatie
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rommon">
+<span class="md-ellipsis">
+      ROMMON
+    </span>
+</a>
+<nav aria-label="ROMMON" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wachtwoord-herstel-mechanisme-ingeschakeld">
+<span class="md-ellipsis">
+      Wachtwoord herstel mechanisme ingeschakeld
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wachtwoord-herstel-mechanisme-uitgeschakeld">
+<span class="md-ellipsis">
+      Wachtwoord herstel mechanisme uitgeschakeld
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ios">
+<span class="md-ellipsis">
+      IOS
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </div>
@@ -950,14 +1073,296 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="setup-rufus-op-windows-11">Setup Rufus op Windows 11</h1>
+<h1 id="wachtwoordherstel-op-een-cisco-2960-switch">Wachtwoordherstel op een Cisco 2960-switch</h1>
+<p>Je doet een wachtwoordherstel op een Cisco Catalyst 2960 switch, wanneer het <code>console-wachtwoord</code> of het <code>enable exec-mode</code> wachtwoord (of beide) verloren of vergeten zijn. Zonder deze wachtwoorden is het onmogelijk om via de consolekabel of een beveiligde sessie (zoals SSH/Telnet) toegang te krijgen tot de geprivilegieerde EXEC-modus, de modus die nodig is om de configuratie van de switch te bekijken, wijzigen of beheren.</p>
 <h2 id="vereisten">Vereisten</h2>
 <ul>
-<li>een <a href="../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/" target="_blank">PC met Windows</a></li>
-<li>internet verbinding</li>
+<li>een <a href="../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/" target="_blank">PC met Linux Mint 22</a></li>
+<li><a href="../setup-minicom-linuxmint22/" target="_blank">minicom</a> terminal emulation software</li>
+<li>een console cable</li>
+<li>een Cisco 2960 24TT-L of 24TC-L Plus switch</li>
+<li>een <a href="../setup-ios-cisco2960/" target="_blank">werkend IOS</a>, maar niet toegankelijk</li>
 </ul>
 <h2 id="demo">Demo</h2>
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ZsdCP5cKJp4?autoplay=0&amp;loop=0&amp;mute=0" title="YouTube video player" width="560"></iframe>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="480" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&amp;loop=0&amp;mute=0" title="YouTube video player" width="854"></iframe>
+<h2 id="setup">Setup</h2>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="console-access.png"><img src="console-access.png"/></a></p>
+<h2 id="situatie">Situatie</h2>
+<p>Het "consolewachtwoord" en "enable-wachtwoord" (Privileged EXEC-modus) worden - naast andere switchconfiguratie-instellingen - opgeslagen in de startup-config (NVRAM). Het herstellen van een verloren wachtwoord is alleen nuttig als je een ontoegankelijk - maar werkend - IOS hebt. Zo niet, dan heb je een groter probleem en moet je eerst het <a href="../setup-ios-cisco2960/" target="_blank">IOS-besturingssysteem (her)installeren</a></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Probleem1</label><label for="__tabbed_1_2">Probleem2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Geen toegang tot de console.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>...
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>User Access Verification
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>Password:           &lt;--- typ een fout wachtwoord
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>Password:           &lt;--- typ een fout wachtwoord
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>Password:           &lt;--- typ een fout wachtwoord
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>% Bad passwords
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Wél toegang tot de console, maar géén toegang tot de "bevoorrechte exec-modus".</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>Switch&gt;enable
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>Password:           &lt;--- typ een fout wachtwoord
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Password:           &lt;--- typ een fout wachtwoord
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>Password:           &lt;--- typ een fout wachtwoord
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>% Bad secrets
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>Switch&gt;
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="rommon">ROMMON</h2>
+<p>Volg eerst de stappen, om de switch op te starten in <a href="../toegang-cisco-rommon/#cold-start" target="_blank">ROMMON-modus via een koude start</a>. Blijf in ROMMON voor de verdere stappen.</p>
+<h3 id="wachtwoord-herstel-mechanisme-ingeschakeld">Wachtwoord herstel mechanisme ingeschakeld</h3>
+<p>Als het <a href="../fabrieksinstellingen-herstellen-cisco2960/#wachtwoordherstelmechanisme-inschakelen" target="_blank">mechanisme voor wachtwoordherstel</a> is <em>ingeschakeld</em>, is het mogelijk om het opstartconfiguratiebestand te behouden.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Stap1</label><label for="__tabbed_2_2">Stap2</label><label for="__tabbed_2_3">Stap3</label><label for="__tabbed_2_4">Stap4</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Geef een overzicht van de bestanden die in Flash zijn opgeslagen. Het opstartconfiguratiebestand <code>startup-config</code> uit NVRAM heet in deze modus <code>config.text</code>. Gevoelige configuratiedetails <code>private-config</code> uit NVRAM heet in deze mode <code>private-config.text</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>switch: dir flash:
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>Directory of flash:/
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>    2  -rwx  15979776  &lt;date&gt;               c2960-lanbasek9-mz.150-2.SE11.bin
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>    3  drwx  128       &lt;date&gt;               pnp-tech
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>    4  drwx  0         &lt;date&gt;               pnp-info
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="hll">    5  -rwx  1781      &lt;date&gt;               config.text
+</span><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="hll">    8  -rwx  1921      &lt;date&gt;               private-config.text
+</span><a id="__codelineno-2-9" name="__codelineno-2-9"></a>    9  -rwx  3096      &lt;date&gt;               multiple-fs
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>49462784 bytes available (16081408 bytes used)
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>switch: 
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Optioneel: als je ervoor kiest het opstartconfiguratiebestand te willen behouden (je wil bv. de switch naam, IP adres op VLAN1, ... niet kwijt maar enkel het wachtwoord opnieuw instellen), hernoem dat bestand dan tijdelijk. Zo niet, sla deze stap dan over. </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>switch: rename flash:config.text flash:config.text.bak
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>switch:
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Optioneel: als je ervoor kiest het opstartconfiguratiebestand te <em>verwijderen</em> (je wil starten vanaf een lege configuratie), verwijder dan dat bestand. Zo niet, sla deze stap dan over.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>switch: delete flash:config.text
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>switch:
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Er is geen noodzaak om <code>private-config.text</code> handmatig te wissen (die wordt later toch opnieuw overschreven bij het instellen van een nieuw wachtwoord). Start de switch handmatig op.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>switch: boot
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>Loading "flash:c2960-lanbasek9-mz.150-2.SE11.bin"...@@@@@@@@@@@@@@@@@
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></input></input></div>
+<h3 id="wachtwoord-herstel-mechanisme-uitgeschakeld">Wachtwoord herstel mechanisme uitgeschakeld</h3>
+<p>Als daarentegen het <a href="../fabrieksinstellingen-herstellen-cisco2960/#wachtwoordherstelmechanisme-inschakelen" target="_blank">mechanisme voor wachtwoordherstel</a> is <em>uitgeschakeld</em>, is het niet mogelijk om het opstartconfiguratiebestand te behouden en moet je het systeem terugzetten naar de standaardconfiguratie.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Stap1</label><label for="__tabbed_3_2">Stap2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Geef een overzicht van de bestanden die in Flash zijn opgeslagen. Het opstartconfiguratiebestand ontbreekt! </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>switch: dir flash:
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>Directory of flash:/
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>    2  -rwx  15979776  &lt;date&gt;               c2960-lanbasek9-mz.150-2.SE11.bin
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>    3  drwx  128       &lt;date&gt;               pnp-tech
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>    4  drwx  0         &lt;date&gt;               pnp-info
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="hll">    8  -rwx  5         &lt;date&gt;               private-config.text
+</span><a id="__codelineno-6-8" name="__codelineno-6-8"></a>    9  -rwx  3096      &lt;date&gt;               multiple-fs
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>49415168 bytes available (16129024 bytes used)
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>switch: 
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Er is geen noodzaak om <code>private-config.text</code> handmatig te wissen (die wordt later toch opnieuw overschreven bij het instellen van een nieuw wachtwoord). Start de switch handmatig op.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>switch: boot
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>Loading "flash:c2960-lanbasek9-mz.150-2.SE11.bin"...@@@@@@@@@@@@@@@@@
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="ios">IOS</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:5"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"><input id="__tabbed_4_4" name="__tabbed_4" type="radio"><input id="__tabbed_4_5" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Stap1</label><label for="__tabbed_4_2">Stap2</label><label for="__tabbed_4_3">Stap3</label><label for="__tabbed_4_4">Stap4</label><label for="__tabbed_4_5">Stap5</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Er is op dit moment geen opstartconfiguratiebestand (alleen een back-up opstartconfiguratiebestand, indien je hier eerder voor had gekozen). Voer "nee" in bij de prompt voor de eerste configuratie en schakel over naar de privileged exec-modus.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>        --- System Configuration Dialog ---
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>Would you like to enter the initial configuration dialog? [yes/no]:     -----&gt; enter "no"
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>Switch&gt;enable
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>Switch#
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Als je een back-up van een opstartconfiguratiebestand hebt en dit wil herstellen, kopieer dan de inhoud van het back-up opstartconfiguratiebestand naar de actieve configuratie (het geheugen) en verwijder dan dat back-upbestand. Zo niet, sla deze stap dan over.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span>
+<span class="normal"><a href="#__codelineno-9-19">19</a></span>
+<span class="normal"><a href="#__codelineno-9-20">20</a></span>
+<span class="normal"><a href="#__codelineno-9-21">21</a></span>
+<span class="normal"><a href="#__codelineno-9-22">22</a></span>
+<span class="normal"><a href="#__codelineno-9-23">23</a></span>
+<span class="normal"><a href="#__codelineno-9-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="hll">Switch#copy flash:config.text.bak running-config
+</span><a id="__codelineno-9-2" name="__codelineno-9-2"></a>Destination filename [running-config]?                  ---&gt; ENTER
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>% Login disabled on line 1, until 'password' is set
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>% Login disabled on line 2, until 'password' is set
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>% Login disabled on line 3, until 'password' is set
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>% Login disabled on line 4, until 'password' is set
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>% Login disabled on line 5, until 'password' is set
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>% Login disabled on line 6, until 'password' is set
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>% Login disabled on line 7, until 'password' is set
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a>% Login disabled on line 8, until 'password' is set
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a>% Login disabled on line 9, until 'password' is set
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>% Login disabled on line 10, until 'password' is set
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a>% Login disabled on line 11, until 'password' is set
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a>% Login disabled on line 12, until 'password' is set
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a>% Login disabled on line 13, until 'password' is set
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a>% Login disabled on line 14, until 'password' is set
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a>% Login disabled on line 15, until 'password' is set
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a>% Login disabled on line 16, until 'password' is set
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a>1781 bytes copied in 0.964 secs (1848 bytes/sec)
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a>
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="hll">Switch#delete flash:config.text.bak
+</span><a id="__codelineno-9-22" name="__codelineno-9-22"></a>Delete filename [config.text.bak]?                      ---&gt; ENTER
+<a id="__codelineno-9-23" name="__codelineno-9-23"></a>Delete flash:/config.text.bak? [confirm]                ---&gt; ENTER
+<a id="__codelineno-9-24" name="__codelineno-9-24"></a>Switch#
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Wil je geen back-up herstellen, kan je indien gewenst de benodigde wachtwoorden instellen. Opgelet: het "privileged exec" wachtwoord via "enable secret" is een sterke versleuteling, het "console wachtwoord" via "service password-encryption" is een zwakke versleuteling (en eenvoudig te kraken).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>Switch#configure terminal 
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>Enter configuration commands, one per line.  End with CNTL/Z.
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>Switch(config)#enable secret cisco-EN-pass
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>Switch(config)#line console 0
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>Switch(config-line)#password cisco-CON-pass
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>Switch(config-line)#login
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>Switch(config-line)#exit
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>Switch(config)#service password-encryption 
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a>Switch(config)#end
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a>Switch#
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Kopieer de actieve configuratie naar de opstartconfiguratie. Herstart de switch.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span>
+<span class="normal"><a href="#__codelineno-11-6">6</a></span>
+<span class="normal"><a href="#__codelineno-11-7">7</a></span>
+<span class="normal"><a href="#__codelineno-11-8">8</a></span>
+<span class="normal"><a href="#__codelineno-11-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>Switch#copy running-configuration startup-configuration         
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>Building configuration...
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>[OK]
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>Switch#reload
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>Proceed with reload? [confirm]                          ---&gt; ENTER
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a>*Mar  1 00:15:53.633: %SYS-5-RELOAD: Reload requested by console. Reload Reason: Reload command.
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a>...
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Meld je aan met het nieuwe consolewachtwoord. Ga naar de privileged exec-modus met het nieuwe "enable"-wachtwoord.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span>
+<span class="normal"><a href="#__codelineno-12-6">6</a></span>
+<span class="normal"><a href="#__codelineno-12-7">7</a></span>
+<span class="normal"><a href="#__codelineno-12-8">8</a></span>
+<span class="normal"><a href="#__codelineno-12-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>User Access Verification
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>Password:                                               ---&gt; enter "cisco-CON-pass"
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>Switch&gt;
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>Switch&gt;enable
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a>Password:                                               ---&gt; enter "cisco-EN-pass"
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a>Switch#
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></input></input></input></div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
