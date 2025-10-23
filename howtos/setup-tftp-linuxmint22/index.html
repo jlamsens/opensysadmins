@@ -10,7 +10,7 @@
 <link href="https://www.opensysadmins.com/howtos/setup-tftp-linuxmint22/" rel="canonical"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.44" name="generator"/>
-<title>Setup van een tFTP service op Linux mint 22 - OpenSysAdmins</title>
+<title>Install tFTP on Linux Mint 21 - OpenSysAdmins</title>
 <link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#setup-van-een-tftp-service-op-linux-mint-22">
+<a class="md-skip" href="#install-tftp-on-linux-mint-21">
           Skip to content
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Setup van een tFTP service op Linux mint 22
+              Install tFTP on Linux Mint 21
             
           </span>
 </div>
@@ -845,6 +845,13 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../setup-ios-cisco2960/">
+<span class="md-ellipsis">
+    Setup van een Cisco IOS besturingssysteem op een Cisco 2960 switch
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -924,14 +931,297 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prereqs">
+<span class="md-ellipsis">
+      Prereqs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#update-the-apt-cache">
+<span class="md-ellipsis">
+      Update the APT cache
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-the-tftp-server-package">
+<span class="md-ellipsis">
+      Install the TFTP server package
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configure-the-service-optional">
+<span class="md-ellipsis">
+      Configure the service (optional)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#view-directory-permissionsownership">
+<span class="md-ellipsis">
+      View directory permissions/ownership
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verify-the-service">
+<span class="md-ellipsis">
+      Verify the service
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#enable-the-service-to-start-on-boot-optional">
+<span class="md-ellipsis">
+      Enable the service to start on boot (optional)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#serve-a-file">
+<span class="md-ellipsis">
+      Serve a file
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="setup-van-een-tftp-service-op-linux-mint-22">Setup van een tFTP service op Linux mint 22</h1>
-<p>todo</p>
+<h1 id="install-tftp-on-linux-mint-21">Install tFTP on Linux Mint 21</h1>
+<h2 id="prereqs">Prereqs</h2>
+<h2 id="update-the-apt-cache">Update the APT cache</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">guru@lab:~$_</label><label for="__tabbed_1_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo apt update
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>guru@lab:~$ sudo apt update
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease                                                      
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease                                                        
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>Ign:4 https://linuxmint-packages.mirror.liteserver.nl victoria InRelease                        
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease                                
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>Hit:6 https://linuxmint-packages.mirror.liteserver.nl victoria Release                          
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>Reading package lists... Done
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>Building dependency tree... Done
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>Reading state information... Done
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>All packages are up to date.
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>guru@lab:~$ 
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="install-the-tftp-server-package">Install the TFTP server package</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">guru@lab:~$_</label><label for="__tabbed_2_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo apt install tftpd-hpa
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>guru@lab:~$ sudo apt install tftpd-hpa
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>Reading package lists... Done
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>Building dependency tree... Done
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>Reading state information... Done
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>Suggested packages:
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>pxelinux
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>The following NEW packages will be installed:
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>tftpd-hpa
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>Need to get 40,7 kB of archives.
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>After this operation, 122 kB of additional disk space will be used.
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 tftpd-hpa amd64 5.2+20150808-1.2build2 [40,7 kB]
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>Fetched 40,7 kB in 0s (83,4 kB/s)  
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>Preconfiguring packages ...
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>Selecting previously unselected package tftpd-hpa.
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a>(Reading database ... 561282 files and directories currently installed.)
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a>Preparing to unpack .../tftpd-hpa_5.2+20150808-1.2build2_amd64.deb ...
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a>Unpacking tftpd-hpa (5.2+20150808-1.2build2) ...
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a>Setting up tftpd-hpa (5.2+20150808-1.2build2) ...
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a>Processing triggers for man-db (2.10.2-1) ...
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a>guru@lab:~$ 
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="configure-the-service-optional">Configure the service (optional)</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">guru@lab:~$_</label><label for="__tabbed_3_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>cat /etc/default/tftpd-hpa
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span>
+<span class="normal"><a href="#__codelineno-5-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>guru@lab:~$ cat /etc/default/tftpd-hpa 
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a># /etc/default/tftpd-hpa
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>TFTP_USERNAME="tftp"
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="hll">TFTP_DIRECTORY="/srv/tftp"
+</span><a id="__codelineno-5-6" name="__codelineno-5-6"></a>TFTP_ADDRESS=":69"
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>TFTP_OPTIONS="--secure"
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>guru@lab:~$ 
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="view-directory-permissionsownership">View directory permissions/ownership</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">guru@lab:~$_</label><label for="__tabbed_4_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>ls -ld /srv/tftp/
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>guru@lab:~$ ls -ld /srv/tftp/
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>drwxr-xr-x 2 root nogroup 4096 Sep  7 13:56 /srv/tftp/
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>guru@lab:~$
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="verify-the-service">Verify the service</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">guru@lab:~$_</label><label for="__tabbed_5_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>sudo systemctl status tftpd-hpa
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>guru@lab:~$ sudo systemctl status tftpd-hpa
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>● tftpd-hpa.service - LSB: HPA's tftp server
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>    Loaded: loaded (/etc/init.d/tftpd-hpa; generated)
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="hll">    Active: active (running) since Thu 2023-09-07 13:56:28 CEST; 9min ago
+</span><a id="__codelineno-9-5" name="__codelineno-9-5"></a>    Docs: man:systemd-sysv-generator(8)
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>    Process: 3293 ExecStart=/etc/init.d/tftpd-hpa start (code=exited, status=0/SUCCESS)
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>    Tasks: 1 (limit: 4539)
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>    Memory: 404.0K
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>        CPU: 8ms
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a>    CGroup: /system.slice/tftpd-hpa.service
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a>            └─3301 /usr/sbin/in.tftpd --listen --user tftp --address :69 --secure /srv/tftp
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a>Sep 07 13:56:28 lab systemd[1]: Starting LSB: HPA's tftp server...
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a>Sep 07 13:56:28 lab tftpd-hpa[3293]:  * Starting HPA's tftpd in.tftpd
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a>Sep 07 13:56:28 lab tftpd-hpa[3293]:    ...done.
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a>Sep 07 13:56:28 lab systemd[1]: Started LSB: HPA's tftp server.
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a>guru@lab:~$ 
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="enable-the-service-to-start-on-boot-optional">Enable the service to start on boot (optional)</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">guru@lab:~$_</label><label for="__tabbed_6_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>sudo systemctl enable tftpd-hpa
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>guru@lab:/srv/tftp$ sudo systemctl enable tftpd-hpa
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>[sudo] password for guru:     
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>tftpd-hpa.service is not a native service, redirecting to systemd-sysv-install.
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>Executing: /lib/systemd/systemd-sysv-install enable tftpd-hpa
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>guru@lab:/srv/tftp$ 
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="serve-a-file">Serve a file</h2>
+<p>In this example, a <a href="../download-cisco-IOS/" target="_blank">valid Cisco IOS image</a> is copied to the tFTP directory and
+permissions are set.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">guru@lab:~$_</label><label for="__tabbed_7_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>sudo cp /home/guru/Downloads/c2960-lanbasek9-mz.152-7.E8.bin /srv/tftp/
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>sudo chmod 644 /srv/tftp/c2960-lanbasek9-mz.152-7.E8.bin
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>guru@lab:~$ sudo cp /home/guru/Downloads/c2960-lanbasek9-mz.152-7.E8.bin /srv/tftp/
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>[sudo] password for guru:     
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>guru@lab:~$ sudo chmod 644 /srv/tftp/c2960-lanbasek9-mz.152-7.E8.bin 
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>guru@lab:~$
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
