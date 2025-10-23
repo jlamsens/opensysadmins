@@ -519,3 +519,15 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     [Lees verder](howtos/wachtwoordherstel-cisco2960/index.md){:target="_blank"}
     <br>
     <br>
+
+    <!--- ---------------------------------------------------------------------------------------------------------------- --->
+
+    <img src="howtos/setup-ios-cisco2960/home.png" width="320" height="180" align=right />
+    > *11 Augustus 2025 - in [Howtos](howtos/index.md) - X min instructie*
+
+
+    Het (her)installeren van Cisco IOS op een Cisco 2960 switch is het proces van het kopiëren van het besturingssysteemimage naar het flashgeheugen...
+
+    [Lees verder](howtos/setup-ios-cisco2960/index.md){:target="_blank"}
+    <br>
+    <br>

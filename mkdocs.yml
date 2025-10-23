@@ -478,6 +478,7 @@ nav:
     - Toegang krijgen tot een Cisco-apparaat in ROMMON-modus: howtos/toegang-cisco-rommon/index.md
     - Fabrieksinstellingen herstellen van een Cisco 2960-switch: howtos/fabrieksinstellingen-herstellen-cisco2960/index.md
     - Wachtwoordherstel op een Cisco 2960-switch: howtos/wachtwoordherstel-cisco2960/index.md
+    - Setup van een Cisco IOS besturingssysteem op een Cisco 2960 switch: howtos/setup-ios-cisco2960/index.md
       
 ####################################################################################
 
