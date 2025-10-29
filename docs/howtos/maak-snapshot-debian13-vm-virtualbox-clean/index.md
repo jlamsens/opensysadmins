@@ -12,4 +12,4 @@ Het doel van een snapshot van een virtuele machine (VM) in VirtualBox is het vas
 - geconfigureerde [Debian 13 basisinstellingen](../configureer-debian13-os-vm-virtualbox/index.md){:target="_blank"}
 
 ## Demo
-<iframe width="854" height="480" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="854" height="480" src="https://www.youtube.com/embed/cUqqHjvP6Q8?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

@@ -421,6 +421,17 @@ nav:
       - 05 Snapshot: tutorials/setup-debian13-vm-virtualbox/05-snapshot-debian13.md
       - 06 Conclusie: tutorials/setup-debian13-vm-virtualbox/06-conclusie.md
 
+    - Setup van een NAT netwerk LAB omgeving in VirtualBox:
+      - tutorials/setup-natnetwork-lab-virtualbox/index.md # overview/landing page
+      - 01 Vereisten: tutorials/setup-natnetwork-lab-virtualbox/01-vereisten.md
+      - 02 Klonen: tutorials/setup-natnetwork-lab-virtualbox/02-klonen.md
+      - 03 Groeperen: tutorials/setup-natnetwork-lab-virtualbox/03-groeperen.md
+      - 04 Nat network: tutorials/setup-natnetwork-lab-virtualbox/04-natnetwork.md
+      - 05 Configuratie LAB: tutorials/setup-natnetwork-lab-virtualbox/05-configuratie-lab.md
+      - 06 Snapshot: tutorials/setup-natnetwork-lab-virtualbox/06-snapshot.md
+      - 07 Test: tutorials/setup-natnetwork-lab-virtualbox/07-test.md
+      - 08 Conclusie: tutorials/setup-natnetwork-lab-virtualbox/08-conclusie.md
+
  #   - Setup van een testlab in VirtualBox:
  #    - tutorials/setup-testlab-virtualbox/index.md # overview/landing page
  #    - 01 Vereisten: tutorials/setup-testlab-virtualbox/01-vereisten.md
