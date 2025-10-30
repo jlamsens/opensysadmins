@@ -499,7 +499,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <!--- ---------------------------------------------------------------------------------------------------------------- --->
 
     <img src="howtos/fabrieksinstellingen-herstellen-cisco2960/home.png" width="320" height="180" align=right />
-    > *11 Augustus 2025 - in [Howtos](howtos/index.md) - X min instructie*
+    > *15 Augustus 2025 - in [Howtos](howtos/index.md) - X min instructie*
 
 
     Het herstellen van de fabrieksinstellingen op een Cisco Catalyst 2960-switch zorgt ervoor dat alle aangepaste instellingen zoals IP-adressen, ...
@@ -511,7 +511,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <!--- ---------------------------------------------------------------------------------------------------------------- --->
 
     <img src="howtos/wachtwoordherstel-cisco2960/home.png" width="320" height="180" align=right />
-    > *11 Augustus 2025 - in [Howtos](howtos/index.md) - X min instructie*
+    > *18 Augustus 2025 - in [Howtos](howtos/index.md) - X min instructie*
 
 
     Je doet een wachtwoordherstel op een Cisco Catalyst 2960 switch, wanneer het console-wachtwoord of het enable exec-mode wachtwoord (of beide) verloren of vergeten zijn.
@@ -523,7 +523,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <!--- ---------------------------------------------------------------------------------------------------------------- --->
 
     <img src="howtos/setup-ios-cisco2960/home.png" width="320" height="180" align=right />
-    > *11 Augustus 2025 - in [Howtos](howtos/index.md) - X min instructie*
+    > *22 Augustus 2025 - in [Howtos](howtos/index.md) - X min instructie*
 
 
     Het (her)installeren van Cisco IOS op een Cisco 2960 switch is het proces van het kopiëren van het besturingssysteemimage naar het flashgeheugen...
@@ -531,3 +531,45 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     [Lees verder](howtos/setup-ios-cisco2960/index.md){:target="_blank"}
     <br>
     <br>
+
+    <!--- ---------------------------------------------------------------------------------------------------------------- --->
+
+    <img src="howtos/maak-clone-vm-virtualbox/home.png" width="320" height="180" align=right />
+    > *23 Augustus 2025 - in [Howtos](howtos/index.md) - 4 min instructie*
+
+
+    Deze how-to video toont je het stap-voor-stap proces om een bestaande virtuele machine (VM) in VirtualBox te klonen. Dit is essentieel voor het veilig aanmaken van meerdere, identieke...
+
+    [Lees verder](howtos/maak-clone-vm-virtualbox/index.md){:target="_blank"}
+    <br>
+    <br>
+
+=== "5"
+
+    <img src="howtos/maak-groep-vm-virtualbox/home.png" width="320" height="180" align=right />
+    > *26 Augustus 2025 - in [Howtos](howtos/index.md) - 2 min instructie*
+
+
+    Deze how-to video toont je het stap-voor-stap proces om een bestaande virtuele machine (VM) in VirtualBox te klonen. Dit is essentieel...
+
+    [Lees verder](howtos/maak-groep-vm-virtualbox/index.md){:target="_blank"}
+    <br>
+    <br>
+
+    <img src="howtos/configureer-natnetwork-virtualbox/home.png" width="320" height="180" align=right />
+    > *31 Augustus 2025 - in [Howtos](howtos/index.md) - 4 min instructie*
+
+
+    Deze korte howto laat zien hoe je efficiënt orde schept in je groeiende lijst van virtuele machines (VM's)...
+
+    [Lees verder](howtos/configureer-natnetwork-virtualbox/index.md){:target="_blank"}
+    <br>
+    <br>
+
+
+
+<!---
+    - Configureer een NAT network in VirtualBox: howtos/configureer-natnetwork-virtualbox/index.md
+    - Configureer een LAB van virtuele machines in VirtualBox: howtos/configureer-lab-vm-virtualbox/index.md
+    - Maak een snapshot van een virtuele machine in VirtualBox (LAB clean install): howtos/maak-snapshot-vm-virtualbox-labclean/index.md
+--->
