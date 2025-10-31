@@ -6,7 +6,7 @@ Binnen een BIOS/UEFI utility, dat toegankelijk is tijdens het opstarten van de c
 - een computer met een **BIOS of UEFI** (moderne computers hebben meestal UEFI)
 
 ## Demo
-<iframe width="854" height="480" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="854" height="480" src="https://www.youtube.com/embed/NN4nlHj7iC8?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Instructies
 Deze instructies zijn gebaseerd op een `HP Z2` pc. Raadpleeg altijd de handleiding van jouw eigen hardware, want de stappen kunnen verschillen.

@@ -596,6 +596,16 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <br>
     <br>
 
+    <img src="howtos/download-windows11-evaluation-iso/home.png" width="320" height="180" align=right />
+    > *09 September 2025 - in [Howtos](howtos/index.md) - 1 min instructie*
+
+
+    Een Windows 11 Enterprise Evaluation ISO-bestand is een speciale installatieversie van Windows 11 Enterprise die Microsoft aanbiedt voor proef- en evaluatiedoeleinden (90 dagen)...
+
+    [Lees verder](howtos/download-windows11-evaluation-iso/index.md){:target="_blank"}
+    <br>
+    <br>
+
 
 <!---
     - commentaar
