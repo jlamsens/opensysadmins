@@ -550,7 +550,7 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     > *26 Augustus 2025 - in [Howtos](howtos/index.md) - 2 min instructie*
 
 
-    Deze how-to video toont je het stap-voor-stap proces om een bestaande virtuele machine (VM) in VirtualBox te klonen. Dit is essentieel...
+    Deze korte howto laat zien hoe je efficiënt orde schept in je groeiende lijst van virtuele machines (VM's)...
 
     [Lees verder](howtos/maak-groep-vm-virtualbox/index.md){:target="_blank"}
     <br>
@@ -560,16 +560,43 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     > *31 Augustus 2025 - in [Howtos](howtos/index.md) - 4 min instructie*
 
 
-    Deze korte howto laat zien hoe je efficiënt orde schept in je groeiende lijst van virtuele machines (VM's)...
+    Deze howto demonstreert hoe je een "NAT Network" aanmaakt en configureert in VirtualBox. Dit type netwerk...
 
     [Lees verder](howtos/configureer-natnetwork-virtualbox/index.md){:target="_blank"}
     <br>
     <br>
 
+    <img src="howtos/configureer-lab-vm-virtualbox/home.png" width="320" height="180" align=right />
+    > *31 Augustus 2025 - in [Howtos](howtos/index.md) - 4 min instructie*
+
+
+    Deze praktische videohandleiding toont hoe je snel een compleet virtueel lab bouwt in VirtualBox door gebruik te maken van je bestaande templates...
+
+    [Lees verder](howtos/configureer-lab-vm-virtualbox/index.md){:target="_blank"}
+    <br>
+    <br>
+
+    <img src="howtos/maak-snapshot-vm-virtualbox-labclean/home.png" width="320" height="180" align=right />
+    > *31 Augustus 2025 - in [Howtos](howtos/index.md) - 4 min instructie*
+
+
+    Het doel van een snapshot van een virtuele machine (VM) in VirtualBox is het vastleggen van de exacte toestand van de VM op een specifiek moment...
+
+    [Lees verder](howtos/maak-snapshot-vm-virtualbox-labclean/index.md){:target="_blank"}
+    <br>
+    <br>
+
+    <img src="howtos/test-lab-vm-virtualbox/home.png" width="320" height="180" align=right />
+    > *31 Augustus 2025 - in [Howtos](howtos/index.md) - 4 min instructie*
+
+
+    Deze howto is de afsluiting van je labopzet en laat zien hoe je de functionaliteit van je gemengde virtuele omgeving test. Je leert hoe...
+
+    [Lees verder](howtos/test-lab-vm-virtualbox/index.md){:target="_blank"}
+    <br>
+    <br>
 
 
 <!---
-    - Configureer een NAT network in VirtualBox: howtos/configureer-natnetwork-virtualbox/index.md
-    - Configureer een LAB van virtuele machines in VirtualBox: howtos/configureer-lab-vm-virtualbox/index.md
-    - Maak een snapshot van een virtuele machine in VirtualBox (LAB clean install): howtos/maak-snapshot-vm-virtualbox-labclean/index.md
+    - commentaar
 --->

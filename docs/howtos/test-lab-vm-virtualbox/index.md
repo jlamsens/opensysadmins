@@ -15,4 +15,4 @@ Deze howto is de afsluiting van je labopzet en laat zien hoe je de functionalite
 - een [LAB clean install snapshot](../maak-snapshot-vm-virtualbox-labclean/index.md){:target="_blank"} van het virtuele LAB
 
 ## Demo
-<iframe width="854" height="480" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="854" height="480" src="https://www.youtube.com/embed/l_z3HhGvD_k?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
