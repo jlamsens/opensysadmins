@@ -15,12 +15,12 @@ Voordelen van de installatie via een .deb pakket t.o.v. installatie [methode1](.
 <iframe width="854" height="480" src="https://www.youtube.com/embed/O5uMXaO0TyQ?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Download pakket
-Download het `.deb`-pakket van de gewenste versie vanaf [https://www.virtualbox.org/wiki/Download_Old_Builds](https://www.virtualbox.org/wiki/Download_Old_Builds)
+Op [https://www.virtualbox.org/wiki/Download_Old_Builds](https://www.virtualbox.org/wiki/Download_Old_Builds) vind je oudere versies terug van VirtualBox.
 
 
 === "guru@hp:~/Downloads$_"
 
-    Voorbeeld: versie 7.1.12
+    In dit voorbeeld downloaden we versie 7.1.12
 
     ``` title='' hl_lines="0"
     wget https://download.virtualbox.org/virtualbox/7.1.12/virtualbox-7.1_7.1.12-169651~Ubuntu~noble_amd64.deb

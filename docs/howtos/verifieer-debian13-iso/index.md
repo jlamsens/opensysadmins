@@ -10,7 +10,7 @@ Een [gedownload Debian ISO-bestand](../download-debian13-iso/index.md){:target="
 - indien op Windows: [GNU Privacy Guard voor Windows](../setup-gnupg-windows11/index.md){:target="_blank"}
 
 ## Demo
-<iframe width="854" height="480" src="https://www.youtube.com/embed/iVh_-AbC2GY?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="854" height="480" src="https://www.youtube.com/embed/GT7kc9JgXoQ?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Open Terminal
 
