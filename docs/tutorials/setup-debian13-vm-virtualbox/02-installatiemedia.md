@@ -10,4 +10,4 @@ Voordat we beginnen met de installatie in een virtuele machine, moeten we de ben
 Zorg ervoor dat je beschikt over het officiële installatiebestand voor Debian Linux. Dit vormt de basis voor je installatie, of je het nu downloadt van de Debian website of verkrijgt via een lokale bron.
 
 - [Stap 2.2: Verifieer de authenticiteit en integriteit van een Debian 13 ISO-bestand.](../../howtos/verifieer-debian13-iso/index.md){:target="_blank"}
-Controleer of het gedownloade Linux Mint ISO-bestand correct en ongewijzigd is.
+Controleer of het gedownloade Debian 13 ISO-bestand correct en ongewijzigd is.

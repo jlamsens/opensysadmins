@@ -6,7 +6,7 @@ Een [gedownload Debian ISO-bestand](../download-debian13-iso/index.md){:target="
 - een [PC met Windows of Linux](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
 - internet verbinding
 - het [Debian ISO-bestand](../download-debian13-iso/index.md){:target="_blank"}
-- de Debian verificatiebestanden; op dezelfde downloadpagina waar je het ISO-bestand vindt, zoek je naar links om `SHA256SUMS` en `SHA256SUMS.sign` te downloaden. Zorg ervoor dat je deze bestanden via "Opslaan als..." opslaat en niet alleen de inhoud kopieert. Bewaar alle drie de bestanden (ISO, SHA256SUMS.txt en SHA256SUMS.sign) in dezelfde map, bv. `Downloads`
+- de Debian verificatiebestanden; op [dezelfde downloadpagina](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/){:target="_blank"} waar je het ISO-bestand vindt, zoek je naar links om `SHA256SUMS` en `SHA256SUMS.sign` te downloaden. Zorg ervoor dat je deze bestanden via "Opslaan als..." opslaat en niet alleen de inhoud kopieert. Bewaar alle drie de bestanden (ISO, SHA256SUMS.txt en SHA256SUMS.sign) in dezelfde map, bv. `Downloads`
 - indien op Windows: [GNU Privacy Guard voor Windows](../setup-gnupg-windows11/index.md){:target="_blank"}
 
 ## Demo
