@@ -606,6 +606,25 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <br>
     <br>
 
+    <img src="howtos/wachtwoordherstel-cisco1941/home.png" width="320" height="180" align=right />
+    > *15 September 2025 - in [Howtos](howtos/index.md) - 5 min instructie*
+
+
+    Je doet een wachtwoordherstel op een Cisco 1941 router, wanneer het console-wachtwoord of het enable exec-mode wachtwoord (of beide) verloren of vergeten zijn...
+
+    [Lees verder](howtos/wachtwoordherstel-cisco1941/index.md){:target="_blank"}
+    <br>
+    <br>
+
+    <img src="howtos/setup-ios-cisco1941/home.png" width="320" height="180" align=right />
+    > *17 September 2025 - in [Howtos](howtos/index.md) - 5 min instructie*
+
+
+    Het (her)installeren van Cisco IOS op een Cisco 1941 router is het proces van het kopiëren van het besturingssysteemimage naar het flashgeheugen. Dit kan op twee manieren...
+
+    [Lees verder](howtos/setup-ios-cisco1941/index.md){:target="_blank"}
+    <br>
+    <br>
 
 <!---
     - commentaar

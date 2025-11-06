@@ -25,7 +25,7 @@ Op het moment van schrijven is de nieuwste iOS voor...
 
 Versie "15.2(7)E8" werkt NIET op een "Cisco 2960 24TT-L switch". Versie 15.0(2)SE11 werkt op beide switches. Ik gebruik deze laatste versie dus voor de voorbeelden.
 
-## IOS transfer over serial (xmodem)
+## IOS overdracht over serial (xmodem)
 <img src="console-access.png"/>
 
 ### Vanuit IOS
@@ -279,7 +279,7 @@ Start de switch op in [ROMMON-mode via een cold start](../toegang-cisco-rommon/i
     Switch#
     ```
 
-## IOS transfer over network protocol
+## IOS overdracht over network protocol
 Overdracht via een netwerkprotocol is alleen mogelijk vanaf IOS, niet vanuit de ROMMON-modus.
 Connecteer een UTP-netwerkkabel van de LAB-PC (Gigabit poort) naar een willekeurige poort van de switch (tip: neem ook een Gigabit switchpoort, bv. G0/1).
 

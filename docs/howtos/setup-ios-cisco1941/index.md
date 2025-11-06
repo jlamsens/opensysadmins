@@ -1,24 +1,31 @@
-# (Re)install an IOS operating system on a Cisco 1941 router
+# Setup van een Cisco IOS besturingssysteem op een Cisco 1941 router
 
+Het (her)installeren van Cisco IOS op een Cisco 1941 router is het proces van het kopiëren van het besturingssysteemimage naar het flashgeheugen. Dit kan op twee manieren:
 
-## Prereqs
-- a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/index.md){:target="_blank"}/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/index.md){:target="_blank"}) running Linux Mint 21
-    - [minicom](../use-minicom-linux-mint/index.md){:target="_blank"} terminal emulation software
-    - (a [tFTP service](../install-tftp-linux-mint/index.md){:target="_blank"})
-- a console cable
-- (a network cable)
-- a Cisco 1941 router
+- Via een consolekabel (directe seriële verbinding): Hierbij gebruik je het Xmodem-protocol om het IOS-bestand over te zetten, wat kan vanuit een werkend IOS of vanuit de ROM Monitor (ROMmon) modus als de router niet correct opstart.
+- Via een netwerkkabel: Hierbij gebruik je netwerkprotocollen zoals TFTP, SFTP (via SSH), of HTTP om de image over te dragen. Deze methode is enkel mogelijk vanuit een reeds werkend IOS en niet vanuit ROMmon, aangezien er netwerkfunctionaliteit vereist is.
 
-## Situation
-At the time of writing, the latest IOS for a Cisco 1941 router is c1900-universalk9-mz.SPA.157-3.M8.bin
-I'll use that version for the examples.
+Na de overdracht wordt de router herstart om met het nieuwe of herstelde IOS-image op te starten.
 
-## IOS transfer over serial (xmodem)
+## Vereisten
+- een [PC met Linux Mint 22](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
+- [minicom](../setup-minicom-linuxmint22/index.md){:target="_blank"} terminal emulation software
+- een console kabel en/of netwerk kabel
+- een Cisco 1941 router (al dan niet toegankelijk)
+
+## Demo
+<iframe width="854" height="480" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Situatie
+Op het moment van schrijven is de nieuwste versie van IOS voor een Cisco 1941-router c1900-universalk9-mz.SPA.157-3.M8.bin.
+Ik gebruik die versie voor de voorbeelden.
+
+## IOS overdracht over serial (xmodem)
 <img src="console-access.png"/>
 
-### From IOS
-=== "Step1"
-    Verify that there is enough space left on the Flash filesystem to add an (additional) IOS. In this example, I will simulate a missing IOS by deleting it. Do not reload!
+### Vanaf IOS
+=== "Stap1"
+    Controleer of er voldoende ruimte over is op het Flash-bestandssysteem om een ​​(extra) IOS toe te voegen. In dit voorbeeld maak ik voldoende plaats vrij door het bestaande IOS te verwijderen. Niet herladen!
 
     ``` title='' hl_lines="1 10"
     Router#dir flash:
@@ -36,8 +43,8 @@ I'll use that version for the examples.
     Router#
     ```
 
-=== "Step2"
-    Set the baud rate to 115200 to speed up the transfer. You will lose the connection after the last command. Some gibberish characters can emerge.
+=== "Stap2"
+    Stel de baudrate in op 115200 om de overdracht te versnellen. De verbinding wordt verbroken na de laatste opdracht. Er kunnen wat onzinnige tekens verschijnen; dit is normaal.
 
     ``` title='' hl_lines="4" 
     Router#conf t
@@ -47,9 +54,10 @@ I'll use that version for the examples.
     C�
     ```
 
-=== "Step3"
-    Adjust the settings in your terminal emulation program to match the new baud rate. For [minicom](../use-minicom-linux-mint/index.md), press ++control+a++ and then ++z++. 
-    Type ++o++ and choose "Serial port setup". Change setting ++e++ and ++enter++ twice. Exit.
+=== "Stap3"
+    Pas de instellingen in je terminal-emulatieprogramma aan de nieuwe baudrate aan. Voor [minicom](../setup-minicom-linuxmint22/index.md){:target="_blank"} druk je op ++control+a++ en vervolgens op ++z++.
+
+    Typ ++o++ en kies "Serial port setup". Wijzig de instelling met ++e++ en druk tweemaal op ++enter++. Exit. Mogelijks moet je nogmaals een ++enter++ drukken om opnieuw toegang te verkrijgen tot de console.
 
     ``` title='' hl_lines="5 11"
     Router#conf t                                                                                                    
@@ -74,72 +82,58 @@ I'll use that version for the examples.
         +-----------------------------------------------------------------------+
     ```
 
-=== "Step4"
-    Press ++enter++ The connection is back. Initiate an xMODEM transfer. Confirm the destination filename. The switch will then prompt you to start the transfer from your terminal emulator.
+=== "Stap4"
+    Start een xMODEM-overdracht. Bevestig de doelbestandsnaam. De router vraagt ​je vervolgens om de overdracht te starten vanuit je terminalemulator.
 
-    ``` title='' hl_lines="2"
-        Switch(config-line)#end
-        Switch#copy xmodem: flash:c2960-lanbasek9-mz.150-2.SE11.bin
-        Destination filename [c2960-lanbasek9-mz.150-2.SE11.bin]?     <----- press ENTER
-        Begin the Xmodem or Xmodem-1K transfer now...
-        CCC
-    ```
+    <img src="xmodem-start-ios-serial.png">
 
-=== "Step5"
-    For minicom, press ++control+a++ and then ++z++. Type ++s++ (Send files) and select "xmodem". Navigate your way to the new [IOS file](../todo/index.md) (here /srv/tftp). Press ++space++ to tag the file and enter "Okay" to send.
+=== "Stap5"
+    Voor minicom, druk op ++control+a++ en vervolgens op ++z++. Typ ++s++ (Send files) en selecteer "xmodem". Navigeer naar het nieuwe [IOS-bestand](../todo/index.md) (hier /srv/tftp). Druk op ++space++ om het bestand te selecteren en druk "Oké" om te verzenden.
 
     <img src="xmodem-navigate-ios-serial.png">
 
-=== "Step6"
-    Grab a coffee. This can take a long time depending on the size of the IOS image. Wait for the transfer to complete and then press ++enter++ to quit.
+=== "Stap6"
+    Neem een ​​kop koffie. Dit kan lang duren, afhankelijk van de grootte van de IOS-image. Wacht tot de overdracht is voltooid en druk ++enter++ om te stoppen.
 
     <img src="xmodem-transfer-ios-serial.png">
 
-=== "Step7"
-    There is nu such thing as "boot system flash:/..." like with a Cisco 2960 switch. Just reload the router and it will find the IOS on flash.
+=== "Stap7"
+    Je zou kunnen `boot system flash:/...` gebruiken (zoals bij een Cisco 2960 switch), maar dit schrijft een regel weg in de running-config en dat willen we niet, want we wensen een lege configuratie.
 
-    ``` title='' hl_lines="1 3 8"
+    ``` title='' hl_lines="0"
+    # niet nodig
+    Router(config)#boot system flash:c1900-universalk9-mz.SPA.157-3.M8.bin
+    Router(config)#exit
+    Router#show running-config | include boot      
+    boot-start-marker
+    boot system flash:c1900-universalk9-mz.SPA.157-3.M8.bin
+    boot-end-marker
+    ```
+ 
+=== "Stap8"
+    Na een herstart zoekt/vindt de router wel een IOS op de flash. Je moet de instellingen in je terminal-emulatieprogramma opnieuw aanpassen aan de standaard baudrate van 9600. Controleer of de juiste IOS-image is geladen. Veel plezier met je nieuwe IOS!
 
+    ``` title='' hl_lines="0"
+    Router#show version | include System image file
+    System image file is "flash0:c1900-universalk9-mz.SPA.157-3.M8.bin"
+    Router#
     ```
 
-=== "Step8"
-    You have to adjust the settings in your terminal emulation program again, to match the default baud of 9600. Verify that the correct IOS image is loaded. Enjoy your new IOS!
-
-    ``` title='' hl_lines="2 6 12"
-    Switch#show version
-    Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.0(2)SE11, RELEASE SOFTWARE (fc3)
-    ...
-    ...
-    System returned to ROM by power-on
-    System image file is "flash:/c2960-lanbasek9-mz.150-2.SE11.bin"
-    ...
-    ...
-
-    Switch Ports Model              SW Version            SW Image                 
-    ------ ----- -----              ----------            ----------               
-    *    1 26    WS-C2960+24TC-L    15.0(2)SE11           C2960-LANBASEK9-M        
+### Vanaf ROMMON
+In tegenstelling tot een Cisco 2960-switch is het, voor zover ik weet, niet mogelijk om xmodem vanaf de router te gebruiken in [ROMMON-mode](../toegang-cisco-rommon/index.md){:target="_blank"}.
 
 
-    Configuration register is 0xF
-
-    Switch#
-    ```
-
-### From ROMMON
-Unlike with a Cisco 2960 switch, to my knowledge, it is not possible to use xmodem from the router in [ROMMON-mode](../access-cisco-device-rommon/index.md).
-
-
-## IOS transfer over network protocol
-Unlike with a Cisco 2960 switch, transfer using a network protocol is possible from IOS *and* from ROMMON-mode.
+## IOS-overdracht via netwerkprotocol
+In tegenstelling tot een Cisco 2960-switch is overdracht via een netwerkprotocol mogelijk vanuit IOS *en* vanuit de ROMMON-modus.
 
 <img src="network-access.png"/>
 
-### From IOS
+### Vanaf IOS
 
 #### tFTP
 
-=== "Step1"
-    Verify that there is enough space left on the Flash filesystem to add an (additional) IOS. In this example, I will simulate a missing IOS by deleting it.
+=== "Stap1"
+    Controleer of er voldoende ruimte over is op het Flash-bestandssysteem om een ​​(extra) IOS toe te voegen. In dit voorbeeld simuleer ik een ontbrekend IOS door het te verwijderen.
 
     ``` title='' hl_lines="1 10"
     Router#dir flash:
@@ -157,10 +151,10 @@ Unlike with a Cisco 2960 switch, transfer using a network protocol is possible f
     Router#
     ```
 
-=== "Step2"
-    You need [a tFTP service](../todo/index.md) on the LAB-PC. Copy a [valid Cisco IOS image](../todo/index.md) file to the tFTP directory where files are served from. Adjust permissions.
+=== "Stap2"
+    Je hebt [een tFTP-service](../todo/index.md){:target="_blank"} nodig op de LAB-PC. Kopieer een [geldige Cisco IOS-image](../todo/index.md){:target="_blank"} naar de tFTP-directory van waaruit de bestanden worden geserveerd. Pas de rechten aan.
 
-    ``` title='' hl_lines="0"
+    ``` title='' hl_lines="2"
     <TODO COPY AND PERMISSIONS>
     guru@lab:~$ ls -lh /srv/tftp/
     total 852M
@@ -170,10 +164,10 @@ Unlike with a Cisco 2960 switch, transfer using a network protocol is possible f
     guru@lab:~$ 
     ```
 
-=== "Step3"
-    - Show the name of the network interface on the LAB-PC (in this case: enp0s25)
-    - Configure an temporary IP address and subnet mask. 
-    - Verify.
+=== "Stap3"
+    - Toon de naam van de netwerkinterface op de LAB-PC (in dit geval: enp0s25)
+    - Configureer een tijdelijk IP-adres en subnetmasker.
+    - Controleer.
 
     ``` title='' hl_lines="1 8 10"
     guru@lab:~$ sudo ip link show
@@ -193,10 +187,10 @@ Unlike with a Cisco 2960 switch, transfer using a network protocol is possible f
         valid_lft forever preferred_lft forever
     ```
 
-=== "Step4"
-    Configure an IP address and subnet mask on the router. Verify.
+=== "Stap4"
+    Configureer een IP-adres en subnetmasker op de router. Controleer dit.
 
-    ``` title='' hl_lines="0"
+    ``` title='' hl_lines="3 8"
     Router#conf t
     Router(config)#int g0/0
     Router(config-if)#ip add 192.168.1.84 255.255.255.0
@@ -212,10 +206,10 @@ Unlike with a Cisco 2960 switch, transfer using a network protocol is possible f
     Router#
     ```
 
-=== "Step5"
-    Verify connectivity between the LAB-PC and the router.
+=== "Stap5"
+    Controleer de connectiviteit tussen de LAB-PC en de router.
 
-    ``` title='' hl_lines="0"
+    ``` title='' hl_lines="1"
     Router#ping 192.168.1.101
     Type escape sequence to abort.
     Sending 5, 100-byte ICMP Echos to 192.168.1.101, timeout is 2 seconds:
@@ -224,8 +218,8 @@ Unlike with a Cisco 2960 switch, transfer using a network protocol is possible f
     Router#
     ```
 
-=== "Step6"
-    Copy the IOS image from the TFTP server to the router's flash memory.
+=== "Stap6"
+    Kopieer de IOS-image van de tFTP-server naar het flashgeheugen van de router.
 
     ``` title='' hl_lines="1"
     Router#copy tftp://192.168.1.101/c1900-universalk9-mz.SPA.157-3.M8.bin flash:
@@ -239,8 +233,8 @@ Unlike with a Cisco 2960 switch, transfer using a network protocol is possible f
     Router#
     ```
 
-=== "Step7"
-    Verify and reboot.
+=== "Stap7"
+    Controleer en start opnieuw op.
 
     ``` title='' hl_lines="1 11"
     Router#dir flash:
@@ -260,10 +254,10 @@ Unlike with a Cisco 2960 switch, transfer using a network protocol is possible f
     *Jul 10 11:53:13.439: %SYS-5-RELOAD: Reload requested by console. Reload Reason: Reload Command.
     ```
 
-=== "Step8"
-    Verify that the correct IOS image is loaded. Enjoy your new IOS!
+=== "Stap8"
+    Controleer of de juiste IOS-image is geladen. Veel plezier met je nieuwe IOS!
 
-    ``` title='' hl_lines="5"
+    ``` title='' hl_lines="1 5"
     Router#show version
     Cisco IOS Software, C1900 Software (C1900-UNIVERSALK9-M), Version 15.7(3)M8, RELEASE SOFTWARE (fc1)
     ...
@@ -279,12 +273,12 @@ todo
 todo
 
 ### From ROMMON
-First, [start the router in ROMMON-mode](../access-cisco-device-rommon/index.md).
+Start eerst de router in de [ROMMON-modus](../toegang-cisco-rommon/index.md){:target="_blank"}.
 
 #### tFTP
 
-=== "Step1"
-    Set the necessary parameters to make tFTP possible.
+=== "Stap1"
+    Stel de benodigde parameters in om tFTP mogelijk te maken.
 
     ``` title='' hl_lines="0"
     rommon 1 > IP_ADDRESS=192.168.1.84
@@ -295,8 +289,8 @@ First, [start the router in ROMMON-mode](../access-cisco-device-rommon/index.md)
     rommon 6 >
     ```
 
-=== "Step2"
-    Start the tFTP transfer.
+=== "Stap2"
+    Start de tFTP-overdracht.
 
     ``` title='' hl_lines="0"
     rommon 6 > tftpdnld
@@ -340,8 +334,8 @@ First, [start the router in ROMMON-mode](../access-cisco-device-rommon/index.md)
     rommon 7 > 
     ```
 
-=== "Step3"
-    Verify flash.
+=== "Stap3"
+    Controleer Flash.
 
     ``` title='' hl_lines="0"
     rommon 7 > dir flash:
@@ -352,8 +346,8 @@ First, [start the router in ROMMON-mode](../access-cisco-device-rommon/index.md)
     rommon 8 > 
     ```
 
-=== "Step4"
-    Reload the router.
+=== "Stap4"
+    Herstart de router.
 
     ``` title='' hl_lines="0"
     rommon 8 > reset
