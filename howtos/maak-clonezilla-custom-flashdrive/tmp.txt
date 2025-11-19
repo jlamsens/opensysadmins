@@ -1,3 +1,6 @@
+SYSLINUX
+---------------
+
 label Clonezilla NETWORK DUMP VDAB LAB
   # MENU DEFAULT
   # MENU HIDE
@@ -30,3 +33,18 @@ label Clonezilla LOCAL DUMP VDAB LAB
   TEXT HELP
   VDAB LOCAL DUMP VDAB LAB
   ENDTEXT
+
+
+
+GRUB
+-------------
+
+menuentry "Clonezilla SSH RESTORE ICT4U LAPTOP (LAB - DHCP)" {
+    linux /live/vmlinuz boot=live union=overlay username=user hostname=lunar config quiet loglevel=0 noswap edd=on nomodeset enforcing=0 noeject locales="en_US.UTF-8" keyboard-layouts="NONE" ocs_repository="ssh://guru@172.16.41.2/home/guru/Downloads/DUMPS/ICT4U/" ocs_live_run="ocs-sr --batch -g auto -e1 auto -e2 -r -j2 -k0 -scr -p poweroff restoredisk ICT4U-LAPTOP-DUMP nvme0n1" ssh_login_password="guru" ocs_ssh_host_key_check="no" vga=791 ip=dhcp net.ifnames=0 biosdevname=0 splash i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes vmwgfx.enable_fbdev=1
+    initrd /live/initrd.img
+}
+
+menuentry "Clonezilla SSH DUMP ICT4U LAPTOP (LAB - DHCP)" {
+    linux /live/vmlinuz boot=live union=overlay username=user hostname=lunar config quiet loglevel=0 noswap edd=on nomodeset enforcing=0 noeject locales="en_US.UTF-8" keyboard-layouts="NONE" ocs_repository="ssh://guru@172.16.41.2/home/guru/Downloads/DUMPS/ICT4U/" ocs_live_run="ocs-sr --batch -g auto -e1 auto -e2 -r -j2 -k0 -scr -p poweroff savedisk ICT4U-LAPTOP-DUMP nvme0n1" ssh_login_password="guru" ocs_ssh_host_key_check="no" vga=791 ip=dhcp net.ifnames=0 biosdevname=0 splash i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes vmwgfx.enable_fbdev=1
+    initrd /live/initrd.img
+}
