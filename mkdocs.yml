@@ -358,17 +358,16 @@ nav:
   - Tutorials: #listed in header, must be unique
     - tutorials/index.md # overview/landing page
 
-    - Setup van Linux Mint 22 LAB PC (UEFI):
+    - Setup van een Linux Mint 22 LAB PC (UEFI):
       - tutorials/setup-linuxmint22-lab-uefi/index.md # overview/landing page
       - 01 Vereisten: tutorials/setup-linuxmint22-lab-uefi/01-vereisten.md
       - 02 Installatiemedium: tutorials/setup-linuxmint22-lab-uefi/02-installatiemedium.md
       - 03 Voorbereiding: tutorials/setup-linuxmint22-lab-uefi/03-voorbereiding.md
       - 04 Setup Linux Mint 22: tutorials/setup-linuxmint22-lab-uefi/04-setup-linuxmint22.md
-      - 05 Setup GRUB: tutorials/setup-linuxmint22-lab-uefi/05-setup-grub-linuxmint22.md
-      - 06 Installeer applicaties: tutorials/setup-linuxmint22-lab-uefi/06-installeer-applicaties.md
-      - 07 Clonezilla: tutorials/setup-linuxmint22-lab-uefi/07-clonezilla.md
-      - 08 Controle en eindresultaat: tutorials/setup-linuxmint22-lab-uefi/08-controle-eindresultaat.md
-      - 09 Conclusie: tutorials/setup-linuxmint22-lab-uefi/09-conclusie.md
+      - 05 Installeer applicaties: tutorials/setup-linuxmint22-lab-uefi/05-installeer-applicaties.md
+      - 06 Clonezilla: tutorials/setup-linuxmint22-lab-uefi/06-clonezilla.md
+      - 07 Controle en eindresultaat: tutorials/setup-linuxmint22-lab-uefi/07-controle-eindresultaat.md
+      - 08 Conclusie: tutorials/setup-linuxmint22-lab-uefi/08-conclusie.md
 
     - Setup van een Windows 11 en Linux Mint 22 dual boot LES PC (UEFI):
       - tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md # overview/landing page

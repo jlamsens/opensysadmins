@@ -2,7 +2,7 @@
 
 Een tFTP-server (Trivial File Transfer Protocol) is een eenvoudige server die wordt gebruikt voor het snel overzetten van bestanden binnen een lokaal netwerk, zonder dat daar een wachtwoord of complexe login voor nodig is. Vanwege zijn eenvoud en lage overhead wordt het vooral ingezet voor het pushen van configuratiebestanden en firmware-updates naar netwerkapparatuur, zoals Cisco-switches en routers.
 
-TODO
+-- IN PROGRESS --
 
 ## Prereqs
 

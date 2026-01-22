@@ -4,7 +4,7 @@ hide:
 ---
 
 # 02 Voorbereiding van het installatiemedium
-Voordat we beginnen met de installatie op de LAB PC, moeten we hete benodigde installatiemedium voorbereiden op een PC/laptop. Klik op onderstaande links en volg elke instructie stap voor stap.
+Voordat we beginnen met de installatie op de LAB PC, moeten we het benodigde installatiemedium voorbereiden op een PC/laptop. Klik op onderstaande links en volg elke instructie stap voor stap.
 
 - [Stap 2.1: Download de Linux Mint 22 ISO.](../../howtos/download-linuxmint22-iso/index.md){:target="_blank"}
 Zorg ervoor dat je beschikt over het officiële installatiebestand voor Linux Mint. Dit vormt de basis voor je installatie, of je het nu downloadt van de Linux Mint website of verkrijgt via een lokale bron.

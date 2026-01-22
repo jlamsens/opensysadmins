@@ -31,7 +31,7 @@ Let's create a nice and simple boot menu with 3 choices.
 ## Remove GRUB countdown timer
 
 === "guru@lab:~$_"
-
+cat 
     ``` bash title=''
     sudo sed -i 's/GRUB_TIMEOUT=10/GRUB_TIMEOUT=-1/g' /etc/default/grub
     ```

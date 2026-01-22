@@ -3,4 +3,4 @@ hide:
   - toc
 ---
 
-# 03 Configureer VMs
+# 08 Conclusie

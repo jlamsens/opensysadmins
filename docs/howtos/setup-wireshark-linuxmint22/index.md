@@ -8,7 +8,13 @@ Wireshark is 's werelds meest gebruikte netwerkprotocol-analyzer, een tool waarm
 ## Demo
 <iframe width="854" height="480" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-TODO
+-- IN PROGRESS --
+
+- sudo add-apt-repository ppa:wireshark-dev/stable
+- sudo apt update
+- sudo apt install wireshark
+- YES antwoorden om als non-root user te kunnen capturen
+
 
 ## Update package list
 

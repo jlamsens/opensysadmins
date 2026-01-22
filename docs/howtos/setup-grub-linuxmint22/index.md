@@ -1,43 +1,15 @@
-# Setup GRUB op Linux Mint 22 (LAB PC)
+# Setup GRUB op Linux Mint 22 - lab
 
-TODO
+GRUB (Grand Unified Bootloader) is het eerste programma dat wordt geladen zodra je de PC aanzet; het fungeert als de verkeersleider die het besturingssysteem aanwijst en opstart. In deze handleiding gaan we de GRUB-configuratie aanpassen om een gepersonaliseerd opstartmenu te creëren dat verder gaat dan alleen het laden van Linux Mint. Door specifieke scripts toe te voegen, maken we aangepaste menu-ingangen (menu entries) voor een "clean install", waarmee het systeem direct kan worden teruggezet naar de fabrieksinstellingen, en een directe koppeling naar Clonezilla om systeemimages te maken of terug te zetten zonder dat je een aparte USB-stick nodig hebt.
 
-
-Let's create a nice and simple boot menu with 3 choices.
-
-## Download Clonezilla
-
-=== "Step1"
-    Use your favorite search engine to search for "Clonezilla" and choose the official website.
-
-    <img src="../clonezilla-search-iso.png" width="320" height="180"/>
-
-=== "Step2"
-    Choose the "Ubuntu-based alternative stable" version.
-
-    <img src="../clonezilla-select-edition.png" width="320" height="180"/>
-
-=== "Step3"
-    Make sure the CPU archictecture is "amd64" and the file type is "iso". Click "Download".
-
-    <img src="../clonezilla-download-iso.png" width="320" height="180"/>
-
-=== "Step4"
-    The file will be downloaded to the "Downloads" folder.
-
-    <img src="../clonezilla-downloads-folder.png" width="320" height="180"/>
-
-=== "Step5"
-    Create a directory "ISO" and move the file into that directory.
-
-    <img src="../directory-iso.png" width="320" height="180"/>
+-- IN PROGESS --
 
 ## Remove GRUB countdown timer
 
 === "guru@lab:~$_"
 
     ``` bash title=''
-    sudo sed -i 's/GRUB_TIMEOUT=10/GRUB_TIMEOUT=-1/g' /etc/default/grub
+    sudo sed -i 's/GRUB_TIMEOUT=0/GRUB_TIMEOUT=-1/g' /etc/default/grub
     ```
 
 === "output"
@@ -58,9 +30,9 @@ Let's create a nice and simple boot menu with 3 choices.
     ```
 === "step2"
     
-    Open /boot/grub/grub.cfg in an editor (as non-root user)
+    Open /boot/grub/grub.cfg in an editor (as root)
     ``` title=''
-    xed /boot/grub/grub.cfg &
+    sudo xed /boot/grub/grub.cfg &
     ```
 === "step3"
     Copy over the "Linux part".
@@ -88,6 +60,7 @@ Let's create a nice and simple boot menu with 3 choices.
         initrd (loop)/live/initrd.img
     }
     ```
+
 
 === "step6b"
     Add "Clonezilla restore" entry.
