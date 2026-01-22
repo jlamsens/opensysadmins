@@ -1,7 +1,14 @@
-# Install Wireshark on Linux Mint 21
+# Setup Wireshark op Linux Mint 22
 
-## Prereqs
-- a PC ([BIOS](../../tutorials/windows11-linuxmint21-dual-boot-bios-clonezilla/index.md){:target="_blank"}/[UEFI](../../tutorials/windows11-linuxmint21-dual-boot-uefi/index.md){:target="_blank"}) running Linux Mint 21
+Wireshark is 's werelds meest gebruikte netwerkprotocol-analyzer, een tool waarmee je het digitale verkeer op een netwerk tot in het kleinste detail kunt bekijken en ontleden. Het programma vangt datapakketjes op die over het netwerk verzonden worden ("capturing") en vertaalt deze ruwe binaire data naar een leesbaar formaat, zodat je precies kunt zien wie met wie communiceert en welke informatie er wordt uitgewisseld.
+
+## Vereisten
+- een [PC met Linux Mint 22](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
+
+## Demo
+<iframe width="854" height="480" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+TODO
 
 ## Update package list
 
