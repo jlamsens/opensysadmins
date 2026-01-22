@@ -261,7 +261,7 @@
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/howtos/setup-grub-linuxmint22/index.md/</loc>
+         <loc>https://www.opensysadmins.com/howtos/setup-grub-linuxmint22/</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
@@ -274,6 +274,10 @@
     </url>
     <url>
          <loc>https://www.opensysadmins.com/howtos/setup-minicom-linuxmint22/</loc>
+         <lastmod>2026-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://www.opensysadmins.com/howtos/setup-nmap-linuxmint22/</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
@@ -409,23 +413,19 @@
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/setup-linuxmint22-lab-uefi/05-setup-grub-linuxmint22/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/setup-linuxmint22-lab-uefi/05-installeer-applicaties/</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/setup-linuxmint22-lab-uefi/06-installeer-applicaties/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/setup-linuxmint22-lab-uefi/06-clonezilla/</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/setup-linuxmint22-lab-uefi/07-clonezilla/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/setup-linuxmint22-lab-uefi/07-controle-eindresultaat/</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
-         <loc>https://www.opensysadmins.com/tutorials/setup-linuxmint22-lab-uefi/08-controle-eindresultaat/</loc>
-         <lastmod>2026-01-22</lastmod>
-    </url>
-    <url>
-         <loc>https://www.opensysadmins.com/tutorials/setup-linuxmint22-lab-uefi/09-conclusie/</loc>
+         <loc>https://www.opensysadmins.com/tutorials/setup-linuxmint22-lab-uefi/08-conclusie/</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
