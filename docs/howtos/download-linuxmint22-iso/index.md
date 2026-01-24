@@ -8,9 +8,9 @@ Download een Linux Mint ISO-installatiebestand om het besturingssysteem te verkr
 - internet verbinding
 
 !!! danger "VDAB cursisten"
-    Installatie fysieke PC? Het Linux Mint .ISO-bestand staat al in de lokale map "Downloads" van de Windows/Linux dual-boot LAB PC.
+    Heb je reeds een werkende LAB PC en wil je een ISO voor installatie van de fysieke LES PC? Het Linux Mint .ISO-bestand staat al in de lokale map "Downloads" van de Linux LAB PC.
     
-    Installatie virtuele machine? Het Linux Mint 22 ISO-bestand is beschikbaar via Google Classroom. 
+    Wil je een installatie van een VirtualBox virtuele machine? Het Linux Mint 22 ISO-bestand kan je downloaden via Google Classroom.
 
     Bekijk gerust onderstaand filmpje, maar je kan het downloaden vanaf de officiële website dus overslaan!
 

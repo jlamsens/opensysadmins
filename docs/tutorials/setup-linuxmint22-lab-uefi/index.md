@@ -10,9 +10,9 @@ Deze handleiding begeleidt je stap voor stap bij het installeren van Linux Mint 
 De tutorial omvat de volgende hoofdmodules:
 
 - Vereisten: een overzicht van alle benodigde hardware, software en configuraties.
-- Voorbereiding installatiemedia: gedetailleerde instructies voor het downloaden en verifiëren van het Linux Mint 22 ISO-bestand en het maken van de opstartbare USB-stick.
+- Voorbereiding installatiemedia: gedetailleerde instructies voor het downloaden en verifiëren van het Linux Mint 22 ISO-bestand en het maken van een opstartbare USB-stick.
 - Setup Linux: de complete stappen voor de installatie en basisconfiguratie van Linux Mint 22.
-- Setup GRUB: instructies voor het configureren van de bootloader, inclusief het aanpassen van de wachttijd (timeout), het visueel personaliseren van het opstartmenu en het herstellen van de EFI-boot-entries indien nodig.
+- Setup GRUB: instructies voor het configureren van de bootloader, inclusief het aanpassen van de wachttijd (timeout) en het visueel personaliseren van het opstartmenu.
 - Installatie applicaties: een overzicht van de benodigde labo-software, zoals een secundaire browser, netwerktools zoals Wireshark voor pakketbeheer, een tFTP-server voor bestandsoverdracht naar netwerkapparatuur en aanvullende terminal-utilities.
-- Clonezilla: handleiding voor het maken van systeemback-ups (images), met zowel een lokale dump van de volledige harde schijf als een netwerk-dump  naar een externe NFS-share.
+- Clonezilla: handleiding voor het maken van een systeembackup (image), met zowel een lokale dump van de volledige harde schijf als een netwerk-dump  naar een externe NFS-share.
 - Controle eindresultaat: een checklist met verificatiestappen om te bevestigen dat Linux Mint 22 foutloos opstart via UEFI, alle hardware correct herkend wordt en de geïnstalleerde applicaties stabiel functioneren binnen de netwerkomgeving.

@@ -6,7 +6,7 @@ Download een Windows 11 multi-versie ISO-bestand om het besturingssysteem te ver
     Opgelet: het "Windows 11 multi-versie" ISO bestand is niet hetzelfde als een [Windows 11 Enterprise Evaluation ISO bestand.](../download-windows11-evaluation-iso/index.md){:target="_blank"}
 
 !!! danger "VDAB cursisten"
-    Het Windows 11 multi-versie ISO-bestand staat al in de lokale map "Downloads" van de Windows/Linux dual-boot LAB PC. Bekijk gerust onderstaand filmpje, maar je kan het downloaden dus overslaan!
+    Het Windows 11 multi-versie ISO-bestand staat al in de lokale map "Downloads" van de Linux LAB PC. Bekijk gerust onderstaand filmpje, maar je kan het downloaden dus overslaan!
 
 ## Vereisten
 - een [PC met Windows of Linux](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
