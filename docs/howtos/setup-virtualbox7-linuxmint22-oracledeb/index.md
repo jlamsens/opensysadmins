@@ -264,22 +264,6 @@ Voorkom dat het virtualbox pakket automatisch wordt bijgewerkt door de pakketbeh
     guru@hp:~$ 
     ```
 
-Wil je later toch upgraden, hef dan de hold op:
-
-=== "guru@hp:~$_"
-
-    ``` title='' hl_lines="0"
-    sudo apt-mark unhold virtualbox
-    ```
-
-=== "output"
-
-    ``` title='' hl_lines="0"
-    guru@hp:~$ sudo apt-mark unhold virtualbox
-    Canceled hold on virtualbox.
-    guru@hp:~$ 
-    ```
-
 ## Setup Extension Pack (optioneel)
 ### Installeer
 Installeren van het [Extension Pack](../../explanations/todo/index.md) is nodig om extra functionaliteit zoals USB 2.0/3.0-ondersteuning, RDP-server, disk-encryptie en PXE boot toe te voegen aan VirtualBox.
