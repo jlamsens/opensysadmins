@@ -1815,33 +1815,63 @@
 </div>
 </div>
 </input></input></div>
-<p>Wil je later toch upgraden, hef dan de hold op:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">guru@hp:~$_</label><label for="__tabbed_4_2">output</label></div>
+<h2 id="setup-extension-pack-optioneel">Setup Extension Pack (optioneel)</h2>
+<h3 id="installeer">Installeer</h3>
+<p>Installeren van het <a href="../../explanations/todo/">Extension Pack</a> is nodig om extra functionaliteit zoals USB 2.0/3.0-ondersteuning, RDP-server, disk-encryptie en PXE boot toe te voegen aan VirtualBox.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">guru@hp:~/Downloads$_</label><label for="__tabbed_4_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>sudo apt-mark unhold virtualbox
+<p>In dit voorbeeld download en installeer je de specifieke versie 7.1.12</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>wget -q https://download.virtualbox.org/virtualbox/7.1.12/Oracle_VirtualBox_Extension_Pack-7.1.12.vbox-extpack
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>sudo VBoxManage extpack install ./Oracle_VirtualBox_Extension_Pack-7.1.12.vbox-extpack
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
-<span class="normal"><a href="#__codelineno-7-2">2</a></span>
-<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>guru@hp:~$ sudo apt-mark unhold virtualbox
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>Canceled hold on virtualbox.
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a>guru@hp:~$ 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>guru@hp:~/Downloads$ wget -q https://download.virtualbox.org/virtualbox/7.1.12/Oracle_VirtualBox_Extension_Pack-7.1.12.vbox-extpack
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>guru@hp:~/Downloads$ sudo VBoxManage extpack install ./Oracle_VirtualBox_Extension_Pack-7.1.12.vbox-extpack
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>VirtualBox Extension Pack Personal Use and Educational License (PUEL)
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>License version 12, 22 July 2024
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>&lt;snip&gt;
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="hll">
+</span><a id="__codelineno-7-10" name="__codelineno-7-10"></a>Do you agree to these license terms and conditions (y/n)? y
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>License accepted. For batch installation add
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a>--accept-license=eb31505e56e9b4d0fbca139104da41ac6f6b98f8e78968bdf01b1f3da3c4f9ae
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a>to the VBoxManage command line.
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a>0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a>Successfully installed "Oracle VirtualBox Extension Pack".
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a>guru@hp:~/Downloads$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
-<h2 id="setup-extension-pack-optioneel">Setup Extension Pack (optioneel)</h2>
-<h3 id="installeer">Installeer</h3>
-<p>Installeren van het <a href="../../explanations/todo/">Extension Pack</a> is nodig om extra functionaliteit zoals USB 2.0/3.0-ondersteuning, RDP-server, disk-encryptie en PXE boot toe te voegen aan VirtualBox.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">guru@hp:~/Downloads$_</label><label for="__tabbed_5_2">output</label></div>
+<h3 id="verifieer">Verifieer</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">guru@hp:~$_</label><label for="__tabbed_5_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>In dit voorbeeld download en installeer je de specifieke versie 7.1.12</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>wget -q https://download.virtualbox.org/virtualbox/7.1.12/Oracle_VirtualBox_Extension_Pack-7.1.12.vbox-extpack
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a>sudo VBoxManage extpack install ./Oracle_VirtualBox_Extension_Pack-7.1.12.vbox-extpack
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>VBoxManage list extpacks
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -1856,39 +1886,50 @@
 <span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-9-10">10</a></span>
 <span class="normal"><a href="#__codelineno-9-11">11</a></span>
-<span class="normal"><a href="#__codelineno-9-12">12</a></span>
-<span class="normal"><a href="#__codelineno-9-13">13</a></span>
-<span class="normal"><a href="#__codelineno-9-14">14</a></span>
-<span class="normal"><a href="#__codelineno-9-15">15</a></span>
-<span class="normal"><a href="#__codelineno-9-16">16</a></span>
-<span class="normal"><a href="#__codelineno-9-17">17</a></span>
-<span class="normal"><a href="#__codelineno-9-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>guru@hp:~/Downloads$ wget -q https://download.virtualbox.org/virtualbox/7.1.12/Oracle_VirtualBox_Extension_Pack-7.1.12.vbox-extpack
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a>guru@hp:~/Downloads$ sudo VBoxManage extpack install ./Oracle_VirtualBox_Extension_Pack-7.1.12.vbox-extpack
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a>VirtualBox Extension Pack Personal Use and Educational License (PUEL)
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a>
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a>License version 12, 22 July 2024
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a>
-<a id="__codelineno-9-8" name="__codelineno-9-8"></a>&lt;snip&gt;
-<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="hll">
-</span><a id="__codelineno-9-10" name="__codelineno-9-10"></a>Do you agree to these license terms and conditions (y/n)? y
-<a id="__codelineno-9-11" name="__codelineno-9-11"></a>
-<a id="__codelineno-9-12" name="__codelineno-9-12"></a>License accepted. For batch installation add
-<a id="__codelineno-9-13" name="__codelineno-9-13"></a>--accept-license=eb31505e56e9b4d0fbca139104da41ac6f6b98f8e78968bdf01b1f3da3c4f9ae
-<a id="__codelineno-9-14" name="__codelineno-9-14"></a>to the VBoxManage command line.
-<a id="__codelineno-9-15" name="__codelineno-9-15"></a>
-<a id="__codelineno-9-16" name="__codelineno-9-16"></a>0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
-<a id="__codelineno-9-17" name="__codelineno-9-17"></a>Successfully installed "Oracle VirtualBox Extension Pack".
-<a id="__codelineno-9-18" name="__codelineno-9-18"></a>guru@hp:~/Downloads$ 
+<span class="normal"><a href="#__codelineno-9-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>guru@hp:~/Downloads$ VBoxManage list extpacks
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>Extension Packs: 1
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>Pack no. 0:   Oracle VirtualBox Extension Pack
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="hll">Version:        7.1.12
+</span><a id="__codelineno-9-5" name="__codelineno-9-5"></a>Revision:       169651
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>Edition:        
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>Description:    Oracle Cloud Infrastructure integration, Host Webcam, VirtualBox RDP, PXE ROM, Disk Encryption, NVMe, full VM encryption.
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>VRDE Module:    VBoxVRDP
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>Crypto Module:  VBoxPuelCrypto
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a>Usable:         true
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a>Why unusable:   
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>guru@hp:~/Downloads$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
-<h3 id="verifieer">Verifieer</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">guru@hp:~$_</label><label for="__tabbed_6_2">output</label></div>
+<h2 id="maak-de-guest-additions-iso-beschikbaar-optioneel">Maak de Guest Additions ISO beschikbaar (optioneel)</h2>
+<p>Het voorzien van de <a href="../../explanations/todo/">Guest Additions</a> in een virtuele machine zorgt voor betere integratie tussen host en gast, zoals naadloze muisaanwijzer, gedeelde klemborden, schermresolutie-aanpassing en gedeelde mappen.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">guru@hp:~/Downloads$_</label><label for="__tabbed_6_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>VBoxManage list extpacks
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>VERSION=$(VBoxManage --version | sed -E 's/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/')
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>ISO_URL="https://download.virtualbox.org/virtualbox/$VERSION/VBoxGuestAdditions_${VERSION}.iso"
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>ISO_TMP="/tmp/VBoxGuestAdditions_${VERSION}.iso"
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>ISO_DEST="/usr/share/virtualbox/VBoxGuestAdditions.iso"
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>wget -q -O "$ISO_TMP" "$ISO_URL" &amp;&amp; \
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>sudo mkdir -p /usr/share/virtualbox &amp;&amp; \
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>if [ -f "$ISO_DEST" ]; then
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a>  sudo mv "$ISO_DEST" "${ISO_DEST}.bak.$(date +%s)"
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a>fi &amp;&amp; \
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a>sudo install -m 644 "$ISO_TMP" "$ISO_DEST" &amp;&amp; \
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a>echo "VBoxGuestAdditions $VERSION geïnstalleerd in $ISO_DEST"
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -1903,109 +1944,51 @@
 <span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-11-10">10</a></span>
 <span class="normal"><a href="#__codelineno-11-11">11</a></span>
-<span class="normal"><a href="#__codelineno-11-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>guru@hp:~/Downloads$ VBoxManage list extpacks
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a>Extension Packs: 1
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a>Pack no. 0:   Oracle VirtualBox Extension Pack
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="hll">Version:        7.1.12
-</span><a id="__codelineno-11-5" name="__codelineno-11-5"></a>Revision:       169651
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a>Edition:        
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a>Description:    Oracle Cloud Infrastructure integration, Host Webcam, VirtualBox RDP, PXE ROM, Disk Encryption, NVMe, full VM encryption.
-<a id="__codelineno-11-8" name="__codelineno-11-8"></a>VRDE Module:    VBoxVRDP
-<a id="__codelineno-11-9" name="__codelineno-11-9"></a>Crypto Module:  VBoxPuelCrypto
-<a id="__codelineno-11-10" name="__codelineno-11-10"></a>Usable:         true
-<a id="__codelineno-11-11" name="__codelineno-11-11"></a>Why unusable:   
-<a id="__codelineno-11-12" name="__codelineno-11-12"></a>guru@hp:~/Downloads$ 
-</code></pre></div></td></tr></table></div>
-</div>
-</div>
-</input></input></div>
-<h2 id="maak-de-guest-additions-iso-beschikbaar-optioneel">Maak de Guest Additions ISO beschikbaar (optioneel)</h2>
-<p>Het voorzien van de <a href="../../explanations/todo/">Guest Additions</a> in een virtuele machine zorgt voor betere integratie tussen host en gast, zoals naadloze muisaanwijzer, gedeelde klemborden, schermresolutie-aanpassing en gedeelde mappen.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">guru@hp:~/Downloads$_</label><label for="__tabbed_7_2">output</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-12-10">10</a></span>
-<span class="normal"><a href="#__codelineno-12-11">11</a></span>
-<span class="normal"><a href="#__codelineno-12-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>VERSION=$(VBoxManage --version | sed -E 's/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/')
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a>ISO_URL="https://download.virtualbox.org/virtualbox/$VERSION/VBoxGuestAdditions_${VERSION}.iso"
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a>ISO_TMP="/tmp/VBoxGuestAdditions_${VERSION}.iso"
-<a id="__codelineno-12-4" name="__codelineno-12-4"></a>ISO_DEST="/usr/share/virtualbox/VBoxGuestAdditions.iso"
-<a id="__codelineno-12-5" name="__codelineno-12-5"></a>
-<a id="__codelineno-12-6" name="__codelineno-12-6"></a>wget -q -O "$ISO_TMP" "$ISO_URL" &amp;&amp; \
-<a id="__codelineno-12-7" name="__codelineno-12-7"></a>sudo mkdir -p /usr/share/virtualbox &amp;&amp; \
-<a id="__codelineno-12-8" name="__codelineno-12-8"></a>if [ -f "$ISO_DEST" ]; then
-<a id="__codelineno-12-9" name="__codelineno-12-9"></a>  sudo mv "$ISO_DEST" "${ISO_DEST}.bak.$(date +%s)"
-<a id="__codelineno-12-10" name="__codelineno-12-10"></a>fi &amp;&amp; \
-<a id="__codelineno-12-11" name="__codelineno-12-11"></a>sudo install -m 644 "$ISO_TMP" "$ISO_DEST" &amp;&amp; \
-<a id="__codelineno-12-12" name="__codelineno-12-12"></a>echo "VBoxGuestAdditions $VERSION geïnstalleerd in $ISO_DEST"
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-13-10">10</a></span>
-<span class="normal"><a href="#__codelineno-13-11">11</a></span>
-<span class="normal"><a href="#__codelineno-13-12">12</a></span>
-<span class="normal"><a href="#__codelineno-13-13">13</a></span>
-<span class="normal"><a href="#__codelineno-13-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>guru@hp:~/Downloads$ VERSION=$(VBoxManage --version | sed -E 's/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/')
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a>ISO_URL="https://download.virtualbox.org/virtualbox/$VERSION/VBoxGuestAdditions_${VERSION}.iso"
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a>ISO_TMP="/tmp/VBoxGuestAdditions_${VERSION}.iso"
-<a id="__codelineno-13-4" name="__codelineno-13-4"></a>ISO_DEST="/usr/share/virtualbox/VBoxGuestAdditions.iso"
-<a id="__codelineno-13-5" name="__codelineno-13-5"></a>
-<a id="__codelineno-13-6" name="__codelineno-13-6"></a>wget -q -O "$ISO_TMP" "$ISO_URL" &amp;&amp; \
-<a id="__codelineno-13-7" name="__codelineno-13-7"></a>sudo mkdir -p /usr/share/virtualbox &amp;&amp; \
-<a id="__codelineno-13-8" name="__codelineno-13-8"></a>if [ -f "$ISO_DEST" ]; then
-<a id="__codelineno-13-9" name="__codelineno-13-9"></a>  sudo mv "$ISO_DEST" "${ISO_DEST}.bak.$(date +%s)"
-<a id="__codelineno-13-10" name="__codelineno-13-10"></a>fi &amp;&amp; \
-<a id="__codelineno-13-11" name="__codelineno-13-11"></a>sudo install -m 644 "$ISO_TMP" "$ISO_DEST" &amp;&amp; \
-<a id="__codelineno-13-12" name="__codelineno-13-12"></a>echo "VBoxGuestAdditions $VERSION geïnstalleerd in $ISO_DEST"
-<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="hll">VBoxGuestAdditions 7.1.12 geïnstalleerd in /usr/share/virtualbox/VBoxGuestAdditions.iso
-</span><a id="__codelineno-13-14" name="__codelineno-13-14"></a>guru@hp:~/Downloads$ 
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>guru@hp:~/Downloads$ VERSION=$(VBoxManage --version | sed -E 's/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/')
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>ISO_URL="https://download.virtualbox.org/virtualbox/$VERSION/VBoxGuestAdditions_${VERSION}.iso"
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>ISO_TMP="/tmp/VBoxGuestAdditions_${VERSION}.iso"
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>ISO_DEST="/usr/share/virtualbox/VBoxGuestAdditions.iso"
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>wget -q -O "$ISO_TMP" "$ISO_URL" &amp;&amp; \
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>sudo mkdir -p /usr/share/virtualbox &amp;&amp; \
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a>if [ -f "$ISO_DEST" ]; then
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a>  sudo mv "$ISO_DEST" "${ISO_DEST}.bak.$(date +%s)"
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a>fi &amp;&amp; \
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a>sudo install -m 644 "$ISO_TMP" "$ISO_DEST" &amp;&amp; \
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a>echo "VBoxGuestAdditions $VERSION geïnstalleerd in $ISO_DEST"
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="hll">VBoxGuestAdditions 7.1.12 geïnstalleerd in /usr/share/virtualbox/VBoxGuestAdditions.iso
+</span><a id="__codelineno-11-14" name="__codelineno-11-14"></a>guru@hp:~/Downloads$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
 <h2 id="voeg-gebruiker-toe-aan-vboxusers-groep">Voeg gebruiker toe aan vboxusers groep</h2>
 <p>Voeg je ingelogde gebruiker toe aan de groep <code>vboxusers</code>, zodat die toegang krijgt tot VirtualBox USB-apparaten en bepaalde virtuele hardwarefunctionaliteiten.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"><input id="__tabbed_8_2" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">guru@hp:~$_</label><label for="__tabbed_8_2">output</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">guru@hp:~$_</label><label for="__tabbed_7_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>sudo usermod -aG vboxusers guru
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>sudo usermod -aG vboxusers guru
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
-<span class="normal"><a href="#__codelineno-15-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>guru@hp:~$ sudo usermod -aG vboxusers guru
-<a id="__codelineno-15-2" name="__codelineno-15-2"></a>guru@hp:~$ 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>guru@hp:~$ sudo usermod -aG vboxusers guru
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>guru@hp:~$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
 <h2 id="reboot">Reboot</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"><input id="__tabbed_9_2" name="__tabbed_9" type="radio"><div class="tabbed-labels"><label for="__tabbed_9_1">guru@hp:~$_</label><label for="__tabbed_9_2">output</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"><input id="__tabbed_8_2" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">guru@hp:~$_</label><label for="__tabbed_8_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>sudo reboot
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>sudo reboot
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>guru@hp:~$ sudo reboot
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>guru@hp:~$ sudo reboot
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
