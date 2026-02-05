@@ -39,12 +39,111 @@ label Clonezilla LOCAL DUMP VDAB LAB
 GRUB
 -------------
 
-menuentry "Clonezilla SSH RESTORE ICT4U LAPTOP (LAB - DHCP)" {
-    linux /live/vmlinuz boot=live union=overlay username=user hostname=lunar config quiet loglevel=0 noswap edd=on nomodeset enforcing=0 noeject locales="en_US.UTF-8" keyboard-layouts="NONE" ocs_repository="ssh://guru@172.16.41.2/home/guru/Downloads/DUMPS/ICT4U/" ocs_live_run="ocs-sr --batch -g auto -e1 auto -e2 -r -j2 -k0 -scr -p poweroff restoredisk ICT4U-LAPTOP-DUMP nvme0n1" ssh_login_password="guru" ocs_ssh_host_key_check="no" vga=791 ip=dhcp net.ifnames=0 biosdevname=0 splash i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes vmwgfx.enable_fbdev=1
+menuentry "NFS - RESTORE hpz2g1i LESPC - Dual boot" {
+    linux /live/vmlinuz \
+        boot=live union=overlay username=user hostname=lunar config quiet loglevel=0 noswap edd=on nomodeset enforcing=0 noeject locales="en_US.UTF-8" keyboard-layouts="NONE" \
+        ocs_repository="nfs://172.16.21.251/home/guru/Downloads/DUMPS/hpz2g1i/" \
+        ocs_live_run="ocs-sr --batch -g auto -e1 auto -e2 -q2 -r -j2 -k0 -scr -p poweroff restoredisk les-winlin-v2 nvme0n1 nvme1n1" \
+        ip=172.16.11.252::172.16.11.254:255.255.255.0:lunar:eth0:static:8.8.8.8 net.ifnames=0 biosdevname=0 \
+        vga=791 splash i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes vmwgfx.enable_fbdev=1
+
     initrd /live/initrd.img
 }
 
-menuentry "Clonezilla SSH DUMP ICT4U LAPTOP (LAB - DHCP)" {
-    linux /live/vmlinuz boot=live union=overlay username=user hostname=lunar config quiet loglevel=0 noswap edd=on nomodeset enforcing=0 noeject locales="en_US.UTF-8" keyboard-layouts="NONE" ocs_repository="ssh://guru@172.16.41.2/home/guru/Downloads/DUMPS/ICT4U/" ocs_live_run="ocs-sr --batch -g auto -e1 auto -e2 -r -j2 -k0 -scr -p poweroff savedisk ICT4U-LAPTOP-DUMP nvme0n1" ssh_login_password="guru" ocs_ssh_host_key_check="no" vga=791 ip=dhcp net.ifnames=0 biosdevname=0 splash i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes vmwgfx.enable_fbdev=1
+menuentry ' ' {
+    true
+}
+
+
+menuentry "NFS - RESTORE hpz2 LABPC - Linux only" {
+    linux /live/vmlinuz \
+        boot=live union=overlay username=user hostname=lunar config quiet loglevel=0 noswap edd=on nomodeset enforcing=0 noeject locales="en_US.UTF-8" keyboard-layouts="NONE" \
+        ocs_repository="nfs://172.16.21.251/home/guru/Downloads/DUMPS/hpz2/" \
+        ocs_live_run="ocs-sr --batch -g auto -e1 auto -e2 -q2 -r -j2 -k0 -scr -p poweroff restoredisk lab-lin-v1 nvme0n1" \
+        ip=172.16.21.252::172.16.21.254:255.255.255.0:lunar:eth0:static:8.8.8.8 net.ifnames=0 biosdevname=0 \
+        vga=791 splash i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes vmwgfx.enable_fbdev=1
+
     initrd /live/initrd.img
+}
+
+menuentry ' ' {
+    true
+}
+
+menuentry "NFS - RESTORE hppro450g10 I4U - Windows" {
+    linux /live/vmlinuz \
+        boot=live union=overlay username=user hostname=lunar config quiet loglevel=0 noswap edd=on nomodeset enforcing=0 noeject locales="en_US.UTF-8" keyboard-layouts="NONE" \
+        ocs_repository="nfs://172.16.21.251/home/guru/Downloads/DUMPS/hppro450g10/" \
+        ocs_live_run="ocs-sr --batch -g auto -e1 auto -e2 -q2 -r -j2 -k0 -scr -p poweroff restoredisk ict4u-win11 nvme0n1" \
+        ip=172.16.21.252::172.16.21.254:255.255.255.0:lunar:eth0:static:8.8.8.8 net.ifnames=0 biosdevname=0 \
+        vga=791 splash i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes vmwgfx.enable_fbdev=1
+
+    initrd /live/initrd.img
+}
+
+menuentry "NFS - DUMP hppro450g10 I4U - Windows" {
+    linux /live/vmlinuz \
+        boot=live union=overlay username=user hostname=lunar config quiet loglevel=0 noswap edd=on nomodeset enforcing=0 noeject locales="en_US.UTF-8" keyboard-layouts="NONE" \
+        ocs_repository="nfs://172.16.21.251/home/guru/Downloads/DUMPS/hppro450g10/" \
+        ocs_live_run="ocs-sr --batch -g auto -e1 auto -e2 -q2 -r -j2 -k0 -scr -p poweroff savedisk ict4u-win11 nvme0n1" \
+        ip=172.16.21.252::172.16.21.254:255.255.255.0:lunar:eth0:static:8.8.8.8 net.ifnames=0 biosdevname=0 \
+        vga=791 splash i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes vmwgfx.enable_fbdev=1
+
+    initrd /live/initrd.img
+}
+
+menuentry ' ' {
+    true
+}
+
+menuentry "NFS - RESTORE hppro450g10 I4U - Linux" {
+    linux /live/vmlinuz \
+        boot=live union=overlay username=user hostname=lunar config quiet loglevel=0 noswap edd=on nomodeset enforcing=0 noeject locales="en_US.UTF-8" keyboard-layouts="NONE" \
+        ocs_repository="nfs://172.16.21.251/home/guru/Downloads/DUMPS/hppro450g10/" \
+        ocs_live_run="ocs-sr --batch -g auto -e1 auto -e2 -q2 -r -j2 -k0 -scr -p poweroff restoredisk ict4u-lm22 nvme0n1" \
+        ip=172.16.21.252::172.16.21.254:255.255.255.0:lunar:eth0:static:8.8.8.8 net.ifnames=0 biosdevname=0 \
+        vga=791 splash i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes vmwgfx.enable_fbdev=1
+
+    initrd /live/initrd.img
+}
+
+menuentry "NFS - DUMP hppro450g10 I4U - Linux" {
+    linux /live/vmlinuz \
+        boot=live union=overlay username=user hostname=lunar config quiet loglevel=0 noswap edd=on nomodeset enforcing=0 noeject locales="en_US.UTF-8" keyboard-layouts="NONE" \
+        ocs_repository="nfs://172.16.21.251/home/guru/Downloads/DUMPS/hppro450g10/" \
+        ocs_live_run="ocs-sr --batch -g auto -e1 auto -e2 -q2 -r -j2 -k0 -scr -p poweroff savedisk ict4u-lm22 nvme0n1" \
+        ip=172.16.21.252::172.16.21.254:255.255.255.0:lunar:eth0:static:8.8.8.8 net.ifnames=0 biosdevname=0 \
+        vga=791 splash i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes vmwgfx.enable_fbdev=1
+
+    initrd /live/initrd.img
+}
+
+menuentry ' ' {
+    true
+}
+
+menuentry "NFS - RESTORE hppro450g6 Econocom - Linux" {
+    linux /live/vmlinuz \
+        boot=live union=overlay username=user hostname=lunar config quiet loglevel=0 noswap edd=on nomodeset enforcing=0 noeject locales="en_US.UTF-8" keyboard-layouts="NONE" \
+        ocs_repository="nfs://172.16.21.251/home/guru/Downloads/DUMPS/hppro450g6/" \
+        ocs_live_run="ocs-sr --batch -g auto -e1 auto -e2 -q2 -r -j2 -k0 -scr -p poweroff restoredisk econocom-lm22-v1 nvme0n1" \
+        ip=172.16.21.252::172.16.21.254:255.255.255.0:lunar:eth0:static:8.8.8.8 net.ifnames=0 biosdevname=0 \
+        vga=791 splash i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes vmwgfx.enable_fbdev=1
+
+    initrd /live/initrd.img
+}
+
+menuentry "NFS - DUMP hppro450g6 Econocom - Linux" {
+    linux /live/vmlinuz \
+        boot=live union=overlay username=user hostname=lunar config quiet loglevel=0 noswap edd=on nomodeset enforcing=0 noeject locales="en_US.UTF-8" keyboard-layouts="NONE" \
+        ocs_repository="nfs://172.16.21.251/home/guru/Downloads/DUMPS/hppro450g6/" \
+        ocs_live_run="ocs-sr --batch -g auto -e1 auto -e2 -q2 -r -j2 -k0 -scr -p poweroff savedisk econocom-lm22-v1 nvme0n1" \
+        ip=172.16.21.252::172.16.21.254:255.255.255.0:lunar:eth0:static:8.8.8.8 net.ifnames=0 biosdevname=0 \
+        vga=791 splash i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes vmwgfx.enable_fbdev=1
+
+    initrd /live/initrd.img
+}
+
+menuentry ' ' {
+    true
 }
