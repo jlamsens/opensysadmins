@@ -9,7 +9,7 @@
 <meta content="Jurgen Lamsens" name="author"/>
 <link href="https://www.opensysadmins.com/howtos/verifieer-windows-iso/" rel="canonical"/>
 <link href="../download-windows11-multi-versie-iso/" rel="prev"/>
-<link href="../maak-opstartbare-usb-stick-windows11/" rel="next"/>
+<link href="../maak-opstartbare-usb-stick-ventoy/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.44" name="generator"/>
 <title>Verifieer de authenticiteit en integriteit van een Windows 11 ISO-bestand - OpenSysAdmins</title>
@@ -850,9 +850,9 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../maak-opstartbare-usb-stick-windows11/">
+<a class="md-nav__link" href="../maak-opstartbare-usb-stick-ventoy/">
 <span class="md-ellipsis">
-    Maak een opstartbare USB-stick voor Windows 11
+    Maak een opstartbare USB-stick met Ventoy
   </span>
 </a>
 </li>
@@ -867,13 +867,6 @@
 <a class="md-nav__link" href="../verifieer-linuxmint22-iso/">
 <span class="md-ellipsis">
     Verifieer de authenticiteit en integriteit van een Linux Mint ISO-bestand
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../maak-opstartbare-usb-stick-linuxmint22/">
-<span class="md-ellipsis">
-    Maak een opstartbare USB-stick voor Linux Mint
   </span>
 </a>
 </li>
@@ -1164,13 +1157,6 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../maak-opstartbare-usb-stick-ventoy/">
-<span class="md-ellipsis">
-    Maak een opstartbare USB-stick met Ventoy
-  </span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
@@ -1341,12 +1327,12 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="verifieer-de-authenticiteit-en-integriteit-van-een-windows-11-iso-bestand">Verifieer de authenticiteit en integriteit van een Windows 11 ISO-bestand</h1>
-<p>Een <a href="../download-windows11-multi-versie-iso/" target="_blank">gedownload Windows 11 ISO-bestand</a> kan je best verifiëren op <a href="../../explanations/authenticiteit-integriteit/" target="_blank">authenticiteit en integriteit</a>. Hieronder vind je een stappenplan voor zowel Windows als Linux Mint.</p>
+<p>Een gedownload Windows 11 <a href="../download-windows11-multi-versie-iso/" target="_blank">multi-versie</a> of <a href="../download-windows11-evaluation-iso/" target="_blank">Enterprise Evaluation</a> ISO-bestand kan je best verifiëren op <a href="../../explanations/authenticiteit-integriteit/" target="_blank">authenticiteit en integriteit</a>. Hieronder vind je een stappenplan voor zowel Windows als Linux Mint.</p>
 <h2 id="vereisten">Vereisten</h2>
 <ul>
 <li>een <a href="../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/" target="_blank">PC met Windows of Linux</a></li>
 <li>internet verbinding</li>
-<li>het <a href="../download-windows11-multi-versie-iso/" target="_blank">Windows 11 ISO-bestand</a></li>
+<li>het Windows 11 <a href="../download-windows11-multi-versie-iso/" target="_blank">multi-versie</a> of <a href="../download-windows11-evaluation-iso/" target="_blank">Enterprise Evaluation</a> ISO-bestand</li>
 </ul>
 <h2 id="demo">Demo</h2>
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="480" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_VsDvEMNRjo?autoplay=0&amp;loop=0&amp;mute=0" title="YouTube video player" width="854"></iframe>
@@ -1410,7 +1396,7 @@
 </div>
 </input></input></div>
 <h3 id="vergelijk-de-berekende-hashwaarde-met-de-officiele-waarde-van-microsoft">Vergelijk de berekende hashwaarde met de officiële waarde van Microsoft</h3>
-<p>Vergelijk deze berekende hash (CCF482436DF954C0AD6D41123A49FDE79352CA71F7A684A97D5E0A0C39D7F39F) met de hash-waarde die op de Microsoft website gepubliceerd staat. Als ze exact overeenkomen, is het ISO-bestand 100% zeker zowel authentiek als ongewijzigd.</p>
+<p>Vergelijk deze berekende hash (B56B911BF18A2CEAEB3904D87E7C770BDF92D3099599D61AC2497B91BF190B11) met de hash-waarde die op de Microsoft website gepubliceerd staat. Als ze exact overeenkomen, is het ISO-bestand 100% zeker zowel authentiek als ongewijzigd.</p>
 <h2 id="conclusie">Conclusie</h2>
 <p>Als de hashwaarden exact overeenkomen, is het ISO-bestand authentiek en integer. Je kunt erop vertrouwen dat het niet is gewijzigd of beschadigd.</p>
 <p>Als de hashwaarden niet overeenkomen, is het ISO-bestand waarschijnlijk beschadigd tijdens het downloaden, of, in zeldzame gevallen, gemanipuleerd. <a href="../download-windows11-multi-versie-iso/">Download het bestand</a> opnieuw en herhaal het verificatieproces.</p>

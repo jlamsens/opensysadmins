@@ -8,8 +8,8 @@
 <meta content="Standing on the shoulder of giants" name="description"/>
 <meta content="Jurgen Lamsens" name="author"/>
 <link href="https://www.opensysadmins.com/howtos/maak-opstartbare-usb-stick-ventoy/" rel="canonical"/>
-<link href="../setup-ios-cisco1941/" rel="prev"/>
-<link href="../../references/" rel="next"/>
+<link href="../verifieer-windows-iso/" rel="prev"/>
+<link href="../download-linuxmint22-iso/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.44" name="generator"/>
 <title>Maak een opstartbare USB-stick met Ventoy - OpenSysAdmins</title>
@@ -756,12 +756,90 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../maak-opstartbare-usb-stick-windows11/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Maak een opstartbare USB-stick voor Windows 11
+    Maak een opstartbare USB-stick met Ventoy
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Maak een opstartbare USB-stick met Ventoy
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vereisten">
+<span class="md-ellipsis">
+      Vereisten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo">
+<span class="md-ellipsis">
+      Demo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#downloaden">
+<span class="md-ellipsis">
+      Downloaden
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uitpakken">
+<span class="md-ellipsis">
+      Uitpakken
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usb-stick-voorbereiden">
+<span class="md-ellipsis">
+      USB-stick voorbereiden
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unmount">
+<span class="md-ellipsis">
+      Unmount
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installatie">
+<span class="md-ellipsis">
+      Installatie
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isos-toevoegen">
+<span class="md-ellipsis">
+      ISO's toevoegen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#booten">
+<span class="md-ellipsis">
+      Booten
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../download-linuxmint22-iso/">
@@ -774,13 +852,6 @@
 <a class="md-nav__link" href="../verifieer-linuxmint22-iso/">
 <span class="md-ellipsis">
     Verifieer de authenticiteit en integriteit van een Linux Mint ISO-bestand
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../maak-opstartbare-usb-stick-linuxmint22/">
-<span class="md-ellipsis">
-    Maak een opstartbare USB-stick voor Linux Mint
   </span>
 </a>
 </li>
@@ -1070,91 +1141,6 @@
     Setup van een Cisco IOS besturingssysteem op een Cisco 1941 router
   </span>
 </a>
-</li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Maak een opstartbare USB-stick met Ventoy
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
-<span class="md-ellipsis">
-    Maak een opstartbare USB-stick met Ventoy
-  </span>
-</a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#vereisten">
-<span class="md-ellipsis">
-      Vereisten
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#demo">
-<span class="md-ellipsis">
-      Demo
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#downloaden">
-<span class="md-ellipsis">
-      Downloaden
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#uitpakken">
-<span class="md-ellipsis">
-      Uitpakken
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#usb-stick-voorbereiden">
-<span class="md-ellipsis">
-      USB-stick voorbereiden
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#unmount">
-<span class="md-ellipsis">
-      Unmount
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#installatie">
-<span class="md-ellipsis">
-      Installatie
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#isos-toevoegen">
-<span class="md-ellipsis">
-      ISO's toevoegen
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#booten">
-<span class="md-ellipsis">
-      Booten
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -1713,7 +1699,7 @@
 </div>
 </input></input></div>
 <h2 id="usb-stick-voorbereiden">USB-stick voorbereiden</h2>
-<p>Plaats de USB-stick. Zoek je USB-stick op met <code>lsblk</code>. Tab <code>output</code> geeft in dit geval <code>/dev/sdb</code> aan, een oude Linux Mint USB-stick. Kijk goed naar de "size"; in dit voorbeeld is /dev/sda een schijf van 3 TB die je zeker niet wil wissen!</p>
+<p>Plaats de USB-stick. Zoek je USB-stick op met <code>lsblk</code>. Tab <code>output</code> geeft in dit geval <code>/dev/sdb</code> aan, met 1 partitie <code>/dev/sdb1</code>; een oude Linux Mint USB-stick. Kijk goed naar de "size"; in dit voorbeeld is <code>/dev/sda</code> namelijk een harde schijf van 2,7T die je zeker niet wil wissen!</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">guru@hp:~/Downloads_</label><label for="__tabbed_3_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1735,10 +1721,10 @@
 <span class="normal"><a href="#__codelineno-5-12">12</a></span>
 <span class="normal"><a href="#__codelineno-5-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>guru@hp:~/Downloads$ lsblk
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>sda           8:0    0   2,7T  0 disk 
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="hll">└─sda1        8:1    0   2,7T  0 part 
-</span><a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="hll">sdb           8:16   1 115,5G  0 disk 
-</span><a id="__codelineno-5-6" name="__codelineno-5-6"></a>└─sdb1        8:17   1 115,5G  0 part /media/guru/LINUX MINT
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="hll">sda           8:0    0   2,7T  0 disk 
+</span><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="hll">└─sda1        8:1    0   2,7T  0 part 
+</span><a id="__codelineno-5-5" name="__codelineno-5-5"></a>sdb           8:16   1 115,5G  0 disk 
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>└─sdb1        8:17   1 115,5G  0 part /media/guru/LINUX MINT
 <a id="__codelineno-5-7" name="__codelineno-5-7"></a>nvme0n1     259:0    0 953,9G  0 disk 
 <a id="__codelineno-5-8" name="__codelineno-5-8"></a>├─nvme0n1p1 259:1    0   100M  0 part /boot/efi
 <a id="__codelineno-5-9" name="__codelineno-5-9"></a>├─nvme0n1p2 259:2    0    16M  0 part 
@@ -1751,7 +1737,7 @@
 </div>
 </input></input></div>
 <h2 id="unmount">Unmount</h2>
-<p>De USB-stick (of beter een partitie daarop) is op dit moment nog gekoppeld (mounted) aan het bestandssysteem van Linux Mint. De partitie moet eerst ontkoppeld worden, alvorens het installatiescript kan worden uitgevoerd.</p>
+<p>De USB-stick (of beter de partitie daarop) is op dit moment nog gekoppeld (mounted) aan het bestandssysteem van Linux Mint. De partitie moet eerst ontkoppeld worden, alvorens het installatiescript kan worden uitgevoerd.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">guru@hp:~/Downloads_</label><label for="__tabbed_4_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1777,7 +1763,7 @@
 </div>
 </input></input></div>
 <h2 id="installatie">Installatie</h2>
-<p>Voer de installatie uit. Vervang <code>/dev/sdX</code> door de juiste letter van jouw stick! Gebruik nooit het partitienummer zoals bv. <code>sda1</code>!</p>
+<p>Voer de installatie uit. Vervang <code>/dev/sdX</code> door de juiste letter van jouw stick! Gebruik nooit het partitienummer zoals de <code>1</code> in bv. <code>sdb1</code>!</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">guru@hp:~/Downloads_</label><label for="__tabbed_5_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1891,7 +1877,7 @@
 </div>
 </input></input></div>
 <h2 id="isos-toevoegen">ISO's toevoegen</h2>
-<p>Zodra de installatie klaar is, verwijder je de USB-stick en plaats je die opnieuw. Je ziet in je bestandsbeheerder (en/of op het bureaublad) een nieuwe schijf verschijnen met de naam <code>Ventoy</code>. Het enige wat je nu nog moet doen, is je gedownloade .ISO bestanden (bijv. Linux Mint, Ubuntu, Windows) simpelweg naar deze schijf kopiëren. Je hoeft daarna niets uit te pakken; Ventoy leest de ISO's direct bij het opstarten.</p>
+<p>Zodra de installatie klaar is, verwijder je de USB-stick en plaats je die opnieuw. Je ziet in je bestandsbeheerder (en/of op het bureaublad) een nieuwe schijf verschijnen met de naam <code>Ventoy</code>. Het enige wat je nu nog moet doen, is je gedownloade .ISO bestanden (bv. Linux Mint, Ubuntu, Windows, ...) simpelweg naar deze schijf kopiëren. Je hoeft daarna niets uit te pakken; Ventoy leest de ISO's direct bij het opstarten.</p>
 <div class="admonition danger">
 <p class="admonition-title">Kopiëren naar een USB-stick</p>
 <p>Je kan altijd via de GUI bestanden kopiëren, maar de voortgangsbalk van de bestandsverkenner kan echter verdwijnen vóórdat de data fysiek op de stick staat. Klik altijd op <code>Unmount</code> in de zijbalk en wacht op de melding dat de schijf veilig verwijderd kan worden. Beter nog: gebruik <code>rsync</code> met de <code>--fsync</code> parameter vanaf de Terminal.</p>
@@ -1920,7 +1906,7 @@
 <span class="normal"><a href="#__codelineno-11-10">10</a></span>
 <span class="normal"><a href="#__codelineno-11-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>guru@hp:~$ rsync -vhrl --size-only --progress --delete --fsync /home/guru/Downloads/ISO/ /media/guru/Ventoy/
 <a id="__codelineno-11-2" name="__codelineno-11-2"></a>sending incremental file list
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a>Win11_25H2_Enterprise_Evaluation.iso
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>Win11_25H2_Pro.iso
 <a id="__codelineno-11-4" name="__codelineno-11-4"></a>          7,09G 100%    1,22GB/s    0:00:05 (xfr#1, to-chk=1/3)
 <a id="__codelineno-11-5" name="__codelineno-11-5"></a>linuxmint-22.3-cinnamon-64bit.iso
 <a id="__codelineno-11-6" name="__codelineno-11-6"></a>          3,09G 100%    4,93MB/s    0:09:58 (xfr#2, to-chk=0/3)

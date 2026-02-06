@@ -757,9 +757,9 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../maak-opstartbare-usb-stick-windows11/">
+<a class="md-nav__link" href="../maak-opstartbare-usb-stick-ventoy/">
 <span class="md-ellipsis">
-    Maak een opstartbare USB-stick voor Windows 11
+    Maak een opstartbare USB-stick met Ventoy
   </span>
 </a>
 </li>
@@ -774,13 +774,6 @@
 <a class="md-nav__link" href="../verifieer-linuxmint22-iso/">
 <span class="md-ellipsis">
     Verifieer de authenticiteit en integriteit van een Linux Mint ISO-bestand
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../maak-opstartbare-usb-stick-linuxmint22/">
-<span class="md-ellipsis">
-    Maak een opstartbare USB-stick voor Linux Mint
   </span>
 </a>
 </li>
@@ -1107,13 +1100,6 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../maak-opstartbare-usb-stick-ventoy/">
-<span class="md-ellipsis">
-    Maak een opstartbare USB-stick met Ventoy
-  </span>
-</a>
-</li>
 </ul>
 </nav>
 </li>
@@ -1236,13 +1222,13 @@
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="480" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/u5u_fb5T-fE?autoplay=0&amp;loop=0&amp;mute=0" title="YouTube video player" width="854"></iframe>
 <h2 id="instructies">Instructies</h2>
 <p>Raadpleeg altijd de handleiding van jouw eigen hardware, want de stappen kunnen verschillen. Niet alle systemen bieden namelijk de mogelijkheid om de harde schijf direct vanuit de BIOS/UEFI te wissen.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">HP Z2 Tower G4i</label><label for="__tabbed_1_2">HP Z2 PC</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">HP Z2 Tower G1i</label><label for="__tabbed_1_2">HP Z2 PC</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
-<li>todo</li>
-<li>todo</li>
-<li>todo</li>
+<li>Bij de oudere Z2-modellen had je vaak de keuze voor een Secure Erase (Format NVM), wat betekent wissen in enkele seconden.</li>
+<li>In de nieuwere BIOS/UEFI-versies van HP (zoals op de G1i) is deze snelle standaardmethode niet meer beschikbaar maar gewijzigd naar NIST-compliant wiping (of herkent de BIOS/UEFI de SSD niet als een schijf die het specifieke NVMe-erase commando ondersteunt). In plaats van alleen de 'sleutel' weg te gooien, gaat het systeem nu vaak de volledige schijf bit-voor-bit overschrijven met patronen (bijv. nullen of willekeurige data).</li>
+<li>Daarom gaan we de erase procedure voor HP Z2 Tower G1i toestellen niet uitvoeren. We wissen eventueel aanwezige partities wel via de installer.</li>
 </ul>
 </div>
 <div class="tabbed-block">
