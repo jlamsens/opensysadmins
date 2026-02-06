@@ -7,12 +7,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Standing on the shoulder of giants" name="description"/>
 <meta content="Jurgen Lamsens" name="author"/>
-<link href="https://www.opensysadmins.com/howtos/test-lab-vm-virtualbox/" rel="canonical"/>
-<link href="../maak-snapshot-vm-virtualbox-labclean/" rel="prev"/>
-<link href="../download-windows11-evaluation-iso/" rel="next"/>
+<link href="https://www.opensysadmins.com/howtos/setup-packettracer900-linuxmint22/" rel="canonical"/>
+<link href="../setup-chrome-linuxmint22/" rel="prev"/>
+<link href="../setup-minicom-linuxmint22/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.44" name="generator"/>
-<title>Test een Windows/Linux lab omgeving - OpenSysAdmins</title>
+<title>Setup Packet Tracer 9.0.0 op Linux Mint 22 - OpenSysAdmins</title>
 <link href="../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#test-een-windowslinux-lab-omgeving">
+<a class="md-skip" href="#setup-packet-tracer-900-op-linux-mint-22">
           Skip to content
         </a>
 </div>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Test een Windows/Linux lab omgeving
+              Setup Packet Tracer 9.0.0 op Linux Mint 22
             
           </span>
 </div>
@@ -959,12 +959,97 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../setup-packettracer900-linuxmint22/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Setup Packet Tracer 9.0.0 op Linux Mint 22
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Setup Packet Tracer 9.0.0 op Linux Mint 22
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vereisten">
+<span class="md-ellipsis">
+      Vereisten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo">
+<span class="md-ellipsis">
+      Demo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#open-terminal">
+<span class="md-ellipsis">
+      Open Terminal
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installeer-packet-tracer">
+<span class="md-ellipsis">
+      Installeer Packet Tracer
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#notice">
+<span class="md-ellipsis">
+      Notice
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activation-link">
+<span class="md-ellipsis">
+      Activation link
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mint-menu">
+<span class="md-ellipsis">
+      Mint menu
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multi-user">
+<span class="md-ellipsis">
+      Multi-user
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sign-in">
+<span class="md-ellipsis">
+      Sign-in
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#font-configuration">
+<span class="md-ellipsis">
+      Font configuration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../setup-minicom-linuxmint22/">
@@ -1036,41 +1121,12 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Test een Windows/Linux lab omgeving
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../test-lab-vm-virtualbox/">
 <span class="md-ellipsis">
     Test een Windows/Linux lab omgeving
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#vereisten">
-<span class="md-ellipsis">
-      Vereisten
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#demo">
-<span class="md-ellipsis">
-      Demo
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../download-windows11-evaluation-iso/">
@@ -1191,6 +1247,62 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#open-terminal">
+<span class="md-ellipsis">
+      Open Terminal
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installeer-packet-tracer">
+<span class="md-ellipsis">
+      Installeer Packet Tracer
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#notice">
+<span class="md-ellipsis">
+      Notice
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activation-link">
+<span class="md-ellipsis">
+      Activation link
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mint-menu">
+<span class="md-ellipsis">
+      Mint menu
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multi-user">
+<span class="md-ellipsis">
+      Multi-user
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sign-in">
+<span class="md-ellipsis">
+      Sign-in
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#font-configuration">
+<span class="md-ellipsis">
+      Font configuration
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </div>
@@ -1198,23 +1310,227 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="test-een-windowslinux-lab-omgeving">Test een Windows/Linux lab omgeving</h1>
-<p>Deze howto is de afsluiting van je labopzet en laat zien hoe je de functionaliteit van je gemengde virtuele omgeving test. Je leert hoe je de onderlinge communicatie en netwerkverbindingen verifieert tussen je Windows 11 clients, Windows Servers, Linux Mint en Debian 13 VM's binnen het geconfigureerde NAT Network. Dit zorgt ervoor dat je virtuele lab, klaar voor beheer- en testtaken, correct functioneert voordat je met je projecten begint.</p>
+<h1 id="setup-packet-tracer-900-op-linux-mint-22">Setup Packet Tracer 9.0.0 op Linux Mint 22</h1>
+<p>Cisco Packet Tracer is een gratis netwerksimulatietool ontwikkeld door Cisco Systems, waarmee je virtuele netwerktopologieën kunnen ontwerpen, bouwen, configureren en testen in een risicovrije omgeving. Het je in staat om met diverse netwerkapparaten zoals routers en switches te experimenteren, netwerkprotocollen te simuleren en problemen op te lossen, zonder de noodzaak van dure fysieke hardware.</p>
 <h2 id="vereisten">Vereisten</h2>
 <ul>
 <li>een <a href="../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/" target="_blank">PC met Linux Mint 22</a></li>
-<li>een werkende installatie van <a href="../setup-virtualbox7-linuxmint22-oracledeb/" target="_blank">VirtualBox</a></li>
-<li>een werkende <a href="../../tutorials/setup-windows11-vm-virtualbox/" target="_blank">Windows 11 virtuele machine</a> template.</li>
-<li>een werkende <a href="../../tutorials/setup-windows-server2025-vm-virtualbox/" target="_blank">Windows Server 2025 virtuele machine</a> template.</li>
-<li>een werkende <a href="../../tutorials/setup-linuxmint22-vm-virtualbox/" target="_blank">Linux Mint 22 virtuele machine</a> template.</li>
-<li>een werkende <a href="../../tutorials/setup-debian13-vm-virtualbox/" target="_blank">Debian 13 virtuele machine</a> template.</li>
-<li><a href="../maak-clone-vm-virtualbox/" target="_blank">gekloonde virtuele machines</a></li>
-<li>een VirtualBox <a href="../configureer-natnetwork-virtualbox/" target="_blank">NAT network</a></li>
-<li>een compleet VirtualBox <a href="../configureer-lab-vm-virtualbox/" target="_blank">virtueel LAB</a></li>
-<li>een <a href="../maak-snapshot-vm-virtualbox-labclean/" target="_blank">LAB clean install snapshot</a> van het virtuele LAB</li>
+<li>internet verbinding</li>
 </ul>
+<div class="admonition danger">
+<p class="admonition-title">VDAB cursisten</p>
+<p>Gebruik het Packet Tracer installatie-bestand <code>CiscoPacketTracer_900_Ubuntu_64bit.deb</code> van in de <code>Download</code> folder in Google Classroom.</p>
+</div>
 <h2 id="demo">Demo</h2>
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="480" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/l_z3HhGvD_k?autoplay=0&amp;loop=0&amp;mute=0" title="YouTube video player" width="854"></iframe>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="480" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&amp;loop=0&amp;mute=0" title="YouTube video player" width="854"></iframe>
+<h2 id="open-terminal">Open Terminal</h2>
+<ul>
+<li>Start de bestandsbeheerder <code>Nemo</code></li>
+<li>Selecteer de map <code>Downloads</code></li>
+<li>Klik met de rechtermuisknop <em>op een lege ruimte</em> en selecteer <code>Openen in Terminal</code></li>
+</ul>
+<h2 id="installeer-packet-tracer">Installeer Packet Tracer</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">guru@hp:~/Downloads$_</label><label for="__tabbed_1_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Ververs eerst de lokale database zodat APT weet waar de nieuwste afhankelijkheden staan. Installeer vervolgens het pakket en haal automatisch de benodigde afhankelijkheden op. Accepteer de EULA.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo apt update
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>sudo apt install ./CiscoPacketTracer_900_Ubuntu_64bit -y
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span>
+<span class="normal"><a href="#__codelineno-1-31">31</a></span>
+<span class="normal"><a href="#__codelineno-1-32">32</a></span>
+<span class="normal"><a href="#__codelineno-1-33">33</a></span>
+<span class="normal"><a href="#__codelineno-1-34">34</a></span>
+<span class="normal"><a href="#__codelineno-1-35">35</a></span>
+<span class="normal"><a href="#__codelineno-1-36">36</a></span>
+<span class="normal"><a href="#__codelineno-1-37">37</a></span>
+<span class="normal"><a href="#__codelineno-1-38">38</a></span>
+<span class="normal"><a href="#__codelineno-1-39">39</a></span>
+<span class="normal"><a href="#__codelineno-1-40">40</a></span>
+<span class="normal"><a href="#__codelineno-1-41">41</a></span>
+<span class="normal"><a href="#__codelineno-1-42">42</a></span>
+<span class="normal"><a href="#__codelineno-1-43">43</a></span>
+<span class="normal"><a href="#__codelineno-1-44">44</a></span>
+<span class="normal"><a href="#__codelineno-1-45">45</a></span>
+<span class="normal"><a href="#__codelineno-1-46">46</a></span>
+<span class="normal"><a href="#__codelineno-1-47">47</a></span>
+<span class="normal"><a href="#__codelineno-1-48">48</a></span>
+<span class="normal"><a href="#__codelineno-1-49">49</a></span>
+<span class="normal"><a href="#__codelineno-1-50">50</a></span>
+<span class="normal"><a href="#__codelineno-1-51">51</a></span>
+<span class="normal"><a href="#__codelineno-1-52">52</a></span>
+<span class="normal"><a href="#__codelineno-1-53">53</a></span>
+<span class="normal"><a href="#__codelineno-1-54">54</a></span>
+<span class="normal"><a href="#__codelineno-1-55">55</a></span>
+<span class="normal"><a href="#__codelineno-1-56">56</a></span>
+<span class="normal"><a href="#__codelineno-1-57">57</a></span>
+<span class="normal"><a href="#__codelineno-1-58">58</a></span>
+<span class="normal"><a href="#__codelineno-1-59">59</a></span>
+<span class="normal"><a href="#__codelineno-1-60">60</a></span>
+<span class="normal"><a href="#__codelineno-1-61">61</a></span>
+<span class="normal"><a href="#__codelineno-1-62">62</a></span>
+<span class="normal"><a href="#__codelineno-1-63">63</a></span>
+<span class="normal"><a href="#__codelineno-1-64">64</a></span>
+<span class="normal"><a href="#__codelineno-1-65">65</a></span>
+<span class="normal"><a href="#__codelineno-1-66">66</a></span>
+<span class="normal"><a href="#__codelineno-1-67">67</a></span>
+<span class="normal"><a href="#__codelineno-1-68">68</a></span>
+<span class="normal"><a href="#__codelineno-1-69">69</a></span>
+<span class="normal"><a href="#__codelineno-1-70">70</a></span>
+<span class="normal"><a href="#__codelineno-1-71">71</a></span>
+<span class="normal"><a href="#__codelineno-1-72">72</a></span>
+<span class="normal"><a href="#__codelineno-1-73">73</a></span>
+<span class="normal"><a href="#__codelineno-1-74">74</a></span>
+<span class="normal"><a href="#__codelineno-1-75">75</a></span>
+<span class="normal"><a href="#__codelineno-1-76">76</a></span>
+<span class="normal"><a href="#__codelineno-1-77">77</a></span>
+<span class="normal"><a href="#__codelineno-1-78">78</a></span>
+<span class="normal"><a href="#__codelineno-1-79">79</a></span>
+<span class="normal"><a href="#__codelineno-1-80">80</a></span>
+<span class="normal"><a href="#__codelineno-1-81">81</a></span>
+<span class="normal"><a href="#__codelineno-1-82">82</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="hll">guru@hp:~/Downloads$ sudo apt update
+</span><a id="__codelineno-1-2" name="__codelineno-1-2"></a>Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Hit:2 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>Hit:3 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease                                           
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>Ign:5 http://packages.linuxmint.com zena InRelease
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>Hit:6 http://packages.linuxmint.com zena Release
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>Reading package lists... Done
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>Building dependency tree... Done
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>Reading state information... Done
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>15 packages can be upgraded. Run 'apt list --upgradable' to see them.
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>guru@hp:~/Downloads$ 
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="hll">guru@hp:~/Downloads$ sudo apt install ./CiscoPacketTracer_900_Ubuntu_64bit.deb -y
+</span><a id="__codelineno-1-15" name="__codelineno-1-15"></a>Reading package lists... Done
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>Building dependency tree... Done
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>Reading state information... Done
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>Note, selecting 'packettracer' instead of './CiscoPacketTracer_900_Ubuntu_64bit.deb'
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a>The following additional packages will be installed:
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a>  libpcre2-dev libpcre2-posix3
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>The following NEW packages will be installed:
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a>  libpcre2-dev libpcre2-posix3 packettracer
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a>0 upgraded, 3 newly installed, 0 to remove and 15 not upgraded.
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a>Need to get 743 kB/392 MB of archives.
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a>After this operation, 2.639 kB of additional disk space will be used.
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a>Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpcre2-posix3 amd64 10.42-4ubuntu2.1 [6.748 B]
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a>Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpcre2-dev amd64 10.42-4ubuntu2.1 [736 kB]
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a>Get:3 /home/guru/Downloads/CiscoPacketTracer_900_Ubuntu_64bit.deb packettracer amd64 9.0 [391 MB]
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a>Fetched 743 kB in 2s (349 kB/s)   
+<a id="__codelineno-1-30" name="__codelineno-1-30"></a>Selecting previously unselected package libpcre2-posix3:amd64.
+<a id="__codelineno-1-31" name="__codelineno-1-31"></a>(Reading database ... 501493 files and directories currently installed.)
+<a id="__codelineno-1-32" name="__codelineno-1-32"></a>Preparing to unpack .../libpcre2-posix3_10.42-4ubuntu2.1_amd64.deb ...
+<a id="__codelineno-1-33" name="__codelineno-1-33"></a>Unpacking libpcre2-posix3:amd64 (10.42-4ubuntu2.1) ...
+<a id="__codelineno-1-34" name="__codelineno-1-34"></a>Selecting previously unselected package libpcre2-dev:amd64.
+<a id="__codelineno-1-35" name="__codelineno-1-35"></a>Preparing to unpack .../libpcre2-dev_10.42-4ubuntu2.1_amd64.deb ...
+<a id="__codelineno-1-36" name="__codelineno-1-36"></a>Unpacking libpcre2-dev:amd64 (10.42-4ubuntu2.1) ...
+<a id="__codelineno-1-37" name="__codelineno-1-37"></a>Selecting previously unselected package packettracer.
+<a id="__codelineno-1-38" name="__codelineno-1-38"></a>Preparing to unpack .../CiscoPacketTracer_900_Ubuntu_64bit.deb ...
+<a id="__codelineno-1-39" name="__codelineno-1-39"></a>Unpacking packettracer (9.0) ...
+<a id="__codelineno-1-40" name="__codelineno-1-40"></a>Setting up libpcre2-posix3:amd64 (10.42-4ubuntu2.1) ...
+<a id="__codelineno-1-41" name="__codelineno-1-41"></a>Setting up libpcre2-dev:amd64 (10.42-4ubuntu2.1) ...
+<a id="__codelineno-1-42" name="__codelineno-1-42"></a>Setting up packettracer (9.0) ...
+<a id="__codelineno-1-43" name="__codelineno-1-43"></a>Non-root user: guru
+<a id="__codelineno-1-44" name="__codelineno-1-44"></a>Non-root home: /home/guru
+<a id="__codelineno-1-45" name="__codelineno-1-45"></a>
+<a id="__codelineno-1-46" name="__codelineno-1-46"></a>Please review Cisco Packet Tracer End User Licese Agreement (EULA)
+<a id="__codelineno-1-47" name="__codelineno-1-47"></a>
+<a id="__codelineno-1-48" name="__codelineno-1-48"></a>
+<a id="__codelineno-1-49" name="__codelineno-1-49"></a>  Cisco Packet Tracer Software License Agreement
+<a id="__codelineno-1-50" name="__codelineno-1-50"></a>
+<a id="__codelineno-1-51" name="__codelineno-1-51"></a>  DOWNLOADING, INSTALLING, OR USING THE CISCO PACKET TRACER SOFTWARE CONSTITUTES ACCEPTANCE OF THE CISCO END USER LICENSE AGREEMENT ("EULA" https://www.cisco.com/c/en/us/about/leg
+<a id="__codelineno-1-52" name="__codelineno-1-52"></a>  al/cloud-and-software/end_user_license_agreement.html) AND THE SUPPLEMENTAL END USER LICENSE AGREEMENT FOR CISCO PACKET TRACER ("SEULA" https://www.cisco.com/c/dam/en_us/about/d
+<a id="__codelineno-1-53" name="__codelineno-1-53"></a>  oing_business/legal/seula/cisco-packet-tracer-software.pdf). IF YOU DO NOT AGREE TO ALL OF THE TERMS OF THE EULA AND SEULA, THEN CISCO SYSTEMS, INC. ("CISCO") IS UNWILLING TO LI
+<a id="__codelineno-1-54" name="__codelineno-1-54"></a>  CENSE THE SOFTWARE TO YOU AND YOU ARE NOT AUTHORIZED TO DOWNLOAD, INSTALL OR USE THE SOFTWARE.
+<a id="__codelineno-1-55" name="__codelineno-1-55"></a><span class="hll">Press q to quit
+</span><a id="__codelineno-1-56" name="__codelineno-1-56"></a>
+<a id="__codelineno-1-57" name="__codelineno-1-57"></a>Enter 1, 2 or 3 at the prompt below
+<a id="__codelineno-1-58" name="__codelineno-1-58"></a>1) Show EULA text again
+<a id="__codelineno-1-59" name="__codelineno-1-59"></a>2) Accept EULA
+<a id="__codelineno-1-60" name="__codelineno-1-60"></a>3) Decline EULA
+<a id="__codelineno-1-61" name="__codelineno-1-61"></a><span class="hll">#? 2
+</span><a id="__codelineno-1-62" name="__codelineno-1-62"></a>Accept EULA (selected)
+<a id="__codelineno-1-63" name="__codelineno-1-63"></a>Directory '/home/guru/.local/share/mime/packages' does not exist!
+<a id="__codelineno-1-64" name="__codelineno-1-64"></a>xdg-icon-resource: No writable system icon directory found.
+<a id="__codelineno-1-65" name="__codelineno-1-65"></a>xdg-icon-resource: No writable system icon directory found.
+<a id="__codelineno-1-66" name="__codelineno-1-66"></a>gtk-update-icon-cache: No theme index file.
+<a id="__codelineno-1-67" name="__codelineno-1-67"></a>ln: failed to create symbolic link '/home/guru/.local/share/icons/gnome/index.theme': File exists
+<a id="__codelineno-1-68" name="__codelineno-1-68"></a>xdg-icon-resource: No writable system icon directory found.
+<a id="__codelineno-1-69" name="__codelineno-1-69"></a>xdg-icon-resource: No writable system icon directory found.
+<a id="__codelineno-1-70" name="__codelineno-1-70"></a>gtk-update-icon-cache: No theme index file.
+<a id="__codelineno-1-71" name="__codelineno-1-71"></a>ln: failed to create symbolic link '/home/guru/.local/share/icons/gnome/index.theme': File exists
+<a id="__codelineno-1-72" name="__codelineno-1-72"></a>xdg-icon-resource: No writable system icon directory found.
+<a id="__codelineno-1-73" name="__codelineno-1-73"></a>xdg-icon-resource: No writable system icon directory found.
+<a id="__codelineno-1-74" name="__codelineno-1-74"></a>gtk-update-icon-cache: No theme index file.
+<a id="__codelineno-1-75" name="__codelineno-1-75"></a>ln: failed to create symbolic link '/home/guru/.local/share/icons/gnome/index.theme': File exists
+<a id="__codelineno-1-76" name="__codelineno-1-76"></a>xdg-icon-resource: No writable system icon directory found.
+<a id="__codelineno-1-77" name="__codelineno-1-77"></a>xdg-icon-resource: No writable system icon directory found.
+<a id="__codelineno-1-78" name="__codelineno-1-78"></a>gtk-update-icon-cache: No theme index file.
+<a id="__codelineno-1-79" name="__codelineno-1-79"></a>Processing triggers for man-db (2.12.0-4build2) ...
+<a id="__codelineno-1-80" name="__codelineno-1-80"></a>Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+<a id="__codelineno-1-81" name="__codelineno-1-81"></a>N: Download is performed unsandboxed as root as file '/home/guru/Downloads/CiscoPacketTracer_900_Ubuntu_64bit.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+<a id="__codelineno-1-82" name="__codelineno-1-82"></a>guru@hp:~/Downloads$ 
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="notice">Notice</h2>
+<p>Negeer de waarschuwing "Notice" aan het einde van de installatie. Alles is goed gegaan.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="hll">...
+</span><a id="__codelineno-2-2" name="__codelineno-2-2"></a>N: Download is performed unsandboxed as root as file '/home/guru/Downloads/CiscoPacketTracer_900_Ubuntu_64bit.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>guru@hp:~/Downloads$ 
+</code></pre></div></td></tr></table></div>
+<h2 id="activation-link">Activation link</h2>
+<p>Lid van Cisco Network Academy? Je hebt als het goed is een activeringslink ontvangen in je privé-e-mail. Activeer je account. Mogelijk heb je dit al eerder gedaan. Sla deze stap dan over.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="activation-link.png"><img src="activation-link.png"/></a></p>
+<h2 id="mint-menu">Mint menu</h2>
+<p>Selecteer "Menu" en begin met het typen van "pac". Start "PacketTracer 9.0.0".</p>
+<h2 id="multi-user">Multi-user</h2>
+<p>Antwoord "no" bij de vraag "Would you like to run multi-user when application starts?".</p>
+<h2 id="sign-in">Sign-in</h2>
+<ul>
+<li>Kies eerst <code>Keep me logged in (for 3 months)</code> </li>
+<li>Selecteer vervolgens <code>Login</code>. Een nieuw venster wordt geopend in je webbrowser. Login met je Netacad credentials (vul je privé-e-mailadres in!)</li>
+</ul>
+<h2 id="font-configuration">Font configuration</h2>
+<p>Persoonlijke voorkeur. Selecteer <code>Options -&gt; Preferences -&gt; Font</code>. Vergroot de lettergrootte naar 12 en klik op <code>Apply</code>.
+Sluit vervolgens het venster.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="font-configuration.png"><img src="font-configuration.png"/></a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
