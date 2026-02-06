@@ -468,7 +468,7 @@ nav:
     - Configureer Windows Server 2025 basisinstellingen in een virtuele machine in VirtualBox: howtos/configureer-windows-server2025-basisinstellingen-vm-virtualbox/index.md
     - Maak een snapshot van een Windows Server 2025 virtuele machine in VirtualBox (na clean install): howtos/maak-snapshot-windows-server2025-vm-virtualbox-clean/index.md
     - Setup Google Chrome op Linux Mint 22: howtos/setup-chrome-linuxmint22/index.md
-    - Setup Packet Tracer 8.2.2 op Linux Mint 22: howtos/setup-packettracer822-linuxmint22/index.md
+    - Setup Packet Tracer 9.0.0 op Linux Mint 22: howtos/setup-packettracer900-linuxmint22/index.md
     - Setup minicom op Linux Mint 22: howtos/setup-minicom-linuxmint22/index.md
     - Toegang krijgen tot een Cisco-apparaat in ROMMON-modus: howtos/toegang-cisco-rommon/index.md
     - Fabrieksinstellingen herstellen van een Cisco 2960-switch: howtos/fabrieksinstellingen-herstellen-cisco2960/index.md
