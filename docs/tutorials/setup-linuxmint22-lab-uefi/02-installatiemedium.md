@@ -12,5 +12,5 @@ Zorg ervoor dat je beschikt over het officiële installatiebestand voor Linux Mi
 - [Stap 2.2: Verifieer de authenticiteit en integriteit van een Linux Mint 22 ISO-bestand.](../../howtos/verifieer-linuxmint22-iso/index.md){:target="_blank"}
 Controleer of het gedownloade Linux Mint ISO-bestand correct en ongewijzigd is.
 
-- [Stap 2.3: Maak een opstartbare USB-stick voor Linux Mint 22.](../../howtos/maak-opstartbare-usb-stick-linuxmint22/index.md){:target="_blank"}
-Gebruik `Rufus` op Windows, of `USB Image Writer` op Linux Mint om je Linux Mint installatiemedium te maken.
+- [Stap 2.6: Maak een opstartbare USB-stick voor Linux Mint 22.](../../howtos/maak-opstartbare-usb-stick-ventoy/index.md){:target="_blank"}
+Gebruik `Rufus` op Windows, `USB Image Writer` of `Ventoy` op Linux Mint om je Linux Mint installatiemedium te maken.

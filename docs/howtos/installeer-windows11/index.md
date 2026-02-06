@@ -4,7 +4,7 @@ Een schone installatie van Windows 11 is de meest grondige manier om het besturi
 
 ## Vereisten
 - een PC met een **BIOS of UEFI** (moderne computers hebben meestal UEFI)
-- een [opstartbare USB-stick voor Windows 11](../../howtos/maak-opstartbare-usb-stick-windows11/index.md){:target="_blank"}
+- een [opstartbare USB-stick voor Windows 11](../../howtos/maak-opstartbare-usb-stick-ventoy/index.md){:target="_blank"}
 - internet verbinding
 
 ## Demo

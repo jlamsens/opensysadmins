@@ -4,7 +4,7 @@ Je installeert Linux Mint 22 voor een stabiel, veilig en gebruiksvriendelijk bes
 
 ## Vereisten
 - een PC met een **BIOS of UEFI** (moderne computers hebben meestal UEFI)
-- een [opstartbare USB-stick voor Linux Mint 22](../../howtos/maak-opstartbare-usb-stick-linuxmint22/index.md){:target="_blank"}
+- een [opstartbare USB-stick voor Linux Mint 22](../../howtos/maak-opstartbare-usb-stick-ventoy/index.md){:target="_blank"}
 - internet verbinding
 
 ## Demo

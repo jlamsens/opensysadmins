@@ -17,6 +17,6 @@ Voordat je met de installatie begint, zorg je ervoor dat je de volgende middelen
     - (2) monitor(s), een toetsenbord en een muis
     - de mogelijkheid om op te starten vanaf een USB-stick
     - internettoegang (voor updates en configuratie na installatie)
-    - 2 USB-sticks (minimaal 8GB elk aanbevolen, voldoende om de ISO-bestanden te kunnen schrijven
+    - 2 aparte USB-sticks (minimaal 8GB elk aanbevolen, voldoende om de ISO-bestanden te kunnen schrijven) of 1 USB-stick voor Ventoy
 
 Je kan deze handleiding volgen vanop de LAB PC, maar ook vanaf je smartphone.

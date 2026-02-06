@@ -223,7 +223,7 @@ Pak het gedownloade Ventoy bestand lokaal uit op je systeem.
     ```
 
 ## USB-stick voorbereiden
-Plaats de USB-stick. Zoek je USB-stick op met `lsblk`. Tab `output` geeft in dit geval `/dev/sdb` aan, een oude Linux Mint USB-stick. Kijk goed naar de "size"; in dit voorbeeld is /dev/sda een schijf van 3 TB die je zeker niet wil wissen!
+Plaats de USB-stick. Zoek je USB-stick op met `lsblk`. Tab `output` geeft in dit geval `/dev/sdb` aan, met 1 partitie `/dev/sdb1`; een oude Linux Mint USB-stick. Kijk goed naar de "size"; in dit voorbeeld is `/dev/sda` namelijk een harde schijf van 2,7T die je zeker niet wil wissen!
 
 === "guru@hp:~/Downloads_"
 
@@ -233,7 +233,7 @@ Plaats de USB-stick. Zoek je USB-stick op met `lsblk`. Tab `output` geeft in dit
 
 === "output"
 
-    ``` title='' hl_lines="4 5"
+    ``` title='' hl_lines="3 4"
     guru@hp:~/Downloads$ lsblk
     NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
     sda           8:0    0   2,7T  0 disk 
@@ -250,7 +250,7 @@ Plaats de USB-stick. Zoek je USB-stick op met `lsblk`. Tab `output` geeft in dit
     ```
 
 ## Unmount
-De USB-stick (of beter een partitie daarop) is op dit moment nog gekoppeld (mounted) aan het bestandssysteem van Linux Mint. De partitie moet eerst ontkoppeld worden, alvorens het installatiescript kan worden uitgevoerd.
+De USB-stick (of beter de partitie daarop) is op dit moment nog gekoppeld (mounted) aan het bestandssysteem van Linux Mint. De partitie moet eerst ontkoppeld worden, alvorens het installatiescript kan worden uitgevoerd.
 
 === "guru@hp:~/Downloads_"
 
@@ -271,7 +271,7 @@ De USB-stick (of beter een partitie daarop) is op dit moment nog gekoppeld (moun
     ```
 
 ## Installatie
-Voer de installatie uit. Vervang `/dev/sdX` door de juiste letter van jouw stick! Gebruik nooit het partitienummer zoals bv. `sda1`!
+Voer de installatie uit. Vervang `/dev/sdX` door de juiste letter van jouw stick! Gebruik nooit het partitienummer zoals de `1` in bv. `sdb1`!
 
 === "guru@hp:~/Downloads_"
 
@@ -336,7 +336,7 @@ Voer de installatie uit. Vervang `/dev/sdX` door de juiste letter van jouw stick
     ```
 
 ## ISO's toevoegen
-Zodra de installatie klaar is, verwijder je de USB-stick en plaats je die opnieuw. Je ziet in je bestandsbeheerder (en/of op het bureaublad) een nieuwe schijf verschijnen met de naam `Ventoy`. Het enige wat je nu nog moet doen, is je gedownloade .ISO bestanden (bijv. Linux Mint, Ubuntu, Windows) simpelweg naar deze schijf kopiëren. Je hoeft daarna niets uit te pakken; Ventoy leest de ISO's direct bij het opstarten.
+Zodra de installatie klaar is, verwijder je de USB-stick en plaats je die opnieuw. Je ziet in je bestandsbeheerder (en/of op het bureaublad) een nieuwe schijf verschijnen met de naam `Ventoy`. Het enige wat je nu nog moet doen, is je gedownloade .ISO bestanden (bv. Linux Mint, Ubuntu, Windows, ...) simpelweg naar deze schijf kopiëren. Je hoeft daarna niets uit te pakken; Ventoy leest de ISO's direct bij het opstarten.
 
 !!! danger "Kopiëren naar een USB-stick"
     Je kan altijd via de GUI bestanden kopiëren, maar de voortgangsbalk van de bestandsverkenner kan echter verdwijnen vóórdat de data fysiek op de stick staat. Klik altijd op `Unmount` in de zijbalk en wacht op de melding dat de schijf veilig verwijderd kan worden. Beter nog: gebruik `rsync` met de `--fsync` parameter vanaf de Terminal.
@@ -355,7 +355,7 @@ Zodra de installatie klaar is, verwijder je de USB-stick en plaats je die opnieu
     ``` title='' hl_lines="0"
     guru@hp:~$ rsync -vhrl --size-only --progress --delete --fsync /home/guru/Downloads/ISO/ /media/guru/Ventoy/
     sending incremental file list
-    Win11_25H2_Enterprise_Evaluation.iso
+    Win11_25H2_Pro.iso
               7,09G 100%    1,22GB/s    0:00:05 (xfr#1, to-chk=1/3)
     linuxmint-22.3-cinnamon-64bit.iso
               3,09G 100%    4,93MB/s    0:09:58 (xfr#2, to-chk=0/3)

@@ -11,11 +11,11 @@ Veel moderne UEFI-firmware (vooral op laptops en desktops van fabrikanten zoals 
 ## Instructies
 Raadpleeg altijd de handleiding van jouw eigen hardware, want de stappen kunnen verschillen. Niet alle systemen bieden namelijk de mogelijkheid om de harde schijf direct vanuit de BIOS/UEFI te wissen.
 
-=== "HP Z2 Tower G4i"
+=== "HP Z2 Tower G1i"
 
-    - todo
-    - todo
-    - todo
+    - Bij de oudere Z2-modellen had je vaak de keuze voor een Secure Erase (Format NVM), wat betekent wissen in enkele seconden.
+    - In de nieuwere BIOS/UEFI-versies van HP (zoals op de G1i) is deze snelle standaardmethode niet meer beschikbaar maar gewijzigd naar NIST-compliant wiping (of herkent de BIOS/UEFI de SSD niet als een schijf die het specifieke NVMe-erase commando ondersteunt). In plaats van alleen de 'sleutel' weg te gooien, gaat het systeem nu vaak de volledige schijf bit-voor-bit overschrijven met patronen (bijv. nullen of willekeurige data).
+    - Daarom gaan we de erase procedure voor HP Z2 Tower G1i toestellen niet uitvoeren. We wissen eventueel aanwezige partities wel via de installer.
 
 === "HP Z2 PC"
 

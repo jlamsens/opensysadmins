@@ -96,18 +96,6 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
 
     <!--- ---------------------------------------------------------------------------------------------------------------- --->
 
-    <img src="howtos/maak-opstartbare-usb-stick-windows11/home.png" width="320" height="180" align=right />
-    > *22 Juni 2025 - in [Howtos](howtos/index.md) - 5 min instructie*
-
-
-    Je hebt een opstartbare USB-stick voor Windows 11 nodig om het besturingssysteem te installeren op een nieuwe pc, een beschadigde installatie te repareren, ...
-
-    [Lees verder](howtos/maak-opstartbare-usb-stick-windows11/index.md){:target="_blank"}
-    <br>
-    <br>
-
-    <!--- ---------------------------------------------------------------------------------------------------------------- --->
-
     <img src="howtos/download-linuxmint22-iso/home.png" width="320" height="180" align=right />
     > *23 Juni 2025 - in [Howtos](howtos/index.md) - 2 min instructie*
 
@@ -132,13 +120,13 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
 
     <!--- ---------------------------------------------------------------------------------------------------------------- --->
 
-    <img src="howtos/maak-opstartbare-usb-stick-linuxmint22/home.png" width="320" height="180" align=right />
+    <img src="howtos/maak-opstartbare-usb-stick-ventoy/home.png" width="320" height="180" align=right />
     > *26 Juni 2025 - in [Howtos](howtos/index.md) - 5 min instructie*
 
 
-    Je hebt een opstartbare USB-stick voor Linux Mint nodig om het besturingssysteem te installeren op een nieuwe pc, een beschadigde installatie te repareren, ...
+    Je hebt een opstartbare USB-stick voor Windows of Linux Mint nodig om het besturingssysteem te installeren op een nieuwe pc, een beschadigde installatie te repareren, ...
 
-    [Lees verder](howtos/maak-opstartbare-usb-stick-linuxmint22/index.md){:target="_blank"}
+    [Lees verder](howtos/maak-opstartbare-usb-stick-ventoy/index.md){:target="_blank"}
     <br>
     <br>
 

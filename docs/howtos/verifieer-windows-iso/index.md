@@ -1,11 +1,11 @@
 # Verifieer de authenticiteit en integriteit van een Windows 11 ISO-bestand
 
-Een [gedownload Windows 11 ISO-bestand](../download-windows11-multi-versie-iso/index.md){:target="_blank"} kan je best verifiëren op [authenticiteit en integriteit](../../explanations/authenticiteit-integriteit/index.md){:target="_blank"}. Hieronder vind je een stappenplan voor zowel Windows als Linux Mint.
+Een gedownload Windows 11 [multi-versie](../download-windows11-multi-versie-iso/index.md){:target="_blank"} of [Enterprise Evaluation](../download-windows11-evaluation-iso/index.md){:target="_blank"} ISO-bestand kan je best verifiëren op [authenticiteit en integriteit](../../explanations/authenticiteit-integriteit/index.md){:target="_blank"}. Hieronder vind je een stappenplan voor zowel Windows als Linux Mint.
 
 ## Vereisten
 - een [PC met Windows of Linux](../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/index.md ){:target="_blank"}
 - internet verbinding
-- het [Windows 11 ISO-bestand](../download-windows11-multi-versie-iso/index.md){:target="_blank"}
+- het Windows 11 [multi-versie](../download-windows11-multi-versie-iso/index.md){:target="_blank"} of [Enterprise Evaluation](../download-windows11-evaluation-iso/index.md){:target="_blank"} ISO-bestand
 
 ## Demo
 <iframe width="854" height="480" src="https://www.youtube.com/embed/_VsDvEMNRjo?autoplay=0&loop=0&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -64,7 +64,7 @@ Dit commando berekent een unieke code van het gedownloade ISO-bestand, wat de ui
     ```
 
 ### Vergelijk de berekende hashwaarde met de officiële waarde van Microsoft
-Vergelijk deze berekende hash (CCF482436DF954C0AD6D41123A49FDE79352CA71F7A684A97D5E0A0C39D7F39F) met de hash-waarde die op de Microsoft website gepubliceerd staat. Als ze exact overeenkomen, is het ISO-bestand 100% zeker zowel authentiek als ongewijzigd.
+Vergelijk deze berekende hash (B56B911BF18A2CEAEB3904D87E7C770BDF92D3099599D61AC2497B91BF190B11) met de hash-waarde die op de Microsoft website gepubliceerd staat. Als ze exact overeenkomen, is het ISO-bestand 100% zeker zowel authentiek als ongewijzigd.
 
 
 ## Conclusie

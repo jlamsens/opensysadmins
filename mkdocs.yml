@@ -439,10 +439,9 @@ nav:
 
     - Download een Windows 11 multi-versie ISO bestand: howtos/download-windows11-multi-versie-iso/index.md
     - Verifieer de authenticiteit en integriteit van een Windows 11 ISO-bestand: howtos/verifieer-windows-iso/index.md
-    - Maak een opstartbare USB-stick voor Windows 11: howtos/maak-opstartbare-usb-stick-windows11/index.md
+    - Maak een opstartbare USB-stick met Ventoy: howtos/maak-opstartbare-usb-stick-ventoy/index.md
     - Download een Linux Mint ISO bestand: howtos/download-linuxmint22-iso/index.md
     - Verifieer de authenticiteit en integriteit van een Linux Mint ISO-bestand: howtos/verifieer-linuxmint22-iso/index.md
-    - Maak een opstartbare USB-stick voor Linux Mint: howtos/maak-opstartbare-usb-stick-linuxmint22/index.md
     - Open de BIOS/UEFI Setup Utility: howtos/open-bios-uefi-setup-utility/index.md
     - Configureer de opstartmodus in BIOS/UEFI: howtos/configureer-opstartmodus-bios-uefi/index.md
     - Wis de harde schijf via de BIOS/UEFI Setup Utility: howtos/wis-harde-schijf-bios-uefi/index.md
@@ -484,7 +483,6 @@ nav:
     - Download een Windows 11 Enterprise Evaluation ISO bestand: howtos/download-windows11-evaluation-iso/index.md
     - Wachtwoordherstel op een Cisco 1941 router: howtos/wachtwoordherstel-cisco1941/index.md
     - Setup van een Cisco IOS besturingssysteem op een Cisco 1941 router: howtos/setup-ios-cisco1941/index.md
-    - Maak een opstartbare USB-stick met Ventoy: howtos/maak-opstartbare-usb-stick-ventoy/index.md
 
       
 ####################################################################################

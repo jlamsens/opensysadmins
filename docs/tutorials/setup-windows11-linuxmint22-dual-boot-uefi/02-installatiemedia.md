@@ -12,8 +12,8 @@ Zorg ervoor dat je beschikt over het officiële installatiebestand voor Windows 
 - [Stap 2.2: Verifieer de authenticiteit en integriteit van het Windows ISO-bestand.](../../howtos/verifieer-windows-iso/index.md){:target="_blank"}
 Controleer of het gedownloade Windows ISO-bestand correct en ongewijzigd is.
 
-- [Stap 2.3: Maak een opstartbare USB-stick voor Windows 11.](../../howtos/maak-opstartbare-usb-stick-windows11/index.md){:target="_blank"}
-Gebruik `Rufus` op Windows, of `USB Image Writer` op Linux Mint om je Windows 11 installatiemedium te maken.
+- [Stap 2.3: Maak een opstartbare USB-stick voor Windows 11.](../../howtos/maak-opstartbare-usb-stick-ventoy/index.md){:target="_blank"}
+Gebruik `Rufus` op Windows of `Ventoy` op Linux Mint om je Windows 11 installatiemedium te maken.
 
 - [Stap 2.4: Download de Linux Mint 22 ISO.](../../howtos/download-linuxmint22-iso/index.md){:target="_blank"}
 Zorg ervoor dat je beschikt over het officiële installatiebestand voor Linux Mint. Dit vormt de basis voor je installatie, of je het nu downloadt van de Linux Mint website of verkrijgt via een lokale bron.
@@ -21,5 +21,5 @@ Zorg ervoor dat je beschikt over het officiële installatiebestand voor Linux Mi
 - [Stap 2.5: Verifieer de authenticiteit en integriteit van een Linux Mint 22 ISO-bestand.](../../howtos/verifieer-linuxmint22-iso/index.md){:target="_blank"}
 Controleer of het gedownloade Linux Mint ISO-bestand correct en ongewijzigd is.
 
-- [Stap 2.6: Maak een opstartbare USB-stick voor Linux Mint 22.](../../howtos/maak-opstartbare-usb-stick-linuxmint22/index.md){:target="_blank"}
-Gebruik `Rufus` op Windows, of `USB Image Writer` op Linux Mint om je Linux Mint installatiemedium te maken.
+- [Stap 2.6: Maak een opstartbare USB-stick voor Linux Mint 22.](../../howtos/maak-opstartbare-usb-stick-ventoy/index.md){:target="_blank"}
+Gebruik `Rufus` op Windows, `USB Image Writer` of `Ventoy` op Linux Mint om je Linux Mint installatiemedium te maken.
