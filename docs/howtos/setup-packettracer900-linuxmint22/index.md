@@ -24,7 +24,7 @@ Cisco Packet Tracer is een gratis netwerksimulatietool ontwikkeld door Cisco Sys
 
     ``` title='' hl_lines="0"
     sudo apt update
-    sudo apt install ./CiscoPacketTracer_900_Ubuntu_64bit -y
+    sudo apt install ./CiscoPacketTracer_900_Ubuntu_64bit.deb -y
     ```
 
 === "output"

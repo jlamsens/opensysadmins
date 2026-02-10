@@ -330,8 +330,7 @@ extra_css:
   - stylesheets/extra.css
 
 exclude_docs: |
-  howtos/template/index.md
-  howtos/OLD
+  howtos/excluded
   tutorials/OLD
 
 
