@@ -223,7 +223,10 @@ Pak het gedownloade Ventoy bestand lokaal uit op je systeem.
     ```
 
 ## USB-stick voorbereiden
-Plaats de USB-stick. Zoek je USB-stick op met `lsblk`. Tab `output` geeft in dit geval `/dev/sdb` aan, met 1 partitie `/dev/sdb1`; een oude Linux Mint USB-stick. Kijk goed naar de "size"; in dit voorbeeld is `/dev/sda` namelijk een harde schijf van 2,7T die je zeker niet wil wissen!
+Plaats de USB-stick. Zoek je USB-stick op met `lsblk`. Tab `output` geeft in dit geval `/dev/sdb` aan, met 1 partitie `/dev/sdb1`; een oude Linux Mint USB-stick. 
+
+!!! danger "Opgelet!"
+    Kijk goed naar de "size"; in dit voorbeeld is `/dev/sda` namelijk een harde schijf van 2,7T die je zeker niet wil wissen! Vervang dus de `X` in /dev/sdX door de juiste letter van jouw stick!
 
 === "guru@hp:~/Downloads_"
 
@@ -233,7 +236,7 @@ Plaats de USB-stick. Zoek je USB-stick op met `lsblk`. Tab `output` geeft in dit
 
 === "output"
 
-    ``` title='' hl_lines="3 4"
+    ``` title='' hl_lines="5 6"
     guru@hp:~/Downloads$ lsblk
     NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
     sda           8:0    0   2,7T  0 disk 
@@ -251,6 +254,8 @@ Plaats de USB-stick. Zoek je USB-stick op met `lsblk`. Tab `output` geeft in dit
 
 ## Unmount
 De USB-stick (of beter de partitie daarop) is op dit moment nog gekoppeld (mounted) aan het bestandssysteem van Linux Mint. De partitie moet eerst ontkoppeld worden, alvorens het installatiescript kan worden uitgevoerd.
+
+Nogmaals: vervang dus de `X` in /dev/sdX door de juiste letter van jouw stick!
 
 === "guru@hp:~/Downloads_"
 
@@ -271,7 +276,9 @@ De USB-stick (of beter de partitie daarop) is op dit moment nog gekoppeld (mount
     ```
 
 ## Installatie
-Voer de installatie uit. Vervang `/dev/sdX` door de juiste letter van jouw stick! Gebruik nooit het partitienummer zoals de `1` in bv. `sdb1`!
+Voer de installatie uit. Gebruik nooit het partitienummer zoals de `1` in bv. `/dev/sdb1` maar wel de volledige disk bv. `/dev/sdb`!
+
+Nogmaals: vervang dus de `X` in /dev/sdX door de juiste letter van jouw stick!
 
 === "guru@hp:~/Downloads_"
 
@@ -339,21 +346,23 @@ Voer de installatie uit. Vervang `/dev/sdX` door de juiste letter van jouw stick
 Zodra de installatie klaar is, verwijder je de USB-stick en plaats je die opnieuw. Je ziet in je bestandsbeheerder (en/of op het bureaublad) een nieuwe schijf verschijnen met de naam `Ventoy`. Het enige wat je nu nog moet doen, is je gedownloade .ISO bestanden (bv. Linux Mint, Ubuntu, Windows, ...) simpelweg naar deze schijf kopiëren. Je hoeft daarna niets uit te pakken; Ventoy leest de ISO's direct bij het opstarten.
 
 !!! danger "Kopiëren naar een USB-stick"
-    Je kan altijd via de GUI bestanden kopiëren, maar de voortgangsbalk van de bestandsverkenner kan echter verdwijnen vóórdat de data fysiek op de stick staat. Klik altijd op `Unmount` in de zijbalk en wacht op de melding dat de schijf veilig verwijderd kan worden. Beter nog: gebruik `rsync` met de `--fsync` parameter vanaf de Terminal.
+    Je kan altijd via de GUI bestanden kopiëren, maar de voortgangsbalk van de bestandsverkenner kan echter verdwijnen vóórdat de data fysiek op de stick staat. Klik altijd op `Unmount` in de zijbalk en wacht op de melding dat de schijf veilig verwijderd kan worden. 
+    
+    Beter nog: gebruik `rsync` met de `--fsync` parameter vanaf de Terminal.
 
 === "guru@hp:~$_"
     In dit voorbeeld wordt de stick automatisch gemount onder `/media/guru/Ventoy` en kopiëren we een aantal ISO bestanden van onder `/home/guru/Downloads/ISO/`. Vervolgens wordt de stick ontkoppeld en kan die verwijderd worden.
 
     ``` title='' hl_lines="0"
     mount | grep sdb
-    rsync -vhrl --size-only --progress --delete --fsync /home/guru/Downloads/ISO/ /media/guru/Ventoy/
+    rsync -vhrl --size-only --progress --delete --fsync /home/guru/Downloads/ISO/{linuxmint-22.3-cinnamon-64bit.iso,Win11_25H2_Pro.iso} /media/guru/Ventoy/
     umount /dev/sdb1
     ```
 
 === "output"
 
     ``` title='' hl_lines="0"
-    guru@hp:~$ rsync -vhrl --size-only --progress --delete --fsync /home/guru/Downloads/ISO/ /media/guru/Ventoy/
+    guru@hp:~$ rsync -vhrl --size-only --progress --delete --fsync /home/guru/Downloads/ISO/{linuxmint-22.3-cinnamon-64bit.iso,Win11_25H2_Pro.iso} /media/guru/Ventoy/
     sending incremental file list
     Win11_25H2_Pro.iso
               7,09G 100%    1,22GB/s    0:00:05 (xfr#1, to-chk=1/3)
