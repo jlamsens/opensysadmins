@@ -1243,7 +1243,35 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>guru@hp:~$ sudo apt purge casper -y
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>[sudo] password for guru:     
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Reading package lists... Done
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>Building dependency tree... Done
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>Reading state information... Done
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>The following packages will be REMOVED:
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>  casper*
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>0 upgraded, 0 newly installed, 1 to remove and 2 not upgraded.
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>After this operation, 222 kB disk space will be freed.
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>(Reading database ... 544281 files and directories currently installed.)
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>Removing casper (1.498) ...
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>Processing triggers for man-db (2.12.0-4build2) ...
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>(Reading database ... 544220 files and directories currently installed.)
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>Purging configuration files for casper (1.498) ...
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>guru@hp:~$
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -1257,7 +1285,9 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>guru@hp:~$ sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"/GRUB_CMDLINE_LINUX_DEFAULT=""/g' /etc/default/grub
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>guru@hp:~$ 
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -1270,7 +1300,9 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>guru@hp:~$ sudo sed -i 's/GRUB_TIMEOUT=[0-9]*/GRUB_TIMEOUT=2/g' /etc/default/grub
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>guru@hp:~$
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -1283,7 +1315,54 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>guru@hp:~$ sudo update-grub
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>Sourcing file `/etc/default/grub'
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>Sourcing file `/etc/default/grub.d/50_linuxmint.cfg'
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>Sourcing file `/etc/default/grub.d/oem-flavour.cfg'
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>Generating grub configuration file ...
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>Found linux image: /boot/vmlinuz-6.17.0-1017-oem
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>Found initrd image: /boot/initrd.img-6.17.0-1017-oem
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>Found linux image: /boot/vmlinuz-6.17.0-20-generic
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>Found initrd image: /boot/initrd.img-6.17.0-20-generic
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>Found linux image: /boot/vmlinuz-6.14.0-37-generic
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>Found initrd image: /boot/initrd.img-6.14.0-37-generic
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>Warning: os-prober will be executed to detect other bootable partitions.
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a>Its output will be used to detect bootable binaries on them and create new boot entries.
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a>Found Windows Boot Manager on /dev/nvme0n1p1@/EFI/Microsoft/Boot/bootmgfw.efi
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a>Adding boot menu entry for UEFI Firmware Settings ...
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a>done
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a>guru@hp:~$
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</input></input></div>
+<p>Herstart.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">guru@hp:~$_</label><label for="__tabbed_5_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>sudo reboot
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>guru@hp:~$ sudo reboot
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>...
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
