@@ -2,6 +2,12 @@
 
 Veel moderne UEFI-firmware (vooral op laptops en desktops van fabrikanten zoals bv. HP, Dell, Lenovo en bij sommige moederbordfabrikanten) bevat een functie genaamd `Secure Erase` of een vergelijkbare term. Deze functie is specifiek ontworpen voor Solid State Drives (SSD's) en gebruikt ATA Secure Erase-commando's om alle gegevens op de SSD veilig en permanent te wissen, zodat ze onherstelbaar zijn. Dit is de meest effectieve manier om een SSD "schoon" te maken.
 
+!!! danger "VDAB cursisten"
+    Je hoeft de SSD’s niet te wissen, omdat de snelle secure erase-functie op jullie lestoestellen niet meer beschikbaar is en vervangen werd door een veel tragere, volledige overschrijfmethode. Die methode kost onnodig veel tijd zonder meerwaarde in onze context. Eventuele aanwezige data en partities verwijderen we gewoon via de installer.
+
+    Bekijk gerust onderstaand filmpje, maar je kan het wissen van de SSD's dus overslaan!
+
+
 ## Vereisten
 - een computer met toegang tot de [BIOS of UEFI](../open-bios-uefi-setup-utility/index.md){:target="_blank"} (moderne computers hebben meestal UEFI)
 
