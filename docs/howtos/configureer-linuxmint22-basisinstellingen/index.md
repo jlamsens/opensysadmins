@@ -20,7 +20,21 @@ Mogelijks krijg je nog een rode systemd fout bij `shutdown` omdat `casper` iets 
 === "output"
 
     ``` title='' hl_lines="0"
-
+    guru@hp:~$ sudo apt purge casper -y
+    [sudo] password for guru:     
+    Reading package lists... Done
+    Building dependency tree... Done
+    Reading state information... Done
+    The following packages will be REMOVED:
+      casper*
+    0 upgraded, 0 newly installed, 1 to remove and 2 not upgraded.
+    After this operation, 222 kB disk space will be freed.
+    (Reading database ... 544281 files and directories currently installed.)
+    Removing casper (1.498) ...
+    Processing triggers for man-db (2.12.0-4build2) ...
+    (Reading database ... 544220 files and directories currently installed.)
+    Purging configuration files for casper (1.498) ...
+    guru@hp:~$
     ```
 
 ## Grub
@@ -35,7 +49,8 @@ Verwijder de standaard opstartopties "quiet splash", waardoor tijdens het opstar
 === "output"
 
     ``` title='' hl_lines="0"
- 
+    guru@hp:~$ sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"/GRUB_CMDLINE_LINUX_DEFAULT=""/g' /etc/default/grub
+    guru@hp:~$ 
     ```
 
 Verkort de wachttijd van het GRUB-keuzemenu tot 2 seconden.
@@ -49,7 +64,8 @@ Verkort de wachttijd van het GRUB-keuzemenu tot 2 seconden.
 === "output"
 
     ``` title='' hl_lines="0"
-
+    guru@hp:~$ sudo sed -i 's/GRUB_TIMEOUT=[0-9]*/GRUB_TIMEOUT=2/g' /etc/default/grub
+    guru@hp:~$
     ```
 
 Pas de configuratie toe, zodat deze wijzigingen effectief worden bij de volgende opstart.
@@ -63,5 +79,36 @@ Pas de configuratie toe, zodat deze wijzigingen effectief worden bij de volgende
 === "output"
 
     ``` title='' hl_lines="0"
+    guru@hp:~$ sudo update-grub
+    Sourcing file `/etc/default/grub'
+    Sourcing file `/etc/default/grub.d/50_linuxmint.cfg'
+    Sourcing file `/etc/default/grub.d/oem-flavour.cfg'
+    Generating grub configuration file ...
+    Found linux image: /boot/vmlinuz-6.17.0-1017-oem
+    Found initrd image: /boot/initrd.img-6.17.0-1017-oem
+    Found linux image: /boot/vmlinuz-6.17.0-20-generic
+    Found initrd image: /boot/initrd.img-6.17.0-20-generic
+    Found linux image: /boot/vmlinuz-6.14.0-37-generic
+    Found initrd image: /boot/initrd.img-6.14.0-37-generic
+    Warning: os-prober will be executed to detect other bootable partitions.
+    Its output will be used to detect bootable binaries on them and create new boot entries.
+    Found Windows Boot Manager on /dev/nvme0n1p1@/EFI/Microsoft/Boot/bootmgfw.efi
+    Adding boot menu entry for UEFI Firmware Settings ...
+    done
+    guru@hp:~$
+    ```
 
+Herstart.
+
+=== "guru@hp:~$_"
+
+    ``` title='' hl_lines="0"
+    sudo reboot
+    ```
+
+=== "output"
+
+    ``` title='' hl_lines="0"
+    guru@hp:~$ sudo reboot
+    ...
     ```
