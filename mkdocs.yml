@@ -502,10 +502,10 @@ nav:
 
 ####################################################################################
 
-#   # Bike routes
-#  - Bike routes: #listed in header, must be unique
-#    - bike routes/index.md # overview/landing page
-#
-#    - Gent: bike routes/gent/index.md
+#   # Fietsroutes
+  - Fietsroutes: #listed in header, must be unique
+    - fietsroutes/index.md # overview/landing page
+    
+    - Gent: fietsroutes/gent/index.md
 
 ####################################################################################
