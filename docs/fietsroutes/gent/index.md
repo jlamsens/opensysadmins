@@ -5,27 +5,27 @@ hide:
 
 # Gent in alle windrichtingen
 
-<img src="gent-alle-windrichtingen.png" width="640" height="460"/>
+<img src="gent-alle-windrichtingen.webp" width="640" height="460"/>
 
 ## Gent Noord
 
-<img src="gent-noord.png"/>
+<img src="gent-noord.webp"/>
 
 ## Gent Noord-Oost
 
-<img src="gent-noord-oost.png"/>
+<img src="gent-noord-oost.webp"/>
 
 ## Gent Oost
 
-<img src="gent-oost.png"/>
+<img src="gent-oost.webp"/>
 
 ## Gent Zuid-Oost
 
-<img src="gent-zuid-oost.png"/>
+<img src="gent-zuid-oost.webp"/>
 
 ## Gent Zuid
 
-<img src="gent-zuid.png"/>
+<img src="gent-zuid.webp"/>
 
 ## Gent Zuid-West
 Explain step.
