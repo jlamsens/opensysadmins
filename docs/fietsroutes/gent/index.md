@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# Gent in alle windrichtingen
+# Gent in alle windrichtingen vanuit Kafé Kozak
 
 <img src="gent-alle-windrichtingen.webp" width="640" height="460"/>
 
