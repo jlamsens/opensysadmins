@@ -19,4 +19,4 @@ Zorg ervoor dat je beschikt over het officiële installatiebestand voor Linux Mi
 Controleer of het gedownloade Linux Mint ISO-bestand correct en ongewijzigd is.
 
 - [Stap 2.6: Maak een opstartbare USB-stick voor Windows & Linux Mint 22 met Ventoy.](../../howtos/maak-opstartbare-usb-stick-ventoy/index.md){:target="_blank"}
-Gebruik `Rufus` op Windows, `USB Image Writer` of `Ventoy` op Linux Mint om je Linux Mint installatiemedium te maken.
+Gebruik de tool `Ventoy` op Linux Mint om zowel je Windows als je Linux Mint installatiemedium te maken.

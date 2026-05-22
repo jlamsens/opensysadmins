@@ -12,5 +12,8 @@ Start de LES PC op en gebruik de juiste toets (vaak F2, Del, F10 of Esc) om de B
 - [Stap 3.2: Configureer de opstartmodus.](../../howtos/configureer-opstartmodus-bios-uefi/index.md){:target="_blank"}
 Pas de instellingen aan voor 'Secure Boot' en de 'Boot Mode' (bv. UEFI of Legacy) zoals vereist voor dual boot.
 
-- [Stap 3.3: Wis de harde schijf (indien mogelijk).](../../howtos/wis-harde-schijf-bios-uefi/index.md){:target="_blank"}
+- [Stap 3.3: Wis de harde schijven via BIOS/UEFI (indien mogelijk).](../../howtos/wis-harde-schijf-bios-uefi/index.md){:target="_blank"}
+Zorg ervoor dat alle bestaande gegevens van de harde schijf worden verwijderd. **Let op: Dit verwijdert alle data op de schijf!**
+
+- [Stap 3.4: Wis de harde schijven vanuit Linux Mint.](../../howtos/wis-harde-schijf-linuxmint/index.md){:target="_blank"}
 Zorg ervoor dat alle bestaande gegevens van de harde schijf worden verwijderd. **Let op: Dit verwijdert alle data op de schijf!**

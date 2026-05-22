@@ -614,6 +614,16 @@ Cras elementum metus quis est luctus, vitae tincidunt orci consequat. Maecenas a
     <br>
     <br>
 
+    <img src="howtos/wis-harde-schijf-linuxmint/home.png" width="320" height="180" align=right />
+    > *03 September 2025 - in [Howtos](howtos/index.md) - 10 min instructie*
+
+
+    Binnen Linux Mint kun je een Solid State Drive (SSD) grondig en veilig wissen via de ingebouwde terminal, zonder dat je daarvoor de computer opnieuw hoeft op te starten naar de BIOS of UEFI...
+
+    [Lees verder](howtos/wis-harde-schijf-linuxmint/index.md){:target="_blank"}
+    <br>
+    <br>
+
 <!---
     - commentaar
 --->

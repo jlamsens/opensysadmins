@@ -443,7 +443,8 @@ nav:
     - Verifieer de authenticiteit en integriteit van een Linux Mint ISO-bestand: howtos/verifieer-linuxmint22-iso/index.md
     - Open de BIOS/UEFI Setup Utility: howtos/open-bios-uefi-setup-utility/index.md
     - Configureer de opstartmodus in BIOS/UEFI: howtos/configureer-opstartmodus-bios-uefi/index.md
-    - Wis de harde schijf via de BIOS/UEFI Setup Utility: howtos/wis-harde-schijf-bios-uefi/index.md
+    - Wis een harde schijf via de BIOS/UEFI Setup Utility: howtos/wis-harde-schijf-bios-uefi/index.md
+    - Wis een harde schijf via Linux Mint: howtos/wis-harde-schijf-linuxmint/index.md
     - Installeer Windows 11 (schone installatie): howtos/installeer-windows11/index.md
     - Configureer Windows 11 basisinstellingen: howtos/configureer-windows11-basisinstellingen/index.md
     - Installeer Linux Mint 22: howtos/installeer-linuxmint22/index.md
