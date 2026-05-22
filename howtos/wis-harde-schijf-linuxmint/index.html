@@ -9,9 +9,13 @@
         <meta name="author" content="Jurgen Lamsens">
       
       
-        <link rel="canonical" href="https://www.opensysadmins.com/howtos/setup-wireshark-linuxmint22/">
+        <link rel="canonical" href="https://www.opensysadmins.com/howtos/wis-harde-schijf-linuxmint/">
       
       
+        <link rel="prev" href="../wis-harde-schijf-bios-uefi/">
+      
+      
+        <link rel="next" href="../installeer-windows11/">
       
       
         
@@ -22,7 +26,7 @@
     
     
       
-        <title>Setup Wireshark op Linux Mint 22 - OpenSysAdmins</title>
+        <title>Wis een harde schijf via Linux Mint - OpenSysAdmins</title>
       
     
     
@@ -85,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setup-wireshark-op-linux-mint-22" class="md-skip">
+        <a href="#wis-een-harde-schijf-via-linux-mint" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Setup Wireshark op Linux Mint 22
+              Wis een harde schijf via Linux Mint
             
           </span>
         </div>
@@ -2551,6 +2555,8 @@
       
   
   
+    
+  
   
   
     
@@ -2658,11 +2664,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
         
           
           <div class="md-nav__link md-nav__container">
@@ -2690,7 +2696,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2931,10 +2937,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../wis-harde-schijf-linuxmint/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wis een harde schijf via Linux Mint
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2950,6 +2983,114 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#vereisten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vereisten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boot-vanaf-de-usb-stick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boot vanaf de USB-stick
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-pakketlijst" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update pakketlijst
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-ssd-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install SSD tool
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wis-de-schijven" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wis de schijven
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifieer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verifieer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shutdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shutdown
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4427,10 +4568,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#update-package-list" class="md-nav__link">
+  <a href="#boot-vanaf-de-usb-stick" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Update package list
+        Boot vanaf de USB-stick
       
     </span>
   </a>
@@ -4438,10 +4579,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#install-wireshark" class="md-nav__link">
+  <a href="#update-pakketlijst" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Install Wireshark
+        Update pakketlijst
       
     </span>
   </a>
@@ -4449,10 +4590,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fix-stuff" class="md-nav__link">
+  <a href="#install-ssd-tool" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fix stuff
+        Install SSD tool
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wis-de-schijven" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wis de schijven
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifieer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verifieer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shutdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shutdown
       
     </span>
   </a>
@@ -4476,301 +4650,95 @@
 
 
 
-<h1 id="setup-wireshark-op-linux-mint-22">Setup Wireshark op Linux Mint 22</h1>
-<p>Wireshark is 's werelds meest gebruikte netwerkprotocol-analyzer, een tool waarmee je het digitale verkeer op een netwerk tot in het kleinste detail kunt bekijken en ontleden. Het programma vangt datapakketjes op die over het netwerk verzonden worden ("capturing") en vertaalt deze ruwe binaire data naar een leesbaar formaat, zodat je precies kunt zien wie met wie communiceert en welke informatie er wordt uitgewisseld.</p>
+<h1 id="wis-een-harde-schijf-via-linux-mint">Wis een harde schijf via Linux Mint</h1>
+<p>Binnen Linux Mint kun je een Solid State Drive (SSD) grondig en veilig wissen via de ingebouwde terminal, zonder dat je daarvoor de computer opnieuw hoeft op te starten naar de BIOS of UEFI. Door gebruik te maken van de krachtige command-line tool <code>nvme</code>, stuur je rechtstreeks een zogeheten Format of Sanitize-commando naar de controller van de schijf. Hierdoor worden alle opgeslagen gegevens op hardwareniveau definitief en onherstelbaar vernietigd. Dit is de snelste en meest betrouwbare methode om een moderne NVMe-SSD in Linux Mint weer in de fabrieksstatus te herstellen.</p>
 <h2 id="vereisten">Vereisten</h2>
 <ul>
 <li>een <a href="../../tutorials/setup-windows11-linuxmint22-dual-boot-uefi/" target="_blank">PC met Linux Mint 22</a></li>
+<li>een <a href="../maak-opstartbare-usb-stick-ventoy/" target="_blank">opstartbare USB-stick voor Linux Mint</a></li>
 </ul>
 <h2 id="demo">Demo</h2>
 <iframe width="854" height="480" src="https://www.youtube.com/embed/xiRsG7-qaQY?autoplay=0&amp;loop=0&amp;mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 
-<p>-- IN PROGRESS --</p>
-<ul>
-<li>sudo add-apt-repository ppa:wireshark-dev/stable</li>
-<li>sudo apt update</li>
-<li>sudo apt install wireshark</li>
-<li>YES antwoorden om als non-root user te kunnen capturen</li>
-</ul>
-<h2 id="update-package-list">Update package list</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">guru@lab:~$_</label><label for="__tabbed_1_2">output</label></div>
+<h2 id="boot-vanaf-de-usb-stick">Boot vanaf de USB-stick</h2>
+<p>Plaats de Ventoy USB-stick in de pc en start deze op via de F9-toets om het bootmenu te openen. Kies hier achtereenvolgens voor Ventoy en Linux Mint (normal mode) om rechtstreeks in de live-omgeving van Linux Mint te starten.</p>
+<h2 id="update-pakketlijst">Update pakketlijst</h2>
+<p>Vernieuw de lokale pakketlijst om je systeem op de hoogte te brengen van de nieuwste beschikbare pakketten en updates in de gekoppelde software repositories.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">guru@hp:~$_</label><label for="__tabbed_1_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo apt update
 </code></pre></div></td></tr></tbody></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>guru@lab:~$ sudo apt update
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>[sudo] password for guru:     
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Ign:1 https://linuxmint-packages.mirror.liteserver.nl victoria InRelease
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease                     
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>Hit:3 https://linuxmint-packages.mirror.liteserver.nl victoria Release     
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>Hit:4 http://security.ubuntu.com/ubuntu jammy-security InRelease
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>Hit:5 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>Hit:6 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a>Reading package lists... Done
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a>Building dependency tree... Done
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a>Reading state information... Done
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a>All packages are up to date.
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>guru@lab:~$  
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>...
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>guru@hp:~$ 
 </code></pre></div></td></tr></tbody></table></div>
 </div>
 </div>
 </div>
-<h2 id="install-wireshark">Install Wireshark</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">step1 (guru@lab:~$_)</label><label for="__tabbed_2_2">step2</label><label for="__tabbed_2_3">step3 (output)</label></div>
+<h2 id="install-ssd-tool">Install SSD tool</h2>
+<p>Installeer de <code>nvme-tool</code> op je systeem.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">guru@hp:~$_</label><label for="__tabbed_2_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo apt install wireshark -y
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>sudo apt install nvme-cli
 </code></pre></div></td></tr></tbody></table></div>
 </div>
 <div class="tabbed-block">
-<p>Let's allow non-superusers to capture packets.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="dumpcap.png" data-desc-position="bottom"><img src="dumpcap.png" width="320" height="180"></a></p>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">  1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">  2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">  3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">  4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">  5</a></span>
-<span class="normal"><a href="#__codelineno-3-6">  6</a></span>
-<span class="normal"><a href="#__codelineno-3-7">  7</a></span>
-<span class="normal"><a href="#__codelineno-3-8">  8</a></span>
-<span class="normal"><a href="#__codelineno-3-9">  9</a></span>
-<span class="normal"><a href="#__codelineno-3-10"> 10</a></span>
-<span class="normal"><a href="#__codelineno-3-11"> 11</a></span>
-<span class="normal"><a href="#__codelineno-3-12"> 12</a></span>
-<span class="normal"><a href="#__codelineno-3-13"> 13</a></span>
-<span class="normal"><a href="#__codelineno-3-14"> 14</a></span>
-<span class="normal"><a href="#__codelineno-3-15"> 15</a></span>
-<span class="normal"><a href="#__codelineno-3-16"> 16</a></span>
-<span class="normal"><a href="#__codelineno-3-17"> 17</a></span>
-<span class="normal"><a href="#__codelineno-3-18"> 18</a></span>
-<span class="normal"><a href="#__codelineno-3-19"> 19</a></span>
-<span class="normal"><a href="#__codelineno-3-20"> 20</a></span>
-<span class="normal"><a href="#__codelineno-3-21"> 21</a></span>
-<span class="normal"><a href="#__codelineno-3-22"> 22</a></span>
-<span class="normal"><a href="#__codelineno-3-23"> 23</a></span>
-<span class="normal"><a href="#__codelineno-3-24"> 24</a></span>
-<span class="normal"><a href="#__codelineno-3-25"> 25</a></span>
-<span class="normal"><a href="#__codelineno-3-26"> 26</a></span>
-<span class="normal"><a href="#__codelineno-3-27"> 27</a></span>
-<span class="normal"><a href="#__codelineno-3-28"> 28</a></span>
-<span class="normal"><a href="#__codelineno-3-29"> 29</a></span>
-<span class="normal"><a href="#__codelineno-3-30"> 30</a></span>
-<span class="normal"><a href="#__codelineno-3-31"> 31</a></span>
-<span class="normal"><a href="#__codelineno-3-32"> 32</a></span>
-<span class="normal"><a href="#__codelineno-3-33"> 33</a></span>
-<span class="normal"><a href="#__codelineno-3-34"> 34</a></span>
-<span class="normal"><a href="#__codelineno-3-35"> 35</a></span>
-<span class="normal"><a href="#__codelineno-3-36"> 36</a></span>
-<span class="normal"><a href="#__codelineno-3-37"> 37</a></span>
-<span class="normal"><a href="#__codelineno-3-38"> 38</a></span>
-<span class="normal"><a href="#__codelineno-3-39"> 39</a></span>
-<span class="normal"><a href="#__codelineno-3-40"> 40</a></span>
-<span class="normal"><a href="#__codelineno-3-41"> 41</a></span>
-<span class="normal"><a href="#__codelineno-3-42"> 42</a></span>
-<span class="normal"><a href="#__codelineno-3-43"> 43</a></span>
-<span class="normal"><a href="#__codelineno-3-44"> 44</a></span>
-<span class="normal"><a href="#__codelineno-3-45"> 45</a></span>
-<span class="normal"><a href="#__codelineno-3-46"> 46</a></span>
-<span class="normal"><a href="#__codelineno-3-47"> 47</a></span>
-<span class="normal"><a href="#__codelineno-3-48"> 48</a></span>
-<span class="normal"><a href="#__codelineno-3-49"> 49</a></span>
-<span class="normal"><a href="#__codelineno-3-50"> 50</a></span>
-<span class="normal"><a href="#__codelineno-3-51"> 51</a></span>
-<span class="normal"><a href="#__codelineno-3-52"> 52</a></span>
-<span class="normal"><a href="#__codelineno-3-53"> 53</a></span>
-<span class="normal"><a href="#__codelineno-3-54"> 54</a></span>
-<span class="normal"><a href="#__codelineno-3-55"> 55</a></span>
-<span class="normal"><a href="#__codelineno-3-56"> 56</a></span>
-<span class="normal"><a href="#__codelineno-3-57"> 57</a></span>
-<span class="normal"><a href="#__codelineno-3-58"> 58</a></span>
-<span class="normal"><a href="#__codelineno-3-59"> 59</a></span>
-<span class="normal"><a href="#__codelineno-3-60"> 60</a></span>
-<span class="normal"><a href="#__codelineno-3-61"> 61</a></span>
-<span class="normal"><a href="#__codelineno-3-62"> 62</a></span>
-<span class="normal"><a href="#__codelineno-3-63"> 63</a></span>
-<span class="normal"><a href="#__codelineno-3-64"> 64</a></span>
-<span class="normal"><a href="#__codelineno-3-65"> 65</a></span>
-<span class="normal"><a href="#__codelineno-3-66"> 66</a></span>
-<span class="normal"><a href="#__codelineno-3-67"> 67</a></span>
-<span class="normal"><a href="#__codelineno-3-68"> 68</a></span>
-<span class="normal"><a href="#__codelineno-3-69"> 69</a></span>
-<span class="normal"><a href="#__codelineno-3-70"> 70</a></span>
-<span class="normal"><a href="#__codelineno-3-71"> 71</a></span>
-<span class="normal"><a href="#__codelineno-3-72"> 72</a></span>
-<span class="normal"><a href="#__codelineno-3-73"> 73</a></span>
-<span class="normal"><a href="#__codelineno-3-74"> 74</a></span>
-<span class="normal"><a href="#__codelineno-3-75"> 75</a></span>
-<span class="normal"><a href="#__codelineno-3-76"> 76</a></span>
-<span class="normal"><a href="#__codelineno-3-77"> 77</a></span>
-<span class="normal"><a href="#__codelineno-3-78"> 78</a></span>
-<span class="normal"><a href="#__codelineno-3-79"> 79</a></span>
-<span class="normal"><a href="#__codelineno-3-80"> 80</a></span>
-<span class="normal"><a href="#__codelineno-3-81"> 81</a></span>
-<span class="normal"><a href="#__codelineno-3-82"> 82</a></span>
-<span class="normal"><a href="#__codelineno-3-83"> 83</a></span>
-<span class="normal"><a href="#__codelineno-3-84"> 84</a></span>
-<span class="normal"><a href="#__codelineno-3-85"> 85</a></span>
-<span class="normal"><a href="#__codelineno-3-86"> 86</a></span>
-<span class="normal"><a href="#__codelineno-3-87"> 87</a></span>
-<span class="normal"><a href="#__codelineno-3-88"> 88</a></span>
-<span class="normal"><a href="#__codelineno-3-89"> 89</a></span>
-<span class="normal"><a href="#__codelineno-3-90"> 90</a></span>
-<span class="normal"><a href="#__codelineno-3-91"> 91</a></span>
-<span class="normal"><a href="#__codelineno-3-92"> 92</a></span>
-<span class="normal"><a href="#__codelineno-3-93"> 93</a></span>
-<span class="normal"><a href="#__codelineno-3-94"> 94</a></span>
-<span class="normal"><a href="#__codelineno-3-95"> 95</a></span>
-<span class="normal"><a href="#__codelineno-3-96"> 96</a></span>
-<span class="normal"><a href="#__codelineno-3-97"> 97</a></span>
-<span class="normal"><a href="#__codelineno-3-98"> 98</a></span>
-<span class="normal"><a href="#__codelineno-3-99"> 99</a></span>
-<span class="normal"><a href="#__codelineno-3-100">100</a></span>
-<span class="normal"><a href="#__codelineno-3-101">101</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>guru@lab:~$ sudo apt install wireshark -y
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>Reading package lists... Done
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>Building dependency tree... Done
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>Reading state information... Done
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>The following additional packages will be installed:
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>libbcg729-0 libminizip1 libqt5multimedia5 libqt5multimedia5-plugins libqt5multimediagsttools5 libqt5multimediawidgets5 libqt5printsupport5 libsmi2ldbl libwireshark-data libwireshark15 libwiretap12 libwsutil13 wireshark-common
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a>wireshark-qt
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a>Suggested packages:
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a>snmp-mibs-downloader geoipupdate geoip-database-extra libjs-leaflet libjs-leaflet.markercluster wireshark-doc
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a>The following NEW packages will be installed:
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a>libbcg729-0 libminizip1 libqt5multimedia5 libqt5multimedia5-plugins libqt5multimediagsttools5 libqt5multimediawidgets5 libqt5printsupport5 libsmi2ldbl libwireshark-data libwireshark15 libwiretap12 libwsutil13 wireshark
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a>wireshark-common wireshark-qt
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a>0 upgraded, 15 newly installed, 0 to remove and 0 not upgraded.
-<a id="__codelineno-3-14" name="__codelineno-3-14"></a>Need to get 27,3 MB of archives.
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a>After this operation, 131 MB of additional disk space will be used.
-<a id="__codelineno-3-16" name="__codelineno-3-16"></a>Get:1 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libbcg729-0 amd64 1.1.1-2 [32,9 kB]
-<a id="__codelineno-3-17" name="__codelineno-3-17"></a>Get:2 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libminizip1 amd64 1.1-8build1 [20,2 kB]
-<a id="__codelineno-3-18" name="__codelineno-3-18"></a>Get:3 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libqt5multimedia5 amd64 5.15.3-1 [320 kB]
-<a id="__codelineno-3-19" name="__codelineno-3-19"></a>Get:4 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libqt5multimediawidgets5 amd64 5.15.3-1 [42,6 kB]
-<a id="__codelineno-3-20" name="__codelineno-3-20"></a>Get:5 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libqt5multimediagsttools5 amd64 5.15.3-1 [112 kB]
-<a id="__codelineno-3-21" name="__codelineno-3-21"></a>Get:6 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libqt5multimedia5-plugins amd64 5.15.3-1 [178 kB]
-<a id="__codelineno-3-22" name="__codelineno-3-22"></a>Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libqt5printsupport5 amd64 5.15.3+dfsg-2ubuntu0.2 [214 kB]
-<a id="__codelineno-3-23" name="__codelineno-3-23"></a>Get:8 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libsmi2ldbl amd64 0.4.8+dfsg2-16 [100 kB]
-<a id="__codelineno-3-24" name="__codelineno-3-24"></a>Get:9 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libwireshark-data all 3.6.2-2 [1.647 kB]
-<a id="__codelineno-3-25" name="__codelineno-3-25"></a>Get:10 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libwsutil13 amd64 3.6.2-2 [99,2 kB]
-<a id="__codelineno-3-26" name="__codelineno-3-26"></a>Get:11 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libwiretap12 amd64 3.6.2-2 [255 kB]
-<a id="__codelineno-3-27" name="__codelineno-3-27"></a>Get:12 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libwireshark15 amd64 3.6.2-2 [19,5 MB]
-<a id="__codelineno-3-28" name="__codelineno-3-28"></a>Get:13 http://archive.ubuntu.com/ubuntu jammy/universe amd64 wireshark-common amd64 3.6.2-2 [473 kB]
-<a id="__codelineno-3-29" name="__codelineno-3-29"></a>Get:14 http://archive.ubuntu.com/ubuntu jammy/universe amd64 wireshark-qt amd64 3.6.2-2 [4.269 kB]
-<a id="__codelineno-3-30" name="__codelineno-3-30"></a>Get:15 http://archive.ubuntu.com/ubuntu jammy/universe amd64 wireshark amd64 3.6.2-2 [4.992 B]
-<a id="__codelineno-3-31" name="__codelineno-3-31"></a>Fetched 27,3 MB in 2s (13,0 MB/s)      
-<a id="__codelineno-3-32" name="__codelineno-3-32"></a>Preconfiguring packages ...
-<a id="__codelineno-3-33" name="__codelineno-3-33"></a>Selecting previously unselected package libbcg729-0:amd64.
-<a id="__codelineno-3-34" name="__codelineno-3-34"></a>(Reading database ... 560791 files and directories currently installed.)
-<a id="__codelineno-3-35" name="__codelineno-3-35"></a>Preparing to unpack .../00-libbcg729-0_1.1.1-2_amd64.deb ...
-<a id="__codelineno-3-36" name="__codelineno-3-36"></a>Unpacking libbcg729-0:amd64 (1.1.1-2) ...
-<a id="__codelineno-3-37" name="__codelineno-3-37"></a>Selecting previously unselected package libminizip1:amd64.
-<a id="__codelineno-3-38" name="__codelineno-3-38"></a>Preparing to unpack .../01-libminizip1_1.1-8build1_amd64.deb ...
-<a id="__codelineno-3-39" name="__codelineno-3-39"></a>Unpacking libminizip1:amd64 (1.1-8build1) ...
-<a id="__codelineno-3-40" name="__codelineno-3-40"></a>Selecting previously unselected package libqt5multimedia5:amd64.
-<a id="__codelineno-3-41" name="__codelineno-3-41"></a>Preparing to unpack .../02-libqt5multimedia5_5.15.3-1_amd64.deb ...
-<a id="__codelineno-3-42" name="__codelineno-3-42"></a>Unpacking libqt5multimedia5:amd64 (5.15.3-1) ...
-<a id="__codelineno-3-43" name="__codelineno-3-43"></a>Selecting previously unselected package libqt5multimediawidgets5:amd64.
-<a id="__codelineno-3-44" name="__codelineno-3-44"></a>Preparing to unpack .../03-libqt5multimediawidgets5_5.15.3-1_amd64.deb ...
-<a id="__codelineno-3-45" name="__codelineno-3-45"></a>Unpacking libqt5multimediawidgets5:amd64 (5.15.3-1) ...
-<a id="__codelineno-3-46" name="__codelineno-3-46"></a>Selecting previously unselected package libqt5multimediagsttools5:amd64.
-<a id="__codelineno-3-47" name="__codelineno-3-47"></a>Preparing to unpack .../04-libqt5multimediagsttools5_5.15.3-1_amd64.deb ...
-<a id="__codelineno-3-48" name="__codelineno-3-48"></a>Unpacking libqt5multimediagsttools5:amd64 (5.15.3-1) ...
-<a id="__codelineno-3-49" name="__codelineno-3-49"></a>Selecting previously unselected package libqt5multimedia5-plugins:amd64.
-<a id="__codelineno-3-50" name="__codelineno-3-50"></a>Preparing to unpack .../05-libqt5multimedia5-plugins_5.15.3-1_amd64.deb ...
-<a id="__codelineno-3-51" name="__codelineno-3-51"></a>Unpacking libqt5multimedia5-plugins:amd64 (5.15.3-1) ...
-<a id="__codelineno-3-52" name="__codelineno-3-52"></a>Selecting previously unselected package libqt5printsupport5:amd64.
-<a id="__codelineno-3-53" name="__codelineno-3-53"></a>Preparing to unpack .../06-libqt5printsupport5_5.15.3+dfsg-2ubuntu0.2_amd64.deb ...
-<a id="__codelineno-3-54" name="__codelineno-3-54"></a>Unpacking libqt5printsupport5:amd64 (5.15.3+dfsg-2ubuntu0.2) ...
-<a id="__codelineno-3-55" name="__codelineno-3-55"></a>Selecting previously unselected package libsmi2ldbl:amd64.
-<a id="__codelineno-3-56" name="__codelineno-3-56"></a>Preparing to unpack .../07-libsmi2ldbl_0.4.8+dfsg2-16_amd64.deb ...
-<a id="__codelineno-3-57" name="__codelineno-3-57"></a>Unpacking libsmi2ldbl:amd64 (0.4.8+dfsg2-16) ...
-<a id="__codelineno-3-58" name="__codelineno-3-58"></a>Selecting previously unselected package libwireshark-data.
-<a id="__codelineno-3-59" name="__codelineno-3-59"></a>Preparing to unpack .../08-libwireshark-data_3.6.2-2_all.deb ...
-<a id="__codelineno-3-60" name="__codelineno-3-60"></a>Unpacking libwireshark-data (3.6.2-2) ...
-<a id="__codelineno-3-61" name="__codelineno-3-61"></a>Selecting previously unselected package libwsutil13:amd64.
-<a id="__codelineno-3-62" name="__codelineno-3-62"></a>Preparing to unpack .../09-libwsutil13_3.6.2-2_amd64.deb ...
-<a id="__codelineno-3-63" name="__codelineno-3-63"></a>Unpacking libwsutil13:amd64 (3.6.2-2) ...
-<a id="__codelineno-3-64" name="__codelineno-3-64"></a>Selecting previously unselected package libwiretap12:amd64.
-<a id="__codelineno-3-65" name="__codelineno-3-65"></a>Preparing to unpack .../10-libwiretap12_3.6.2-2_amd64.deb ...
-<a id="__codelineno-3-66" name="__codelineno-3-66"></a>Unpacking libwiretap12:amd64 (3.6.2-2) ...
-<a id="__codelineno-3-67" name="__codelineno-3-67"></a>Selecting previously unselected package libwireshark15:amd64.
-<a id="__codelineno-3-68" name="__codelineno-3-68"></a>Preparing to unpack .../11-libwireshark15_3.6.2-2_amd64.deb ...
-<a id="__codelineno-3-69" name="__codelineno-3-69"></a>Unpacking libwireshark15:amd64 (3.6.2-2) ...
-<a id="__codelineno-3-70" name="__codelineno-3-70"></a>Selecting previously unselected package wireshark-common.
-<a id="__codelineno-3-71" name="__codelineno-3-71"></a>Preparing to unpack .../12-wireshark-common_3.6.2-2_amd64.deb ...
-<a id="__codelineno-3-72" name="__codelineno-3-72"></a>Unpacking wireshark-common (3.6.2-2) ...
-<a id="__codelineno-3-73" name="__codelineno-3-73"></a>Selecting previously unselected package wireshark-qt.
-<a id="__codelineno-3-74" name="__codelineno-3-74"></a>Preparing to unpack .../13-wireshark-qt_3.6.2-2_amd64.deb ...
-<a id="__codelineno-3-75" name="__codelineno-3-75"></a>Unpacking wireshark-qt (3.6.2-2) ...
-<a id="__codelineno-3-76" name="__codelineno-3-76"></a>Selecting previously unselected package wireshark.
-<a id="__codelineno-3-77" name="__codelineno-3-77"></a>Preparing to unpack .../14-wireshark_3.6.2-2_amd64.deb ...
-<a id="__codelineno-3-78" name="__codelineno-3-78"></a>Unpacking wireshark (3.6.2-2) ...
-<a id="__codelineno-3-79" name="__codelineno-3-79"></a>Setting up libbcg729-0:amd64 (1.1.1-2) ...
-<a id="__codelineno-3-80" name="__codelineno-3-80"></a>Setting up libminizip1:amd64 (1.1-8build1) ...
-<a id="__codelineno-3-81" name="__codelineno-3-81"></a>Setting up libqt5multimedia5:amd64 (5.15.3-1) ...
-<a id="__codelineno-3-82" name="__codelineno-3-82"></a>Setting up libqt5printsupport5:amd64 (5.15.3+dfsg-2ubuntu0.2) ...
-<a id="__codelineno-3-83" name="__codelineno-3-83"></a>Setting up libsmi2ldbl:amd64 (0.4.8+dfsg2-16) ...
-<a id="__codelineno-3-84" name="__codelineno-3-84"></a>Setting up libwsutil13:amd64 (3.6.2-2) ...
-<a id="__codelineno-3-85" name="__codelineno-3-85"></a>Setting up libwiretap12:amd64 (3.6.2-2) ...
-<a id="__codelineno-3-86" name="__codelineno-3-86"></a>Setting up libqt5multimediawidgets5:amd64 (5.15.3-1) ...
-<a id="__codelineno-3-87" name="__codelineno-3-87"></a>Setting up libwireshark-data (3.6.2-2) ...
-<a id="__codelineno-3-88" name="__codelineno-3-88"></a>Setting up libqt5multimediagsttools5:amd64 (5.15.3-1) ...
-<a id="__codelineno-3-89" name="__codelineno-3-89"></a>Setting up libqt5multimedia5-plugins:amd64 (5.15.3-1) ...
-<a id="__codelineno-3-90" name="__codelineno-3-90"></a>Setting up libwireshark15:amd64 (3.6.2-2) ...
-<a id="__codelineno-3-91" name="__codelineno-3-91"></a>Setting up wireshark-common (3.6.2-2) ...
-<a id="__codelineno-3-92" name="__codelineno-3-92"></a>Setting up wireshark-qt (3.6.2-2) ...
-<a id="__codelineno-3-93" name="__codelineno-3-93"></a>Setting up wireshark (3.6.2-2) ...
-<a id="__codelineno-3-94" name="__codelineno-3-94"></a>Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
-<a id="__codelineno-3-95" name="__codelineno-3-95"></a>Processing triggers for man-db (2.10.2-1) ...
-<a id="__codelineno-3-96" name="__codelineno-3-96"></a>Processing triggers for shared-mime-info (2.1-2) ...
-<a id="__codelineno-3-97" name="__codelineno-3-97"></a>Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
-<a id="__codelineno-3-98" name="__codelineno-3-98"></a>Processing triggers for desktop-file-utils (0.26+mint3+victoria) ...
-<a id="__codelineno-3-99" name="__codelineno-3-99"></a>Processing triggers for hicolor-icon-theme (0.17-2) ...
-<a id="__codelineno-3-100" name="__codelineno-3-100"></a>Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
-<a id="__codelineno-3-101" name="__codelineno-3-101"></a>guru@lab:~$  
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>...
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>guru@hp:~$ 
 </code></pre></div></td></tr></tbody></table></div>
 </div>
 </div>
 </div>
-<h2 id="fix-stuff">Fix stuff</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><input id="__tabbed_3_4" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">step1</label><label for="__tabbed_3_2">step2 (guru@lab:~$_)</label><label for="__tabbed_3_3">step3 (output)</label><label for="__tabbed_3_4">step4</label></div>
+<h2 id="wis-de-schijven">Wis de schijven</h2>
+<p>Doe een <code>User Data Erase</code>. Dit wist alle data.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">guru@hp:~$_</label><label for="__tabbed_3_2">output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>When you start Wireshark, no interfaces are listed (bug?)</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="no-interfaces.png" data-desc-position="bottom"><img src="no-interfaces.png" width="320" height="180"></a></p>
-</div>
-<div class="tabbed-block">
-<p>Let's add the user "guru" to the existing group "wireshark".</p>
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo usermod -a -G wireshark guru
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo nvme format /dev/nvme0n1 --ses=1 --force
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>sudo nvme format /dev/nvme1n1 --ses=1 --force
 </code></pre></div></td></tr></tbody></table></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>guru@lab:~$ sudo usermod -a -G wireshark guru
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>[sudo] password for guru:     
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>guru@lab:~$
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>...
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>guru@hp:~$ 
+</code></pre></div></td></tr></tbody></table></div>
+</div>
+</div>
+</div>
+<h2 id="verifieer">Verifieer</h2>
+<p>Om te controleren of de schijf nu echt een "leeg vel" is, kijken we naar de ruwe data op de eerste sectoren.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">guru@hp:~$_</label><label for="__tabbed_4_2">output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>head -c 1M: Leest de eerste megabyte van de schijf (waar normaal de MBR, partitietabel en bootloader staan)</li>
+<li>hexdump -C: Zet de binaire data om in leesbare hexadecimale tekens.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>sudo head -c 1M /dev/nvme0n1 | hexdump -C
 </code></pre></div></td></tr></tbody></table></div>
 </div>
 <div class="tabbed-block">
-<p>Log off and log in. Start Wireshark. The network card(s) should be listed now.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="1280x720.png" data-desc-position="bottom"><img src="1280x720.png" width="320" height="180"></a></p>
+<p>Als alles goed is gegaan, zie je slechts één regel met nullen en daarna een sterretje (*), wat betekent dat de rest van de data identiek is aan de eerste regel.</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>...
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>guru@hp:~$ 
+</code></pre></div></td></tr></tbody></table></div>
 </div>
 </div>
+</div>
+<h2 id="shutdown">Shutdown</h2>
+<p>Je schijf/schijven is/zijn nu in de best mogelijke conditie om een nieuw besturingssysteem te ontvangen, omdat de controller weet dat alle cellen "vrij" zijn en hij niet eerst oude data hoeft te wissen bij de eerste schrijfactie.</p>
+<p>Doe een shutdown van de PC.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Als het wissen van de harde schijf is gelukt, zal het systeem bij een herstart proberen om via PXE op te starten, wat zal mislukken. Dit is verwacht en geen probleem. Schakel dan de pc uit door de aan/uit-knop lang genoeg ingedrukt te houden.</p>
 </div>
 
 
