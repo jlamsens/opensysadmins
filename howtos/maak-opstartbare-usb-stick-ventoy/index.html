@@ -5270,6 +5270,7 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>In dit voorbeeld wordt de stick automatisch gemount onder <code>/media/guru/Ventoy</code> en kopiëren we een aantal ISO bestanden van onder <code>/home/guru/Downloads/ISO/</code>. Vervolgens wordt de stick ontkoppeld en kan die verwijderd worden.</p>
+<p>Het lijkt er op dat het commando <code>rsync</code> blijft hangen, maar in werkelijkheid wacht <code>rsync</code> tot de Linux-kernel de gigantische hoeveelheid data uit de snelle RAM-cache volledig heeft weggeschreven naar de fysiek tragere USB-stick. Even lang wachten dus...</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
 <span class="normal"><a href="#__codelineno-10-2">2</a></span>
 <span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>mount | grep sdb
