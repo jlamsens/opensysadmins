@@ -353,6 +353,8 @@ Zodra de installatie klaar is, verwijder je de USB-stick en plaats je die opnieu
 === "guru@hp:~$_"
     In dit voorbeeld wordt de stick automatisch gemount onder `/media/guru/Ventoy` en kopiëren we een aantal ISO bestanden van onder `/home/guru/Downloads/ISO/`. Vervolgens wordt de stick ontkoppeld en kan die verwijderd worden.
 
+    Het lijkt er op dat het commando `rsync` blijft hangen, maar in werkelijkheid wacht `rsync` tot de Linux-kernel de gigantische hoeveelheid data uit de snelle RAM-cache volledig heeft weggeschreven naar de fysiek tragere USB-stick. Even lang wachten dus...
+
     ``` title='' hl_lines="0"
     mount | grep sdb
     rsync -vhrl --size-only --progress --delete --fsync /home/guru/Downloads/ISO/{linuxmint-22.3-cinnamon-64bit.iso,Win11_25H2_Pro.iso} /media/guru/Ventoy/
