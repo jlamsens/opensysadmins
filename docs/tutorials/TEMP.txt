@@ -1,0 +1,35 @@
+## IP address
+=== "Step1"
+    Right-click on the network icon on the bottom-right taskbar -> Network and Internet settings.
+
+    <img src="../network-internet-settings.png"/>
+
+=== "Step2"
+    Select “Ethernet”.
+
+    <img src="../ethernet.png"/>
+
+=== "Step3"
+    Select “Edit”.
+
+    <img src="../edit.png"/>
+
+=== "Step4"
+    Change "DHCP" to "Manual", activate "IPv4" and configure the IP, subnetmask, gateway and DNS server. Click "Save".
+
+    <img src="../ip-settings.png"/>
+
+=== "Step5"
+    Click "Start" and typ "cmd" to open a command prompt: verify the internet connection.
+
+    <img src="../verify-internet-connection.png"/>
+
+=== "Step6"
+    The network icon on the bottom-right taskbar will soon change to this:
+
+    <img src="../network-icon.png"/>
+
+## Computername
+Go to "Settings -> About" and change the computer name to "vm6". Restart later.
+
+<img src="../change-computer-name.png"/>
